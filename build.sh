@@ -24,21 +24,14 @@ echo ""
 # Move to the script directory.
 cd $(dirname $0)
 
-jsduck ../../core ../../plugins ../../ckeditor.js -o build \
-	--title="CKEditor 4 JavaScript API Documentation" \
-	--head-html="<link rel='stylesheet' href='resources/css/ck.css' type='text/css' />" \
-	--footer="Copyright © 2003-2012, <a href='http://cksource.com' style='color: #085585'>CKSource</a> - Frederico Knabben. All rights reserved. |
-	Generated with <a href='https://github.com/senchalabs/jsduck'>JSDuck</a> 4.0.0." \
-	--meta-tags customs.rb \
-	--warnings=-no_doc \
-	--welcome=welcome.html
+jsduck --config=config.json
 
 echo "Applying customizations:"
 echo "	* Copying resources..."
-cp -r resources build
+cp -r source/resources build
 
 echo "	* Copying favicon..."
-cp favicon.ico build
+cp source/favicon.ico build
 
 echo ""
 echo "Finished!"

@@ -11,6 +11,8 @@
 
 	"--welcome": "source/welcome.html",
 
+	"--guides": "guides/guides.json",
+
 	"--output" : "build",
 
 	"--": [

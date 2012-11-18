@@ -1,0 +1,75 @@
+[
+	{
+		"title": "CKEditor 4 Skin SDK",
+		"items": [
+			{
+				"name": "skin_sdk_intro",
+				"url": "skin_sdk/intro",
+				"title": "Introduction",
+				"description": "The basics on CKEditor skins."
+			},
+			{
+				"title": "Advanced Concepts",
+				"items": [
+					{
+						"name": "skin_sdk_icons",
+						"url": "skin_sdk/icons",
+						"title": "Icons",
+						"description": "In depth details about concepts that make part of a skin."
+					},
+					{
+						"name": "skin_sdk_reset",
+						"url": "skin_sdk/reset",
+						"title": "CSS Reset"
+					},
+					{
+						"name": "skin_sdk_chameleon",
+						"url": "skin_sdk/chameleon",
+						"title": "\"Chameleon\" Feature"
+					},
+					{
+						"name": "skin_sdk_rtl",
+						"url": "skin_sdk/rtl",
+						"title": "Right-to-Left"
+					},
+					{
+						"name": "skin_sdk_hc",
+						"url": "skin_sdk/hc",
+						"title": "High Contrast"
+					},
+					{
+						"name": "skin_sdk_browser_hacks",
+						"url": "skin_sdk/browser_hacks",
+						"title": "Browser Hacks"
+					}
+				]
+			},
+			{
+				"title": "Creating a Custom Skin",
+				"items": [
+					{
+						"name": "skin_sdk_setup",
+						"url": "skin_sdk/setup",
+						"title": "Setup",
+						"description": "The workflow os a custom skin creation."
+					},
+					{
+						"name": "skin_sdk_customize",
+						"url": "skin_sdk/customize",
+						"title": "Customize"
+					},
+					{
+						"name": "skin_sdk_test",
+						"url": "skin_sdk/test",
+						"title": "Test and Shape It Up"
+					},
+					{
+						"name": "skin_sdk_build",
+						"url": "skin_sdk/build",
+						"title": "Build and Release"
+					}
+				]
+			}
+		]
+	}
+]

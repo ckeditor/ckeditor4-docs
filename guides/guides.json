@@ -1,5 +1,33 @@
 [
 	{
+		"title": "CKEditor 4 Developer’s Guide",
+		"items": [
+			{
+				"name": "dev_installation",
+				"url": "dev/installation",
+				"title": "Installation",
+				"description": "How to install CKEditor."
+			},
+			{
+				"name": "dev_integration",
+				"url": "dev/integration",
+				"title": "Integration",
+				"description": "Integrating CKEditor into your website or application."
+			},
+			{
+				"title": "Configuration",
+				"items": [
+					{
+						"name": "dev_configuration",
+						"url": "dev/configuration",
+						"title": "Setting Configurations",
+						"description": "Everything about the CKEditor configurations."
+					}
+				]
+			}
+		]
+	},
+	{
 		"title": "CKEditor 4 Skin SDK",
 		"items": [
 			{

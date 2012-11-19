@@ -26,10 +26,14 @@
 				]
 			},
 			{
-				"name": "dev_howtos",
-				"url": "dev/howtos",
 				"title": "HOWTOs",
-				"description": "Tips and answers for frequently asked questions."
+				"items": [
+					{
+						"name": "dev_howtos_basic_configuration",
+						"url": "dev/howtos/basic_configuration",
+						"title": "Basic Configuration and Customization"
+					}
+				]
 			}
 		]
 	},

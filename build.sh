@@ -33,5 +33,8 @@ cp -r source/resources build
 echo "	* Copying favicon..."
 cp source/favicon.ico build
 
+echo "	* Copying images..."
+cp -r images build
+
 echo ""
 echo "Finished!"

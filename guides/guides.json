@@ -41,6 +41,22 @@
 				]
 			},
 			{
+				"title": "Additional Information",
+				"items": [
+					{
+						"name": "dev_browsers",
+						"url": "dev/browsers",
+						"title": "Browsers Compatibility",
+						"description": "Browsers compatibility and Licensing."
+					},
+					{
+						"name": "dev_license",
+						"url": "dev/license",
+						"title": "License"
+					}
+				]
+			},
+			{
 				"title": "HOWTOs",
 				"items": [
 					{

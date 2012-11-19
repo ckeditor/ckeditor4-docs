@@ -41,6 +41,22 @@
 				]
 			},
 			{
+				"title": "Reporting Issues",
+				"items": [
+					{
+						"name": "dev_issues_readme",
+						"url": "dev/issues_readme",
+						"title": "Read Me First",
+						"description": "How to properly report issues you may find on CKEditor."
+					},
+					{
+						"name": "dev_issues_tracker",
+						"url": "dev/issues_tracker",
+						"title": "Issues Tracker"
+					}
+				]
+			},
+			{
 				"title": "Additional Information",
 				"items": [
 					{

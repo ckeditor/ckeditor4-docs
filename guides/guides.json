@@ -9,10 +9,25 @@
 				"description": "How to install CKEditor."
 			},
 			{
-				"name": "dev_integration",
-				"url": "dev/integration",
 				"title": "Integration",
-				"description": "Integrating CKEditor into your website or application."
+				"items": [
+					{
+						"name": "dev_ckeditor_js_load",
+						"url": "dev/ckeditor_js_load",
+						"title": "Loading CKEditor",
+						"description": "Integrating CKEditor into your website or application."
+					},
+					{
+						"name": "dev_framed",
+						"url": "dev/framed",
+						"title": "Framed Editing"
+					},
+					{
+						"name": "dev_inline",
+						"url": "dev/inline",
+						"title": "Inline Editing"
+					}
+				]
 			},
 			{
 				"title": "Configuration",

@@ -24,6 +24,12 @@
 						"description": "Everything about the CKEditor configurations."
 					}
 				]
+			},
+			{
+				"name": "dev_howtos",
+				"url": "dev/howtos",
+				"title": "HOWTOs",
+				"description": "Tips and answers for frequently asked questions."
 			}
 		]
 	},

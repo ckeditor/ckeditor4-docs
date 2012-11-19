@@ -32,6 +32,11 @@
 						"name": "dev_howtos_basic_configuration",
 						"url": "dev/howtos/basic_configuration",
 						"title": "Basic Configuration and Customization"
+					},
+					{
+						"name": "dev_howtos_licensing_and_support",
+						"url": "dev/howtos/licensing_and_support",
+						"title": "Licensing and Support"
 					}
 				]
 			}

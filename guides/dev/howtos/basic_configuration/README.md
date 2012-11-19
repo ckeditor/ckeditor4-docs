@@ -1,12 +1,15 @@
 # Basic Configuration and Customization
 
+
 ## How Do I Change the Default CKEditor Configuration?
 
 CKEditor is a highly flexible tool that you can easily customize to your needs. If you want to change the editor configuration, refer to the Setting Configuration article from the Developer's Guide. Your custom configuration will help you adjust the CKEditor look and feel to the requirements of your project.
 
+
 ## How Do I Find the CKEditor Configuration Settings to Change?
 
 A full listing of the `CKEDITOR.config` configuration settings that you can change in order to customize the editor to your needs can be found in the {@link CKEDITOR.config CKEditor JavaScript API}. Use the methods described in the  [Setting Configuration](#!/guide/dev_configuration) article from the Developer's Guide.
+
 
 ## How Do I Remove Unneeded CKEditor Functionality?
 
@@ -19,6 +22,7 @@ If you want to disable some functionality that comes from a CKEditor plugin, you
 
 	// Remove multiple plugins.
 	config.removePlugins = 'elementspath,save,font';
+
 
 ## How Do I Find Code Examples Showing CKEditor Customization?
 

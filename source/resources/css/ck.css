@@ -100,3 +100,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 {
 	margin-bottom: 10px;
 }
+
+pre code a
+{
+    border-bottom: 1px dotted #AAA;
+}

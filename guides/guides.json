@@ -89,6 +89,26 @@
 						"name": "dev_howtos_interface",
 						"url": "dev/howtos/interface",
 						"title": "Interface"
+					},
+					{
+						"name": "dev_howtos_styles",
+						"url": "dev/howtos/styles",
+						"title": "Styles"
+					},
+					{
+						"name": "dev_howtos_file_upload",
+						"url": "dev/howtos/file_upload",
+						"title": "File Upload"
+					},
+					{
+						"name": "dev_howtos_output",
+						"url": "dev/howtos/output",
+						"title": "Output"
+					},
+					{
+						"name": "dev_howtos_pasting",
+						"url": "dev/howtos/pasting",
+						"title": "Pasting"
 					}
 				]
 			}

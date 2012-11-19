@@ -16,6 +16,7 @@ First of all, CKEditor comes with really extensive [documentation](#!/guide) tha
 * The [CKEditor Tutorials](#!/guide/tutorials) – a few step-by-step tutorials on creating CKEditor plugins.
 * The [JavaScript API](#!/api) – API documentation with all {@link CKEDITOR.config CKEditor configuration options}, internal methods, events etc. Indispensible when you want to configure CKEditor to your specific needs, extend it, create plugins, etc.
 
+
 ### Support Channel
 
 There are times and situations, however, when you are unable to get going by yourself. If this is a case, you will be happy to learn that [all commercial CKEditor licenses](http://ckeditor.com/license) (CKSource Closed Distribution License – CDL) include [professional assistance](http://ckeditor.com/support) from the CKEditor development team. The dedicated support channel is available for you and responses to your inquiries come in one business day, or even in the same day.

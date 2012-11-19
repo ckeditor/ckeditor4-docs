@@ -84,6 +84,11 @@
 						"name": "dev_howtos_licensing_and_support",
 						"url": "dev/howtos/licensing_and_support",
 						"title": "Licensing and Support"
+					},
+					{
+						"name": "dev_howtos_interface",
+						"url": "dev/howtos/interface",
+						"title": "Interface"
 					}
 				]
 			}

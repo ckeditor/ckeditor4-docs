@@ -88,6 +88,22 @@
 				]
 			},
 			{
+				"title": "Customization",
+				"items": [
+					{
+						"name": "dev_plugins",
+						"url": "dev/plugins",
+						"title": "Plugins",
+						"description": "Adding new features to CKEditor and changing its look and feel."
+					},
+					{
+						"name": "dev_skins",
+						"url": "dev/skins",
+						"title": "Skins"
+					}
+				]
+			},
+			{
 				"title": "Reporting Issues",
 				"items": [
 					{

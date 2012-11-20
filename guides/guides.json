@@ -104,6 +104,22 @@
 				]
 			},
 			{
+				"title": "Source Code",
+				"items": [
+					{
+						"name": "dev_source",
+						"url": "dev/source",
+						"title": "Getting the Source",
+						"description": "Working with the source code of CKEditor."
+					},
+					{
+						"name": "dev_build",
+						"url": "dev/build",
+						"title": "Building"
+					}
+				]
+			},
+			{
 				"title": "Reporting Issues",
 				"items": [
 					{

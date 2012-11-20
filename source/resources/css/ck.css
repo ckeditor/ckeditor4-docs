@@ -128,3 +128,28 @@ pre code a
 {
     border-bottom: 1px dotted #AAA;
 }
+
+.tip
+{
+	border: 1px solid #aaa;
+	padding: 12px 15px 12px 65px !important;
+	background: #eee;
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+
+	-moz-box-shadow: 2px 2px 0 0 #ccc;
+	-webkit-box-shadow: 2px 2px 0 0 #ccc;
+	box-shadow: 2px 2px 0 0 #ccc;
+
+	overflow: hidden;
+}
+
+.tip:before
+{
+	content: url(../images/tip.png);
+	float: left;
+	margin-left: -48px;
+	margin-top: 4px;
+}

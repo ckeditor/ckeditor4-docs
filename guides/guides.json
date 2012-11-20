@@ -209,6 +209,31 @@
 						"title": "Bugs and New Features"
 					}
 				]
+			},
+			{
+				"title": "Tutorials",
+				"items": [
+					{
+						"name": "dev_tutorials_basics",
+						"url": "dev/tutorials/plugin_basics",
+						"title": "Plugin Basics"
+					},
+					{
+						"name": "dev_tutorials_sample_plugin_1",
+						"url": "dev/tutorials/sample_plugin_1",
+						"title": "Simple Plugin (Part 1)"
+					},
+					{
+						"name": "dev_tutorials_sample_plugin_2",
+						"url": "dev/tutorials/sample_plugin_2",
+						"title": "Simple Plugin (Part 2)"
+					},
+					{
+						"name": "dev_tutorials_dialog_windows",
+						"url": "dev/tutorials/dialog_windows",
+						"title": "Plugin Dialog Windows"
+					}
+				]
 			}
 		]
 	},

@@ -156,6 +156,21 @@
 						"name": "dev_howtos_pasting",
 						"url": "dev/howtos/pasting",
 						"title": "Pasting"
+					},
+					{
+						"name": "dev_howtos_scayt",
+						"url": "dev/howtos/scayt",
+						"title": "Spellchecker and Spell Check As You Type (SCAYT)"
+					},
+					{
+						"name": "dev_howtos_templates",
+						"url": "dev/howtos/templates",
+						"title": "Templates"
+					},
+					{
+						"name": "dev_howtos_dialog_windows",
+						"url": "dev/howtos/dialog_windows",
+						"title": "Dialog Windows"
 					}
 				]
 			}

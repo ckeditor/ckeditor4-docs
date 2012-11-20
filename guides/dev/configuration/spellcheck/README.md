@@ -6,7 +6,7 @@ or configured to use an external spell checking web service.
 ## Use the native spell checker
 
 Native spell check functionality is by default disabled in the editor, use
-{@link CKEDITOR.config.disableNativeSpellChecker disableNativeSpellChecker} to enable it:
+{@link CKEDITOR.config#disableNativeSpellChecker disableNativeSpellChecker} to enable it:
 
 	config.disableNativeSpellChecker = false;
 

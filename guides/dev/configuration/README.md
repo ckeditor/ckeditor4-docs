@@ -64,7 +64,3 @@ It is also possible to completely avoid loading an external configuration file, 
 	    });
 
 This setting is definitely recommended, if you are not setting the configuration in the `config.js` file nor a custom configuration file.
-
-## Mapping CKEditor and FCKeditor Configuration Settings
-
-If you moved to CKEditor from its predecessor, FCKeditor, you might be used to setting the configuration in the FCKeditor way. To make it easier for you to upgrade to the new editor line we have prepared a mapping between configuration settings available in [FCKeditor 2](http://docs.cksource.com/FCKeditor_2.x/Developers_Guide) and CKEditor. A full listing [can be found here](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/FCKeditor_CKEditor_Configuration_Mapping).

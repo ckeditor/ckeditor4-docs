@@ -67,7 +67,7 @@ time will be calculated using the JavaScript
 [Date object](https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Date).
 
 The most important part is to insert the HTML code into the document. To do this, 
-we will use the {@link CKEDITOR.editor#insertHtml insertHtml} function from 
+we will use the {@link CKEDITOR.editor#method-insertHtml insertHtml} function from 
 [CKEditor JavaScript API](#!/api). This function 
 can be used to insert arbitrary HTML code into the document, so with a bit of tweaking 
 you can customize the timestamp plugin code to add other HTML elements into the 

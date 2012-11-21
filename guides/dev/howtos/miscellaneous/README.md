@@ -3,9 +3,9 @@
 
 ## How Do I Read or Write the Contents of CKEditor from JavaScript?
 
-If you want to read CKEditor contents, use the {@link CKEDITOR.editor#getData getData} method.
+If you want to read CKEditor contents, use the {@link CKEDITOR.editor#method-getData getData} method.
 
-If you want to write some content into CKEditor, use the {@link CKEDITOR.editor#setData setData} method.
+If you want to write some content into CKEditor, use the {@link CKEDITOR.editor#method-setData setData} method.
 
 An example of how to use these functions can be found in the **Basic usage of the API** sample (`samples/api.html`) located in the `samples/` directory of CKEditor installation package.
 

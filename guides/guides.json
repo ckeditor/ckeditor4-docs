@@ -142,12 +142,17 @@
 						"name": "dev_browsers",
 						"url": "dev/browsers",
 						"title": "Browsers Compatibility",
-						"description": "Browsers compatibility and Licensing."
+						"description": "Browsers compatibility, Licensing and API changes"
 					},
 					{
 						"name": "dev_license",
 						"url": "dev/license",
 						"title": "License"
+					},
+					{
+						"name": "dev_api_changes",
+						"url": "dev/api_changes",
+						"title": "API Changes"
 					}
 				]
 			},

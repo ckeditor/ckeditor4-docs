@@ -3,6 +3,17 @@ Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
+a,
+a:hover
+{
+	color: #0C7FCC;
+}
+
+a:hover
+{
+	background: #D6F2FF;
+}
+
 #header-content
 {
 	background: none;

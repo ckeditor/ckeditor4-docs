@@ -3,7 +3,7 @@
 
 ## How Do I Set SCAYT to Turn On Automatically?
 
-If you want to turn on the [Spell Check As You Type (SCAYT)](#!/guide/user_spell_checking) feature in CKEditor by default, set the {@link CKEDITOR.config#scayt_autoStartup scayt_autoStartup} configuration setting to `true`.
+If you want to turn on the [Spell Check As You Type (SCAYT)](#!/guide/user_spell_checking) feature in CKEditor by default, set the `scayt_autoStartup` configuration setting to `true`.
 
 	config.scayt_autoStartup = true;
 
@@ -14,7 +14,7 @@ If you want to completely disable the [Spell Check As You Type (SCAYT)](#!/guide
 
 	config.removePlugins = 'scayt';
 
-If you want to leave SCAYT available, but prevent the feature from being turned on automatically on loading the editor, set the {@link CKEDITOR.config#scayt_autoStartup scayt_autoStartup} configuration setting to `false`. This is the default value for CKEditor configuration.
+If you want to leave SCAYT available, but prevent the feature from being turned on automatically on loading the editor, set the `scayt_autoStartup` configuration setting to `false`. This is the default value for CKEditor configuration.
 
 	config.scayt_autoStartup = false;
 

@@ -39,51 +39,44 @@
 						"description": "Everything about the CKEditor configurations."
 					},
 					{
+						"name": "dev_toolbar",
+						"url": "dev/configuration/toolbar",
+						"title": "Toolbar"
+					},
+					{
+						"name": "dev_styles",
+						"url": "dev/configuration/styles",
+						"title": "Styles"
+					},
+					{
+						"name": "dev_output_format",
+						"url": "dev/configuration/output_format",
+						"title": "Output Formatting"
+					},
+					{
+						"name": "dev_spellcheck",
+						"url": "dev/configuration/spellcheck",
+						"title": "Spell Checker"
+					},
+					{
 						"title": "File Browser and Upload",
 						"items": [
 							{
 								"name": "dev_file_browse_upload",
 								"url": "dev/configuration/file_browse_upload",
-								"title": "Integrate with File Browser",
-								"description": " Integrated CKEditor with an external file browser/uploader."
+								"title": "Introduction"
 							},
 							{
 								"name": "dev_file_browser_api",
 								"url": "dev/configuration/file_browse_upload/file_browser_api",
-								"title": "File Browser APIs",
-								"description": "Describe the file browser protocols in CKEditor."
+								"title": "File Browser API"
 							},
 							{
 								"name": "dev_dialog_add_file_browser",
 								"url": "dev/configuration/file_browse_upload/dialog_add_file_browser",
-								"title": "Dialog Add File Browser",
-								"description": "Describe the file browser protocols in CKEditor."
+								"title": "Custom Dialog Usage"
 							}
 						]
-					},
-					{
-						"name": "dev_toolbar",
-						"url": "dev/configuration/toolbar",
-						"title": "Custom Toolbar Items",
-						"description": "Various ways of definition CKEditor toolbar items."
-					},
-					{
-						"name": "dev_styles",
-						"url": "dev/configuration/styles",
-						"title": "Adding Custom Style",
-						"description": "Define your own set of styles in the Styles combo."
-					},
-					{
-						"name": "dev_output_format",
-						"url": "dev/configuration/output_format",
-						"title": "Formatting Output Data",
-						"description": "Precisely control over whitespaces usages in output data."
-					},
-					{
-						"name": "dev_spellcheck",
-						"url": "dev/configuration/spellcheck",
-						"title": "Contents Spell Checking",
-						"description": "Spell check the editor contents with the browser or external spell checker."
 					}
 				]
 			},

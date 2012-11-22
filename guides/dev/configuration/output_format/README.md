@@ -13,8 +13,7 @@ Technically speaking, writing the final output is a task executed by the
 [CKEDITOR.htmlWriter](#!/api/CKEDITOR.htmlWriter.html)
 class ("writer"), used by the `CKEDITOR.htmlDataProcessor` class.
 Therefore, the current writer instance for a specific editor instance
-can be retrieved by the **`editorInstance`**`.dataProcessor.writer`
-property.
+can be retrieved by the `editorInstance.dataProcessor.writer` property.
 
 It is possible to configure several output formatting options by setting
 the writer properties. The following example summarizes the most used of

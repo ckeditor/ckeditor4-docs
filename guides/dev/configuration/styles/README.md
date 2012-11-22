@@ -72,7 +72,7 @@ your file:
     config.stylesSet = 'my_styles:http://www.example.com/styles.js';
 
 The syntax for the style definition setting is always:
-`''style definition name'' : ''file URL''`.
+`style definition name : file URL`.
 
 Note that you must use the unique name you have used to register the
 style definition in the file.

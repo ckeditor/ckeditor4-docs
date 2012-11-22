@@ -41,7 +41,7 @@ setting defined in toolbar groups.
 
 Every toolbar definition is composed of a series of **toolbar button
 groups**. Each toolbar group has a label (name) and the listing of
-buttons that belong to the group, placed in square **brackets (`[ ]`)**. The
+buttons that belong to the group, placed in square **brackets ([ ])**. The
 toolbar group items move together to new rows when the editor is
 resized.
 
@@ -57,11 +57,11 @@ separate JavaScript array of strings. Every string stands for a single
 toolbar item to be used. Toolbar items are defined by plugins.
 
 You can also include a separator in the toolbar group by including a
-**dash (`-`)** character in it.
+**dash (-)** character in it.
 
 ### Forcing Row Break
 
-The definition contains numerous **slash (`/`)** characters that
+The definition contains numerous **slash (/)** characters that
 were placed between toolbar button groups. They can be used to force a
 break at the point where they were placed, rendering the next toolbar
 group in a new row. This placement will not be changed when CKEditor is

@@ -10,7 +10,7 @@ documentation.
 Dialogs
 -------
 
-Please refer to the {@link CKEDITOR.dialog.definition Dialog definition API] for
+Please refer to the {@link CKEDITOR.dialog.definition Dialog definition API} for
 general help on how to create a dialog box.
 
 Filebrowser Plugin
@@ -24,8 +24,8 @@ CKEditor components (usually to dialogs).
 ### Adding "Browse Server" button
 
 To assign the filebrowser plugin to an element inside of a dialog box,
-set the "filebrowser" property. For example in
-*\_source/plugins/image/dialogs/image.js* there is:
+set the "filebrowser" property. For example in the `image` plugin source
+there is:
 
     {
             type : 'button',
@@ -50,7 +50,7 @@ a popup) when button is clicked.
 The `'Link:txtUrl'` value instructs the plugin to update an
 element with id `txtUrl` inside of the `Link` tab when
 `CKEDITOR.tools.callFunction(funcNum)` is called (see [Custom File
-Browser](#/!guide/dev_file_browser_api)).
+Browser](#!/guide/dev_file_browser_api)).
 
 ### Adding "Quick Upload" support
 
@@ -93,11 +93,9 @@ to upload a file.
 In the example above, the id of a tab is `'Upload'`. It is hidden by
 default (`hidden:true`). As already mentioned, the filebrowser plugin
 looks for all elements with the filebrowser attribute and unhides them
-if appropriate configuration setting is available in {@link CKEDITOR.config#filebrowserBrowseUrl filebrowserBrowseUrl}
-and {@link CKEDITOR.config#filebrowserUploadUrl filebrowserUploadUrl}.
-In this case, the tab will be unhidden automatically if a filebrowser
-setting for `'uploadButton'` (because of `filebrowser:'uploadButton'`)
-will be available (`filebrowserUploadUrl`).
+if appropriate configuration setting is available. In this case, the tab will
+be unhidden automatically if a filebrowser setting for `'uploadButton'`
+(because of `filebrowser:'uploadButton'`) will be available (`filebrowserUploadUrl`).
 
 The `file` element is simple and doesn't need to be explained, it is
 just an input element that will store the name of a file that will be

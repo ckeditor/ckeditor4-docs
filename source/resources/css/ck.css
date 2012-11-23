@@ -16,8 +16,16 @@ a:hover
 
 #header-content
 {
-	background: none;
 	padding-left: 5px;
+	background-image: url(../images/ckeditorLogo.png);
+	background-position: left center;
+	height: 50px;
+	line-height: 50px;
+	padding-left: 48px;
+	margin-left: 20px;
+	font-weight: bold;
+	font-size: 18px;
+	text-shadow: 0 1px 0 #000;
 }
 
 #search-field-inputEl

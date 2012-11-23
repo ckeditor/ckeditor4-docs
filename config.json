@@ -16,8 +16,11 @@
 	"--output" : "build",
 
 	"--": [
-		"../../core",
-		"../../plugins",
-		"../../ckeditor.js"
+		"repos/ckeditor-dev/core",
+		"repos/ckeditor-dev/plugins",
+		"repos/ckeditor-dev/ckeditor.js",
+
+		"repos/ckeditor-plugin-scayt",
+		"repos/ckeditor-plugin-wsc"
 	]
 }

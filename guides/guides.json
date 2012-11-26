@@ -155,7 +155,8 @@
 					{
 						"name": "dev_howtos_basic_configuration",
 						"url": "dev/howtos/basic_configuration",
-						"title": "Basic Configuration and Customization"
+						"title": "Basic Configuration and Customization",
+						"description": "The most frequent question and answers."
 					},
 					{
 						"name": "dev_howtos_licensing_and_support",

@@ -209,11 +209,6 @@
 						"title": "Plugins"
 					},
 					{
-						"name": "dev_howtos_integration",
-						"url": "dev/howtos/integration",
-						"title": "Intergration"
-					},
-					{
 						"name": "dev_howtos_miscellaneous",
 						"url": "dev/howtos/miscellaneous",
 						"title": "Miscellaneous"

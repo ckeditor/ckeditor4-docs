@@ -178,3 +178,8 @@ pre code a
 {
 	border: 0;
 }
+
+.guide-container .toc
+{
+    max-width: 450px;
+}

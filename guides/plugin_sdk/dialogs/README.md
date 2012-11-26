@@ -114,12 +114,12 @@ to see the new plugin toolbar button along with its tooltip.
 After you load the page containing the above CKEditor instance you should be able 
 to see the new plugin toolbar button along with its tooltip.
 
-![SimpleLink plugin button added to CKEditor toolbar](guides/dev_tutorials_dialog_windows/pluginLoaded.png)
+![SimpleLink plugin button added to CKEditor toolbar](guides/plugin_sdk_dialogs/pluginLoaded.png)
 
 ##Plugin Dialog Window
 
 Up till now, most of the actions that we performed were equivalent to what we did 
-while creating the [Abbreviation plugin](#!/guide/dev_tutorials_sample_plugin_1). 
+while creating the [Abbreviation plugin](#!/guide/plugin_sdk_sample_1).
 Here is, however, where the really 
 interesting part begins. We will now move on to creating a custom dialog window 
 along with its contents.
@@ -191,7 +191,7 @@ The result of this change can be seen immediately. Click the **Insert a Link**
 toolbar button in order to open the newly created (and so far empty) **Link 
 Properties** dialog window.
 
-![A SimpleLink plugin dialog window with one tab added](guides/dev_tutorials_dialog_windows/dialogElements1.png)
+![A SimpleLink plugin dialog window with one tab added](guides/plugin_sdk_dialogs/dialogElements1.png)
 
 ###Dialog Window Tab Elements
 
@@ -226,7 +226,7 @@ page is entered in the {@link CKEDITOR.ui.dialog.html html} parameter.
 After adding the above code to the plugin source, the **Link Properties** dialog 
 window looks like this.
 
-![HTML element added in the SimpleLink plugin dialog window](guides/dev_tutorials_dialog_windows/dialogElements2.png)
+![HTML element added in the SimpleLink plugin dialog window](guides/plugin_sdk_dialogs/dialogElements2.png)
 
 ###UI Elements: Textarea
 
@@ -256,7 +256,7 @@ the validator will return an error message.
 This is the appearance of the **Link Properties** dialog window after we apply the 
 changes.
 
-![Textarea element added in the SimpleLink plugin dialog window](guides/dev_tutorials_dialog_windows/dialogElements3.png)
+![Textarea element added in the SimpleLink plugin dialog window](guides/plugin_sdk_dialogs/dialogElements3.png)
 
 The size of the textarea can obviously be customized. If you want to change the 
 element's dimensions, use the ``cols`` and ``rows`` parameters as defined in the 
@@ -289,7 +289,7 @@ an error message.
 With the latest addition of the text field the **Link Properties** dialog window 
 will look like this.
 
-![Text field element added in the SimpleLink plugin dialog window](guides/dev_tutorials_dialog_windows/dialogElements4.png)
+![Text field element added in the SimpleLink plugin dialog window](guides/plugin_sdk_dialogs/dialogElements4.png)
 
 ###UI Elements: Selection Field
 
@@ -321,7 +321,7 @@ After the selection field is added to the plugin dialog window and is expanded
 by the user, the style that was selected by default (the first one, if not 
 defined otherwise) is highlighted.
 
-![Selection field element added in the SimpleLink plugin dialog window](guides/dev_tutorials_dialog_windows/dialogElements5.png)
+![Selection field element added in the SimpleLink plugin dialog window](guides/plugin_sdk_dialogs/dialogElements5.png)
 
 ###UI Elements: Checkbox
 
@@ -351,7 +351,7 @@ plugin dialog window is opened.
 The figure below shows the **Link Properties** dialog window complete with all 
 the UI elements added above.
 
-![Checkbox element added in the SimpleLink plugin dialog window](guides/dev_tutorials_dialog_windows/dialogElements6.png)
+![Checkbox element added in the SimpleLink plugin dialog window](guides/plugin_sdk_dialogs/dialogElements6.png)
 
 ##Plugin Behavior
 
@@ -496,7 +496,7 @@ function for that.
 The full contents of the ``plugin.js`` file look as follows:
 
 <p class="tip">
-	You can also download the <a href="guides/dev_tutorials_dialog_windows/simpleLink.zip">
+	You can also download the <a href="guides/plugin_sdk_dialogs/simpleLink.zip">
 	whole plugin folder</a> inluding the icon and the fully commented source code.
 </p>
 
@@ -611,17 +611,17 @@ configuring the link to open in a new window is checked by default, but you can
 uncheck  it. You can also change the link style by choosing one of the options from 
 the drop-down list.
 
-![Link added in the plugin dialog window](guides/dev_tutorials_dialog_windows/working1.png)
+![Link added in the plugin dialog window](guides/plugin_sdk_dialogs/working1.png)
 
 The newly added link will be inserted into the document and displayed with a 
 style selected in the dialog window.
 
-![Link added to the document](guides/dev_tutorials_dialog_windows/working2.png)
+![Link added to the document](guides/plugin_sdk_dialogs/working2.png)
 
 If you switched to **Source view**, you could see all the information from the 
 plugin dialog window added as link contents and attributes.
 
-![Link element shown in the Source view](guides/dev_tutorials_dialog_windows/working3.png)
+![Link element shown in the Source view](guides/plugin_sdk_dialogs/working3.png)
 
 ##Further Enhancements
 
@@ -629,5 +629,5 @@ The SimpleLink plugin is now able to add a new link element to the document by
 using a custom and simplified dialog window, but does not make it possible to 
 edit an already existing element by using the plugin dialog window. For tips 
 on how to implement this feature along with the context menu support check the 
-[Creating a Simple CKEditor Plugin (Part 2)](#!/guide/dev_tutorials_sample_plugin_2) 
+[Creating a Simple CKEditor Plugin (Part 2)](#!/guide/plugin_sdk_sample_2)
 tutorial.	

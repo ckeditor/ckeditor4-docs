@@ -209,31 +209,41 @@
 						"title": "Bugs and New Features"
 					}
 				]
+			}
+		]
+	},
+	{
+		"title": "CKEditor 4 Plugin SDK",
+		"items": [
+			{
+				"name": "plugin_sdk_intro",
+				"url": "plugin_sdk/intro",
+				"title": "Introduction",
+				"description": "The basics on CKEditor plugins."
 			},
 			{
-				"title": "Tutorials",
+				"title": "Simple Plugin Sample",
 				"items": [
 					{
-						"name": "dev_tutorials_basics",
-						"url": "dev/tutorials/plugin_basics",
-						"title": "Plugin Basics"
+						"name": "plugin_sdk_sample_1",
+						"url": "plugin_sdk/sample_1",
+						"title": "Simple Plugin (Part 1)",
+						"description": "Learn by creating a simple plugin."
 					},
 					{
-						"name": "dev_tutorials_sample_plugin_1",
-						"url": "dev/tutorials/sample_plugin_1",
-						"title": "Simple Plugin (Part 1)"
-					},
-					{
-						"name": "dev_tutorials_sample_plugin_2",
-						"url": "dev/tutorials/sample_plugin_2",
+						"name": "plugin_sdk_sample_2",
+						"url": "plugin_sdk/sample_2",
 						"title": "Simple Plugin (Part 2)"
-					},
-					{
-						"name": "dev_tutorials_dialog_windows",
-						"url": "dev/tutorials/dialog_windows",
-						"title": "Plugin Dialog Windows"
 					}
 				]
+			}
+		],
+		"TODO": [
+			{
+				"name": "plugin_sdk_dialogs",
+				"url": "plugin_sdk/dialogs",
+				"title": "Dialog Windows",
+				"description": "Creating dialogs through plugins."
 			}
 		]
 	},

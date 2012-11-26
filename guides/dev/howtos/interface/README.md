@@ -3,7 +3,7 @@
 
 ## How Do I Remove the Elements Path?
 
-The [elements path](#!/guide/user_elements_path) displays information about the HTML elements of the document for a position of the cursor.
+The **elements path** displays information about the HTML elements of the document for the position of the cursor.
 
 {@img ../../images/ui_elements_path.png The elements path of CKEditor}
 
@@ -21,7 +21,7 @@ Note that the `width` value can be given as a number representing the value in p
 	config.width = 850;
 	config.width = '75%';
 
-The `height` value defines the height of CKEditor [editing area](#!/guide/user_editing_area) and can be given in pixels or em. Percent values are not supported.
+The `height` value defines the height of CKEditor editing area and can be given in pixels or em. Percent values are not supported.
 
 	config.height = 500;
 	config.height = '25em';
@@ -37,7 +37,7 @@ To achieve this, use the {@link CKEDITOR.editor#resize resize function} to defin
 	// Set editor width to 100% and height to 350px.
 	editor.resize( '100%', '350' );
 
-While setting the height value, use the `isContentHeight` parameter to decide whether the value applies to the whole editor [interface](#!/guide/user_interface) or just the [editing area](#!/guide/user_editing_area).
+While setting the height value, use the `isContentHeight` parameter to decide whether the value applies to the whole editor interface or just the editing area.
 
 	// The height value now applies to the editing area.
 	editor.resize( '100%', '350', true );
@@ -45,7 +45,7 @@ While setting the height value, use the `isContentHeight` parameter to decide wh
 
 ## How Do I Remove the Ability to Resize CKEditor?
 
-The editor window can be [resized](#!/guide/user_interface-section-2) by using the resizing grip located in the bottom right-hand corner of CKEditor interface (for RTL languages — in the bottom left-hand corner).
+The editor window can be resized by using the resizing grip located in the bottom right-hand corner of CKEditor interface (for RTL languages — in the bottom left-hand corner).
 
 {@img ../../images/ui_resizer.png The resizing grip of CKEditor}
 
@@ -60,7 +60,7 @@ You can also disable this feature by setting the {@link CKEDITOR.config#resize_e
 
 ## How Do I Limit the Width and Height for CKEditor Resizing?
 
-CKEditor window can be [resized](#!/guide/user_interface-section-2) if the `resize` plugin is enabled. You can however define the minimum and maximum dimensions to prevent the editor window from becoming too small or too big to handle.
+CKEditor window can be resized if the `resize` plugin is enabled. You can however define the minimum and maximum dimensions to prevent the editor window from becoming too small or too big to handle.
 
 To define the minimum editor dimensions after resizing, specify the {@link CKEDITOR.config#resize_minWidth resize_minWidth} and {@link CKEDITOR.config#resize_minHeight resize_minHeight} values in pixels.
 
@@ -75,7 +75,7 @@ To define the maximum editor dimensions after resizing, specify the {@link CKEDI
 
 ## How Do I Limit the Directions for CKEditor Resizing to Horizontal or Vertical Only?
 
-CKEditor window can be [resized](#!/guide/user_interface-section-2) if the `resize` plugin is enabled. You can however define the resizing directions in order to have more control over the resulting editor appearance.
+CKEditor window can be resized if the `resize` plugin is enabled. You can however define the resizing directions in order to have more control over the resulting editor appearance.
 
 By default CKEditor resizing is allowed in both directions — vertical and horizontal. This is achieved thanks to setting the resize_dir configuration value to `'both'` (this is the default setting).
 
@@ -92,7 +92,7 @@ If you set the resize_dir configuration value to `'horizontal'`, CKEditor window
 
 ## How Do I Remove the Toolbar Collapse Button?
 
-CKEditor toolbar can be [collapsed and restored](#!/guide/user_interface_toolbar-section-3) by using the **Collapse Toolbar** button located in the bottom right-hand corner of the toolbar (for RTL languages — in the bottom left-hand corner).
+CKEditor toolbar can be collapsed and restored by using the **Collapse Toolbar** button located in the bottom right-hand corner of the toolbar (for RTL languages — in the bottom left-hand corner).
 
 {@img ../../images/ui_collapse.png The Collapse Toolbar button in CKEditor}
 
@@ -106,18 +106,16 @@ CKEditor {@link CKEDITOR.config#toolbar toolbar} is an array of button elements 
 
 {@img ../../images/ui_toolbar.png The CKEditor toolbar}
 
-The toolbar is defined by using the {@link CKEDITOR.config#toolbar toolbar} or `toolbar_`*`name`* settings, where the `name` element is the name used to identify the toolbar in the `toolbar` setting.
-
-A description of various toolbar configuration methods along with code samples can be found in the [Toolbar](#!/guide/dev_toolbar) section of [CKEditor 3.x Developer's Guide](#!/guide/dev).
+Check the [Toolbar Customization](#!/guide/dev_toolbar) section of this guide for more information on how to customize it.
 
 
 ## How Do I Navigate CKEditor Using the Keyboard?
 
-[CKEditor 3.x Accessibility Guide](#!/guide/a11y) contains lots of useful information on using the CKEditor interface with your keyboard or with assistive devices such as screen readers.
+[CKEditor Accessibility Guide](http://docs.cksource.com/CKEditor_3.x/Accessibility) contains lots of useful information on using the CKEditor interface with your keyboard or with assistive devices such as screen readers.
 
 Many functions in CKEditor have their equivalent keyboard shortcuts. This is one of the reasons why working with the editor is simple and efficient.
 
-The [Keyboard Shortcuts](#!/guide/user_keyboard_shortcuts) article describes available keyboard shortcuts grouped by problem areas.
+The [Keyboard Shortcuts](http://docs.cksource.com/CKEditor_3.x/Users_Guide/Keyboard_Shortcuts) article describes available keyboard shortcuts grouped by problem areas.
 
 
 ## How Do I Configure CKEditor to Use the `Arrow` Keys to Navigate Between All Toolbar Buttons?

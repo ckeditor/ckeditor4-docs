@@ -159,9 +159,9 @@
 						"description": "The most frequent question and answers."
 					},
 					{
-						"name": "dev_howtos_licensing_and_support",
-						"url": "dev/howtos/licensing_and_support",
-						"title": "Licensing and Support"
+						"name": "dev_howtos_support",
+						"url": "dev/howtos/support",
+						"title": "Support"
 					},
 					{
 						"name": "dev_howtos_interface",
@@ -194,19 +194,9 @@
 						"title": "Spellchecker and Spell Check As You Type (SCAYT)"
 					},
 					{
-						"name": "dev_howtos_templates",
-						"url": "dev/howtos/templates",
-						"title": "Templates"
-					},
-					{
 						"name": "dev_howtos_dialog_windows",
 						"url": "dev/howtos/dialog_windows",
 						"title": "Dialog Windows"
-					},
-					{
-						"name": "dev_howtos_plugins",
-						"url": "dev/howtos/plugins",
-						"title": "Plugins"
 					},
 					{
 						"name": "dev_howtos_miscellaneous",

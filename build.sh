@@ -18,23 +18,18 @@
 
 set -e
 
-echo "Building the API document into the 'build/' directory..."
 echo ""
+echo "Building the API document into the 'build/' directory..."
 
 # Move to the script directory.
 cd $(dirname $0)
 
-jsduck --seo --config=config.json
+jsduck --config=config.json $@
 
-echo "Applying customizations:"
-echo "	* Copying resources..."
+echo "Applying customizations..."
 cp -r source/resources build
-
-echo "	* Copying favicon..."
 cp source/favicon.ico build
-
-echo "	* Copying images..."
 cp -r images build
 
-echo ""
 echo "Finished!"
+echo ""

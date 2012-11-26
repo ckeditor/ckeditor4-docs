@@ -24,7 +24,7 @@ echo ""
 # Move to the script directory.
 cd $(dirname $0)
 
-jsduck --config=config.json
+jsduck --seo --config=config.json
 
 echo "Applying customizations:"
 echo "	* Copying resources..."

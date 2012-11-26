@@ -1,9 +1,8 @@
 # Spell Checking
 
-Editor can be configured to use either native spell checking capabilities provided by the browser,
-or configured to use an external spell checking web service.
+CKEditor can be configured to use either native spell checking capabilities provided by the browser or to use an external spell checking web service.
 
-## Use the native spell checker
+## The Native Spell Checker
 
 Native spell check functionality is by default disabled in the editor, use
 {@link CKEDITOR.config#disableNativeSpellChecker disableNativeSpellChecker} to enable it:
@@ -12,19 +11,16 @@ Native spell check functionality is by default disabled in the editor, use
 
 You should be able to see the spelling underline in content after reloading the editor.
 
+**Note**: If the context menu plugin is enabled, its necessary to hold the CTRL key when right-clicking misspelled words to see their suggestions.
 
-_**Note**: The spell check is not generically available for all browsers._
+**Note**: The spell check is not generically available for all browsers.
 
-## Use the **SpellCheckAsYouType** provided by spellchecker.net
+## The **SpellCheckAsYouType** Plugin
 
-The `scayt` plugin is to provide misspellings correction inline, denoted by underlined,
-suggestions are provided by the editor context menu.
+The [SpellCheckAsYouType (SCAYT)](http://ckeditor.com/addon/scayt) plugin provides inline spell checking, much like the native spell checker, well integrated with the CKEditor context menu. 
 
-	config.extraPlugins = 'scayt';
+It is provided by [WebSpellChecker.net](http://www.webspellchecker.net/). It users their web-services, transferring the text to their servers and performing spell checking. This is a cross browser solution.
 
-## Use the **WebSpellChecker** provided by spellchecker.net
+## The **WebSpellChecker** Plugin
 
-The `wsc` plugin is to provide spell checking options with an editor dialog window, corrected
-text is returned to editor on dialog close. simpling add the plugin to editor to use it:
-
-	config.extraPlugins = 'wsc';
+The [WebSpellChecker](http://ckeditor.com/addon/wsc) plugin is another spell checking solution provided by [WebSpellChecker.net](http://www.webspellchecker.net/) that instead runs the check through a dialog windows, instead of marking misspelled words inline.

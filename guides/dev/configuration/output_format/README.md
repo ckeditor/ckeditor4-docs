@@ -9,11 +9,11 @@ tags and can give a different result for each one of them.
 The HTML Writer
 ---------------
 
-Technically speaking, writing the final output is a task executed by the
-[CKEDITOR.htmlWriter](#!/api/CKEDITOR.htmlWriter.html)
-class ("writer"), used by the `CKEDITOR.htmlDataProcessor` class.
-Therefore, the current writer instance for a specific editor instance
-can be retrieved by the `editorInstance.dataProcessor.writer` property.
+The [HTML Writer plugin](http://ckeditor.com/addon/htmlwriter) makes it possible to generate advanced formatted output with CKEditor.
+
+The "writer" is used by the CKEDITOR.htmlDataProcessor class to write the output data.
+Therefore, the current writer for a specific editor instance
+can be retrieved with the {@link CKEDITOR.htmlDataProcessor#writer editor.dataProcessor.writer} property.
 
 It is possible to configure several output formatting options by setting
 the writer properties. The following example summarizes the most used of

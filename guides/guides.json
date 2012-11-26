@@ -135,7 +135,7 @@
 						"name": "dev_browsers",
 						"url": "dev/browsers",
 						"title": "Browsers Compatibility",
-						"description": "Browsers compatibility, Licensing and API changes"
+						"description": "Browser compatibility, Licensing and API changes"
 					},
 					{
 						"name": "dev_license",
@@ -263,7 +263,7 @@
 						"name": "skin_sdk_icons",
 						"url": "skin_sdk/icons",
 						"title": "Icons",
-						"description": "In depth details about concepts that make part of a skin."
+						"description": "In-depth details about concepts that make part of a skin."
 					},
 					{
 						"name": "skin_sdk_reset",
@@ -299,7 +299,7 @@
 						"name": "skin_sdk_setup",
 						"url": "skin_sdk/setup",
 						"title": "Setup",
-						"description": "The workflow os a custom skin creation."
+						"description": "The workflow of creating a custom skin."
 					},
 					{
 						"name": "skin_sdk_customize",

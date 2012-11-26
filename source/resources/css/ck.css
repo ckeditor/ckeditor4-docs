@@ -172,3 +172,9 @@ pre code a
 	margin-left: -48px;
 	margin-top: 4px;
 }
+
+/* Hide image borders in guide index. */
+.thumb-list dd .thumb img
+{
+	border: 0;
+}

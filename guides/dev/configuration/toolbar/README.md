@@ -1,130 +1,102 @@
-# Custom Editor Toolbar
+# Toolbar Customization
 
 While CKEditor is a full-featured WYSIWYG editor, not all of its options
 may be needed in all cases. Because of this, toolbar customization is
-one of the most common and required tasks when dealing with CKEditor.
+one of the most common requirements.
 
-## Toolbar Definition
+There are two ways to configure the toolbar to match your needs:
 
-A toolbar definition is a JavaScript array that contains the elements to
-be displayed in all **toolbar rows** available in the editor.
+ * [Toolbar Groups Configuration](#!/guide/dev_toolbar-section-1)
+ * ["Item by Item" Configuration](#!/guide/dev_toolbar-section-2)
 
-The toolbar configuration can be defined in CKEditor using one of the
-following methods:
+## Toolbar Groups Configuration
 
--   Define specific toolbar items with {@link CKEDITOR.config#toolbar config.toolbar}.
--   Define just the toolbar groups which will absorb automatically any items that
-belonged to it, with {@link CKEDITOR.config#toolbarGroups config.toolbarGroups} setting.
+CKEditor 4 introduced a new concept for toolbar organization which is based on "grouping" instead of the traditional "item by item positioning" way.
 
-The following code snippet reflects the default CKEditor toolbar
-setting defined in toolbar groups.
+Grouping configuration is defined by the {@link CKEDITOR.config#toolbarGroups toolbarGroups} setting. The following the the configuration used by the "standard" distribution of CKEditor:
 
-	[
-		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
+	config.toolbarGroups = [
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
 		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
+		{ name: 'links' },
+		{ name: 'insert' },
 		{ name: 'forms' },
+		{ name: 'tools' },
+		{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
+		{ name: 'others' },
 		'/',
 		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
 		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align' ] },
-		{ name: 'links' },
-		{ name: 'insert' },
-		'/',
 		{ name: 'styles' },
 		{ name: 'colors' },
-		{ name: 'tools' },
-		{ name: 'others' },
 		{ name: 'about' }
-	]
+	];
 
-### Button Groups
+It is a list (Array) of objects, each one with a "name" (e.g "clipboard" or "links") and a optional "sub-groups" list.
 
-Every toolbar definition is composed of a series of **toolbar button
-groups**. Each toolbar group has a label (name) and the listing of
-buttons that belong to the group, placed in square **brackets ([ ])**. The
-toolbar group items move together to new rows when the editor is
-resized.
+### Changing the Groups Order
 
-_The group label will be used by assisstive devices such as screen
-readers. It is added in the `name` attribute and is first looked up in
-the CKEditor language file (under the `editor.lang.toolbarGroups.group_name` entry).
-When its definition is found, the text value of this entry is used. If the `name` attribute
-value does not appear in the language file, it is taken as a literal
-toolbar group label and read aloud._
+You can easily customize the groups ordering and position by simply changing the above configuration. 
 
-As shown in the code above, each toolbar button group is defined as a
-separate JavaScript array of strings. Every string stands for a single
-toolbar item to be used. Toolbar items are defined by plugins.
+You can force row-breaks in the toolbar by adding `'/'` into the list, just like you could see above.
 
-You can also include a separator in the toolbar group by including a
-**dash (-)** character in it.
+Note that there are unused groups in the above configuration. This is "by design" (see "The Benefits of Group Configuration").
 
-### Forcing Row Break
+### The Benefits of Group Configuration
 
-The definition contains numerous **slash (/)** characters that
-were placed between toolbar button groups. They can be used to force a
+The most important benefit of toolbar grouping configuration over the "item by item" configuration is: **automation**.
+
+It is now possible for plugin developers to define into which group their plugins should add buttons in the toolbar. For example, the "image" plugin, includes its button into the "insert" group, while the undo and redo buttons go into the "undo" sub-group.
+
+While not mandatory, having all groups and sub-groups configured (including not used ones) is recommended because at any moment in the future, when a new plugin gets installed, its button will automatically appear in the toolbar without further configuration requirements.
+
+### The Drawbacks of Group Configuration
+
+The most evident problem with grouping configuration its that it is not possible to control precisely where each item is placed in the toolbar. It is the plugin itself to decide it.
+
+## "Item by Item" Configuration
+
+Other than the grouping configuration, it is also possible to have more control over every single element in the toolbar by defining their precise position. That is done by configuring a "toolbar definition".
+
+A toolbar definition is a JavaScript array that contains the elements to
+be displayed in all **toolbar rows** available in the editor. The following is an example:
+
+	config.toolbar = [
+		{ name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },
+		{ name: 'clipboard', items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+		'/',
+		{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
+	];
+
+Here every toolbar group is given a name and their precise list of items is defined.
+
+The above can also be achieved with a simpler syntax (see "Accessibility Concerns" later on):
+
+	config.toolbar = [
+		[ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ],
+		[ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
+		'/',
+		[ 'Bold', 'Italic' ]
+	];
+
+Items separator can be included by adding `'-'` (dash) to the list of items, as seen above.
+
+You can force row-breaks in the toolbar by adding `'/'` between groups. They can be used to force a
 break at the point where they were placed, rendering the next toolbar
-group in a new row. This placement will not be changed when CKEditor is
-resized.
+group in a new row. 
 
-## Toolbar Customization
+### The Benefits of "Item by Item" configuration
 
-A simple way to configure the toolbars of all CKEditor instances is to
-add a custom toolbar definition inside the `config.js` file, or even
-better — in a separate custom configuration file (see [Setting
-Configuration](#!/guide/dev_configuration)).
+The most evident benefit of this kind of configuration is that the position of every single item in the toolbar is under control.
 
-For example, the following is a good recommended toolbar definition that
-can be placed in the `config.js` file:
+### The drawbacks of "Item by Item" configuration
 
-    CKEDITOR.editorConfig = function( config )
-    {
-            config.toolbar = 'MyToolbar';
+The biggest problem it that there will be no automation when new plugins get installed. This means that, if any new plugin get into your editor, you'll have to manually change your configurations, to include the plugin buttons at any desired position.
 
-            config.toolbar_MyToolbar =
-            [
-                    { name: 'document', items : [ 'NewPage','Preview' ] },
-                    { name: 'clipboard', items : [ 'Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo' ] },
-                    { name: 'editing', items : [ 'Find','Replace','-','SelectAll','-','Scayt' ] },
-                    { name: 'insert', items : [ 'Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak'
-                     ,'Iframe' ] },
-                    '/',
-                    { name: 'styles', items : [ 'Styles','Format' ] },
-                    { name: 'basicstyles', items : [ 'Bold','Italic','Strike','-','RemoveFormat' ] },
-                    { name: 'paragraph', items : [ 'NumberedList','BulletedList','-','Outdent','Indent','-','Blockquote' ] },
-                    { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
-                    { name: 'tools', items : [ 'Maximize','-','About' ] }
-            ];
-    };
+## Accessibility Concerns
 
-Inside the configuration file you can create as many toolbar definitions
-as you need. Later, based on some criteria, you can choose the toolbar
-to use for each CKEditor instance. Each toolbar definition can be used
-as many times as required (or not used at all, for that matter). For
-example, with the following code, two editors are created on the page
-and each one is using a different toolbar:
+The "name" used on every toolbar group will be used by assistive technology such as screen
+readers. That name will be used by CKEditor too lookup for the "readable" name of each toolbar group in the editor language files (the `toolbarGroups` entries).
 
-    CKEDITOR.replace( 'editor1',
-            {
-                    toolbar : 'MyToolbar'
-            });
+Screen readers will announce each of the toolbar groups by using either their readable name, if available, or their defined `name` attribute.
 
-    CKEDITOR.replace( 'editor2',
-            {
-                    toolbar : 'Basic'
-            });
-
-It is also possible to set the toolbar definition in-page, at the same
-time when you create an editor instance. If this is the case, assign the
-toolbar setting directly to the editor instance, like in the example
-below:
-
-    CKEDITOR.replace( 'editor1',
-            {
-                    toolbar :
-                    [
-                            { name: 'basicstyles', items : [ 'Bold','Italic' ] },
-                            { name: 'paragraph', items : [ 'NumberedList','BulletedList' ] },
-                            { name: 'tools', items : [ 'Maximize','-','About' ] }
-                    ]
-            });

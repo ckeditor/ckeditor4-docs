@@ -19,7 +19,7 @@
 set -e
 
 echo ""
-echo "Building the API document into the 'build/' directory..."
+echo "Building the documentation into the 'build/' directory..."
 
 # Move to the script directory.
 cd $(dirname $0)

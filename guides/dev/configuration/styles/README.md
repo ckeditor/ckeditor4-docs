@@ -1,15 +1,11 @@
 Styles
 ======
 
-The `stylescombo` plugin adds the
-[Styles Combo](http://docs.cksource.com/CKEditor_3.x/Users_Guide/Styling/Styles) to
-the CKEditor toolbar. The list makes it easy to apply customized styles
-and semantic values to content created in the editor.
+The [Styles Combo](http://ckeditor.com/addon/stylescombo) plugin adds the
+a combo to the CKEditor toolbar, containing a list of styles. This list makes it easy to apply customized styles and semantic values to content created in the editor.
 
 The entries available in the combo drop-down list can be easily
-customized to suit your needs. If you want to have a customized style
-list, you will need to prepare the style definitions in a form of
-JavaScript arrays containing the rules to be applied for each style.
+customized to suit your needs.
 
 Defining Styles
 ---------------
@@ -47,13 +43,7 @@ setting. This may be set in the `config.js` file, for example:
 ### Using an External Styles Definition File
 
 The style definition registration call can be included in an external
-JavaScript file. This method is a recommended one, because it allows you
-to load the definitions only on opening the drop-down list,
-thus decreasing the editor page loading time. This approach means,
-however, that the users opening the combo may feel a minor
-loading delay.
-
-By default, CKEditor load the style definition from `/styles.js` file.
+JavaScript file. By default, CKEditor load the style definition from `styles.js` file included in its installation folder.
 
 Your style definition file can be saved in any place of your website (or
 somewhere in the Internet). You must, however, know the URL required to
@@ -128,18 +118,11 @@ Stylesheet Parser Plugin
 Another simplified method exists of customizing the
 styles for the document created in CKEditor and populating the
 drop-down list with style definitions added in an external
-CSS stylesheet file. The **Stylesheet Parser** plugin
-(`stylesheetparser`) lets you use your existing CSS styles without the
+CSS stylesheet file. The [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin lets you use your existing CSS styles without the
 need to define the styles specifically for CKEditor in the format
 presented above.
 
-To use the new style definition method you need to activate the
-`stylesheetparser` plugin for your CKEditor instances by using the
-{@link CKEDITOR.config#extraPlugins extraPlugins} configuration setting:
-
-    config.extraPlugins = 'stylesheetparser';
-
-You then need to supply the location of the CSS file that contains your
+Having the Stylesheet Parser installed, you then need to supply the location of the CSS file that contains your
 style definitions by using the {@link CKEDITOR.config#contentsCss contentsCss}
 configuration setting:
 
@@ -150,14 +133,11 @@ CKEditor by default, you may set `stylesSet` to an empty value:
 
     config.stylesSet = [];
 
-The new solution lets you configure the editor to use existing CSS
+This solution lets you configure the editor to use existing CSS
 stylesheet rules without the need to create separate style definitions
 for CKEditor. On the other hand, the previously used approach offers
 more control over which styles are available for the users, so both
 solutions can be employed interchangeably, according to your needs.
-
-For an example of this usage scenario check the "Stylesheet Parser
-plugin" (`stylesheetparser.html`) sample page.
 
 ### Choosing the CSS Selectors
 

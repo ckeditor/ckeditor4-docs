@@ -21,14 +21,26 @@ set -e
 echo "CKEditor Documentation Builder"
 echo "=============================="
 
+# The default path for ckeditor-dev.
 CKEDITOR_DEV="repos/ckeditor-dev"
 
-if [ -f "../ckeditor-dev/ckeditor.js" ];
+# Check if ckeditor-dev path is in an environment variable.
+if [ $CKEDITOR_DEV_PATH ];
 then
-	CKEDITOR_DEV="../ckeditor-dev"
+	CKEDITOR_DEV=$CKEDITOR_DEV_PATH
 
 	echo ""
-	echo "Detected '../ckeditor-dev'. It'll be used as documentation source."
+	echo "Detected \$CKEDITOR_DEV_PATH. It'll be used as documentation source:"
+	echo $CKEDITOR_DEV_PATH
+else
+	# Check if the documentation folder is at the same level of ckeditor-dev.
+	if [ -f "../ckeditor-dev/ckeditor.js" ];
+	then
+		CKEDITOR_DEV="../ckeditor-dev"
+
+		echo ""
+		echo "Detected '../ckeditor-dev'. It'll be used as documentation source."
+	fi
 fi
 
 PATHS="$CKEDITOR_DEV/core $CKEDITOR_DEV/plugins $CKEDITOR_DEV/ckeditor.js"

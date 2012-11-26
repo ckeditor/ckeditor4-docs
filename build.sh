@@ -18,13 +18,28 @@
 
 set -e
 
+echo "CKEditor Documentation Builder"
+echo "=============================="
+
+CKEDITOR_DEV="repos/ckeditor-dev"
+
+if [ -f "../ckeditor-dev/ckeditor.js" ];
+then
+	CKEDITOR_DEV="../ckeditor-dev"
+
+	echo ""
+	echo "Detected '../ckeditor-dev'. It'll be used as documentation source."
+fi
+
+PATHS="$CKEDITOR_DEV/core $CKEDITOR_DEV/plugins $CKEDITOR_DEV/ckeditor.js"
+
 echo ""
 echo "Building the documentation into the 'build/' directory..."
 
 # Move to the script directory.
 cd $(dirname $0)
 
-jsduck --config=config.json $@
+jsduck --config=config.json $@ -- $PATHS
 
 echo "Applying customizations..."
 cp -r source/resources build

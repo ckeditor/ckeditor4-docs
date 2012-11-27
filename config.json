@@ -13,7 +13,9 @@
 
 	"--guides": "guides/guides.json",
 
-	"--output" : "build",
+	"--output": "build",
+
+	"--seo": true,
 
 	"--": [
 		"repos/ckeditor-plugin-scayt",

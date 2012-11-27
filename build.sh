@@ -56,6 +56,7 @@ jsduck --config=config.json $@ -- $PATHS
 echo "Applying customizations..."
 cp -r source/resources build
 cp source/favicon.ico build
+cp source/.htaccess build
 cp -r images build
 
 echo "Finished!"

@@ -26,11 +26,10 @@ where such functionality is available, i.e. **Link**, **Image** and
 The sample below shows basic configuration code that can be used to
 insert a CKEditor instance with the file browser configured.
 
-    CKEDITOR.replace( 'editor1',
-        {
-            filebrowserBrowseUrl : '/browser/browse.php',
-            filebrowserUploadUrl : '/uploader/upload.php'
-        });
+	CKEDITOR.replace( 'editor1', {
+		filebrowserBrowseUrl: '/browser/browse.php',
+		filebrowserUploadUrl: '/uploader/upload.php'
+	});
 
 ### Example 2
 
@@ -43,13 +42,12 @@ For example to set a special upload URL for the image dialog window, use
 the {@link CKEDITOR.config#filebrowserImageUploadUrl filebrowserImageUploadUrl}
 property.
 
-    CKEDITOR.replace( 'editor1',
-        {
-            filebrowserBrowseUrl : '/browser/browse.php',
-            filebrowserImageBrowseUrl : '/browser/browse.php?type=Images',
-            filebrowserUploadUrl : '/uploader/upload.php',
-            filebrowserImageUploadUrl : '/uploader/upload.php?type=Images'
-        });
+	CKEDITOR.replace( 'editor1', {
+		filebrowserBrowseUrl: '/browser/browse.php',
+		filebrowserImageBrowseUrl: '/browser/browse.php?type=Images',
+		filebrowserUploadUrl: '/uploader/upload.php',
+		filebrowserImageUploadUrl: '/uploader/upload.php?type=Images'
+	});
 
 In the example above, the `filebrowserBrowseUrl` and `filebrowserUploadUrl` settings
 will be used by default. In the **Image Properties** dialog window CKEditor will
@@ -77,13 +75,12 @@ The sample below shows basic configuration code that can be used to
 insert a CKEditor instance with the file browser paths and window size
 configured.
 
-    CKEDITOR.replace( 'editor1',
-        {
-            filebrowserBrowseUrl : '/browser/browse.php',
-            filebrowserUploadUrl : '/uploader/upload.php',
-            filebrowserWindowWidth : '640',
-            filebrowserWindowHeight : '480'
-        });
+	CKEDITOR.replace( 'editor1', {
+		filebrowserBrowseUrl: '/browser/browse.php',
+		filebrowserUploadUrl: '/uploader/upload.php',
+		filebrowserWindowWidth: '640',
+		filebrowserWindowHeight: '480'
+	});
 
 To set the window size of the file browser for a specific dialog window,
 use the `filebrowserWindowWidth` and
@@ -100,13 +97,12 @@ insert a CKEditor instance with the file browser paths configured. It
 also changes the default dimensions of the file browser window, but only
 when opened from the **Image Properties** dialog window.
 
-    CKEDITOR.replace( 'editor1',
-        {
-            filebrowserBrowseUrl : '/browser/browse.php',
-            filebrowserUploadUrl : '/uploader/upload.php',
-            filebrowserImageWindowWidth : '640',
-            filebrowserImageWindowHeight : '480'
-        });
+	CKEDITOR.replace( 'editor1', {
+		filebrowserBrowseUrl: '/browser/browse.php',
+		filebrowserUploadUrl: '/uploader/upload.php',
+		filebrowserImageWindowWidth: '640',
+		filebrowserImageWindowHeight: '480'
+	});
 
 ## Using CKFinder
 
@@ -126,15 +122,14 @@ a CKEditor instance with CKFinder integrated. The browse and upload
 paths for images and Flash objects are configured separately from
 CKFinder default paths.
 
-    CKEDITOR.replace( 'editor1',
-        {
-            filebrowserBrowseUrl : '/ckfinder/ckfinder.html',
-            filebrowserImageBrowseUrl : '/ckfinder/ckfinder.html?Type=Images',
-            filebrowserFlashBrowseUrl : '/ckfinder/ckfinder.html?Type=Flash',
-            filebrowserUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-            filebrowserImageUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-            filebrowserFlashUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
-        });
+	CKEDITOR.replace( 'editor1', {
+		filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+		filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?Type=Images',
+		filebrowserFlashBrowseUrl: '/ckfinder/ckfinder.html?Type=Flash',
+		filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+		filebrowserFlashUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+	});
 
 The example above is valid for PHP environment. Note that `/ckfinder/`
 is a base path to the CKFinder installation directory.
@@ -143,21 +138,21 @@ If you are using CKFinder for ASP, ASP.NET, or ColdFusion, remember to
 change `php` above to the right extension:
 
 -   asp – [CKFinder for
-    ASP](CKFinder/Developers_Guide/ASP/CKEditor_Integration)
+	ASP](CKFinder/Developers_Guide/ASP/CKEditor_Integration)
 -   aspx – [CKFinder for
-    ASP.NET](CKFinder/Developers_Guide/ASP.NET/CKEditor_Integration)
+	ASP.NET](CKFinder/Developers_Guide/ASP.NET/CKEditor_Integration)
 -   cfm – [CKFinder for
-    ColdFusion](CKFinder/Developers_Guide/ColdFusion/CKEditor_Integration)
+	ColdFusion](CKFinder/Developers_Guide/ColdFusion/CKEditor_Integration)
 -   php – [CKFinder for
-    PHP](CKFinder/Developers_Guide/PHP/CKEditor_Integration)
+	PHP](CKFinder/Developers_Guide/PHP/CKEditor_Integration)
 
 ### Example 6
 
 The sample below shows the use of the `CKFinder.SetupCKEditor()` to
 insert a CKEditor instance with CKFinder integrated.
 
-    var editor = CKEDITOR.replace( 'editor1' );
-    CKFinder.SetupCKEditor( editor, '/ckfinder/' );
+	var editor = CKEDITOR.replace( 'editor1' );
+	CKFinder.SetupCKEditor( editor, '/ckfinder/' );
 
 The second parameter of the `SetupCKEditor()` method is the path to the
 CKFinder installation.

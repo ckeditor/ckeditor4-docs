@@ -19,16 +19,15 @@ page.
 
 The following code shows how to register a sample style definition.
 
-    CKEDITOR.stylesSet.add( 'my_styles',
-    [
-        // Block-level styles
-        { name : 'Blue Title', element : 'h2', styles : { 'color' : 'Blue' } },
-        { name : 'Red Title' , element : 'h3', styles : { 'color' : 'Red' } },
+	CKEDITOR.stylesSet.add( 'my_styles', [
+		// Block-level styles
+		{ name: 'Blue Title', element: 'h2', styles: { 'color': 'Blue' } },
+		{ name: 'Red Title' , element: 'h3', styles: { 'color': 'Red' } },
 
-        // Inline styles
-        { name : 'CSS Style', element : 'span', attributes : { 'class' : 'my_style' } },
-        { name : 'Marker: Yellow', element : 'span', styles : { 'background-color' : 'Yellow' } }
-    ]);
+		// Inline styles
+		{ name: 'CSS Style', element: 'span', attributes: { 'class': 'my_style' } },
+		{ name: 'Marker: Yellow', element: 'span', styles: { 'background-color': 'Yellow' } }
+	]);
 
 The definition registration like the one above can be placed inline in
 the page source, or can live in an external file which is loaded "on
@@ -38,7 +37,7 @@ When the definitions are ready, you must instruct the editor to apply
 the newly registered styles by using the {@link CKEDITOR.config#stylesSet stylesSet}
 setting. This may be set in the `config.js` file, for example:
 
-    config.stylesSet = 'my_styles';
+	config.stylesSet = 'my_styles';
 
 ### Using an External Styles Definition File
 
@@ -55,11 +54,11 @@ and refer to it using its full URL, like
 At that point, change the `stylesSet` setting to point the editor to
 your file:
 
-    config.stylesSet = 'my_styles:/styles.js';
+	config.stylesSet = 'my_styles:/styles.js';
 
-    OR
+	OR
 
-    config.stylesSet = 'my_styles:http://www.example.com/styles.js';
+	config.stylesSet = 'my_styles:http://www.example.com/styles.js';
 
 The syntax for the style definition setting is always:
 `style definition name : file URL`.
@@ -75,22 +74,20 @@ rule defines the display name for a single style as well as the element,
 attributes, and CSS styles to be used for it. The following is the
 generic representation for it:
 
-    {
-        name : 'Name displayed in the Styles drop-down list',
-        element : 'HTML element name (for example "span")',
-        styles :
-        {
-            'css-style1' : 'desired value',
-            'css-style2' : 'desired value',
-            ...
-        }
-        attributes :
-        {
-            'attribute-name1' : 'desired value',
-            'attribute-name2' : 'desired value',
-            ...
-        }
-    }
+	{
+		name: 'Name displayed in the Styles drop-down list',
+		element: 'HTML element name (for example "span")',
+		styles: {
+			'css-style1': 'desired value',
+			'css-style2': 'desired value',
+			...
+		}
+		attributes: {
+			'attribute-name1': 'desired value',
+			'attribute-name2': 'desired value',
+			...
+		}
+	}
 
 The `name` and `element` values are required, while other values are
 optional.
@@ -102,15 +99,15 @@ There are three kinds of style types, each one related to the element
 used in the style rule:
 
 -   **Block-level styles** – applied to the text blocks (paragraphs) as
-    a whole, not limited to the text selections. These apply to the
-    following elements: `address`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`,
-    `h6`, `p`, and `pre`.
+	a whole, not limited to the text selections. These apply to the
+	following elements: `address`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`,
+	`h6`, `p`, and `pre`.
 -   **Object styles** – applied to special selectable objects (not
-    textual), whenever such selection is supported by the browser. These
-    apply to the following elements: `a`, `embed`, `hr`, `img`, `li`,
-    `object`, `ol`, `table`, `td`, `tr` and `ul`.
+	textual), whenever such selection is supported by the browser. These
+	apply to the following elements: `a`, `embed`, `hr`, `img`, `li`,
+	`object`, `ol`, `table`, `td`, `tr` and `ul`.
 -   **Inline styles** – applied to text selections for style rules using
-    elements not defined in other style types.
+	elements not defined in other style types.
 
 Stylesheet Parser Plugin
 ------------------------
@@ -126,12 +123,12 @@ Having the Stylesheet Parser installed, you then need to supply the location of 
 style definitions by using the {@link CKEDITOR.config#contentsCss contentsCss}
 configuration setting:
 
-    config.contentsCss = 'sample_CSS_file.css';
+	config.contentsCss = 'sample_CSS_file.css';
 
 Finally, if you want to skip loading the styles that are used in
 CKEditor by default, you may set `stylesSet` to an empty value:
 
-    config.stylesSet = [];
+	config.stylesSet = [];
 
 This solution lets you configure the editor to use existing CSS
 stylesheet rules without the need to create separate style definitions
@@ -147,8 +144,8 @@ configuration value. The default regular expression accepts all CSS
 rules in a form of `element.class`, but you can modify it to
 refer to a limited set of elements, like in the example below.
 
-    // Only add rules for <p> and <span> elements.
-    config.stylesheetParser_validSelectors = /\^(p|span)\.\w+/;
+	// Only add rules for <p> and <span> elements.
+	config.stylesheetParser_validSelectors = /\^(p|span)\.\w+/;
 
 ### Limiting the CSS Selectors
 
@@ -161,5 +158,5 @@ value excludes all rules for the `<body>` element as well as classes
 defined for no specific element, but you can modify it to ignore a wider
 set of elements, like in the example below.
 
-    // Ignore rules for <body> and <caption> elements, classes starting with "high", and any class defined for no specific element.
-    config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;
+	// Ignore rules for <body> and <caption> elements, classes starting with "high", and any class defined for no specific element.
+	config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;

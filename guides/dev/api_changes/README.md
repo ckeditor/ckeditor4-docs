@@ -131,7 +131,7 @@ In this way the entry will be available at `editor.lang.myplugin.title`.
 Constructor `CKEDITOR.editor` now receives two additional optional params (besides of the configuration object),
 to simplify creator implementation:
 
- 	CKEDITOR.editor( config,
+	CKEDITOR.editor( config,
 	 	/** @type {CKEDITOR.dom.element} */ element,
 	 	/** @type {Number} */ elementMode );
 
@@ -182,4 +182,4 @@ They have been replaced by `evt.data.dataValue` and `evt.data.type` to help iden
 
 `CKEDITOR.dtd.$captionBlock` is now removed, to check if one element can be appear inside of table caption, use instead the DTD check:
 
- 	assert.isTrue( !!CKEDITOR.dtd.caption[ element.getName() ] );
+	assert.isTrue( !!CKEDITOR.dtd.caption[ element.getName() ] );

@@ -10,7 +10,7 @@ The [CKEditor Add-ons Repository](http://preview.ckeditor.com/addons/plugins) is
 
 ## Creating a Custom Editor with CKBuilder
 
-CKBuilder is the sister service of the CKEditor Add-ons Repository, making it possible to create a customized editor, by selecting plugins the plugins that best fit your needs. 
+CKBuilder is the sister service of the CKEditor Add-ons Repository, making it possible to create a customized editor, by selecting plugins the plugins that best fit your needs.
 
 Through the navigation of the add-ons repository, you'll be able to use the "Add to my editor button" to send your preferred plugins to your custom editor. Once done, you can simply download it an enjoy an editing experience that is perfect for your needs.
 
@@ -20,11 +20,11 @@ If you prefer not to use CKBuilder, if you have plugins developer by yourself of
 
 
  1. **Extracting the zip file:** Plugins are usually available as zip files. So, to start, be sure to have the zip extracted into a folder.
- 
+
  2. **Copying the files into CKEditor:** The easiest way to install the files is by simply copying them into the `plugins` folder of your CKEditor installation. They must be placed into a sub-folder that matches the "technical" name of the plugin. For example, the [Magic Line plugin](http://ckeditor.com/addon/magicline) would be installed into this folder: `<CKEditor folder>/plugins/magicline`.
- 
+
  3. **Enabling the plugin:** Now it is time to tell CKEditor that you have a new plugin for it. For that, you simply use the {@link CKEDITOR.config#extraPlugins extraPlugins} configuration option:
 
 		config.extraPlugins = 'magicline';
-	
+
 That's all. Your plugin will be now enabled in CKEditor.

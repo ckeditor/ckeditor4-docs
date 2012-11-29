@@ -192,3 +192,24 @@ pre code a
 {
     max-width: 450px;
 }
+
+.colorPalette
+{
+	display: block;
+	overflow: hidden;
+	margin: 15px 0 !important;
+}
+
+.colorPalette li
+{
+	display: inline-block;
+	padding: 20px;
+	margin: 0 10px 10px 0;
+
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+
+	color: #fff;
+	font-weight: bold;
+}

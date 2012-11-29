@@ -236,6 +236,12 @@
 						"title": "Simple Plugin (Part 2)"
 					}
 				]
+			},
+			{
+				"name": "plugin_sdk_icon_guidelines",
+				"url": "plugin_sdk/icon_guidelines",
+				"title": "Plugin icon guidelines",
+				"description": "Basic icon guidelines for plugin developers."
 			}
 		],
 		"TODO": [

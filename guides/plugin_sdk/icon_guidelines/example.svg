@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="149.99995"
+   height="150"
+   id="svg12892"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="sampleIcon.svg">
+  <defs
+     id="defs12894" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2"
+     inkscape:cx="160.48226"
+     inkscape:cy="43.049972"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1615"
+     inkscape:window-height="1026"
+     inkscape:window-x="65"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     borderlayer="false">
+    <sodipodi:guide
+       orientation="0,1"
+       position="3.000001,135.00003"
+       id="guide12917" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="15.000001,115.00003"
+       id="guide12919" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="135,105.00003"
+       id="guide12921" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="120,15.00003"
+       id="guide12923" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid13598"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata12897">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>CKSource</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-45.00002,-65.9336)">
+    <g
+       transform="translate(888.42861,-1484.6428)"
+       style="display:inline"
+       id="g5835">
+      <g
+         id="g13005">
+        <rect
+           style="fill:#66bcc9;fill-opacity:1;fill-rule:evenodd;stroke:none"
+           id="rect13600"
+           width="150"
+           height="150"
+           x="0"
+           y="0"
+           transform="translate(-843.42859,1550.5764)" />
+        <path
+           id="path3447"
+           d="M 58.34375,25 C 39.93426,25 25,39.93425 25,58.34375 c 0,18.4094 14.93426,33.3125 33.34375,33.3125 7.398521,4e-5 14.223905,-2.425701 19.75,-6.5 L 84.25,91.3125 c -1.305771,1.305771 -1.305771,3.412979 0,4.71875 L 113.71875,125.5 c 1.30577,1.30577 3.41298,1.30577 4.71875,0 l 7.0625,-7.0625 c 1.30577,-1.30577 1.30577,-3.41298 0,-4.71875 L 96.0625,84.25 c -1.305771,-1.305771 -3.412979,-1.305771 -4.71875,0 L 85.1875,78.09375 c 4.067816,-5.523539 6.46875,-12.357994 6.46875,-19.75 C 91.65625,39.93425 76.75324,25 58.34375,25 z m 0,8.34375 c 13.80714,0 25,11.1928 25,25 0,13.8071 -11.19286,25 -25,25 -13.80714,0 -25,-11.1929 -25,-25 0,-13.8072 11.19286,-25 25,-25 z"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           transform="translate(-843.42859,1550.5764)"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+</svg>

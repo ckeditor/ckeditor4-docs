@@ -6,7 +6,7 @@ The default installation of CKEditor, that you probably are using now, comes wit
 
 ## Where to look for plugins?
 
-The [CKEditor Add-ons Repository](http://preview.ckeditor.com/addons/plugins) is an online service designed to find and share plugins. It makes it easy to understand the plugins features and to socialize with the CKEditor community. It's also the best place to showcase your skills and reach a large user base, if you are a plugin developer.
+The [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins) is an online service designed to find and share plugins. It makes it easy to understand the plugins features and to socialize with the CKEditor community. It's also the best place to showcase your skills and reach a large user base, if you are a plugin developer.
 
 ## Creating a Custom Editor with CKBuilder
 

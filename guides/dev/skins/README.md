@@ -6,7 +6,7 @@ The default installation of CKEditor comes with the [Moono skin](http://ckeditor
 
 ## Where to look for skins?
 
-The [CKEditor Add-ons Repository](http://preview.ckeditor.com/addons/skins) is an online service designed to find and share skins. It's also the best place to showcase your skills and reach a large user base, if you are a skin developer.
+The [CKEditor Add-ons Repository](http://ckeditor.com/addons/skins) is an online service designed to find and share skins. It's also the best place to showcase your skills and reach a large user base, if you are a skin developer.
 
 ## Downloading CKEditor with your preferred skin
 

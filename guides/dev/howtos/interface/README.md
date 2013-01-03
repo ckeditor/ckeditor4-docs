@@ -32,7 +32,7 @@ The `height` value defines the height of CKEditor editing area and can be given 
 
 Besides defining a [default size](#!/guide/dev_howtos_interface-section-2) of the editor window you can also change the size of a CKEditor instance on the fly.
 
-To achieve this, use the {@link CKEDITOR.editor#resize resize function} to define the dimensions of the editor interface, assigning the window a width and height value in pixels or CSS-accepted units.
+To achieve this, use the {@link CKEDITOR.editor#method-resize resize function} to define the dimensions of the editor interface, assigning the window a width and height value in pixels or CSS-accepted units.
 
 	// Set editor width to 100% and height to 350px.
 	editor.resize( '100%', '350' );

@@ -49,6 +49,21 @@
 						"title": "Styles"
 					},
 					{
+						"title": "Advanced Content Filter",
+						"items": [
+							{
+								"name": "dev_advanced_content_filter",
+								"url": "dev/configuration/advanced_content_filter",
+								"title": "Introduction"
+							},
+							{
+								"name": "dev_allowed_content_rules",
+								"url": "dev/configuration/advanced_content_filter/allowed_content_rules",
+								"title": "Allowed Content Rules"
+							}
+						]
+					},
+					{
 						"name": "dev_output_format",
 						"url": "dev/configuration/output_format",
 						"title": "Output Formatting"

@@ -12,7 +12,7 @@ As a matter of fact, CKEditor uses the `textarea` to transfer its data to the se
 
 	<textarea name="editor1">&lt;p&gt;Initial value.&lt;/p&gt;</textarea>
 
-Note that if you want to load data into the editor, for example from a database, you need to put that data inside the `<textarea>` element, just like the HTML-encoded <p> element in the example above. In this case the textarea element was named `editor1`. This name can be used in the server-side code later, when receiving the posted data.
+Note that if you want to load data into the editor, for example from a database, you need to put that data inside the `<textarea>` element, just like the HTML-encoded `<p>` element in the example above. In this case the textarea element was named `editor1`. This name can be used in the server-side code later, when receiving the posted data.
 
 After the textarea element is inserted, you can use the [CKEditor JavaScript API](!#/api) to replace this HTML element with an editor instance. A simple CKEDITOR.replace method call is needed for that:
 
@@ -20,7 +20,7 @@ After the textarea element is inserted, you can use the [CKEditor JavaScript API
 		CKEDITOR.replace( 'editor1' );
 	</script>
 
-This script block must be included at any point after the `<textarea>` tag in the source code of the page. You can also call the replace function inside the <head> section, but in this case you will need to listen for the `window.onload` event:
+This script block must be included at any point after the `<textarea>` tag in the source code of the page. You can also call the replace function inside the `<head>` section, but in this case you will need to listen for the `window.onload` event:
 
 	<script>
 		window.onload = function() {
@@ -30,9 +30,9 @@ This script block must be included at any point after the `<textarea>` tag in th
 
 ## Saving the Editor Data
 
-As stated above, the editor works just like a `<textarea>` field. This means that when submitting a form containing an editor instance, its data will be simply posted, using the `<textarea>` element name as the key to retrieve it. 
+As stated above, the editor works just like a `<textarea>` field. This means that when submitting a form containing an editor instance, its data will be simply posted, using the `<textarea>` element name as the key to retrieve it.
 
-For example, following the above example, we could create the following PHP code: 
+For example, following the above example, we could create the following PHP code:
 
 	<?php
 		$editor_data = $_POST[ 'editor1' ];

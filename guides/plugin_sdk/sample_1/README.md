@@ -2,28 +2,28 @@
 
 The aim of this tutorial is to demonstrate how to create a basic CKEditor plugin.
 
-We are going to develop an **abbreviation plugin** that lets the user insert abbreviations 
-into their documents. The abbreviations will be using the `<abbr>` HTML element and 
-will be added through a dialog window that is opened after clicking a dedicated 
+We are going to develop an **abbreviation plugin** that lets the user insert abbreviations
+into their documents. The abbreviations will be using the `<abbr>` HTML element and
+will be added through a dialog window that is opened after clicking a dedicated
 toolbar button.
 
-The plugin will be named **abbr**, just like the name of the corresponding HTML 
+The plugin will be named **abbr**, just like the name of the corresponding HTML
 element that we are going to use in its implementation.
 
 ## Plugin Files
 
-Firstly, we will need to create the `abbr` folder inside the `plugins` directory of 
+Firstly, we will need to create the `abbr` folder inside the `plugins` directory of
 the CKEditor installation.
 
 <p class="tip">
-	Remember that for CKEditor the name of the plugin folder is important and has to 
-	be the same as the name of the plugin, otherwise the editor will not be able to 
+	Remember that for CKEditor the name of the plugin folder is important and has to
+	be the same as the name of the plugin, otherwise the editor will not be able to
 	recognize it.
 </p>
 
-Inside the newly created `abbr` folder we are going to place the `plugin.js` file that 
-will contain the plugin logic. Apart from that, since we will also need a toolbar 
-icon for our plugin, we are going to add an `icons` folder and subsequently 
+Inside the newly created `abbr` folder we are going to place the `plugin.js` file that
+will contain the plugin logic. Apart from that, since we will also need a toolbar
+icon for our plugin, we are going to add an `icons` folder and subsequently
 place the `abbr.png` file inside. Finally, we'll create the `dialogs` folder with the `abbr.'s` file, which will hold the definition for the dialog we gonna use in our plugin.
 
 To sum up, we will need the following file structure for our plugin to work:
@@ -39,7 +39,7 @@ To sum up, we will need the following file structure for our plugin to work:
 
 ## Plugin Source Code
 
-With the following structure ready, it is time to open the `plugin.js` file in 
+With the following structure ready, it is time to open the `plugin.js` file in
 a text editor and to start creating the source code of the plugin.
 
 	CKEDITOR.plugins.add( 'abbr', {
@@ -49,18 +49,18 @@ a text editor and to start creating the source code of the plugin.
 		}
 	});
 
-All CKEditor plugins are created by using the CKEDITOR.plugins#add` function. 
-This function should contain the plugin name - `'abbr'` - and the plugin logic 
-placed inside the {@link CKEDITOR.pluginDefinition#init init} function that is 
+All CKEditor plugins are created by using the CKEDITOR.plugins#add` function.
+This function should contain the plugin name - `'abbr'` - and the plugin logic
+placed inside the {@link CKEDITOR.pluginDefinition#init init} function that is
 called upon the initialization of the editor instance.
 
 Additionally, as we're going to define a toolbar button, the `icons` property is set, including the name of the icon file (important: matching the **button name**, lowercased).
 
 ## Creating an Editor Command
 
-We want our plugin to have a dialog window, so we need to define an editor 
-command that opens a new dialog window. To do this, we will need to use 
-the {@link CKEDITOR.editor#addCommand editor.addCommand}  function to register the 
+We want our plugin to have a dialog window, so we need to define an editor
+command that opens a new dialog window. To do this, we will need to use
+the {@link CKEDITOR.editor#addCommand editor.addCommand}  function to register the
 `abbrDialog` command.
 
 	editor.addCommand( 'abbrDialog', new CKEDITOR.dialogCommand( 'abbrDialog' ) );
@@ -70,10 +70,10 @@ That command opens the `abbrDialog` dialog that we are going to define in a mome
 
 ## Creating the Toolbar Button
 
-The plugin dialog window is to be opened by using a toolbar button. To this 
-end, we need to define a button that will be associated with the dialog 
-window. 
-	
+The plugin dialog window is to be opened by using a toolbar button. To this
+end, we need to define a button that will be associated with the dialog
+window.
+
 	editor.ui.addButton( 'Abbr', {
 		label: 'Insert Abbreviation',
 		command: 'abbrDialog',
@@ -89,14 +89,14 @@ The above {@link CKEDITOR.ui#addButton} function call created a button name `'Ab
 
 ## CKEditor Initialization
 
-It is now time to tell CKEditor to load our plugin. To do so we have to add its name to the 
+It is now time to tell CKEditor to load our plugin. To do so we have to add its name to the
 {@link CKEDITOR.config#extraPlugins extraPlugins} configuration option:
 
 	config.extraPlugins = 'abbr';
 
-Now load a CKEditor sample page. You should be able to see the new plugin toolbar button in the toolbar. For example:	
+Now load a CKEditor sample page. You should be able to see the new plugin toolbar button in the toolbar. For example:
 
-![Abbreviation plugin has been loaded](guides/plugin_sdk_sample_1/pluginLoaded.png)
+{@img pluginLoaded.png Abbreviation plugin has been loaded}
 
 ## Plugin Dialog Window
 
@@ -118,25 +118,25 @@ Into `dialogs/abbr.js`, we'll simply repeat the CKEDITOR.dialog.add call, but no
 
 Check the CKEDITOR.dialog.definition object documentation for a full reference on dialogs definition..
 
-In our case we will give the dialog window a name ('abbrDialog') and use the 
-{@link CKEDITOR.dialog.definition#title title}, 
-{@link CKEDITOR.dialog.definition#minWidth minWidth}, and 
-{@link CKEDITOR.dialog.definition#minHeight minHeight} parameters to define its 
+In our case we will give the dialog window a name ('abbrDialog') and use the
+{@link CKEDITOR.dialog.definition#title title},
+{@link CKEDITOR.dialog.definition#minWidth minWidth}, and
+{@link CKEDITOR.dialog.definition#minHeight minHeight} parameters to define its
 title and minimum dimensions, respectively.
 
 <p class="tip">
-	The name selected for the dialog window is the name that appears in the 
+	The name selected for the dialog window is the name that appears in the
 	addCommand function above.
 </p>
 
 ### Dialog Window Tabs
 
-The dialog window should also contain some 
-{@link CKEDITOR.dialog.definition#contents contents}, so we will begin with 
-adding two tabs along with their labels. Note that by default CKEditor also adds 
+The dialog window should also contain some
+{@link CKEDITOR.dialog.definition#contents contents}, so we will begin with
+adding two tabs along with their labels. Note that by default CKEditor also adds
 the standard **OK** and **Cancel** buttons.
 
-In order to create the Abbreviation plugin dialog window along with two tabs, 
+In order to create the Abbreviation plugin dialog window along with two tabs,
 add the following code in the `plugin.js` file below the plugin definition:
 
 	CKEDITOR.dialog.add( 'abbrDialog', function ( editor ) {
@@ -144,13 +144,13 @@ add the following code in the `plugin.js` file below the plugin definition:
 			title: 'Abbreviation Properties',
 			minWidth: 400,
 			minHeight: 200,
-	 
+
 			contents: [
 				{
 					id: 'tab-basic',
 					label: 'Basic Settings',
 					elements: [
-						// UI elements of the first tab	will be defined here 
+						// UI elements of the first tab	will be defined here
 					]
 				},
 				{
@@ -166,25 +166,25 @@ add the following code in the `plugin.js` file below the plugin definition:
 
 The result of this change can be seen immediately. Click the **Insert Abbreviation**
 toolbar button in order to open the newly created **Abbreviation Properties**
-dialog window containing two (empty) tabs.	
+dialog window containing two (empty) tabs.
 
-![A plugin dialog window with two tabs added](guides/plugin_sdk_sample_1/pluginDialog1.png)
+{@img pluginDialog1.png A plugin dialog window with two tabs added}
 
 ### Dialog Window Tabs Elements
 
-User interface elements that can be added to a dialog window tab are defined in 
-the {@link CKEDITOR.dialog.definition.content#elements elements} parameter, which is an 
+User interface elements that can be added to a dialog window tab are defined in
+the {@link CKEDITOR.dialog.definition.content#elements elements} parameter, which is an
 array of {@link CKEDITOR.dialog.definition.uiElement} objects.
 
-The **Basic Settings** tab will contain two mandatory text fields (`type: 'text'`) 
-with  the abbreviation and its explanation. Since both fields are obligatory, it is 
-useful to add a simple validation mechanism in order to ensure that the user 
+The **Basic Settings** tab will contain two mandatory text fields (`type: 'text'`)
+with  the abbreviation and its explanation. Since both fields are obligatory, it is
+useful to add a simple validation mechanism in order to ensure that the user
 fills them.
 
-The **Advanced Settings** tab will contain a single optional text field that allows 
+The **Advanced Settings** tab will contain a single optional text field that allows
 the user to assign an id to the abbreviation element.
 
-The code snippet presented below shows a full definition of the contents of both 
+The code snippet presented below shows a full definition of the contents of both
 plugin tabs.
 
 	contents: [
@@ -203,7 +203,7 @@ plugin tabs.
 					id: 'title',
 					label: 'Explanation',
 					validate: CKEDITOR.dialog.validate.notEmpty( "Explanation field cannot be empty" )
-				}	 
+				}
 			]
 		},
 		{
@@ -219,61 +219,61 @@ plugin tabs.
 		}
 	]
 
-When you reload the editor instance and open the **Abbreviation Properties** dialog 
+When you reload the editor instance and open the **Abbreviation Properties** dialog
 window, the **Basic Settings** tab will now contain two mandatory text fields.
 
-![Basic Settings tab of the Abbreviation plugin](guides/plugin_sdk_sample_1/pluginDialog2.png)
+{@img pluginDialog2.png Basic Settings tab of the Abbreviation plugin}
 
 The **Advanced Settings** tab only contains a single id text field that can be left empty.
 
-![Advanced Settings tab of the Abbreviation plugin](guides/plugin_sdk_sample_1/pluginDialog3.png)
+{@img pluginDialog3.png Advanced Settings tab of the Abbreviation plugin}
 
 ## Plugin Behavior
 
-The presentation layer of the plugin is now ready, so we can define the plugin 
+The presentation layer of the plugin is now ready, so we can define the plugin
 behavior to actually make it work.
 
-The {@link CKEDITOR.dialog.definition#onOk onOk} method is invoked once the user 
-accepts the changes introduced in the 
-dialog window by clicking the OK button or pressing the Enter key on the 
-keyboard. Since the plugin adds a new `<abbr>` element to the DOM tree, we 
-can use the {@link CKEDITOR.dom.document#createElement createElement} function to 
+The {@link CKEDITOR.dialog.definition#onOk onOk} method is invoked once the user
+accepts the changes introduced in the
+dialog window by clicking the OK button or pressing the Enter key on the
+keyboard. Since the plugin adds a new `<abbr>` element to the DOM tree, we
+can use the {@link CKEDITOR.dom.document#createElement createElement} function to
 create a new DOM element.
 
-With the new DOM element created, we can now retrieve the values of the 
-`title` and (optional) `id` fields with the 
-{@link CKEDITOR.dialog#getValueOf getValueOf} function and pass them to 
-appropriate `<abbr>` element attributes by using the 
+With the new DOM element created, we can now retrieve the values of the
+`title` and (optional) `id` fields with the
+{@link CKEDITOR.dialog#getValueOf getValueOf} function and pass them to
+appropriate `<abbr>` element attributes by using the
 {@link CKEDITOR.dom.element#setAttribute setAttribute} function.
 
-Finally, we will pass the text entered in the abbr text field as the contents 
-of the `<abbr>` element by using the 
+Finally, we will pass the text entered in the abbr text field as the contents
+of the `<abbr>` element by using the
 {@link CKEDITOR.dom.element#setText setText} function.
 
-With the contents of the `<abbr>` element ready, we can insert it into the 
-document at the location of the cursor by using the 
+With the contents of the `<abbr>` element ready, we can insert it into the
+document at the location of the cursor by using the
 {@link CKEDITOR.editor#method-insertElement insertElement} function.
 
-Add the following `onOk` function code to your dialog window definition, below 
+Add the following `onOk` function code to your dialog window definition, below
 the code that creates the contents of the dialog.
 
 	onOk: function() {
 		var dialog = this;
 		var abbr = editor.document.createElement( 'abbr' );
-	 
+
 		abbr.setAttribute( 'title', dialog.getValueOf( 'tab-basic', 'title' ) );
 		abbr.setText( dialog.getValueOf( 'tab-basic', 'abbr' ) );
-	 
+
 		var id = dialog.getValueOf( 'tab-adv', 'id' );
 		if ( id )
 			abbr.setAttribute( 'id', id );
-	 
+
 		editor.insertElement( abbr );
 	}
 
 <p class="tip">
-	Please note that another way to insert HTML code into CKEditor is using the 
-	insertHtml function that adds HTML code at the location of the cursor in the 
+	Please note that another way to insert HTML code into CKEditor is using the
+	insertHtml function that adds HTML code at the location of the cursor in the
 	document: <code>editor.insertHtml( '&lt;h2>This is a sample header&lt;/h2>&lt;p>This is a sample paragraph.&lt;/p>' );</code>
 </p>
 
@@ -283,7 +283,7 @@ The full contents of the `plugin.js` file are as follows:
 
 	CKEDITOR.plugins.add( 'abbr', {
 		icons: 'abbr',
-		init: function( editor ) {				
+		init: function( editor ) {
 			editor.addCommand( 'abbrDialog', new CKEDITOR.dialogCommand( 'abbrDialog' ) );
 			editor.ui.addButton( 'Abbr', {
 			    label: 'Insert Abbreviation',
@@ -294,9 +294,9 @@ The full contents of the `plugin.js` file are as follows:
 			CKEDITOR.dialog.add( 'abbrDialog', this.path + 'dialogs/abbr.js' );
 		}
 	});
-	
+
 This is what we have in the `dialogs/abbr.js` file ins		tead:
-	
+
 	CKEDITOR.dialog.add( 'abbrDialog', function( editor ) {
 		return {
 			title: 'Abbreviation Properties',
@@ -318,7 +318,7 @@ This is what we have in the `dialogs/abbr.js` file ins		tead:
 							id: 'title',
 							label: 'Explanation',
 							validate: CKEDITOR.dialog.validate.notEmpty( "Explanation field cannot be empty" )
-						}	 
+						}
 					]
 				},
 				{
@@ -332,18 +332,18 @@ This is what we have in the `dialogs/abbr.js` file ins		tead:
 						}
 					]
 				}
-			],			
+			],
 			onOk: function() {
 				var dialog = this;
 
 				var abbr = editor.document.createElement( 'abbr' );
 				abbr.setAttribute( 'title', dialog.getValueOf( 'tab-basic', 'title' ) );
 				abbr.setText( dialog.getValueOf( 'tab-basic', 'abbr' ) );
-				
+
 				var id = dialog.getValueOf( 'tab-adv', 'id' );
 				if ( id )
 					abbr.setAttribute( 'id', id );
-					
+
 				editor.insertElement( abbr );
 			}
 		};
@@ -356,22 +356,22 @@ This is what we have in the `dialogs/abbr.js` file ins		tead:
 
 ## Working Example
 
-The plugin code is now ready. When you click the **Insert Abbreviation** toolbar 
-button, the **Abbreviation Properties** dialog window will open. Fill in the 
+The plugin code is now ready. When you click the **Insert Abbreviation** toolbar
+button, the **Abbreviation Properties** dialog window will open. Fill in the
 obligatory **Abbreviation** and **Explanation** fields and click the **OK** button.
 
-![Abbreviation added in the dialog window](guides/plugin_sdk_sample_1/workingExample1.png)
+{@img workingExample1.png Abbreviation added in the dialog window}
 
-The newly added abbreviation will be inserted into the document and will be 
-displayed using the default styling of your browser. In Firefox, for example, 
-the abbreviation will be underlined using a dotted line and the explanation 
+The newly added abbreviation will be inserted into the document and will be
+displayed using the default styling of your browser. In Firefox, for example,
+the abbreviation will be underlined using a dotted line and the explanation
 will be displayed in a tooltip.
 
-![Abbreviation added in the dialog window](guides/plugin_sdk_sample_1/workingExample2.png)
+{@img workingExample2.png Abbreviation added in the dialog window}
 
 ## Further Enhancements
 
-The Abbreviation plugin is now able to add a new `<abbr>` element to the document, 
-but does not make it possible to edit an already existing element. For this 
-feature along with the context menu support check the 
+The Abbreviation plugin is now able to add a new `<abbr>` element to the document,
+but does not make it possible to edit an already existing element. For this
+feature along with the context menu support check the
 [second part of the tutorial](#!/guide/plugin_sdk_sample_2).

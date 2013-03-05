@@ -5,7 +5,7 @@
 
 The **elements path** displays information about the HTML elements of the document for the position of the cursor.
 
-{@img ../../images/ui_elements_path.png The elements path of CKEditor}
+{@img ui_elements_path.png The elements path of CKEditor}
 
 If you want to get rid of it, use the CKEDITOR.config.removePlugins setting to remove the `elementspath` plugin.
 
@@ -47,7 +47,7 @@ While setting the height value, use the `isContentHeight` parameter to decide wh
 
 The editor window can be resized by using the resizing grip located in the bottom right-hand corner of CKEditor interface (for RTL languages — in the bottom left-hand corner).
 
-{@img ../../images/ui_resizer.png The resizing grip of CKEditor}
+{@img ui_resizer.png The resizing grip of CKEditor}
 
 To prevent the editor from being resized you can use the {@link CKEDITOR.config#removePlugins removePlugins} setting to remove the `resize` plugin.
 
@@ -90,21 +90,21 @@ If you set the resize_dir configuration value to `'horizontal'`, CKEditor window
 	config.resize_dir = 'horizontal';
 
 
-## How Do I Remove the Toolbar Collapse Button?
+## How Do I Add the Toolbar Collapse Button?
 
 CKEditor toolbar can be collapsed and restored by using the **Collapse Toolbar** button located in the bottom right-hand corner of the toolbar (for RTL languages — in the bottom left-hand corner).
 
-{@img ../../images/ui_collapse.png The Collapse Toolbar button in CKEditor}
+{@img ui_collapse.png The Collapse Toolbar button in CKEditor}
 
-If you want to disable the this feature, you need to set the {@link CKEDITOR.config#toolbarCanCollapse toolbarCanCollapse} parameter to `false`.
+If you want to enable this feature, you need to set the {@link CKEDITOR.config#toolbarCanCollapse toolbarCanCollapse} parameter to `true`.
 
-	config.toolbarCanCollapse = false;
+	config.toolbarCanCollapse = true;
 
 ## How Do I Add or Remove Toolbar Buttons?
 
 CKEditor {@link CKEDITOR.config#toolbar toolbar} is an array of button elements that you can freely add or remove.
 
-{@img ../../images/ui_toolbar.png The CKEditor toolbar}
+{@img ui_toolbar.png The CKEditor toolbar}
 
 Check the [Toolbar Customization](#!/guide/dev_toolbar) section of this guide for more information on how to customize it.
 

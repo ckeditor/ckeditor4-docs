@@ -35,4 +35,4 @@ If you are interested in learning how to create your own code to embed, configur
 
 The figure below presents one of the CKEditor samples, Massive inline editing (`inlineall.html`), opened in a browser.
 
-{@img ../../images/inlineall.png One of the CKEditor samples as viewed in Google Chrome}
+{@img inlineall.png One of the CKEditor samples as viewed in Google Chrome}

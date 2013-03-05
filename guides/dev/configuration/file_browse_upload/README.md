@@ -4,14 +4,13 @@ CKEditor can be easily integrated with an external file
 browser/uploader.
 
 Once properly set up, all file browser features will automatically
-become available. This includes the **Upload** tab^(1) in the **Link**,
+become available. This includes the **Upload** tab `(1)` in the **Link**,
 **Image**, and **Flash Properties** dialog windows as well as the
-**Browse Server** button^(2).
+**Browse Server** button `(2)`.
 
-![File browser features available for images in CKEditor](guides/dev_file_browse_upload/image_dialog_browser_upload.png)
+{@img image_dialog_browser_upload.png File browser features available for images in CKEditor}
 
 ## Basic Configuration
--------------------
 
  * The {@link CKEDITOR.config#filebrowserBrowseUrl filebrowserBrowseUrl} setting contains the location of an external file browser that should be
 launched when the **Browse Server** button is pressed.
@@ -54,7 +53,6 @@ will be used by default. In the **Image Properties** dialog window CKEditor will
 use the `filebrowserImageBrowseUrl` and `filebrowserImageUploadUrl` configuration settings instead.
 
 ## File Browser Window Size
---------------------------------------------------------------------------------------------------------
 
 The default width of the file browser window in CKEditor is set to 80%
 of the screen width, while the default height is set to 70% of the
@@ -137,14 +135,10 @@ is a base path to the CKFinder installation directory.
 If you are using CKFinder for ASP, ASP.NET, or ColdFusion, remember to
 change `php` above to the right extension:
 
--   asp – [CKFinder for
-	ASP](CKFinder/Developers_Guide/ASP/CKEditor_Integration)
--   aspx – [CKFinder for
-	ASP.NET](CKFinder/Developers_Guide/ASP.NET/CKEditor_Integration)
--   cfm – [CKFinder for
-	ColdFusion](CKFinder/Developers_Guide/ColdFusion/CKEditor_Integration)
--   php – [CKFinder for
-	PHP](CKFinder/Developers_Guide/PHP/CKEditor_Integration)
+- asp – [CKFinder for ASP](CKFinder/Developers_Guide/ASP/CKEditor_Integration)
+- aspx – [CKFinder for ASP.NET](CKFinder/Developers_Guide/ASP.NET/CKEditor_Integration)
+- cfm – [CKFinder for ColdFusion](CKFinder/Developers_Guide/ColdFusion/CKEditor_Integration)
+- php – [CKFinder for PHP](CKFinder/Developers_Guide/PHP/CKEditor_Integration)
 
 ### Example 6
 
@@ -160,7 +154,7 @@ CKFinder installation.
 Please check the `_samples/js/ckeditor.html` sample distributed with
 CKFinder to see the full working example of this integration method.
 
-![CKFinder integrated with CKEditor](guides/dev_file_browse_upload/ckeditor_with_ckfinder.png "CKFinder integrated with CKEditor")
+{@img ckeditor_with_ckfinder.png CKFinder integrated with CKEditor}
 
 ### PHP API
 
@@ -175,5 +169,5 @@ documentation for more details.
 For more advanced information on integrating CKEditor with a file
 browser refer to the following articles:
 
--   [Creating a Custom File Browser](#!/guide/dev_file_browser_api)
--   [Adding the File Browser to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
+- [Creating a Custom File Browser](#!/guide/dev_file_browser_api)
+- [Adding the File Browser to Dialog Windows](#!/guide/dev_dialog_add_file_browser)

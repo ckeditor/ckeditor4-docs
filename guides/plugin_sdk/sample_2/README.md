@@ -1,11 +1,11 @@
 # Creating a Simple CKEditor Plugin (Part 2)
 
-The aim of this tutorial is to demonstrate how to extend an existing CKEditor 
-plugin with context menu support as well as the possibility to edit a previously 
+The aim of this tutorial is to demonstrate how to extend an existing CKEditor
+plugin with context menu support as well as the possibility to edit a previously
 inserted element.
 
-Instead of creating a new plugin, this time we are going to 
-expand on the functionality of the **Abbreviation** plugin created in the  
+Instead of creating a new plugin, this time we are going to
+expand on the functionality of the **Abbreviation** plugin created in the
 [previous installment](#!/guide/plugin_sdk_sample_1) of the tutorial series.
 
 <p class="tip">
@@ -14,8 +14,8 @@ expand on the functionality of the **Abbreviation** plugin created in the
 	plugin folder</a> including the icon and the fully commented source code.
 </p>
 
-If you have any doubt about the contents of the plugin and its configuration, 
-refer to the 
+If you have any doubt about the contents of the plugin and its configuration,
+refer to the
 [Creating a Simple CKEditor Plugin (Part 1)](#!/guide/plugin_sdk_sample_1)
 tutorial.
 
@@ -23,7 +23,7 @@ tutorial.
 
 Context menu support in CKEditor is implemented by the [Context Menu plugin](http://ckeditor.com/addon/contextmenu).
 
-The context menu implementation should be placed inside the {@link CKEDITOR.pluginDefinition#init init} function in the plugin file, following 
+The context menu implementation should be placed inside the {@link CKEDITOR.pluginDefinition#init init} function in the plugin file, following
 the command and button definitions:
 
 	if ( editor.contextMenu ) {
@@ -34,27 +34,27 @@ the command and button definitions:
 			command: 'abbrDialog',
 			group: 'abbrGroup'
 		});
-	}	
+	}
 
 The `if` check here is a "best practice". If for some reason the Context Menu plugin will be removed or not available, the menu registration should not take place (otherwise an exception is thrown).
 
 Then, considering that we want the context menu option for the **Abbreviation** plugin to be separated from standard context menu items, we used the {@link CKEDITOR.editor#addMenuGroup editor.addMenuGroup} function to register a new menu group called `abbrGroup`.
 
-Using the {@link CKEDITOR.editor#addMenuItem addMenuItem} function we 
-can now register a new menu item that will belong to the newly created group. 
-The label and icon properties let us set the context menu item name and its icon, 
-respectively. To make the context menu item open the Abbreviation Properties 
+Using the {@link CKEDITOR.editor#addMenuItem addMenuItem} function we
+can now register a new menu item that will belong to the newly created group.
+The label and icon properties let us set the context menu item name and its icon,
+respectively. To make the context menu item open the Abbreviation Properties
 dialog window, we need to set the command property to use the `abbrDialog` command.
 
 ### Showing the Menu Option "In Context"
 
-However, when we reload the CKEditor instance and add an abbreviation, the 
-context menu does not contain the newly created **Edit Abbreviation** item. We now 
+However, when we reload the CKEditor instance and add an abbreviation, the
+context menu does not contain the newly created **Edit Abbreviation** item. We now
 need to enable the Abbreviation context menu for each selected `<abbr>` element:
 
 	if ( editor.contextMenu ) {
-		... the previous menu creation code ... 
-		
+		... the previous menu creation code ...
+
 		editor.contextMenu.addListener( function( element ) {
 			if ( element.getAscendant( 'abbr', true ) ) {
 	 			return { abbrItem: CKEDITOR.TRISTATE_OFF };
@@ -66,30 +66,30 @@ By using the `addListener` function we will add an event listener function that 
 
 At this point we just check if the current element, or any of its parents, is a `<abbr>`. If true, we simply return the menu item to activate - `abbrItem` - saying that it is enable but not in "selected state" (CKEDITOR.TRISTATE_OFF).
 
-The Edit Abbreviation item is now visible in the context menu of an `<abbr>` 
+The Edit Abbreviation item is now visible in the context menu of an `<abbr>`
 element. Once selected, it opens the **Abbreviation Properties** dialog window
 due to the use of the abbrDialog command.
 
-![Edit Abbreviation context menu item added to CKEditor](guides/plugin_sdk_sample_2/context.png)
+{@img context.png Edit Abbreviation context menu item added to CKEditor}
 
 The context menu works — but only partially. It opens the **Abbreviation Properties**
-dialog window for the abbreviation, but the editing feature does not really work. 
+dialog window for the abbreviation, but the editing feature does not really work.
 The **Abbreviation** and **Explanation** fields are empty:
 
-![Abbreviation Properties is empty in editing mode](guides/plugin_sdk_sample_2/dialogEmpty.png)
+{@img dialogEmpty.png Abbreviation Properties is empty in editing mode}
 
-If you try to enter some values into these fields and accept the changes, a 
+If you try to enter some values into these fields and accept the changes, a
 new `<abbr>` element will be added on the position of the cursor in the document.
 
-![New abbreviation element inserted into the document](guides/plugin_sdk_sample_2/dialogFailed.png)
+{@img dialogFailed.png New abbreviation element inserted into the document}
 
-It is time to work on the selection logic so that editing an inserted element 
+It is time to work on the selection logic so that editing an inserted element
 would not create a new one, but use the previously entered values.
 
 ## Dialog Window Logic
 
 The editing behavior for a previously inserted element will use the `onShow`
-function that is defined for the plugin dialog window and is executed when 
+function that is defined for the plugin dialog window and is executed when
 the dialog window is opened. This function will be defined above the `onOk`
 function that we will also need to refactor later.
 
@@ -99,7 +99,7 @@ function that we will also need to refactor later.
 
 ### Getting the Selected Element
 
-We will need to start with the selection logic. 
+We will need to start with the selection logic.
 
 To get to the element that is selected by the user (either highlighted or keyboard or just having the caret inside), we need to use the {@link CKEDITOR.editor#getSelection editor.getSelection} function:
 
@@ -115,7 +115,7 @@ Still our dialog must work both to add and to edit `<abbr>` elements. Because of
 
 	if ( element )
 		element = element.getAscendant( 'abbr', true );
-	 
+
 	if ( !element || element.getName() != 'abbr' ) {
 		element = editor.document.createElement( 'abbr' );
 		this.insertMode = true;
@@ -133,28 +133,28 @@ We will now store a reference to the `<abbr>` element in the `element` variable 
 
 ### Setup Functions
 
-The `onShow` function will finish with a call to the 
-{@link CKEDITOR.dialog#setupContent setupContent} function that 
-will invoke the setup functions for the element. Each parameter that will be 
-passed on to the setupContent function will also be passed on to the setup 
+The `onShow` function will finish with a call to the
+{@link CKEDITOR.dialog#setupContent setupContent} function that
+will invoke the setup functions for the element. Each parameter that will be
+passed on to the setupContent function will also be passed on to the setup
 functions.
 
 	if ( !this.insertMode )
 		this.setupContent( element );
 
-For the above code to work we will however first need to define the 
+For the above code to work we will however first need to define the
 {@link CKEDITOR.dialog.definition.uiElement#setup setup}
-functions themselves. In order to do that, we will revisit the code of the 
+functions themselves. In order to do that, we will revisit the code of the
 dialog window UI elements.
 
-The setup function for the **Abbreviation** text field needs to get the contents 
-of the `<abbr>` element by using the 
-{@link CKEDITOR.dom.element#getText getText} function in order to populate the 
+The setup function for the **Abbreviation** text field needs to get the contents
+of the `<abbr>` element by using the
+{@link CKEDITOR.dom.element#getText getText} function in order to populate the
 field with its value by using the {@link CKEDITOR.dom.element#setValue setValue} function.
 
-A similar approach can be used for the **Explanation** field, although in this 
-case we will need to get the contents of the `title` attribute of the `<abbr>` 
-element by using the {@link CKEDITOR.dom.element#getAttribute getAttribute} 
+A similar approach can be used for the **Explanation** field, although in this
+case we will need to get the contents of the `title` attribute of the `<abbr>`
+element by using the {@link CKEDITOR.dom.element#getAttribute getAttribute}
 function in order to populate the field with its value by using the setValue function again.
 
 	elements: [
@@ -178,8 +178,8 @@ function in order to populate the field with its value by using the setValue fun
 		}
 	]
 
-Since the **Advanced Settings** tab contains a single **Id** text field that reflects 
-the contents of the id attribute, we will use the same combination of the 
+Since the **Advanced Settings** tab contains a single **Id** text field that reflects
+the contents of the id attribute, we will use the same combination of the
 `getAttribute` and `setValue` function as in case of the **Explanation** text field.
 
 	elements: [
@@ -193,43 +193,43 @@ the contents of the id attribute, we will use the same combination of the
 		}
 	]
 
-When you reload the page, add an abbreviation, and then attempt to modify it by 
-opening the context menu and selecting **Edit Abbreviation**, the **Abbreviation 
-Properties** dialog window will now re-open with the **Abbreviation** and **Explanation** 
+When you reload the page, add an abbreviation, and then attempt to modify it by
+opening the context menu and selecting **Edit Abbreviation**, the **Abbreviation
+Properties** dialog window will now re-open with the **Abbreviation** and **Explanation**
 fields already filled in with the contents of the edited element.
 
-![Modifying an abbreviation in CKEditor](guides/plugin_sdk_sample_2/dialogFilled.png)
+{@img dialogFilled.png Modifying an abbreviation in CKEditor}
 
-Suppose you were to change the abbreviation spelling into lower case. Replace 
+Suppose you were to change the abbreviation spelling into lower case. Replace
 the contents of the text fields as follows and click the **OK** button.
 
-![Modifying an abbreviation in CKEditor](guides/plugin_sdk_sample_2/dialogChanged.png)
+{@img dialogChanged.png Modifying an abbreviation in CKEditor}
 
-This operation fails! The modified values do not replace the contents of the 
-first abbreviation, but are used to create a new abbreviation element inserted 
+This operation fails! The modified values do not replace the contents of the
+first abbreviation, but are used to create a new abbreviation element inserted
 inside the first one, at the position of the cursor.
 
-![Abbreviation duplicate added in CKEditor](guides/plugin_sdk_sample_2/dialogFailed.png)
+{@img dialogFailed.png Abbreviation duplicate added in CKEditor}
 
-Why is that so? It is because the current edition of the onOk function does not 
-differentiate between adding an element and modifying it, so it simply inserts 
-the values supplied in the dialog window fields into the `<abbr>` that it 
+Why is that so? It is because the current edition of the onOk function does not
+differentiate between adding an element and modifying it, so it simply inserts
+the values supplied in the dialog window fields into the `<abbr>` that it
 creates and adds this element to the document.
 
 ### Commit Functions
 
-To correct this error, we will need to re-write the code of the `onOk` function 
-to account for both scenarios. The function can now, in fact, be stripped 
+To correct this error, we will need to re-write the code of the `onOk` function
+to account for both scenarios. The function can now, in fact, be stripped
 to the minimum.
 
-Firstly, we will define the variables for the dialog window (`dialog`) and 
+Firstly, we will define the variables for the dialog window (`dialog`) and
 the `<abbr>` element (`abbr`).
 
-The `insertMode` flag created in the `onShow` function can then be used to switch 
-between the creation of a new element and modification of the existing one. 
-If we are in the insert mode, we add a new `<abbr>` element to the document. 
-We then use the {@link CKEDITOR.dialog#commitContent commitContent} function to 
-populate the element with values entered by the user. Every parameter that is 
+The `insertMode` flag created in the `onShow` function can then be used to switch
+between the creation of a new element and modification of the existing one.
+If we are in the insert mode, we add a new `<abbr>` element to the document.
+We then use the {@link CKEDITOR.dialog#commitContent commitContent} function to
+populate the element with values entered by the user. Every parameter that is
 passed to the `commitContent` function will also be passed on to the commit functions themselves.
 
 	onOk: function() {
@@ -242,18 +242,18 @@ passed to the `commitContent` function will also be passed on to the commit func
 			editor.insertElement( abbr );
 	}
 
-To make the `commitContent` method work we will however first need to define 
-the {@link CKEDITOR.dialog.definition.uiElement#commit commit} functions themselves. 
+To make the `commitContent` method work we will however first need to define
+the {@link CKEDITOR.dialog.definition.uiElement#commit commit} functions themselves.
 In order to do that, we will have to revise  the code of the dialog window UI elements again.
 
-The commit function for the **Abbreviation** text field needs to get the value 
-entered by the user by using the {@link CKEDITOR.dom.element#getValue getValue} 
-function in order to set the  contents of the `<abbr>` element by using the 
+The commit function for the **Abbreviation** text field needs to get the value
+entered by the user by using the {@link CKEDITOR.dom.element#getValue getValue}
+function in order to set the  contents of the `<abbr>` element by using the
 {@link CKEDITOR.dom.element#setText setText} function.
 
-A similar approach can be used for the retrieval of the **Explanation** field 
-contents, although in this case we will need to set the contents of the 
-`title` attribute of the `<abbr>` element by using the 
+A similar approach can be used for the retrieval of the **Explanation** field
+contents, although in this case we will need to set the contents of the
+`title` attribute of the `<abbr>` element by using the
 {@link CKEDITOR.dom.element#setAttribute setAttribute} function.
 
 	elements: [
@@ -283,14 +283,14 @@ contents, although in this case we will need to set the contents of the
 		}
 	]
 
-Similarly, since the Advanced Settings tab contains an `Id` text field that 
-reflects the contents of the `id` attribute, we will use the same combination 
-of the `getValue` and `setAttribute` function as in case of the **Explanation** 
-text field. This time, however, we will also need to account for the 
-possibility of removing the attribute value by the user during the 
-modification of the element. If we are not in the insert mode (which 
-means we are editing an existing element) and the `Id` field is empty, we 
-will use the {@link CKEDITOR.dom.element#removeAttribute removeAttribute} method to 
+Similarly, since the Advanced Settings tab contains an `Id` text field that
+reflects the contents of the `id` attribute, we will use the same combination
+of the `getValue` and `setAttribute` function as in case of the **Explanation**
+text field. This time, however, we will also need to account for the
+possibility of removing the attribute value by the user during the
+modification of the element. If we are not in the insert mode (which
+means we are editing an existing element) and the `Id` field is empty, we
+will use the {@link CKEDITOR.dom.element#removeAttribute removeAttribute} method to
 delete the `id` element of an existing abbreviation.
 
 	elements: [
@@ -318,15 +318,15 @@ The full contents of the `plugin.js` file are as follows:
 	CKEDITOR.plugins.add( 'abbr', {
 		init: function( editor ) {
 			var iconPath = this.path + 'images/icon.png';
-	 
+
 			editor.addCommand( 'abbrDialog',new CKEDITOR.dialogCommand( 'abbrDialog' ) );
-	 
+
 			editor.ui.addButton( 'Abbr', {
 				label: 'Insert Abbreviation',
 				command: 'abbrDialog',
 				icon: iconPath
 			});
-	 
+
 			if ( editor.contextMenu ) {
 				editor.addMenuGroup( 'abbrGroup' );
 				editor.addMenuItem( 'abbrItem', {
@@ -335,7 +335,7 @@ The full contents of the `plugin.js` file are as follows:
 					command: 'abbr',
 					group: 'abbrGroup'
 				});
-	
+
 				editor.contextMenu.addListener( function( element ) {
 					if ( element.getAscendant( 'abbr', true ) ) {
 						return { abbrItem: CKEDITOR.TRISTATE_OFF };
@@ -378,7 +378,7 @@ The full contents of the `plugin.js` file are as follows:
 									commit: function( element ) {
 										element.setAttribute( "title", this.getValue() );
 									}
-								}	 
+								}
 							]
 						},
 						{
@@ -403,32 +403,32 @@ The full contents of the `plugin.js` file are as follows:
 							]
 						}
 					],
-					
+
 					onShow: function() {
 						var selection = editor.getSelection(),
 							element = selection.getStartElement();
 						if ( element )
 							element = element.getAscendant( 'abbr', true );
-			
+
 						if ( !element || element.getName() != 'abbr' || element.data( 'cke-realelement' ) ) {
 							element = editor.document.createElement( 'abbr' );
 							this.insertMode = true;
 						}
 						else
 							this.insertMode = false;
-			
+
 						this.element = element;
-			
+
 						if ( !this.insertMode )
 							this.setupContent( this.element );
 					},
-			
+
 					onOk: function() {
 						var dialog = this,
 							abbr = this.element;
-			
+
 						this.commitContent( abbr );
-			
+
 						if ( this.insertMode )
 							editor.insertElement( abbr );
 					}
@@ -442,27 +442,27 @@ The full contents of the `plugin.js` file are as follows:
 
 ## Working Example
 
-The code of the extended Abbreviation plugin is now ready. When you click the 
-**Insert Abbreviation** toolbar button, the **Abbreviation Properties** dialog window 
-will open. Fill in the obligatory **Abbreviation** and **Explanation** fields and 
+The code of the extended Abbreviation plugin is now ready. When you click the
+**Insert Abbreviation** toolbar button, the **Abbreviation Properties** dialog window
+will open. Fill in the obligatory **Abbreviation** and **Explanation** fields and
 click the OK button.
 
-![Abbreviation added in the dialog window](guides/plugin_sdk_sample_2/dialogNew.png)
+{@img dialogNew.png Abbreviation added in the dialog window}
 
-The newly added abbreviation will be inserted into the document and will be 
-displayed using the default styling of your browser. In Firefox, for example, 
-the abbreviation will be underlined using a dotted line and the explanation will 
+The newly added abbreviation will be inserted into the document and will be
+displayed using the default styling of your browser. In Firefox, for example,
+the abbreviation will be underlined using a dotted line and the explanation will
 be displayed in a tooltip.
 
-![Abbreviation added in the dialog window](guides/plugin_sdk_sample_2/dialogAdded.png)
+{@img dialogAdded.png Abbreviation added in the dialog window}
 
-If you want to edit the abbreviation, select it and open its context menu. 
-Choose the **Edit Abbreviation** option to open the dialog window again, filled 
+If you want to edit the abbreviation, select it and open its context menu.
+Choose the **Edit Abbreviation** option to open the dialog window again, filled
 in with the contents of the element. Modify the abbreviation and click **OK**.
 
-![Abbreviation edited in the dialog window](guides/plugin_sdk_sample_2/dialogChanged.png)
+{@img dialogChanged.png Abbreviation edited in the dialog window}
 
-Voilà! The abbreviation was updated and its contents replaced with texts 
+Voilà! The abbreviation was updated and its contents replaced with texts
 entered in the dialog window.
 
-![Abbreviation edited in the dialog window](guides/plugin_sdk_sample_2/dialogSuccess.png)
+{@img dialogSuccess.png Abbreviation edited in the dialog window}

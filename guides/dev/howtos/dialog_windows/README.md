@@ -26,7 +26,7 @@ In order to assign a default value to a dialog window field, use the 'default' p
 
 The code above creates the following UI elements in a sample dialog window tab.
 
-{@img ../../images/dialog_custom_1.png Sample dialog window tab containing two field with default values}
+{@img dialog_custom_1.png Sample dialog window tab containing two field with default values}
 
 You can also customize existing dialog windows and give them default values. The following code sets the default **URL** field value for the **Link** dialog window.
 
@@ -48,7 +48,7 @@ You can also customize existing dialog windows and give them default values. The
 
 After this customization the **Link** dialog window will contain the `www.example.com` default value in the **URL** field.
 
-{@img ../../images/dialog_custom_2.png Link dialog window with a default value for the URL field}
+{@img dialog_custom_2.png Link dialog window with a default value for the URL field}
 
 For more examples on setting a default field value refer to the **Using the JavaScript API to customize dialog windows** [sample](http://nightly.ckeditor.com/latest/ckeditor/samples/plugins/dialog/dialog.html) and its [source code](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/dialog/samples/dialog.html) from your CKEditor installation.
 
@@ -88,14 +88,14 @@ If you want to customize a [dialog window](#!/guide/user_interace_dialog_windows
 
 The following figure shows the tooltip that describes the **URL** field of the **Link** dialog window that is displayed after the **Developer Tools** plugin was enabled.
 
-{@img ../../images/dialog_dev_tools.png Element information displayed with the Developer Tools plugin in CKEditor}
+{@img dialog_dev_tools.png Element information displayed with the Developer Tools plugin in CKEditor}
 
 
 ## How Do I Remove the Ability to Resize All CKEditor Dialog Windows?
 
 Dialog windows of CKEditor can be resized by using the resizing grip located in the bottom right-hand corner of a dialog window (for RTL languages — in the bottom left-hand corner).
 
-{@img ../../images/dialog_resize.png The resizing grip of a CKEditor dialog window}
+{@img dialog_resize.png The resizing grip of a CKEditor dialog window}
 
 You can disable the resizing feature completely by setting the {@link CKEDITOR.dialog.definition#resizable resizable} parameter to {@link CKEDITOR#DIALOG_RESIZE_NONE}.
 

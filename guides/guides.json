@@ -237,6 +237,11 @@
 				"description": "The basics on CKEditor plugins."
 			},
 			{
+				"name": "plugin_sdk_integration_with_acf",
+				"url": "plugin_sdk/integration_with_acf",
+				"title": "Integration with ACF"
+			},
+			{
 				"title": "Simple Plugin Sample",
 				"items": [
 					{

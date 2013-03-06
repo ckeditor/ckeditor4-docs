@@ -20,7 +20,6 @@ There may exist many rules for one element and one element may be included in ma
 Rules are applied one by one. Initially element being filtered is invalid and all its properties are rejected. The first rule applied to the element validates it (it will not be removed) and that rule may accept some of element's properties. Next rules may accept next properties. Therefore:
 
 * if there are no rules for an element it is removed,
-* if there is at least one rule for an element it is accepted (however, there are exceptions),
 * it is possible to accept an element, but reject all its properties which will be then removed,
 * once validated element or its property cannot be invalidated by another rule.
 
@@ -76,6 +75,35 @@ Allowed Content Rules set may consist of many rule separated by semicolon (`;`) 
 	// * <p> and <h1> elements with optional "text-align" style,
 	// * <a> with required "href" attribute,
 	// * <strong> and <em> elements,
-	// * <p> with optional "tip" class (so <p> element may contain
+	// * <p> with optional "tip" class (so <p> element may have
 	//	"text-align" style and "tip" class at the same time).
 	p h1{text-align}; a[!href]; strong em; p(tip)
+
+	// Rules allowing:
+	// * <p> and <h1> elements with optional "id" attribute,
+	// * <a> with required "href" attribute and optional "id" attribute.
+	p h1; a[!href]; *[id]
+
+
+### Debugging
+
+To verify if Allowed Content Rules were correctly parsed you can check the {@link CKEDITOR.filter#allowedContent} property of the {@link CKEDITOR.editor#filter} object.
+
+	var editor = CKEDITOR.replace( 'textarea_id', {
+		allowedContent: 'a[!href]; ul; li{text-align}(someclass)'
+	} );
+
+	editor.on( 'instanceReady', function() {
+		console.log( editor.filter.allowedContent );
+	} );
+
+	// Will log this array:
+	// { elements: 'p br', ... } (default editor's rules)
+	// { elements: 'a', attributes: '!href' }
+	// { elements: 'ul' }
+	// { elements: 'li', styles: 'text-align', classes: 'someclass' }
+
+
+## Object format
+
+Coming soon...

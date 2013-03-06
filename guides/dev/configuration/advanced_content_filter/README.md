@@ -38,7 +38,7 @@ To better understand automatic mode follow these steps.
 
 Advanced Content Filter works in custom mode when {@link CKEDITOR.config#allowedContent} is defined. This configuration option tells the filter which HTML elements, attributes, styles and classes are allowed. Based on defined rules (called allowed content rules) editor filters input data and makes decision which features can be activated.
 
-Allowed content rules may be set in two different formats: the compact string format and more powerful object format. Read about allowed content rules in [Allowed Content Rules guide](#!/guide/dev_allowed_content_rules).
+Allowed Content Rules may be set in two different formats: the compact string format and more powerful object format. Read about Allowed Content Rules in [Allowed Content Rules guide](#!/guide/dev_allowed_content_rules).
 
 To better understand custom mode follow these steps.
 

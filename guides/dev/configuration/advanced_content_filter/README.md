@@ -5,7 +5,7 @@
 
 ## What is an Advanced Content Filter (ACF)?
 
-ACF is a highly configurable CKEditor core feature **available since CKEditor 4.1**. It limits and adapts input data (HTML set in source mode, by the {@link CKEDITOR.editor#method-setData editor.setData method}, pasted HTML, etc.) so they fit the editor configuration in the best possible way. It may also deactivate features which generates HTML code which is not allowed by the configuration.
+ACF is a highly configurable CKEditor core feature **available since CKEditor 4.1**. It limits and adapts input data (HTML set in source mode, by the {@link CKEDITOR.editor#method-setData editor.setData method}, pasted HTML, etc.) so they fit the editor configuration in the best possible way. It may also deactivate features which generate HTML code which is not allowed by the configuration.
 
 Advanced Content Filter works in two modes:
 

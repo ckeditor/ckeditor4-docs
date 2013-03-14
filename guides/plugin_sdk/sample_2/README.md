@@ -19,6 +19,20 @@ refer to the
 [Creating a Simple CKEditor Plugin (Part 1)](#!/guide/plugin_sdk_sample_1)
 tutorial.
 
+<p class="tip alert">
+	Please note that <strong>since CKEditor 4.1 most of the plugins
+	integrate the <a href="#!/guide/dev_advanced_content_filter">Advanced Content Filter</a>
+	for correct behaviour and compliance</strong>.
+	<br>
+
+	You need to set the configuration option <code>config.allowedContent = true</code> that
+	disables <a href="#!/guide/dev_advanced_content_filter">the feature</a>
+	or <a href="#!/guide/plugin_sdk_integration_with_acf">integrate filtering</a>
+	to follow this guide. For more information, please refer to the official
+	<a href="#!/guide/plugin_sdk_integration_with_acf">Advanced Content Filter integration
+	guide</a>.
+</p>
+
 ## Context Menu Support
 
 Context menu support in CKEditor is implemented by the [Context Menu plugin](http://ckeditor.com/addon/contextmenu).

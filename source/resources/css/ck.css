@@ -182,6 +182,16 @@ pre code a
 	margin-top: 4px;
 }
 
+.tip.alert
+{
+	background: #FFDB67;
+}
+
+.tip.alert:before
+{
+	content: url(../images/alert.png);
+}
+
 /* Hide image borders in guide index. */
 .thumb-list dd .thumb img
 {

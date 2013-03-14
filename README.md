@@ -28,7 +28,7 @@ While the main CKEditor repository for API documents, [ckeditor-dev](https://git
 
  * Having `ckeditor-docs/` and `ckeditor-dev/` folders in the same directory.
 
- * Setting the `CKEDITOR_DEV_PATH` environment variable, pointing to your `ckeditor-dev` folder path.
+ * Setting the `CKEDITOR_DEV_PATH` environment variable, pointing to your `ckeditor-dev/` folder path.
 
 ## License
 

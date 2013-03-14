@@ -94,6 +94,20 @@ It is now time to tell CKEditor to load our plugin. To do so we have to add its 
 
 	config.extraPlugins = 'abbr';
 
+<p class="tip alert">
+	Please note that <strong>since CKEditor 4.1 most of the plugins
+	integrate the <a href="#!/guide/dev_advanced_content_filter">Advanced Content Filter</a>
+	for correct behaviour and compliance</strong>.
+	<br>
+
+	You need to set the configuration option <code>config.allowedContent = true</code> that
+	disables <a href="#!/guide/dev_advanced_content_filter">the feature</a>
+	or <a href="#!/guide/plugin_sdk_integration_with_acf">integrate filtering</a>
+	to follow this guide. For more information, please refer to the official
+	<a href="#!/guide/plugin_sdk_integration_with_acf">Advanced Content Filter integration
+	guide</a>.
+</p>
+
 Now load a CKEditor sample page. You should be able to see the new plugin toolbar button in the toolbar. For example:
 
 {@img pluginLoaded.png Abbreviation plugin has been loaded}

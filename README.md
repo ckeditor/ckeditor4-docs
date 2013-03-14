@@ -16,20 +16,20 @@ Then simply execute `build.sh`:
 
 ## Guides
 
-All guides are defined in the `guides` folder, including the `guides.json` file which defines the guides organization as well as meta information.
+All guides are defined in the `guides/` folder, including the `guides.json` file which defines the guides organization as well as meta information.
 
 ## API Documentation
 
-The `repos` folder contains submodules for the repositories currently involved in the API documentation. As expected, the API is documented inline in the code contained in these repositories, and is then integrated into the documentation files.
+The `repos/` folder contains submodules for the repositories currently involved in the API documentation. As expected, the API is documented inline in the code contained in these repositories, and is then integrated into the documentation files.
 
 ## Using Local Versions of ckeditor-dev
 
 While the main CKEditor repository for API documents, [ckeditor-dev](https://github.com/ckeditor/ckeditor-dev), is available as a submodule, it is also possible to make the builder use its local copy to avoid submodule limitations and speed up API documentation work. There are two ways to achieve it:
 
- * Having `ckeditor-docs` and `ckeditor-dev` folders in the same directory.
- 
+ * Having `ckeditor-docs/` and `ckeditor-dev/` folders in the same directory.
+
  * Setting the `CKEDITOR_DEV_PATH` environment variable, pointing to your `ckeditor-dev` folder path.
- 
+
 ## License
 
 Copyright (c) 2003-2013, [CKSource](http://cksource.com/) - Frederico Knabben. All rights reserved.

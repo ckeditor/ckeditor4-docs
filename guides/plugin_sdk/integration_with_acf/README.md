@@ -2,7 +2,7 @@
 
 CKEditor consists of a number of {@link CKEDITOR.feature editor features} like
 commands, buttons, drop-down lists, or dialog windows. The role of plugins is
-to extend the set of available features. However, **since the introduction of 
+to extend the set of available features. However, **since the introduction of
 [Advanced Content Filter](#!/guide/dev_advanced_content_filter) in CKEditor 4.1,
 features, and the content they generate, are subject of filtering**.
 
@@ -49,7 +49,7 @@ is added to the toolbar), it should accept the `<abbr>` tag as **allowed content
 `<abbr>` tags will always be discarded and the button itself will not guarantee that the feature is
 actually useable for the end-user.
 
-To add the `<abbr>` tag to the editor contents in a correct and automatic way, you need to 
+To add the `<abbr>` tag to the editor contents in a correct and automatic way, you need to
 extend the `abbrDialog` command definition when calling the
 {@link CKEDITOR.dialogCommand#method-constructor CKEDITOR.dialogCommand} constructor:
 

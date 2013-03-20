@@ -114,15 +114,15 @@ Allowed Content Rules can also be defined as a standard object literal so the fo
 is an equivalent of:
 
 	allowedContent: {
-		'p h1': { 
-			styles: 'text-align' 
+		'p h1': {
+			styles: 'text-align'
 		},
-		a: { 
-			attributes: '!href' 
+		a: {
+			attributes: '!href'
 		},
 		'strong em': true,
-		p: { 
-			classes: 'tip' 
+		p: {
+			classes: 'tip'
 		}
 	}
 
@@ -131,11 +131,11 @@ or stored for any purposes in the JSON data format. Please note that object lite
 **must be unique**, so:
 
 	allowedContent: {
-		p: { 
-			styles: 'text-align' 
-		},		
-		p: { 
-			classes: 'tip' 
+		p: {
+			styles: 'text-align'
+		},
+		p: {
+			classes: 'tip'
 		}
 	}
 

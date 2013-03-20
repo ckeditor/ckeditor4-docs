@@ -20,17 +20,17 @@ refer to the
 tutorial.
 
 <p class="tip alert">
-	Please note that <strong>since CKEditor 4.1 most of the plugins
-	integrate the <a href="#!/guide/dev_advanced_content_filter">Advanced Content Filter</a>
-	for correct behaviour and compliance</strong>.
+	Please note that <strong>since CKEditor 4.1 all editor plugins that create content
+	should be integrated with <a href="#!/guide/dev_advanced_content_filter">Advanced Content Filter</a>
+	(ACF)</strong>.
 	<br>
 
-	You need to set the configuration option <code>config.allowedContent = true</code> that
-	disables <a href="#!/guide/dev_advanced_content_filter">the feature</a>
-	or <a href="#!/guide/plugin_sdk_integration_with_acf">integrate filtering</a>
-	to follow this guide. For more information, please refer to the official
-	<a href="#!/guide/plugin_sdk_integration_with_acf">Advanced Content Filter integration
-	guide</a>.
+	To follow this guide and at the same time comply with the new CKEditor 4.1 requirements you
+	need to either set <code>config.allowedContent = true</code> in order to disable
+	<a href="#!/guide/dev_advanced_content_filter">content filtering</a> or 
+	<a href="#!/guide/plugin_sdk_integration_with_acf">integrate your plugin with ACF</a>.
+	For more information, please refer to the official
+	<a href="#!/guide/plugin_sdk_integration_with_acf">Advanced Content Filter integration guide</a>.
 </p>
 
 ## Context Menu Support

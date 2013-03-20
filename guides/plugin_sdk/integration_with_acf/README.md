@@ -1,119 +1,121 @@
-# Plugin integration with Advanced Content Filter
+# Integrating Plugins with Advanced Content Filter
 
 CKEditor consists of a number of {@link CKEDITOR.feature editor features} like
-commands, buttons, combo boxes, dialog windows, etc. The idea behind plugins is
-to extend the set of available features but since [Advanced Content Filter](#!/guide/dev_advanced_content_filter)
-(**introduced by CKEditor 4.1**), features just like a content are subject of filtering.
+commands, buttons, drop-down lists, or dialog windows. The role of plugins is
+to extend the set of available features. However, **since the introduction of 
+[Advanced Content Filter](#!/guide/dev_advanced_content_filter) in CKEditor 4.1,
+features, and the content they generate, are subject of filtering**.
 
-Advanced Content Filter brings lots of goodies that must be considered when
-developing CKEditor plugins. Those impact on a development process and
-slightly change the idea behind data processing. With Advanced Content Filter,
-plugins can take control over the content available in the editor and adaptively
-adjust user interface when allowed content changes. Of all the properties,
-these are crucial for correct ACF integration into editor plugins:
+The introduction of Advanced Content Filter (ACF) have impacted the plugin
+development process and slightly changed the data processing model of CKEditor.
+With Advanced Content Filter plugins can take control over the content available
+in the editor and adaptively adjust the user interface when allowed content changes.
+Of all the feature properties the following are crucial for correct plugin integration
+with ACF:
 
-* {@link CKEDITOR.feature#property-allowedContent} &mdash; determines
-  a type of content that is allowed by the feature to enter the editor &ndash; in most cases
+* {@link CKEDITOR.feature#property-allowedContent} &ndash; determines the type of
+  content that is allowed by the feature to enter the editor. In most cases
   this is the content that this feature generates.
-* {@link CKEDITOR.feature#property-requiredContent} &mdash; defines a minimal
+* {@link CKEDITOR.feature#property-requiredContent} &ndash; defines a minimal
   set of content types that must be enabled to let the feature work.
-* {@link CKEDITOR.feature#property-contentForms} &mdash; defines markup transformations
-  for consistency and correctness.
+* {@link CKEDITOR.feature#property-contentForms} &ndash; defines markup transformations
+  for code consistency and correctness.
 
-This guide is based on [Simple Plugin (Part 2)](#!/guide/plugin_sdk_sample_2)
-tutorial and explains all the necessary code that makes it compatible with
+This guide is based on the [Simple Plugin (Part 2)](#!/guide/plugin_sdk_sample_2)
+tutorial and explains all code adjustments that are required to make it compatible with
 Advanced Content Filter.
 
 <p class="tip">
 	You can <a href="guides/plugin_sdk_sample_2/abbr2.zip">download the
 	entire plugin folder</a> used in Simple Plugin (Part 2) to follow the changes
-	made by this guide.
+	introduced in this guide.
 </p>
 
 
-## Integrating with ACF to introduce the content of a new type
+## Integrating with ACF to Introduce a New Content Type
 
 If you start with the code created for [Simple Plugin (Part 2)](#!/guide/plugin_sdk_sample_2)
-but **without
-specifying {@link CKEDITOR.feature#property-allowedContent allowedContent} or
-{@link CKEDITOR.feature#property-requiredContent requiredContent}** you may notice
-that indeed the plugin is working but incoming abbreviations are
-filtered out as soon as possible. Try setting this HTML in source mode and switch
-back to WYSIWYG (you can do this twice) to see that `<abbr>` tag is gone:
+but **without specifying the {@link CKEDITOR.feature#property-allowedContent allowedContent} or
+{@link CKEDITOR.feature#property-requiredContent requiredContent} options** you may notice
+that the plugin is working, however, incoming abbreviations are filtered out as soon as possible.
+Try setting this HTML code in source mode and switch back to WYSIWYG view (you may need to do
+this twice) to see that the `<abbr>` tag is gone:
 
 	<p>What is <abbr title="Advanced Content Filter">ACF</abbr>?</p>
 
-Why is it so? Editor doesn't know that since the **Abbreviation** feature is enabled (the button
-is added to the toolbar), it should accept `<abbr>` tag as an **allowed content**. Without
+Why is it so? The editor does not know that since the **Abbreviation** feature is enabled (the button
+is added to the toolbar), it should accept the `<abbr>` tag as **allowed content**. Without
 {@link CKEDITOR.feature#property-allowedContent allowedContent} property specified,
-`<abbr>` tags will always be discarded what makes the button useless.
+`<abbr>` tags will always be discarded and the button itself will not guarantee that the feature is
+actually useable for the end-user.
 
-To introduce `<abbr>` tag correctly and automatically, extend the `abbrDialog` command
-definition when calling {@link CKEDITOR.dialogCommand#method-constructor CKEDITOR.dialogCommand}
-constructor:
+To add the `<abbr>` tag to the editor contents in a correct and automatic way, you need to 
+extend the `abbrDialog` command definition when calling the
+{@link CKEDITOR.dialogCommand#method-constructor CKEDITOR.dialogCommand} constructor:
 
 	new CKEDITOR.dialogCommand( 'abbrDialog', {
 		allowedContent: 'abbr'
 	} );
 
-Try inserting our test HTML and check what's going on when switching between
-modes. This is what you should see:
+Try inserting the test HTML code again and check what happens when you switch between
+the source and WYSIWYG modes. This is what you will see:
 
 	<p>What is <abbr>ACF</abbr>?</p>
 
-But where is the `title` attribute? It's gone. Yes, you have to [specify which
-attributes are allowed](#!/guide/dev_allowed_content_rules). We forgot about it
-when setting `allowedContent`. Let's fix this:
+But where is the `title` attribute? It was removed by the editor. You will have to [specify which
+**attributes** are allowed](#!/guide/dev_allowed_content_rules), too. This was not done
+when setting `allowedContent` above, so will have to be fixed now:
 
 	new CKEDITOR.dialogCommand( 'abbrDialog', {
 		allowedContent: 'abbr[title]'
 	} );
 
-Now `title` will be accepted for any `<abbr>` tag. Loading the **Abbreviation** button
+The `title` attribute will now be accepted for any `<abbr>` tag. Loading the **Abbreviation** button
 will automatically extend filtering rules to accept a new content type and let
-the new feature do the work.
+the new feature work as planned.
 
 
-### A button, command or maybe a plugin &ndash; which of them is a *feature*?
+### What is an Editor *Feature*?
 
-What does it mean that "the feature is enabled"? Why did we defined the
+What does it mean that "a feature is enabled"? Why did we define the
 {@link CKEDITOR.feature#property-allowedContent allowedContent} property
-for the **Abbreviation** command definition, not for the button or the entire plugin?
+for the **Abbreviation** command definition and not for the button or the
+entire plugin?
 
-The first thing to notice is that one plugin can introduce many features.
-For example the **basicstyles** plugin adds few buttons,
-each of them being a single feature. So a button is more likely to be a feature.
+The first thing to keep in mind is that one plugin can introduce multiple features.
+For example the **basicstyles** plugin adds numerous buttons and each one
+constitutes a single feature. So it looks like a button is more likely to be a feature.
 
-However, in most cases a button just triggers a command, for example, our
+However, in most cases a button just triggers a command &mdash; for example the
 **Abbreviation** button has a related `abbrDialog` command. This command
 may also be triggered by a keystroke (see {@link CKEDITOR.config#keystrokes})
 or directly from code (by {@link CKEDITOR.editor#execCommand}). Therefore,
-usually a command is the "root" of a feature, but not always &ndash; e.g.
-**Format** dropdown does not have a related command, so  the
-{@link CKEDITOR.feature#property-allowedContent allowedContent} property
-is defined directly on it.
+usually a command is the "root" of a feature. Please note that this is not always
+the case &mdash; for example the **Format** drop-down list does not have a related
+command, so the {@link CKEDITOR.feature#property-allowedContent allowedContent} property
+is defined directly for it.
 
 The most typical way of enabling a feature is by adding its button to the
-toolbar. Editor handles features activated this way automatically and:
+toolbar. The editor handles features activated in this way automatically, and:
 
-1. it checks if a button has the
+1. It checks if a button has the
 {@link CKEDITOR.feature#property-allowedContent allowedContent} property
-(is a feature itself); if yes its allowed content rule is registered to
-the {@link CKEDITOR.editor#filter} which is responsible for all main ACF functions,
-2. if a button is not a feature itself, but it has a related command,
-then that command is registered as a feature.
+(is a feature itself). If yes, then its allowed content rule is registered in
+the {@link CKEDITOR.editor#filter} which is responsible for all main ACF functions.
+2. If a button is not a feature itself, but has a related command, then that
+command is registered as a feature.
 
-If you need to register a feature manually from your plugin, then
-you can use the {@link CKEDITOR.editor#addFeature} method. It accepts
+If you need to register a feature manually from your plugin, you can use
+the {@link CKEDITOR.editor#addFeature} method. It accepts
 an object implementing the {@link CKEDITOR.feature} interface.
-Read the API documentation for more details.
+Refer to the API documentation for more details.
 
 
-## Integrating with ACF to activate editor features
+## Integrating with ACF to Activate Editor Features
 
-Once we made the editor to work with the new content type,
-this is a good moment to check what would happen if the **Abbreviation** plugin
-was enabled but the {@link CKEDITOR.config#allowedContent} deliberately discarded the
+Once the editor was configured to work with the new content type,
+it is a good moment to check what would happen if the **Abbreviation** plugin
+was enabled, but the {@link CKEDITOR.config#allowedContent} option deliberately omitted the
 `<abbr>` tag:
 
 	CKEDITOR.replace( 'editor1', {
@@ -121,15 +123,16 @@ was enabled but the {@link CKEDITOR.config#allowedContent} deliberately discarde
 		allowedContent: 'p'	// Only paragraphs will be accepted.
 	});
 
-You may notice that many features like formatting buttons, text alignment and
-many others are gone; they discover that the content they produce (`<strong>`, `text-align`, etc.)
-is invalid within this configuration environment.
-All except the **Abbreviation** button, which, in fact, also makes no longer sense because
-user configuration overwrites any rules
-[automatically added](#!/guide/plugin_sdk_integration_with_acf-section-2) by the feature.
+You may notice that many features like formatting buttons, text alignment, and
+many others are gone. The content that they produce (`<strong>`, `text-align`, etc.)
+is simply invalid within this configuration environment.
 
-By specifying {@link CKEDITOR.feature#property-requiredContent requiredContent} property
-in a command definition, we make sure that **Abbreviation** button will adaptively
+This is not the case with the **Abbreviation** button which shows up, but in fact no longer
+makes any sense because the user configuration overwrites any rules
+[automatically added](#!/guide/plugin_sdk_integration_with_acf-section-2) by this feature.
+
+By specifying the {@link CKEDITOR.feature#property-requiredContent requiredContent} property
+in the command definition we make sure that the **Abbreviation** button will adaptively
 adjust to filtering rules set by the user:
 
 	new CKEDITOR.dialogCommand( 'abbrDialog', {
@@ -137,12 +140,12 @@ adjust to filtering rules set by the user:
 		requiredContent: 'abbr'
 	} );
 
-Rule `requiredContent: 'abbr'` means that the **Abbreviation** button requires
-`<abbr>` tag to be enabled to work. Otherwise, the feature will be disabled.
+The `requiredContent: 'abbr'` rule means that the **Abbreviation** button requires
+the `<abbr>` tag to be enabled to work. Otherwise, the feature will be disabled.
 This makes sense because inserting and managing abbreviations in an editor that
 discards this kind of content is pointless.
 
-Now let's consider another configuration that brings our plugin back to life by
+Let us consider another configuration setting that brings our plugin back to life by
 accepting `<abbr>` back again:
 
 	CKEDITOR.replace( 'editor1', {
@@ -150,14 +153,15 @@ accepting `<abbr>` back again:
 		allowedContent: 'p abbr'
 	});
 
-Rule `allowedContent: 'p abbr'` means that any attribute will be striped out
-of `<abbr>` tag, including `title`. Still the **Abbreviation** plugin provides a dialog
-window for both editing abbreviations (tag contents) and explanations (`title`).
-However the second field is no longer necessary once `title` is discarded.
+The `allowedContent: 'p abbr'` rule means that all attributes will be striped out from
+the `<abbr>` tag, including `title`. The **Abbreviation** plugin, however, still provides
+a dialog window for editing both abbreviations (tag contents) and explanations (`title`).
+It turns out that the second field is no longer necessary since the `title` attribute will
+be discarded.
 
-With Advanced Content Filtering we can specify which dialog fields are
-enabled and which are not, depending on filtering rules set in the config. Let's
-do this by modifying explanation field in the dialog definition
+With Advanced Content Filter we can specify which dialog window fields are
+enabled and which are not, depending on filtering rules set in the configuration. This can
+be done by modifying the Explanation field in the dialog window definition
 (`plugins/abbr/dialogs/abbr.js`):
 
 	elements: [
@@ -172,11 +176,11 @@ do this by modifying explanation field in the dialog definition
 		...
 	]
 
-But wait. There's an **Advanced Settings** tab in the dialog that may be used for
-setting `id` attributes. Remember what our configuration (`allowedContent: 'p abbr'`)
-says: "paragraphs and abbreviations, no attributes". **Abbreviation** plugin
-should consider this fact and disable the **Advanced Settings** tab unless `id`
-is allowed:
+Please note that the the dialog window also contains the **Advanced Settings** tab that
+can be used for setting the `id` attribute. However, our current configuration
+(`allowedContent: 'p abbr'`) means: "only paragraphs and abbreviations are allowed, not
+attributes". The **Abbreviation** plugin should take this fact into account and disable
+the **Advanced Settings** tab unless the `id` attribute is allowed:
 
 	contents: [
 		...
@@ -191,22 +195,23 @@ is allowed:
 		...
 	]
 
-This is it. Let's see how the **Abbreviation** dialog changes with different
-`config.allowedContent`:
+To sum it up, let us see how the **Abbreviation** dialog window changes with different
+`config.allowedContent` settings:
 
 `allowedContent = 'p abbr'` | `allowedContent = 'p abbr[id]'` | `allowedContent = 'p abbr[title,id]'`
 :------------------: | :------------:  | :------------:
 {@img acfDialog2.png} | {@img acfDialog1.png} | {@img acfDialog0.png}
 
 
-## Integrating with ACF for content transformations
+## Integrating with ACF for Content Transformations
 
-Advanced Content Filter introduces
+Advanced Content Filter also introduces
 [content transformations](#!/guide/dev_advanced_content_filter-section-4)
-that help to clean-up HTML and make it consistent. We can use this functionality
-in the **Abbreviation** feature automatically to convert invalid `<acronym>` tag into `<abbr>`.
-Basically to do this, the `contentForms` property must be defined that
-determines which tag is correct and accepted by the editor with the highest priority:
+that help clean up HTML code and make it consistent. This functionality can be
+used automatically in the **Abbreviation** feature to convert the invalid `<acronym>`
+tag into an `<abbr>`. In order to achieve this, we will need to define the
+{@link CKEDITOR.feature#property-contentForms} property that determines which tag
+is correct and accepted by the editor with the highest priority:
 
 	new CKEDITOR.dialogCommand( 'abbrDialog', {
 		allowedContent: 'abbr[title]',
@@ -217,7 +222,7 @@ determines which tag is correct and accepted by the editor with the highest prio
 		]
 	} );
 
-This configuration implies the following transformation:
+This configuration causes the following code transformation:
 
 	// HTML before
 	<p>What is <acronym title="Advanced Content Filter">ACF</acronym>?</p>
@@ -225,18 +230,18 @@ This configuration implies the following transformation:
 	// HTML after
 	<p>What is <abbr title="Advanced Content Filter">ACF</abbr>?</p>
 
-Editor will automatically convert `<acronym>` tags into `<abbr>` when pasting contents
-and editing source code.
+The editor will automatically convert `<acronym>` tags into `<abbr>` tags when
+pasting content and editing source code.
 
-Read more about {@link CKEDITOR.feature#contentForms contentForms}.
+Read more about {@link CKEDITOR.feature#contentForms contentForms} in CKEditor JavaScript API.
 
 <p class="tip">
 	You can also <a href="guides/plugin_sdk_integration_with_acf/abbr3.zip">download the
-	whole plugin folder</a> inluding the icon and the fully commented source code.
+	whole modified plugin folder</a> inluding the icon and the fully commented source code.
 </p>
 
-## Further reading
+## Further Reading
 
 * [Advanced Content Filter guide](#!/guide/dev_advanced_content_filter).
-* {@link CKEDITOR.filter} &mdash; the main class responsible for ACF features.
-* {@link CKEDITOR.feature} &mdash; an interface representing editor feature; used in combination with {@link CKEDITOR.filter#addFeature}.
+* {@link CKEDITOR.filter} &ndash; the main class responsible for ACF features.
+* {@link CKEDITOR.feature} &ndash; an interface representing an editor feature used in combination with {@link CKEDITOR.filter#addFeature}.

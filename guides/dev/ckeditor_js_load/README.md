@@ -1,8 +1,7 @@
 # Loading CKEditor
 
 CKEditor is a JavaScript application. To load it, you need to include a single file
-reference in your page. If you have [installed](#!/guide/dev_installation) CKEditor in the `ckeditor` directory in root of your website, you need to insert the following code fragment
-into the `<head>` section of your page:
+reference in your page. If you have [installed](#!/guide/dev_installation) CKEditor in the `ckeditor` directory in root of your website, you need to insert the following code fragment into the `<head>` section of your page:
 
 	<head>
 		...
@@ -17,10 +16,10 @@ JavaScript file, refer to the [Specifying the Editor Path](http://docs.cksource.
 
 ## Creating Editors
 
-Now that the [CKEditor JavaScript API](#!/api) is available in the page, you can use it create editors. For that, there are two different options available:
+Now that the [CKEditor JavaScript API](#!/api) is available on the page, you can use it create editors. For that, there are two different options available:
 
- * [Framed Editing](#!/guide/dev_framed): the most common way to use the editor, usually represented by a toolbar and a editing area placed on a specific position in the page.
+ * [Framed Editing](#!/guide/dev_framed) &ndash; the most common way to use CKEditor, when the editor is usually represented by a toolbar and an editing area placed in a specific position on the page.
 
- * [Inline Editing](#!/guide/dev_inline): to be used on pages that look like the final page. Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute. The editor toolbar automatically appears, floating in the page.
+ * [Inline Editing](#!/guide/dev_inline) &ndash; used on pages that need to look like the final page. Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute. The editor toolbar appears automatically for these elements, floating on the page.
  
- Just click on your preferred option to have more information.
+In order to examine both usage scenarios, choose the preferred option above to get more information. See also the [Framed Editing](http://ckeditor.com/demo#standard) and [Inline Editing](http://ckeditor.com/demo#inline) demos on our website.

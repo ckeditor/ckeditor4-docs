@@ -35,8 +35,8 @@ To retrieve the editor data, simply call the {@link CKEDITOR.editor#method-getDa
 
 	<script>
 		var data = CKEDITOR.instances.editable.getData();
-		
-		// Your code to save "data", usually though Ajax.
+
+		// Your code to save "data", usually through Ajax.
 	</script>
-	
+
 Note that the ID of the original `<div>` was passed to the CKEDITOR.instances object to make it possible to retrieve the editor instance.

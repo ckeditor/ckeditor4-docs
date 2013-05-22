@@ -16,10 +16,10 @@ JavaScript file, refer to the [Specifying the Editor Path](http://docs.cksource.
 
 ## Creating Editors
 
-Now that the [CKEditor JavaScript API](#!/api) is available on the page, you can use it create editor instances. There are two different options available in order to achieve this:
+Now that the [CKEditor JavaScript API](#!/api) is available on the page, you can use it to create editor instances. There are two different options available in order to achieve this:
 
  * [Framed Editing](#!/guide/dev_framed) &ndash; the most common way to use CKEditor, when the editor is usually represented by a toolbar and an editing area placed in a specific position on the page.
 
  * [Inline Editing](#!/guide/dev_inline) &ndash; used on pages that need to look like the final page. Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute. The editor toolbar appears automatically for these elements, floating on the page.
- 
+
 In order to examine both usage scenarios, choose the preferred option above to get more information. See also the [Framed Editing](http://ckeditor.com/demo#standard) and [Inline Editing](http://ckeditor.com/demo#inline) demos on our website.

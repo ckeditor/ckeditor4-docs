@@ -14,7 +14,7 @@ As a matter of fact, CKEditor uses the `<textarea>` element to transfer its data
 
 Note that if you want to load data into the editor, for example from a database, you need to put that data inside the `<textarea>` element, just like the HTML-encoded `<p>` element in the example above. In this case the `<textarea>` element was named `editor1`. This name can be used in the server-side code later, when receiving the posted data.
 
-After the `<textarea>` element is inserted, you can use the [CKEditor JavaScript API](#!/api) to replace this HTML element with an editor instance. A simple CKEDITOR.replace method call will be enough to achieve that:
+After the `<textarea>` element is inserted, you can use the [CKEditor JavaScript API](#!/api) to replace this HTML element with an editor instance. A simple {@link CKEDITOR#replace CKEDITOR.replace} method call will be enough to achieve that:
 
 	<script>
 		CKEDITOR.replace( 'editor1' );
@@ -50,6 +50,7 @@ Some applications (like those based on Ajax) need to handle all data on the clie
 
 To insert a CKEditor instance, you can use the following sample that creates a basic page containing a form with a `<textarea>` element that is replaced with CKEditor.
 
+	<!DOCTYPE html>
 	<html>
 	<head>
 		<title>CKEditor Sample</title>

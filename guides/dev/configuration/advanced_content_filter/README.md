@@ -15,7 +15,7 @@ Advanced Content Filter works in two modes:
 In both modes it is possible to extend the filter configuration by using the {@link CKEDITOR.config#extraAllowedContent} setting.
 
 <p class="tip">
-	If you want to disable Advanced Content Filter, set {@link CKEDITOR.config#allowedContent} to `true`. All available editor features will be activated and input data will not be filtered.
+	If you want to disable Advanced Content Filter, set {@link CKEDITOR.config#allowedContent} to <code>true</code>. All available editor features will be activated and input data will not be filtered.
 </p>
 
 

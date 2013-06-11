@@ -26,6 +26,11 @@
 						"name": "dev_inline",
 						"url": "dev/inline",
 						"title": "Inline Editing"
+					},
+					{
+						"name": "dev_jquery",
+						"url": "dev/jquery",
+						"title": "jQuery Adapter"
 					}
 				]
 			},

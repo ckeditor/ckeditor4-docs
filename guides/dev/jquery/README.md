@@ -57,14 +57,20 @@ To keep the backward compatibility it is also possible to use {@link adapters.jQ
 
 ##.val() method
 
-Because setting and retrieving the editor data is a common operation, the jQuery Adapter also provides a dedicated {@link adapters.jQuery#val val()} method that is an extension of the original [jQuery val()](http://api.jquery.com/val/) method. This method works exactly the same as the jQuery version, but additionally it allows to get and set the framed editor contents.
+Because setting and retrieving the editor data is a common operation, the jQuery Adapter also provides a dedicated {@link adapters.jQuery#val val()} method that is an extension of the original [jQuery val()](http://api.jquery.com/val/) method. This method works similar to the jQuery version, but additionally it allows to get and set the framed editor contents.
 
 	// Get the editor data.
 	var data = $( 'textarea.editor' ).val();
 	// Set the editor data.
 	$( 'textarea.editor' ).val( 'my new content' );
 
-This feature can be disabled by setting {@link adapters.jQuery#jqueryOverrideVal jqueryOverrideVal} to false before loading the adapter code.
+Because {@link CKEDITOR.editor#method-setData setting data} in CKEditor is asynchronous operation `.val( 'some data' )` will return [jQuery promise](http://api.jquery.com/promise/). You can use it with jQuery helpers:
+
+	$.when( $( '#editor' ).val( 'foo' ) ).then( function() {
+		//Now you are sure that data are set.
+	} );
+
+Overwriting `val` function can be disabled by setting {@link CKEDITOR.config#jqueryOverrideVal jqueryOverrideVal} to false before loading the adapter code.
 
 This method works only for editors created from `textarea`. It will not work for inline editors.
 

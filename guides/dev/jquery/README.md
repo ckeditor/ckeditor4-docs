@@ -1,6 +1,6 @@
 # jQuery Adapter
 
-CKEditor offers native jQuery integration through its jQuery Adapter (a jQuery plugin basically). It provides deep integration of CKEditor into jQuery, using its native features.
+CKEditor offers native jQuery integration through its jQuery Adapter (a jQuery plugin basically). It provides deep integration of CKEditor into jQuery, using its native features. jQuery Adapter have been tested with jQuery versions 1.7.1 - 1.10.1 and 2.0.2.
 
 Using adapter every `textarea` element can be converted to frame editor and any other {@link CKEDITOR.dtd#$editable supported tag} can be converted into inline editor.
 
@@ -82,7 +82,7 @@ This method works only for editors created from `textarea`. It will not work for
 
 ## Submit and jQuery Form
 
-jQuery adapter add also some improvements for better integration with jQuery and [jQuery Form Plugin](http://www.malsup.com/jquery/form/).
+jQuery adapter add also some improvements for better integration with jQuery and [jQuery Form Plugin](http://www.malsup.com/jquery/form/), tested with version 3.24.
 
 First of all jQuery adapter overwrites {@link CKEDITOR.editor#save save event}. If you use adapter when user press save button on toolbar [jQuery submit](http://api.jquery.com/submit/) method will be called.
 

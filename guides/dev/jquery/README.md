@@ -98,11 +98,18 @@ Although CKEditor uses its own event system, there are five events which are bei
 The following events are available:
 
  - {@link CKEDITOR_Adapters.jQuery#instanceReady instanceReady.ckeditor} - fired when the editor is created, but before any callback is being passed to the ckeditor() method,
+ - {@link CKEDITOR_Adapters.jQuery#destroy destroy.ckeditor} - fired when the editor gets destroyed. It can be used, for example, to execute some cleanup code on the page,
  - {@link CKEDITOR_Adapters.jQuery#setData setData.ckeditor} - fired when data is set in the editor allowing additional manipulation,
  - {@link CKEDITOR_Adapters.jQuery#dataReady dataReady.ckeditor} - fired as an indicator of the editor data loading,
- - {@link CKEDITOR_Adapters.jQuery#getData getData.ckeditor} - fired when data is fetched from the editor. The current editor data is also passed in the arguments,
- - {@link CKEDITOR_Adapters.jQuery#destroy destroy.ckeditor} - fired when the editor gets destroyed. It can be used, for example, to execute some cleanup code on the page.
+ - {@link CKEDITOR_Adapters.jQuery#getData getData.ckeditor} - fired when data is fetched from the editor. The current editor data is also passed in the arguments; example:
+
+		$( '.editor' ).ckeditor().on( 'getData.ckeditor', function( event, editor, data ) {
+			//if you want to have upper case whenever you get value
+			data.dataValue = data.dataValue.toUpperCase();
+		} );
 
 The editor instance is always passed as the first data argument for the listener. getData, dataReady and setData are often used internally, so listening to them should be done with care.
+
+If you apply event on collection it will be connected with every editor in collection.
 
 jQuery events do bubble up through the DOM, so they can be listened to selectively in certain parts of the document.

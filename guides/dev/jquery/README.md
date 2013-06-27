@@ -13,7 +13,7 @@ In order to create editor instances, load the usual CKEditor core script file as
 	<script src="ckeditor.js"></script>
 	<script src="adapters/jquery.js"></script>
 
-At this point you can transform elements into a rich text editor by using the  {@link adapters.jQuery#ckeditor ckeditor()} method.
+At this point you can transform elements into a rich text editor by using the  {@link CKEDITOR_Adapters.jQuery#ckeditor ckeditor()} method.
 
 	$( 'textarea.editor' ).ckeditor();
 
@@ -27,7 +27,7 @@ Note that you can also make use of the jQuery chaining.
 			.addClass( 'mylink' )
 		.end();
 
-The {@link adapters.jQuery#ckeditor ckeditor()} method is the main method of the jQuery adapter. It accepts two optional parameters:
+The {@link CKEDITOR_Adapters.jQuery#ckeditor ckeditor()} method is the main method of the jQuery adapter. It accepts two optional parameters:
 
  - A callback function to be executed when the editor is ready.
 
@@ -52,17 +52,17 @@ The code presented above will not create two editors. On discovering that one ed
 
 ## Editor Instance
 
-If you need access to {@link CKEDITOR.editor} object you can use the {@link adapters.jQuery#editor editor} property:
+If you need access to {@link CKEDITOR.editor} object you can use the {@link CKEDITOR_Adapters.jQuery#editor editor} property:
 
 	var editor = $('.jquery_ckeditor').ckeditor().editor;
 	alert( editor.checkDirty() );
 
-To keep the backward compatibility it is also possible to use {@link adapters.jQuery#ckeditorGet ckeditorGet()} method, but this way is deprecated.
+To keep the backward compatibility it is also possible to use {@link CKEDITOR_Adapters.jQuery#ckeditorGet ckeditorGet()} method, but this way is deprecated.
 
 
 ##.val() method
 
-Because setting and retrieving the editor data is a common operation, the jQuery Adapter also provides a dedicated {@link adapters.jQuery#val val()} method that is an extension of the original [jQuery val()](http://api.jquery.com/val/) method. This method works similar to the jQuery version, but additionally it allows to get and set the framed editor contents.
+Because setting and retrieving the editor data is a common operation, the jQuery Adapter also provides a dedicated {@link CKEDITOR_Adapters.jQuery#val val()} method that is an extension of the original [jQuery val()](http://api.jquery.com/val/) method. This method works similar to the jQuery version, but additionally it allows to get and set the framed editor contents.
 
 	// Get the editor data.
 	var data = $( 'textarea.editor' ).val();
@@ -97,11 +97,11 @@ Although CKEditor uses its own event system, there are five events which are bei
 
 The following events are available:
 
- - {@link adapters.jQuery#instanceReady instanceReady.ckeditor} - fired when the editor is created, but before any callback is being passed to the ckeditor() method,
- - {@link adapters.jQuery#setData setData.ckeditor} - fired when data is set in the editor allowing additional manipulation,
- - {@link adapters.jQuery#dataReady dataReady.ckeditor} - fired as an indicator of the editor data loading,
- - {@link adapters.jQuery#getData getData.ckeditor} - fired when data is fetched from the editor. The current editor data is also passed in the arguments,
- - {@link adapters.jQuery#destroy destroy.ckeditor} - fired when the editor gets destroyed. It can be used, for example, to execute some cleanup code on the page.
+ - {@link CKEDITOR_Adapters.jQuery#instanceReady instanceReady.ckeditor} - fired when the editor is created, but before any callback is being passed to the ckeditor() method,
+ - {@link CKEDITOR_Adapters.jQuery#setData setData.ckeditor} - fired when data is set in the editor allowing additional manipulation,
+ - {@link CKEDITOR_Adapters.jQuery#dataReady dataReady.ckeditor} - fired as an indicator of the editor data loading,
+ - {@link CKEDITOR_Adapters.jQuery#getData getData.ckeditor} - fired when data is fetched from the editor. The current editor data is also passed in the arguments,
+ - {@link CKEDITOR_Adapters.jQuery#destroy destroy.ckeditor} - fired when the editor gets destroyed. It can be used, for example, to execute some cleanup code on the page.
 
 The editor instance is always passed as the first data argument for the listener. getData, dataReady and setData are often used internally, so listening to them should be done with care.
 

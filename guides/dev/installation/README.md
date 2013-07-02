@@ -19,16 +19,16 @@ To upgrade an existing CKEditor installation, proceed in the following way:
  1. **Rename** your old editor folder to a backup folder, for example `ckeditor_old`.
  2. **Download** the latest version from the CKEditor website: <http://ckeditor.com/download>
  3. **Extract** (decompress) the downloaded archive to the original editor directory, for example `ckeditor`.
- 4. **Copy** all configuration files that you have changed from the backup directory to their corresponding position in the new directory. These could include (but not limited to) the following files: 
+ 4. **Copy** all configuration files that you have changed from the backup directory to their corresponding positions in the new directory. These could include (but are not limited to) the following files: 
 	* `config.js`
 	* `contents.css`
 	* `styles.js`
 
 ## Verification of the Installation
 
-CKEditor comes with sample pages that can be used to verify that the installation proceeded properly. In order to see whether the editor is working, take a look at the `samples` directory.
+CKEditor comes with sample pages that can be used to verify that the installation succeeded. In order to see whether the editor is working correctly, take a look at the `samples` directory.
 
-To test your installation, call the following page at your website:  
+To test your installation, call the following main samples page at your website:  
 `http://<your site>/<CKEditor installation path>/samples/index.html`
 
 For example:  

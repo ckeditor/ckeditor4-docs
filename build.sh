@@ -43,7 +43,7 @@ else
 	fi
 fi
 
-PATHS="$CKEDITOR_DEV/core $CKEDITOR_DEV/plugins $CKEDITOR_DEV/ckeditor.js"
+PATHS="$CKEDITOR_DEV/core $CKEDITOR_DEV/plugins $CKEDITOR_DEV/adapters $CKEDITOR_DEV/ckeditor.js"
 
 echo ""
 echo "Building the documentation into the 'build/' directory..."

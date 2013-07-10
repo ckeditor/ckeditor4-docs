@@ -1,7 +1,6 @@
-# Integrate with File Browser
+# File Browser Integration
 
-CKEditor can be easily integrated with an external file
-browser/uploader.
+CKEditor can be easily integrated with an external file browser/uploader.
 
 Once properly set up, all file browser features will automatically
 become available. This includes the **Upload** tab `(1)` in the **Link**,
@@ -12,15 +11,11 @@ become available. This includes the **Upload** tab `(1)` in the **Link**,
 
 ## Basic Configuration
 
- * The {@link CKEDITOR.config#filebrowserBrowseUrl filebrowserBrowseUrl} setting contains the location of an external file browser that should be
-launched when the **Browse Server** button is pressed.
+ * The {@link CKEDITOR.config#filebrowserBrowseUrl filebrowserBrowseUrl} setting contains the location of an external file browser that should be launched when the **Browse Server** button is pressed.
 
- * The {@link CKEDITOR.config#filebrowserUploadUrl filebrowserUploadUrl} setting contains the location of a script that handles file uploads. If
-set, the **Upload** tab will appear in some dialog windows — the ones
-where such functionality is available, i.e. **Link**, **Image** and
-**Flash Properties**.
+ * The {@link CKEDITOR.config#filebrowserUploadUrl filebrowserUploadUrl} setting contains the location of a script that handles file uploads. If set, the **Upload** tab will appear in some dialog windows &mdash; the ones where such functionality is available, i.e. **Link**, **Image** and **Flash Properties**.
 
-### Example 1
+### Example 1 &mdash; Adding File Browser Scripts
 
 The sample below shows basic configuration code that can be used to
 insert a CKEditor instance with the file browser configured.
@@ -30,14 +25,17 @@ insert a CKEditor instance with the file browser configured.
 		filebrowserUploadUrl: '/uploader/upload.php'
 	});
 
-### Example 2
 
-It is also possible to set a separate URL for a selected dialog window
-by using the dialog window name in file browser settings:
-`filebrowserBrowseUrl` and
-`filebrowserUploadUrl`.
+<p class="tip">
+	Please note that the names of the file browser and uploader scripts used in this guide are just an example and should be replaced with your custom scripts or the scripts coming from an external tool, like [http://cksource.com/ckfinder](CKFinder) or a third-party file manager.
+</p>
 
-For example to set a special upload URL for the image dialog window, use
+### Example 2 &mdash; Adding File Browser Scripts for Selected Dialog Windows
+
+It is also possible to set a separate URL for a selected dialog window (like **Image** or **Link**) by using the dialog window name in file browser settings:
+<code>filebrowser<i>[dialogWindowName]</i>BrowseUrl</code> and <code>filebrowser<i>[dialogWindowName]</i>UploadUrl</code>.
+
+For example to set a special upload URL for the **Image Properties** dialog window, use
 the {@link CKEDITOR.config#filebrowserImageUploadUrl filebrowserImageUploadUrl}
 property.
 
@@ -67,7 +65,7 @@ number (e.g. `"800"`). If you prefer to set the height and width of the
 window as a percentage value of the screen, do not forget to add the
 percent sign after the number (e.g. `"60%"`).
 
-### Example 3
+### Example 3 &mdash; Customizing File Browser Window Size
 
 The sample below shows basic configuration code that can be used to
 insert a CKEditor instance with the file browser paths and window size
@@ -80,15 +78,12 @@ configured.
 		filebrowserWindowHeight: '480'
 	});
 
-To set the window size of the file browser for a specific dialog window,
-use the `filebrowserWindowWidth` and
-`filebrowserWindowHeight` settings.
+To set the window size of the file browser for a specific dialog window (like **Image** or **Link**),
+use the <code>filebrowser<i>[dialogWindowName]</i>WindowWidth</code> and <code>filebrowser<i>[dialogWindowName]</i>WindowHeight</code> settings.
 
-For example, to change the file browser window size only in "Image"
-dialog box, change set the `filebrowserImageWindowWidth` and
-`filebrowserImageWindowHeight` settings.
+For example, to change the file browser window size only in the **Image Properties** dialog window, configure the `filebrowserImageWindowWidth` and `filebrowserImageWindowHeight` settings.
 
-### Example 4
+### Example 4 &mdash; Customizing File Browser Window Size for a Selected Dialog Window
 
 The sample below shows basic configuration code that can be used to
 insert a CKEditor instance with the file browser paths configured. It
@@ -104,16 +99,16 @@ when opened from the **Image Properties** dialog window.
 
 ## Using CKFinder
 
-CKEditor may easily be integrated with [CKFinder](http://ckfinder.com),
-an advanced Ajax file browser. For a live demonstration, see
-[here](http://ckfinder.com/demo).
+CKEditor may easily be integrated with [CKFinder](http://cksource.com/ckfinder),
+an advanced Ajax file manager. For a live demonstration, see 
+[the demo](http://cksource.com/ckfinder/demo#ckeditor).
 
 The integration may be conducted in two ways: by setting CKEditor
 configuration options (example below) or by using the
-[CKFinder.SetupCKEditor()]([http://docs.cksource.com/ckfinder_2.x_api/symbols/CKFinder.html#.setupCKEditor)
+[CKFinder.setupCKEditor()](http://docs.cksource.com/ckfinder_2.x_api/symbols/CKFinder.html#.setupCKEditor)
 method available in the [CKFinder API](http://docs.cksource.com/ckfinder_2.x_api/).
 
-### Example 5
+### Example 5 &mdash; CKFinder Integration
 
 The sample below shows the configuration code that can be used to insert
 a CKEditor instance with CKFinder integrated. The browse and upload
@@ -129,42 +124,35 @@ CKFinder default paths.
 		filebrowserFlashUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
 	});
 
-The example above is valid for PHP environment. Note that `/ckfinder/`
+The example above is valid for the PHP environment. Note that `/ckfinder/`
 is a base path to the CKFinder installation directory.
 
 If you are using CKFinder for ASP, ASP.NET, or ColdFusion, remember to
 change `php` above to the right extension:
 
-- asp – [CKFinder for ASP](CKFinder/Developers_Guide/ASP/CKEditor_Integration)
-- aspx – [CKFinder for ASP.NET](CKFinder/Developers_Guide/ASP.NET/CKEditor_Integration)
-- cfm – [CKFinder for ColdFusion](CKFinder/Developers_Guide/ColdFusion/CKEditor_Integration)
-- php – [CKFinder for PHP](CKFinder/Developers_Guide/PHP/CKEditor_Integration)
+- `asp` &ndash; [CKFinder for ASP](http://docs.cksource.com/CKFinder_2.x/Developers_Guide/ASP/CKEditor_Integration)
+- `aspx` &ndash; [CKFinder for ASP.NET](http://docs.cksource.com/CKFinder_2.x/Developers_Guide/ASP.NET/CKEditor_Integration)
+- `cfm` &ndash; [CKFinder for ColdFusion](http://docs.cksource.com/CKFinder_2.x/Developers_Guide/ColdFusion/CKEditor_Integration)
+- `php` &ndash; [CKFinder for PHP](http://docs.cksource.com/CKFinder_2.x/Developers_Guide/PHP/CKEditor_Integration)
+- `java` &ndash; [CKFinder for Java](http://docs.cksource.com/CKFinder_2.x/Developers_Guide/Java/CKEditor_Integration)
 
-### Example 6
+### Example 6 &mdash; CKFinder Integration using CKFinder.setupCKEditor()
 
-The sample below shows the use of the `CKFinder.SetupCKEditor()` to
+The sample below shows the use of the [CKFinder.setupCKEditor()](http://docs.cksource.com/ckfinder_2.x_api/symbols/CKFinder.html#.setupCKEditor) method to
 insert a CKEditor instance with CKFinder integrated.
 
 	var editor = CKEDITOR.replace( 'editor1' );
-	CKFinder.SetupCKEditor( editor, '/ckfinder/' );
+	CKFinder.setupCKEditor( editor, '/ckfinder/' );
 
-The second parameter of the `SetupCKEditor()` method is the path to the
+The second parameter of the `setupCKEditor()` method is the path to the
 CKFinder installation.
 
-Please check the `_samples/js/ckeditor.html` sample distributed with
+Please check the `_samples/ckeditor.html` sample distributed with
 CKFinder to see the full working example of this integration method.
 
 {@img ckeditor_with_ckfinder.png CKFinder integrated with CKEditor}
 
-### PHP API
-
-As of CKFinder 1.4.2 and CKEditor 3.1 it is possible to integrate
-CKFinder with CKEditor using the PHP API.
-
-See [CKFinder for PHP](http://docs.cksource.com/CKFinder_2.x/Developers_Guide/PHP/CKEditor_Integration#PHP)
-documentation for more details.
-
-## Other Resources
+## Further Reading
 
 For more advanced information on integrating CKEditor with a file
 browser refer to the following articles:

@@ -27,7 +27,7 @@ insert a CKEditor instance with the file browser configured.
 
 
 <p class="tip">
-	Please note that the names of the file browser and uploader scripts used in this guide are just an example and should be replaced with your custom scripts or the scripts coming from an external tool, like [http://cksource.com/ckfinder](CKFinder) or a third-party file manager.
+	Please note that the names of the file browser and uploader scripts used in this guide are just an example and should be replaced with your custom scripts or the scripts coming from an external tool, like [CKFinder](http://cksource.com/ckfinder) or a third-party file manager.
 </p>
 
 ### Example 2 &mdash; Adding File Browser Scripts for Selected Dialog Windows

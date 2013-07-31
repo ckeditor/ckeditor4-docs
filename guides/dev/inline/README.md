@@ -40,7 +40,7 @@ To retrieve the editor data, simply call the {@link CKEDITOR.editor#method-getDa
 	</script>
 
 <p class="tip">
-	If you do not save your data with a library that already encodes it by using `encodeURIComponent`, but do it manually instead, you will have to remember to use `encodeURIComponent` to properly encode the data that is being sent.
+	If you do not save your data with a library that already encodes it by using <code>encodeURIComponent</code>, but do it manually instead, you will have to remember to use <code>encodeURIComponent</code> to properly encode the data that is being sent.
 </p>
 
-	Note that the ID of the original `<div>` was passed to the CKEDITOR.instances object to make it possible to retrieve the editor instance.
+Note that the ID of the original `<div>` was passed to the {@link CKEDITOR#instances} object to make it possible to retrieve the editor instance.

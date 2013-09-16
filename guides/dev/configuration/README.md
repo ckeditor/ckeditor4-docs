@@ -17,7 +17,7 @@ In-page settings can be passed to any of the editor instance creation functions,
 		uiColor: '#9AB8F3'
 	});
 
-Note that the configuration options are passed through a literal object definition (starting with a "`{`" symbol and ending with a "`}`" symbol). Because of this the proper syntax for each option is `(''configuration name'') : (''configuration value'')`. Be sure to not use the "equal" character (`=`) in place of the colon character (`:`).
+Note that the configuration options are passed through a literal object definition (starting with a "`{`" symbol and ending with a "`}`" symbol). Because of this the proper syntax for each option is <code><i>configuration name</i> : <i>configuration value</i></code>. Be sure to not use the "equal" character (`=`) in place of the colon character (`:`).
 
 ## Using the config.js File
 

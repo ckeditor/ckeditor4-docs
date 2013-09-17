@@ -12,7 +12,7 @@ To illustrate this concept with an example, let us consider a basic captioned im
 
 {@img ckeditor_image_widget.png CKEditor captioned image widget}
 
-The screenshot above shows the editor with two captioned image widget instances. The right one (Saturn V launch) is selected, so a characteristic yellow frame marks editable areas and a drag icon appears.
+The screenshot above shows the editor with two captioned image widget instances. The right one (Saturn V launch) is hovered, so a characteristic yellow frame marks editable areas and a drag icon appears.
 
 In the simplest scenario, this widget consists of a caption and an image. The caption conceptually belongs to the image and must not exist outside this context. Creating a captioned image as an independent entity gives you a number of benefits, such as:
 
@@ -42,4 +42,3 @@ The screenshot above shows a customized CKEditor instance that uses a few sample
 ## Technical Background
 
 Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic Widget plugin**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in CKEditor Add-ons Repository, and can be added to your editor installation just like any other plugin.
-

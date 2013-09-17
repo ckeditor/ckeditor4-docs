@@ -54,21 +54,6 @@
 						"title": "Styles"
 					},
 					{
-						"title": "Advanced Content Filter",
-						"items": [
-							{
-								"name": "dev_advanced_content_filter",
-								"url": "dev/configuration/advanced_content_filter",
-								"title": "Introduction"
-							},
-							{
-								"name": "dev_allowed_content_rules",
-								"url": "dev/configuration/advanced_content_filter/allowed_content_rules",
-								"title": "Allowed Content Rules"
-							}
-						]
-					},
-					{
 						"name": "dev_output_format",
 						"url": "dev/configuration/output_format",
 						"title": "Output Formatting"
@@ -113,6 +98,34 @@
 						"name": "dev_skins",
 						"url": "dev/skins",
 						"title": "Skins"
+					}
+				]
+			},
+			{
+				"title": "CKEditor Deep Dive",
+				"items": [
+					{
+						"title": "Advanced Content Filter",
+						"items": [
+							{
+								"name": "dev_advanced_content_filter",
+								"url": "dev/deep_dive/advanced_content_filter",
+								"title": "Introduction"
+							},
+							{
+								"name": "dev_allowed_content_rules",
+								"url": "dev/deep_dive/advanced_content_filter/allowed_content_rules",
+								"title": "Allowed Content Rules"
+							}
+						]
+					},
+					{
+						"name": "dev_widgets",
+						"url": "dev/deep_dive/widgets",
+						"title": "Widgets",
+						"description": "Introduction to CKEditor Widgets.",
+						"meta_description" : "Introduction to CKEditor Widgets.",
+						"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins"
 					}
 				]
 			},

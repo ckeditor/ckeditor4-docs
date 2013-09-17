@@ -1,4 +1,4 @@
-﻿# Introduction to Widgets
+# Introduction to Widgets
 
 **Note:** Widgets were introduced in **CKEditor 4.3**.
 

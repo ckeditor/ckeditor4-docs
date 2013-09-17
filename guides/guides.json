@@ -105,6 +105,12 @@
 				"title": "CKEditor Deep Dive",
 				"items": [
 					{
+						"name": "dev_deep_dive",
+						"url": "dev/deep_dive",
+						"title": "Introduction",
+						"description": "More advanced CKEditor concepts."
+					},
+					{
 						"title": "Advanced Content Filter",
 						"items": [
 							{

@@ -4,6 +4,7 @@ The aim of this tutorial is to demonstrate **how to create a basic CKEditor widg
 
 ## Prerequisites
 Widgets are an innovative feature that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
+
 * CKEditor 4.3 and above.
 * The [Widget plugin](http://ckeditor.com/addon/widget).
 
@@ -355,7 +356,7 @@ This should be added to your `contents.css` file:
 	}
 
 <p class="tip">
-	You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-1">download the whole plugin folder</a> including the icon, the fully commented source code, and a working sample.
+	You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-1">download the whole plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor-docs-samples/blob/master/README.md">instructions</a>.
 </p>
 
 ## Working Example
@@ -374,4 +375,4 @@ You can now grab the second box and drag it up. If you drop it somewhere in the 
 
 ## Further Enhancements
 
-In current form the Simple Box widget lets you insert a simple template into the document, but it does not let you customize any properties of the widget structure nor edit it once inserted. Check the second part of the tutorial for information on how to add a widget dialog window with widget editing capabilities!
+In current form the Simple Box widget lets you insert a simple template into the document, but it does not let you customize any properties of the widget structure nor edit it once inserted. Check the [second part of the tutorial](#!/guide/widget_sdk_tutorial_2) for information on **how to add a widget dialog window with widget editing capabilities**!

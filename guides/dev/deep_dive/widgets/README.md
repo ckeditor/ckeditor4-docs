@@ -41,4 +41,9 @@ The screenshot above shows a customized CKEditor instance that uses a few sample
 
 ## Technical Background
 
-Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic Widget plugin**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in CKEditor Add-ons Repository, and can be added to your editor installation just like any other plugin.
+Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic [Widget plugin](http://ckeditor.com/addon/widget)**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins/all), and can be added to your editor installation just like any other plugin.
+
+## Further Reading
+
+If you want to create your own widgets, take a look at the [Widget SDK](#!/guide/widget_sdk_intro) that includes a [step-by-step tutorial](#!/guide/widget_sdk_tutorial_1) on how to create widgets.
+

@@ -292,6 +292,40 @@
 		]
 	},
 	{
+		"title": "CKEditor 4 Widget SDK",
+		"items": [
+			{
+				"name": "widget_sdk_intro",
+				"url": "widget_sdk/intro",
+				"title": "Introduction",
+				"description": "The basics of CKEditor widgets.",
+				"meta_description" : "The basics of CKEditor widgets.",
+				"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, sdk"
+			},
+			{
+				"title": "Widget Tutorial",
+				"items": [
+					{
+						"name": "widget_sdk_tutorial_1",
+						"url": "widget_sdk/tutorial_1",
+						"title": "Widget Tutorial (Part 1)",
+						"description": "Learn by creating a simple widget.",
+						"meta_description" : "CKEditor widget tutorial.",
+						"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, example, sdk"
+					},
+					{
+						"name": "widget_sdk_tutorial_2",
+						"url": "widget_sdk/tutorial_2",
+						"title": "Widget Tutorial (Part 2)",
+						"description": "Learn by creating a simple widget.",
+						"meta_description" : "CKEditor widget tutorial.",
+						"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, example, sdk"
+					}
+				]
+			}
+		]
+	},
+	{
 		"title": "CKEditor 4 Skin SDK",
 		"items": [
 			{

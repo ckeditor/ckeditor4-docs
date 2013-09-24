@@ -13,7 +13,7 @@ Widgets are an innovative feature that is available since **CKEditor 4.3**. In o
 Instead of creating a new plugin, this time we are going to expand on the functionality of the [Simple Box widget plugin created in the previous installment](#!/guide/widget_sdk_tutorial_1) of the widget tutorial series.
 
 <p class="tip">
-	We need to start where we previously left off. You can <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-1">download the whole plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor-docs-samples/blob/master/README.md">instructions</a>
+	We need to start where we previously left off. You can <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-1">download the whole plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor-docs-samples/blob/master/README.md">instructions</a>.
 </p>
 
 Should you have any questions about the content of the existing plugin and its configuration, refer to the [Creating a Simple CKEditor Widget (Part 1)](#!/guide/widget_sdk_tutorial_1) tutorial.
@@ -42,7 +42,6 @@ With the following structure ready, it is time to open the `plugin.js` file in a
 We will start from registering the widget dialog window by calling the standard `CKEDITOR.dialog.add` method inside the `{@link CKEDITOR.plugins.widget.definition#init init}` method of the widget plugin definition.
 
 	CKEDITOR.plugins.add( 'simplebox', {
-
 		init: function( editor ) {
 			// Existing code...
 

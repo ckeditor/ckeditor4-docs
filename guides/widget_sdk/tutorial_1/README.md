@@ -41,7 +41,7 @@ With the following structure ready, it is time to open the `plugin.js` file in a
 	CKEDITOR.plugins.add( 'simplebox', {
 		// Simple Box widget code.
 	} );
-	
+
 All CKEditor plugins are created by using the `CKEDITOR.plugins#add` function. This function should contain the plugin name (again, the same as the directory name, so `simplebox` in our case) and the plugin logic placed inside the `{@link CKEDITOR.pluginDefinition#init init}` function that is called upon the initialization of the editor instance.
 
 The `simplebox` plugin is going to define the `simplebox` widget. To do this, the plugin needs to reference the generic [Widget plugin](http://ckeditor.com/addon/widget) that provides the [Widget API](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget). This is done in the `{@link CKEDITOR.pluginDefinition#requires requires}` property.
@@ -49,11 +49,10 @@ The `simplebox` plugin is going to define the `simplebox` widget. To do this, th
 Additionally, as we are going to define a toolbar button, the `icons` property needs to be set and include the name of the icon file.
 
 <p class="tip">
-	Please note the special naming convention for widget toolbar buttons. The Widget API will only be able to automatically add the button to the toolbar if the name of the icon is the same as the widget. In this case this will be <code>simplebox</code>. Do remember that the <code>icons</code> property **accepts a PNG icon file name without an extension**.
+	Please note the special naming convention for widget toolbar buttons. The Widget API will only be able to automatically add the button to the toolbar if the name of the icon is the same as the widget. In this case this will be <code>simplebox</code>. Do remember that the <code>icons</code> property <strong>accepts a PNG icon file name without an extension</strong>.
 </p>
 
 	CKEDITOR.plugins.add( 'simplebox', {
-
 		requires: 'widget',
 
 		icons: 'simplebox',
@@ -115,7 +114,7 @@ Let us define a simple widget template that will consist of two fields: a **titl
 
 	editor.widgets.add( 'simplebox', {
 		// Code defined before...
-    
+
 		template:
 			'<div class="simplebox">' +
 				'<h2 class="simplebox-title">Title</h2>' +
@@ -127,7 +126,7 @@ After you reload the page and click the widget toolbar button, you will insert t
 
 {@img simplebox1_template_defined.png Simple Box widget template inserted into the editor}
 
-Note the small gray handle ({@img drag.png Drag handle}) in the top left-hand corner of a widget that appears when you hover over or select the widget. If you hover over it with your mouse, a "move" cursor will appear. All widgets can be dragged inside the editing area of CKEditor and dropped wherever you want to place them. And since the widget structure is immutable, there is no chance that the widget will become corrupted in the process or otherwise fall apart!
+Note the small gray handle (<img src="guides/widget_sdk_tutorial_1/drag.png" alt="Drag handle">) in the top left-hand corner of a widget that appears when you hover over or select the widget. If you hover over it with your mouse, a "move" cursor will appear. All widgets can be dragged inside the editing area of CKEditor and dropped wherever you want to place them. And since the widget structure is immutable, there is no chance that the widget will become corrupted in the process or otherwise fall apart!
 
 ## Adding Editable Parts
 
@@ -180,7 +179,7 @@ Styling of editor content is done by using the `contents.css` file. Add the styl
 		padding: 0 8px;
 	}
 
-Please note that if you are working with the inline editor, you need to add these styles to your page that displays the editor. 
+Please note that if you are working with the inline editor, you need to add these styles to your page that displays the editor.
 
 After you reload the page and insert the widget again, you will see that thanks to the styling we added it now stands out from the rest of the editor content.
 
@@ -283,7 +282,7 @@ In our case we will assume that each `<div>` element with the `simplebox` class 
 			return element.name == 'div' && element.hasClass( 'simplebox' );
 		}
 	} );
-	
+
 Note that the `element` argument is an instance of `CKEDITOR.htmlParser.element`, which means it is not a real DOM element yet. This is caused by the fact that upcasting is performed during data processing which is done on DOM represented by JavaScript objects.
 
 Anyway, this is it. The widget code is complete now and works as intended!
@@ -296,18 +295,18 @@ The full contents of the `simplebox/plugin.js` file is as follows:
 		requires: 'widget',
 
 		icons: 'simplebox',
-		
+
 		init: function( editor ) {
 			editor.widgets.add( 'simplebox', {
-				
+
 				button: 'Create a simple box',
-				
+
 				template:
 					'<div class="simplebox">' +
 						'<h2 class="simplebox-title">Title</h2>' +
-						'<div class="simplebox-content"><p>Content...</p></div>' +    
+						'<div class="simplebox-content"><p>Content...</p></div>' +
 					'</div>',
-				
+
 				editables: {
 					title: {
 						selector: '.simplebox-title',
@@ -318,19 +317,19 @@ The full contents of the `simplebox/plugin.js` file is as follows:
 						allowedContent: 'p br ul ol li strong em'
 					}
 				},
-				
+
 				allowedContent:
 					'div(!simplebox); div(!simplebox-content); h2(!simplebox-title)',
-				
+
 				requiredContent: 'div(simplebox)',
-				
+
 				upcast: function( element ) {
 					return element.name == 'div' && element.hasClass( 'simplebox' );
 				}
 			} );
 		}
 	} );
-	
+
 This should be added to your `contents.css` file:
 
 	.simplebox {
@@ -376,15 +375,3 @@ You can now grab the second box and drag it up. If you drop it somewhere in the 
 ## Further Enhancements
 
 In current form the Simple Box widget lets you insert a simple template into the document, but it does not let you customize any properties of the widget structure nor edit it once inserted. Check the second part of the tutorial for information on how to add a widget dialog window with widget editing capabilities!
-
-
-
-
-
-
-
-
-
-
-
-

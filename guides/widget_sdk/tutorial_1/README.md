@@ -136,7 +136,7 @@ Note, however, that at the moment Simple Box is of no real use for the user beca
 To change this and allow for some user input, we will need to define the `{@link CKEDITOR.plugins.widget.definition#editables editables}` property of the widget definition. This property uses the `{@link CKEDITOR.plugins.widget.nestedEditable.definition#selector selector}` parameter to define a CSS selector to be used for finding the particular editable element inside the widget element. In this case the selectors will use the classes that we assigned to the widget fields in the template definition.
 
 <p class="tip">
-	Please note that only elements defined in <a href="http://docs.ckeditor.com/#!/api/CKEDITOR.dtd-property-S-editable">CKEDITOR.dtd.$editable</a> can be converted into editable widget elements.
+	Please note that only elements defined in <code><a href="#!/api/CKEDITOR.dtd-property-S-editable">CKEDITOR.dtd.$editable</a></code> can be converted into editable widget elements.
 </p>
 
 	editor.widgets.add( 'simplebox', {

@@ -12,12 +12,12 @@ CKEditor not only provides a similar browser support that YUI GBS proposes, but 
 
 The following is the list of browser versions that will receive **A-grade** support as defined by the CKEditor GBS. CKEditor aims to provide at least full A-grade support for the following products:
 
- * **Internet Explorer**: 8.0, 9.0, *9.0 Quirks*, and 10
+ * **Internet Explorer**: 8.0, 9.0, *9.0 Quirks*, 10 and 11
  * **Firefox**: latest stable release
  * **Chrome**: latest stable release
  * **Safari**: latest stable release
  * ***Opera**: latest stable release*
- 
+
 *Cursive terms indicate our additions to the YUI GBS.*
 
 Please note that Internet Explorer 6 is not supported for CKEditor 4. CKEditor 4.1.3 is the last release to support Internet Explorer 7 and Firefox 3.6.

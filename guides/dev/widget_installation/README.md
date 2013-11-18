@@ -10,7 +10,7 @@
 
 ## Widget Plugin
 
-The [Widget plugin](http://ckeditor.com/addon/widget) is required for all widgets to work. It is responsible for providing the [Widget API](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget) and no widget will work without it. 
+The [Widget plugin](http://ckeditor.com/addon/widget) is required for all widgets to work. It is responsible for providing the [Widget API](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget) and no widget will work without it.
 
 ### Additional Utilities
 
@@ -28,7 +28,7 @@ Visit the widget plugin page in the Add-ons Repository and click the "**Add to m
 
 When you are ready, click the "**Build my editor**" button on the right to go to CKBuilder. The plugin that you have just added will be counted as "selected".
 
-{@img add_widget_ckbuilder_1.png Building a custom CKEditor version}
+{@img add_widget_ckbuilder_2.png Building a custom CKEditor version}
 
 Please note that in CKBuilder all plugin dependencies will be resolved automatically for you. You can fine-tune your build and when you are ready, click the **Download** button at the bottom of the CKBuilder page to download your custom build with widget plugins included.
 

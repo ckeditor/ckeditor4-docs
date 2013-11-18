@@ -98,6 +98,11 @@
 						"name": "dev_skins",
 						"url": "dev/skins",
 						"title": "Skins"
+					},
+					{
+						"name": "dev_widget_installation",
+						"url": "dev/widget_installation",
+						"title": "Widget Installation"
 					}
 				]
 			},

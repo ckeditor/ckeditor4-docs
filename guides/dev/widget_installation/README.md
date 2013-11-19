@@ -2,9 +2,10 @@
 
 <p class="tip">
 	Widgets are available for CKEditor 4.3 and above, so to use them you will need to upgrade your editor version first!
+	<br>
+	<br>
+	<strong>By default, widgets are not included in the pre-defined editor presets that you can get from the <a href="http://ckeditor.com/download">CKEditor Download</a> site.</strong> If you want to add a widget to your CKEditor installation, read the instructions below and use <a href="http://ckeditor.com/builder">CKEditor Builder</a> to add them to your build.
 </p>
-
-**By default, widgets are not included in the pre-defined editor presets that you can get from the [CKEditor Download](http://ckeditor.com/download) site.** If you want to add a widget to your CKEditor installation, read the instructions below and use [CKeditor Builder](http://ckeditor.com/builder) to add them to your build.
 
 ## Online Builder Installation
 

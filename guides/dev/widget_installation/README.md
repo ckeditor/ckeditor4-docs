@@ -24,11 +24,11 @@ Drag the plugin that you want to add to the **Selected Plugins** list on the lef
 
 Visit the widget plugin page in the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) and click the "**Add to my editor**" button.
 
-<img src="add_widget_ckbuilder_1.png" alt="Adding a widget plugin to the editor build" width="423" height="159">
+<img src="guides/dev_widget_installation/add_widget_ckbuilder_1.png" alt="Adding a widget plugin to the editor build" width="423" height="159">
 
 When you are ready, click the "**Build my editor**" button on the right to go to CKBuilder. The plugin that you have just added will be counted as "selected".
 
-<img src="add_widget_ckbuilder_2.png" alt="Building a custom CKEditor version" width="166" height="238">
+<img src="guides/dev_widget_installation/add_widget_ckbuilder_2.png" alt="Building a custom CKEditor version" width="166" height="238">
 
 Please note that in CKBuilder all plugin dependencies will be resolved automatically for you. You can fine-tune your build and when you are ready, click the **Download** button at the bottom of the CKBuilder page to download your custom build with widget plugins included.
 

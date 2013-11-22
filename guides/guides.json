@@ -3,10 +3,17 @@
 		"title": "CKEditor 4 Developer’s Guide",
 		"items": [
 			{
-				"name": "dev_installation",
-				"url": "dev/installation",
-				"title": "Installation",
-				"description": "How to install CKEditor."
+				"title": "Getting Started",
+				"items": [
+					{
+						"name": "dev_installation",
+						"url": "dev/installation",
+						"title": "Quick Start Guide",
+						"description": "How to download, install, and use CKEditor.",
+						"meta_description" : "How to download, install, and use CKEditor.",
+						"meta_keywords" : "ckeditor, editor, wysiwyg, download, install, installation, sample, example"
+					}
+				]
 			},
 			{
 				"title": "Integration",
@@ -41,7 +48,7 @@
 						"name": "dev_configuration",
 						"url": "dev/configuration",
 						"title": "Setting Configurations",
-						"description": "Everything about the CKEditor configurations."
+						"description": "Everything about CKEditor configuration."
 					},
 					{
 						"name": "dev_toolbar",
@@ -102,7 +109,9 @@
 					{
 						"name": "dev_widget_installation",
 						"url": "dev/widget_installation",
-						"title": "Widget Installation"
+						"title": "Widget Installation",
+						"meta_description" : "How to download, install, and use CKEditor widgets.",
+						"meta_keywords" : "ckeditor, editor, wysiwyg, download, install, installation, widget, widgets, plugin, plugins"
 					}
 				]
 			},
@@ -113,7 +122,9 @@
 						"name": "dev_deep_dive",
 						"url": "dev/deep_dive",
 						"title": "Introduction",
-						"description": "More advanced CKEditor concepts."
+						"description": "More advanced CKEditor concepts, like widgets and content filtering.",
+						"meta_description" : "More advanced CKEditor concepts, like widgets and content filtering.",
+						"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, acf, filter, content, filtering, advanced"
 					},
 					{
 						"title": "Advanced Content Filter",
@@ -200,7 +211,7 @@
 						"name": "dev_howtos_basic_configuration",
 						"url": "dev/howtos/basic_configuration",
 						"title": "Basic Configuration and Customization",
-						"description": "The most frequent question and answers."
+						"description": "Most frequently asked question and answers."
 					},
 					{
 						"name": "dev_howtos_support",
@@ -263,7 +274,7 @@
 				"name": "plugin_sdk_intro",
 				"url": "plugin_sdk/intro",
 				"title": "Introduction",
-				"description": "The basics on CKEditor plugins."
+				"description": "The basics of CKEditor plugins."
 			},
 			{
 				"title": "Simple Plugin Sample",
@@ -284,7 +295,8 @@
 			{
 				"name": "plugin_sdk_integration_with_acf",
 				"url": "plugin_sdk/integration_with_acf",
-				"title": "Integration with ACF"
+				"title": "Integration with ACF",
+				"description": "Integrate a plugin with Advanced Content Filter."
 			}
 		],
 		"TODO": [

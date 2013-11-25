@@ -28,7 +28,7 @@ If the samples work correctly, you are ready to build your own site with CKEdito
 To start, create a simple HTML page with a `<textarea>` element in it. You will then need to do two things:
 
 1. Add a call to the CKEditor script in the `<script>` element of your page.
-2. Use the CKEditor `replace()` method to  replace the existing `<textarea>` element with CKEditor.
+2. Use the [`CKEDITOR.replace()`](#!/api/CKEDITOR-method-replace) method to  replace the existing `<textarea>` element with CKEditor.
 
 See the following example:
 

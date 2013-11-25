@@ -6,7 +6,7 @@ The aim of this article is to get you up and running with CKEditor in two minute
 
 Visit the official [CKEditor Download](http://ckeditor.com/download) site. For a complete editing experience choose the **Full Package** and click the **Download CKEditor** button to get the `.zip` installation file.
 
-<img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="780" height="460">
+<a href="http://ckeditor.com/download" target="_blank"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="774" height="454"></a>
 
 ## Unpacking
 
@@ -14,7 +14,7 @@ Unpack (extract) the downloaded `.zip` archive to the `ckeditor` directory in th
 
 ## Trying Out
 
-CKEditor comes with a collection of samples that you can try out to verify if the installation was successful as well as see some both basic and more advanced CKEditor usage scenarios.
+CKEditor comes with a collection of samples that you can try out to verify if the installation was successful as well as see some CKEditor usage scenarios, both basic and more advanced.
 
 Open the following page in the browser:
 `http://<your site>/ckeditor/samples/index.html`

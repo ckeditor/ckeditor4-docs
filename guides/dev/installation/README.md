@@ -6,7 +6,7 @@ The aim of this article is to get you up and running with CKEditor in two minute
 
 Visit the official [CKEditor Download](http://ckeditor.com/download) site. For a complete editing experience choose the **Full Package** and click the **Download CKEditor** button to get the `.zip` installation file.
 
-<a href="http://ckeditor.com/download" target="_blank"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="774" height="454"></a>
+<a href="http://ckeditor.com/download"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="774" height="454"></a>
 
 ## Unpacking
 
@@ -57,7 +57,7 @@ When you are done, open your sample page in the browser.
 
 **Congratulations! You have just installed and used CKEditor on your own page in virtually no time!**
 
-<img src="guides/dev_installation/ckeditor_on_page.png" alt="CKEditor added to your sample page" width="690" height="268"> 
+<img src="guides/dev_installation/ckeditor_on_page.png" alt="CKEditor added to your sample page" width="690" height="268">
 
 ## Next Steps
 

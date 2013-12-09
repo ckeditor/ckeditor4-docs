@@ -3,10 +3,10 @@
 The aim of this tutorial is to demonstrate **how to extend an existing CKEditor widget with a dialog window**. This dialog window will be used to insert a new widget into the editor or modify an existing one and set some basic properties (width, alignment) for it.
 
 ## Prerequisites
-Widgets are an innovative feature that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
+[Widgets are an innovative feature](#!/guide/dev_widgets) that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
 
 * CKEditor 4.3 and above.
-* The [Widget plugin](http://ckeditor.com/addon/widget).
+* The [Widget plugin](http://ckeditor.com/addon/widget) along with its dependencies.
 
 ## Introduction
 
@@ -322,7 +322,7 @@ The full contents of the `simplebox/plugin.js` file is as follows:
 
 				init: function() {
 					var width = this.element.getStyle( 'width' );
-					if ( with )
+					if ( width )
 						this.setData( 'width', width );
 					if ( this.element.hasClass( 'align-left' ) )
 						this.setData( 'align', 'left' );
@@ -440,11 +440,4 @@ You can reload the sample page now. When you click the Simple Box toolbar button
 If you double click an existing widget instance, the dialog window will open again and current width and alignment values will be shown. After you modify them and click "OK", the widget instance in the editing area will be updated.
 
 {@img simplebox2_example1.png Updated Simple Box widget}
-
-
-
-
-
-
-
 

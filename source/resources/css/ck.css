@@ -202,3 +202,18 @@ pre code a
 {
     max-width: 450px;
 }
+
+.guide-container img
+{
+	border: 1px solid #E8E8E8;
+	padding: 5px;
+	display: inline-block;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.guide-container a > img:hover
+{
+	border-color: #A0C9E4;
+}

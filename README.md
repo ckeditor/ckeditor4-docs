@@ -32,7 +32,7 @@ While the main CKEditor repository for API documents, [ckeditor-dev](https://git
 
 ## License
 
-Copyright (c) 2003-2013, [CKSource](http://cksource.com/) - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2014, [CKSource](http://cksource.com/) - Frederico Knabben. All rights reserved.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -11,4 +11,4 @@ Other things to test among all browsers are:
    load the editor in Hebrew and see the editor in RTL.
  * Enable High Contrast on Windows (<code>SHIFT+ALT+PRINT-SCREEN</code>) and
    reload the page.
- * Play with the the UI Color sample to check the chameleon feature.
+ * Play with the UI Color sample to check the chameleon feature.

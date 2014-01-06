@@ -176,7 +176,7 @@ be done by modifying the Explanation field in the dialog window definition
 		...
 	]
 
-Please note that the the dialog window also contains the **Advanced Settings** tab that
+Please note that the dialog window also contains the **Advanced Settings** tab that
 can be used for setting the `id` attribute. However, our current configuration
 (`allowedContent: 'p abbr'`) means: "only paragraphs and abbreviations are allowed, not
 attributes". The **Abbreviation** plugin should take this fact into account and disable

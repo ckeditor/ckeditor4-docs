@@ -13,7 +13,7 @@ There are two ways to configure the toolbar to match your needs:
 
 CKEditor 4 introduced a new concept for toolbar organization which is based on "grouping" instead of the traditional "item by item positioning" way.
 
-Grouping configuration is defined by the {@link CKEDITOR.config#toolbarGroups toolbarGroups} setting. The following the the configuration used by the "standard" distribution of CKEditor:
+Grouping configuration is defined by the {@link CKEDITOR.config#toolbarGroups toolbarGroups} setting. The following is the configuration used by the "standard" distribution of CKEditor:
 
 	config.toolbarGroups = [
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },

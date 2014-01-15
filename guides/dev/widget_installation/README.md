@@ -18,7 +18,9 @@ The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page
 * **[Mathematical Formulas](http://ckeditor.com/addon/mathjax)** &ndash; a plugin that lets you add mathematical formulas written in TeX.
 * **[Placeholder](http://ckeditor.com/addon/placeholder)** &ndash; a plugin that lets you create non-editable text fragments.
 
-Drag the plugin that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are ready, click the **Download** button at the bottom of the CKBuilder page to download your custom build with widget plugins included.
+<img src="guides/dev_plugin/add_widget_ckbuilder_3.png" alt="Selected Plugins and Available Plugins lists in CKBuilder" width="786" height="491">
+
+Drag the plugin that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are happy with your build configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with widget plugins included.
 
 ### Through Add-on Repository
 
@@ -28,13 +30,11 @@ Visit the widget plugin page in the [Add-ons Repository](http://ckeditor.com/add
 
 When you are ready, click the "**Build my editor**" button on the right to go to CKBuilder. The plugin that you have just added will be counted as "selected".
 
-<img src="guides/dev_widget_installation/add_widget_ckbuilder_2.png" alt="Building a custom CKEditor version" width="166" height="238">
+<img src="guides/dev_plugin/add_plugin_ckbuilder_2.png" alt="Building a custom CKEditor version" width="159" height="234">
 
-Please note that in CKBuilder all plugin dependencies will be resolved automatically for you. You can fine-tune your build and when you are ready, click the **Download** button at the bottom of the CKBuilder page to download your custom build with widget plugins included.
-
-
+Please note that in CKBuilder all plugin dependencies will be resolved automatically for you. You can fine-tune your build and when you are happy with your build configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with widget plugins included.
 
 ## Manual Installation
 
-Last but not least, you can [add widget plugins manually](#!/guide/dev_plugins-section-3) by downloading the .zip packages,  adding them to an existing CKEditor 4.3+ installation, and modifying the editor configuration manually. This is not a recommended solution, though, and should only be used by experienced CKEditor developers. Be mindful of widget dependencies!
+Last but not least, you can [add widget plugins manually](#!/guide/dev_plugins-section-3) by downloading the `.zip` packages,  adding them to an existing CKEditor 4.3+ installation, and modifying the editor configuration manually. This is not a recommended solution, though, and should only be used by experienced CKEditor developers. Be mindful of widget dependencies!
 

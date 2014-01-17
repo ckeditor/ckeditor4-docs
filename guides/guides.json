@@ -69,7 +69,7 @@
 							{
 								"name": "dev_api_changes",
 								"url": "dev/api_changes",
-								"title": "API Changes from v3 to v4"
+								"title": "API Changes from v3 to v4",
 								"description": "API Changes between CKEditor 3 and CKEditor 4.",
 								"meta_description" : "API Changes between CKEditor 3 and CKEditor 4.",
 								"meta_keywords" : "ckeditor, editor, upgrade, upgrading, api, changes, changelog, install, installation"
@@ -107,7 +107,7 @@
 					}
 				]
 			},
-			
+
 			{
 				"title": "Integration",
 				"items": [

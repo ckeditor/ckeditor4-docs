@@ -1,23 +1,25 @@
 # Build from Source Code
 
-If you're working with the source code of CKEditor in your computer or local network, at some stage you'll have to distribute it into test or production websites. 
+If you are working with the CKEditor source code on your computer or in a local network, at some stage you will want to distribute it to your test or production environment. 
 
-**Never distribute the source version of CKEditor into production websites**. There are serious [performance implications](#!/guide/dev_source-section-2) on doing this.
+<p class="tip">
+	<strong>Never distribute the source version of CKEditor to production websites</strong>. There are serious <a href="#!/guide/dev_source-section-2">performance implications</a> of doing this.
+</p>
 
-Instead, you must create a CKEditor "build" or "release version" (in contrast to "source version"). It is an optimized production ready CKEditor distribution.
+Instead, you must create a CKEditor "build" or "release version" (in contrast to the "source version"). It is an optimized, production-ready CKEditor distribution.
 
 ## The `dev/builder` Folder
 
-The source code of CKEditor contains a pre-configured environment so you can easily create CKEditor builds.
+The source code of CKEditor contains a pre-configured environment that allows you to easily create editor builds.
 
-The following are the files that are most relevant:
+The following are the most relevant files that you can find there:
 
- * `build.sh`: the build runner bash script.
- * `build-config.js`: the build configuration file.
+ * `build.sh` &ndash; the build runner Bash script.
+ * `build-config.js` &ndash; the build configuration file.
 
 ## Step 1: Build Setup
 
-You should edit the `build-config.js` file, which contains the build configuration. It has the following sections:
+Edit the `build-config.js` file, which contains the build configuration. It includes the following sections:
 
 	var CKBUILDER_CONFIG = {	
 		// Skin name.
@@ -30,13 +32,13 @@ You should edit the `build-config.js` file, which contains the build configurati
 		plugins: { ... }
 	};
 
-The most important parts of the file is the `skin` name and the list of `plugins`. Be sure to have them properly set, with the things you really want in your build.
+The most important parts are the `skin` name and the list of `plugins`. These need to be set properly and include all the things you want to have in your build.
 
-You don't need to include all plugins into that list. CKBuilder will discover their dependencies and load them as well.
+Some plugins might need others to work, but you do not have to resolve these dependencies by yourself as CKBuilder will do this for you.
 
 ## Step 2: Running the Builder
 
-There is little to add now. Simply go to the command line and call the build script:
+Go to the command line and call the build script:
 
 	sh build.sh
 	
@@ -44,8 +46,8 @@ The builder will be executed and the resulting build will be created in the `dev
 
 ## About CKBuilder (Command Line)
 	
-The building process is handled by the command line version of **CKBuilder**. It is a powerful application that makes several enhancement to the source code. It loads the configuration file, discover plugin dependencies, merge and minify files, create icon strips and perform many other tasks.
+The building process is handled by the command line version of [CKBuilder](http://ckeditor.com/builder). It is a powerful application that makes several enhancement to the source code: it loads the configuration file, resolves plugin dependencies, merges and minifies files, creates icon strips, and performs many other build-related tasks.
 
-For the first run, `build.sh` will [download CKBuilder](http://download.cksource.com/CKBuilder/), if not available, and copy it into the `dev/builder/ckbuilder/<ckbuilder version>` folder. Therefore, Internet connection is required. Once the file is available, no more downloads are required (but still the script tries to update it, if possible).
+For the first run, `build.sh` will need to [download CKBuilder](http://download.cksource.com/CKBuilder/) and copy it into the `dev/builder/ckbuilder/<ckbuilder version>` folder, so an Internet connection is required. Once the file is available, no more downloads are necessary (though if possible, the script will try to perform an update on consecutive runs).
 
 The only requirement to run CKBuilder is [Java](http://www.java.com/en/download/).

@@ -1,6 +1,6 @@
 [
 	{
-		"title": "CKEditor 4 Developer’s Guide",
+		"title": "CKEditor 4 Developer's Guide",
 		"items": [
 			{
 				"title": "Getting Started",
@@ -15,6 +15,99 @@
 					}
 				]
 			},
+			{
+				"title": "Advanced Installation Concepts",
+				"items": [
+					{
+						"title": "Installing Components",
+						"items": [
+							{
+								"name": "dev_plugins",
+								"url": "dev/plugins",
+								"title": "Installing Plugins",
+								"description": "How to download, install, and use CKEditor plugins.",
+								"meta_description" : "How to download, install, and use CKEditor plugins.",
+								"meta_keywords" : "ckeditor, editor, plugins, plugin, download, install, installation"
+							},
+							{
+								"name": "dev_skins",
+								"url": "dev/skins",
+								"title": "Installing Skins",
+								"description": "How to download, install, and use CKEditor skins.",
+								"meta_description" : "How to download, install, and use CKEditor skins.",
+								"meta_keywords" : "ckeditor, editor, skins, skin, download, install, installation"
+							},
+							{
+								"name": "dev_widget_installation",
+								"url": "dev/widget_installation",
+								"title": "Installing Widgets",
+								"description": "How to download, install, and use CKEditor widgets.",
+								"meta_description" : "How to download, install, and use CKEditor widgets.",
+								"meta_keywords" : "ckeditor, editor, widgets, widget, download, install, installation"
+							}
+						]
+					},
+					{
+						"title": "Upgrading",
+						"items": [
+							{
+								"name": "dev_upgrade",
+								"url": "dev/upgrade",
+								"title": "Upgrading",
+								"description": "How to upgrade to the latest version of CKEditor 4.",
+								"meta_description" : "How to upgrade to the latest version of CKEditor 4.",
+								"meta_keywords" : "ckeditor, editor, upgrade, upgrading, download, install, installation"
+							},
+							{
+								"name": "dev_upgrade_ckeditor_3",
+								"url": "dev/upgrade/upgrade_ckeditor_3",
+								"title": "Upgrading from CKEditor 3",
+								"description": "How to upgrade from CKEditor 3 to CKEditor 4.",
+								"meta_description" : "How to upgrade from CKEditor 3 to CKEditor 4.",
+								"meta_keywords" : "ckeditor, editor, upgrade, upgrading, download, install, installation"
+							},
+							{
+								"name": "dev_api_changes",
+								"url": "dev/api_changes",
+								"title": "API Changes from v3 to v4"
+								"description": "API Changes between CKEditor 3 and CKEditor 4.",
+								"meta_description" : "API Changes between CKEditor 3 and CKEditor 4.",
+								"meta_keywords" : "ckeditor, editor, upgrade, upgrading, api, changes, changelog, install, installation"
+							},
+							{
+								"name": "dev_upgrade_fckeditor_2",
+								"url": "dev/upgrade/upgrade_fckeditor_2",
+								"title": "Upgrading from FCKeditor 2",
+								"description": "How to upgrade from FCKeditor 2 to CKEditor 4.",
+								"meta_description" : "How to upgrade from FCKeditor 2 to CKEditor 4.",
+								"meta_keywords" : "ckeditor, editor, fckeditor, upgrade, upgrading, download, install, installation"
+							}
+						]
+					},
+					{
+						"title": "Building CKEditor",
+						"items": [
+							{
+								"name": "dev_source",
+								"url": "dev/source",
+								"title": "Getting Source Code",
+								"description": "How to get CKEditor source code.",
+								"meta_description" : "How to get CKEditor source code.",
+								"meta_keywords" : "ckeditor, editor, source, code, github, repository, cloning, git"
+							},
+							{
+								"name": "dev_build",
+								"url": "dev/build",
+								"title": "Building from Source",
+								"description": "How to build CKEditor from source code.",
+								"meta_description" : "How to build CKEditor from source code.",
+								"meta_keywords" : "ckeditor, editor, source, code, build, building, ckbuilder"
+							}
+						]
+					}
+				]
+			},
+			
 			{
 				"title": "Integration",
 				"items": [
@@ -93,29 +186,6 @@
 				]
 			},
 			{
-				"title": "Customization",
-				"items": [
-					{
-						"name": "dev_plugins",
-						"url": "dev/plugins",
-						"title": "Plugins",
-						"description": "Adding new features to CKEditor and changing its look and feel."
-					},
-					{
-						"name": "dev_skins",
-						"url": "dev/skins",
-						"title": "Skins"
-					},
-					{
-						"name": "dev_widget_installation",
-						"url": "dev/widget_installation",
-						"title": "Widget Installation",
-						"meta_description" : "How to download, install, and use CKEditor widgets.",
-						"meta_keywords" : "ckeditor, editor, wysiwyg, download, install, installation, widget, widgets, plugin, plugins"
-					}
-				]
-			},
-			{
 				"title": "CKEditor Deep Dive",
 				"items": [
 					{
@@ -152,22 +222,6 @@
 				]
 			},
 			{
-				"title": "Source Code",
-				"items": [
-					{
-						"name": "dev_source",
-						"url": "dev/source",
-						"title": "Getting the Source",
-						"description": "Working with the source code of CKEditor."
-					},
-					{
-						"name": "dev_build",
-						"url": "dev/build",
-						"title": "Building"
-					}
-				]
-			},
-			{
 				"title": "Reporting Issues",
 				"items": [
 					{
@@ -196,11 +250,6 @@
 						"name": "dev_license",
 						"url": "dev/license",
 						"title": "License"
-					},
-					{
-						"name": "dev_api_changes",
-						"url": "dev/api_changes",
-						"title": "API Changes"
 					}
 				]
 			},

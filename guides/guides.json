@@ -11,13 +11,21 @@
 						"title": "Quick Start Guide",
 						"description": "How to download, install, and use CKEditor.",
 						"meta_description" : "How to download, install, and use CKEditor.",
-						"meta_keywords" : "ckeditor, editor, wysiwyg, download, install, installation, sample, example"
+						"meta_keywords" : "ckeditor, editor, wysiwyg, download, downloading, install, installation, sample, example"
 					}
 				]
 			},
 			{
 				"title": "Advanced Installation Concepts",
 				"items": [
+					{
+						"name": "dev_advanced_installation",
+						"url": "dev/advanced_installation",
+						"title": "Introduction",
+						"description": "More advanced installation tasks, like installing additional components, upgrading and building.",
+						"meta_description" : "More advanced installation tasks, like installing additional components, upgrading and building.",
+						"meta_keywords" : "ckeditor, editor, wysiwyg, install, installation, download, upgrade, upgrading, build, building, plugins, widgets, widget, plugin, skin, skins, source, code"
+					},
 					{
 						"title": "Installing Components",
 						"items": [

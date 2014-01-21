@@ -4,9 +4,9 @@ This section presents some more advanced CKEditor concepts. It is meant for all 
 
 See these topics if you want to bring your CKEditor knowledge to a whole new level:
 
-1. **Advanced Content Filter (ACF)** &mdash; Content filtering system that limits and adapts input data so it matches the editor configuration. It may also deactivate features which generate HTML code that is not allowed by the configuration.
+1. **Advanced Content Filter (ACF)** &ndash; Content filtering system that limits and adapts input data so it matches the editor configuration. It may also deactivate features which generate HTML code that is not allowed by the configuration.
 
-    * [Introduction](#!/guide/dev_advanced_content_filter) &mdash; General information about the content filtering system implemented in CKEditor.
-    * [Allowed Content Rules](#!/guide/dev_allowed_content_rules) &mdash; Explanation of syntax that defines which HTML elements, attributes, styles, and classes are allowed in CKEditor.
+	* [Introduction](#!/guide/dev_advanced_content_filter) &ndash; General information about the content filtering system implemented in CKEditor.
+	* [Allowed Content Rules](#!/guide/dev_allowed_content_rules) &ndash; Explanation of syntax that defines which HTML elements, attributes, styles, and classes are allowed in CKEditor.
 
-2. **[Widgets](#!/guide/dev_widgets)** &mdash; Innovative CKEditor feature that lets you create rich content entities grouping multiple HTML elements.
+2. **[Widgets](#!/guide/dev_widgets)** &ndash; Innovative CKEditor feature that lets you create rich content entities grouping multiple HTML elements.

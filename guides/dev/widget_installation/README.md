@@ -43,5 +43,5 @@ Please note that in CKBuilder all plugin dependencies will be resolved automatic
 Last but not least, you can [add widget plugins manually](#!/guide/dev_plugins-section-3) by downloading the `.zip` packages,  adding them to an existing CKEditor 4.3+ installation, and modifying the editor configuration manually. This is not a recommended solution, though, and should only be used by experienced CKEditor developers. Be mindful of widget dependencies!
 
 <p class="tip">
-	To avoid the manual installation process <a href="http://ckeditor.com/user/login?redirect=plugin">submit your widget plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
+	To avoid the manual installation process <strong>submit your widget plugins to the Add-ons Repository</strong> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </p>

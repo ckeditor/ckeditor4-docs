@@ -10,8 +10,8 @@
 						"url": "dev/installation",
 						"title": "Quick Start Guide",
 						"description": "How to download, install, and use CKEditor.",
-						"meta_description" : "How to download, install, and use CKEditor.",
-						"meta_keywords" : "ckeditor, editor, wysiwyg, download, downloading, install, installation, sample, example"
+						"meta_description": "How to download, install, and use CKEditor.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, download, downloading, install, installation, sample, example"
 					}
 				]
 			},
@@ -23,8 +23,8 @@
 						"url": "dev/advanced_installation",
 						"title": "Introduction",
 						"description": "More advanced installation tasks, like installing additional components, upgrading and building.",
-						"meta_description" : "More advanced installation tasks, like installing additional components, upgrading and building.",
-						"meta_keywords" : "ckeditor, editor, wysiwyg, install, installation, download, upgrade, upgrading, build, building, plugins, widgets, widget, plugin, skin, skins, source, code"
+						"meta_description": "More advanced installation tasks, like installing additional components, upgrading and building.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, download, upgrade, upgrading, build, building, plugins, widgets, widget, plugin, skin, skins, source, code"
 					},
 					{
 						"title": "Installing Components",
@@ -34,24 +34,24 @@
 								"url": "dev/plugins",
 								"title": "Installing Plugins",
 								"description": "How to download, install, and use CKEditor plugins.",
-								"meta_description" : "How to download, install, and use CKEditor plugins.",
-								"meta_keywords" : "ckeditor, editor, plugins, plugin, download, install, installation"
+								"meta_description": "How to download, install, and use CKEditor plugins.",
+								"meta_keywords": "ckeditor, editor, plugins, plugin, download, install, installation"
 							},
 							{
 								"name": "dev_skins",
 								"url": "dev/skins",
 								"title": "Installing Skins",
 								"description": "How to download, install, and use CKEditor skins.",
-								"meta_description" : "How to download, install, and use CKEditor skins.",
-								"meta_keywords" : "ckeditor, editor, skins, skin, download, install, installation"
+								"meta_description": "How to download, install, and use CKEditor skins.",
+								"meta_keywords": "ckeditor, editor, skins, skin, download, install, installation"
 							},
 							{
 								"name": "dev_widget_installation",
 								"url": "dev/widget_installation",
 								"title": "Installing Widgets",
 								"description": "How to download, install, and use CKEditor widgets.",
-								"meta_description" : "How to download, install, and use CKEditor widgets.",
-								"meta_keywords" : "ckeditor, editor, widgets, widget, download, install, installation"
+								"meta_description": "How to download, install, and use CKEditor widgets.",
+								"meta_keywords": "ckeditor, editor, widgets, widget, download, install, installation"
 							}
 						]
 					},
@@ -63,32 +63,32 @@
 								"url": "dev/upgrade",
 								"title": "Upgrading",
 								"description": "How to upgrade to the latest version of CKEditor 4.",
-								"meta_description" : "How to upgrade to the latest version of CKEditor 4.",
-								"meta_keywords" : "ckeditor, editor, upgrade, upgrading, download, install, installation"
+								"meta_description": "How to upgrade to the latest version of CKEditor 4.",
+								"meta_keywords": "ckeditor, editor, upgrade, upgrading, download, install, installation"
 							},
 							{
 								"name": "dev_upgrade_ckeditor_3",
 								"url": "dev/upgrade/upgrade_ckeditor_3",
 								"title": "Upgrading from CKEditor 3",
 								"description": "How to upgrade from CKEditor 3 to CKEditor 4.",
-								"meta_description" : "How to upgrade from CKEditor 3 to CKEditor 4.",
-								"meta_keywords" : "ckeditor, editor, upgrade, upgrading, download, install, installation"
+								"meta_description": "How to upgrade from CKEditor 3 to CKEditor 4.",
+								"meta_keywords": "ckeditor, editor, upgrade, upgrading, download, install, installation"
 							},
 							{
 								"name": "dev_api_changes",
 								"url": "dev/api_changes",
 								"title": "API Changes from v3 to v4",
 								"description": "API Changes between CKEditor 3 and CKEditor 4.",
-								"meta_description" : "API Changes between CKEditor 3 and CKEditor 4.",
-								"meta_keywords" : "ckeditor, editor, upgrade, upgrading, api, changes, changelog, install, installation"
+								"meta_description": "API Changes between CKEditor 3 and CKEditor 4.",
+								"meta_keywords": "ckeditor, editor, upgrade, upgrading, api, changes, changelog, install, installation"
 							},
 							{
 								"name": "dev_upgrade_fckeditor_2",
 								"url": "dev/upgrade/upgrade_fckeditor_2",
 								"title": "Upgrading from FCKeditor 2",
 								"description": "How to upgrade from FCKeditor 2 to CKEditor 4.",
-								"meta_description" : "How to upgrade from FCKeditor 2 to CKEditor 4.",
-								"meta_keywords" : "ckeditor, editor, fckeditor, upgrade, upgrading, download, install, installation"
+								"meta_description": "How to upgrade from FCKeditor 2 to CKEditor 4.",
+								"meta_keywords": "ckeditor, editor, fckeditor, upgrade, upgrading, download, install, installation"
 							}
 						]
 					},
@@ -100,16 +100,16 @@
 								"url": "dev/source",
 								"title": "Getting Source Code",
 								"description": "How to get CKEditor source code.",
-								"meta_description" : "How to get CKEditor source code.",
-								"meta_keywords" : "ckeditor, editor, source, code, github, repository, cloning, git"
+								"meta_description": "How to get CKEditor source code.",
+								"meta_keywords": "ckeditor, editor, source, code, github, repository, cloning, git"
 							},
 							{
 								"name": "dev_build",
 								"url": "dev/build",
 								"title": "Building from Source",
 								"description": "How to build CKEditor from source code.",
-								"meta_description" : "How to build CKEditor from source code.",
-								"meta_keywords" : "ckeditor, editor, source, code, build, building, ckbuilder"
+								"meta_description": "How to build CKEditor from source code.",
+								"meta_keywords": "ckeditor, editor, source, code, build, building, ckbuilder"
 							}
 						]
 					}
@@ -200,8 +200,8 @@
 						"url": "dev/deep_dive",
 						"title": "Introduction",
 						"description": "More advanced CKEditor concepts, like widgets and content filtering.",
-						"meta_description" : "More advanced CKEditor concepts, like widgets and content filtering.",
-						"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, acf, filter, content, filtering, advanced"
+						"meta_description": "More advanced CKEditor concepts, like widgets and content filtering.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, acf, filter, content, filtering, advanced"
 					},
 					{
 						"title": "Advanced Content Filter",
@@ -209,12 +209,18 @@
 							{
 								"name": "dev_advanced_content_filter",
 								"url": "dev/deep_dive/advanced_content_filter",
-								"title": "Introduction"
+								"title": "Introduction",
+								"description": "Introduction to Advanced Content Filter.",
+								"meta_description": "Introduction to Advanced Content Filter.",
+								"meta_keywords": "ckeditor, editor, wysiwyg, acf, filter, content, filtering, advanced"
 							},
 							{
 								"name": "dev_allowed_content_rules",
 								"url": "dev/deep_dive/advanced_content_filter/allowed_content_rules",
-								"title": "Allowed Content Rules"
+								"title": "Allowed Content Rules",
+								"description": "Information about Allowed Content Rules for Advanced Content Filter.",
+								"meta_description": "Information about Allowed Content Rules for Advanced Content Filter.",
+								"meta_keywords": "ckeditor, editor, wysiwyg, acf, filter, content, filtering, advanced, rules, rule, allow, allowed"
 							}
 						]
 					},
@@ -223,8 +229,8 @@
 						"url": "dev/deep_dive/widgets",
 						"title": "Widgets",
 						"description": "Introduction to CKEditor Widgets.",
-						"meta_description" : "Introduction to CKEditor Widgets.",
-						"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins"
+						"meta_description": "Introduction to CKEditor Widgets.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins"
 					}
 				]
 			},
@@ -250,13 +256,18 @@
 					{
 						"name": "dev_browsers",
 						"url": "dev/browsers",
-						"title": "Browsers Compatibility",
-						"description": "Browser compatibility, Licensing and API changes"
+						"title": "Browser Compatibility",
+						"description": "Browser compatibility and licensing information.",
+						"meta_description": "Browser compatibility and licensing information.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, browser, support, license, licensing, open, source, premium, free"
 					},
 					{
 						"name": "dev_license",
 						"url": "dev/license",
-						"title": "License"
+						"title": "License",
+						"description": "Information about the CKEditor licensing model.",
+						"meta_description": "Information about the CKEditor licensing model.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, support, license, licensing, open, source, premium, free"
 					}
 				]
 			},
@@ -372,8 +383,8 @@
 				"url": "widget_sdk/intro",
 				"title": "Introduction",
 				"description": "The basics of CKEditor widgets.",
-				"meta_description" : "The basics of CKEditor widgets.",
-				"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, sdk"
+				"meta_description": "The basics of CKEditor widgets.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, sdk"
 			},
 			{
 				"title": "Widget Tutorial",
@@ -383,16 +394,16 @@
 						"url": "widget_sdk/tutorial_1",
 						"title": "Widget Tutorial (Part 1)",
 						"description": "Learn by creating a simple widget.",
-						"meta_description" : "CKEditor widget tutorial.",
-						"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, example, sdk"
+						"meta_description": "CKEditor widget tutorial.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, example, sdk"
 					},
 					{
 						"name": "widget_sdk_tutorial_2",
 						"url": "widget_sdk/tutorial_2",
 						"title": "Widget Tutorial (Part 2)",
 						"description": "Learn by creating a simple widget.",
-						"meta_description" : "CKEditor widget tutorial.",
-						"meta_keywords" : "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, example, sdk"
+						"meta_description": "CKEditor widget tutorial.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, example, sdk"
 					}
 				]
 			}

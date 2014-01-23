@@ -53,5 +53,5 @@ Using CKBuilder is a recommended solution, however, if you have skins developed 
 Your skin will now be available in your CKEditor installation.
 
 <p class="tip">
-	To avoid the manual installation process <strong>submit your skins to the Add-ons Repository</strong> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
+	To avoid the manual installation process <a href="http://ckeditor.com/add/skin">submit your skins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </p>

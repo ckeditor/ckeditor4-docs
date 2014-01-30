@@ -277,7 +277,7 @@
 					{
 						"name": "dev_howtos_basic_configuration",
 						"url": "dev/howtos/basic_configuration",
-						"title": "Basic Configuration and Customization",
+						"title": "Basic Configuration",
 						"description": "Most frequently asked question and answers."
 					},
 					{
@@ -313,7 +313,7 @@
 					{
 						"name": "dev_howtos_scayt",
 						"url": "dev/howtos/scayt",
-						"title": "Spellchecker and Spell Check As You Type (SCAYT)"
+						"title": "Spell Checker and SCAYT"
 					},
 					{
 						"name": "dev_howtos_dialog_windows",

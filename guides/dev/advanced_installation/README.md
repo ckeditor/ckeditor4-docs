@@ -20,4 +20,4 @@ See these topics if you want to learn more:
 3. **Building CKEditor** &ndash; Information about CKEditor source code and the build process.
 
 	* [Getting Source Code](#!/guide/dev_source) &ndash; How to get CKEditor source code for development or test purposes.
-	* [Building from Source"](#!/guide/dev_build) &ndash; How to build CKEditor from source code to create a custom production-ready package.
+	* [Building from Source](#!/guide/dev_build) &ndash; How to build CKEditor from source code to create a custom production-ready package.

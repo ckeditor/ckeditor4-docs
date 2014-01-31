@@ -51,7 +51,7 @@ echo "Building the documentation into the 'build/' directory..."
 # Move to the script directory.
 cd $(dirname $0)
 
-jsduck --config=config.json $@ -- $PATHS
+ckeditor-jsduck --config config.json $@ -- $PATHS
 
 echo "Applying customizations..."
 cp -r source/resources build

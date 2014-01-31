@@ -5,9 +5,9 @@
 
 	"--footer": "Copyright &copy; 2003-2014, <a href=\"http://cksource.com\" style=\"color:#085585\">CKSource</a> - Frederico Knabben. All rights reserved. | Generated with <a href=\"https://github.com/senchalabs/jsduck\">JSDuck</a>.",
 
-	"--meta-tags": "source/customs.rb",
+	"--tags": "source/customs.rb",
 
-	"--warnings": "-no_doc",
+	"--warnings": "-nodoc",
 
 	"--welcome": "source/welcome.html",
 

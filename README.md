@@ -33,9 +33,9 @@ Go back to the `ckeditor-docs` repository and execute `build.sh`:
 
 	> sh build.sh
 
-## Developer Guide
+## Developer's Guide
 
-All Developer Guide articles are defined in the `guides/` folder, including the `guides.json` file which defines the Table of Contents tree as well as the meta information.
+All Developer's Guide articles are defined in the `guides/` folder, including the `guides.json` file which defines the Table of Contents tree as well as the meta information.
 
 ## API Documentation
 

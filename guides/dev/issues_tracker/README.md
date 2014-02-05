@@ -6,24 +6,24 @@ Before you attempt to report an issue, please make sure you read this page and t
 
 ## Required Information
 
-Please provide the following when reporting new issues. The more information you provide, the quicker the issue may be solved:
+Please provide the following when reporting new issues. The more information you provide, the quicker the problem may be solved:
 
  * **Descriptive summary** &ndash; A "right to the point" phrase that best summarizes the issue that you are having.
  * **Steps to reproduce** &ndash; This is the most important thing. We are not able to fix an issue if we cannot see it with our own eyes. A numbered list of actions to reproduce the issue is invaluable.
  * **Browser name and OS** &ndash; Your computer configuration, OS, browser name and version.
+ * **Editor configuration** &ndash; Your editor version, integration method, editor build (you can attach your `build-config.js` file).
  * **Screenshot** &ndash; For interface-related issues an image speaks more than thousands of words.
  * **Sample data** &ndash; For content-related issues please attach a sample file from which we can get the text for testing.
  * **Test case file** &ndash; If possible, attach a test case file showing the issue. This is the best way to show us the problem and make it quicker to solve.
 
 ## Important
 
-When filing the issue, please bear these important things in mind:
+When filing an issue, please bear these important things in mind:
 
  * **Submit separate reports for each issue.** Do not include more than one issue in the same report.
- * The "Priority", "Milestone", and "Assign to" fields are reserved for the core development team.
- * **Avoid using the "Keywords" field** if you are not 100% sure what to put there.
- * Make sure **you are using the latest version of CKEditor**. Maybe your issue has already been fixed.
- * For a full guide on how to properly report a new issue go to the [TicketSpecs page](https://dev.ckeditor.com/wiki/TicketSpecs).
+ * The "Priority", "Milestone", "Assign to" and "Keywords" fields are reserved for the core development team.
+ * Make sure **you are using the latest CKEditor version**. Maybe your issue has already been fixed.
+ * For a detailed guide on how to properly report a new issue go to the [TicketSpecs page](https://dev.ckeditor.com/wiki/TicketSpecs).
  
 ## Reporting an Issue
 

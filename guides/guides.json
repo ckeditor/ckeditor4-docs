@@ -235,18 +235,23 @@
 				]
 			},
 			{
-				"title": "Reporting Issues",
+				"title": "Contributing",
 				"items": [
 					{
 						"name": "dev_issues_readme",
 						"url": "dev/issues_readme",
-						"title": "Read Me First",
-						"description": "How to properly report issues you may find on CKEditor."
+						"title": "Reporting Issues",
+						"description": "How to proceed with CKEditor issues.",
+						"meta_description": "How to proceed with CKEditor issues.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, bug, bugs, issue, issues, tracker, problem, problems, solution, solutions, reporting, problem-solving, demo, nightly"
 					},
 					{
 						"name": "dev_issues_tracker",
 						"url": "dev/issues_tracker",
-						"title": "Issues Tracker"
+						"title": "Issues Tracker",
+						"description": "How to file bug reports for CKEditor.",
+						"meta_description": "How to file bug reports for CKEditor.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, bug, bugs, issue, issues, tracker, problem, problems, solution, solutions, reporting, problem-solving"
 					}
 				]
 			},

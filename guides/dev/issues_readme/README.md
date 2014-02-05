@@ -14,7 +14,7 @@ Most of the issues are reproducible on the demo. If you have a different case th
 
 Before you file a new ticket, make sure your issue has not been reported yet. Use the [search page](https://dev.ckeditor.com/search) to check it.
 
-There is a chance that we have already fixed your issue, so you should also test it on our last "Nightly Build": <http://nightly.ckeditor.com/demo>
+CKEditor is in active development, so there is a chance that we have already fixed your issue in the current code base. You should thus also test it on our last **Nightly Build**: <http://nightly.ckeditor.com/>
 
 ## Reporting Issues
 

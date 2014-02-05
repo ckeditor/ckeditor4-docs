@@ -238,6 +238,14 @@
 				"title": "Contributing",
 				"items": [
 					{
+						"name": "dev_contributing",
+						"url": "dev/contributing",
+						"title": "How to Contribute",
+						"description": "How to contribute to CKEditor development.",
+						"meta_description": "How to contribute to CKEditor development.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, contribute, contribution, localization, translation, translating, bug, bugs, issue, issues, requests, tracker, problem, problems, code, documentation, standards"
+					},
+					{
 						"name": "dev_issues_readme",
 						"url": "dev/issues_readme",
 						"title": "Reporting Issues",
@@ -252,6 +260,14 @@
 						"description": "How to file bug reports for CKEditor.",
 						"meta_description": "How to file bug reports for CKEditor.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, bug, bugs, issue, issues, tracker, problem, problems, solution, solutions, reporting, problem-solving"
+					},
+					{
+						"name": "dev_code_documentation",
+						"url": "dev/code_documentation",
+						"title": "Code Documentation",
+						"description": "Documentation standards for CKEditor source code.",
+						"meta_description": "Documentation standards for CKEditor source code.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, documentation, docs, api, code, source, standards, style"
 					}
 				]
 			},

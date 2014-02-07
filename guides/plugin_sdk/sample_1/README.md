@@ -83,7 +83,7 @@ window.
 The above {@link CKEDITOR.ui#addButton} function call created a button name `'Abbr'` with the following properties;
 
  * `label`: the textual part of the button (if visible) and its tooltip.
- * `command`: the command to be executed once the button is activated. This is the command we created in the previews step.
+ * `command`: the command to be executed once the button is activated. This is the command we created in the previous step.
  * `toolbar`: the [toolbar group](#!/guide/dev_toolbar-section-1) into which position the button.
 
 
@@ -102,7 +102,7 @@ It is now time to tell CKEditor to load our plugin. To do so we have to add its 
 
 	To follow this guide and at the same time comply with the new CKEditor 4.1 requirements you
 	need to either set <code>config.allowedContent = true</code> in order to disable
-	<a href="#!/guide/dev_advanced_content_filter">content filtering</a> or 
+	<a href="#!/guide/dev_advanced_content_filter">content filtering</a> or
 	<a href="#!/guide/plugin_sdk_integration_with_acf">integrate your plugin with ACF</a>.
 	For more information, please refer to the official
 	<a href="#!/guide/plugin_sdk_integration_with_acf">Advanced Content Filter integration guide</a>.

@@ -112,6 +112,14 @@
 								"meta_keywords": "ckeditor, editor, source, code, build, building, ckbuilder"
 							}
 						]
+					},
+					{
+						"name": "dev_basepath",
+						"url": "dev/basepath",
+						"title": "Specifying Editor Path",
+						"description": "How to specify the editor path.",
+						"meta_description": "How to specify the editor path.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, path, script, basepath"
 					}
 				]
 			},

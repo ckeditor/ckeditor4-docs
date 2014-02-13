@@ -21,7 +21,7 @@ Please provide the following when reporting new issues. The more information you
 When filing an issue, please bear these important things in mind:
 
  * **Submit separate reports for each issue.** Do not include more than one issue in the same report.
- * The "Priority", "Milestone", "Assign to" and "Keywords" fields are reserved for the core development team.
+ * The "Priority", "Milestone", "Version", "Assign to" and "Keywords" fields are reserved for the core development team.
  * Make sure **you are using the latest CKEditor version**. Maybe your issue has already been fixed.
  * For a detailed guide on how to properly report a new issue go to the [Ticket Specs page](https://dev.ckeditor.com/wiki/TicketSpecs).
  

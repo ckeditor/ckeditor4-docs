@@ -14,6 +14,14 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, download, downloading, install, installation, sample, example"
 					},
 					{
+						"name": "dev_basics",
+						"url": "dev/basics",
+						"title": "Basic CKEditor Concepts",
+						"description": "What CKEditor Is and What It Is Not.",
+						"meta_description": "What CKEditor Is and What It Is Not.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, basics, basic, concepts, html, standards"
+					},
+					{
 						"title": "Inserting CKEditor",
 						"items": [
 							{

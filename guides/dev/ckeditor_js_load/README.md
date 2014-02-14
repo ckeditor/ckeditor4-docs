@@ -1,25 +1,30 @@
-# Loading CKEditor
+# Loading CKEditor Script
 
-CKEditor is a JavaScript application. To load it, you need to include a single file
-reference in your page. If you [installed](#!/guide/dev_installation) CKEditor in the `ckeditor` directory in the root of your website, you need to insert the following code fragment into the `<head>` section of your page:
+CKEditor is a JavaScript application. To load it, you need to include a single file reference in your page. If you [installed](#!/guide/dev_installation) CKEditor in the `ckeditor` directory in the root of your website, you need to insert the following code fragment into the `<head>` section of your page:
 
 	<head>
 		...
 		<script src="/ckeditor/ckeditor.js"></script>
 	</head>
 
-When the above file is loaded, the [CKEditor JavaScript API](#!/api) is ready to be used.
+When this file is loaded, the [CKEditor JavaScript API](#!/api) is ready to be used.
 
-When adding CKEditor to your web pages, use the original file name (`ckeditor.js`).
-If you want to use a different file name, or even merge the CKEditor script into another
-JavaScript file, refer to the [Specifying the Editor Path](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Specifying_the_Editor_Path) <!-- TODO: Move this link to JSDuck --> section of the Developer's Guide first.
+When adding CKEditor to your web pages, use the original file name (`ckeditor.js`). If you want to use a different file name, or even merge the CKEditor script into another JavaScript file, refer to the [Specifying the Editor Path](#!/guide/dev_basepath) article first.
 
-## Creating Editors
+## Creating Editor Instances
 
-Now that the [CKEditor JavaScript API](#!/api) is available on the page, you can use it to create editor instances. There are two different options available in order to achieve this:
+Now that the CKEditor JavaScript API is available on the page, you can use it to create editor instances. There are two different options available in order to achieve this. In order to examine both usage scenarios, choose the preferred option below to get more information.
 
- * [Framed Editing](#!/guide/dev_framed) &ndash; the most common way to use CKEditor, when the editor is usually represented by a toolbar and an editing area placed in a specific position on the page.
+### Classic Editing
+[Classic editing](#!/guide/dev_framed) is the most common way to use CKEditor, when the editor is usually represented by a toolbar and an editing area placed in a specific position on the page. Sometimes it is also called "framed editing", because in this scenario the editor creates a temporary `<iframe>` element for itself.
 
- * [Inline Editing](#!/guide/dev_inline) &ndash; used on pages that need to look like the final page. Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute. The editor toolbar appears automatically for these elements, floating on the page.
+[See the demo here](http://ckeditor.com/demo#standard).
 
-In order to examine both usage scenarios, choose the preferred option above to get more information. See also the [Framed Editing](http://ckeditor.com/demo#standard) and [Inline Editing](http://ckeditor.com/demo#inline) demos on our website.
+<img src="guides/dev_ckeditor_js_load/classic_example.png" alt="Classic editor example" width="572" height="288">
+
+### Inline Editing
+[Inline editing](#!/guide/dev_inline) is an innovative feature that can be used on pages which need to look like the final page. Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute. The editor toolbar appears automatically for these elements, floating on the page.
+
+[See the demo here](http://ckeditor.com/demo#inline).
+ 
+<img src="guides/dev_ckeditor_js_load/inline_example.png" alt="Inline editor example" width="585" height="294">

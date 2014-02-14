@@ -2,7 +2,7 @@
 
 CKEditor offers native jQuery integration through its jQuery Adapter (a jQuery plugin basically). It provides deep integration of CKEditor and jQuery that lets you use the native features of jQuery when using CKEditor. The jQuery Adapter is compatible with jQuery versions 1.7+ and 2.0+.
 
-Thanks to the jQuery Adapter every `textarea` element can be converted into a [framed editor](#!/guide/dev_framed), while  any other {@link CKEDITOR.dtd#$editable editable} element can be changed into an [inline editor](#!/guide/dev_inline).
+Thanks to the jQuery Adapter every `textarea` element can be converted into a [classic editor](#!/guide/dev_framed), while  any other {@link CKEDITOR.dtd#$editable editable} element can be changed into an [inline editor](#!/guide/dev_inline).
 
 
 ## Creating Editor Instances
@@ -73,7 +73,7 @@ To preserve backward compatibility with the CKEditor 3.x adapter version, it is 
 
 ## The .val() Method
 
-Because setting and retrieving the editor data is a common operation, the jQuery Adapter also provides a dedicated {@link CKEDITOR_Adapters.jQuery#val val()} method that is an extension of the original [jQuery val()](http://api.jquery.com/val/) method. It works similarily to the jQuery version and gets the value of the first element in the set of matched elements or sets the value of every matched element. Additionally it allows you to get or set the contents of the framed editor.
+Because setting and retrieving the editor data is a common operation, the jQuery Adapter also provides a dedicated {@link CKEDITOR_Adapters.jQuery#val val()} method that is an extension of the original [jQuery val()](http://api.jquery.com/val/) method. It works similarily to the jQuery version and gets the value of the first element in the set of matched elements or sets the value of every matched element. Additionally it allows you to get or set the contents of the classic editor.
 
 	// Get the editor data.
 	var data = $( 'textarea.editor' ).val();

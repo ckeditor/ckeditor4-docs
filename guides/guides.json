@@ -12,6 +12,35 @@
 						"description": "How to download, install, and use CKEditor.",
 						"meta_description": "How to download, install, and use CKEditor.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, download, downloading, install, installation, sample, example"
+					},
+					{
+						"title": "Inserting CKEditor",
+						"items": [
+							{
+								"name": "dev_ckeditor_js_load",
+								"url": "dev/ckeditor_js_load",
+								"title": "Loading CKEditor",
+								"description": "Loading the CKEditor script into your website or application.",
+								"meta_description": "Loading the CKEditor script into your website or application.",
+								"meta_keywords": "ckeditor, editor, script, install, installation, loading, load, insert, inserting, insertion, add, adding, initialize, initializing, initialization"
+							},
+							{
+								"name": "dev_framed",
+								"url": "dev/framed",
+								"title": "Classic Editing",
+								"description": "What classic editing is and how to enable it.",
+								"meta_description": "What classic editing is and how to enable it.",
+								"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, iframe, textarea"
+							},
+							{
+								"name": "dev_inline",
+								"url": "dev/inline",
+								"title": "Inline Editing",
+								"description": "What inline editing is and how to enable it.",
+								"meta_description": "What inline editing is and how to enable it.",
+								"meta_keywords": "ckeditor, editor, wysiwyg, inline, inplace, in-place"
+							}
+						]
 					}
 				]
 			},
@@ -126,22 +155,6 @@
 			{
 				"title": "Integration",
 				"items": [
-					{
-						"name": "dev_ckeditor_js_load",
-						"url": "dev/ckeditor_js_load",
-						"title": "Loading CKEditor",
-						"description": "Integrating CKEditor into your website or application."
-					},
-					{
-						"name": "dev_framed",
-						"url": "dev/framed",
-						"title": "Framed Editing"
-					},
-					{
-						"name": "dev_inline",
-						"url": "dev/inline",
-						"title": "Inline Editing"
-					},
 					{
 						"name": "dev_jquery",
 						"url": "dev/jquery",

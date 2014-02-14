@@ -158,7 +158,39 @@
 					{
 						"name": "dev_jquery",
 						"url": "dev/jquery",
-						"title": "jQuery Adapter"
+						"title": "jQuery Adapter",
+						"description": "How to integrate CKEditor with jQuery and file browsers or uploaders.",
+						"meta_description": "How to integrate CKEditor with jQuery and file browsers or uploaders.",
+						"meta_keywords": "ckeditor, editor, integrate, integration, jQuery, file, files, upload, uploading, uploader, manage, management, browse, browser, image, images"
+					},
+					{
+						"title": "File Browser and Upload",
+						"items": [
+							{
+								"name": "dev_file_browse_upload",
+								"url": "dev/configuration/file_browse_upload",
+								"title": "Introduction",
+								"description": "How to integrate CKEditor with a file browser and support file uploads.",
+								"meta_description": "How to integrate CKEditor with a file browser and support file uploads.",
+								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, uploading, manage, management, browse, browser, image, images"
+							},
+							{
+								"name": "dev_file_browser_api",
+								"url": "dev/configuration/file_browse_upload/file_browser_api",
+								"title": "File Browser API",
+								"description": "How to use CKEditor File Browser API.",
+								"meta_description": "How to use CKEditor File Browser API.",
+								"meta_keywords": "ckeditor, editor, integrate, integration, API, file, files, upload, uploader, manage, management, browse, browser, image, images"
+							},
+							{
+								"name": "dev_dialog_add_file_browser",
+								"url": "dev/configuration/file_browse_upload/dialog_add_file_browser",
+								"title": "Integrating with Dialogs",
+								"description": "How to integrate a file browser with CKEditor dialog windows.",
+								"meta_description": "How to integrate a file browser with CKEditor dialog windows.",
+								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, manage, management, browse, browser, image, images, dialog, dialogs, window, windows"
+							}
+						]
 					}
 				]
 			},
@@ -190,26 +222,6 @@
 						"name": "dev_spellcheck",
 						"url": "dev/configuration/spellcheck",
 						"title": "Spell Checker"
-					},
-					{
-						"title": "File Browser and Upload",
-						"items": [
-							{
-								"name": "dev_file_browse_upload",
-								"url": "dev/configuration/file_browse_upload",
-								"title": "Introduction"
-							},
-							{
-								"name": "dev_file_browser_api",
-								"url": "dev/configuration/file_browse_upload/file_browser_api",
-								"title": "File Browser API"
-							},
-							{
-								"name": "dev_dialog_add_file_browser",
-								"url": "dev/configuration/file_browse_upload/dialog_add_file_browser",
-								"title": "Custom Dialog Usage"
-							}
-						]
 					}
 				]
 			},

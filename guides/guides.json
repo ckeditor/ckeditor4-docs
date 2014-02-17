@@ -208,28 +208,42 @@
 					{
 						"name": "dev_configuration",
 						"url": "dev/configuration",
-						"title": "Setting Configurations",
-						"description": "Everything about CKEditor configuration."
+						"title": "Setting Configuration",
+						"description": "Everything about CKEditor configuration.",
+						"meta_description": "Everything about CKEditor configuration.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					},
 					{
 						"name": "dev_toolbar",
 						"url": "dev/configuration/toolbar",
-						"title": "Toolbar"
+						"title": "Toolbar",
+						"description": "How to configure CKEditor toolbar.",
+						"meta_description": "How to configure CKEditor toolbar.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, toolbar, button, buttons, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					},
 					{
 						"name": "dev_styles",
 						"url": "dev/configuration/styles",
-						"title": "Styles"
+						"title": "Styles Drop-down",
+						"description": "How to configure the Styles drop-down list.",
+						"meta_description": "How to configure the Styles drop-down list.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					},
 					{
 						"name": "dev_output_format",
 						"url": "dev/configuration/output_format",
-						"title": "Output Formatting"
+						"title": "Output Formatting",
+						"description": "How to configure CKEditor output formatting.",
+						"meta_description": "How to configure CKEditor output formatting.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, output, formatting, format, source, code, html, xhtml, data, writer, processor, indent, indentation, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					},
 					{
 						"name": "dev_spellcheck",
 						"url": "dev/configuration/spellcheck",
-						"title": "Spell Checker"
+						"title": "Spell Checker",
+						"description": "How to configure CKEditor spell checker.",
+						"meta_description": "How to configure CKEditor spell checker.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, spell, checker, spellchecker, scayt, spellchecking, check, checking, spellcheck, thesaurus, mistake, mistakes, spelling, typo, correction, correct, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					}
 				]
 			},
@@ -340,57 +354,89 @@
 						"name": "dev_howtos_basic_configuration",
 						"url": "dev/howtos/basic_configuration",
 						"title": "Basic Configuration",
-						"description": "Most frequently asked question and answers."
+						"description": "Most frequently asked questions and answers.",
+						"meta_description": "Most frequently asked questions and answers.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, configuration, configure, settings, setting, option"
 					},
 					{
 						"name": "dev_howtos_support",
 						"url": "dev/howtos/support",
-						"title": "Support"
+						"title": "Support",
+						"description": "Most frequently asked question and answers about CKEditor support.",
+						"meta_description": "Most frequently asked question and answers about CKEditor support.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, support, forum, forums, documentation, bug, bugs"
 					},
 					{
 						"name": "dev_howtos_interface",
 						"url": "dev/howtos/interface",
-						"title": "Interface"
+						"title": "Interface",
+						"description": "Most frequently asked question and answers about CKEditor interface.",
+						"meta_description": "Most frequently asked question and answers about CKEditor interface.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, interface, user, ui, toolbar, size, width, height, resize, resizing, button, buttons, keyboard, navigation"
 					},
 					{
 						"name": "dev_howtos_styles",
 						"url": "dev/howtos/styles",
-						"title": "Styles"
+						"title": "Styles",
+						"description": "Most frequently asked question and answers about CKEditor Styles drop-down list.",
+						"meta_description": "Most frequently asked question and answers about CKEditor Styles drop-down list.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, style, styles, css, parser, stylesset"
 					},
 					{
 						"name": "dev_howtos_file_upload",
 						"url": "dev/howtos/file_upload",
-						"title": "File Upload"
+						"title": "File Upload",
+						"description": "Most frequently asked question and answers about file upload in CKEditor.",
+						"meta_description": "Most frequently asked question and answers about file upload in CKEditor.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, file, files, upload, uploads, uploading, image, images, manage, management, browser, browse, clipboard, paste, pasting"
 					},
 					{
 						"name": "dev_howtos_output",
 						"url": "dev/howtos/output",
-						"title": "Output"
+						"title": "Output",
+						"description": "Most frequently asked question and answers about CKEditor output.",
+						"meta_description": "Most frequently asked question and answers about CKEditor output.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, html, xhtml, bbcode, output, dataprocessor, code, data, source, formatting"
 					},
 					{
 						"name": "dev_howtos_pasting",
 						"url": "dev/howtos/pasting",
-						"title": "Pasting"
+						"title": "Pasting",
+						"description": "Most frequently asked question and answers about pasting in CKEditor.",
+						"meta_description": "Most frequently asked question and answers about pasting in CKEditor.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, paste, pasting, word, plain, text"
 					},
 					{
 						"name": "dev_howtos_scayt",
 						"url": "dev/howtos/scayt",
-						"title": "Spell Checker and SCAYT"
+						"title": "Spell Checker and SCAYT",
+						"description": "Most frequently asked question and answers about the spell checker and SCAYT.",
+						"meta_description": "Most frequently asked question and answers about the spell checker and SCAYT.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, spell, checker, spellchecker, scayt, spellchecking, check, checking, spellcheck, thesaurus, mistake, mistakes, spelling, typo, correction, correct, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					},
 					{
 						"name": "dev_howtos_dialog_windows",
 						"url": "dev/howtos/dialog_windows",
-						"title": "Dialog Windows"
+						"title": "Dialog Windows",
+						"description": "Most frequently asked question and answers about dialog windows in CKEditor.",
+						"meta_description": "Most frequently asked question and answers about dialog windows in CKEditor.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, dialog, dialogs, window, popup, tab, tabs, default, resize, resizing, developer, tools"
 					},
 					{
 						"name": "dev_howtos_miscellaneous",
 						"url": "dev/howtos/miscellaneous",
-						"title": "Miscellaneous"
+						"title": "Miscellaneous",
+						"description": "Miscellaneous most frequently asked question and answers.",
+						"meta_description": "Miscellaneous most frequently asked question and answers.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, write, writing, data, content, compress, compression, compressing, source, code"
 					},
 					{
 						"name": "dev_howtos_bugs_and_features",
 						"url": "dev/howtos/bugs_and_features",
-						"title": "Bugs and New Features"
+						"title": "Bugs and New Features",
+						"description": "Most frequently asked question and answers about bug reporting.",
+						"meta_description": "Most frequently asked question and answers about bug reporting.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, bug, issue, problem, task, feature, new, report, tracker, reporting, tracking, ticket"
 					}
 				]
 			}
@@ -403,21 +449,28 @@
 				"name": "plugin_sdk_intro",
 				"url": "plugin_sdk/intro",
 				"title": "Introduction",
-				"description": "The basics of CKEditor plugins."
+				"description": "Creating custom CKEditor plugins.",
+				"meta_description": "Creating custom CKEditor plugins.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample"
 			},
 			{
-				"title": "Simple Plugin Sample",
+				"title": "Simple Plugin Tutorial",
 				"items": [
 					{
 						"name": "plugin_sdk_sample_1",
 						"url": "plugin_sdk/sample_1",
 						"title": "Simple Plugin (Part 1)",
-						"description": "Learn by creating a simple plugin."
+						"description": "Learn by creating a simple plugin, part 1.",
+						"meta_description": "Learn by creating a simple plugin, part 1.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample"
 					},
 					{
 						"name": "plugin_sdk_sample_2",
 						"url": "plugin_sdk/sample_2",
-						"title": "Simple Plugin (Part 2)"
+						"title": "Simple Plugin (Part 2)",
+						"description": "Learn by creating a simple plugin, part 2.",
+						"meta_description": "Learn by creating a simple plugin, part 2.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample"
 					}
 				]
 			},
@@ -425,7 +478,9 @@
 				"name": "plugin_sdk_integration_with_acf",
 				"url": "plugin_sdk/integration_with_acf",
 				"title": "Integration with ACF",
-				"description": "Integrate a plugin with Advanced Content Filter."
+				"description": "Integrate a plugin with Advanced Content Filter.",
+				"meta_description": "Integrate a plugin with Advanced Content Filter.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample, acf, content, filter, filtering"
 			}
 		],
 		"TODO": [
@@ -433,7 +488,9 @@
 				"name": "plugin_sdk_dialogs",
 				"url": "plugin_sdk/dialogs",
 				"title": "Dialog Windows",
-				"description": "Creating dialogs through plugins."
+				"description": "Creating dialogs through plugins.",
+				"meta_description": "Creating dialogs through plugins.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample, dialog, dialogs, window"
 			}
 		]
 	},
@@ -444,9 +501,9 @@
 				"name": "widget_sdk_intro",
 				"url": "widget_sdk/intro",
 				"title": "Introduction",
-				"description": "The basics of CKEditor widgets.",
-				"meta_description": "The basics of CKEditor widgets.",
-				"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, sdk"
+				"description": "Creating custom CKEditor widgets.",
+				"meta_description": "Creating custom CKEditor widgets.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, sdk, example"
 			},
 			{
 				"title": "Widget Tutorial",
@@ -456,7 +513,7 @@
 						"url": "widget_sdk/tutorial_1",
 						"title": "Widget Tutorial (Part 1)",
 						"description": "Learn by creating a simple widget.",
-						"meta_description": "CKEditor widget tutorial.",
+						"meta_description": "CKEditor widget tutorial, part 1.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, example, sdk"
 					},
 					{
@@ -464,7 +521,7 @@
 						"url": "widget_sdk/tutorial_2",
 						"title": "Widget Tutorial (Part 2)",
 						"description": "Learn by creating a simple widget.",
-						"meta_description": "CKEditor widget tutorial.",
+						"meta_description": "CKEditor widget tutorial, part 2.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins, tutorial, sample, example, sdk"
 					}
 				]
@@ -478,7 +535,9 @@
 				"name": "skin_sdk_intro",
 				"url": "skin_sdk/intro",
 				"title": "Introduction",
-				"description": "The basics on CKEditor skins."
+				"description": "Creating custom CKEditor skins.",
+				"meta_description": "Creating custom CKEditor skins.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development"
 			},
 			{
 				"title": "Advanced Concepts",
@@ -487,32 +546,49 @@
 						"name": "skin_sdk_icons",
 						"url": "skin_sdk/icons",
 						"title": "Icons",
-						"description": "In-depth details about concepts that make part of a skin."
+						"description": "In-depth details about concepts that constitute a skin.",
+						"meta_description": "In-depth details about concepts that constitute a skin.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, icon, icons, button, toolbar"
 					},
 					{
 						"name": "skin_sdk_reset",
 						"url": "skin_sdk/reset",
-						"title": "CSS Reset"
+						"title": "CSS Reset",
+						"description": "Information about resetting default CSS styles.",
+						"meta_description": "Information about resetting default CSS styles.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, css, reset, style, stylesheet"
 					},
 					{
 						"name": "skin_sdk_chameleon",
 						"url": "skin_sdk/chameleon",
-						"title": "\"Chameleon\" Feature"
-					},
+						"title": "\"Chameleon\" Feature",
+						"description": "Information about CKEditor \"chameleon\" feature.",
+						"meta_description": "Information about CKEditor \"chameleon\" feature.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, chameleon, color, colour, ui, interface"
+						},
 					{
 						"name": "skin_sdk_rtl",
 						"url": "skin_sdk/rtl",
-						"title": "Right-to-Left"
+						"title": "Right-to-Left",
+						"description": "Information about supporting Right-to-Left interfaces.",
+						"meta_description": "Information about supporting Right-to-Left interfaces.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, text, direction, rtl, right, bidi, interface, ui, arabic, hebrew, persian, uyghur"
 					},
 					{
 						"name": "skin_sdk_hc",
 						"url": "skin_sdk/hc",
-						"title": "High Contrast"
+						"title": "High Contrast",
+						"description": "Information about supporting High Contrast.",
+						"meta_description": "Information about supporting High Contrast.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, high, contrast, disablibity, sight, impairment, accessibility, accessible, interface"
 					},
 					{
 						"name": "skin_sdk_browser_hacks",
 						"url": "skin_sdk/browser_hacks",
-						"title": "Browser Hacks"
+						"title": "Browser Hacks",
+						"description": "Information about working around browser bugs.",
+						"meta_description": "Information about working around browser bugs.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, browser, ie, hack, hacking, workaround, css"
 					}
 				]
 			},
@@ -523,22 +599,33 @@
 						"name": "skin_sdk_setup",
 						"url": "skin_sdk/setup",
 						"title": "Setup",
-						"description": "The workflow of creating a custom skin."
+						"description": "The workflow of creating a custom skin.",
+						"meta_description": "The workflow of creating a custom skin.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, process, workflow, steps"
 					},
 					{
 						"name": "skin_sdk_customize",
 						"url": "skin_sdk/customize",
-						"title": "Customize"
+						"title": "Customize",
+						"description": "How to customize a CKEditor skin.",
+						"meta_description": "How to customize a CKEditor skin.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, customize, customization, customise, customisation"
 					},
 					{
 						"name": "skin_sdk_test",
 						"url": "skin_sdk/test",
-						"title": "Test and Shape It Up"
+						"title": "Test and Shape It Up",
+						"description": "How to test a custom CKEditor skin.",
+						"meta_description": "How to test a custom CKEditor skin.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, customize, customization, customise, customisation, test, testing, browser, rtl, accessibility"
 					},
 					{
 						"name": "skin_sdk_build",
 						"url": "skin_sdk/build",
-						"title": "Build and Release"
+						"title": "Build and Release",
+						"description": "How to build and release a custom CKEditor skin.",
+						"meta_description": "How to build and release a custom CKEditor skin.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, customize, customization, customise, customisation, build, release"
 					}
 				]
 			}

@@ -17,9 +17,17 @@
 						"name": "dev_basics",
 						"url": "dev/basics",
 						"title": "Basic CKEditor Concepts",
-						"description": "What CKEditor Is and What It Is Not.",
-						"meta_description": "What CKEditor Is and What It Is Not.",
+						"description": "What CKEditor is and what it is not.",
+						"meta_description": "What CKEditor is and what it is not.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, basics, basic, concepts, html, standards"
+					},
+					{
+						"name": "dev_best_practices",
+						"url": "dev/best_practices",
+						"title": "Best Practices",
+						"description": "Recommended best practices for CKEditor.",
+						"meta_description": "Recommended best practices for CKEditor.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, basics, basic, best, practice, practices, recommendation, recommendations, standards, solution, solutions, installation, configuration, integration"
 					},
 					{
 						"title": "Inserting CKEditor",

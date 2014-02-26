@@ -19,6 +19,21 @@ In order to fetch the most recent build execute the following command:
 
 By default CKEditor will be placed in the `bower_components/ckeditor` directory.
 
+### Adding CKEditor as a `bower.json` dependency
+
+You may incldue CKEditor to your dependency list inside your `bower.json`. Just make sure to create a reference to `ckeditor` inside the `dependency` property.
+
+	{
+		"name": "my-project",
+		"dependencies": {
+			"ckeditor": "<=4.3.3"
+		}
+	}
+
+After adding file execute the following comand:
+
+	bower update
+
 ### Fetching Particular Build Preset
 
 By default only the `standard-all` CKEditor installation preset can be fetched. However, there is a workaround to install a diffrent package using the `#<preset>/<version>` syntax.

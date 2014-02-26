@@ -58,4 +58,4 @@ In order to fetch the most recent CKEditor 4 build create a `composer.json` file
 
 Then execute the following command:
 
-	composer install
+	composer update

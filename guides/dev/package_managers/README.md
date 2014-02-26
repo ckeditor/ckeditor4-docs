@@ -7,7 +7,7 @@
 	Additional plugins included in the <code>standard-all</code> preset can be enabled in your configuration by using the <a href="http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-extraPlugins">config.extraPlugins</a> option.
 </p>
 
-## Fetching CKEditor with Bower
+## Bower
 
 This article assumes that you have **Bower** already installed and added to your `PATH`. If this is not the case, please follow the [installation guide](http://bower.io/#installing-bower).
 
@@ -42,9 +42,9 @@ For example, if you would like to download the `full` preset of CKEditor 4.3.3, 
 
 	bower install ckeditor#full/4.3.3
 
-## Fetching CKEditor with Composer
+## Composer
 
-This article assumes that you have **Composer** already up and running. If this is not the case, please follow [these instructions](https://getcomposer.org/download).
+This article assumes that you have **Composer** already up and running. If this is not the case, please follow [these instructions](hittps://getcomposer.org/download).
 
 ### Usage
 

@@ -2,6 +2,8 @@
 
 With 4.3.3 version we've introduced Bower and Composer support for our release builds.
 
+Currently there is only **standard-all** preset available, which has all our core plugins available but only few of them are enabled by default.
+
 ## Fetching CKEditor with Bower
 
 We assume that you have **Bower** alredy installed and added to your PATH, if not please follow this [installation guide](http://bower.io/#installing-bower).

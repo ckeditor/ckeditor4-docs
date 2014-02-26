@@ -26,7 +26,7 @@ You may incldue CKEditor to your dependency list inside your `bower.json`. Just 
 	{
 		"name": "my-project",
 		"dependencies": {
-			"ckeditor": "<=4.3.3"
+			"ckeditor": "4"
 		}
 	}
 

@@ -44,7 +44,7 @@ For example, if you would like to download the `full` preset of CKEditor 4.3.3, 
 
 ## Composer
 
-This article assumes that you have **Composer** already up and running. If this is not the case, please follow [these instructions](hittps://getcomposer.org/download).
+This article assumes that you have **Composer** already up and running. If this is not the case, please follow [these instructions](https://getcomposer.org/download).
 
 ### Usage
 

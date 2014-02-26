@@ -4,7 +4,7 @@
 
 <p class="tip">
 	Both package managers will install the <code>standard-all</code> CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the <code>ckeditor.js</code> file and enabled. <a href="http://ckeditor.com/presets">See here</a> for a comparison of packages.<br>
-	Additional plugins included in the <code>standard-all</code> preset can be enabled in your configuration by using the <a href="http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-extraPlugins">config.extraPlugins</a> option.
+	Additional plugins included in the <code>standard-all</code> preset can be enabled in your configuration by using the <a href="#!/api/CKEDITOR.config-cfg-extraPlugins">config.extraPlugins</a> option.
 </p>
 
 ## Bower
@@ -19,9 +19,9 @@ In order to fetch the most recent build execute the following command:
 
 By default CKEditor will be placed in the `bower_components/ckeditor` directory.
 
-### Adding CKEditor as a `bower.json` dependency
+### Adding CKEditor as dependency using a `bower.json` file
 
-You may incldue CKEditor to your dependency list inside your `bower.json`. Just make sure to create a reference to `ckeditor` inside the `dependency` property.
+You may add CKEditor to dependency list inside your `bower.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
 
 	{
 		"name": "my-project",
@@ -30,7 +30,7 @@ You may incldue CKEditor to your dependency list inside your `bower.json`. Just 
 		}
 	}
 
-After adding file execute the following comand:
+Then execute the following command:
 
 	bower update
 

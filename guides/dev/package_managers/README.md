@@ -1,9 +1,10 @@
-# Package Managers
+# Installing CKEditor with Package Managers
 
 **CKEditor 4.3.3** introduced support for two popular package managers, [Bower](http://bower.io/) and [Composer](https://getcomposer.org/). You can now use them to install CKEditor releases.
 
 <p class="tip">
-	Both package managers will install the <code>standard-all</code> CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset enabled. <a href="http://ckeditor.com/presets">See here</a> for a comparison of packages. Additional plugins included in the <code>standard-all</code> preset can be enabled in your configuration.
+	Both package managers will install the <code>standard-all</code> CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset enabled. <a href="http://ckeditor.com/presets">See here</a> for a comparison of packages.<br>
+	Additional plugins included in the <code>standard-all</code> preset can be enabled in your configuration by using the <a href="http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-extraPlugins">config.extraPlugins</a> option.
 </p>
 
 ## Fetching CKEditor with Bower

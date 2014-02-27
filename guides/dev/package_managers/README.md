@@ -59,3 +59,38 @@ In order to fetch the most recent CKEditor 4 build create a `composer.json` file
 Then execute the following command:
 
 	composer update
+
+### Fetching Particular Build Preset
+
+There is a way for Composer to fetch CKEditor built with a desired preset. For each preset you can subscribe following branches:
+
+1. latest release
+2. stable release
+3. latest minor release for given major version
+
+Following table will explain relation between build and a json `require` value:
+
+preset: | standard-all | basic | standard | full
+ --- | --- | --- | --- | --- 
+latest | dev-latest | dev-basic/latest | dev-standard/latest | dev-full/latest
+stable | dev-stable | dev-basic/stable | dev-standard/stable | dev-full/stable
+4.3.x | dev-4.3.x | dev-basic/4.3.x | dev-standard/4.3.x | dev-full/4.3.x
+
+Lets consider that we want to include most up-to-date `4.3.x` release, in such case our `composer.json` file should look like:
+
+	{
+		"require": {
+			"ckeditor/ckeditor": "dev-full/4.3.x"
+		}
+	}
+
+Note: Only branches since `4.3.x` and higher are supportet that way.
+
+## Customize configuration
+
+It's not a good practice to edit `config.js` file in directory maintained by any package manager, because it will cause conflicts during update. You should consider using two strategies:
+
+* [inline configuration](http://docs.ckeditor.com/#!/guide/dev_configuration-section-defining-configuration-in-page)
+* [custom configuration file](http://docs.ckeditor.com/#!/guide/dev_configuration-section-using-a-custom-configuration-file)
+
+You'll find both options explained in [Setting CKEditor Configuration](http://docs.ckeditor.com/#!/guide/dev_configuration) guide.

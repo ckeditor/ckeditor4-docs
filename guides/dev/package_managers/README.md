@@ -2,10 +2,24 @@
 
 **CKEditor 4.3.3** introduced support for two popular package managers, [Bower](http://bower.io/) and [Composer](https://getcomposer.org/). You can now use them to install CKEditor releases.
 
-<p class="tip">
-	Both package managers will install the <code>standard-all</code> CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the <code>ckeditor.js</code> file and enabled. <a href="http://ckeditor.com/presets">See here</a> for a comparison of packages.<br><br>
-	Additional plugins included in the <code>standard-all</code> preset can be enabled in your configuration by using the <a href="#!/api/CKEDITOR.config-cfg-extraPlugins">config.extraPlugins</a> option.
-</p>
+Both package managers will install the <code>standard-all</code> CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the <code>ckeditor.js</code> file and enabled. <a href="http://ckeditor.com/presets">See here</a> for a comparison of packages.
+
+Additional plugins included in the <code>standard-all</code> preset can be enabled in your configuration by using the <a href="#!/api/CKEDITOR.config-cfg-extraPlugins">config.extraPlugins</a> option.
+
+For example, if you wanted to add the **Text Color** and **Background Color** buttons to your toolbar (the Standard preset does not include them by default), you should add the following to your custom editor configuration:
+
+	config.extraPlugins = 'colorbutton';
+
+## Custom CKEditor Configuration
+
+If you want to use package managers to keep CKEditor up to date, your custom editor configuration should not be done in any of the core CKEditor files like `config.js` (otherwise you risk overwriting them during the update process).
+
+It is thus recommended to use of the following strategies:
+
+* [Defining configuration in-page](#!/guide/dev_configuration-section-defining-configuration-in-page).
+* [Using a custom configuration file](#!/guide/dev_configuration-section-using-a-custom-configuration-file).
+
+Both options are explained in more detail in the [Setting CKEditor Configuration](http://docs.ckeditor.com/#!/guide/dev_configuration) article.
 
 ## Bower
 
@@ -19,9 +33,9 @@ In order to fetch the most recent build execute the following command:
 
 By default CKEditor will be placed in the `bower_components/ckeditor` directory.
 
-### Adding CKEditor as dependency using a `bower.json` file
+### Adding CKEditor as Dependency Using the `bower.json` File
 
-You may add CKEditor to dependency list inside your `bower.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
+You may add CKEditor to the dependencies list inside your `bower.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
 
 	{
 		"name": "my-project",
@@ -48,7 +62,7 @@ This article assumes that you have **Composer** already up and running. If this 
 
 ### Usage
 
-In order to fetch the most recent CKEditor 4 build create a `composer.json` file in the directory where you want to install CKEditor. This file should include the  following contents:
+In order to fetch the most recent CKEditor 4 build, create a `composer.json` file in the directory where you want to install CKEditor. This file should include the  following contents:
 
 	{
 		"require": {
@@ -62,21 +76,21 @@ Then execute the following command:
 
 ### Fetching Particular Build Preset
 
-There is a way for Composer to fetch CKEditor built with a desired preset. For each preset you can subscribe following branches:
+There is a way for Composer to fetch CKEditor built with a desired preset. For each preset you can subscribe to the following branches:
 
-1. latest release
-2. stable release
-3. latest minor release for given major version
+1. Latest release
+2. Stable release
+3. Latest minor release for a given major version
 
-Following table will explain relation between build and a json `require` value:
+The following table will explain the relation between a build and the JSON `require` value:
 
-preset: | standard-all | basic | standard | full
+preset | standard-all | basic | standard | full
  --- | --- | --- | --- | --- 
-latest | dev-latest | dev-basic/latest | dev-standard/latest | dev-full/latest
-stable | dev-stable | dev-basic/stable | dev-standard/stable | dev-full/stable
-4.3.x | dev-4.3.x | dev-basic/4.3.x | dev-standard/4.3.x | dev-full/4.3.x
+latest | `dev-latest` | `dev-basic/latest` | `dev-standard/latest` | `dev-full/latest`
+stable | `dev-stable` | `dev-basic/stable` | `dev-standard/stable` | `dev-full/stable`
+4.3.x | `dev-4.3.x` | `dev-basic/4.3.x` | `dev-standard/4.3.x` | `dev-full/4.3.x`
 
-Lets consider that we want to include most up-to-date `4.3.x` release, in such case our `composer.json` file should look like:
+For example, let us consider that we want to include the `full` preset of the most up-to-date `4.3.x` release. In this case the `composer.json` file should contain the following code:
 
 	{
 		"require": {
@@ -84,13 +98,6 @@ Lets consider that we want to include most up-to-date `4.3.x` release, in such c
 		}
 	}
 
-Note: Only branches since `4.3.x` and higher are supportet that way.
-
-## Customize configuration
-
-It's not a good practice to edit `config.js` file in directory maintained by any package manager, because it will cause conflicts during update. You should consider using two strategies:
-
-* [inline configuration](http://docs.ckeditor.com/#!/guide/dev_configuration-section-defining-configuration-in-page)
-* [custom configuration file](http://docs.ckeditor.com/#!/guide/dev_configuration-section-using-a-custom-configuration-file)
-
-You'll find both options explained in [Setting CKEditor Configuration](http://docs.ckeditor.com/#!/guide/dev_configuration) guide.
+<p class="tip">
+	Only branches starting from CKEditor version <strong>4.3.x</strong> and higher are supported in this way.
+</p>

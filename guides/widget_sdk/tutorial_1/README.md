@@ -160,7 +160,9 @@ After you reload the sample page and click the widget toolbar button again, the 
 
 Currently the widget does not look very impressive and does not stand out in the editor content. Let us add some styling to the structure it generates to make it more obvious that it constitutes a special unit of content.
 
-Styling of editor content is done by using the `contents.css` file. Add the styles below to your default `contents.css` file:
+Each CKEditor plugin, included widgets, can add its own styles for editor content. Depending on your CKEditor usage scenario (classic vs inline editor) the styles will need to be added to the [contentsCss](#!/api/CKEDITOR.config-cfg-contentsCss) setting or added to the page styles.
+
+To simplify the tutorial, let us assume you are using the [classic editor](#!/guide/dev_framed). The styling of classic editor content is done by using the `contents.css` file. Add the styles below to your default `contents.css` file:
 
 	.simplebox {
 		padding: 8px;
@@ -184,7 +186,7 @@ Styling of editor content is done by using the `contents.css` file. Add the styl
 		padding: 0 8px;
 	}
 
-Please note that if you are working with the inline editor, you need to add these styles to your page that displays the editor.
+Please note that if you are working with the [inline editor](#!/guide/dev_inline), you need to add these styles to your page that displays the editor. And if you want to share your plugin with others, refer to the [Plugin CSS Styles](#!/guide/plugin_sdk_styles) article that explains the recommended way to control plugin styling.
 
 After you reload the page and insert the widget again, you will see that thanks to the styling we added it now stands out from the rest of the editor content.
 

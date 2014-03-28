@@ -205,7 +205,9 @@ The dialog window definition is now complete, so let us go back to the `plugin.j
 
 ### Widget Styling
 
-The new widget properties (width and alignment) will be using the `width` CSS style property and custom alignment classes. We need to add these classes to our default `contents.css` file.
+As [explained in the first part of the tutorial](#!/guide/widget_sdk_tutorial_1-section-widget-styling), widget styling [needs to be tackled](#!/guide/plugin_sdk_styles) according to your usage scenario (classic vs inline editor).
+
+To simplify the tutorial, let us assume you are using the [classic editor](#!/guide/dev_framed). The new widget properties (width and alignment) will be using the `width` CSS style property and custom alignment classes. You need to add these classes to your default `contents.css` file.
 
 	.simplebox.align-right {
 		float: right;

@@ -11,7 +11,7 @@
 						"title": "Quick Start Guide",
 						"description": "How to download, install, and use CKEditor.",
 						"meta_description": "How to download, install, and use CKEditor.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, download, downloading, install, installation, sample, example"
+						"meta_keywords": "ckeditor, editor, wysiwyg, online, download, downloading, install, installation, sample, example"
 					},
 					{
 						"name": "dev_basics",
@@ -19,7 +19,7 @@
 						"title": "Basic CKEditor Concepts",
 						"description": "What CKEditor is and what it is not.",
 						"meta_description": "What CKEditor is and what it is not.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, basics, basic, concepts, html, standards"
+						"meta_keywords": "ckeditor, editor, wysiwyg, online, basics, basic, concepts, html, standards"
 					},
 					{
 						"name": "dev_best_practices",
@@ -497,6 +497,14 @@
 				"description": "Integrate a plugin with Advanced Content Filter.",
 				"meta_description": "Integrate a plugin with Advanced Content Filter.",
 				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample, acf, content, filter, filtering"
+			},
+			{
+				"name": "plugin_sdk_styles",
+				"url": "plugin_sdk/styles",
+				"title": "Plugin CSS Styles",
+				"description": "How to add plugin styles and integrate them with CKEditor.",
+				"meta_description": "How to add plugin styles and integrate them with CKEditor.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, style, styles, CSS, stylesheet, stylesheets"
 			}
 		],
 		"TODO": [

@@ -34,4 +34,4 @@ This will cause CKEditor interface to be displayed in German to all users, overr
 
 ## UI Languages Demo
 
-See also the [working UI Languages sample](samples/uilanguages.html) that showcases all available CKEditor user interface localizations and includes a simple script that lets the user choose a different language version.
+See also the [working UI Languages sample](../samples/uilanguages.html) that showcases all available CKEditor user interface localizations and includes a simple script that lets the user choose a different language version.

@@ -12,7 +12,7 @@ For example, to change the CKEditor UI to the joyful green color that would matc
 
 	config.uiColor = #66AB16;
 
-This will cause the editor UI to assume the provided color, as visible below. See also the [working UI Color sample](samples/uicolor.html) along with its source code, ready to copy and implement with your own CKEditor instance!
+This will cause the editor UI to assume the provided color, as visible below. See also the [working UI Color sample](../samples/uicolor.html) along with its source code, ready to copy and implement with your own CKEditor instance!
 
 {@img uicolor_01.png}
 
@@ -32,6 +32,6 @@ When you are satisfied with your choice, you can copy the working UI color confi
 
 {@img uicolor_03.png}
 
-See also the [working UI Color Picker sample](samples/uicolorpicker.html) along with its source code, ready to copy and implement with your own CKEditor instance!
+See also the [working UI Color Picker sample](../samples/uicolorpicker.html) along with its source code, ready to copy and implement with your own CKEditor instance!
 
 Although this feature is mainly useful for developers who are working on their CKEditor customizations, if you leave it enabled in your production environment, your end-users will be able to adjust the editor interface color to their liking. This change will only last until the end of their visit, though, and on reloading the page they will be greeted with default editor colors again.

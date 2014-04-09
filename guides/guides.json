@@ -286,9 +286,17 @@
 						"name": "dev_uicolor",
 						"url": "dev/features/uicolor",
 						"title": "UI Color",
-						"description": "Adjusting CKEditor UI Color.",
-						"meta_description": "Adjusting CKEditor UI Color.",
+						"description": "Overview of CKEditor features.",
+						"meta_description": "Overview of CKEditor features.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, color, colour, ui, interface, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_uilanguage",
+						"url": "dev/features/uilanguage",
+						"title": "UI Language",
+						"description": "Adjusting CKEditor UI Language.",
+						"meta_description": "Adjusting CKEditor UI Language.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, language, localization, localisation, translation, internationalization, colour, ui, interface, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

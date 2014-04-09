@@ -296,7 +296,15 @@
 						"title": "UI Language",
 						"description": "Adjusting CKEditor UI Language.",
 						"meta_description": "Adjusting CKEditor UI Language.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, language, localization, localisation, translation, internationalization, colour, ui, interface, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+						"meta_keywords": "ckeditor, editor, wysiwyg, language, localization, localisation, translation, internationalization, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_readonly",
+						"url": "dev/features/readonly",
+						"title": "Read-Only Mode",
+						"description": "Using CKEditor Read-Only Mode.",
+						"meta_description": "Using CKEditor Read-Only Mode.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, readonly, read-only, uneditable, noneditable, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

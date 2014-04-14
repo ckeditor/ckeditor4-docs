@@ -22,5 +22,7 @@
 	"--": [
 		"repos/ckeditor-plugin-scayt",
 		"repos/ckeditor-plugin-wsc"
-	]
+	],
+
+	"--exclude": "../ckeditor-dev/plugins/codesnippet/lib"
 }

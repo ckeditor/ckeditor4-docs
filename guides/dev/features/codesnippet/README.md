@@ -6,7 +6,7 @@ Its original implementation uses the [highlight.js](http://highlightjs.org) libr
 
 ## Adding syntax highlighting in inline / divarea mode? (styling)
 
-While using editor in [inline](#!/guide/dev_inline) or divarea mode - styles are not preserved. In order to fully utilize highlighting feature, we need to include stylesheet manually.
+While using editor in [inline](#!/guide/dev_inline) or divarea mode - styles are not automatically loaded. In order to fully utilize highlighting feature, we need to include stylesheet manually.
 
 You can do that simply by linking a `highlight.js` stylesheet in page's `head` section.
 
@@ -15,7 +15,7 @@ You can do that simply by linking a `highlight.js` stylesheet in page's `head` s
 		<link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
 	</head>
 
-**Note:** if you want to use diffrent skin insert other CSS file than the default one. You can preview themes in the codesnippet plugin sample.
+**Note:** if you want to use different skin insert other CSS file than the default one. You can preview themes in the codesnippet plugin sample.
 
 ## Changing highlighter theme
 
@@ -23,7 +23,7 @@ To use custom theme change the [`codeSnippet_theme`](#!/api/CKEDITOR.config-cfg-
 
 ## How do I apply highlighting to my page?
 
-First of all you will need to load the `highlight.js` script and styles to your page. You can either reuse a copy of `highlight.js` placed in `ckeditor/plugins/codesnippet/lib/highlight` direcotry or download your own copy from [highlight.js download page](http://highlightjs.org/download).
+First of all you will need to load the `highlight.js` script and styles to your page. You can either reuse a copy of `highlight.js` placed in `ckeditor/plugins/codesnippet/lib/highlight` directory or download your own copy from [highlight.js download page](http://highlightjs.org/download).
 
 Attach it to the `head` section of your page, e.g.
 
@@ -41,7 +41,7 @@ Initiate `highlight.js` on all `pre code` elements with following code:
 
 And that's about it, when you run your page - all the code snippets created with CKEditor should be highlighted.
 
-**Note:** if you want to use diffrent skin - include other CSS file than `default.css`. You can preview themes in the codesnippet plugin sample.
+**Note:** if you want to use different skin - include other CSS file than `default.css`. You can preview themes in the codesnippet plugin sample.
 
 ## Changing languages list
 

@@ -49,7 +49,7 @@ First of all we need to download Code Snippet GeSHi plugin for CKEditor and the 
 	* `ckeditor.js/`
 
 <p class="tip">
-	It's a good practice to place external libraries outside of a CKEditor directory, it makes futher updates easier.
+	It's a good practice to place external libraries outside of a CKEditor directory, it makes future updates easier.
 </p>
 
 #### Editor configuration
@@ -67,4 +67,4 @@ Now we can focus on CKEditor configuration. Go to JavaScript code where CKEditor
 
 In this tutorial we used lib directory as a just example of organizing the directory structure outside of CKEditor. Most likely you'll want to adjust it to match your needs, but remember to update `codeSnippetGeshi_url` config property.
 
-That's all, you can now open your page with CKEditor and add some code to it. As long as **codesnippetgeshi** plugin will be enabled, it will send highglight requests to GeSHi adapter file pointed by `codeSnippetGeshi_url` config property.
+That's all, you can now open your page with CKEditor and add some code to it. As long as **codesnippetgeshi** plugin will be enabled, it will send highlight requests to GeSHi adapter file pointed by `codeSnippetGeshi_url` config property.

@@ -68,6 +68,6 @@ You can find more information about setting configuration in the [Setting config
 
 ### Summary
 
-In this tutorial we used a `lib/` directory as an example of organizing the directory structure outside of CKEditor. Most likely you'll want to adjust it to match your needs, but remember to update [`config.codeSnippetGeshi_url`](#!/api/CKEDITOR.config-cfg-codeSnippetGeshi_url) config otion.
+In this tutorial we used a `lib/` directory as an example of organizing the directory structure outside of CKEditor. Most likely you'll want to adjust it to match your needs, but remember to update [`config.codeSnippetGeshi_url`](#!/api/CKEDITOR.config-cfg-codeSnippetGeshi_url) config option.
 
 You can now open your page with CKEditor and add some code to it. As long as [Code Snippet GeSHi](#!/guide/dev_codesnippetgeshi) plugin will be enabled, it will send AJAX requests to GeSHi adapter file pointed by the [`config.codeSnippetGeshi_url`](#!/api/CKEDITOR.config-cfg-codeSnippetGeshi_url) config option.

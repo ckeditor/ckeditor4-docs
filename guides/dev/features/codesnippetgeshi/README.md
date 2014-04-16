@@ -22,8 +22,8 @@ First of all you need to install Code Snippet GeSHi plugin for CKEditor and the 
 
 		<?php
 
-		if (function_exists('stream_resolve_include_path') && stream_resolve_include_path('geshi/geshi.php') === FALSE) {
-			die('<pre class="html">Please install the geshi library. Refer to plugins/codesnippetgeshi/README.md for more information.</pre>');
+		if ( function_exists( 'stream_resolve_include_path' ) && stream_resolve_include_path( 'geshi/geshi.php' ) === FALSE ) {
+			die( '<pre class="html">Please install the geshi library. Refer to plugins/codesnippetgeshi/README.md for more information.</pre>' );
 		}
 
 		include_once 'geshi/geshi.php';

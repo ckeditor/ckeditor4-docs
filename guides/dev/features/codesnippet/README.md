@@ -41,13 +41,13 @@ All the code snippets created with CKEditor should be highlighted.
 
 ## Changing highlighter theme
 
-When using the [classic editor](#!/guide/dev_framed) use the [`config.codeSnippet_theme`](#!/api/CKEDITOR.config-cfg-codeSnippet_theme) option. See Code Snippet plugin sample shipped with CKEditor package or [highlight.js's demo page](http://highlightjs.org/static/test.html) for a list of available values.
+When using the [classic editor](#!/guide/dev_framed) use the [`config.codeSnippet_theme`](#!/api/CKEDITOR.config-cfg-codeSnippet_theme) option. For a list of available values see Code Snippet plugin sample shipped with CKEditor package or [highlight.js's demo page](http://highlightjs.org/static/test.html).
 
-When using [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor and on the final page you can switch between themes by loading different theme's stylesheets. See the [Enabling syntax highlighting](#!/guide/dev_codesnippetgeshi-section-enabling-syntax-highlighting) section.
+When using [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor and on the final page you can switch between themes by loading different theme's stylesheets. See the [Enabling syntax highlighting](#!/guide/dev_codesnippet-section-enabling-syntax-highlighting) section.
 
 ## Changing languages list
 
-You can customize displayed languages list by setting the [`config.codeSnippet_languages`](#!/api/CKEDITOR.config-cfg-codeSnippet_languages) option.
+You can customize available languages list by setting the [`config.codeSnippet_languages`](#!/api/CKEDITOR.config-cfg-codeSnippet_languages) option.
 
 Following example will reduce languages list down to JavaScript and PHP.
 

@@ -71,11 +71,32 @@ The `name` and `element` values are required, while other values are optional.
 Style Types
 -----------
 
-There are three kinds of style types, each one related to the element used in the style rule:
+There are three standard kinds of style types, each one related to the element used in the style rule. Additionally, editor features may defined custom types.
 
-- **Block-level styles** – applied to the text blocks (paragraphs) as a whole, not limited to the text selections. These apply to the following elements: `address`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, and `pre`.
-- **Object styles** – applied to special selectable objects (not textual), whenever such selection is supported by the browser. These apply to the following elements: `a`, `embed`, `hr`, `img`, `li`, `object`, `ol`, `table`, `td`, `tr` and `ul`.
-- **Inline styles** – applied to text selections for style rules using elements not defined in other style types.
+* **Block-level styles** – applied to the text blocks (paragraphs) as a whole, not limited to the text selections. These apply to the following elements: `address`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, and `pre`.
+* **Object styles** – applied to special selectable objects (not textual), whenever such selection is supported by the browser. These apply to the following elements: `a`, `embed`, `hr`, `img`, `li`, `object`, `ol`, `table`, `td`, `tr` and `ul`.
+* **Inline styles** – applied to text selections for style rules using elements not defined in other style types.
+* **Custom styles** – plugins may define special style handlers which can be applied in special situations. One of such custom handlers is defined for widgets and described in the [Widget Styles](#!/guide/dev_styles-section-widget-styles) section.
+
+Widget Styles
+-------------
+
+[Widgets](#!/guide/dev_widgets) are special rich content units and therefore standard styles (like block or object ones) cannot be applied to them. Only styles of a special type (called simply `'widget'`) work with widgets.
+
+To define a widget style you need to specify two additional properties in the style definition:
+
+* `type` &ndash; must be set to `'widget'` &ndash; it informs the style system that this is a widget style,
+* `widget` &ndash; must be set to name of a widget to which this style will be applicable; names of widgets can be verified by browsing [`editorInstance.widgets.registered`](#!/api/CKEDITOR.plugins.widget.repository-property-registered) object in your browser's developer tools.
+
+Since widgets are a lot more complex structures than normal content only classes defined in the style definition will be applied to them. Other attributes and inline styles will be ignored. Most often classes will be applied to widget's main element, but this behavior may be customized by the widget itself.
+
+Example styles:
+
+	// Enhanced Image (http://ckeditor.com/addon/image2) style.
+	{ type: 'widget', widget: 'image', attributes: { 'class': 'bigBanner' } }
+
+	// Code snippet (http://ckeditor.com/addon/codesnippet) style.
+	{ type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
 
 Stylesheet Parser Plugin
 ------------------------

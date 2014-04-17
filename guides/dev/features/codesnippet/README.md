@@ -1,29 +1,33 @@
 # Code Snippets in CKEditor
 
-In CKEditor 4.4 we introduced [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin, which essentially allows you to insert code fragments and see a live preview with highlighted syntax.
+[CKEditor 4.4](http://ckeditor.com/blog/CKEditor-4.4-Released) introduced the [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin that allows you to insert rich code fragments and see a live preview with highlighted syntax. This is an optional plugin that you need to [add to your build](#!/guide/dev_plugins) in order to use it.
 
-Its original implementation uses the [highlight.js](http://highlightjs.org) library, but the plugin exposes convenient [interface](#!/api/CKEDITOR.plugins.codesnippet.highlighter) for hooking any other library, even a server-side one.
+Its original implementation uses the [highlight.js](http://highlightjs.org) library, but the plugin exposes a convenient [interface](#!/api/CKEDITOR.plugins.codesnippet.highlighter) for hooking any other library, even a server-side one.
 
-## Enabling syntax highlighting
+<img src="guides/dev_codesnippet/codesnippet_01.png" width="773" height="301" alt="CKEditor Code Snippet plugin">
 
-When you are using the [classic editor](#!/guide/dev_framed) you do not need to perform any additional steps other than installing the [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin to enable syntax highlighting inside editor.
+## Enabling Syntax Highlighting
 
-### [Inline](#!/guide/dev_inline) and [div-based](http://ckeditor.com/addon/divarea) editors
+If you are using the [classic editor](#!/guide/dev_framed), you do not need to perform any additional steps other than [adding](#!/guide/dev_plugins) the optional [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin to your build to enable syntax highlighting inside CKEditor.
 
-When using [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor highlighter stylesheet is not automatically loaded by the editor. You can do that simply by linking a stylesheet for chosen highlight.js theme in page's `<head>` section. The following code will load the default theme:
+### Inline and div-based Editors
+
+If you use the [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor, you will need to perform an additional step after installing the plugin, since the highlighter stylesheet will not be loaded automatically by the editor. You will thus need to link the stylesheet for the chosen `highlight.js` theme in the `<head>` section of your page. The following code will load the default theme:
 
 	<head>
 		...
 		<link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
 	</head>
 
-**Note:** You can preview themes in the codesnippet plugin sample shipped with CKEditor package. You can also browse them on [highlight.js's demo page](http://highlightjs.org/static/test.html).
+<p class="tip">
+    You can preview themes in the Code Snippet sample that is added to the <code>samples</code> folder of each CKEditor build that includes the plugin. You can also browse them on the <a href="http://highlightjs.org/static/test.html">highlight.js demo page</a>.
+</p>
 
-### Final page
+### Target Page
 
-First of all you will need to load the `highlight.js` script and theme's stylesheet to your page. You can either reuse a copy of `highlight.js` placed in `ckeditor/plugins/codesnippet/lib/highlight` directory or download your own copy from [highlight.js download page](http://highlightjs.org/download).
+To see the highlighter styles on the target page where CKEditor content is displayed, you will need to load the `highlight.js` script and theme's stylesheet on this page. You can either reuse a copy of `highlight.js` placed in the `ckeditor/plugins/codesnippet/lib/highlight` directory or download your own copy from the [highlight.js download page](http://highlightjs.org/download).
 
-Attach it to the `<head>` section of your page. The following code will load the highlight.js library and stylesheet for the default theme:
+Attach it to the `<head>` section of your page. The following code will load the `highlight.js` library and the stylesheet for the default theme:
 
 	<head>
 		...
@@ -31,43 +35,50 @@ Attach it to the `<head>` section of your page. The following code will load the
 		<script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
 	</head>
 
-Initiate highlight.js on all `pre code` elements with the following code:
+Inititalize `highlight.js` on all `<pre><code> .. </code></pre>` elements with the following code:
 
 	<script>hljs.initHighlightingOnLoad();</script>
 
-<p class="tip">You might also want to init highlighter only on some elements &ndash; in this case you will need to use <code>hljs.highlightBlock()</code> method on each <code>&lt;block&gt;</code> element. See Custom Initialization section in [highlight.js usage](http://highlightjs.org/usage) page.</p>
+<p class="tip">
+    You might also want to initialize the highlighter only on selected elements. In this case you will need to use the <code>hljs.highlightBlock()</code> method on each DOM element containing the code to highlight. See the "Custom Initialization" section on the <a href="http://highlightjs.org/usage">highlight.js Usage</a> page for more information.</p>
 
-All the code snippets created with CKEditor should be highlighted.
+After performing the steps described above, all the code snippets created with CKEditor will be highlighted.
 
-## Changing highlighter theme
+## Changing Highlighter Theme
 
-When using the [classic editor](#!/guide/dev_framed) use the [`config.codeSnippet_theme`](#!/api/CKEDITOR.config-cfg-codeSnippet_theme) option. For a list of available values see Code Snippet plugin sample shipped with CKEditor package or [highlight.js's demo page](http://highlightjs.org/static/test.html).
+In [classic editor](#!/guide/dev_framed) use the [config.codeSnippet_theme](#!/api/CKEDITOR.config-cfg-codeSnippet_theme) option. For example:
 
-When using [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor and on the final page you can switch between themes by loading different theme's stylesheets. See the [Enabling syntax highlighting](#!/guide/dev_codesnippet-section-enabling-syntax-highlighting) section.
+    config.codeSnippet_theme = 'school_book';
 
-## Changing languages list
+For a complete list of available themes see the Code Snippet sample that is added to the <code>samples</code> folder of each CKEditor build that includes the plugin or the [highlight.js's demo page](http://highlightjs.org/static/test.html).
 
-You can customize available languages list by setting the [`config.codeSnippet_languages`](#!/api/CKEDITOR.config-cfg-codeSnippet_languages) option.
+<img src="guides/dev_codesnippet/codesnippet_05.png" width="771" height="288" alt="Highlighter theme changed to school_book">
 
-Following example will reduce languages list down to JavaScript and PHP.
+In [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor and on the target page that displays content created with CKEditor you can switch between themes by loading the different theme's stylesheets. See the [Enabling Syntax Highlighting](#!/guide/dev_codesnippet-section-enabling-syntax-highlighting) section for more information.
+
+## Changing Supported Languages
+
+You can customize the list of languages with syntax highlighting support by setting the [`config.codeSnippet_languages`](#!/api/CKEDITOR.config-cfg-codeSnippet_languages) option.
+
+The following example will reduce the languages list to JavaScript and PHP only.
 
 	config.codeSnippet_languages = {
 		javascript: 'JavaScript',
 		php: 'PHP'
 	};
 
-{@img limitedLanguages.png Languages list is reduced down to two languages}
+<img src="guides/dev_codesnippet/codesnippet_06.png" width="664" height="114" alt="Reduced supported languages list">
 
-## Hooking custom syntax highlighter
+## Hooking a Custom Syntax Highlighter
 
-For more informations on how to implement custom highlighter check the [Code Snippet Highlighter API docs](#!/api/CKEDITOR.plugins.codesnippet.highlighter).
+For more information on how to implement a custom highlighter check the [Code Snippet Highlighter API](#!/api/CKEDITOR.plugins.codesnippet.highlighter) documentation.
 
-## Server-side highlighter
+## Server-side Highlighter
 
-We designed Code Snippet plugin interface in the way that it can be easily extended, even with asynchronous calls. As a sample implementation we created [GeSHi](http://qbnz.com/highlighter/) integration, in a [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin.
+The Code Snippet plugin interface was designed with extensibility in mind. As a sample implementation the [GeSHi](http://qbnz.com/highlighter/) highlighter integration was created and is available as a separate [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin.
 
-Installation instructions can be found in [Code Snippet GeSHi Guide](#!/guide/dev_codesnippetgeshi).
+Full installation instructions can be found in the [Code Snippet GeSHi guide](#!/guide/dev_codesnippetgeshi).
 
-## Internet Explorer 8 support
+## Internet Explorer 8 Support
 
-Because of **Internet Explorer 8** support was dropped in [highlight.js](http://highlightjs.org) `7.3` (see [github ticket](https://github.com/isagalaev/highlight.js/issues/280)) it will not provide any higlighting with default implementation. To solve this problem use custom highlighter.
+Since **Internet Explorer 8** support was dropped in [highlight.js](http://highlightjs.org) 7.3 (see the [GitHub ticket](https://github.com/isagalaev/highlight.js/issues/280)), the default implementation of the Code Snippet plugin will not provide any higlighting in this browser version. To solve this problem use a custom highlighter.

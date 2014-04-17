@@ -1,12 +1,15 @@
 # Code Snippet GeSHi Guide
 
-The [Code Snippet GeSHi](#!/guide/dev_codesnippetgeshi) plugin is an extension of [Code Snippet](#!/guide/dev_codesnippet) plugin, which uses [GeSHi](http://qbnz.com/highlighter/) PHP server-side syntax highlighting engine instead of default, client-side [highlight.js](http://highlightjs.org).
+The [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin is an extension of the [Code Snippet](#!/guide/dev_codesnippet) plugin, which uses the [GeSHi](http://qbnz.com/highlighter/) PHP server-side syntax highlighting engine instead of the default, client-side [highlight.js](http://highlightjs.org) library.
+
+Both code snippet plugins were introduced in [CKEditor 4.4](http://ckeditor.com/blog/CKEditor-4.4-Released) as optional plugins which means that you need to [add them to your build](#!/guide/dev_plugins) in order to use them.
 
 ## Requirements
 
 * CKEditor 4.4+
 * PHP 4.4+
 * A modern web browser or **IE9+**
+* CKEditor plugin dependencies: [Ajax](http://ckeditor.com/addon/ajax), [Code Snippet](http://ckeditor.com/addon/codesnippet)
 
 ## Installation
 

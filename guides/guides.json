@@ -292,6 +292,14 @@
 								"description": "Information about Allowed Content Rules for Advanced Content Filter.",
 								"meta_description": "Information about Allowed Content Rules for Advanced Content Filter.",
 								"meta_keywords": "ckeditor, editor, wysiwyg, acf, filter, content, filtering, advanced, rules, rule, allow, allowed"
+							},
+							{
+								"name": "dev_disallowed_content",
+								"url": "dev/deep_dive/advanced_content_filter/disallowed_content",
+								"title": "Disallowed Content",
+								"description": "Information about Disallowed Content for Advanced Content Filter.",
+								"meta_description": "Information about Disallowed Content for Advanced Content Filter.",
+								"meta_keywords": "ckeditor, editor, wysiwyg, acf, filter, content, filtering, disallowed, disallow"
 							}
 						]
 					},

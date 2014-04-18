@@ -12,10 +12,10 @@ Advanced Content Filter works in two modes:
 * **automatic** &ndash; the filter is configured by editor features (like plugins, buttons, and commands) that are enabled with configuration options such as {@link CKEDITOR.config#plugins}, {@link CKEDITOR.config#extraPlugins}, and {@link CKEDITOR.config#toolbar},
 * **custom** &ndash; the filter is configured by the {@link CKEDITOR.config#allowedContent} option and only features that match this setting are activated.
 
-In both modes it is possible to extend the filter configuration by using the {@link CKEDITOR.config#extraAllowedContent} setting.
+In both modes it is possible to extend the filter configuration by using the {@link CKEDITOR.config#extraAllowedContent} setting or to trim it down by using the {@link CKEDITOR.config#disallowedContent} setting.
 
 <p class="tip">
-	If you want to disable Advanced Content Filter, set {@link CKEDITOR.config#allowedContent} to <code>true</code>. All available editor features will be activated and input data will not be filtered.
+	If you want to disable Advanced Content Filter, set {@link CKEDITOR.config#allowedContent} to <code>true</code>. All available editor features will be activated and input data will not be filtered. Note that you cannot use {@link CKEDITOR.config#disallowedContent} when ACF is disabled.
 </p>
 
 
@@ -30,7 +30,7 @@ The following example might make it easier to understand the automatic ACF mode.
 3. Now check *editor 4*. You can see that many plugins and buttons were removed by the {@link CKEDITOR.config#removePlugins} and {@link CKEDITOR.config#removeButtons} settings; the {@link CKEDITOR.config#format_tags} list was trimmed down, too. Configuration changes are automatically reflected in editor contents &mdash; there is no Image toolbar button, so there is no image in the contents; there is no Table plugin, so the table added in the original contents was removed, too. You can see how the editor cleans up pasted content or HTML code set in the source mode.
 
 <p class="tip">
-	If you want to configure the editor to work in automatic mode, but need to enable additional HTML tags, attributes, styles, or classes, use the {@link CKEDITOR.config#extraAllowedContent} configuration option.
+	If you want to configure the editor to work in automatic mode, but need to enable additional HTML tags, attributes, styles, or classes, use the {@link CKEDITOR.config#extraAllowedContent} configuration option. **Since CKEditor 4.4** you can also disallow some of the automatically allowed content by using the {@link CKEDITOR.config#disallowedContent}.
 </p>
 
 

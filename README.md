@@ -28,7 +28,7 @@ Checkout the `stable` branch of the `jsduck` repository and install the latest `
 
 	> cd jsduck
 	> git co stable
-	> sudo gem install ckeditor-jsduck-<version>.gem
+	> gem install ckeditor-jsduck-<version>.gem
 
 Go back to the `ckeditor-docs` repository and execute `build.sh`:
 

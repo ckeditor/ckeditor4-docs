@@ -299,7 +299,7 @@
 								"title": "Disallowed Content",
 								"description": "Information about Disallowed Content for Advanced Content Filter.",
 								"meta_description": "Information about Disallowed Content for Advanced Content Filter.",
-								"meta_keywords": "ckeditor, editor, wysiwyg, acf, filter, content, filtering, disallowed, disallow"
+								"meta_keywords": "ckeditor, editor, wysiwyg, acf, filter, content, filtering, disallowed, disallow, rule, rules"
 							}
 						]
 					},

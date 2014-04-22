@@ -1,4 +1,4 @@
-# Introduction
+# Advanced Content Filter
 
 **Note:** Advanced Content Filter was introduced in **CKEditor 4.1**.
 
@@ -30,7 +30,7 @@ The following example might make it easier to understand the automatic ACF mode.
 3. Now check *editor 4*. You can see that many plugins and buttons were removed by the {@link CKEDITOR.config#removePlugins} and {@link CKEDITOR.config#removeButtons} settings; the {@link CKEDITOR.config#format_tags} list was trimmed down, too. Configuration changes are automatically reflected in editor contents &mdash; there is no Image toolbar button, so there is no image in the contents; there is no Table plugin, so the table added in the original contents was removed, too. You can see how the editor cleans up pasted content or HTML code set in the source mode.
 
 <p class="tip">
-	If you want to configure the editor to work in automatic mode, but need to enable additional HTML tags, attributes, styles, or classes, use the {@link CKEDITOR.config#extraAllowedContent} configuration option. **Since CKEditor 4.4** you can also disallow some of the automatically allowed content by using the {@link CKEDITOR.config#disallowedContent}.
+	If you want to configure the editor to work in automatic mode, but need to enable additional HTML tags, attributes, styles, or classes, use the {@link CKEDITOR.config#extraAllowedContent} configuration option. <strong>Since CKEditor 4.4</strong> you can also disallow some of the automatically allowed content by using the {@link CKEDITOR.config#disallowedContent}.
 </p>
 
 

@@ -26,6 +26,7 @@ Clone our [JSDuck repository](https://github.com/ckeditor/jsduck) to a separate 
 
 Checkout the `stable` branch of the `jsduck` repository and install the latest `ckeditor-jsduck-<version>.gem`:
 
+	> cd jsduck
 	> git co stable
 	> sudo gem install ckeditor-jsduck-<version>.gem
 

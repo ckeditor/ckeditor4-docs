@@ -23,7 +23,7 @@ If you use the [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/
     You can preview themes in the Code Snippet sample that is added to the <code>samples</code> folder of each CKEditor build that includes the plugin. You can also browse them on the <a href="http://highlightjs.org/static/test.html">highlight.js demo page</a>.
 </p>
 
-### Target Page
+### Syntax highlighting at published page
 
 To see the highlighter styles on the target page where CKEditor content is displayed, you will need to load the `highlight.js` script and theme's stylesheet on this page. You can either reuse a copy of `highlight.js` placed in the `ckeditor/plugins/codesnippet/lib/highlight` directory or download your own copy from the [highlight.js download page](http://highlightjs.org/download).
 

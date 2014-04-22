@@ -11,7 +11,7 @@ Both code snippet plugins were introduced in [CKEditor 4.4](http://ckeditor.com/
 * CKEditor 4.4+,
 * PHP 4.4+,
 * A modern web browser or **IE9+**,
-* CKEditor plugin dependencies: [Ajax](http://ckeditor.com/addon/ajax), [Code Snippet](http://ckeditor.com/addon/codesnippet) (these will be resolved automatically if you follow the recommended CKBuilder installation process).
+* CKEditor plugin dependencies &mdash; these will be resolved automatically if you follow the recommended CKBuilder installation process.
 
 ## Installation
 

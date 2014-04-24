@@ -264,6 +264,27 @@
 				]
 			},
 			{
+				"title": "Functionality Overview",
+				"items": [
+					{
+						"name": "dev_codesnippet",
+						"url": "dev/features/codesnippet",
+						"title": "Code Snippets",
+						"description": "Overview of CKEditor features.",
+						"meta_description": "Overview of CKEditor features.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, code, snippet, snippets, coloring, syntax, highlighting, widget, widgets, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_codesnippetgeshi",
+						"url": "dev/features/codesnippetgeshi",
+						"title": "Code Snippets (GeSHi)",
+						"description": "Using GeSHi Syntax Highlighter",
+						"meta_description": "Using GeSHi Syntax Highlighter.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, code, snippet, snippets, coloring, syntax, highlighting, geshi, widget, widgets, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					}
+				]
+			},
+			{
 				"title": "CKEditor Deep Dive",
 				"items": [
 					{

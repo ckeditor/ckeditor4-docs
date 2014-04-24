@@ -93,6 +93,8 @@ Sample widget styles:
 	// Code snippet (http://ckeditor.com/addon/codesnippet) style.
 	{ type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
 
+If you are interested in seeing how this works in practice, see the [little demo of widget styling](http://ckeditor.com/tmp/4.4.0/widget-styles.html) that we prepared. It contains some further explanations as well as a working editor instance that includes the Enhanced Image and Code Snippet widgets with additional styling.
+
 ## The Stylesheet Parser Plugin
 
 Another simplified method of customizing the styles for the document created in CKEditor and populating the drop-down list with style definitions coming from an external CSS stylesheet file is also available. The optional [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin lets you use your existing CSS styles without the need to define the styles specifically for CKEditor in the format presented above.

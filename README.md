@@ -6,7 +6,7 @@ This is the official developer documentation project for CKEditor. It uses our c
 
 **Requirements**:
 * [Ruby](https://www.ruby-lang.org)
-* Our custom [JSDuck](https://github.com/ckeditor/jsduck) clone.
+* Our custom [JSDuck](https://github.com/ckeditor/jsduck) clone (installation instruction is written below).
 
 **Follow the steps listed below to build CKEditor documentation:**
 

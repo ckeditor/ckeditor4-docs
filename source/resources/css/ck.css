@@ -211,6 +211,7 @@ pre code a
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+	box-sizing: content-box;
 }
 
 .guide-container a > img:hover

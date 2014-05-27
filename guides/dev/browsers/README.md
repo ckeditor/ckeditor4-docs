@@ -44,12 +44,12 @@ Internet Explorer 9+ offers reasonable support for WAI-ARIA. It is still not com
 
 ## A Word About Mobile Environments
 
-CKEditor is generally compatible with iOS 6+ (iPhone and iPad), though we still think that the usability aspect needs further development. Research and development in this area is ongoing and, as a result, we may in due course enlarge our graded support to also include iOS.
+CKEditor is generally compatible with **iOS 6+** (iPhone and iPad), though we still think that the usability aspect needs further development. Research and development in this area is ongoing and, as a result, we may in due course enlarge our graded support to also include iOS.
 
-CKEditor is also compatible with Chrome for Android (which is preinstalled on growing number of Android devices), though in this case usability also needs to be improved.
+CKEditor is also compatible with **Chrome for Android** (which is preinstalled on a growing number of Android devices), though in this case usability also needs to be improved.
 
 You can find more information in our [research on CKEditor support for mobile environments](http://dev.ckeditor.com/ticket/11712#comment:5).
 
-Finally, CKEditor is disabled on other browsers for Android and on Windows Phone 8. You can change CKEditor settings to accept any mobile environment (at your own risk) by modifying the [env.js](https://github.com/ckeditor/ckeditor-dev/blob/master/core/env.js) file, but you will not have the same experience as on desktop environments.
+Finally, CKEditor is disabled in other browsers for Android and on Windows Phone 8. You can change CKEditor settings to accept any mobile environment (at your own risk) by modifying the [env.js](https://github.com/ckeditor/ckeditor-dev/blob/master/core/env.js) file, but you will not have the same experience as on desktop environments.
 
-Full mobile support will be introduced in **CKEditor 5**. We aim to have perfect CKEditor support for most popular mobile platforms, so if you encountered an issue on not yet supported environment please report it on our [development site](https://dev.ckeditor.com/).
+Full mobile support will be introduced in **CKEditor 5**. We aim to have perfect CKEditor support for most popular mobile platforms, so if you encountered an issue with an environment that is unsupported as of now, please report it on our [CKEditor Development site](https://dev.ckeditor.com/).

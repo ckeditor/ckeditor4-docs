@@ -6,8 +6,8 @@ one of the most common requirements.
 
 There are two ways to configure the toolbar to match your needs:
 
- * [Toolbar Groups Configuration](#!/guide/dev_toolbar-section-1)
- * ["Item by Item" Configuration](#!/guide/dev_toolbar-section-2)
+ * [Toolbar Groups Configuration](#!/guide/dev_toolbar-section-toolbar-groups-configuration)
+ * ["Item by Item" Configuration](#!/guide/dev_toolbar-section-%22item-by-item%22-configuration)
 
 ## Toolbar Groups Configuration
 
@@ -36,7 +36,7 @@ It is a list (Array) of objects, each one with a "name" (e.g "clipboard" or "lin
 
 ### Changing the Groups Order
 
-You can easily customize the groups ordering and position by simply changing the above configuration. 
+You can easily customize the groups ordering and position by simply changing the above configuration.
 
 You can force row-breaks in the toolbar by adding `'/'` into the list, just like you could see above.
 
@@ -83,7 +83,7 @@ Items separator can be included by adding `'-'` (dash) to the list of items, as 
 
 You can force row-breaks in the toolbar by adding `'/'` between groups. They can be used to force a
 break at the point where they were placed, rendering the next toolbar
-group in a new row. 
+group in a new row.
 
 ### The Benefits of "Item by Item" configuration
 

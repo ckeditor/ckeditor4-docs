@@ -305,6 +305,14 @@
 						"description": "Using CKEditor Read-Only Mode.",
 						"meta_description": "Using CKEditor Read-Only Mode.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, readonly, read-only, uneditable, noneditable, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_sharedspaces",
+						"url": "dev/features/sharedspaces",
+						"title": "Shared UI Blocks",
+						"description": "Sharing UI Blocks Among Editor Instances.",
+						"meta_description": "Sharing UI Blocks Among Editor Instances.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, blocks, sharing, common, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

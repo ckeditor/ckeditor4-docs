@@ -313,6 +313,14 @@
 						"description": "Sharing UI Elements Among Editor Instances.",
 						"meta_description": "Sharing UI Elements Among Editor Instances.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, blocks, sharing, common, shared, spaces, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_toolbarlocation",
+						"url": "dev/features/toolbarlocation",
+						"title": "Toolbar Location",
+						"description": "Adjusting Editor Toolbar Location.",
+						"meta_description": "Adjusting Editor Toolbar Location.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, location, position, buttons, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

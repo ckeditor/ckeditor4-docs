@@ -32,5 +32,9 @@ An editor instance with such configuration will use the shared toolbar (the `top
 {@img sharedspaces_02.png}
 
 <p class="tip">
-    Please note that you need to create these page elements by yourself and make sure you provide valid IDs to the editor configuration.
+    Please note that you need to create the page elements that will store the toolbar and bottom bar by yourself and make sure you provide valid IDs to the editor configuration.
 </p>
+
+## Related Features
+
+Try the [Toolbar Location](#!/guide/dev_toolbarlocation) feature to customize the toolbar position within the editor user interface.

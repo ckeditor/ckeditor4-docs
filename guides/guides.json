@@ -321,6 +321,14 @@
 						"description": "Adjusting Editor Toolbar Location.",
 						"meta_description": "Adjusting Editor Toolbar Location.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, location, position, buttons, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_autogrow",
+						"url": "dev/features/autogrow",
+						"title": "Editor Auto Grow",
+						"description": "Automatic Editor Height Adjustment to Content.",
+						"meta_description": "Automatic Editor Height Adjustment to Content.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, height, expand, grow, shrink, autogrow, auto, adjustment, adjust, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

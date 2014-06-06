@@ -368,6 +368,14 @@
 						"description": "Documentation standards for CKEditor source code.",
 						"meta_description": "Documentation standards for CKEditor source code.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, documentation, docs, api, code, source, standards, style"
+					},
+					{
+						"name": "dev_tests",
+						"url": "dev/tests",
+						"title": "Tests environment",
+						"description": "How to install and configure tests environment, how tests are arranged and how to create your own test.",
+						"meta_description": "How to install and configure tests environment, how tests are arranged and how to create your own test.",
+						"meta_keywords": "ckeditor, editor, tests, TDD, bender, benderjs, contributing, contribute, contribution, pull request"
 					}
 				]
 			},

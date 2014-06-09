@@ -329,6 +329,14 @@
 						"description": "Automatic Editor Height Adjustment to Content.",
 						"meta_description": "Automatic Editor Height Adjustment to Content.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, height, expand, grow, shrink, autogrow, auto, adjustment, adjust, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_magicline",
+						"url": "dev/features/magicline",
+						"title": "Magic Line",
+						"description": "Adding content in inaccessible places with Magic Line.",
+						"meta_description": "Adding content in inaccessible places with Magic Line.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, magicline, magic, line, enter, inaccessible, cursor, focus"
 					}
 				]
 			},

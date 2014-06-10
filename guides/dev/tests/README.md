@@ -159,14 +159,15 @@ A sample CKEditor test file might look like this:
 
 	bender.test( {
 		'test sample': function() {
-		bender.editorBot.create( {
-			startupData: '<p>Lorem <b>[ipsum]</b></p>'
-		}, function( bot ) {
-			bot.editor.focus(); // Internet Explorer needs focus
+			bender.editorBot.create( {
+				startupData: '<p>Lorem <b>[ipsum]</b></p>'
+			}, function( bot ) {
+				// Many selection related tests may require focusing editor.
+				bot.editor.focus();
 
-			assert.areSame( '<p>^Lorem <strong>[ipsum]</strong></p>',
-				bot.htmlWithSelection() );
-		} );
+				assert.areSame( '<p>^Lorem <strong>[ipsum]</strong></p>',
+					bot.htmlWithSelection() );
+			} );
 		}
 	} );
 

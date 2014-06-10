@@ -372,7 +372,7 @@
 					{
 						"name": "dev_tests",
 						"url": "dev/tests",
-						"title": "Tests Environment (Bender)",
+						"title": "Tests Environment",
 						"description": "How to install and configure CKEditor tests environment, how the tests are arranged and how to create your own test.",
 						"meta_description": "How to install and configure CKEditor tests environment, how tests are arranged and how to create your own test.",
 						"meta_keywords": "ckeditor, editor, testing, test, tests, TDD, bender, benderjs, contributing, contribute, contribution, pull request"

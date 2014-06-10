@@ -337,7 +337,15 @@
 						"description": "Adding content in inaccessible places with Magic Line.",
 						"meta_description": "Adding content in inaccessible places with Magic Line.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, magicline, magic, line, enter, inaccessible, cursor, focus"
-					}
+					},
+                    {
+						"name": "dev_tabindex",
+						"url": "dev/features/tabindex",
+						"title": "Tab Key Navigation",
+						"description": "Page Navigation Using the Tab Key.",
+						"meta_description": "Page Navigation Using the Tab Key.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, tab, key, keyboard, accessibility, shortcut, keystroke, tabindex, order, focus"
+					}                 
 				]
 			},
 			{

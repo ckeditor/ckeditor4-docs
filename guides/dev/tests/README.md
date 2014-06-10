@@ -13,25 +13,25 @@ To run CKEditor tests you will need Bender. Before you start installing Bender m
 
 In order to install Bender globally, open the console and use `npm install`:
 
-    > npm install -g git://github.com/benderjs/benderjs.git
+	> npm install -g git://github.com/benderjs/benderjs.git
 
 
 **Note:** You may need administrative rights to do this.
 
 Now you can check whether Bender has installed properly. If you run Bender in the console:
 
-    > bender
+	> bender
 
 you should see the following message:
 
-    command argument is required
+	command argument is required
 
 ### Updating Bender
 
 At the moment, Bender is not available as an `npm` package. If you want to update it, you need to uninstall the existing version and install again:
 
-    > npm uninstall -g benderjs
-    > npm install -g git://github.com/benderjs/benderjs.git
+	> npm uninstall -g benderjs
+	> npm install -g git://github.com/benderjs/benderjs.git
 
 ## Setting up CKEditor Tests
 
@@ -39,19 +39,19 @@ When Bender is installed you need to set up the CKEditor tests project.
 
 First of all, you need to [clone the CKEditor development](#!/guide/dev_source) repository hosted at [GitHub](https://github.com/ckeditor/ckeditor-dev):
 
-    > git clone https://github.com/ckeditor/ckeditor-dev.git
+	> git clone https://github.com/ckeditor/ckeditor-dev.git
 
 Go to the main CKEditor directory (it should contain the `bender.js`, `package.json` files, among others, and the `tests/` directory):
 
-    > cd ckeditor-dev
+	> cd ckeditor-dev
 
 You will now need to install required modules, like the [CKEditor plugin for Bender](https://github.com/benderjs/benderjs-ckeditor). To install all required modules use:
 
-    > npm install
+	> npm install
 
 Then you need to initialize the Bender project:
 
-    > bender init
+	> bender init
 
 This command will create the `.bender/` directory which contains Bender's cache, databases, and a local configuration file.
 
@@ -61,27 +61,27 @@ You do not need to perform any additional configuration steps as `bender.js` is 
 
 In order to run the tests, open the console and type:
 
-    > bender server run
+	> bender server run
 
 This will start the server in the verbose mode.
 
 Now open a web browser. Bender dashboard is available under:
 
-    http://localhost:1030
+	http://localhost:1030
 
 **Note:** You can also run the server as a daemon:
 
-    > bender server start
+	> bender server start
 
 At the moment, starting a daemon is supported **on Unix systems only**.
 
 If you want, you can specify a port or a hostname where Bender runs:
 
-    -p, --port       The port on which the server will run (default: 1030).
-    -H, --hostname   The hostname used to run the server (default: 0.0.0.0).
+	-p, --port		The port on which the server will run (default: 1030).
+	-H, --hostname	The hostname used to run the server (default: 0.0.0.0).
 
 <p class="tip">
-    Some tests require the browser to be in focus. This means that you can not use other applications when running them.
+	Some tests require the browser to be in focus. This means that you can not use other applications when running them.
 </p>
 
 Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again, they should pass. If a test fails a few times in a row, it is a sign that something went wrong. [Report a CKEditor issue](#!/guide/dev_issues_readme) on our [Development site](http://dev.ckeditor.com) in such case.
@@ -90,31 +90,36 @@ Please note that at the moment some random tests may fail in Internet Explorer. 
 
 In the Bender dashboard you can run all (or part) of the tests located in the CKEditor `tests/` directory. These tests are organized into subdirectories based on what they are testing:
 
-- `tests/`
-  - `adapters/` &ndash; design tests for editor adapters, located in the `adapters/` folder,
-    - `jquery/`
-  - `core/` &ndash; design tests for editor core features, located in the `core/` folder,
-    - `dom/`
-    - `htmlparser/`
-    - ...
-  - `plugins/` &ndash; design tests for editor plugins, located in the `plugins/` folder,
-    - `about/`
-    - `button/`
-    - ...
-  - `tickets/` &ndash; functional tests for specific issues tracker [tickets](http://dev.ckeditor.com/report), bugs which are not related to any specific features or are related to multiple features and plugins.
-    - `10146/`
-    - `10212/`
-    - ...
+	tests/
+		adapters/
+			(design tests for editor adapters, located in the adapters/ folder)
+			jquery/
+		core/
+			(design tests for editor core features, located in the core/ folder)
+			dom/
+			htmlparser/
+			...
+		plugins/
+			(design tests for editor plugins, located in the plugins/ folder)
+			about/
+			button/
+			...
+		tickets/
+			(functional tests for specific issues tracker [tickets](http://dev.ckeditor.com/report), bugs
+				which are not related to any specific features or are related to multiple features and plugins)
+			10146/
+			10212/
+			...
 
 <p class="tip">
-    As long as a test is related to a particular feature or a plugin, it should be put into the <code>adapters/</code>, <code>core/</code>, or <code>plugins/</code> directory. Ticket tests are most difficult to manage so the <code>tickets/</code> directory should only contain the tests that do not match any of these primary locations.
+	As long as a test is related to a particular feature or a plugin, it should be put into the <code>adapters/</code>, <code>core/</code>, or <code>plugins/</code> directory. Ticket tests are most difficult to manage so the <code>tickets/</code> directory should only contain the tests that do not match any of these primary locations.
 </p>
 
 Apart from the directories mentioned above, the main `tests` directory or any subdirectory may contain three special folders:
 
-- `_assets/` &ndash; contains all assets used by the tests and the files that the tests need, like images, external libraries (like MathJax, jQuery.form), dialogs, mocks.
-- `_helpers/` &ndash; contains all functions used to test, tools for testing, test generators.
-- `_docs/` &ndash; contains notes about how tests work. It is rarely used as more often test documentation is located in the same file and inserted as a code comment.
+* `_assets/` &ndash; contains all assets used by the tests and the files that the tests need, like images, external libraries (like MathJax, jQuery.form), dialogs, mocks.
+* `_helpers/` &ndash; contains all functions used to test, tools for testing, test generators.
+* `_docs/` &ndash; contains notes about how tests work. It is rarely used as more often test documentation is located in the same file and inserted as a code comment.
 
 Every file which is not placed in any of these special directories is considered a test.
 
@@ -130,10 +135,10 @@ In every test you can specify the list of plugins which will be loaded in this t
 
 Please note that some CKEditor plugins are needed for reasons that might not be immediately obvious, for example:
 
-- [IFrame Editing Area](http://ckeditor.com/addon/wysiwygarea) (`wysiwygarea`) &ndash; skipping this plugin will prevent the editor from firing the [instanceReady](#!/api/CKEDITOR.editor-event-instanceReady) event and many others.
-- [Editor Toolbar](http://ckeditor.com/addon/toolbar) (`toolbar`) &ndash; needed for executing commands.
-- [Undo](http://ckeditor.com/addon/undo) (`undo`) &ndash; needed to fire the [change](#!/api/CKEDITOR.editor-event-change) event.
-- [Basic Styles](http://ckeditor.com/addon/basicstyles) (`basicstyles`) &ndash; needed to preserve basic text formatting in your test HTML, otherwise [Advanced Content Filter](#!/guide/dev_advanced_content_filter) will remove all `<strong>`, `<em>`, `<u>` tags and so on.
+* [IFrame Editing Area](http://ckeditor.com/addon/wysiwygarea) (`wysiwygarea`) &ndash; skipping this plugin will prevent the editor from firing the [instanceReady](#!/api/CKEDITOR.editor-event-instanceReady) event and many others.
+* [Editor Toolbar](http://ckeditor.com/addon/toolbar) (`toolbar`) &ndash; needed for executing commands.
+* [Undo](http://ckeditor.com/addon/undo) (`undo`) &ndash; needed to fire the [change](#!/api/CKEDITOR.editor-event-change) event.
+* [Basic Styles](http://ckeditor.com/addon/basicstyles) (`basicstyles`) &ndash; needed to preserve basic text formatting in your test HTML, otherwise [Advanced Content Filter](#!/guide/dev_advanced_content_filter) will remove all `<strong>`, `<em>`, `<u>` tags and so on.
 
 If the editor behaves differently when testing and during development, try to add all plugins you use during the development (you can find such list in the [`config.js`](https://github.com/ckeditor/ckeditor-dev/blob/master/config.js) file) and then remove redundant ones. Please note that adding all existing CKEditor plugins might not be a good solution since, for example, the [BBCode plugin](http://ckeditor.com/addon/bbcode) will strip HTML in your output.
 
@@ -147,37 +152,37 @@ The testing environment provides a bunch of [tools](https://github.com/benderjs/
 
 A sample CKEditor test file might look like this:
 
-    /* bender-tags: editor,unit */
-    /* bender-ckeditor-plugins: toolbar,basicstyles */
+	/* bender-tags: editor,unit */
+	/* bender-ckeditor-plugins: toolbar,basicstyles */
 
-    'use strict';
+	'use strict';
 
-    bender.test( {
-      'test sample': function() {
-        bender.editorBot.create( {
-          startupData: '<p>Lorem <b>[ipsum]</b></p>'
-        }, function( bot ) {
-          bot.editor.focus(); // Internet Explorer needs focus
+	bender.test( {
+		'test sample': function() {
+		bender.editorBot.create( {
+			startupData: '<p>Lorem <b>[ipsum]</b></p>'
+		}, function( bot ) {
+			bot.editor.focus(); // Internet Explorer needs focus
 
-          assert.areSame( '<p>^Lorem <strong>[ipsum]</strong></p>',
-            bot.htmlWithSelection() );
-        } );
-      }
-    } );
+			assert.areSame( '<p>^Lorem <strong>[ipsum]</strong></p>',
+				bot.htmlWithSelection() );
+		} );
+		}
+	} );
 
 For every test you can create an HTML file with the same name (so for `yourtest.js` you can create `yourtest.html`). Such file will be combined with your JavaScript code by [DOM combiner](https://github.com/benderjs/dom-combiner) to create an output test file. If the HTML file does not exist, the output test file will have an empty `<body>` section.
 
 In the HTML file you can put the content of the `<body>` section, so it could look like this:
 
-    <textarea id="editor">Lorem ipsum</textarea>
+	<textarea id="editor">Lorem ipsum</textarea>
 
 If you need, you can add the entire content of the `<html>` page element, for example to set some attributes or add a `<head>` section:
 
-    <head>
-        <script src="_helpers/tools.js"></script>
-    </head>
-    <body>
-        <textarea id="editor">Lorem ipsum</textarea>
-    </body>
+	<head>
+		<script src="_helpers/tools.js"></script>
+	</head>
+	<body>
+		<textarea id="editor">Lorem ipsum</textarea>
+	</body>
 
 To learn more about writing tests, check the exiting tests code.

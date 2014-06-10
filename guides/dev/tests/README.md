@@ -1,22 +1,22 @@
-# CKEditor Tests Environment (Bender)
+# CKEditor Tests Environment (Bender.js)
 
-Advanced project like CKEditor could not exist without automated tests. CKEditor uses [Bender](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can be we always implement tests. We encourage you to do the same when you make a pull request on [GitHub](https://github.com/ckeditor/ckeditor-dev) or fork CKEditor repository in order to customize some behavior.
+Advanced project like CKEditor could not exist without automated tests. CKEditor uses [Bender.js](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can be we always implement tests. We encourage you to do the same when you make a pull request on [GitHub](https://github.com/ckeditor/ckeditor-dev) or fork CKEditor repository in order to customize some behavior.
 
-## Setting up Bender
+## Setting up Bender.js
 
-To run CKEditor tests you will need [Bender](https://github.com/benderjs/benderjs). Before you start installing Bender make sure that:
+To run CKEditor tests you will need [Bender.js](https://github.com/benderjs/benderjs). Before you start installing Bender.js make sure that:
 
 * you installed [Git](http://git-scm.com/),
 * you installed the latest version of [Node.js](http://nodejs.org/),
-* you have administrative rights &mdash; needed to install Bender globally.
+* you have administrative rights &mdash; needed to install Bender.js globally.
 
-In order to install Bender globally, open the console and use `npm install`:
+In order to install Bender.js globally, open the console and use `npm install`:
 
 	> npm install -g git://github.com/benderjs/benderjs.git
 
 **Note:** You may need administrative rights to do this (e.g. `sudo`).
 
-Now you can check whether Bender has installed properly. If you run Bender in the console:
+Now you can check whether Bender.js has installed properly. If you run Bender.js in the console:
 
 	> bender
 
@@ -24,16 +24,16 @@ you should see the following message:
 
 	command argument is required
 
-### Updating Bender
+### Updating Bender.js
 
-At the moment, Bender is not available as an `npm` package. If you want to update it, you need to uninstall the existing version and install again:
+At the moment, Bender.js is not available as an `npm` package. If you want to update it, you need to uninstall the existing version and install again:
 
 	> npm uninstall -g benderjs
 	> npm install -g git://github.com/benderjs/benderjs.git
 
 ## Setting up CKEditor Tests
 
-When Bender is installed you need to set up the CKEditor tests project.
+When Bender.js is installed you need to set up the CKEditor tests project.
 
 First of all, you need to [clone the CKEditor development](#!/guide/dev_source) repository hosted at [GitHub](https://github.com/ckeditor/ckeditor-dev):
 
@@ -43,7 +43,7 @@ Go to the main CKEditor directory (it should contain the `bender.js`, `package.j
 
 	> cd ckeditor-dev
 
-You will now need to install required modules, like the [CKEditor plugin for Bender](https://github.com/benderjs/benderjs-ckeditor). To install all required modules use:
+You will now need to install required modules, like the [CKEditor plugin for Bender.js](https://github.com/benderjs/benderjs-ckeditor). To install all required modules use:
 
 	> npm install
 
@@ -51,7 +51,7 @@ Then you need to initialize the Bender project:
 
 	> bender init
 
-This command will create the `.bender/` directory which contains Bender's cache, databases, and a local configuration file.
+This command will create the `.bender/` directory which contains Bender.js's cache, databases, and a local configuration file.
 
 You do not need to perform any additional configuration steps as `bender.js` is a configuration file. It contains information about which tests should be run and where they are located.
 
@@ -63,7 +63,7 @@ In order to run the tests, open the console and type:
 
 This will start the server in the verbose mode.
 
-Now open a web browser. Bender dashboard is available under:
+Now open a web browser. Bender.js dashboard is available under:
 
 	http://localhost:1030
 
@@ -73,7 +73,7 @@ Now open a web browser. Bender dashboard is available under:
 
 At the moment, starting a daemon is supported **on Unix systems only**.
 
-If you want, you can specify a port or a hostname where Bender runs:
+If you want, you can specify a port or a hostname where Bender.js runs:
 
 	-p, --port		The port on which the server will run (default: 1030).
 	-H, --hostname	The hostname used to run the server (default: 0.0.0.0).
@@ -86,7 +86,7 @@ Please note that at the moment some random tests may fail in Internet Explorer. 
 
 ## CKEditor Tests Structure
 
-In the Bender dashboard you can run all (or part) of the tests located in the CKEditor `tests/` directory. These tests are organized into subdirectories based on what they are testing:
+In the Bender.js dashboard you can run all (or part) of the tests located in the CKEditor `tests/` directory. These tests are organized into subdirectories based on what they are testing:
 
 	tests/
 		adapters/
@@ -142,7 +142,7 @@ If the editor behaves differently when testing and during development, try to ad
 
 ### Test Tools
 
-CKEditor tests use the [YUI library](http://yuilibrary.com/) for assertions provided by the [Bender YUI plugin](https://github.com/benderjs/benderjs-yui/).
+CKEditor tests use the [YUI library](http://yuilibrary.com/) for assertions provided by the [Bender.js YUI plugin](https://github.com/benderjs/benderjs-yui/).
 
 The testing environment provides a bunch of [tools](https://github.com/benderjs/benderjs-ckeditor/blob/master/static/tools.js) useful when creating tests and the [Editor Bot](https://github.com/benderjs/benderjs-ckeditor/blob/master/static/bot.js) which helps you create and manage an editor instance.
 

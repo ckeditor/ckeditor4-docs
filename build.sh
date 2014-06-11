@@ -16,6 +16,13 @@
 # Docs will be generated in dev/docs/build/ directory.
 #
 
+CONFIG=" --config config.json "
+
+if [[ $1 = --config ]]
+then
+    CONFIG=" --config $2 "
+fi
+
 set -e
 
 echo "CKEditor Documentation Builder"
@@ -51,7 +58,7 @@ echo "Building the documentation into the 'build/' directory..."
 # Move to the script directory.
 cd $(dirname $0)
 
-ckeditor-jsduck --config config.json $@ -- $PATHS
+ckeditor-jsduck $CONFIG $@ -- $PATHS
 
 echo "Applying customizations..."
 cp -r source/resources build

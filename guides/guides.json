@@ -330,7 +330,7 @@
 						"meta_description": "Automatic Editor Height Adjustment to Content.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, height, expand, grow, shrink, autogrow, auto, adjustment, adjust, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					},
-                    {
+					{
 						"name": "dev_magicline",
 						"url": "dev/features/magicline",
 						"title": "Magic Line",
@@ -338,14 +338,22 @@
 						"meta_description": "Adding content in inaccessible places with Magic Line.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, magicline, magic, line, enter, inaccessible, cursor, focus"
 					},
-                    {
+					{
 						"name": "dev_tabindex",
 						"url": "dev/features/tabindex",
 						"title": "Tab Key Navigation",
 						"description": "Page Navigation Using the Tab Key.",
 						"meta_description": "Page Navigation Using the Tab Key.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, tab, key, keyboard, accessibility, shortcut, keystroke, tabindex, order, focus"
-					}                 
+					},
+					{
+						"name": "dev_table",
+						"url": "dev/features/table",
+						"title": "Tables and Column Resizing",
+						"description": "Table Support with Column Resizing.",
+						"meta_description": "Table Support with Column Resizing.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, table, tables, cell, cells, row, rows, column, columns, resize, resizing, drag, mouse"
+					} 
 				]
 			},
 			{

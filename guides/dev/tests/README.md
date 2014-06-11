@@ -1,6 +1,6 @@
 # CKEditor Tests Environment (Bender.js)
 
-Advanced project like CKEditor could not exist without automated tests. CKEditor uses [Bender.js](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can be we always implement tests. We encourage you to do the same when you make a pull request on [GitHub](https://github.com/ckeditor/ckeditor-dev) or fork CKEditor repository in order to customize some behavior.
+An advanced project like CKEditor could not exist without a set of automated tests. CKEditor uses [Bender.js](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can, we always implement tests. We encourage you to do the same when you make a pull request on [GitHub](https://github.com/ckeditor/ckeditor-dev) or fork the CKEditor repository in order to customize some editor behavior.
 
 ## Setting up Bender.js
 
@@ -82,7 +82,7 @@ If you want, you can specify a port or a hostname where Bender.js runs:
 	Some tests require the browser to be in focus. This means that you can not use other applications when running them.
 </p>
 
-Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again (when opened directly), they should pass. If a test fails a few times in a row, it is a sign that something went wrong. [Report a CKEditor issue](#!/guide/dev_issues_readme) on our [Development site](http://dev.ckeditor.com) in such case. Remember to include a link to failing test and information about browser on which it fails.
+Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again (when opened directly), they should pass. If a test fails a few times in a row, it is a sign that something went wrong. [Report a CKEditor issue](#!/guide/dev_issues_readme) on our [Development site](http://dev.ckeditor.com) in such case. Remember to include a link to the failing test and information about the browser in which it fails.
 
 ## CKEditor Tests Structure
 
@@ -125,7 +125,7 @@ Every file which is not placed in any of these special directories is considered
 
 To create a new CKEditor test, you need to put a JavaScript file into any of the CKEditor `tests/` subdirectories (`adapters/`, `core/`, `plugins/` or `tickets/`). Such file will be automatically added to the list of tests.
 
-To improve tests filtering, test file may start with list of tags, marked using `bender-tags` meta comment. Additionally, every folder in the test's path is automatically added as a filter, so for example if you created a test for the jQuery adapter and placed it in the `tests/adapters/jquery` directory, you do not need to add `adapters` and `jquery` to the tags list.
+To improve tests filtering, a test file may start with a list of tags, marked by using the `bender-tags` meta comment. Additionally, every folder in the test's path is automatically added as a filter, so for example if you created a test for the jQuery adapter and placed it in the `tests/adapters/jquery` directory, you do not need to add `adapters` and `jquery` to the tags list.
 
 ### Test Requirements
 
@@ -133,7 +133,7 @@ In every test you can specify the list of plugins which will be loaded in this t
 
 Please note that some CKEditor plugins are needed for reasons that might not be immediately obvious, for example:
 
-* [IFrame Editing Area](http://ckeditor.com/addon/wysiwygarea) (`wysiwygarea`) &ndash; skipping this plugin will prevent the editor from firing the [instanceReady](#!/api/CKEDITOR.editor-event-instanceReady) event and many others. Though, this plugin is loaded automatically if using the Editor Bot.
+* [IFrame Editing Area](http://ckeditor.com/addon/wysiwygarea) (`wysiwygarea`) &ndash; skipping this plugin will prevent the editor from firing the [instanceReady](#!/api/CKEDITOR.editor-event-instanceReady) event and many others. However, this plugin is loaded automatically when using the Editor Bot.
 * [Editor Toolbar](http://ckeditor.com/addon/toolbar) (`toolbar`) &ndash; needed for enabling features that rely on the [Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf).
 * [Undo](http://ckeditor.com/addon/undo) (`undo`) &ndash; needed to fire the [change](#!/api/CKEDITOR.editor-event-change) event.
 * [Basic Styles](http://ckeditor.com/addon/basicstyles) (`basicstyles`) &ndash; needed to preserve basic text formatting in your test HTML, otherwise [Advanced Content Filter](#!/guide/dev_advanced_content_filter) will remove all `<strong>`, `<em>`, `<u>` tags and so on.
@@ -160,7 +160,7 @@ A sample CKEditor test file might look like this:
 			bender.editorBot.create( {
 				startupData: '<p>Lorem <b>[ipsum]</b></p>'
 			}, function( bot ) {
-				// Many selection related tests may require focusing editor.
+				// Many selection-related tests may require focusing the editor.
 				bot.editor.focus();
 
 				assert.areSame( '<p>^Lorem <strong>[ipsum]</strong></p>',

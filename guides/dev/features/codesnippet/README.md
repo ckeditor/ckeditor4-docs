@@ -4,7 +4,9 @@
 
 Its original implementation uses the [highlight.js](http://highlightjs.org) library, but the plugin exposes a convenient [interface](#!/api/CKEDITOR.plugins.codesnippet.highlighter) for hooking any other library, even a server-side one.
 
-<img src="guides/dev_codesnippet/codesnippet_01.png" width="773" height="301" alt="CKEditor Code Snippet plugin">
+{@img codesnippet_01.png}
+
+See also the [working Inserting Code Snippets sample](../samples/codesnippet.html) that shows a few instances of the code snippet widgets as well as the syntax highlighter themes which are available in the default implementation.
 
 ## Enabling Syntax Highlighting
 
@@ -52,7 +54,7 @@ In [classic editor](#!/guide/dev_framed) use the [config.codeSnippet_theme](#!/a
 
 For a complete list of available themes see the Code Snippet sample that is added to the <code>samples</code> folder of each CKEditor build that includes the plugin or the [highlight.js's demo page](http://highlightjs.org/static/test.html).
 
-<img src="guides/dev_codesnippet/codesnippet_05.png" width="771" height="288" alt="Highlighter theme changed to school_book">
+{@img codesnippet_05.png}
 
 In [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor and on the target page that displays content created with CKEditor you can switch between themes by loading the different theme's stylesheets. See the [Enabling Syntax Highlighting](#!/guide/dev_codesnippet-section-enabling-syntax-highlighting) section for more information.
 
@@ -67,7 +69,7 @@ The following example will reduce the languages list to JavaScript and PHP only.
 		php: 'PHP'
 	};
 
-<img src="guides/dev_codesnippet/codesnippet_06.png" width="664" height="114" alt="Reduced supported languages list">
+{@img codesnippet_06.png}
 
 ## Hooking a Custom Syntax Highlighter
 

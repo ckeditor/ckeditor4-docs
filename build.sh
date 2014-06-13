@@ -66,5 +66,5 @@ cp source/favicon.ico build
 cp source/.htaccess build
 cp -r images build
 
-echo "Finished!"
+echo "Documentation creation finished!"
 echo ""

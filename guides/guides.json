@@ -353,7 +353,15 @@
 						"description": "Table Support with Column Resizing.",
 						"meta_description": "Table Support with Column Resizing.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, table, tables, cell, cells, row, rows, column, columns, resize, resizing, drag, mouse"
-					} 
+					},
+					{
+						"name": "dev_sourcearea",
+						"url": "dev/features/sourcearea",
+						"title": "Source Code Editing",
+						"description": "Source Code Editing.",
+						"meta_description": "Source Code Editing.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, source, code, html, area, sourcearea, dialog, sourcedialog"
+					}
 				]
 			},
 			{

@@ -1,4 +1,4 @@
-# CKEditor Tests Environment (Bender.js)
+# CKEditor Testing Environment (Bender.js)
 
 An advanced project like CKEditor could not exist without a set of automated tests. CKEditor uses [Bender.js](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can, we always implement tests. We encourage you to do the same when you make a pull request on [GitHub](https://github.com/ckeditor/ckeditor-dev) or fork the CKEditor repository in order to customize some editor behavior.
 

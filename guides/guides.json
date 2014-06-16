@@ -361,6 +361,14 @@
 						"description": "Source Code Editing.",
 						"meta_description": "Source Code Editing.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, source, code, html, area, sourcearea, dialog, sourcedialog"
+					},
+					{
+						"name": "dev_captionedimage",
+						"url": "dev/features/captionedimage",
+						"title": "Captioned Image",
+						"description": "Creating Captioned Images.",
+						"meta_description": "Creating Captioned Images.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, image, images, caption, captioned, image2, enhanced, widget, resizing, drag, drop"
 					}
 				]
 			},

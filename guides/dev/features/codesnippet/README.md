@@ -1,12 +1,12 @@
 # Code Snippets in CKEditor
 
-[CKEditor 4.4](http://ckeditor.com/blog/CKEditor-4.4-Released) introduced the [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin that allows you to insert rich code fragments and see a live preview with highlighted syntax. This is an optional plugin that you need to [add to your build](#!/guide/dev_plugins) in order to use it.
+<p class="requirements">
+	This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+</p>
 
-Its original implementation uses the [highlight.js](http://highlightjs.org) library, but the plugin exposes a convenient [interface](#!/api/CKEDITOR.plugins.codesnippet.highlighter) for hooking any other library, even a server-side one.
+The optional [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin allows you to insert rich code fragments and see a live preview with highlighted syntax. Its original implementation uses the [highlight.js](http://highlightjs.org) library, but the plugin exposes a convenient [interface](#!/api/CKEDITOR.plugins.codesnippet.highlighter) for hooking any other library, even a server-side one.
 
 {@img codesnippet_01.png}
-
-See also the [working Inserting Code Snippets sample](../samples/codesnippet.html) that shows a few instances of the code snippet widgets as well as the syntax highlighter themes which are available in the default implementation.
 
 ## Enabling Syntax Highlighting
 
@@ -84,3 +84,7 @@ Full installation instructions can be found in the [Code Snippet GeSHi guide](#!
 ## Internet Explorer 8 Support
 
 Since **Internet Explorer 8** support was dropped in [highlight.js](http://highlightjs.org) 7.3 (see the [GitHub ticket](https://github.com/isagalaev/highlight.js/issues/280)), the default implementation of the Code Snippet plugin will not provide any higlighting in this browser version. To solve this problem use a custom highlighter.
+
+## Code Snippets Demo 
+
+See the [Inserting Code Snippets sample](../samples/codesnippet.html) that shows a few instances of the code snippet widgets as well as the syntax highlighter themes which are available in the default implementation.

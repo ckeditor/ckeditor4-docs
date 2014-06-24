@@ -64,7 +64,8 @@ When you are done, open your sample page in the browser.
 Go ahead and play a bit more with the samples; try to add the same functionality to your own pages (you can always see the sample source for some hints). And when you are ready to dive a bit deeper into CKEditor, you can try the following:
 
 1. Check the [Configuration](#!/guide/dev_configuration) section to see how to adjust the editor to your needs.
-2. [Modify your toolbar](#!/guide/dev_toolbar) to only include the features that you need. You can find the complete list of all toolbar buttons available in your build in the "Toolbar Configurations" sample.
-3. Browse the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) for some additional plugins or skins.
-4. Use [CKBuilder](http://ckeditor.com/builder) to create your custom CKEditor build.
-5. Browse the [Developer's Guide](#!/guide) for some further ideas on what to do with CKEditor and [join the community](http://ckeditor.com/forums) to discuss all things CKEditor with fellow developers!
+2. Get familiar with [Advanced Content Filter](#!/guide/dev_advanced_content_filter). This is a useful tool that adjusts the content inserted into CKEditor to the features that are enabled and filters out disallowed content.
+3. [Modify your toolbar](#!/guide/dev_toolbar) to only include the features that you need. You can find the complete list of all toolbar buttons available in your build in the "Toolbar Configurations" sample.
+4. Browse the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) for some additional plugins or skins.
+5. Use [CKBuilder](http://ckeditor.com/builder) to create your custom CKEditor build.
+6. Browse the [Developer's Guide](#!/guide) for some further ideas on what to do with CKEditor and [join the community](http://ckeditor.com/forums) to discuss all things CKEditor with fellow developers!

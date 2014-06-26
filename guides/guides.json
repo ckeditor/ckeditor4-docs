@@ -369,6 +369,14 @@
 						"description": "Creating Captioned Images.",
 						"meta_description": "Creating Captioned Images.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, image, images, caption, captioned, image2, enhanced, widget, resizing, drag, drop"
+					},
+					{
+						"name": "dev_mathjax",
+						"url": "dev/features/mathjax",
+						"title": "Mathematical Formulas",
+						"description": "Creating Mathematical Formulas Using TeX.",
+						"meta_description": "Creating Mathematical Formulas Using TeX.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, mathjax, mathematics, math, maths, equation, equations, formula, formulas, formulae, mathematical, tex, latex, widget, drag, drop"
 					}
 				]
 			},

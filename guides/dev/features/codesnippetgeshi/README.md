@@ -6,7 +6,7 @@
 
 The [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin is an extension of the [Code Snippet](#!/guide/dev_codesnippet) plugin, which uses the [GeSHi](http://qbnz.com/highlighter/) PHP server-side syntax highlighting engine instead of the default, client-side [highlight.js](http://highlightjs.org) library.
 
-<img src="guides/dev_codesnippetgeshi/codesnippetgeshi_01.png" width="771" height="279" alt="Code snippets using GeSHi syntax highlighter">
+{@img codesnippetgeshi_01.png}
 
 ## Requirements
 
@@ -62,7 +62,7 @@ First of all you need to add both the Code Snippet GeSHi plugin and its dependen
 
 ### Editor Configuration
 
-Go to your [CKEditor configuration](#!/guide/dev_configuration) and set the [config.codeSnippetGeshi_url](#!/api/CKEDITOR.config-cfg-codeSnippetGeshi_url) option. For example for in-page configuration you can use the following code:
+Go to your [CKEditor configuration](#!/guide/dev_configuration) and set the CKEDITOR.config.codeSnippetGeshi_url option. For example for in-page configuration you can use the following code:
 
 	CKEDITOR.replace( 'editor1', {
 		extraPlugins: 'codesnippetgeshi',
@@ -71,10 +71,10 @@ Go to your [CKEditor configuration](#!/guide/dev_configuration) and set the [con
 
 You can find more information about setting configuration in the [Setting Configuration guide](#!/guide/dev_configuration).
 
-**Note:** The value of the [config.codeSnippetGeshi_url](#!/api/CKEDITOR.config-cfg-codeSnippetGeshi_url) option might also be set to an absolute URL.
+**Note:** The value of the CKEDITOR.config.codeSnippetGeshi_url option might also be set to an absolute URL.
 
 ### Summary
 
-This tutorial uses a `lib/` directory as an example of organizing the directory structure outside CKEditor. Most likely you will want to adjust it to match your needs, but remember to update the path in the [config.codeSnippetGeshi_url](#!/api/CKEDITOR.config-cfg-codeSnippetGeshi_url) configuration option.
+This tutorial uses the `lib/` directory as an example of organizing the directory structure outside CKEditor. Most likely you will want to adjust it to match your needs, but remember to update the path in the CKEDITOR.config.codeSnippetGeshi_url configuration option.
 
-You can now open your page with CKEditor and insert some code into its content by using the **Insert code snippet** feature. As long as the [Code Snippet GeSHi](#!/guide/dev_codesnippetgeshi) plugin is enabled, it will send Ajax requests to the GeSHi adapter file set in the [config.codeSnippetGeshi_url](#!/api/CKEDITOR.config-cfg-codeSnippetGeshi_url) configuration option.
+You can now open your page with CKEditor and insert some code into its content by using the **Insert code snippet** feature. As long as the [Code Snippet GeSHi](#!/guide/dev_codesnippetgeshi) plugin is enabled, it will send Ajax requests to the GeSHi adapter file set in the CKEDITOR.config.codeSnippetGeshi_url configuration option.

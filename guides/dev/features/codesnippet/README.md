@@ -48,7 +48,7 @@ After performing the steps described above, all the code snippets created with C
 
 ## Changing Highlighter Theme
 
-In [classic editor](#!/guide/dev_framed) use the [config.codeSnippet_theme](#!/api/CKEDITOR.config-cfg-codeSnippet_theme) option. For example:
+In [classic editor](#!/guide/dev_framed) use the CKEDITOR.config.codeSnippet_theme option. For example:
 
     config.codeSnippet_theme = 'school_book';
 
@@ -60,7 +60,7 @@ In [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divare
 
 ## Changing Supported Languages
 
-You can customize the list of languages with syntax highlighting support by setting the [`config.codeSnippet_languages`](#!/api/CKEDITOR.config-cfg-codeSnippet_languages) option.
+You can customize the list of languages with syntax highlighting support by setting the CKEDITOR.config.codeSnippet_languages option.
 
 The following example will reduce the languages list to JavaScript and PHP only.
 
@@ -79,7 +79,7 @@ For more information on how to implement a custom highlighter check the [Code Sn
 
 The Code Snippet plugin interface was designed with extensibility in mind. As a sample implementation the [GeSHi](http://qbnz.com/highlighter/) highlighter integration was created and is available as a separate [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin.
 
-Full installation instructions can be found in the [Code Snippet GeSHi guide](#!/guide/dev_codesnippetgeshi).
+Full installation instructions can be found in the [Iserting Code Snippets Using GeSHi](#!/guide/dev_codesnippetgeshi) article.
 
 ## Internet Explorer 8 Support
 

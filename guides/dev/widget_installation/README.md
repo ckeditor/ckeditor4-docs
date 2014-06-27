@@ -17,6 +17,8 @@ The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page
 * **[Enhanced Image](http://ckeditor.com/addon/image2)** &ndash; a plugin that lets you add captioned images with "click and drag" resizing.
 * **[Mathematical Formulas](http://ckeditor.com/addon/mathjax)** &ndash; a plugin that lets you add mathematical formulas written in TeX.
 * **[Placeholder](http://ckeditor.com/addon/placeholder)** &ndash; a plugin that lets you create non-editable text fragments.
+* **[Code Snippet](http://ckeditor.com/addon/codesnippet)** &ndash; a plugin that lets you insert rich code snippets with syntax highlighting into editor content.
+* **[Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi)** &ndash; a plugin that lets you insert rich code snippets with GeSHi syntax highlighting engine integrated.
 
 <img src="guides/dev_widget_installation/add_widget_ckbuilder_3.png" alt="Selected Plugins and Available Plugins lists in CKBuilder" width="786" height="491">
 

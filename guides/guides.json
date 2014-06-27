@@ -377,6 +377,14 @@
 						"description": "Creating Mathematical Formulas Using TeX.",
 						"meta_description": "Creating Mathematical Formulas Using TeX.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, mathjax, mathematics, math, maths, equation, equations, formula, formulas, formulae, mathematical, tex, latex, widget, drag, drop"
+					},
+					{
+						"name": "dev_placeholder",
+						"url": "dev/features/placeholder",
+						"title": "Placeholder",
+						"description": "Using Placeholders.",
+						"meta_description": "Using Placeholders.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, placeholder, placeholders, template, widget, drag, drop"
 					}
 				]
 			},

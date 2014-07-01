@@ -21,7 +21,7 @@ The [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin is a
 
 First of all you need to add both the Code Snippet GeSHi plugin and its dependencies to your CKEditor build and also install the GeSHi library itself.
 
-1. Add the [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin to your build (as explained in the [Installing Plugins](#!/guide/dev_plugins) article). Mind the dependencies &mdash; these will be resolved automatically by [CKBuilder](http://ckeditor.com/builder).
+1. Add the [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin to your build (as explained in the [Installing Widgets](#!/guide/dev_widget_installation) article). Mind the dependencies &mdash; these will be resolved automatically by [CKBuilder](http://ckeditor.com/builder).
 1. Download the GeSHi library from the Download page at the [GeSHi website](http://qbnz.com/highlighter).
 1. Create a `lib` directory next to your `ckeditor` directory.
 1. Extract GeSHi files to the chosen location &mdash; for example into the `lib/geshi/` directory.

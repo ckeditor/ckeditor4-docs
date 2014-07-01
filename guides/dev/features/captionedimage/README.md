@@ -56,4 +56,4 @@ See the following [showcase](http://ckeditor.com/tmp/4.4.0/widget-styles.html) o
 
 ## Captioned Image Demo 
 
-See the [working Creating Captioned Images sample](../samples/captionedimage.html) that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning and "click and drag" resizing.
+See the [working "Creating Captioned Images" sample](http://sdk.ckeditor.com/samples/captionedimage.html) that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.

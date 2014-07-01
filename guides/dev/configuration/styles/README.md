@@ -120,5 +120,6 @@ The plugin can be fine-tuned to only take into account the CSS selectors that ma
 
 You can also further customize the plugin by setting the {@link CKEDITOR.config#stylesheetParser_skipSelectors stylesheetParser_skipSelectors} configuration value. The plugin will then ignore the CSS rules that match the regular expression and will not display them in the drop-down list nor use them to output the document content. The default value excludes all rules for the `<body>` element as well as classes defined for no specific element, but you can modify it to ignore a wider set of elements, like in the example below.
 
-	// Ignore rules for <body> and <caption> elements, classes starting with "high", and any class defined for no specific element.
+	// Ignore rules for <body> and <caption> elements, classes starting with "high",
+	// and any class defined for no specific element.
 	config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;

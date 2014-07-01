@@ -87,4 +87,4 @@ Since **Internet Explorer 8** support was dropped in [highlight.js](http://highl
 
 ## Code Snippets Demo 
 
-See the [Inserting Code Snippets sample](http://sdk.ckeditor.com/samples/codesnippet.html) that shows a few instances of the code snippet widgets as well as the syntax highlighter themes which are available in the default implementation.
+See the [working "Inserting Code Snippets" sample](http://sdk.ckeditor.com/samples/codesnippet.html) that shows a few instances of the code snippet widgets as well as the syntax highlighter themes which are available in the default implementation.

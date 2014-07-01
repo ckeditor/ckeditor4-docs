@@ -14,7 +14,9 @@ To receive the result such as this:
 
 Please note that this option is only applicable to [classic](#!/guide/dev_framed) editor. In case of [inline](#!/guide/dev_inline) editor the toolbar position is set dynamically depending on the position of the editable element on the screen.
 
-See also the [working Toolbar Location sample](../samples/toolbarlocation.html) along with its source code, ready to copy and implement with your own CKEditor instance!
+## Toolbar Location Demo 
+
+See the [working "Toolbar Location Adjustment" sample](http://sdk.ckeditor.com/samples/toolbarlocation.html) that showcases how to place the editor toolbar at the bottom of its interface. 
 
 ## Related Features
 

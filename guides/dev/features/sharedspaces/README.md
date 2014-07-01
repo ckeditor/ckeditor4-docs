@@ -1,10 +1,14 @@
 # Shared Toolbar and Bottom Bar
 
+<p class="requirements">
+	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+</p>
+
 An optional CKEditor plugin called [Shared Spaces](http://ckeditor.com/addon/sharedspace) lets you put the editor toolbar and bottom bar in selected page elements detached from the editing areas and then share these UI elements among numerous editor instances.
 
 This feature can be used for both [classic](#!/guide/dev_framed), `iframe`-based editors, and [inline](#!/guide/dev_inline) editors. In case of inline editor instances this will ensure that the toolbar will always remain in one designated place on the page which may be beneficial is some usage scenarios.
 
-Please note that the UI elements can be shared between classic and inline editors placed on one page, too. See also the [working Shared Toolbar and Bottom Bar sample](../samples/sharedspaces.html) along with its source code, ready to copy and implement with your own CKEditor instance!
+Please note that the UI elements can be shared between classic and inline editors placed on one page, too.
 
 ## Customization
 
@@ -34,6 +38,10 @@ An editor instance with such configuration will use the shared toolbar (the `top
 <p class="tip">
     Please note that you need to create the page elements that will store the toolbar and bottom bar by yourself and make sure you provide valid IDs to the editor configuration.
 </p>
+
+## Shared Toolbar and Bottom Bar Demo 
+
+See the [working "Shared Toolbar and Bottom Bar" sample](http://sdk.ckeditor.com/samples/sharedspaces.html) that showcases how multiple editor instances can share the same toolbar and bottom bar. 
 
 ## Related Features
 

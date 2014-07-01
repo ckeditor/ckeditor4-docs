@@ -13,8 +13,6 @@ When you click the magic line's handle, a new paragraph will be inserted into th
 
 {@img magicline_03.png}
 
-See also the [working Magic Line sample](../samples/magicline.html) that showcases how Magic Line helps solve issues with cursor placement before or after elements such as nested tables, `<div>` elements, adjacent lists or multiple horizontal rules.
-
 ## Styling the Magic Line
 
 If the default striking red color does not suit you, you can easily modify it by setting the CKEDITOR.config.magicline_color configuration option, for example:
@@ -51,3 +49,7 @@ The CKEDITOR.config.magicline_putEverywhere option activates the all-encompassin
 The CKEDITOR.config.magicline_tabuList option lets you blacklist certain elements by providing a list of attributes that, if assigned, prevent magic line from appearing for these elements.
 
     CKEDITOR.config.magicline_tabuList = [ 'data-tabu' ];
+
+## Magic Line Demo 
+
+See the [working "Magic Line" sample](http://sdk.ckeditor.com/samples/magicline.html) that showcases how Magic Line helps solve issues with cursor placement before or after elements such as nested tables, `<div>` elements, adjacent lists, or multiple horizontal rules.

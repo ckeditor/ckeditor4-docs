@@ -1,8 +1,10 @@
 # Automatic Editor Height Adjustment to Content
 
-The optional [Auto Grow](http://ckeditor.com/addon/autogrow) plugin makes it possible to configure CKEditor to automatically expand and shrink vertically depending on the amount and size of content entered in its editing area.
+<p class="requirements">
+	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+</p>
 
-To try it out, see the [Automatic Editor Height Adjustment to Content](../samples/autogrow.html) sample along with its source code, ready to copy and implement with your own CKEditor instance. Notice how the editor instance in the sample has grown to fit the entire standard CKEditor demo text!
+The optional [Auto Grow](http://ckeditor.com/addon/autogrow) plugin makes it possible to configure CKEditor to automatically expand and shrink vertically depending on the amount and size of content entered in its editing area.
 
 ## Minimum and Maximum Height
 
@@ -46,3 +48,7 @@ An additional CKEDITOR.config.autoGrow_bottomSpace option lets you insert some e
     config.autoGrow_bottomSpace = 50;
 
 With this setting in place, the 50-pixel-high space below the content will always be preserved. This is visible in the sample as well as the second image above.
+
+## Auto Grow Demo 
+
+See the [working "Automatic Editor Height Adjustment to Content" sample](http://sdk.ckeditor.com/samples/autogrow.html) that shows how the editor can automatically expand and shrink vertically to fit the content.

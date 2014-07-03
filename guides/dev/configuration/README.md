@@ -13,7 +13,7 @@ The best way to set the CKEditor configuration is in-page, when creating editor 
 In-page settings can be passed to any of the editor instance creation functions, namely CKEDITOR#replace and CKEDITOR#appendTo. For example:
 
 	CKEDITOR.replace( 'editor1', {
-		toolbar: 'Basic',
+		language: 'fr',
 		uiColor: '#9AB8F3'
 	});
 

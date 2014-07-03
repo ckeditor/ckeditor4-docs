@@ -1,8 +1,8 @@
-# Styles
+# Applying Styles to Editor Content
 
-The [Styles Combo](http://ckeditor.com/addon/stylescombo) plugin adds a **Styles** drop-down list to the CKEditor toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor.
+The [Styles Combo](http://ckeditor.com/addon/stylescombo) plugin adds the **Styles** drop-down list to the CKEditor toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor.
 
-The entries available in the Styles drop-down list can be easily customized to suit your needs.
+The entries available in the **Styles** drop-down list can (and actually should!) be customized to suit your needs.
 
 ## Defining Styles
 
@@ -22,7 +22,7 @@ The following code shows how to register a sample style definition.
 
 The definition registration like the one above can be placed inline in the page source, or can live in an external file which is loaded "on demand", when needed only (see below).
 
-When the definitions are ready, you must instruct the editor to apply the newly registered styles by using the {@link CKEDITOR.config#stylesSet stylesSet} setting. This may be set in the `config.js` file, for example:
+When the definitions are ready, you must instruct the editor to apply the newly registered styles by using the  CKEDITOR.config.stylesSet setting. This may be set by using [any of the editor configuration methods available](#!/guide/dev_configuration), for example in the `config.js` file:
 
 	config.stylesSet = 'my_styles';
 
@@ -32,7 +32,7 @@ The style definition registration call can be included in an external JavaScript
 
 Your style definition file can be saved in any place of your website (or somewhere in the Internet). You must, however, know the URL required to reach it. For example, you can save the file in the root of your website, and then call it as `/styles.js`, or place it somewhere else, and refer to it using its full URL, like `http://www.example.com/styles.js`.
 
-At that point, change the `stylesSet` setting to point the editor to your file:
+At that point, change the CKEDITOR.config.stylesSet setting to point the editor to your file:
 
 	config.stylesSet = 'my_styles:/styles.js';
 
@@ -46,7 +46,7 @@ Note that you must use the unique name you have used to register the style defin
 
 ## Style Rules
 
-The entries inside a style definition are called the "style rules". Each rule defines the display name for a single style as well as the element, attributes, and CSS styles to be used for it. The following is a generic representation of a style rule:
+The entries inside a style definition are called *the style rules*. Each rule defines the display name for a single style as well as the element, attributes, and CSS styles to be used for it. The following is a generic representation of a style rule:
 
 	{
 		name: 'Name displayed in the Styles drop-down list',
@@ -70,9 +70,9 @@ The `name` and `element` values are required, while other values are optional.
 There are three standard style types, each one related to the element used in the style rule. Additionally, editor features may define custom style types.
 
 * **Block-level styles** &ndash; Applied to text blocks (paragraphs) as a whole, not limited to text selections. These apply to the following elements: `address`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, and `pre`.
-* **Object styles** &ndash; Applied to special selectable objects (not textual), whenever such selection is supported by the browser. These apply to the following elements: `a`, `embed`, `hr`, `img`, `li`, `object`, `ol`, `table`, `td`, `tr`, and `ul`.
+* **Object styles** &ndash; Applied to special selectable objects (non-textual), whenever such selection is supported by the browser. These apply to the following elements: `a`, `embed`, `hr`, `img`, `li`, `object`, `ol`, `table`, `td`, `tr`, and `ul`.
 * **Inline styles** &ndash; Applied to text selections for style rules using elements not defined in other style types.
-* **Custom styles** &ndash; Plugins may define special style handlers which can be applied in special situations. One of such custom handlers is defined for widgets and described in the [Widget Styles](#!/guide/dev_styles-section-widget-styles) section below.
+* **Custom styles** &ndash; Plugins may define special style handlers which can be applied in certain situations. One of such custom handlers is defined for widgets and described in the [Widget Styles](#!/guide/dev_styles-section-widget-styles) section below.
 
 ## Widget Styles
 
@@ -97,13 +97,17 @@ If you are interested in seeing how this works in practice, see the [little demo
 
 ## The Stylesheet Parser Plugin
 
-Another simplified method of customizing the styles for the document created in CKEditor and populating the drop-down list with style definitions coming from an external CSS stylesheet file is also available. The optional [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin lets you use your existing CSS styles without the need to define the styles specifically for CKEditor in the format presented above.
+<p class="requirements">
+	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+</p>
 
-Having the Stylesheet Parser [installed](#!/guide/dev_plugins), you need to supply the location of the CSS file that contains your style definitions by using the {@link CKEDITOR.config#contentsCss contentsCss} configuration setting:
+Another method of customizing the styles for the document created in CKEditor and populating the drop-down list with style definitions coming from an external CSS stylesheet file is also available. The optional [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin lets you use your existing CSS styles without the need to define the styles specifically for CKEditor in the format presented above.
+
+Having the Stylesheet Parser installed, you need to supply the location of the CSS file that contains your style definitions by using the CKEDITOR.config.contentsCss configuration setting:
 
 	config.contentsCss = 'sample_CSS_file.css';
 
-Finally, if you want to skip loading the styles that are used in CKEditor by default, you may set the `stylesSet` option to an empty value:
+Finally, if you want to skip loading the styles that are used in CKEditor by default, you may set the CKEDITOR.config.stylesSet option to an empty value:
 
 	config.stylesSet = [];
 
@@ -111,14 +115,14 @@ This solution lets you configure the editor to use existing CSS stylesheet rules
 
 ### Choosing the CSS Selectors
 
-The plugin can be fine-tuned to only take into account the CSS selectors that match the {@link CKEDITOR.config#stylesheetParser_validSelectors stylesheetParser_validSelectors} configuration value. The default regular expression accepts all CSS rules in a form of `element.class`, but you can modify it to refer to a limited set of elements, like in the example below.
+The Stylesheet Parser plugin can be fine-tuned to only take into account the CSS selectors that match the CKEDITOR.config.stylesheetParser_validSelectors configuration value. The default regular expression accepts all CSS rules in a form of `element.class`, but you can modify it to refer to a limited set of elements, like in the example below.
 
 	// Only add rules for <p> and <span> elements.
 	config.stylesheetParser_validSelectors = /\^(p|span)\.\w+/;
 
 ### Limiting the CSS Selectors
 
-You can also further customize the plugin by setting the {@link CKEDITOR.config#stylesheetParser_skipSelectors stylesheetParser_skipSelectors} configuration value. The plugin will then ignore the CSS rules that match the regular expression and will not display them in the drop-down list nor use them to output the document content. The default value excludes all rules for the `<body>` element as well as classes defined for no specific element, but you can modify it to ignore a wider set of elements, like in the example below.
+You can also further customize the Stylesheet Parser plugin by setting the CKEDITOR.config.stylesheetParser_skipSelectors configuration value. The plugin will then ignore the CSS rules that match the regular expression and will not display them in the **Styles** drop-down list nor use them to output the document content. The default value excludes all rules for the `<body>` element as well as classes defined for no specific element, but you can modify it to ignore a wider set of elements, like in the example below.
 
 	// Ignore rules for <body> and <caption> elements, classes starting with "high",
 	// and any class defined for no specific element.

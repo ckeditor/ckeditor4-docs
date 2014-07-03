@@ -2,7 +2,11 @@
 
 The [Styles Combo](http://ckeditor.com/addon/stylescombo) plugin adds the **Styles** drop-down list to the CKEditor toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor.
 
-The entries available in the **Styles** drop-down list can (and actually should!) be customized to suit your needs.
+The Styles Combo plugin is included in the Standard and Full presets available from the official CKEditor [Download](http://ckeditor.com/download) page. You can also [add it to your custom build](#!/guide/dev_plugins) through [CKBuilder](http://ckeditor.com/builder).
+
+{@img styles_01.png}
+
+The image above shows the **Styles** drop-down with default styles. The entries available in the drop-down list can (and actually should!) be customized to suit your needs.
 
 ## Defining Styles
 
@@ -111,6 +115,10 @@ Finally, if you want to skip loading the styles that are used in CKEditor by def
 
 	config.stylesSet = [];
 
+The image below shows the **Styles** drop-down list populated with entries coming from an external stylesheet, without default styles that were disabled in the editor configuration by setting  CKEDITOR.config.stylesSet to `[]`.
+
+{@img styles_02.png}
+
 This solution lets you configure the editor to use existing CSS stylesheet rules without the need to create separate style definitions for CKEditor. On the other hand, the previously used approach offers more control over which styles are available for the users, so both solutions can be employed interchangeably, according to your needs.
 
 ### Choosing the CSS Selectors
@@ -127,3 +135,7 @@ You can also further customize the Stylesheet Parser plugin by setting the CKEDI
 	// Ignore rules for <body> and <caption> elements, classes starting with "high",
 	// and any class defined for no specific element.
 	config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;
+
+## Editor Styles Demo 
+
+See the [working "Applying Styles to Editor Content" sample](http://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation. 

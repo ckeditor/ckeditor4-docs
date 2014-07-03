@@ -238,14 +238,6 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, toolbar, button, buttons, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					},
 					{
-						"name": "dev_styles",
-						"url": "dev/configuration/styles",
-						"title": "Styles Drop-down",
-						"description": "How to configure the Styles drop-down list.",
-						"meta_description": "How to configure the Styles drop-down list.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
-					},
-					{
 						"name": "dev_output_format",
 						"url": "dev/configuration/output_format",
 						"title": "Output Formatting",
@@ -385,6 +377,14 @@
 						"description": "Using Placeholders.",
 						"meta_description": "Using Placeholders.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, placeholder, placeholders, template, widget, drag, drop"
+					},
+					{
+						"name": "dev_styles",
+						"url": "dev/configuration/styles",
+						"title": "Styles Drop-down",
+						"description": "Applying Styles to Editor Content.",
+						"meta_description": "Applying Styles to Editor Content.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, stylesheet, parser, css, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					}
 				]
 			},

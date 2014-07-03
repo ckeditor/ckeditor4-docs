@@ -107,6 +107,10 @@ If you are interested in seeing how this works in practice, see the [little demo
 
 Another method of customizing the styles for the document created in CKEditor and populating the drop-down list with style definitions coming from an external CSS stylesheet file is also available. The optional [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin lets you use your existing CSS styles without the need to define the styles specifically for CKEditor in the format presented above.
 
+<p class="tip">
+	Please note that the Stylesheet Parser plugin is incompatible with <a href="#!/guide/dev_advanced_content_filter">Advanced Content Filter</a>, so it disables the filter after installing.
+</p>
+
 Having the Stylesheet Parser installed, you need to supply the location of the CSS file that contains your style definitions by using the CKEDITOR.config.contentsCss configuration setting:
 
 	config.contentsCss = 'sample_CSS_file.css';

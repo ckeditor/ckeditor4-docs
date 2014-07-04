@@ -21,9 +21,9 @@ This configuration option defines the IDs of the page elements that will store t
         bottom: 'anotherId'
     };
 
-The image below presents this editor configuration for two inline editor instances.
+The image below presents this editor configuration for two classic editor instances.
 
-{@img sharedspaces_01.png}
+{@img sharedspace_01.png}
 
 If, on the other hand, you only want to share some UI elements and leave others to particular instances, you can use the settings like the following:
 
@@ -31,13 +31,23 @@ If, on the other hand, you only want to share some UI elements and leave others 
         top: 'someElementId'
     };
 
-An editor instance with such configuration will use the shared toolbar (the `top` element) while preserving its own bottom bar with the elements path, as shown in the image below with two classic editor instances.
+An editor instance with such configuration will use the shared toolbar (the `top` element) while preserving its own bottom bar with the elements path, as shown in the image below with the same two classic editor instances.
 
-{@img sharedspaces_02.png}
+{@img sharedspace_02.png}
 
 <p class="tip">
     Please note that you need to create the page elements that will store the toolbar and bottom bar by yourself and make sure you provide valid IDs to the editor configuration.
 </p>
+
+## Tips and Tricks
+
+The Shared Space feature affects a crucial editor element &mdash; its user interface &mdash; so some fine-tuning of the editor configuration might be needed. Here are a few tips:
+
+* The [Editor Resize](http://ckeditor.com/addon/resize) plugin should be disabled as it would not work in this context.
+* Likewise, the [Maximize](http://ckeditor.com/addon/maximize) plugin should be disabled; it is disabled automatically for inline editors.
+
+
+    config.removePlugins = 'maximize,resize';
 
 ## Shared Toolbar and Bottom Bar Demo 
 
@@ -45,4 +55,4 @@ See the [working "Shared Toolbar and Bottom Bar" sample](http://sdk.ckeditor.com
 
 ## Related Features
 
-Try the [Toolbar Location](#!/guide/dev_toolbarlocation) feature to customize the toolbar position within the editor user interface.
+If you are looking for an alternative method to change the editor user interface, see the [Toolbar Location](#!/guide/dev_toolbarlocation) feature that lets you customize the toolbar position within the editor user interface.

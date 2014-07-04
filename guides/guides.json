@@ -299,8 +299,8 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, readonly, read-only, uneditable, noneditable, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					},
                     {
-						"name": "dev_sharedspaces",
-						"url": "dev/features/sharedspaces",
+						"name": "dev_sharedspace",
+						"url": "dev/features/sharedspace",
 						"title": "Shared Toolbar and Bottom Bar",
 						"description": "Sharing UI Elements Among Editor Instances.",
 						"meta_description": "Sharing UI Elements Among Editor Instances.",

@@ -18,19 +18,27 @@ As a matter of fact, CKEditor uses the `<textarea>` element to transfer its data
 
 Note that if you want to load data into the editor, for example from a database, you need to put that data inside the `<textarea>` element, just like the HTML-encoded `<p>` element in the example above. In this case the `<textarea>` element was named `editor1`. This name can be used in the server-side code later, when receiving the posted data.
 
-After the `<textarea>` element is inserted, you can use the [CKEditor JavaScript API](#!/api) to replace this HTML element with an editor instance. A simple {@link CKEDITOR#replace CKEDITOR.replace} method call will be enough to achieve that:
+After the `<textarea>` element is inserted, you can use the [CKEditor JavaScript API](#!/api) to replace this HTML element with an editor instance. A simple (and most commonly used) CKEDITOR.replace method call will be enough to achieve that:
 
 	<script>
 		CKEDITOR.replace( 'editor1' );
 	</script>
 
-This script block must be included at any point after the `<textarea>` tag in the source code of the page. You can also call the `CKEDITOR.replace` method inside the `<head>` section, but in this case you will need to listen for the `window.onload` event:
+This script block must be included at any point after the `<textarea>` tag in the source code of the page. You can also call the CKEDITOR.replace method inside the `<head>` section, but in this case you will need to listen for the `window.onload` event:
 
 	<script>
 		window.onload = function() {
 			CKEDITOR.replace( 'editor1' );
 		};
 	</script>
+
+### Alternative Methods for Creating a Classic Editor
+
+Apart from the CKEDITOR.replace method you can also use the following options to create a classic editor on your page:
+
+* The CKEDITOR.appendTo method &ndash; Creates a new editor instance at the end of a specific DOM element.
+* The CKEDITOR.replaceAll method &ndash; Replaces all `<textarea>` elements available in the document (or just all those that match certain criteria) with editor instances.
+* The automatic replacement of all `<textarea>` elements of a `ckeditor` class in the document with CKEditor instances.
 
 ## Saving the Editor Data
 

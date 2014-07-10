@@ -1,12 +1,16 @@
 # Inline Editing
 
-Inline Editing is a new technology introduced in CKEditor 4 that allows you to **select any editable element on the page and edit it in-place**. As a result, the editor can be used to edit pages that look just like the final page.
+Inline Editing is a new technology introduced in CKEditor 4 that allows you to **select any editable element on the page and edit it in-place**. As a result, the editor can be used to edit content that looks just like the final page.
 
 It is a total WYSIWYG experience, because not only the edited content looks like the final outcome, but also the page and the context where the content is placed is the real one. 
 
 To try it out, see the [demo on the official CKEditor site](http://ckeditor.com/demo#inline).
 
 <img src="guides/dev_ckeditor_js_load/inline_example.png" alt="Inline editor example" width="585" height="294">
+
+## Content Styles
+
+Inline editing is a true WYSIWYG experience and on the contrary to [classic editing](#!/guide/dev_framed), the styles that are used for edited content come directly from the document stylesheet. This means that inline editors ignore default CKEditor content styles provided through the CKEDITOR.config.contentsCss configuration option and use the styles from the page that CKEditor is rendered on.
 
 ## Enabling Inline Editing
 
@@ -19,7 +23,9 @@ Suppose, for example, that you want to make a `<div>` element editable. In order
 		<p>The "div" element that contains this text is now editable.
 	</div>
 
-It is also possible to enable inline editing with explicit code, by calling the CKEDITOR.inline method for the element that needs to have it enabled. Note that in this case you need to turn off automatic editor creation first by setting the CKEDITOR.disableAutoInline option to `true`:
+It is also possible to enable inline editing with explicit code, by calling the CKEDITOR.inline method for the element that needs to have it enabled. Note that in this case you need to turn off automatic editor creation first by setting the CKEDITOR.disableAutoInline option to `true`.
+
+Do remember that if the DOM element for which inline editing is being enabled does not have the `contenteditable` attribute set to `true`, the editor will start in read-only mode.
 
 	<div id="editable" contenteditable="true">
 		<h1>Inline Editing in Action!</h1>
@@ -31,7 +37,7 @@ It is also possible to enable inline editing with explicit code, by calling the 
 		CKEDITOR.inline( 'editable' );
 	</script>
 
-When you click inside the contents of this `<div>` element, the CKEditor toolbar will appear.
+When you click inside the content of this `<div>` element, the CKEditor toolbar will appear.
 
 <p class="tip">
 	The list of elements that support inline editing is available in the CKEDITOR.dtd.$editable property.

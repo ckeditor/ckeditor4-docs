@@ -47,7 +47,7 @@ The Shared Space feature affects a crucial editor element &mdash; its user inter
 * Likewise, the [Maximize](http://ckeditor.com/addon/maximize) plugin should be disabled; it is disabled automatically for inline editors.
 
 
-    config.removePlugins = 'maximize,resize';
+	config.removePlugins = 'maximize,resize';
 
 ## Shared Toolbar and Bottom Bar Demo 
 

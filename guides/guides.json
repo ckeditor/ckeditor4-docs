@@ -299,22 +299,6 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, readonly, read-only, uneditable, noneditable, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					},
                     {
-						"name": "dev_sharedspace",
-						"url": "dev/features/sharedspace",
-						"title": "Shared Toolbar and Bottom Bar",
-						"description": "Sharing UI Elements Among Editor Instances.",
-						"meta_description": "Sharing UI Elements Among Editor Instances.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, blocks, sharing, common, shared, spaces, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-                    {
-						"name": "dev_toolbarlocation",
-						"url": "dev/features/toolbarlocation",
-						"title": "Toolbar Location",
-						"description": "Adjusting Editor Toolbar Location.",
-						"meta_description": "Adjusting Editor Toolbar Location.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, location, position, buttons, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-                    {
 						"name": "dev_autogrow",
 						"url": "dev/features/autogrow",
 						"title": "Editor Auto Grow",
@@ -385,6 +369,30 @@
 						"description": "Applying Styles to Editor Content.",
 						"meta_description": "Applying Styles to Editor Content.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, stylesheet, parser, css, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+					},
+					{
+						"name": "dev_uitypes",
+						"url": "dev/features/uitypes",
+						"title": "UI Types",
+						"description": "Editor User Interface Types.",
+						"meta_description": "Editor User Interface Types.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, floating, fixed, inline, classic, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_sharedspace",
+						"url": "dev/features/sharedspace",
+						"title": "Shared Toolbar and Bottom Bar",
+						"description": "Sharing UI Elements Among Editor Instances.",
+						"meta_description": "Sharing UI Elements Among Editor Instances.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, blocks, sharing, common, shared, spaces, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+                    {
+						"name": "dev_toolbarlocation",
+						"url": "dev/features/toolbarlocation",
+						"title": "Toolbar Location",
+						"description": "Adjusting Editor Toolbar Location.",
+						"meta_description": "Adjusting Editor Toolbar Location.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, location, position, buttons, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

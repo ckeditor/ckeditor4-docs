@@ -393,6 +393,14 @@
 						"description": "Adjusting Editor Toolbar Location.",
 						"meta_description": "Adjusting Editor Toolbar Location.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, location, position, buttons, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+					{
+						"name": "dev_devtools",
+						"url": "dev/features/devtools",
+						"title": "Developer Tools",
+						"description": "Using Developer Tools Plugin to Customize Dialog Windows.",
+						"meta_description": "Using Developer Tools Plugin to Customize Dialog Windows.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, developer, tools, helper, help, dialog, dialogs, window, windows, tab, field, customization, customize, customisation, customise"
 					}
 				]
 			},

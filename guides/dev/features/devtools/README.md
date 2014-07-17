@@ -19,6 +19,13 @@ This feature is aimed at developers who would like to [customize their CKEditor 
 	This feature works with all CKEditor dialog windows, including the ones that were created by custom plugins.
 </p>
 
+## Customization Options
+
+The Developer Tools plugin provides two configuration options:
+
+* CKEDITOR.config.devtools_styles &ndash; sets the CSS styles applied to the tooltip.
+* CKEDITOR.config.textCallback &ndash; contains a function that returns the text displayed in the tooltip.
+
 ## Developer Tools Demo 
 
 See the [working "Developer Tools" sample](http://sdk.ckeditor.com/samples/devtools.html) that showcases how easy it can be to get information about editor dialog windows and their elements. 

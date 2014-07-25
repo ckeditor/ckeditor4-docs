@@ -11,7 +11,7 @@
 
 [CKEditor UI color can be set manually](#!/guide/dev_uicolor) in the editor configuration, but adjusting the UI color can be even easier than that. To make use of the second method, your CKEditor build needs to include the optional [UI Color Picker](http://ckeditor.com/addon/uicolor) plugin.
 
-When the plugin is enabled, it adds a new **UI Color Picker** button (<img src="guides/dev_uicolorpicker/uicolor.png">) to your toolbar. Clicking this button opens the **UI Color Picker** dialog window where you have a few options to find the right color.
+When the plugin is enabled, it adds a new **UI Color Picker** button (<img src="guides/dev_uicolorpicker/uicolorpicker.png">) to your toolbar. Clicking this button opens the **UI Color Picker** dialog window where you have a few options to find the right color.
 
 {@img uicolor_02.png}
 

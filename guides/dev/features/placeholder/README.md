@@ -8,7 +8,7 @@ The optional [Placeholder](http://ckeditor.com/addon/placeholder) plugin allows 
 
 {@img placeholder_01.png}
 
-Since version 4.3 placeholders are inserted as widgets, so they have [all advantages of widgets](#!/guide/dev_widgets-section-common-usage-scenarios), i.e. you can **treat the entire placeholder as one entity** and select, delete, or move it with drag and drop in the editor content area as one unit.
+Since version 4.3 placeholders are inserted as inline widgets, so they have [all advantages of widgets](#!/guide/dev_widgets-section-common-usage-scenarios), i.e. you can **treat the entire placeholder as one entity** and select, delete, or move it with drag and drop in the editor content area as one unit.
 
 ## Customization Options
 

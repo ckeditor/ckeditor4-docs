@@ -23,7 +23,9 @@ When you are satisfied with your choice, you can copy the working UI color confi
 
 {@img uicolor_03.png}
 
-Although this feature is mainly useful for developers who are working on their CKEditor customizations, if you leave it enabled in your production environment, your end-users will be able to adjust the editor interface color to their liking. This change will only last until the end of their visit, though, and on reloading the page they will be greeted with default editor colors again.
+## End-user Application
+
+Although this feature is mainly useful for developers who are working on their CKEditor customizations, it can also be made available to end users. A developer can implement it in the administration panel of a CMS or a similar site builder application where the users are able to adjust the look of a website or application. User's choice can then be read from the editor instance by using the CKEDITOR.editor.getUiColor method and saved (e.g. in the application's database) to be served as [in-page configuration](#!/guide/dev_configuration-section-defining-configuration-in-page) when creating subsequent editor instances.
 
 ## UI Color Picker Demo 
 

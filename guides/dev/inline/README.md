@@ -2,15 +2,15 @@
 
 Inline Editing is a new technology introduced in CKEditor 4 that allows you to **select any editable element on the page and edit it in-place**. As a result, the editor can be used to edit content that looks just like the final page.
 
-It is a total WYSIWYG experience, because not only the edited content looks like the final outcome, but also the page and the context where the content is placed is the real one. 
+It is a total WYSIWYG experience, because not only the edited content looks like the final outcome, but also the page and the context where the content is placed is the real one. Unlike in [classic editor](#!/guide/dev_framed), there is no `<iframe>` element created for the editing area. The CSS styles used for editor content are exactly the same as on the target page where this content is rendered!
 
 To try it out, see the [demo on the official CKEditor site](http://ckeditor.com/demo#inline).
 
 <img src="guides/dev_ckeditor_js_load/inline_example.png" alt="Inline editor example" width="585" height="294">
 
-## Content Styles
+## Content Styles = Page Styles
 
-Inline editing is a true WYSIWYG experience and on the contrary to [classic editing](#!/guide/dev_framed), the styles that are used for edited content come directly from the document stylesheet. This means that inline editors ignore default CKEditor content styles provided through the CKEDITOR.config.contentsCss configuration option and use the styles from the page that CKEditor is rendered on.
+Inline editing is a true WYSIWYG experience and on the contrary to classic editing, the styles that are used for edited content come directly from the document stylesheet. This means that inline editors ignore default CKEditor content styles provided through the CKEDITOR.config.contentsCss configuration option and use the styles from the page that CKEditor is rendered on.
 
 ## Enabling Inline Editing
 
@@ -49,7 +49,7 @@ Since CKEditor 4.2 you can also turn `<textarea>` elements into inline editors. 
 
 ## Retrieving the Editor Data
 
-Unlike in [classic editing](#!/guide/dev_framed), the data edited with CKEditor is not placed inside a `<textarea>` when using inline editing. It is present directly in the page DOM structure instead. It is thus the job of your application to retrieve the data and manipulate it for saving.
+Unlike in classic editing, the data edited with CKEditor is not placed inside a `<textarea>` when using inline editing. It is present directly in the page DOM structure instead. It is thus the job of your application to retrieve the data and manipulate it for saving.
 
 To retrieve the editor data, call the {@link CKEDITOR.editor#method-getData} method of the editor instance. For the examples above, this would look like the following:
 

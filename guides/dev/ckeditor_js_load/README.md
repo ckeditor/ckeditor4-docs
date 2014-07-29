@@ -23,7 +23,7 @@ Now that the CKEditor JavaScript API is available on the page, you can use it to
 <img src="guides/dev_ckeditor_js_load/classic_example.png" alt="Classic editor example" width="572" height="288">
 
 ### Inline Editing
-[Inline editing](#!/guide/dev_inline) is an innovative feature that can be used on pages which need to look like the final page. Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute. The editor toolbar appears automatically for these elements, floating on the page.
+[Inline editing](#!/guide/dev_inline) is an innovative feature that can be used for content which needs to look like the final page, giving you a true <abbr title="What You See Is What You Get">WYSIWYG</abbr> experience. Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute. The editor toolbar appears automatically for these elements, floating on the page.
 
 [See the demo here](http://ckeditor.com/demo#inline).
  

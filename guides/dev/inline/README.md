@@ -16,9 +16,9 @@ Inline editing is a true WYSIWYG experience and on the contrary to classic editi
 
 Inline Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute.
 
-Suppose, for example, that you want to make a `<div>` element editable. In order to achieve this, it is enough to do the following:
+Suppose, for example, that you want to make a `<div>` element with an ID of `editor1` editable. In order to achieve this, it is enough to do the following:
 
-	<div id="editable" contenteditable="true">
+	<div id="editor1" contenteditable="true">
 		<h1>Inline Editing in Action!</h1>
 		<p>The "div" element that contains this text is now editable.
 	</div>
@@ -27,14 +27,14 @@ It is also possible to enable inline editing with explicit code, by calling the 
 
 Do remember that if the DOM element for which inline editing is being enabled does not have the `contenteditable` attribute set to `true`, the editor will start in read-only mode.
 
-	<div id="editable" contenteditable="true">
+	<div id="editor1" contenteditable="true">
 		<h1>Inline Editing in Action!</h1>
 		<p>The "div" element that contains this text is now editable.
 	</div>
 	<script>
 		// Turn off automatic editor creation first.
 		CKEDITOR.disableAutoInline = true;
-		CKEDITOR.inline( 'editable' );
+		CKEDITOR.inline( 'editor1' );
 	</script>
 
 When you click inside the content of this `<div>` element, the CKEditor toolbar will appear.
@@ -43,24 +43,13 @@ When you click inside the content of this `<div>` element, the CKEditor toolbar 
 	The list of elements that support inline editing is available in the CKEDITOR.dtd.$editable property.
 </p>
 
-### Inline Editing for Textarea
+## Inline Editing for Textarea
 
 Since CKEditor 4.2 you can also turn `<textarea>` elements into inline editors. When you call the CKEDITOR.inline method on a `<textarea>`, an additional `<div>` element with inline editing enabled will replace the original `<textarea>`.
 
-## Retrieving the Editor Data
+## Further Reading
 
-Unlike in classic editing, the data edited with CKEditor is not placed inside a `<textarea>` when using inline editing. It is present directly in the page DOM structure instead. It is thus the job of your application to retrieve the data and manipulate it for saving.
+Check the following articles to learn more about other editor types and learn how to get and save the editor data:
 
-To retrieve the editor data, call the {@link CKEDITOR.editor#method-getData} method of the editor instance. For the examples above, this would look like the following:
-
-	<script>
-		var data = CKEDITOR.instances.editable.getData();
-
-		// Your code to save "data", usually through Ajax.
-	</script>
-
-<p class="tip">
-	If you do not save your data with a library that already encodes it by using the JavaScript <code>encodeURIComponent</code> method, but do it manually instead, you will have to remember to use <code>encodeURIComponent</code> to properly encode the data that is being sent.
-</p>
-
-Note that the ID of the original `<div>` was passed to the {@link CKEDITOR#instances} object to make it possible to retrieve the editor instance.
+* [Classic editing](#!/guide/dev_framed) is the usage scenario where the editor is most often represented by a toolbar and an editing area placed in a specific position on the page, usually as a part of a form that you use to submit some content to the server.
+* [Getting and Saving Data in CKEditor](#!/guide/dev_savedata) explains how to retrieve data from any editor instance and send it to your server.

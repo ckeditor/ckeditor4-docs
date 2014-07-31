@@ -57,6 +57,14 @@
 								"meta_keywords": "ckeditor, editor, wysiwyg, inline, inplace, in-place"
 							}
 						]
+					},
+					{
+						"name": "dev_savedata",
+						"url": "dev/savedata",
+						"title": "Getting and Saving Data",
+						"description": "How to retrieve and save CKEditor data.",
+						"meta_description": "How to retrieve and save CKEditor data.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
 					}
 				]
 			},

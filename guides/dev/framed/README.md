@@ -50,24 +50,6 @@ Apart from the CKEDITOR.replace method you can also use the following options to
 * The CKEDITOR.replaceAll method &ndash; Replaces all `<textarea>` elements available in the document (or just all those that match certain criteria) with editor instances.
 * The automatic replacement of all `<textarea>` elements of a `ckeditor` class in the document with CKEditor instances.
 
-## Saving the Editor Data
-
-As stated above, in this scenario the editor works just like a `<textarea>` field. This means that when submitting a form containing an editor instance, its data will simply be posted to the server, using the `<textarea>` element name as the key to retrieve it.
-
-For example, following the above code sample, you could create this PHP code:
-
-	<?php
-		$editor_data = $_POST[ 'editor1' ];
-	?>
-
-## Client-Side Data Handling
-
-Some applications (like those based on Ajax) need to handle all data on the client side, sending it to the server using their specific methods. If this is the case, it is enough to use the [CKEditor JavaScript API](#!/api) to easily retrieve the editor instance data. In order to do this, you can use the {@link CKEDITOR.editor#method-getData getData} method:
-
-	<script>
-		var editor_data = CKEDITOR.instances.editor1.getData();
-	</script>
-
 ## Complete Sample
 
 To insert a CKEditor instance, you can use the following sample that creates a basic HTML page containing a form with a `<textarea>` element that is replaced with CKEditor.
@@ -94,3 +76,10 @@ To insert a CKEditor instance, you can use the following sample that creates a b
 		</form>
 	</body>
 	</html>
+
+## Further Reading
+
+Check the following articles to learn more about other editor types and learn how to get and save the editor data:
+
+* [Inline editing](#!/guide/dev_inline) is a new technology introduced in CKEditor 4 that allows you to select any editable element on the page and edit it in-place.
+* [Getting and Saving Data in CKEditor](#!/guide/dev_savedata) explains how to retrieve data from any editor instance and send it to your server.

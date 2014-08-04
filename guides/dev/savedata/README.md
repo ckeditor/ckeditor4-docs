@@ -6,7 +6,7 @@ The [CKEditor JavaScript API](#!/api) makes it easy to retrieve and control the 
 
 ## Retrieving Data from CKEditor
 
-Some applications (like those based on Ajax) need to handle all data on the client side, sending it to the server using their specific methods. If this is the case, it is enough to use the [CKEditor JavaScript API](#!/api) to easily retrieve the editor instance data.
+Some applications need to handle all data on the client side, sending it to the server using their specific methods. This is what usually happens in [inline editing](#!/guide/dev_inline) &mdash; with the possibility to [create](#!/api/CKEDITOR-method-inline) and [destroy](#!/api/CKEDITOR.editor-method-destroy) CKEditor instances dynamically, CKEditor is a perfect match for Ajax applications. If this is the case, it is enough to use the JavaScript API methods to easily retrieve the editor instance data.
 
 To retrieve the editor data, call the CKEDITOR.editor.getData method of the editor instance. For an editor instance with an ID of `editor1`, this would look like the following:
 
@@ -34,22 +34,27 @@ For example, for the `<textarea>` element with an ID of `editor1`, as used in ou
 		$editor_data = $_POST[ 'editor1' ];
 	?>
 
+This method works for any CKEditor instance that replaces a `<textarea>` in a `<form>` element, both [classic](#!/guide/dev_framed-section-creating-a-classic-editor-with-a-textarea) and [inline](#!/guide/dev_inline-section-inline-editing-for-textarea).
+
 <div class="tip">
 	<p>Please note that the replaced <code>&lt;textarea&gt;</code> element is updated automatically by CKEditor straight before submission. If you need to access the <code>&lt;textarea&gt;</code> value programatically with JavaScript (e.g. in the <code>onsubmit</code> handler to validate the entered data), there is a chance that the <code>&lt;textarea&gt;</code> element would still store the original data. In order to update the value of replaced <code>&lt;textarea&gt;</code> use the <code><a href="#!/api/CKEDITOR.editor-method-updateElement">editor.updateElement()</a></code> method.</p>
 	<p>In rare cases it may happen that the server or application configuration will reject submitted HTML content if it is not encoded first (e.g. ASP.NET <code>ValidateRequest</code>). In such case check the <a href="#!/api/CKEDITOR.config-cfg-htmlEncodeOutput">config.htmlEncodeOutput</a> option.</p>
 	<p>If you need to get the actual data from CKEditor at any moment using JavaScript, use the <code><a href="#!/api/CKEDITOR.editor-method-getData">editor.getData()</a></code> method as described above.</p>
 </div>
 
+## Observing Changes in CKEditor
 
-This method works for any CKEditor instance that replaces a `<textarea>` in a `<form>` element, both [classic](#!/guide/dev_framed-section-creating-a-classic-editor-with-a-textarea) and [inline](#!/guide/dev_inline-section-inline-editing-for-textarea).
+Whenever a change is made in the editor, CKEditor fires the [change](#!/api/CKEDITOR.editor-event-change) event. This makes additional features like auto-saving really easy to develop.
 
-## CKEditor in Ajax Applications
+The following example shows how to listen to the `change` event and print the total number of bytes to the console:
 
-With [inline editing](#!/guide/dev_inline) and possibility to [create](#!/api/CKEDITOR-method-inline) and [destroy](#!/api/CKEDITOR.editor-method-destroy) CKEditor instances dynamically, CKEditor is a perfect match for Ajax applications. 
-
-Unlike in classic editing, usually the data edited with CKEditor is not placed inside a `<textarea>` element when using inline editing (unless, of course, you purposefully use inline editing to replace a `<textarea>`). It is present directly in the page DOM structure instead. It is thus the job of your application to retrieve the data and manipulate it for saving.
-
-Getting updated data from CKEditor is easy thanks to rich JavaScript API. It is also possible to detect whenever a change is made in the editor thanks to the [change](#!/api/CKEDITOR.editor-event-change) event, which makes additional features like auto-saving really easy to develop.
+	var editor = CKEDITOR.replace( 'editor1' );
+	
+	// The "change" event is fired whenever a change is made in the editor.
+	editor.on( 'change', function( evt ) {
+		// getData() returns CKEditor's HTML content.
+		console.log( 'Total bytes: ' + evt.editor.getData().length );
+	});
 
 ## The Save Plugin
 

@@ -47,6 +47,10 @@ When you click inside the content of this `<div>` element, the CKEditor toolbar 
 
 Since CKEditor 4.2 you can also turn `<textarea>` elements into inline editors. When you call the CKEDITOR.inline method on a `<textarea>`, an additional `<div>` element with inline editing enabled will replace the original `<textarea>`.
 
+## Inline Editing Demo 
+
+See the [working "Inline Editor" sample](http://sdk.ckeditor.com/samples/inline.html) that showcases a few usage scenarios for inline editing.
+
 ## Further Reading
 
 Check the following articles to learn more about other editor types and learn how to get and save the editor data:

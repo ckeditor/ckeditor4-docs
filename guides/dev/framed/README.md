@@ -77,6 +77,10 @@ To insert a CKEditor instance, you can use the following sample that creates a b
 	</body>
 	</html>
 
+## Classic Editing Demo 
+
+See the [working "Classic Editor" sample](http://sdk.ckeditor.com/samples/classic.html) that showcases a few usage scenarios for classic editing. 
+
 ## Further Reading
 
 Check the following articles to learn more about other editor types and learn how to get and save the editor data:

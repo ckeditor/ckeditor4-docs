@@ -105,3 +105,11 @@ Numerous [configuration options](#!/guide/dev_configuration) let you tweak CKEdi
 		</ul>
 	</li>
 </ul>
+
+## HTML Output Formatting Demo 
+
+See the [working "HTML Output Formatting" sample](http://sdk.ckeditor.com/samples/htmlformatting.html) that showcases how to control HTML output produced by CKEditor.
+
+## Related Features
+
+See the [Source Code Editing](#!/guide/dev_sourcearea) feature that lets the users edit raw HTML source of the editor content directly in CKEditor.

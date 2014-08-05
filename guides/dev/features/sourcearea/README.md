@@ -49,3 +49,7 @@ Please note this is an experimental CSS property which may not be supported in a
 ## Source Code Editing Demo 
 
 See the [working "Source Code Editing" sample](http://sdk.ckeditor.com/samples/sourcearea.html) that showcases both source editing plugins combined with classic and inline editor instances.
+
+## Related Features
+
+See the [Output Formatting](#!/guide/dev_output_format) feature that gives developers full control over what the HTML code produced by the editor will look like.

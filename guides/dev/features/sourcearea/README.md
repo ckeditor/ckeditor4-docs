@@ -37,6 +37,10 @@ The image below presents the Source dialog window open from an inline editor ins
 
 {@img sourcearea_02.png}
 
+## Other Data Formats
+
+If another plugin generates CKEditor output data format other than HTML, like for example the [BBCode Output Format](#!/guide/dev_bbcode) plugin, the source editing area will display editor content in that format.
+
 ## Configuring Source Code Format
 
 At the moment the only aspect of the source code view that you can configure is the `tab-size` CSS property of the source editing area. Use the CKEDITOR.config.sourceAreaTabSize option to set the width of the tab character. Enter an integer 

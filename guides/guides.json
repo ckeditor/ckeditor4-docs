@@ -347,6 +347,14 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, source, code, html, area, sourcearea, dialog, sourcedialog"
 					},
 					{
+						"name": "dev_bbcode",
+						"url": "dev/features/bbcode",
+						"title": "BBCode Editing",
+						"description": "Configuring CKEditor to work on BBCode.",
+						"meta_description": "Configuring CKEditor to work on BBCode.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, output, bbcode, source, forum, markup, format"
+					},
+					{
 						"name": "dev_captionedimage",
 						"url": "dev/features/captionedimage",
 						"title": "Captioned Image",

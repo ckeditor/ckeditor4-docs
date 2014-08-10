@@ -25,7 +25,9 @@ CKEditor support for creating and editing tables is provided by three separate p
 	* Merging and splitting cells horizontally and vertically.
 * The [Table Resize](http://ckeditor.com/addon/tabletools) plugin &ndash; adds support for column resizing with your mouse.
 
-The **Table** and **Table Tools** plugins are included in the Standard and Full installation packages. The **Table Resize** plugin is optional and needs to be [added to your CKEditor build](#!/guide/dev_plugins).
+Additionally, you can also use the [Color Dialog](http://ckeditor.com/addon/colordialog) plugin which provides a user-friendly way to select the cell background and border color through a dedicated dialog window.
+
+The **Table** and **Table Tools** plugins are included in the Standard and Full installation packages. The **Color Dialog** plugin is only available in the Full distribution, while the **Table Resize** plugin is optional &mdash; both may be [added to your CKEditor build](#!/guide/dev_plugins).
 
 The following image presents a table that you can create in CKEditor along with the table context menu options provided by the Table and Table Tools plugins.
 

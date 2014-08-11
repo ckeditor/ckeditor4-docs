@@ -425,6 +425,14 @@
 						"description": "Using the UI Color Picker to change the user interface color.",
 						"meta_description": "Using the UI Color Picker to change the user interface color.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, color, colour, ui, interface, picker, tool, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+					{
+						"name": "dev_enterkey",
+						"url": "dev/features/enterkey",
+						"title": "Enter Key Configuration",
+						"description": "Configuring the output of Enter and Shift+Enter keys.",
+						"meta_description": "Configuring the output of Enter and Shift+Enter keys.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, enter, shift, key, keystroke, break, line, paragraph, output, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

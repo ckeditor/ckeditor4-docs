@@ -95,7 +95,7 @@ Numerous [configuration options](#!/guide/dev_configuration) let you tweak CKEdi
 		</ul></li>
 	<li style="clear:both">Handling block elements:
 		<ul>
-			<li style="float: left;"><a href="#!/api/CKEDITOR.config-cfg-autoParagraph">config.autoParagraph</a></li>
+			<li style="float: left;"><a href="#!/api/CKEDITOR.config-cfg-autoParagraph">config.autoParagraph</a> (<strong>deprecated</strong>)</li>
 			<li style="float: left;margin-left:30px"><a href="#!/api/CKEDITOR.config-cfg-fillEmptyBlocks">config.fillEmptyBlocks</a></li>
 			<li style="float: left;margin-left:30px"><a href="#!/api/CKEDITOR.config-cfg-ignoreEmptyParagraph">config.ignoreEmptyParagraph</a></li>
 		</ul></li>

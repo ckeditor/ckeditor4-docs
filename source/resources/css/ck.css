@@ -218,3 +218,9 @@ pre code a
 {
 	border-color: #A0C9E4;
 }
+
+.guide-container pre
+{
+	white-space: pre-wrap; /* CSS 2.1 */
+	word-wrap: break-word; /* IE7 */
+}

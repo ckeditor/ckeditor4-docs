@@ -246,6 +246,14 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, toolbar, button, buttons, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					},
 					{
+						"name": "dev_acf",
+						"url": "dev/configuration/acf",
+						"title": "Advanced Content Filter",
+						"description": "How to specify allowed and disallowed tags with Advanced Content Filter.",
+						"meta_description": "How to specify allowed and disallowed tags, attributes, classes and styles with Advanced Content Filter.",
+						"meta_keywords": "acf, advanced content filter, allowed content filter, allowed html, allowed tags, disallowed content, remove tags"
+					},
+					{
 						"name": "dev_styles",
 						"url": "dev/configuration/styles",
 						"title": "Styles Drop-down",

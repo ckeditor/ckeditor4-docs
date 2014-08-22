@@ -254,6 +254,14 @@
 						"meta_keywords": "acf, advanced content filter, allowed content filter, allowed html, allowed tags, disallowed content, remove tags"
 					},
 					{
+						"name": "dev_styles",
+						"url": "dev/configuration/styles",
+						"title": "Styles Drop-down",
+						"description": "How to configure the Styles drop-down list.",
+						"meta_description": "How to configure the Styles drop-down list.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+					},
+					{
 						"name": "dev_output_format",
 						"url": "dev/configuration/output_format",
 						"title": "Output Formatting",

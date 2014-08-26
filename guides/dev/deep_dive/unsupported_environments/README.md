@@ -13,7 +13,7 @@ While in the first case we know that CKEditor will simply **not work**, in the s
 
 ## Can CKEditor Be Enabled in Unsupported Environments?
 
-We strongly advise against enabling CKEditor in older and unsupported browser versions. No bugs detected in these environments will be fixed either.
+We strongly advise against enabling CKEditor in older and unsupported browser versions. No bugs detected in these environments will ever be fixed either.
 
 If you, however, would like to check how CKEditor works in some untested environments, the CKEditor API contains a solution that makes it possible.
 

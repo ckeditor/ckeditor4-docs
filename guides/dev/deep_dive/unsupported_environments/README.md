@@ -17,13 +17,13 @@ We strongly advise against enabling CKEditor in older and unsupported browser ve
 
 If you, however, would like to check how CKEditor works in some untested environments, the CKEditor API contains a solution that makes it possible.
 
-<p class="note">
+<p class="tip">
 	Enabling CKEditor in unsupported environments can only be done at your own risk. It is not recommended to attempt it on production environments without a prior testing phase.
 </p>
 
 ## Changing the `env.isCompatible` Flag 
 
-By default, the CKEDITOR.env.isCompatible flag contains a whitelist of supported devices. When you set it to `true`, CKEditor will be enabled in all environments, including the unsupported ones.
+By default, the CKEDITOR.env.isCompatible flag is set to `true` when a supported environment is detected. When you, however, manually set it to `true` in your configuration, CKEditor will be enabled in all environments, including the unsupported ones.
 
 This flag is checked only in functions creating an editor instance, like CKEDITOR.replace, CKEDITOR.inline, or CKEDITOR.appendTo. This means that the flag can be modified before creating an editor instance, but after the `<script>` tag that adds the CKEditor script to the page. For example:
 
@@ -49,9 +49,9 @@ The code above has one major drawback: it enables CKEditor in all environments, 
 	if ( !CKEDITOR.env.ie || CKEDITOR.env.version > 7 )
     	CKEDITOR.env.isCompatible = true;
 
-This will enable CKEditor on experimental environments, including all mobile ones, but will disable it in Internet Explorer 7 and below. See the CKEDITOR.env API for more options if you want to fine-tune your setting.
+This will enable CKEditor in experimental environments, including all mobile ones, but will disable it in Internet Explorer 7 and below. See the CKEDITOR.env API for more options if you want to fine-tune your setting.
 
-Last but not least, to make sure that this code does not throw errors if the CKEditor script was not included on the page, you should check whether the CKEDITOR object is available:
+Last but not least, to make sure that this code does not throw errors if the CKEditor script was not included on the page, you should check whether the [CKEDITOR](#!/api/CKEDITOR) object is available:
 
 	if ( window.CKEDITOR && ( !CKEDITOR.env.ie || CKEDITOR.env.version > 7 ) )
     	CKEDITOR.env.isCompatible = true;
@@ -63,6 +63,12 @@ Although this is not a recommended approach, it is also possible to edit the CKE
 * The `ckeditor.js` file in a compressed build.
 * The `core/env.js` file in a development build.
 
-<p class="note">
-	Editing the CKEDITOR.env.isCompatible flag per instance is a better approach that gives you more control over when and where you use it.
+<p class="tip">
+	Editing the CKEDITOR.env.isCompatible flag per page is a better approach that gives you more control over when and where you use it.
 </p>
+
+## Help Us by Reporting Issues!
+
+Enabling CKEditor in unsupported environments is an experimental feature aimed at developers who are willing to help us bring official support to a wider range of devices and setups. We would thus appreciate if you [reported any issues](#!/guide/dev_issues_tracker) that you find on our [Development site](http://dev.ckeditor.com/). Do remember to describe the tested environment (operating system, browser, device) in as much detail as possible.
+
+If you are particularly interested in using CKEditor on mobile devices, you can check the results of our [recent study](http://dev.ckeditor.com/ticket/11712#comment:5) on the state of CKEditor support in iOS and Android.

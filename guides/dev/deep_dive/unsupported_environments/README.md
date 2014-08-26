@@ -21,24 +21,24 @@ If you, however, would like to check how CKEditor works in some untested environ
 	Enabling CKEditor in unsupported environments can only be done at your own risk. It is not recommended to attempt it on production environments without a prior testing phase.
 </p>
 
-## Changing the `env.isCompatible` Flag 
+## Changing the `env.isCompatible` Flag
 
 By default, the CKEDITOR.env.isCompatible flag is set to `true` when a supported environment is detected. When you, however, manually set it to `true` in your configuration, CKEditor will be enabled in all environments, including the unsupported ones.
 
 This flag is checked only in functions creating an editor instance, like CKEDITOR.replace, CKEDITOR.inline, or CKEDITOR.appendTo. This means that the flag can be modified before creating an editor instance, but after the `<script>` tag that adds the CKEditor script to the page. For example:
 
 	<script src="ckeditor/ckeditor.js"></script>
-    <script>
-        CKEDITOR.env.isCompatible = true;
-    </script>
-    ...
+	<script>
+		CKEDITOR.env.isCompatible = true;
+	</script>
+	...
 
 Or even later, when creating an instance:
 
 	<textarea id="editor1" ...></textarea>
 	<script>
-    	CKEDITOR.env.isCompatible = true;
-    	CKEDITOR.replace( 'editor1' );
+		CKEDITOR.env.isCompatible = true;
+		CKEDITOR.replace( 'editor1' );
 	</script>
 
 ## Blacklisting Some Unsupported Environments
@@ -47,14 +47,14 @@ The code above has one major drawback: it enables CKEditor in all environments, 
 
 	// Enable CKEditor in all environments except IE7 and below.
 	if ( !CKEDITOR.env.ie || CKEDITOR.env.version > 7 )
-    	CKEDITOR.env.isCompatible = true;
+		CKEDITOR.env.isCompatible = true;
 
 This will enable CKEditor in experimental environments, including all mobile ones, but will disable it in Internet Explorer 7 and below. See the CKEDITOR.env API for more options if you want to fine-tune your setting.
 
 Last but not least, to make sure that this code does not throw errors if the CKEditor script was not included on the page, you should check whether the [CKEDITOR](#!/api/CKEDITOR) object is available:
 
 	if ( window.CKEDITOR && ( !CKEDITOR.env.ie || CKEDITOR.env.version > 7 ) )
-    	CKEDITOR.env.isCompatible = true;
+		CKEDITOR.env.isCompatible = true;
 
 ## Editing the env.isCompatible Flag in Source
 

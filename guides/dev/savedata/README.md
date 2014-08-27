@@ -59,10 +59,3 @@ The following example shows how to listen to the `change` event and print the to
 ## The Save Plugin
 
 A dedicated **[Save](http://ckeditor.com/addon/save)** plugin for CKEditor is available, too. It provides the <img src="guides/dev_savedata/save_01.png" title="Save" alt="Save"> button, which fires the [save](#!/api/CKEDITOR.editor-event-save) event, but it currently works only for classic editor placed inside the `<form>` element.
-
-## Saving Data in CKEditor Demos
-
-The following saving data samples are available for two major CKEditor usage scenarios:
-
-* The ["Saving Data in CKEditor Replacing a Textarea"](http://sdk.ckeditor.com/samples/savetextarea.html) sample shows how CKEditor automatically integrates with the parent `<form>` element when submitting data to the server.
-* The ["CKEditor in Ajax applications"](http://sdk.ckeditor.com/samples/saveajax.html) sample shows how to create and destroy inline editor instances on the fly and use the `change` event.

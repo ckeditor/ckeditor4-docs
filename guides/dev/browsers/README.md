@@ -53,3 +53,9 @@ You can find more information in our [research on CKEditor support for mobile en
 Finally, CKEditor is disabled in other browsers for Android and on Windows Phone 8. You can change CKEditor settings to accept any mobile environment (at your own risk) by modifying the [env.js](https://github.com/ckeditor/ckeditor-dev/blob/master/core/env.js) file, but you will not have the same experience as on desktop environments.
 
 Full mobile support will be introduced in **CKEditor 5**. We aim to have perfect CKEditor support for most popular mobile platforms, so if you encountered an issue with an environment that is unsupported as of now, please report it on our [CKEditor Development site](https://dev.ckeditor.com/).
+
+## Unsupported Environments
+
+When CKEditor detects an unsupported environment, it will simply not load and the user will be presented with a standard editable element (for example a `<textarea>` or `<div>`) that the editor was supposed to replace.
+
+It is possible to skip the compatibility check and [enable CKEditor in all environments](#!/guide/dev_unsupported_environments), including the unsupported ones, but this is an experimental feature aimed at more advanced developers and is highly unrecommended on production environments.

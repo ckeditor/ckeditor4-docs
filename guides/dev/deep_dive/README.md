@@ -8,5 +8,9 @@ See these topics if you want to bring your CKEditor knowledge to a whole new lev
 
 	* [Introduction](#!/guide/dev_advanced_content_filter) &ndash; General information about the content filtering system implemented in CKEditor.
 	* [Allowed Content Rules](#!/guide/dev_allowed_content_rules) &ndash; Explanation of syntax that defines which HTML elements, attributes, styles, and classes are allowed in CKEditor.
+	* [Disallowed Content](#!/guide/dev_disallowed_content) &ndash; Explanation of how blacklisting works in ACF.
+	
+2. **[Enabling CKEditor in Unsupported Environments](#!/guide/dev_unsupported_environments)** &ndash; Experimental feature that lets you display CKEditor on devices and setups that are not [officially supported](#!/guide/dev_browsers), like mobile devices.
 
-2. **[Widgets](#!/guide/dev_widgets)** &ndash; Innovative CKEditor feature that lets you create rich content entities grouping multiple HTML elements.
+
+3. **[Widgets](#!/guide/dev_widgets)** &ndash; Innovative CKEditor feature that lets you create rich content entities grouping multiple HTML elements.

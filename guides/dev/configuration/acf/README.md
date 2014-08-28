@@ -1,7 +1,7 @@
 # Content Filtering (ACF)
 
 <p class="requirements">
-	This article provides basic information about content filtering in CKEditor. For detailed documentation about this feature check the <a href="#!/guide/dev_advanced_content_filter">CKEditor Deep Dive</a> section.
+	This article provides basic information about editor content filtering feature which was introduced in <strong>CKEditor 4.1</strong>. For detailed documentation about this feature check the <a href="#!/guide/dev_advanced_content_filter">CKEditor Deep Dive</a> section.
 </p>
 
 Advanced Content Filter (ACF) is a CKEditor core feature that **filters incoming HTML content** by transforming and deleting disallowed elements, attributes, classes and styles. If you paste content into CKEditor and notice that some elements are removed, then chances are high that it was removed by ACF.
@@ -113,3 +113,12 @@ The result of pasting the same content in the Standard preset, with ACF enabled.
 ### Keep the content concise
 
 Bold text can be represented on websites by `<strong>`, `<b>`, or `<span style="font-weight:bold">` elements. All these tags might be copied into CKEditor by content creators. What if your website has a special CSS rule defined for the `<strong>` tag, but not for `<span style="font-weight:bold">`? If ACF is enabled, it will [transform pasted content](#!/guide/dev_advanced_content_filter-section-content-transformations) into a consistent form.
+
+## Further Reading
+
+Refer to the following resources for more information about content filtering:
+
+* The [Advanced Content Filer](#!/guide/dev_advanced_content_filter) article contains more in-depth technical details about ACF.
+* The [Allowed Content Rules](#!/guide/dev_allowed_content_rules) article explains the allowed and disallowed content rules format.
+* The [Disallowed Content](#!/guide/dev_disallowed_content) article explains how blacklisting works in ACF.
+* The [Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf) article explains how to adjust custom plugins to properly implement content filtering.

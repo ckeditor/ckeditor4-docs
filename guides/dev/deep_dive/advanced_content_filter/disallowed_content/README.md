@@ -1,13 +1,15 @@
 # Disallowed Content
 
-**Note:** The Disallowed Content feature was introduced in **CKEditor 4.4** as a part of the [Advanced Content Filter](#!/guide/dev_advanced_content_filter) system which was introduced in **CKEditor 4.1**.
+<p class="requirements">
+	The Disallowed Content feature was introduced in <strong>CKEditor 4.4</strong> as a part of the <a href="#!/guide/dev_advanced_content_filter">Advanced Content Filter</a> system which was introduced in <strong>CKEditor 4.1</strong>.
+</p>
 
 The Disallowed Content feature complements the existing Allowed Content feature in that it lets you explicitly blacklist elements that you do not want to have in your CKEditor content. You can use it to limit the features that would otherwise be available in the fully automatic Advanced Content Filter mode.
 
-Disallowed content can be defined in the {@link CKEDITOR.config#disallowedContent} setting or may be dynamically added with the {@link CKEDITOR.filter#disallow} method. It has a higher priority than content allowed automatically or by the {@link CKEDITOR.config#allowedContent} setting, hence it is possible to correct automatic settings or achieve more complex results like "allow all attributes except those starting with `on*`".
+Disallowed content can be defined in the CKEDITOR.config.disallowedContent setting or may be dynamically added with the CKEDITOR.filter.disallow method. It has a higher priority than content allowed automatically or by the CKEDITOR.config.allowedContent setting, hence it is possible to correct automatic settings or achieve more complex results like "allow all attributes except those starting with `on*`".
 
 <p class="tip">
-	It is not possible to disallow content when the Advanced Content Filter is disabled by setting {@link CKEDITOR.config#allowedContent} to <code>true</code>. A similar solution can be achieved by allowing all HTML elements.
+	It is not possible to disallow content when the Advanced Content Filter is disabled by setting CKEDITOR.config.allowedContent to <code>true</code>. A similar solution can be achieved by allowing all HTML elements.
 </p>
 
 ## Disallowed Content Rules
@@ -55,9 +57,9 @@ Best to see it in examples.
 
 ## How to Allow Everything Except...
 
-A popular requirement is to allow all HTML features except a few specific ones. In this case setting {@link CKEDITOR.config#allowedContent} to `true` is not a solution, because this completely disables the [Advanced Content Filter](#!/guide/dev_advanced_content_filter), so {@link CKEDITOR.config#disallowedContent} will not work either.
+A popular requirement is to allow all HTML features except a few specific ones. In this case setting CKEDITOR.config.allowedContent to `true` is not a solution, because this completely disables the [Advanced Content Filter](#!/guide/dev_advanced_content_filter), so CKEDITOR.config.disallowedContent will not work either.
 
-Therefore the only solution is to write an allowed content rule allowing all elements. Fortunately, this can be done easily by using the [object format of allowed content rules](#!/guide/dev_allowed_content_rules-section-object-format) and the {@link CKEDITOR.dtd} object.
+Therefore the only solution is to write an allowed content rule allowing all elements. Fortunately, this can be done easily by using the [object format of allowed content rules](#!/guide/dev_allowed_content_rules-section-object-format) and the CKEDITOR.dtd object.
 
 	config.allowedContent = {
 		$1: {
@@ -71,3 +73,12 @@ Therefore the only solution is to write an allowed content rule allowing all ele
 	config.disallowedContent = 'script; *[on*]';
 
 The above code sample will allow everything except for the `<script>` elements and attributes starting from `'on'`.
+
+## Further Reading
+
+Refer to the following resources for more information about content filtering:
+
+* The [Content Filtering (ACF)](#!/guide/dev_acf) article explains some ACF use cases and the rationale behind this feature.
+* The [Advanced Content Filer](#!/guide/dev_advanced_content_filter) article contains more in-depth technical details about ACF.
+* The [Allowed Content Rules](#!/guide/dev_allowed_content_rules) article explains the allowed and disallowed content rules format.
+* The [Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf) article explains how to adjust custom plugins to properly implement content filtering.

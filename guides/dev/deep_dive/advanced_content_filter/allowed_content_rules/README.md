@@ -1,6 +1,8 @@
 # Allowed Content Rules
 
-**Note:** [Advanced Content Filter](#!/guide/dev_advanced_content_filter) was introduced in **CKEditor 4.1**. Since **CKEditor 4.4** Allowed Content Rules are complemented by [Disallowed Content Rules](#!/guide/dev_disallowed_content) that let you blacklist specific elements.
+<p class="requirements">
+	<a href="#!/guide/dev_advanced_content_filter">Advanced Content Filter</a> was introduced in <strong>CKEditor 4.1</strong>. Since <strong>CKEditor 4.4</strong> Allowed Content Rules are complemented by <a href="#!/guide/dev_disallowed_content">Disallowed Content Rules</a> that let you blacklist specific elements.
+</p>
 
 ## Introduction
 
@@ -203,3 +205,11 @@ The `propertiesOnly` property means that this rule will only accept properties &
 		}
 	}
 
+## Further Reading
+
+Refer to the following resources for more information about content filtering:
+
+* The [Content Filtering (ACF)](#!/guide/dev_acf) article explains some ACF use cases and the rationale behind this feature.
+* The [Advanced Content Filer](#!/guide/dev_advanced_content_filter) article contains more in-depth technical details about ACF.
+* The [Disallowed Content](#!/guide/dev_disallowed_content) article explains how blacklisting works in ACF.
+* The [Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf) article explains how to adjust custom plugins to properly implement content filtering.

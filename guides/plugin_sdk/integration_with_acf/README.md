@@ -1,10 +1,14 @@
 # Integrating Plugins with Advanced Content Filter
 
+<p class="requirements">
+	Advanced Content Filter was introduced in <strong>CKEditor 4.1</strong>.
+</p>
+
 CKEditor consists of a number of {@link CKEDITOR.feature editor features} like
 commands, buttons, drop-down lists, or dialog windows. The role of plugins is
 to extend the set of available features. However, **since the introduction of
-[Advanced Content Filter](#!/guide/dev_advanced_content_filter) in CKEditor 4.1,
-features, and the content they generate, are subject of filtering**.
+[Advanced Content Filter](#!/guide/dev_acf),
+features, and the content they generate, are subject to filtering**.
 
 The introduction of Advanced Content Filter (ACF) have impacted the plugin
 development process and slightly changed the data processing model of CKEditor.
@@ -242,6 +246,11 @@ Read more about {@link CKEDITOR.feature#contentForms contentForms} in CKEditor J
 
 ## Further Reading
 
-* [Advanced Content Filter guide](#!/guide/dev_advanced_content_filter).
-* {@link CKEDITOR.filter} &ndash; the main class responsible for ACF features.
-* {@link CKEDITOR.feature} &ndash; an interface representing an editor feature used in combination with {@link CKEDITOR.filter#addFeature}.
+Refer to the following resources for more information about content filtering:
+
+* The [Content Filtering (ACF)](#!/guide/dev_acf) article explains some ACF use cases and the rationale behind this feature.
+* The [Advanced Content Filer](#!/guide/dev_advanced_content_filter) article contains more in-depth technical details about ACF.
+* The [Allowed Content Rules](#!/guide/dev_allowed_content_rules) article explains the allowed and disallowed content rules format.
+* The [Disallowed Content](#!/guide/dev_disallowed_content) article explains how blacklisting works in ACF.
+* {@link CKEDITOR.filter}  contains API documentation for the main class responsible for ACF features.
+* {@link CKEDITOR.feature}contains API documentation of an interface representing an editor feature used in combination with {@link CKEDITOR.filter#addFeature}.

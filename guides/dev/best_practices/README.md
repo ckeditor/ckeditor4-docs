@@ -27,7 +27,7 @@ This will reduce the risk of omitting plugin dependencies and in the created opt
 ## Configuration
 
 ### Configure content filtering
-[Advanced Content Filter](#!/guide/dev_advanced_content_filter) is a cool feature which assures that the content inserted by the user blends in with your website in the best possible way. If you have any issues with it, do not turn it off, but instead configure it to match your requirements.
+[Advanced Content Filter](#!/guide/dev_acf) is a cool feature which assures that the content inserted by the user blends in with your website in the best possible way. If you have any issues with it, do not turn it off, but instead configure it to match your requirements.
 
 For example, to enable `<iframe>` and `<style>` elements, allow two additional attributes (`id` and `rel` given in square brackets) for all (`*` is a wildcard) already enabled elements, and allow usage of any class names (see `(*)`) for them, use the following code:
 

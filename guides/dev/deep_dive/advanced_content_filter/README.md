@@ -1,7 +1,8 @@
 # Advanced Content Filter
 
-**Note:** Advanced Content Filter was introduced in **CKEditor 4.1**.
-
+<p class="requirements">
+	Advanced Content Filter was introduced in <strong>CKEditor 4.1</strong>.
+</p>
 
 ## What is Advanced Content Filter (ACF)?
 
@@ -67,3 +68,12 @@ Suppose that the `'img[!src,alt,width,height]'` setting (`<img>` tag with requir
 The content transformation feature is fully automatic and there is no need to configure it. The only thing you have to do is set the {@link CKEDITOR.config#allowedContent} option or use the default value ([automatic mode](#!/guide/dev_advanced_content_filter-section-2)).
 
 Currently, we have defined content transformations for only a handful of editor features, but their number will increase in future releases.
+
+## Further Reading
+
+Refer to the following resources for more information about content filtering:
+
+* The [Content Filtering (ACF)](#!/guide/dev_acf) article explains some ACF use cases and the rationale behind this feature.
+* The [Allowed Content Rules](#!/guide/dev_allowed_content_rules) article explains the allowed and disallowed content rules format.
+* The [Disallowed Content](#!/guide/dev_disallowed_content) article explains how blacklisting works in ACF.
+* The [Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf) article explains how to adjust custom plugins to properly implement content filtering.

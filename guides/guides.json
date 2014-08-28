@@ -248,7 +248,7 @@
 					{
 						"name": "dev_acf",
 						"url": "dev/configuration/acf",
-						"title": "Advanced Content Filter",
+						"title": "Content Filtering (ACF)",
 						"description": "How to specify allowed and disallowed tags with Advanced Content Filter.",
 						"meta_description": "How to specify allowed and disallowed tags, attributes, classes and styles with Advanced Content Filter.",
 						"meta_keywords": "acf, advanced content filter, allowed content filter, allowed html, allowed tags, disallowed content, remove tags"

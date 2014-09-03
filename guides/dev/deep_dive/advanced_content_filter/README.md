@@ -89,7 +89,7 @@ Currently, we have defined content transformations for only a handful of editor 
 The following samples are available for two ACF modes:
 
 * The [Advanced Content Filter &ndash; Automatic Mode](http://sdk.ckeditor.com/samples/acf.html) sample shows the default implementation of ACF and its customization.
-* The [Advanced Content Filter &ndash; Custom Mode](http://sdk.ckeditor.com/samples/acf_custom.html) sample shows how the custom ACF mode works.
+* The [Advanced Content Filter &ndash; Custom Mode](http://sdk.ckeditor.com/samples/acfcustom.html) sample shows how the custom ACF mode works.
 
 ## Further Reading
 

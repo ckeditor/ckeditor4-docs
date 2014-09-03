@@ -24,11 +24,21 @@ In both modes it is possible to extend the filter configuration by using the {@l
 
 Advanced Content Filter works in automatic mode when the {@link CKEDITOR.config#allowedContent} setting is not provided. During editor initialization, editor features add their rules to the filter. As a result, only the content that may be edited using currently loaded features is allowed, and all the rest is filtered out.
 
-The following example might make it easier to understand the automatic ACF mode.
+Please note that this means that **ACF is tightly connected with editor configuration**. Take the official CKEditor presets (Basic, Standard and Full). Each one of them includes a different set of features (toolbar buttons, keyboard shortcuts, content styles) and as a result, the same content pasted into editor instances with these configurations [will look completely different](http://ckeditor.com/demo#acf), as CKEditor will adjust it to what is available in a particular setup.
 
-1. Open the `datafiltering.html` sample from the Full or Standard CKEditor package (the set of features offered by the Basic package is too limited ).
-2. Check *editor 1*. It uses the default configuration, so all buttons, keystrokes, or styles available in your package are activated and editor contents are identical to what was originally loaded (except a small detail in the Standard package &mdash; since it does not contain the Justify plugin, the footer is not aligned to the right).
-3. Now check *editor 4*. You can see that many plugins and buttons were removed by the {@link CKEDITOR.config#removePlugins} and {@link CKEDITOR.config#removeButtons} settings; the {@link CKEDITOR.config#format_tags} list was trimmed down, too. Configuration changes are automatically reflected in editor contents &mdash; there is no Image toolbar button, so there is no image in the contents; there is no Table plugin, so the table added in the original contents was removed, too. You can see how the editor cleans up pasted content or HTML code set in the source mode.
+Whenever you adjust your editor configuration, for example by using the CKEDITOR.config.removePlugins and CKEDITOR.config.removeButtons methods or customizing the **Format** and **Styles** drop-down lists, these changes will affect the filter and the automatic ACF mode will make the editor remove content corresponding to disabled features.
+
+### Automatic Mode Example
+
+Consider the following configuration for an editor with ACF working in default, automatic mode:
+
+	config.removePlugins = 'image,table,tabletools,horizontalrule';
+	config.removeButtons = 'Anchor,Underline,Strike,Subscript,Superscript';
+	config.format_tags = 'p;h1;h2;pre';
+
+In this setup several tags will not be allowed in the editor because there is no plugin or button that is responsible for creating and editing this kind of content. This pertains to elements such as `<img>` (Image feature), `<table>` and its descendants (Table and Table Tools plugins) and `<hr>` (Horizontal Rule feature) as well as `<u>`, `<s>`, `<sub>` and `<sup>` that are normally provided by the Basic Styles plugin, but whose buttons were removed in the configuration. The **Format** drop-down list was trimmed down, too, so unsupported formats will also be removed.
+
+See the [Advanced Content Filter &ndash; Automatic Mode](http://sdk.ckeditor.com/samples/acf.html) sample for a live demonstration.
 
 <p class="tip">
 	If you want to configure the editor to work in automatic mode, but need to enable additional HTML tags, attributes, styles, or classes, use the {@link CKEDITOR.config#extraAllowedContent} configuration option. <strong>Since CKEditor 4.4</strong> you can also disallow some of the automatically allowed content by using the {@link CKEDITOR.config#disallowedContent}.
@@ -37,23 +47,28 @@ The following example might make it easier to understand the automatic ACF mode.
 
 ## Custom Mode
 
-Advanced Content Filter works in custom mode when the {@link CKEDITOR.config#allowedContent} setting is defined. This configuration option tells the filter which HTML elements, attributes, styles, and classes are allowed. Based on defined rules (called *Allowed Content Rules*) the editor filters input data and decides which features can be activated.
+Advanced Content Filter works in custom mode when the CKEDITOR.config.allowedContent setting is defined. This configuration option tells the filter which HTML elements, attributes, styles, and classes are allowed. Based on defined rules (called *Allowed Content Rules*) the editor filters input data and decides which features can be activated.
 
 Allowed Content Rules may be set in two different formats: the compact **string format** and the more powerful **object format**. Read about Allowed Content Rules in the [Allowed Content Rules article](#!/guide/dev_allowed_content_rules).
 
-The following example might make it easier to understand the custom ACF mode.
+In custom mode the content filter configuration affects the availability of editor features (toolbar buttons, dialog window tabs and fields, keyboard shortcuts, content styles). If a feature is not explicitely defined as allowed, it will be disabled in editor UI and corresponding content will be removed.
 
-1. Open the `datafiltering.html` sample from the Full or Standard CKEditor package (the set of features offered by the Basic package is too limited ).
-2. Check *editor 1*. It uses the default configuration, so all buttons, keystrokes, or styles available in your package are activated and editor contents are identical to what was originally loaded (except a small detail in the Standard package &mdash; since it does not contain the Justify plugin, the footer is not aligned to the right).
-3. Now check *editor 2*. The {@link CKEDITOR.config#allowedContent} option defines Allowed Content Rules using the string format.
+### Custom Mode Example
 
-	Note that since the rules do not allow the `'s'` element, the Strike Through button was removed from the toolbar and the strike-through formatting was removed from the text. The same happened for example with the Horizontal Line, Subscript, or Superscript features.
+If CKEDITOR.config.allowedContent is set to:
+	
+	h1 h2 h3 p blockquote strong em;
+	a[!href];
+	img(left,right)[!src,alt,width,height];
 
-	See also that the Styles and Format drop-down lists only contain the items which are defined in the Allowed Content Rules.
+This will have the following effect:
 
-	What is more, options available in some dialog windows are limited, too. For example the Image dialog window contains only the URL, Alternative Text, Width, and Height values, because only these attributes were defined in {@link CKEDITOR.config#allowedContent}.
-4. Additionally, *editor 3* is configured by using a different set of rules defined in the object format.
+* `h1 h2 h3 p blockquote strong em` &ndash; Only these tags are accepted by the editor. Any tag attributes will be discarded.
+* `a[!href]` &ndash; The `href` attribute is obligatory for the `<a>` tag. Tags without this attribute are discarded. No other attribute will be accepted for the `<a>` tag.
+* `img(left,right)[!src,alt,width,height]` &ndash; The `src` attribute is obligatory for the `<img>` tag. The `alt`, `width`, `height` and `class` attributes are accepted, but `class` must be either `class="left"` or `class="right"`.
+* Several toolbar buttons and dialog window fields that are responsible for the features which were not explicitely listed as allowed will be removed. In the Standard editor preset this will mean that, for example, the Strike-through, Numbered List, Bulleted List, Anchor, Table and Horizontal Line toolbar buttons will be gone, just like most of the fields of the Image Properties dialog window and formats from the Format drop-down list.
 
+See the [Advanced Content Filter &ndash; Custom Mode](http://sdk.ckeditor.com/samples/acf_custom.html) sample for a live demonstration.
 
 ## Content Transformations
 
@@ -68,6 +83,13 @@ Suppose that the `'img[!src,alt,width,height]'` setting (`<img>` tag with requir
 The content transformation feature is fully automatic and there is no need to configure it. The only thing you have to do is set the {@link CKEDITOR.config#allowedContent} option or use the default value ([automatic mode](#!/guide/dev_advanced_content_filter-section-2)).
 
 Currently, we have defined content transformations for only a handful of editor features, but their number will increase in future releases.
+
+## Advanced Content Filter Demos
+
+The following samples are available for two ACF modes:
+
+* The [Advanced Content Filter &ndash; Automatic Mode](http://sdk.ckeditor.com/samples/acf.html) sample shows the default implementation of ACF and its customization.
+* The [Advanced Content Filter &ndash; Custom Mode](http://sdk.ckeditor.com/samples/acf_custom.html) sample shows how the custom ACF mode works.
 
 ## Further Reading
 

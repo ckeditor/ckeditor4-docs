@@ -114,6 +114,13 @@ The result of pasting the same content in the Standard preset, with ACF enabled.
 
 Bold text can be represented on websites by `<strong>`, `<b>`, or `<span style="font-weight:bold">` elements. All these tags might be copied into CKEditor by content creators. What if your website has a special CSS rule defined for the `<strong>` tag, but not for `<span style="font-weight:bold">`? If ACF is enabled, it will [transform pasted content](#!/guide/dev_advanced_content_filter-section-content-transformations) into a consistent form.
 
+## Advanced Content Filter Demos
+
+The following samples are available for two ACF modes:
+
+* The [Advanced Content Filter &ndash; Automatic Mode](http://sdk.ckeditor.com/samples/acf.html) sample shows the default implementation of ACF and its customization.
+* The [Advanced Content Filter &ndash; Custom Mode](http://sdk.ckeditor.com/samples/acf_custom.html) sample shows how the custom ACF mode works.
+
 ## Further Reading
 
 Refer to the following resources for more information about content filtering:

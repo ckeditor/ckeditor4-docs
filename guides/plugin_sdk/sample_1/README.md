@@ -365,7 +365,7 @@ This is what we have in the `dialogs/abbr.js` file:
 	});
 
 <p class="tip">
-	You can also <a href="guides/plugin_sdk_sample_1/abbr.zip">download the
+	You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-1">download the
 	entire plugin folder</a> inluding the icon and the fully commented source code.
 </p>
 

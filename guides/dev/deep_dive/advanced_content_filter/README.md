@@ -55,11 +55,12 @@ In custom mode the content filter configuration affects the availability of edit
 
 ### Custom Mode Example
 
-If CKEDITOR.config.allowedContent is set to:
+Suppose that CKEDITOR.config.allowedContent is configured as follows:
 	
-	h1 h2 h3 p blockquote strong em;
-	a[!href];
-	img(left,right)[!src,alt,width,height];
+	config.allowedContent = 
+		'h1 h2 h3 p blockquote strong em;' +
+		'a[!href];' +
+		'img(left,right)[!src,alt,width,height];';
 
 This will have the following effect:
 

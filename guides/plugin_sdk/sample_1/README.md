@@ -111,7 +111,7 @@ CKEDITOR.config.extraPlugins configuration option:
 
 Now load a CKEditor sample page. You should be able to see the new plugin toolbar button in the toolbar. For example:
 
-{@img pluginLoaded.png Abbreviation plugin has been loaded}
+{@img abbr1PluginLoaded.png Abbreviation plugin has been loaded}
 
 ## Plugin Dialog Window
 
@@ -183,7 +183,7 @@ The result of this change can be seen immediately. Click the **Insert Abbreviati
 toolbar button in order to open the newly created **Abbreviation Properties**
 dialog window containing two (empty) tabs.
 
-{@img pluginDialog1.png A plugin dialog window with two tabs added}
+{@img abbr1PluginDialog1.png A plugin dialog window with two tabs added}
 
 ### Dialog Window Tabs Elements
 
@@ -237,11 +237,11 @@ plugin tabs.
 When you reload the editor instance and open the **Abbreviation Properties** dialog
 window, the **Basic Settings** tab will now contain two mandatory text fields.
 
-{@img pluginDialog2.png Basic Settings tab of the Abbreviation plugin}
+{@img abbr1PluginDialog2.png Basic Settings tab of the Abbreviation plugin}
 
 The **Advanced Settings** tab only contains a single **Id** text field that can be left empty.
 
-{@img pluginDialog3.png Advanced Settings tab of the Abbreviation plugin}
+{@img abbr1PluginDialog3.png Advanced Settings tab of the Abbreviation plugin}
 
 ## Plugin Behavior
 
@@ -375,14 +375,14 @@ The plugin code is now ready. When you click the **Insert Abbreviation** toolbar
 button, the **Abbreviation Properties** dialog window will open. Fill in the
 obligatory **Abbreviation** and **Explanation** fields and click the **OK** button.
 
-{@img workingExample1.png Abbreviation added in the dialog window}
+{@img abbr1WorkingExample1.png Abbreviation added in the dialog window}
 
 The newly added abbreviation will be inserted into the document and will be
 displayed using the default styling of your browser. In Firefox, for example,
 the abbreviation will be underlined using a dotted line and the explanation
 will be displayed in a tooltip.
 
-{@img workingExample2.png Abbreviation added in the dialog window}
+{@img abbr1WorkingExample2.png Abbreviation added in the dialog window}
 
 ## Further Enhancements
 

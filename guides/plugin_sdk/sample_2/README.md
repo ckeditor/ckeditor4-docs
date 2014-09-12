@@ -81,18 +81,18 @@ The **Edit Abbreviation** item is now visible in the context menu of an `<abbr>`
 element. Once selected, it opens the **Abbreviation Properties** dialog window
 due to the use of the `abbr` command.
 
-{@img context.png Edit Abbreviation context menu item added to CKEditor}
+{@img abbr2PluginContextMenu.png Edit Abbreviation context menu item added to CKEditor}
 
 The context menu works &mdash; but only partially. It opens the **Abbreviation Properties**
 dialog window for the abbreviation, but the editing feature does not really work.
 The **Abbreviation** and **Explanation** fields are empty:
 
-{@img dialogEmpty.png Abbreviation Properties is empty in editing mode}
+{@img abbr2PluginDialogEmpty.png Abbreviation Properties is empty in editing mode}
 
 If you try to enter some values into these fields and accept the changes, a
 new `<abbr>` element will be added at the position of the cursor in the document.
 
-{@img dialogFailed.png New abbreviation element inserted into the document}
+{@img abbr2PluginDialogFailed.png New abbreviation element inserted into the document}
 
 It is time to work on the selection logic so that editing an inserted element
 would not create a new one, but use the previously entered values.
@@ -107,7 +107,7 @@ function that we will also need to refactor later.
 
 	onShow: function() {
 		// The code that will be executed when a dialog window is loaded.
-	}
+	},
 
 ### Getting the Selected Element
 
@@ -210,18 +210,18 @@ opening the context menu and selecting **Edit Abbreviation**, the **Abbreviation
 Properties** dialog window will now re-open with the **Abbreviation** and **Explanation**
 fields already filled in with the content of the edited element.
 
-{@img dialogFilled.png Modifying an abbreviation in CKEditor}
+{@img abbr2PluginDialogFilled.png Modifying an abbreviation in CKEditor}
 
 Suppose you were to change the abbreviation spelling into lower case. Replace
 the content of the text fields as follows and click the **OK** button.
 
-{@img dialogChanged.png Modifying an abbreviation in CKEditor}
+{@img abbr2PluginDialogChanged.png Modifying an abbreviation in CKEditor}
 
 However, this operation fails. The modified values do not replace the content of the
 first abbreviation, but are used to create a new abbreviation element inserted
 inside the first one, at the position of the cursor.
 
-{@img dialogFailed.png Abbreviation duplicate added in CKEditor}
+{@img abbr2PluginDialogFailed.png Abbreviation duplicate added in CKEditor}
 
 Why is that so? It is because the current edition of the `onOk` function does not
 differentiate between adding an element and modifying it, so it simply inserts
@@ -470,22 +470,22 @@ The code of the extended Abbreviation plugin is now ready. When you click the
 will open. Fill in the obligatory **Abbreviation** and **Explanation** fields and
 click the **OK** button.
 
-{@img dialogNew.png Abbreviation added in the dialog window}
+{@img abbr2PluginDialogNew.png Abbreviation added in the dialog window}
 
 The newly added abbreviation will be inserted into the document and will be
 displayed using the default styling of your browser. In Firefox, for example,
 the abbreviation will be underlined using a dotted line and the explanation will
 be displayed in a tooltip.
 
-{@img dialogAdded.png Abbreviation added in the dialog window}
+{@img abbr2PluginDialogAdded.png Abbreviation added in the dialog window}
 
 If you want to edit the abbreviation, select it and open its context menu.
 Choose the **Edit Abbreviation** option to open the dialog window again, filled
 in with the content of the element. Modify the abbreviation and click **OK**.
 
-{@img dialogChanged.png Abbreviation edited in the dialog window}
+{@img abbr2PluginDialogChanged.png Abbreviation edited in the dialog window}
 
 Voilà! The abbreviation was updated and its content was replaced with texts
 entered in the dialog window.
 
-{@img dialogSuccess.png Abbreviation edited in the dialog window}
+{@img abbr2PluginDialogSuccess.png Abbreviation edited in the dialog window}

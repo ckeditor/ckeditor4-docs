@@ -30,8 +30,8 @@ tutorial and explains all code adjustments that are required to make it compatib
 Advanced Content Filter.
 
 <p class="tip">
-	You can <a href="guides/plugin_sdk_sample_2/abbr2.zip">download the
-	entire plugin folder</a> used in Simple Plugin (Part 2) to follow the changes
+	You can <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-2">download the
+	entire plugin folder</a> used in the Simple Plugin (Part 2) tutorial to follow the changes
 	introduced in this guide.
 </p>
 
@@ -240,8 +240,8 @@ pasting content and editing source code.
 Read more about {@link CKEDITOR.feature#contentForms contentForms} in CKEditor JavaScript API.
 
 <p class="tip">
-	You can also <a href="guides/plugin_sdk_integration_with_acf/abbr3.zip">download the
-	whole modified plugin folder</a> inluding the icon and the fully commented source code.
+	You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-acf">download the
+	entire modified plugin folder</a> inluding the icon and the fully commented source code.
 </p>
 
 ## Further Reading

@@ -562,7 +562,7 @@
 			{
 				"name": "plugin_sdk_styles",
 				"url": "plugin_sdk/styles",
-				"title": "Plugin CSS Styles",
+				"title": "Plugin Stylesheets",
 				"description": "How to add plugin styles and integrate them with CKEditor.",
 				"meta_description": "How to add plugin styles and integrate them with CKEditor.",
 				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, style, styles, CSS, stylesheet, stylesheets"

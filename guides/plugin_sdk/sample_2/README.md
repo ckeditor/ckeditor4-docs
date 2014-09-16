@@ -489,3 +489,12 @@ Voilà! The abbreviation was updated and its content was replaced with texts
 entered in the dialog window.
 
 {@img abbr2PluginDialogSuccess.png Abbreviation edited in the dialog window}
+
+## Further Reading
+
+Refer to the following resources for more information about creating CKEditor plugins:
+
+* [Creating a CKEditor Plugin in 20 Lines of Code](#!/guide/plugin_sdk_sample) &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
+* [Simple Plugin, Part 1](#!/guide/plugin_sdk_sample_1) &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
+* [Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf) &ndash; Learn how to implement Advanced Content Filter support in your plugins.
+* [Plugin Stylesheets](#!/guide/plugin_sdk_styles) &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.

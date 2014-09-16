@@ -390,3 +390,12 @@ The Abbreviation plugin is now able to add a new `<abbr>` element to the documen
 but does not make it possible to edit an already existing element. For this
 feature along with the context menu support check the
 [second part of the tutorial](#!/guide/plugin_sdk_sample_2).
+
+## Further Reading
+
+Refer to the following resources for more information about creating CKEditor plugins:
+
+* [Creating a CKEditor Plugin in 20 Lines of Code](#!/guide/plugin_sdk_sample) &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
+* [Simple Plugin, Part 2](#!/guide/plugin_sdk_sample_2) &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
+* [Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf) &ndash; Learn how to implement Advanced Content Filter support in your plugins.
+* [Plugin Stylesheets](#!/guide/plugin_sdk_styles) &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.

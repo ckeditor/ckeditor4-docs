@@ -246,6 +246,13 @@ Read more about {@link CKEDITOR.feature#contentForms contentForms} in CKEditor J
 
 ## Further Reading
 
+Refer to the following resources for more information about creating CKEditor plugins:
+
+* **[Creating a CKEditor Plugin in 20 Lines of Code](#!/guide/plugin_sdk_sample)** &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
+* **[Simple Plugin, Part 1](#!/guide/plugin_sdk_sample_1)** &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
+* **[Simple Plugin, Part 2](#!/guide/plugin_sdk_sample_2)** &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
+* **[Plugin Stylesheets](#!/guide/plugin_sdk_styles)** &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
+
 Refer to the following resources for more information about content filtering:
 
 * The [Content Filtering (ACF)](#!/guide/dev_acf) article explains some ACF use cases and the rationale behind this feature.

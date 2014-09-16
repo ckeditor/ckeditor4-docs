@@ -526,9 +526,17 @@
 				"name": "plugin_sdk_intro",
 				"url": "plugin_sdk/intro",
 				"title": "Introduction",
-				"description": "Creating custom CKEditor plugins.",
-				"meta_description": "Creating custom CKEditor plugins.",
-				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample"
+				"description": "Introduction to CKEditor Plugin SDK.",
+				"meta_description": "Introduction to CKEditor Plugin SDK.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, sdk, custom, development, tutorial, example, sample"
+			},
+			{
+				"name": "plugin_sdk_sample",
+				"url": "plugin_sdk/sample",
+				"title": "Creating a Basic Plugin",
+				"description": "Creating a CKEditor Plugin in 20 Lines of Code.",
+				"meta_description": "Creating a CKEditor Plugin in 20 Lines of Code.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, timestamp, sdk, custom, development, tutorial, example, sample"
 			},
 			{
 				"title": "Simple Plugin Tutorial",
@@ -539,7 +547,7 @@
 						"title": "Simple Plugin (Part 1)",
 						"description": "Learn by creating a simple plugin, part 1.",
 						"meta_description": "Learn by creating a simple plugin, part 1.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample"
+						"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, sdk, custom, development, tutorial, example, sample, abbr, abbreviation"
 					},
 					{
 						"name": "plugin_sdk_sample_2",
@@ -547,7 +555,7 @@
 						"title": "Simple Plugin (Part 2)",
 						"description": "Learn by creating a simple plugin, part 2.",
 						"meta_description": "Learn by creating a simple plugin, part 2.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample"
+						"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, sdk, custom, development, tutorial, example, sample, abbr, abbreviation"
 					}
 				]
 			},
@@ -557,7 +565,7 @@
 				"title": "Integration with ACF",
 				"description": "Integrate a plugin with Advanced Content Filter.",
 				"meta_description": "Integrate a plugin with Advanced Content Filter.",
-				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, custom, development, tutorial, example, sample, acf, content, filter, filtering"
+				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, abbr, abbreviation, sdk, custom, development, tutorial, example, sample, acf, content, filter, filtering"
 			},
 			{
 				"name": "plugin_sdk_styles",
@@ -565,7 +573,7 @@
 				"title": "Plugin Stylesheets",
 				"description": "How to add plugin styles and integrate them with CKEditor.",
 				"meta_description": "How to add plugin styles and integrate them with CKEditor.",
-				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, sdk, style, styles, CSS, stylesheet, stylesheets"
+				"meta_keywords": "ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, sdk, style, styles, CSS, stylesheet, stylesheets"
 			}
 		],
 		"TODO": [

@@ -68,3 +68,12 @@ This method has to be called before the [editable](#!/api/CKEDITOR.editable) is 
 If stylesheets added by your plugins do not seem to work, the first thing to do is **clearing the browser cache**. If that does not help, you can open your browser developer tools and inspect the editor content (it is a fragment of the HTML page).
 
 It may happen that some classes, styles or attributes were removed from the content loaded into the editor. This often means that your plugin is not properly [integrated with the Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf).
+
+## Further Reading
+
+Refer to the following resources for more information about creating CKEditor plugins:
+
+* [Creating a CKEditor Plugin in 20 Lines of Code](#!/guide/plugin_sdk_sample) &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
+* [Simple Plugin, Part 1](#!/guide/plugin_sdk_sample_1) &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
+* [Simple Plugin, Part 2](#!/guide/plugin_sdk_sample_2) &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
+* [Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf) &ndash; Learn how to implement Advanced Content Filter support in your plugins.

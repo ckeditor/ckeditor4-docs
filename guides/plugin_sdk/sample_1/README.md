@@ -85,9 +85,9 @@ The above CKEDITOR.ui.addButton function call created a button named `'Abbr'` wi
 
  * `label` &ndash; the textual part of the button (if visible) and its tooltip.
  * `command` &ndash; the command to be executed once the button is activated. This is the command we created in the previous step.
- * `toolbar` &ndash; the [toolbar group](#!/guide/dev_toolbar-section-1) into which the button will be added.
+ * `toolbar` &ndash; the [toolbar group](#!/guide/dev_toolbar-section-toolbar-groups-configuration) into which the button will be added.
  
- Please note that you can influence the position of the button in the toolbar group by providing an optional index, for example:
+Please note that you can influence the position of the button in the toolbar group by providing an optional index, for example:
 
 	// This could position the button at the beginning of the "insert" group.
 	toolbar: 'insert,0'

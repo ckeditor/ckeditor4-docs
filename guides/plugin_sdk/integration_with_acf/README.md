@@ -35,7 +35,6 @@ Advanced Content Filter.
 	introduced in this guide.
 </p>
 
-
 ## Integrating with ACF to Introduce a New Content Type
 
 If you start with the code created for [Simple Plugin (Part 2)](#!/guide/plugin_sdk_sample_2)
@@ -66,18 +65,19 @@ the source and WYSIWYG modes. This is what you will see:
 
 	<p>What is <abbr>ACF</abbr>?</p>
 
-But where is the `title` attribute? It was removed by the editor. You will have to [specify which
-**attributes** are allowed](#!/guide/dev_allowed_content_rules), too. This was not done
-when setting `allowedContent` above, so will have to be fixed now:
+But where is the `title` attribute? It was removed by the editor. And the same would happen to the
+`id` attribute that is supported by the **Advanced Settings** tab.
+
+In order to avoid this, you will have to [specify which **attributes** are allowed](#!/guide/dev_allowed_content_rules),
+too. This was not done when setting `allowedContent` above, so will have to be fixed now:
 
 	new CKEDITOR.dialogCommand( 'abbrDialog', {
-		allowedContent: 'abbr[title]'
+		allowedContent: 'abbr[title,id]'
 	} );
 
-The `title` attribute will now be accepted for any `<abbr>` tag. Loading the **Abbreviation** button
+The `title` and `id` attributes will now be accepted for any `<abbr>` tag. Loading the **Abbreviation** button
 will automatically extend filtering rules to accept a new content type and let
 the new feature work as planned.
-
 
 ### What is an Editor *Feature*?
 
@@ -140,7 +140,7 @@ in the command definition we make sure that the **Abbreviation** button will ada
 adjust to filtering rules set by the user:
 
 	new CKEDITOR.dialogCommand( 'abbrDialog', {
-		allowedContent: 'abbr[title]',
+		allowedContent: 'abbr[title,id]',
 		requiredContent: 'abbr'
 	} );
 
@@ -158,12 +158,13 @@ accepting `<abbr>` back again:
 	});
 
 The `allowedContent: 'p abbr'` rule means that all attributes will be striped out from
-the `<abbr>` tag, including `title`. The **Abbreviation** plugin, however, still provides
-a dialog window for editing both abbreviations (tag contents) and explanations (`title`).
-It turns out that the second field is no longer necessary since the `title` attribute will
+the `<abbr>` tag, including `title` and `id`. The **Abbreviation** plugin, however, still provides
+a dialog window for editing both abbreviations (tag contents) and explanations (`title`) as
+well as the **Advanced Settings** tab for setting the `id`. It turns out that the **Explanation** 
+field and the second tab are no longer necessary since the `title` and `id` attributes will
 be discarded.
 
-With Advanced Content Filter we can specify which dialog window fields are
+With Advanced Content Filter we can specify which dialog window fields and tabs are
 enabled and which are not, depending on filtering rules set in the configuration. This can
 be done by modifying the Explanation field in the dialog window definition
 (`plugins/abbr/dialogs/abbr.js`):
@@ -180,7 +181,7 @@ be done by modifying the Explanation field in the dialog window definition
 		...
 	]
 
-Please note that the dialog window also contains the **Advanced Settings** tab that
+The dialog window also contains the **Advanced Settings** tab that
 can be used for setting the `id` attribute. However, our current configuration
 (`allowedContent: 'p abbr'`) means: "only paragraphs and abbreviations are allowed, not
 attributes". The **Abbreviation** plugin should take this fact into account and disable
@@ -210,7 +211,7 @@ To sum it up, let us see how the **Abbreviation** dialog window changes with dif
 ## Integrating with ACF for Content Transformations
 
 Advanced Content Filter also introduces
-[content transformations](#!/guide/dev_advanced_content_filter-section-4)
+[content transformations](#!/guide/#!/guide/dev_advanced_content_filter-section-content-transformations)
 that help clean up HTML code and make it consistent. This functionality can be
 used automatically in the **Abbreviation** feature to convert the invalid `<acronym>`
 tag into an `<abbr>`. In order to achieve this, we will need to define the
@@ -218,7 +219,7 @@ tag into an `<abbr>`. In order to achieve this, we will need to define the
 is correct and accepted by the editor with the highest priority:
 
 	new CKEDITOR.dialogCommand( 'abbrDialog', {
-		allowedContent: 'abbr[title]',
+		allowedContent: 'abbr[title,id]',
 		requiredContent: 'abbr',
 		contentForms: [
 			'abbr',
@@ -248,10 +249,10 @@ Read more about {@link CKEDITOR.feature#contentForms contentForms} in CKEditor J
 
 Refer to the following resources for more information about creating CKEditor plugins:
 
-* **[Creating a CKEditor Plugin in 20 Lines of Code](#!/guide/plugin_sdk_sample)** &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
-* **[Simple Plugin, Part 1](#!/guide/plugin_sdk_sample_1)** &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
-* **[Simple Plugin, Part 2](#!/guide/plugin_sdk_sample_2)** &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
-* **[Plugin Stylesheets](#!/guide/plugin_sdk_styles)** &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
+* [Creating a CKEditor Plugin in 20 Lines of Code](#!/guide/plugin_sdk_sample) &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
+* [Simple Plugin, Part 1](#!/guide/plugin_sdk_sample_1) &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
+* [Simple Plugin, Part 2](#!/guide/plugin_sdk_sample_2) &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
+* [Plugin Stylesheets](#!/guide/plugin_sdk_styles) &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
 
 Refer to the following resources for more information about content filtering:
 
@@ -259,5 +260,5 @@ Refer to the following resources for more information about content filtering:
 * The [Advanced Content Filer](#!/guide/dev_advanced_content_filter) article contains more in-depth technical details about ACF.
 * The [Allowed Content Rules](#!/guide/dev_allowed_content_rules) article explains the allowed and disallowed content rules format.
 * The [Disallowed Content](#!/guide/dev_disallowed_content) article explains how blacklisting works in ACF.
-* {@link CKEDITOR.filter}  contains API documentation for the main class responsible for ACF features.
-* {@link CKEDITOR.feature}contains API documentation of an interface representing an editor feature used in combination with {@link CKEDITOR.filter#addFeature}.
+* CKEDITOR.filter contains API documentation for the main class responsible for ACF features.
+* CKEDITOR.feature contains API documentation of an interface representing an editor feature used in combination with CKEDITOR.filter.addFeature.

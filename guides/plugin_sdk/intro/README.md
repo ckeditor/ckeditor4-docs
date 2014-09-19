@@ -17,3 +17,4 @@ Learning by example is always the best idea, so check our **plugin tutorials** t
  1. **[Simple Plugin, Part 2](#!/guide/plugin_sdk_sample_2)** &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
  1. **[Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf)** &ndash; Learn how to implement Advanced Content Filter support in your plugins.
  1. **[Plugin Stylesheets](#!/guide/plugin_sdk_styles)** &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
+ 1. **Live Demos** &ndash; See the **working demos** of the custom [Timestamp](http://sdk.ckeditor.com/samples/timestamp.html) and [Abbreviation](http://sdk.ckeditor.com/samples/abbr.html) plugins created in the tutorials live in action in CKEditor SDK.

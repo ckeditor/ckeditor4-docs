@@ -443,3 +443,6 @@ If you double click an existing widget instance, the dialog window will open aga
 
 {@img simplebox2_example1.png Updated Simple Box widget}
 
+## Simple Box Widget Demo 
+
+See the [working "Creating a Custom Widget" sample](http://sdk.ckeditor.com/samples/simplebox.html) that shows the final version of the Simple Box widget integrated with an editor instance.

@@ -178,6 +178,10 @@ of code! Since the `editor.insertHtml` method can be used to add arbitrary HTML 
 the document, you can replace the timestamp logic with your own customized code in
 order to insert other types of content into your document.
 
+## Timestamp Plugin Demo 
+
+See the [working "Creating a Most Basic CKEditor Plugin" sample](http://sdk.ckeditor.com/samples/timestamp.html) that shows the Timestamp plugin integrated with an editor instance.
+
 ## Further Reading
 
 Refer to the following resources for more information about creating CKEditor plugins:

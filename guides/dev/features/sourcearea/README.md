@@ -56,4 +56,7 @@ See the [working "Source Code Editing" sample](http://sdk.ckeditor.com/samples/s
 
 ## Related Features
 
-See the [Output Formatting](#!/guide/dev_output_format) feature that gives developers full control over what the HTML code produced by the editor will look like.
+Refer to the following resources for more information about related features:
+
+* The [Output Formatting](#!/guide/dev_output_format) feature gives developers full control over what the HTML code produced by the editor will look like.
+* The [Full Page Editing with Document Properties Plugin](#!/guide/dev_fullpage) article explains how to use CKEditor to work on a complete HTML page (from `<html>` to `</html>`) and to setup some document metadata.

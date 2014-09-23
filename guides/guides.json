@@ -449,6 +449,14 @@
 						"description": "Configuring the output of Enter and Shift+Enter keys.",
 						"meta_description": "Configuring the output of Enter and Shift+Enter keys.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, enter, shift, key, keystroke, break, line, paragraph, output, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+					{
+						"name": "dev_fullpage",
+						"url": "dev/features/fullpage",
+						"title": "Full Page Editing",
+						"description": "Full page editing with Document Properties plugin.",
+						"meta_description": "Full page editing with Document Properties plugin.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, fullpage, full, page, html, docprops, metadata, meta, head, properties, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

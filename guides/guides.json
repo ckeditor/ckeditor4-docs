@@ -457,6 +457,14 @@
 						"description": "Full page editing with Document Properties plugin.",
 						"meta_description": "Full page editing with Document Properties plugin.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, fullpage, full, page, html, docprops, metadata, meta, head, properties, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+					},
+					{
+						"name": "dev_size",
+						"url": "dev/features/size",
+						"title": "Editor Size",
+						"description": "Changing the editor width and height.",
+						"meta_description": "Changing the editor width and height.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, size, dimension, height, width, resize, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					}
 				]
 			},

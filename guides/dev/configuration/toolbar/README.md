@@ -13,12 +13,26 @@ one of the most common requirements.
 	You will only be loading unnecessary stuff without any good reason.
 </div>
 
-There are two ways to configure the toolbar to suit your needs:
+There are several approaches to CKEditor toolbar configuration to choose from:
 
+ * [Using the Toolbar Configurator](#!/guide/dev_toolbar-section-toolbar-configurator)
  * [Toolbar Groups Configuration](#!/guide/dev_toolbar-section-toolbar-groups-configuration)
  * ["Item by Item" Configuration](#!/guide/dev_toolbar-section-%22item-by-item%22-configuration)
 
+## Toolbar Configurator
+
+<p class="requirements">
+	Toolbar Configurator is available in each official CKEditor installation package starting from <strong>CKEditor 4.5</strong>. 
+</p>
+
+The new toolbar utility, which you can find in your CKEditor distribution package, makes configuring an accessible toolbar a breeze.
+It is the **most recommended way to set up the editor toolbar**.
+
+You can use it to change the order of toolbar groups, select and deselect buttons, or break the toolbar into rows. Your current configuration is previewed live on the attached editor instance so you get instant feedback regarding the look and feel of your toolbar. When you are happy with your settings just click the button to get the source code to paste into your [editor configuration](#!/guide/dev_configuration).
+
 ## Toolbar Groups Configuration
+
+**Note:** This method requires manual crafting of the toolbar configuration code and is recommended to more advanced users.
 
 CKEditor 4 introduced a new concept for toolbar organization which is based on "grouping" instead of the traditional "item by item positioning" way.
 
@@ -65,6 +79,8 @@ The most evident problem with grouping configuration is that it is not possible 
 
 ## "Item by Item" Configuration
 
+**Note:** This method requires manual crafting of the toolbar configuration code and is recommended to more advanced users.
+
 Other than the grouping configuration, it is also possible to have more control over every single element in the toolbar by defining their precise position. That is done by configuring a "toolbar definition".
 
 A toolbar definition is a JavaScript array that contains the elements to
@@ -107,3 +123,14 @@ The `name` given for every toolbar group is used by assistive technologies such 
 readers. That name will be used by CKEditor to search for the "readable" name of each toolbar group in the editor language files (the `toolbarGroups` entries).
 
 Screen readers will announce each of the toolbar groups by using either their readable name (if it is available) or their defined `name` attribute.
+
+## Custom Toolbar Demo 
+
+See the [working "Custom Editor Toolbar" sample](http://sdk.ckeditor.com/samples/toolbar.html) that showcases an editor instance with a one-row toolbar set to include just a few most relevant editing features.
+
+## Related Features
+
+Refer to the following resources for more information about editor toolbar:
+
+ * The [Toolbar Location](#!/guide/dev_toolbarlocation) feature lets you change the toolbar position in classic editor.
+ * The [Shared Toolbar and Bottom Bar](#!/guide/dev_sharedspace) feature lets you place the toolbar in a designated page element and share it among multiple editor instances used on one page.

@@ -20,4 +20,7 @@ See the [working "Toolbar Location Adjustment" sample](http://sdk.ckeditor.com/s
 
 ## Related Features
 
-Try the [Shared Toolbar and Bottom Bar](#!/guide/dev_sharedspaces) feature to place the toolbar in a designated page element and share it among multiple editor instances used on one page!
+Refer to the following resources for more information about the editor toolbar:
+
+ * The [Toolbar](#!/guide/dev_toolbar) article explains how to configure the editor toolbar.
+ * The [Shared Toolbar and Bottom Bar](#!/guide/dev_sharedspace) feature lets you place the toolbar in a designated page element and share it among multiple editor instances used on one page.

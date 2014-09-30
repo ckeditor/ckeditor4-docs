@@ -254,22 +254,6 @@
 						"meta_keywords": "acf, advanced content filter, allowed content filter, allowed html, allowed tags, disallowed content, remove tags"
 					},
 					{
-						"name": "dev_styles",
-						"url": "dev/configuration/styles",
-						"title": "Styles Drop-down",
-						"description": "How to configure the Styles drop-down list.",
-						"meta_description": "How to configure the Styles drop-down list.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
-					},
-					{
-						"name": "dev_output_format",
-						"url": "dev/configuration/output_format",
-						"title": "Output Formatting",
-						"description": "How to configure CKEditor output formatting.",
-						"meta_description": "How to configure CKEditor output formatting.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, output, formatting, format, source, code, html, xhtml, data, writer, processor, indent, indentation, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
-					},
-					{
 						"name": "dev_spellcheck",
 						"url": "dev/configuration/spellcheck",
 						"title": "Spell Checker",
@@ -283,188 +267,261 @@
 				"title": "Functionality Overview",
 				"items": [
 					{
-						"name": "dev_codesnippet",
-						"url": "dev/features/codesnippet",
-						"title": "Code Snippets",
-						"description": "Overview of CKEditor features.",
-						"meta_description": "Overview of CKEditor features.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, code, snippet, snippets, coloring, syntax, highlighting, widget, widgets, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-                    {
-						"name": "dev_codesnippetgeshi",
-						"url": "dev/features/codesnippetgeshi",
-						"title": "Code Snippets (GeSHi)",
-						"description": "Using GeSHi Syntax Highlighter",
-						"meta_description": "Using GeSHi Syntax Highlighter.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, code, snippet, snippets, coloring, syntax, highlighting, geshi, widget, widgets, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-					{
-						"name": "dev_uicolor",
-						"url": "dev/features/uicolor",
-						"title": "UI Color",
-						"description": "Adjusting editor user interface color.",
-						"meta_description": "Adjusting editor user interface color.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, color, colour, ui, interface, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-                    {
-						"name": "dev_uilanguage",
-						"url": "dev/features/uilanguage",
-						"title": "UI Language",
-						"description": "Adjusting CKEditor UI Language.",
-						"meta_description": "Adjusting CKEditor UI Language.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, language, localization, localisation, translation, internationalization, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-                    {
-						"name": "dev_readonly",
-						"url": "dev/features/readonly",
-						"title": "Read-Only Mode",
-						"description": "Using CKEditor Read-Only Mode.",
-						"meta_description": "Using CKEditor Read-Only Mode.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, readonly, read-only, uneditable, noneditable, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-                    {
-						"name": "dev_autogrow",
-						"url": "dev/features/autogrow",
-						"title": "Editor Auto Grow",
-						"description": "Automatic Editor Height Adjustment to Content.",
-						"meta_description": "Automatic Editor Height Adjustment to Content.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, height, expand, grow, shrink, autogrow, auto, adjustment, adjust, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-					{
-						"name": "dev_magicline",
-						"url": "dev/features/magicline",
-						"title": "Magic Line",
-						"description": "Adding content in inaccessible places with Magic Line.",
-						"meta_description": "Adding content in inaccessible places with Magic Line.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, magicline, magic, line, enter, inaccessible, cursor, focus"
-					},
-					{
-						"name": "dev_tabindex",
-						"url": "dev/features/tabindex",
-						"title": "Tab Key Navigation",
-						"description": "Page Navigation Using the Tab Key.",
-						"meta_description": "Page Navigation Using the Tab Key.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, tab, key, keyboard, accessibility, shortcut, keystroke, tabindex, order, focus"
-					},
-					{
-						"name": "dev_table",
-						"url": "dev/features/table",
-						"title": "Tables and Column Resizing",
-						"description": "Table Support with Column Resizing.",
-						"meta_description": "Table Support with Column Resizing.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, table, tables, cell, cells, row, rows, column, columns, resize, resizing, drag, mouse"
-					},
-					{
-						"name": "dev_sourcearea",
-						"url": "dev/features/sourcearea",
-						"title": "Source Code Editing",
-						"description": "Source Code Editing.",
-						"meta_description": "Source Code Editing.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, source, code, html, area, sourcearea, dialog, sourcedialog"
-					},
-					{
-						"name": "dev_bbcode",
-						"url": "dev/features/bbcode",
-						"title": "BBCode Editing",
-						"description": "Configuring CKEditor to work on BBCode.",
-						"meta_description": "Configuring CKEditor to work on BBCode.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, output, bbcode, source, forum, markup, format"
-					},
-					{
-						"name": "dev_captionedimage",
-						"url": "dev/features/captionedimage",
-						"title": "Captioned Image",
-						"description": "Creating Captioned Images.",
-						"meta_description": "Creating Captioned Images.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, image, images, caption, captioned, image2, enhanced, widget, resizing, drag, drop"
-					},
-					{
-						"name": "dev_mathjax",
-						"url": "dev/features/mathjax",
-						"title": "Mathematical Formulas",
-						"description": "Creating Mathematical Formulas Using TeX.",
-						"meta_description": "Creating Mathematical Formulas Using TeX.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, mathjax, mathematics, math, maths, equation, equations, formula, formulas, formulae, mathematical, tex, latex, widget, drag, drop"
-					},
-					{
-						"name": "dev_placeholder",
-						"url": "dev/features/placeholder",
-						"title": "Placeholder",
-						"description": "Using Placeholders.",
-						"meta_description": "Using Placeholders.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, placeholder, placeholders, template, widget, drag, drop"
-					},
-					{
-						"name": "dev_styles",
-						"url": "dev/configuration/styles",
-						"title": "Styles Drop-down",
-						"description": "Applying Styles to Editor Content.",
-						"meta_description": "Applying Styles to Editor Content.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, stylesheet, parser, css, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
-					},
-					{
-						"name": "dev_uitypes",
-						"url": "dev/features/uitypes",
-						"title": "UI Types",
-						"description": "Editor User Interface Types.",
-						"meta_description": "Editor User Interface Types.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, floating, fixed, inline, classic, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-                    {
-						"name": "dev_sharedspace",
-						"url": "dev/features/sharedspace",
-						"title": "Shared Toolbar and Bottom Bar",
-						"description": "Sharing UI Elements Among Editor Instances.",
-						"meta_description": "Sharing UI Elements Among Editor Instances.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, blocks, sharing, common, shared, spaces, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-                    {
-						"name": "dev_toolbarlocation",
-						"url": "dev/features/toolbarlocation",
-						"title": "Toolbar Location",
-						"description": "Adjusting Editor Toolbar Location.",
-						"meta_description": "Adjusting Editor Toolbar Location.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, location, position, buttons, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-					{
-						"name": "dev_devtools",
-						"url": "dev/features/devtools",
-						"title": "Developer Tools",
-						"description": "Using Developer Tools plugin to customize dialog dindows.",
-						"meta_description": "Using Developer Tools plugin to customize dialog dindows.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, developer, tools, helper, help, dialog, dialogs, window, windows, tab, field, customization, customize, customisation, customise"
+						"title": "End-user Features",
+						"items": [
+							{
+								"title": "User Interface",
+								"items": [
+									{
+										"name": "dev_uicolor",
+										"url": "dev/features/uicolor",
+										"title": "UI Color",
+										"description": "Adjusting editor user interface color.",
+										"meta_description": "Adjusting editor user interface color.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, color, colour, ui, interface, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_uilanguage",
+										"url": "dev/features/uilanguage",
+										"title": "UI Language",
+										"description": "Adjusting the editor user interface language.",
+										"meta_description": "Adjusting the editor user interface language.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, language, localization, localisation, translation, internationalization, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									}
+								]
+							},
+							{
+								"title": "Editor Resizing",
+								"items": [
+									{
+										"name": "dev_size",
+										"url": "dev/features/size",
+										"title": "Editor Size",
+										"description": "Changing the editor width and height.",
+										"meta_description": "Changing the editor width and height.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, size, dimension, height, width, resize, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_autogrow",
+										"url": "dev/features/autogrow",
+										"title": "Editor Auto Grow",
+										"description": "Automatic editor height adjustment to content.",
+										"meta_description": "Automatic editor height adjustment to content.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, height, expand, grow, shrink, autogrow, auto, adjustment, adjust, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									}
+								]
+							},
+							{
+								"title": "Inserting Content",
+								"items": [
+									{
+										"name": "dev_captionedimage",
+										"url": "dev/features/captionedimage",
+										"title": "Captioned Images",
+										"description": "Creating images with captions.",
+										"meta_description": "Creating images with captions.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, image, images, caption, captioned, image2, enhanced, widget, resizing, drag, drop"
+									},
+									{
+										"name": "dev_table",
+										"url": "dev/features/table",
+										"title": "Tables with Column Resizing",
+										"description": "Table support with column resizing.",
+										"meta_description": "Table support with column resizing.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, table, tables, cell, cells, row, rows, column, columns, resize, resizing, drag, mouse"
+									},
+									{
+										"name": "dev_codesnippet",
+										"url": "dev/features/codesnippet",
+										"title": "Code Snippets",
+										"description": "Using syntax highlighting in CKEditor.",
+										"meta_description": "Using syntax highlighting in CKEditor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, code, snippet, snippets, coloring, syntax, highlighting, widget, widgets, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_codesnippetgeshi",
+										"url": "dev/features/codesnippetgeshi",
+										"title": "Code Snippets (GeSHi)",
+										"description": "Using GeSHi syntax highlighter in CKEditor.",
+										"meta_description": "Using GeSHi syntax highlighter in CKEditor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, code, snippet, snippets, coloring, syntax, highlighting, geshi, widget, widgets, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_mathjax",
+										"url": "dev/features/mathjax",
+										"title": "Mathematical Formulas",
+										"description": "Creating mathematical formulas using TeX.",
+										"meta_description": "Creating mathematical formulas using TeX.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, mathjax, mathematics, math, maths, equation, equations, formula, formulas, formulae, mathematical, tex, latex, widget, drag, drop"
+									},
+									{
+										"name": "dev_placeholder",
+										"url": "dev/features/placeholder",
+										"title": "Placeholders",
+										"description": "Using placeholders to create read-only elements editable through a dialog window.",
+										"meta_description": "Using placeholders to create read-only elements editable through a dialog window.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, placeholder, placeholders, template, widget, drag, drop"
+									}
+								]
+							},
+							{
+								"title": "Authoring Content",
+								"items": [
+									{
+										"name": "dev_styles",
+										"url": "dev/configuration/styles",
+										"title": "Styles Drop-down",
+										"description": "Applying styles to editor content and using Stylesheet Parser plugin.",
+										"meta_description": "Applying styles to editor content and using Stylesheet Parser plugin.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, stylesheet, parser, css, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+									}
+								]
+							},
+							{
+								"title": "Working with Document",
+								"items": [
+									{
+										"name": "dev_sourcearea",
+										"url": "dev/features/sourcearea",
+										"title": "Source Code Editing",
+										"description": "Editing raw HTML source in CKEditor.",
+										"meta_description": "Editing raw HTML source in CKEditor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, source, code, html, area, sourcearea, dialog, sourcedialog"
+									},
+									{
+										"name": "dev_magicline",
+										"url": "dev/features/magicline",
+										"title": "Magic Line",
+										"description": "Adding content in inaccessible places with Magic Line.",
+										"meta_description": "Adding content in inaccessible places with Magic Line.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, magicline, magic, line, enter, inaccessible, cursor, focus"
+									}
+								]
+							},
+							{
+								"title": "Accessibility Support",
+								"items": [
+									{
+										"name": "dev_tabindex",
+										"url": "dev/features/tabindex",
+										"title": "Tab Key Navigation",
+										"description": "Page navigation using the Tab key.",
+										"meta_description": "Page navigation using the Tab key.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, tab, key, keyboard, accessibility, shortcut, keystroke, tabindex, order, focus"
+									}
+								]
+							}
+						]
 					},
 					{
-						"name": "dev_uicolorpicker",
-						"url": "dev/features/uicolorpicker",
-						"title": "UI Color Picker",
-						"description": "Using the UI Color Picker to change the user interface color.",
-						"meta_description": "Using the UI Color Picker to change the user interface color.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, color, colour, ui, interface, picker, tool, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-					{
-						"name": "dev_enterkey",
-						"url": "dev/features/enterkey",
-						"title": "Enter Key Configuration",
-						"description": "Configuring the output of Enter and Shift+Enter keys.",
-						"meta_description": "Configuring the output of Enter and Shift+Enter keys.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, enter, shift, key, keystroke, break, line, paragraph, output, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-					{
-						"name": "dev_fullpage",
-						"url": "dev/features/fullpage",
-						"title": "Full Page Editing",
-						"description": "Full page editing with Document Properties plugin.",
-						"meta_description": "Full page editing with Document Properties plugin.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, fullpage, full, page, html, docprops, metadata, meta, head, properties, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-					{
-						"name": "dev_size",
-						"url": "dev/features/size",
-						"title": "Editor Size",
-						"description": "Changing the editor width and height.",
-						"meta_description": "Changing the editor width and height.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, size, dimension, height, width, resize, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+						"title": "Integration Features",
+						"items": [
+							{
+								"title": "Editor UI",
+								"items": [
+									{
+										"name": "dev_uitypes",
+										"url": "dev/features/uitypes",
+										"title": "UI Types",
+										"description": "Editor user interface types: fixed vs. floating.",
+										"meta_description": "Editor user interface types: fixed vs. floating.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, floating, fixed, inline, classic, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_sharedspace",
+										"url": "dev/features/sharedspace",
+										"title": "Shared UI",
+										"description": "Sharing user interface elements among editor instances.",
+										"meta_description": "Sharing user interface elements among editor instances.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, blocks, sharing, common, shared, spaces, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									}
+								]
+							},
+							{
+								"title": "Toolbar",
+								"items": [
+									{
+										"name": "dev_toolbarlocation",
+										"url": "dev/features/toolbarlocation",
+										"title": "Toolbar Location",
+										"description": "Adjusting editor toolbar location.",
+										"meta_description": "Adjusting editor toolbar location.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, location, position, buttons, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									}
+								]
+							},
+							{
+								"title": "API Usage",
+								"items": [
+									{
+										"name": "dev_readonly",
+										"url": "dev/features/readonly",
+										"title": "Read-Only Mode",
+										"description": "Using CKEditor in read-only mode.",
+										"meta_description": "Using CKEditor in read-only mode.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, readonly, read-only, uneditable, noneditable, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									}
+								]
+							},
+							{
+								"title": "Output Control",
+								"items": [
+									{
+										"name": "dev_output_format",
+										"url": "dev/configuration/output_format",
+										"title": "HTML Output Formatting",
+										"description": "How to configure CKEditor output formatting.",
+										"meta_description": "How to configure CKEditor output formatting.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, output, formatting, format, source, code, html, xhtml, data, writer, processor, indent, indentation, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+									},
+									{
+										"name": "dev_fullpage",
+										"url": "dev/features/fullpage",
+										"title": "Editing Complete HTML Pages",
+										"description": "Full page editing with Document Properties plugin.",
+										"meta_description": "Full page editing with Document Properties plugin.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, fullpage, full, page, html, docprops, metadata, meta, head, properties, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_enterkey",
+										"url": "dev/features/enterkey",
+										"title": "Enter Key Configuration",
+										"description": "Configuring the output of Enter and Shift+Enter keys.",
+										"meta_description": "Configuring the output of Enter and Shift+Enter keys.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, enter, shift, key, keystroke, break, line, paragraph, output, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_bbcode",
+										"url": "dev/features/bbcode",
+										"title": "BBCode Editing",
+										"description": "Configuring CKEditor to work on BBCode.",
+										"meta_description": "Configuring CKEditor to work on BBCode.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, output, bbcode, source, forum, markup, format"
+									}
+								]
+							},
+							{
+								"title": "Utilities",
+								"items": [
+									{
+										"name": "dev_devtools",
+										"url": "dev/features/devtools",
+										"title": "Developer Tools",
+										"description": "Using Developer Tools plugin to customize dialog dindows.",
+										"meta_description": "Using Developer Tools plugin to customize dialog dindows.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, developer, tools, helper, help, dialog, dialogs, window, windows, tab, field, customization, customize, customisation, customise"
+									},
+									{
+										"name": "dev_uicolorpicker",
+										"url": "dev/features/uicolorpicker",
+										"title": "UI Color Picker",
+										"description": "Using the UI Color Picker to change the user interface color.",
+										"meta_description": "Using the UI Color Picker to change the user interface color.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, color, colour, ui, interface, picker, tool, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									}
+								]
+							}
+						]
 					}
 				]
 			},

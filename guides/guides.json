@@ -267,6 +267,14 @@
 				"title": "Functionality Overview",
 				"items": [
 					{
+						"name": "dev_features",
+						"url": "dev/features",
+						"title": "Functionality Overview",
+						"description": "An overview of CKEditor features.",
+						"meta_description": "An overview of CKEditor features.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, feature, features, functionality, options, overview"
+					},
+					{
 						"title": "End-user Features",
 						"items": [
 							{

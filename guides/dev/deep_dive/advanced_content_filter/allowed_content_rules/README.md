@@ -42,8 +42,8 @@ Rule format:
 	elements [attributes]{styles}(classes)
 
 	Regexp pattern:
-	 <   elements   ><                       styles, attributes, and classes                       >< separator >
-	/^([a-z0-9*\s]+)((?:\s*\{[!\w\-,\s\*]+\}\s*|\s*\[[!\w\-,\s\*]+\]\s*|\s*\([!\w\-,\s\*]+\)\s*){0,3})(?:;\s*|$)/i,
+	  <   elements   ><                       styles, attributes and classes                        >< separator >
+	/^([a-z0-9\-*\s]+)((?:\s*\{[!\w\-,\s\*]+\}\s*|\s*\[[!\w\-,\s\*]+\]\s*|\s*\([!\w\-,\s\*]+\)\s*){0,3})(?:;\s*|$)/i
 
 Where:
 

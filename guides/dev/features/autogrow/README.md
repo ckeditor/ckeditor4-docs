@@ -52,3 +52,10 @@ With this setting in place, the 50-pixel-high space below the content will alway
 ## Auto Grow Demo 
 
 See the [working "Automatic Editor Height Adjustment to Content" sample](http://sdk.ckeditor.com/samples/autogrow.html) that shows how the editor can automatically expand and shrink vertically to fit the content.
+
+## Related Features
+
+Refer to the following resources for more information about editor resizing:
+
+* The [Setting Editor Size](#!/guide/dev_size) article explains how to set the editor width and height.
+* The [Editor Resizing Customization](#!/guide/dev_resize) article explains a number of options for classic editor resizing, including resizing the editor on the fly.

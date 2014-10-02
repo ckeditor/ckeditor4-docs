@@ -316,6 +316,14 @@
 										"description": "Automatic editor height adjustment to content.",
 										"meta_description": "Automatic editor height adjustment to content.",
 										"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, height, expand, grow, shrink, autogrow, auto, adjustment, adjust, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_resize",
+										"url": "dev/features/resize",
+										"title": "Resizing Customization",
+										"description": "Editor resizing customization and on the fly resizing.",
+										"meta_description": "Editor resizing customization and on the fly resizing.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, size, resize, resizing, dimension, height, width, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 									}
 								]
 							},

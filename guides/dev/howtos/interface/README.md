@@ -14,81 +14,23 @@ If you want to get rid of it, use the CKEDITOR.config.removePlugins setting to r
 
 ## How Do I Change the Size of the Editor?
 
-To define the default size of the editor, use the {@link CKEDITOR.config#width width} and {@link CKEDITOR.config#height height} configuration settings.
-
-Note that the `width` value can be given as a number representing the value in pixels or as a percent representing the size relative to the parent element containing the editor.
-
-	config.width = 850;
-	config.width = '75%';
-
-The `height` value defines the height of CKEditor editing area and can be given in pixels or em. Percent values are not supported.
-
-	config.height = 500;
-	config.height = '25em';
-	config.height = '300px';
-
+Refer to the [Setting Editor Size](#!/guide/dev_size) article.
 
 ## How Do I Change the Size of the Editor on the Fly?
 
-Besides defining a [default size](#!/guide/dev_howtos_interface-section-2) of the editor window you can also change the size of a CKEditor instance on the fly.
-
-To achieve this, use the {@link CKEDITOR.editor#method-resize resize function} to define the dimensions of the editor interface, assigning the window a width and height value in pixels or CSS-accepted units.
-
-	// Set editor width to 100% and height to 350px.
-	editor.resize( '100%', '350' );
-
-While setting the height value, use the `isContentHeight` parameter to decide whether the value applies to the whole editor interface or just the editing area.
-
-	// The height value now applies to the editing area.
-	editor.resize( '100%', '350', true );
-
+Refer to the [Editor Resizing Customization](#!/guide/dev_resize) article.
 
 ## How Do I Remove the Ability to Resize CKEditor?
 
-The editor window can be resized by using the resizing grip located in the bottom right-hand corner of CKEditor interface (for RTL languages — in the bottom left-hand corner).
-
-{@img ui_resizer.png The resizing grip of CKEditor}
-
-To prevent the editor from being resized you can use the {@link CKEDITOR.config#removePlugins removePlugins} setting to remove the `resize` plugin.
-
-	config.removePlugins = 'resize';
-
-You can also disable this feature by setting the {@link CKEDITOR.config#resize_enabled resize_enabled} parameter to `false`.
-
-	config.resize_enabled = false;
-
+Refer to the [Editor Resizing Customization](#!/guide/dev_resize) article.
 
 ## How Do I Limit the Width and Height for CKEditor Resizing?
 
-CKEditor window can be resized if the `resize` plugin is enabled. You can however define the minimum and maximum dimensions to prevent the editor window from becoming too small or too big to handle.
-
-To define the minimum editor dimensions after resizing, specify the {@link CKEDITOR.config#resize_minWidth resize_minWidth} and {@link CKEDITOR.config#resize_minHeight resize_minHeight} values in pixels.
-
-	config.resize_minWidth = 300;
-	config.resize_minHeight = 300;
-
-To define the maximum editor dimensions after resizing, specify the {@link CKEDITOR.config#resize_maxWidth resize_maxWidth} and {@link CKEDITOR.config#resize_maxHeight resize_maxHeight} values in pixels.
-
-	config.resize_maxWidth = 800;
-	config.resize_maxHeight = 600;
-
+Refer to the [Editor Resizing Customization](#!/guide/dev_resize) article.
 
 ## How Do I Limit the Directions for CKEditor Resizing to Horizontal or Vertical Only?
 
-CKEditor window can be resized if the `resize` plugin is enabled. You can however define the resizing directions in order to have more control over the resulting editor appearance.
-
-By default CKEditor resizing is allowed in both directions — vertical and horizontal. This is achieved thanks to setting the resize_dir configuration value to `'both'` (this is the default setting).
-
-	config.resize_dir = 'both';
-
-If you want to allow vertical resizing only, you need to set the {@link CKEDITOR.config#resize_dir resize_dir} configuration value to `'vertical'`.
-
-	config.resize_dir = 'vertical';
-
-If you set the resize_dir configuration value to `'horizontal'`, CKEditor window will only be resizable in horizontal dimension.
-
-	config.resize_dir = 'horizontal';
-
+Refer to the [Editor Resizing Customization](#!/guide/dev_resize) article.
 
 ## How Do I Add the Toolbar Collapse Button?
 

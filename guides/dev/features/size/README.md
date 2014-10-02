@@ -1,4 +1,4 @@
-# Changing Editor Size
+# Setting Editor Size
 
 <p class="requirements">
 	Editor size can only be modified in classic editor. The <code>config.width</code> and <code>config.height</code> settings are ignored by inline editor.
@@ -49,5 +49,5 @@ See the [working "Changing Editor Size" sample](http://sdk.ckeditor.com/samples/
 
 Refer to the following resources for more information about editor resizing:
 
-* [Auto Grow](#!/guide/dev_autogrow) allows the editor to automatically expand and shrink vertically depending on the amount and size of content entered in its editing area.
-* The [Editor Resize](#!/guide/dev_resize) article explains a number of options for classic editor resizing.
+* The [Auto Grow](#!/guide/dev_autogrow) feature allows the editor to automatically expand and shrink vertically depending on the amount and size of content entered in its editing area.
+* The [Editor Resizing Customization](#!/guide/dev_resize) article explains a number of options for classic editor resizing, including resizing the editor on the fly.

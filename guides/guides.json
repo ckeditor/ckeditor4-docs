@@ -418,12 +418,20 @@
 								"title": "Accessibility Support",
 								"items": [
 									{
+										"name": "dev_shortcuts",
+										"url": "dev/features/shortcuts",
+										"title": "Keyboard Shortcuts",
+										"description": "Operating CKEditor with your keyboard.",
+										"meta_description": "Operating CKEditor with your keyboard.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, shortcut, shortcuts, key, keyboard, keystrokes, keystroke, accessibility, a11y"
+									},
+									{
 										"name": "dev_tabindex",
 										"url": "dev/features/tabindex",
 										"title": "Tab Key Navigation",
 										"description": "Page navigation using the Tab key.",
 										"meta_description": "Page navigation using the Tab key.",
-										"meta_keywords": "ckeditor, editor, wysiwyg, tab, key, keyboard, accessibility, shortcut, keystroke, tabindex, order, focus"
+										"meta_keywords": "ckeditor, editor, wysiwyg, tab, key, keyboard, accessibility, shortcut, keystroke, tabindex, order, focus, accessibility, a11y"
 									}
 								]
 							}

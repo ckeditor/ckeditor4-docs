@@ -13,7 +13,7 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 	**OK** button in a dialog window.
 * <kbd>Shift+F10</kbd>, <kbd>Menu/Application</kbd> key &ndash; Opens the element's context menu.
 
-## Navigation
+### Navigation
 
 * <kbd>Home</kbd> &ndash; Jumps to the beginning of the line.
 * <kbd>Ctrl+Home</kbd> &ndash; Jumps to the beginning of the document.
@@ -22,7 +22,7 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 * <kbd>PgDn</kbd> &ndash; Scrolls down the document, approximately by the length of the editing area.
 * <kbd>PgUp</kbd> &ndash; Scrolls up the document, approximately by the length of the editing area.
 
-## Writing
+### Writing
 
 * <kbd>Enter</kbd> (<kbd>Return</kbd>) &ndash; Ends a paragraph and starts a new one.
 * <kbd>Shift+Enter</kbd> &ndash; Adds a line break.
@@ -32,18 +32,18 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 * <kbd>Ctrl+Backspace</kbd>, <kbd>Ctrl+Del</kbd> &ndash; Deletes a word.
 * <kbd>Ctrl+Backspace</kbd>, <kbd>Ctrl+Del</kbd> &ndash; Deletes a word.
 
-## Undo and Redo
+### Undo and Redo
 
 * <kbd>Ctrl+Z</kbd> &ndash; Performs the undo operation.
 * <kbd>Ctrl+Y</kbd>, <kbd>Shift+Ctrl+Z</kbd> &ndash; Performs the redo operation.
 
-## Cut, Copy and Paste
+### Cut, Copy and Paste
 
 * <kbd>Ctrl+X</kbd>, <kbd>Shift+Del</kbd> &ndash; Cuts a text fragment to clipboard.
 * <kbd>Ctrl+C</kbd> &ndash; Copies a text fragment to clipboard.
 * <kbd>Ctrl+V</kbd>, <kbd>Shift+Insert</kbd> &ndash; Pastes a text fragment from clipboard.
 
-## Text Selection
+### Text Selection
 
 * <kbd>Ctrl+A</kbd> &ndash; Selects all document contents.
 * <kbd>Shift+Arrow</kbd> &ndash; Selects a text fragment by letters.

@@ -5,13 +5,14 @@ Depending on your environment (OS, browser) it might be difficult to place the c
 CKEditor 4 introduced the [Magic Line](http://ckeditor.com/addon/magicline) plugin that helps overcome these limitations. The plugin is included in the Standard and Full installation packages.
 
 ## Usage
+
 The Magic Line plugin causes a red line with a handle (<img src="guides/dev_magicline/magicline_01.png" alt="Magic Line handle">) to appear when you hover you mouse over any such otherwise inaccessible place in an active editor.
 
-{@img magicline_02.png}
+{@img magicline_02.png Using magic line to insert a paragraph inside a nested table.}
 
 When you click the magic line's handle, a new paragraph will be inserted into the document. In this example it was added after a table nested in another table, as visible below.
 
-{@img magicline_03.png}
+{@img magicline_03.png A new paragraph inserted after a nested table.}
 
 ## Styling the Magic Line
 
@@ -21,14 +22,14 @@ If the default striking red color does not suit you, you can easily modify it by
     
 This will change magic line's color to blue, as presented in the image below.
 
-{@img magicline_04.png}
+{@img magicline_04.png Changing the magic line color.}
 
 ## Keyboard Shortcuts
 
-To further enhance CKEditor's accessibility, the following keyboard shortcuts are available for working with magic line:
+To further enhance CKEditor's accessibility, the following [keyboard shortcuts](#!/guide/dev_shortcuts) are available for working with magic line:
 
-* *Shift+Ctrl+3* &ndash; to enable enetring content (by adding a new paragraph) **before** a problematic element.
-* *Shift+Ctrl+4* &ndash; to enable entering content (by adding a new paragraph) **after** a problematic element.
+* <kbd>Shift+Ctrl+3</kbd> &ndash; Enables enetring content (by adding a new paragraph) **before** a problematic element.
+* <kbd>Shift+Ctrl+4</kbd> &ndash; Enables entering content (by adding a new paragraph) **after** a problematic element.
 
 You can also adjust the keyboard shortcuts by setting the CKEDITOR.config.magicline_keystrokeNext and CKEDITOR.config.magicline_keystrokePrevious configuration options, respectively. For example:
 

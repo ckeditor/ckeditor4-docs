@@ -193,6 +193,10 @@ pre code a
 	max-width: 400px;
 }
 
+.guide-container .toc li > ol {
+	margin-bottom: 0;
+}
+
 /*
 Float the TOC box if there's enough space for it,
 so it does not cover the text which has max-width 900px.

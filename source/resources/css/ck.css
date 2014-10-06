@@ -131,47 +131,37 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 
 code
 {
-    background: #F7F7F7;
-    border: 1px solid #E8E8E8;
-    padding: 0 3px;
-    font-size: 0.9em;
-
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-    border-radius: 5px;
-    color: #314E64;
+	background: #F7F7F7;
+	border: 1px solid #E8E8E8;
+	padding: 0 3px;
+	font-size: 0.9em;
+	border-radius: 5px;
+	color: #314E64;
 }
 
 pre code
 {
-    border: none;
-    background: none;
-    color: inherit;
-    padding: 0;
+	border: none;
+	background: none;
+	color: inherit;
+	padding: 0;
 }
 
 pre code a
 {
-    border-bottom: 1px dotted #AAA;
+	border-bottom: 1px dotted #AAA;
 }
 
 .tip
 {
 	border: 1px solid #aaa;
 	padding: 12px 15px 12px 65px !important;
+	margin-bottom: 1em;
 	background: #eee;
-
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
 	border-radius: 3px;
-
-	-moz-box-shadow: 2px 2px 0 0 #ccc;
-	-webkit-box-shadow: 2px 2px 0 0 #ccc;
 	box-shadow: 2px 2px 0 0 #ccc;
-
 	overflow: hidden;
+	max-width: 900px;
 }
 
 .tip:before
@@ -200,7 +190,24 @@ pre code a
 
 .guide-container .toc
 {
-    max-width: 450px;
+	max-width: 400px;
+}
+
+/*
+Float the TOC box if there's enough space for it,
+so it does not cover the text which has max-width 900px.
+Also, make sure that there's reasonable vertical space.
+*/
+@media all and (min-width: 1650px) and (min-height: 500px)
+{
+	.guide-container .toc
+	{
+		position: fixed;
+		top: 170px;
+		right: 20px;
+		max-height: calc(100vh - 210px);
+		overflow: auto;
+	}
 }
 
 .guide-container img

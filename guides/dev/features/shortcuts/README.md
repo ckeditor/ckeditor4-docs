@@ -61,11 +61,13 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 
 * <kbd>Ctrl+B</kbd> &ndash; Applies **bold** formatting to a text fragment.
 * <kbd>Ctrl+I</kbd> &ndash; Applies *italics* formatting to a text fragment.
-* <kbd>Ctrl+U</kbd> &ndash; Applies <ins>underline</ins> formatting to a text fragment.
+* <kbd>Ctrl+U</kbd> &ndash; Applies <span style="text-decoration: underline;">underline</span> formatting to a text fragment.
 
 ## Rich Text
 
 * <kbd>Ctrl+L</kbd> &ndash; Opens the **Link** dialog window.
+* <kbd>Tab</kbd> &ndash; Indents a list.
+* <kbd>Shift+Tab</kbd> &ndash; Outdents a list.
 
 ## Accessibility
 

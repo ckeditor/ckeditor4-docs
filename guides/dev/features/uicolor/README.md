@@ -1,4 +1,4 @@
-# Adjusting Editor User Interface Color
+# Setting Editor User Interface Color
 
 The editor UI color can be easily adjusted by the developer to match the look and feel of a website or an application where CKEditor is embedded in.
 
@@ -18,7 +18,7 @@ This will cause the editor UI to assume the provided color, as visible below.
 
 ## User Interface Color Demo
 
-The ["User Interface Color Adjustment" sample](http://sdk.ckeditor.com/samples/uicolor.html) shows how the editor UI color can be changed by using the configuration option.
+The ["Setting Editor UI Color" sample](http://sdk.ckeditor.com/samples/uicolor.html) shows how the editor user interface color can be changed by using the configuration option.
 
 ## Related Features
 

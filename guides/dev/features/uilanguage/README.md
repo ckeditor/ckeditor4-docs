@@ -1,4 +1,4 @@
-# Adjusting CKEditor UI Language
+# Setting CKEditor User Interface Language
 
 CKEditor is translated into over 60 languages and by default, it is displayed in the user's language (as set in the browser or operating system settings). If the matching language version is not available, the editor user interface will be displayed in the default language version (most commonly: English).
 
@@ -34,4 +34,4 @@ This will cause CKEditor interface to be displayed in German to all users, overr
 
 ## UI Languages Demo
 
-See also the [working "User Interface Languages" sample](http://sdk.ckeditor.com/samples/uilanguages.html) that showcases all available CKEditor user interface localizations and includes a simple script that lets the user choose a different language version.
+See also the [working "Setting Editor UI Language" sample](http://sdk.ckeditor.com/samples/uilanguages.html) that showcases all available CKEditor user interface localizations and includes a simple script that lets the user choose a different language version.

@@ -1,4 +1,4 @@
-# Setting CKEditor User Interface Language
+# Setting Editor User Interface Language
 
 CKEditor is translated into over 60 languages and by default, it is displayed in the user's language (as set in the browser or operating system settings). If the matching language version is not available, the editor user interface will be displayed in the default language version (most commonly: English).
 

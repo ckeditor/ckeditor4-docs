@@ -65,6 +65,14 @@
 						"description": "How to retrieve and save CKEditor data.",
 						"meta_description": "How to retrieve and save CKEditor data.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
+					},
+					{
+						"name": "dev_acf",
+						"url": "dev/configuration/acf",
+						"title": "Content Filtering (ACF)",
+						"description": "How to specify allowed and disallowed tags with Advanced Content Filter.",
+						"meta_description": "How to specify allowed and disallowed tags, attributes, classes and styles with Advanced Content Filter.",
+						"meta_keywords": "acf, advanced content filter, content, filter, filtering, allowed content filter, allowed html, allowed tags, disallowed content, remove tags"
 					}
 				]
 			},
@@ -236,30 +244,6 @@
 						"description": "Everything about CKEditor configuration.",
 						"meta_description": "Everything about CKEditor configuration.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					},
-					{
-						"name": "dev_toolbar",
-						"url": "dev/configuration/toolbar",
-						"title": "Toolbar",
-						"description": "How to configure CKEditor toolbar.",
-						"meta_description": "How to configure CKEditor toolbar.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, toolbar, button, buttons, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
-					},
-					{
-						"name": "dev_acf",
-						"url": "dev/configuration/acf",
-						"title": "Content Filtering (ACF)",
-						"description": "How to specify allowed and disallowed tags with Advanced Content Filter.",
-						"meta_description": "How to specify allowed and disallowed tags, attributes, classes and styles with Advanced Content Filter.",
-						"meta_keywords": "acf, advanced content filter, allowed content filter, allowed html, allowed tags, disallowed content, remove tags"
-					},
-					{
-						"name": "dev_spellcheck",
-						"url": "dev/configuration/spellcheck",
-						"title": "Spell Checker",
-						"description": "How to configure CKEditor spell checker.",
-						"meta_description": "How to configure CKEditor spell checker.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, spell, checker, spellchecker, scayt, spellchecking, check, checking, spellcheck, thesaurus, mistake, mistakes, spelling, typo, correction, correct, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 					}
 				]
 			},
@@ -397,6 +381,14 @@
 								"title": "Working with Document",
 								"items": [
 									{
+										"name": "dev_spellcheck",
+										"url": "dev/configuration/spellcheck",
+										"title": "Spell Checking",
+										"description": "Using Spell Check dialog window and Spell Check As You Type (SCAYT).",
+										"meta_description": "Using Spell Check dialog window and Spell Check As You Type (SCAYT).",
+										"meta_keywords": "ckeditor, editor, wysiwyg, spell, checker, spellchecker, scayt, spellchecking, check, checking, spellcheck, thesaurus, mistake, mistakes, spelling, typo, correction, correct, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+									},
+									{
 										"name": "dev_sourcearea",
 										"url": "dev/features/sourcearea",
 										"title": "Source Code Editing",
@@ -464,6 +456,14 @@
 							{
 								"title": "Toolbar",
 								"items": [
+									{
+										"name": "dev_toolbar",
+										"url": "dev/configuration/toolbar",
+										"title": "Toolbar Configuration",
+										"description": "How to configure CKEditor toolbar.",
+										"meta_description": "How to configure CKEditor toolbar.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, toolbar, button, buttons, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+									},
 									{
 										"name": "dev_toolbarlocation",
 										"url": "dev/features/toolbarlocation",

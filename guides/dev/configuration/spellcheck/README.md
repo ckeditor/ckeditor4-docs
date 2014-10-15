@@ -2,25 +2,43 @@
 
 CKEditor can be configured to use either native spell checking capabilities provided by the browser or to use an external spell checking web service.
 
-## The Native Spell Checker
+## Native Browser Spell Checker
 
-Native spell check functionality is by default disabled in the editor, use
-{@link CKEDITOR.config#disableNativeSpellChecker disableNativeSpellChecker} to enable it:
+By default, browser native spell check functionality is disabled in the editor. Use the CKEDITOR.config.disableNativeSpellChecker configuration option to enable it:
 
 	config.disableNativeSpellChecker = false;
 
-You should be able to see the spelling underline in content after reloading the editor.
+After reloading the editor you should be able to see the spelling corrections underlined in your editor content. 
 
-**Note**: If the context menu plugin is enabled, its necessary to hold the CTRL key when right-clicking misspelled words to see their suggestions.
+**Note**: If the [Context Menu](http://ckeditor.com/addon/contextmenu) plugin is enabled, it is necessary to hold the <kbd>Ctrl</kbd> key when right-clicking misspelled words to see their suggestions.
 
-**Note**: The spell check is not generically available for all browsers.
+**Note**: The spell check functionality is not available natively for all browsers.
 
-## The **SpellCheckAsYouType** Plugin
+## Spell Check As You Type (SCAYT)
 
-The [SpellCheckAsYouType (SCAYT)](http://ckeditor.com/addon/scayt) plugin provides inline spell checking, much like the native spell checker, well integrated with the CKEditor context menu. 
+The [SpellCheckAsYouType (SCAYT)](http://ckeditor.com/addon/scayt) plugin provides inline spell checking, much like the native browser spell checker, well integrated with the CKEditor context menu.
 
-It is provided by [WebSpellChecker.net](http://www.webspellchecker.net/). It users their web-services, transferring the text to their servers and performing spell checking. This is a cross browser solution.
+It is provided by [WebSpellChecker.net](http://www.webspellchecker.net/). It uses the WebSpellChecker.net web services, transferring the text to their servers and performing spell checking. This is a cross-browser solution.
 
-## The **WebSpellChecker** Plugin
+{@img scayt_02.png}
 
-The [WebSpellChecker](http://ckeditor.com/addon/wsc) plugin is another spell checking solution provided by [WebSpellChecker.net](http://www.webspellchecker.net/) that instead runs the check through a dialog windows, instead of marking misspelled words inline.
+## Spell Checking in a Dialog Window
+
+The [WebSpellChecker](http://ckeditor.com/addon/wsc) plugin is another spell checking solution provided by [WebSpellChecker.net](http://www.webspellchecker.net/). It runs the check through a dialog window instead of marking misspelled words inline. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
+
+{@img wsc_01.png}
+
+## Customization Options
+
+Both plugins include numerous configuration options that let you customize the default spell checking
+language, number of SCAYT suggestions available or the content of the spell checker context menu and dialog window.
+You can find them on the CKEDITOR.config page, starting from `scayt_` and `wsc_`.
+
+<p class="tip">
+	The out-of-the-box spell checking functionality is ad-supported. If you want to remove the
+	ads, you can <a href="http://cksource.com/ckeditor/services#spellCheck">purchase a license here</a>.
+</dp>
+
+## Spell Checking Demo 
+
+See the [working "Spell Checker and Spell Check As You Type" sample](http://sdk.ckeditor.com/samples/spellchecker.html) that showcases both Spell Check As You Type and spell checking in a dialog window.

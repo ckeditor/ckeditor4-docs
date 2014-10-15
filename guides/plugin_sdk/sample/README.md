@@ -180,7 +180,7 @@ order to insert other types of content into your document.
 
 ## Timestamp Plugin Demo 
 
-See the [working "Creating a Most Basic CKEditor Plugin" sample](http://sdk.ckeditor.com/samples/timestamp.html) that shows the Timestamp plugin integrated with an editor instance.
+See the [working "Timestamp (Creating a Most Basic CKEditor Plugin)" sample](http://sdk.ckeditor.com/samples/timestamp.html) that shows the Timestamp plugin integrated with an editor instance.
 
 ## Further Reading
 

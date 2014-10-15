@@ -1,4 +1,4 @@
-# Output Formatting
+# HTML Output Formatting
 
 CKEditor offers a powerful and flexible output formatting system. It
 gives developers full control over what the HTML code produced by the

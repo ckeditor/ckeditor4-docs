@@ -247,7 +247,7 @@ Read more about {@link CKEDITOR.feature#contentForms contentForms} in CKEditor J
 
 ## Abbreviation Plugin Demo 
 
-See the [working "Custom Plugin with Dialog, Context Menu and ACF Support" sample](http://sdk.ckeditor.com/samples/abbr.html) that shows the final version of the Abbreviation plugin integrated with an editor instance.
+See the [working "Abbreviation (Custom Plugin with Dialog, Context Menu and ACF Support)" sample](http://sdk.ckeditor.com/samples/abbr.html) that shows the final version of the Abbreviation plugin integrated with an editor instance.
 
 ## Further Reading
 

@@ -25,7 +25,7 @@ If you have any doubts about the content of the plugin and its configuration, re
 
 	To follow this guide and at the same time comply with the new CKEditor 4.1 requirements you
 	need to either set <code>config.allowedContent = true;</code> in order to disable
-	<a href="#!/guide/dev_advanced_content_filter">content filtering</a> or 
+	<a href="#!/guide/dev_advanced_content_filter">content filtering</a> or
 	<a href="#!/guide/plugin_sdk_integration_with_acf">integrate your plugin with ACF</a>.
 	For more information, please refer to the official
 	<a href="#!/guide/plugin_sdk_integration_with_acf">Advanced Content Filter integration guide</a>.
@@ -354,7 +354,7 @@ The complete content of the `plugin.js` file is as follows:
 					}
 				});
 			}
-			
+
 			CKEDITOR.dialog.add( 'abbrDialog', this.path + 'dialogs/abbr.js' );
 		}
 	});
@@ -498,3 +498,4 @@ Refer to the following resources for more information about creating CKEditor pl
 * [Simple Plugin, Part 1](#!/guide/plugin_sdk_sample_1) &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
 * [Integrating Plugins with Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf) &ndash; Learn how to implement Advanced Content Filter support in your plugins.
 * [Plugin Stylesheets](#!/guide/plugin_sdk_styles) &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
+* [Plugin Definition API](#!/api/CKEDITOR.pluginDefinition) &ndash; Detailed description of the plugin definition.

@@ -60,3 +60,9 @@ It is also possible to completely avoid loading an external configuration file, 
 	});
 
 This setting is definitely recommended, if you are not setting the configuration in the `config.js` file nor a custom configuration file.
+
+## Editor Features
+
+If you are wondering what CKEditor features are available, head to the [Functionality Overview](#!/guide/dev_features) section. You will find a many editor features categorized and explained there, along with references to configuration options that let you customize them.
+
+The Functionality Overview section is complemented by [CKEditor SDK](http://sdk.ckeditor.com), an awesome collection of **working editor samples** that present all concepts discussed there and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!

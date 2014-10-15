@@ -1,9 +1,11 @@
 [
 	{
 		"title": "CKEditor 4 Developer's Guide",
+		"expanded": true,
 		"items": [
 			{
 				"title": "Getting Started",
+				"expanded": true,
 				"items": [
 					{
 						"name": "dev_installation",
@@ -59,12 +61,12 @@
 						]
 					},
 					{
-						"name": "dev_savedata",
-						"url": "dev/savedata",
-						"title": "Getting and Saving Data",
-						"description": "How to retrieve and save CKEditor data.",
-						"meta_description": "How to retrieve and save CKEditor data.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
+						"name": "dev_configuration",
+						"url": "dev/configuration",
+						"title": "Setting Configuration",
+						"description": "Everything about CKEditor configuration.",
+						"meta_description": "Everything about CKEditor configuration.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 					},
 					{
 						"name": "dev_acf",
@@ -73,7 +75,15 @@
 						"description": "How to specify allowed and disallowed tags with Advanced Content Filter.",
 						"meta_description": "How to specify allowed and disallowed tags, attributes, classes and styles with Advanced Content Filter.",
 						"meta_keywords": "acf, advanced content filter, content, filter, filtering, allowed content filter, allowed html, allowed tags, disallowed content, remove tags"
-					}
+					},
+					{
+						"name": "dev_savedata",
+						"url": "dev/savedata",
+						"title": "Getting and Saving Data",
+						"description": "How to retrieve and save CKEditor data.",
+						"meta_description": "How to retrieve and save CKEditor data.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
+					}					
 				]
 			},
 			{
@@ -193,62 +203,8 @@
 				]
 			},
 			{
-				"title": "Integration",
-				"items": [
-					{
-						"name": "dev_jquery",
-						"url": "dev/jquery",
-						"title": "jQuery Adapter",
-						"description": "How to integrate CKEditor with jQuery and file browsers or uploaders.",
-						"meta_description": "How to integrate CKEditor with jQuery and file browsers or uploaders.",
-						"meta_keywords": "ckeditor, editor, integrate, integration, jQuery, file, files, upload, uploading, uploader, manage, management, browse, browser, image, images"
-					},
-					{
-						"title": "File Browser and Upload",
-						"items": [
-							{
-								"name": "dev_file_browse_upload",
-								"url": "dev/configuration/file_browse_upload",
-								"title": "Introduction",
-								"description": "How to integrate CKEditor with a file browser and support file uploads.",
-								"meta_description": "How to integrate CKEditor with a file browser and support file uploads.",
-								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, uploading, manage, management, browse, browser, image, images"
-							},
-							{
-								"name": "dev_file_browser_api",
-								"url": "dev/configuration/file_browse_upload/file_browser_api",
-								"title": "File Browser API",
-								"description": "How to use CKEditor File Browser API.",
-								"meta_description": "How to use CKEditor File Browser API.",
-								"meta_keywords": "ckeditor, editor, integrate, integration, API, file, files, upload, uploader, manage, management, browse, browser, image, images"
-							},
-							{
-								"name": "dev_dialog_add_file_browser",
-								"url": "dev/configuration/file_browse_upload/dialog_add_file_browser",
-								"title": "Integrating with Dialogs",
-								"description": "How to integrate a file browser with CKEditor dialog windows.",
-								"meta_description": "How to integrate a file browser with CKEditor dialog windows.",
-								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, manage, management, browse, browser, image, images, dialog, dialogs, window, windows"
-							}
-						]
-					}
-				]
-			},
-			{
-				"title": "Configuration",
-				"items": [
-					{
-						"name": "dev_configuration",
-						"url": "dev/configuration",
-						"title": "Setting Configuration",
-						"description": "Everything about CKEditor configuration.",
-						"meta_description": "Everything about CKEditor configuration.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
-					}
-				]
-			},
-			{
 				"title": "Functionality Overview",
+				"expanded": true,
 				"items": [
 					{
 						"name": "dev_features",
@@ -260,6 +216,7 @@
 					},
 					{
 						"title": "End-user Features",
+						"expanded": true,
 						"items": [
 							{
 								"title": "User Interface",
@@ -431,6 +388,7 @@
 					},
 					{
 						"title": "Integration Features",
+						"expanded": true,
 						"items": [
 							{
 								"title": "Editor UI",
@@ -544,6 +502,48 @@
 										"meta_keywords": "ckeditor, editor, wysiwyg, color, colour, ui, interface, picker, tool, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 									}
 								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Integration",
+				"items": [
+					{
+						"name": "dev_jquery",
+						"url": "dev/jquery",
+						"title": "jQuery Adapter",
+						"description": "How to integrate CKEditor with jQuery and file browsers or uploaders.",
+						"meta_description": "How to integrate CKEditor with jQuery and file browsers or uploaders.",
+						"meta_keywords": "ckeditor, editor, integrate, integration, jQuery, file, files, upload, uploading, uploader, manage, management, browse, browser, image, images"
+					},
+					{
+						"title": "File Browser and Upload",
+						"items": [
+							{
+								"name": "dev_file_browse_upload",
+								"url": "dev/configuration/file_browse_upload",
+								"title": "Introduction",
+								"description": "How to integrate CKEditor with a file browser and support file uploads.",
+								"meta_description": "How to integrate CKEditor with a file browser and support file uploads.",
+								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, uploading, manage, management, browse, browser, image, images"
+							},
+							{
+								"name": "dev_file_browser_api",
+								"url": "dev/configuration/file_browse_upload/file_browser_api",
+								"title": "File Browser API",
+								"description": "How to use CKEditor File Browser API.",
+								"meta_description": "How to use CKEditor File Browser API.",
+								"meta_keywords": "ckeditor, editor, integrate, integration, API, file, files, upload, uploader, manage, management, browse, browser, image, images"
+							},
+							{
+								"name": "dev_dialog_add_file_browser",
+								"url": "dev/configuration/file_browse_upload/dialog_add_file_browser",
+								"title": "Integrating with Dialogs",
+								"description": "How to integrate a file browser with CKEditor dialog windows.",
+								"meta_description": "How to integrate a file browser with CKEditor dialog windows.",
+								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, manage, management, browse, browser, image, images, dialog, dialogs, window, windows"
 							}
 						]
 					}

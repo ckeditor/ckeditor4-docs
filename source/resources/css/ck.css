@@ -152,24 +152,28 @@ pre code a
 	border-bottom: 1px dotted #AAA;
 }
 
-.tip
+.tip,
+.requirements
 {
-	border: 1px solid #aaa;
-	padding: 12px 15px 12px 65px !important;
-	margin-bottom: 1em;
-	background: #eee;
 	border-radius: 3px;
 	box-shadow: 2px 2px 0 0 #ccc;
+
+	border: 1px solid #aaa;
+	padding: 1.2em 1.2em 1.2em 65px !important;
+	margin: 1em 0;
+	background: #eee;
 	overflow: hidden;
-	max-width: 900px;
+	position: relative;
 }
 
-.tip:before
+.tip:before,
+.requirements:before
 {
 	content: url(../images/tip.png);
-	float: left;
-	margin-left: -48px;
-	margin-top: 4px;
+	position: absolute;
+	top: 50%;
+	margin-top: -16px;
+	left: 1.2em;
 }
 
 .tip.alert
@@ -180,6 +184,17 @@ pre code a
 .tip.alert:before
 {
 	content: url(../images/alert.png);
+	margin-top: -18px;
+}
+
+.requirements
+{
+	background: #DBF2C0;
+}
+
+.requirements:before
+{
+	content: url(../images/tick.png);
 }
 
 /* Hide image borders in guide index. */

@@ -164,6 +164,9 @@ pre code a
 	background: #eee;
 	overflow: hidden;
 	position: relative;
+	/* If other than p element is used for the box,
+	then defaults set by JSDuck does not work. */
+	max-width: 900px;
 }
 
 .tip:before,

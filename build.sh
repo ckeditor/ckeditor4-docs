@@ -64,6 +64,8 @@ echo "Applying customizations..."
 cp -r source/resources build
 cp source/favicon.ico build
 cp source/.htaccess build
+# Let the license be more visible and it's usually uppercased.
+cp source/license.html build/LICENSE.html
 cp -r images build
 
 echo "Documentation creation finished!"

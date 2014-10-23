@@ -1,14 +1,18 @@
 # CKEditor 4 Official Documentation
 
-This is the official developer documentation project for CKEditor. It uses our customized [JSDuck clone](https://github.com/ckeditor/jsduck) for compilation and is updated nightly at <http://docs.ckeditor.com>.
+This is the official developer documentation project for CKEditor. It uses the customized CKEditor [JSDuck clone](https://github.com/ckeditor/jsduck) for compilation and is available online at <http://docs.ckeditor.com>.
+
+Developer documentation is a part of [CKEditor SDK](http://sdk.ckeditor.com).
 
 ## Building the Documentation
 
-**Requirements**:
-* [Ruby](https://www.ruby-lang.org)
-* Our custom [JSDuck](https://github.com/ckeditor/jsduck) clone (installation instructions are provided below).
+Follow the steps listed below to build CKEditor documentation locally.
 
-**Follow the steps listed below to build CKEditor documentation:**
+### Requirements
+* [Ruby](https://www.ruby-lang.org)
+* Custom CKEditor [JSDuck](https://github.com/ckeditor/jsduck) clone (installation instructions are provided below).
+
+### Building Instructions
 
 Clone this repository locally:
 
@@ -19,7 +23,7 @@ Go to the `ckeditor-docs` directory and update the submodules:
 	> cd ckeditor-docs
 	> git submodule update --init
 
-Clone our [JSDuck repository](https://github.com/ckeditor/jsduck) to a separate folder next to `ckeditor-docs`:
+Clone the custom CKEditor [JSDuck repository](https://github.com/ckeditor/jsduck) to a separate folder next to `ckeditor-docs`:
 
 	> cd ..
 	> git clone git@github.com:ckeditor/jsduck.git
@@ -36,7 +40,7 @@ Go back to the `ckeditor-docs` repository and execute `build.sh`:
 
 ## Developer's Guide
 
-All Developer's Guide articles are defined in the `guides/` folder, including the `guides.json` file which defines the Table of Contents tree as well as the meta information.
+All "Developer's Guide" articles as well as the Plugin, Widget and Skin SDKs are defined in the `guides/` folder, including the `guides.json` file which defines the Table of Contents tree and the meta information.
 
 ## API Documentation
 
@@ -49,3 +53,7 @@ While the main CKEditor repository for API documents, [ckeditor-dev](https://git
  * Keeping `ckeditor-docs/` and `ckeditor-dev/` folders in the same directory.
 
  * Setting the `CKEDITOR_DEV_PATH` environment variable to point to your `ckeditor-dev/` folder path.
+
+## License
+
+See the `LICENSE.md` file for licensing details.

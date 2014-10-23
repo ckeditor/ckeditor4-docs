@@ -1,8 +1,10 @@
 # Applying Styles to Editor Content
 
-The [Styles Combo](http://ckeditor.com/addon/stylescombo) plugin adds the **Styles** drop-down list to the CKEditor toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor.
+<p class="requirements">
+	This feature is provided through the <a href="http://ckeditor.com/addon/stylescombo">Styles Combo</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+</p>
 
-The Styles Combo plugin is included in the Standard and Full presets available from the official CKEditor [Download](http://ckeditor.com/download) page. You can also [add it to your custom build](#!/guide/dev_plugins) through [CKBuilder](http://ckeditor.com/builder).
+The [Styles Combo](http://ckeditor.com/addon/stylescombo) plugin adds the **Styles** drop-down list to the CKEditor toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor.
 
 {@img styles_01.png}
 

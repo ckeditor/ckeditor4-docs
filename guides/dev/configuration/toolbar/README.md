@@ -22,7 +22,7 @@ There are several approaches to CKEditor toolbar configuration to choose from:
 ## Toolbar Configurator
 
 <p class="requirements">
-	Toolbar Configurator is available in each official CKEditor installation package starting from <strong>CKEditor 4.5</strong>. 
+	Toolbar Configurator will be available in each official CKEditor installation package starting from <strong>CKEditor 4.5</strong>. 
 </p>
 
 The new toolbar utility, which you can find in your CKEditor distribution package, makes configuring an accessible toolbar a breeze.

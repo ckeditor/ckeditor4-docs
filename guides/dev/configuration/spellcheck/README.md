@@ -1,5 +1,9 @@
 # Spell Checking
 
+<p class="requirements">
+	The out-of-the-box spell checking functionality is provided through plugins that are included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add them to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+</p>
+
 CKEditor can be configured to use either native spell checking capabilities provided by the browser or to use an external spell checking web service.
 
 ## Native Browser Spell Checker

@@ -1,5 +1,9 @@
 # The jQuery Adapter
 
+<p class="requirements">
+	This feature was introduced in <strong>CKEditor 4.2</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+</p>
+
 CKEditor offers native jQuery integration through its jQuery Adapter (a jQuery plugin basically). It provides deep integration of CKEditor and jQuery that lets you use the native features of jQuery when using CKEditor. The jQuery Adapter is compatible with jQuery versions 1.7+ and 2.0+.
 
 Thanks to the jQuery Adapter every `textarea` element can be converted into a [classic editor](#!/guide/dev_framed), while  any other {@link CKEDITOR.dtd#$editable editable} element can be changed into an [inline editor](#!/guide/dev_inline).

@@ -331,6 +331,14 @@
 										"description": "Applying styles to editor content and using Stylesheet Parser plugin.",
 										"meta_description": "Applying styles to editor content and using Stylesheet Parser plugin.",
 										"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, stylesheet, parser, css, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+									},
+									{
+										"name": "dev_colorbutton",
+										"url": "dev/features/colorbutton",
+										"title": "Text and Background Color",
+										"description": "Using and customizing the Text and Background Color features.",
+										"meta_description": "Using and customizing the Text and Background Color features.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, text, background, color, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 									}
 								]
 							},

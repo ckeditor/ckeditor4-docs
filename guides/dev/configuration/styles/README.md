@@ -144,4 +144,8 @@ You can also further customize the Stylesheet Parser plugin by setting the CKEDI
 
 ## Editor Styles Demo 
 
-See the [working "Applying Styles to Editor Content" sample](http://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation. 
+See the [working "Applying Styles to Editor Content" sample](http://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation.
+
+## Related Features
+
+The [Setting Text and Background Color](#!/guide/dev_colorbutton) article explains how to use and customize the **Text Color** and **Background Color** features.

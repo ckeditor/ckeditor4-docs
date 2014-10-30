@@ -18,13 +18,13 @@ Now that the CKEditor JavaScript API is available on the page, you can use it to
 ### Classic Editing
 [Classic editing](#!/guide/dev_framed) is the most common way to use CKEditor, when the editor is usually represented by a toolbar and an editing area placed in a specific position on the page. Sometimes it is also called "framed editing", because in this scenario the editor creates a temporary `<iframe>` element for itself.
 
-[See the demo here](http://ckeditor.com/demo#standard).
+[See the demo here](http://sdk.ckeditor.com/samples/classic.html). Read all about this editor type in the [Classic Editing](#!/guide/dev_framed) article.
 
-<img src="guides/dev_ckeditor_js_load/classic_example.png" alt="Classic editor example" width="572" height="288">
+{@img classic_example.png Classic editor example}
 
 ### Inline Editing
 [Inline editing](#!/guide/dev_inline) is an innovative feature that can be used for content which needs to look like the final page, giving you a true <abbr title="What You See Is What You Get">WYSIWYG</abbr> experience. Editing is enabled directly on HTML elements through the HTML5 `contenteditable` attribute. The editor toolbar appears automatically for these elements, floating on the page.
 
-[See the demo here](http://ckeditor.com/demo#inline).
- 
-<img src="guides/dev_ckeditor_js_load/inline_example.png" alt="Inline editor example" width="585" height="294">
+[See the demo here](http://sdk.ckeditor.com/samples/inline.html). Read all about this editor type in the [Inline Editing](#!/guide/dev_inline) article.
+
+{@img inline_example.png Inline editor example}

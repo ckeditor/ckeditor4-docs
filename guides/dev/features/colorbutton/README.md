@@ -62,4 +62,7 @@ See the [working "Setting Text and Background Color" sample](http://sdk.ckeditor
 
 ## Related Features
 
-Refer to the [Applying Styles to Editor Content](#!/guide/dev_styles) for more information about creating semantically correct text styling.
+Refer to the following resources for more information about text styling:
+
+* The [Basic Text Styles: Bold, Italic and More](#!/guide/dev_basicstyles) article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting.
+* The [Applying Styles to Editor Content](#!/guide/dev_styles) article discusses creating more semantically correct text styles.

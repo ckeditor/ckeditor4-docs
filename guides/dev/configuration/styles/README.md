@@ -148,4 +148,7 @@ See the [working "Applying Styles to Editor Content" sample](http://sdk.ckeditor
 
 ## Related Features
 
-The [Setting Text and Background Color](#!/guide/dev_colorbutton) article explains how to use and customize the **Text Color** and **Background Color** features.
+Refer to the following resources for more information about text styling:
+
+* The [Basic Text Styles: Bold, Italic and More](#!/guide/dev_basicstyles) article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting.
+* The [Setting Text and Background Color](#!/guide/dev_colorbutton) article explains how to use and customize the **Text Color** and **Background Color** features.

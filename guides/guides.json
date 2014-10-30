@@ -325,6 +325,14 @@
 								"title": "Authoring Content",
 								"items": [
 									{
+										"name": "dev_basicstyles",
+										"url": "dev/features/basicstyles",
+										"title": "Basic Text Styles",
+										"description": "Applying basic text styles: bold, italic, underline, strikethrough, subscript, superscript.",
+										"meta_description": "Applying basic text styles: bold, italic, underline, strikethrough, subscript, superscript.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, bold, italic, underline, strike, strikethrough, subscript, superscript, formatting, format, text, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+									},
+									{
 										"name": "dev_styles",
 										"url": "dev/configuration/styles",
 										"title": "Styles Drop-down",

@@ -1,6 +1,6 @@
 # Build from Source Code
 
-If you are working with the CKEditor source code on your computer or in a local network, at some stage you will want to distribute it to your test or production environment. 
+If you are working with the CKEditor source code on your computer or in a local network, at some stage you will want to distribute it to your test or production environment.
 
 <p class="tip">
 	<strong>Never distribute the source version of CKEditor to production websites</strong>. There are serious <a href="#!/guide/dev_source-section-2">performance implications</a> of doing this.
@@ -9,6 +9,8 @@ If you are working with the CKEditor source code on your computer or in a local 
 Instead, you must create a CKEditor "build" or "release version" (in contrast to the "source version"). It is an optimized, production-ready CKEditor distribution.
 
 ## The `dev/builder` Folder
+
+<p class="tip alert">The builder will only work in the source version of CKEditor cloned from the a Git repository (for example from the <a href="https://github.com/ckeditor/ckeditor-dev">official CKEditor development repository</a>). It will not work in the project downloaded as a ZIP package.</p>
 
 The source code of CKEditor contains a pre-configured environment that allows you to easily create editor builds.
 
@@ -21,13 +23,13 @@ The following are the most relevant files that you can find there:
 
 Edit the `build-config.js` file, which contains the build configuration. It includes the following sections:
 
-	var CKBUILDER_CONFIG = {	
+	var CKBUILDER_CONFIG = {
 		// Skin name.
 		skin: '...',
-		
+
 		// Files to be ignored.
 		ignore: [ ... ],
-		
+
 		// Plugins to be included.
 		plugins: { ... }
 	};
@@ -40,12 +42,12 @@ Some plugins might need others to work, but you do not have to resolve these dep
 
 Go to the command line and call the build script:
 
-	sh build.sh
-	
+	./build.sh
+
 The builder will be executed and the resulting build will be created in the `dev/builder/build` folder.
 
 ## About CKBuilder (Command Line)
-	
+
 The building process is handled by the command line version of [CKBuilder](http://ckeditor.com/builder). It is a powerful application that makes several enhancement to the source code: it loads the configuration file, resolves plugin dependencies, merges and minifies files, creates icon strips, and performs many other build-related tasks.
 
 For the first run, `build.sh` will need to [download CKBuilder](http://download.cksource.com/CKBuilder/) and copy it into the `dev/builder/ckbuilder/<ckbuilder version>` folder, so an Internet connection is required. Once the file is available, no more downloads are necessary (though if possible, the script will try to perform an update on consecutive runs).

@@ -54,7 +54,7 @@ You will need to provide the in-page configuration for all other CKEditor instan
 
 ## Custom Basic Text Styles Definition
 
-Basic text styles can be output in HTML in different ways. For example, the **Bold** feature can be implemented as `<strong>`, `<b>` or `<span class="font-weight: bold;">`. These configuration options let you set custom definitons for basic text style output:
+Basic text styles can be output in HTML in different ways. For example, the **Bold** feature can be implemented as `<strong>`, `<b>`, `<span style="font-weight: bold;">` or `<span class="Bold">`. These configuration options let you set custom definitons for basic text style output:
 
 * CKEDITOR.config.coreStyles_bold
 * CKEDITOR.config.coreStyles_italic
@@ -63,7 +63,7 @@ Basic text styles can be output in HTML in different ways. For example, the **Bo
 * CKEDITOR.config.coreStyles_subscript
 * CKEDITOR.config.coreStyles_superscript
 
-The following example configures CKEditor to output bold with an inline CSS style, italic with the `<i>` element, and subscript and superscript with classes defined in an external CSS file added to the editor configuration with the CKEDITOR.config.contentsCss option.
+The following example configures CKEditor to output bold with an inline CSS style, italic with the `<i>` element, and subscript and superscript with CSS classes.
 
 	config.coreStyles_bold = {
 		element: 'span',
@@ -83,10 +83,10 @@ The following example configures CKEditor to output bold with an inline CSS styl
 		attributes: { 'class': 'Superscript' },
 		overrides: 'sup'
 	};
-	
-	config.contentsCss = '/css/mysitestyles.css';
 
 You can use the `overrides` parameter to define an alternative that CKEditor will convert into your desired form.
+
+Remember that depending on your use case, the CSS classes for basic text styles need to be defined accordingly. For [classic editor](#!/guide/dev_framed) they should be defined in an external CSS file added to the editor configuration with the CKEDITOR.config.contentsCss option. For [inline editor](#!/guide/dev_inline) they need to be added directly to the page stylesheet.
 
 <p class="tip">
 	Some conversions are applied automatically thanks to a feature called <a href="#!/guide/dev_advanced_content_filter-section-content-transformations">content transformations</a> which is a part of Advanced Content Filter. This, however, will only work when ACF

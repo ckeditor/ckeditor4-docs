@@ -66,3 +66,4 @@ Refer to the following resources for more information about text styling:
 
 * The [Basic Text Styles: Bold, Italic and More](#!/guide/dev_basicstyles) article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting.
 * The [Applying Styles to Editor Content](#!/guide/dev_styles) article discusses creating more semantically correct text styles.
+* The [Applying Block-Level Text Formats](#!/guide/dev_format) article presents how to apply formatting to entire text blocks and not just text selections.

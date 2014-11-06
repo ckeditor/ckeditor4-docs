@@ -341,6 +341,14 @@
 										"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, combo, list, stylesheet, parser, css, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 									},
 									{
+										"name": "dev_format",
+										"url": "dev/features/format",
+										"title": "Text Formats",
+										"description": "Applying block-level text formats to editor content.",
+										"meta_description": "Applying block-level text formats to editor content.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, format, block, paragraph, heading, header, text, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+									},
+									{
 										"name": "dev_colorbutton",
 										"url": "dev/features/colorbutton",
 										"title": "Text and Background Color",

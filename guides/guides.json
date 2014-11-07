@@ -333,6 +333,14 @@
 										"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, bold, italic, underline, strike, strikethrough, subscript, superscript, formatting, format, text, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 									},
 									{
+										"name": "dev_removeformat",
+										"url": "dev/features/removeformat",
+										"title": "Removing Text Formatting",
+										"description": "Removing inline HTML elements and styles with the Remove Format feature.",
+										"meta_description": "Removing inline HTML elements and styles with the Remove Format feature.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, text, remove, cleanup, font, bold, italic, underline, strikethrough, subscript, superscript, styling, inline, color, colors, family, typeface, size, sizes"
+									},
+									{
 										"name": "dev_styles",
 										"url": "dev/configuration/styles",
 										"title": "Styles Drop-down",

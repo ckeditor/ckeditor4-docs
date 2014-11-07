@@ -4,7 +4,10 @@
 	This feature is provided through a plugin that is included in all official CKEditor distributions (Basic, Standard, Full) available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
 </p>
 
-The [Basic Styles](http://ckeditor.com/addon/basicstyles) plugin provides the ability to add some basic text formatting to your document. When enabled, it adds the **Bold**, **Italic**, **Underline**, **Strikethrough**, **Subscript** and **Superscript** toolbar buttons that apply these styles. Basic text styles work on text selections; check the [Text Formats](#!/guide/dev_format) feature for block-level text formatting.
+The [Basic Styles](http://ckeditor.com/addon/basicstyles) plugin provides the ability to add some basic text formatting to your document. When enabled, it adds the **Bold**, **Italic**, **Underline**, **Strikethrough**, **Subscript** and **Superscript** toolbar buttons that apply these styles. If you want to quickly [remove basic styles](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](http://ckeditor.com/addon/removeformat) plugin.
+
+
+Basic text styles work on text selections; check the [Text Formats](#!/guide/dev_format) feature for block-level text formatting.
 
 {@img basicstyles_01.png Basic styles enabled in CKEditor}
 
@@ -106,6 +109,7 @@ See the [working "Basic Text Styles: Bold, Italic and More" sample](http://sdk.c
 
 Refer to the following resources for more information about text styling:
 
+* The [Removing Text Formatting](#!/guide/dev_removeformat) article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.
 * The [Applying Block-Level Text Formats](#!/guide/dev_format) article presents how to apply formatting to entire text blocks and not just text selections.
 * The [Applying Styles to Editor Content](#!/guide/dev_styles) article discusses creating more semantically correct text styles.
 * The [Setting Text and Background Color](#!/guide/dev_colorbutton) article explains how to use and customize the **Text Color** and **Background Color** features.

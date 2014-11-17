@@ -22,4 +22,7 @@ See the [working "Page Navigation Using the "Tab" Key" sample](http://sdk.ckedit
 
 ## Related Features
 
-See the [Keyboard Shortcuts](#!/guide/dev_shortcuts) article for a complete list of keyboard shortcuts supported in CKEditor. 
+Refer to the following resources for more information about accessibility in CKEditor:
+
+* The [Accessibility Support in CKEditor](#!/guide/dev_a11y) article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The [Keyboard Shortcuts](#!/guide/dev_shortcuts) article lists all keyboard shortcuts supported in CKEditor.

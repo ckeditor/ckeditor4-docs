@@ -91,3 +91,14 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 * <kbd>Space</kbd> or <kbd>Enter</kbd> &ndash; Activates a toolbar button, a context menu
     option, a drop-down list option, an elements path element, or a dialog window tab once selected.
 	Also enters a context menu submenu, if it is available.
+
+## Accessibility and Keyboard Shortcuts Demo 
+
+See the [working "Accessibility Support and Keyboard Shortcuts" sample](http://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
+
+## Related Features
+
+Refer to the following resources for more information about accessibility in CKEditor:
+
+* The [Accessibility Support in CKEditor](#!/guide/dev_a11y) article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The [Page Navigation Using the "Tab" Key](#!/guide/dev_tabindex) article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.

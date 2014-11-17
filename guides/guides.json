@@ -696,6 +696,14 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, browser, support, license, licensing, open, source, premium, free"
 					},
 					{
+						"name": "dev_a11y",
+						"url": "dev/a11y",
+						"title": "Accessibility Support",
+						"description": "Accessibility compliance and overview of accessibility-related features.",
+						"meta_description": "Accessibility compliance and overview of accessibility-related features.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, accessibility, a11y, usability, wcag, atag, wai, aria, wai-aria, 508, disability, disabled, high, contrast, browser, support, screenreader, screen, reader, voiceover, chromevox, jaws"
+					},
+					{
 						"name": "dev_license",
 						"url": "dev/license",
 						"title": "License",

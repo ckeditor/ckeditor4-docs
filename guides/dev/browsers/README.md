@@ -29,18 +29,12 @@ All browsers are to be supported for web pages with the Document Type Declaratio
 Besides the browser support described above we are also introducing the following table to define the list of browsers and assistive technologies supported with A-grade by CKEditor:
 
  * [JAWS](http://www.freedomscientific.com/products/fs/JAWS-product-page.asp) Latest Stable:
-   * **Firefox** Latest Stable + Windows 7 or 8
- * Hi-Contrast:
-   * **Firefox** Latest Stable + Windows 7 or 8
-   * **Internet Explorer** 9 + Windows 7 or 8
+   * **Firefox** Latest Stable on Windows 7 or 8
+ * High Contrast:
+   * **Firefox** Latest Stable on Windows 7 or 8
+   * **Internet Explorer** 9+ on Windows 7 or 8
 
-### Reasoning
-
-Accessibility is just making its first steps into the Web environment. The support for accessibility in browsers and assistive technologies is still very inadequate. In response to this the WAI-ARIA standard was created, aiming to solve this situation. Its adoption is still quite limited, though, and the only browser with good enough support for it at the moment is Firefox.
-
-### Internet Explorer
-
-Internet Explorer 9+ offers reasonable support for WAI-ARIA. It is still not complete, but the current status looks promising. Even if we do not officially support this browser with regard to screen reading accessibility, we are still taking it into consideration during our development, testing it and eventually working around its limitations. Currently CKEditor should provide a good experience for Internet Explorer 9+ users that need accessibility support. In any case, we still strongly recommend to use Firefox for an optimum accessibility experience.
+Refer to the [Accessibility Support in CKEditor](#!/guide/dev_a11y) article to learn about CKEditor compliance with some well-known accessibility standards and why we treat Firefox + JAWS as our reference environment for testing. You will also get an overview of available accessibility-related features there.
 
 ## A Word About Mobile Environments
 
@@ -59,3 +53,10 @@ Full mobile support will be introduced in **CKEditor 5**. We aim to have perfect
 When CKEditor detects an unsupported environment, it will simply not load and the user will be presented with a standard editable element (for example a `<textarea>` or `<div>`) that the editor was supposed to replace.
 
 It is possible to skip the compatibility check and [enable CKEditor in all environments](#!/guide/dev_unsupported_environments), including the unsupported ones, but this is an experimental feature aimed at more advanced developers and is highly unrecommended on production environments.
+
+## Further Reading
+
+Refer to the following resources for more information about related features:
+
+* The [Accessibility Support in CKEditor](#!/guide/dev_a11y) article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The [Enabling CKEditor in Unsupported Environments](#!/guide/dev_unsupported_environments) article shows how to make CKEditor work in any environment that is not listed as officially supported (warning: experimental feature!).

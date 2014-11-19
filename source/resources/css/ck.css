@@ -152,6 +152,12 @@ pre code a
 	border-bottom: 1px dotted #AAA;
 }
 
+blockquote
+{
+	max-width: 900px;
+	margin: 0 0 1em;
+}
+
 .tip,
 .requirements
 {

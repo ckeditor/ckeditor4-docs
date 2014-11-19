@@ -74,7 +74,13 @@ The `editor1` part of the text is simply the [name that has been assigned to the
 
 #### WAI-ARIA Support in Editor Interface
 
-The entire CKEditor user interface is ARIA-supported. This includes the toolbar and bottom bar, panels and drop-down lists, context menus and dialog windows. Thanks to this feature CKEditor can be used with screen readers and other assistive technologies.
+The entire CKEditor user interface is ARIA-supported. As explained on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets#ARIA):
+
+<blockquote>
+	<a href="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, the Accessible Rich Internet Applications specification from the W3C's Web Accessibility Initiative, provides a way to add the missing semantics needed by assistive technologies such as screen readers. ARIA enables developers to describe their widgets in more detail by adding special attributes to the markup. Designed to fill the gap between standard HTML tags and the desktop-style controls found in dynamic web applications, ARIA provides roles and states that describe the behaviour of most familiar UI widgets.
+</blockquote>
+
+In CKEditor this includes the toolbar and bottom bar, panels and drop-down lists, context menus and dialog windows. Thanks to this feature the editor can be used with screen readers and other assistive technologies.
 
 #### Accessibility Instructions Dialog Window
 

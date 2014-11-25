@@ -47,9 +47,9 @@ You can also adjust the keyboard shortcuts by setting the CKEDITOR.config.magicl
 
 It is also possible to modify the default list of elements that trigger the appearance of magic line.
 
-The CKEDITOR.config.magicline_putEverywhere option activates the all-encompassing mode which causes magic line to appear for all block-level elements as defined in CKEDITOR.dtd.$block.
+The CKEDITOR.config.magicline_everywhere option activates the all-encompassing mode which causes magic line to appear for all block-level elements as defined in CKEDITOR.dtd.$block.
 
-    CKEDITOR.config.magicline_putEverywhere = true;
+    CKEDITOR.config.magicline_everywhere = true;
 
 The CKEDITOR.config.magicline_tabuList option lets you blacklist certain elements by providing a list of attributes that, if assigned, prevent magic line from appearing for these elements.
 

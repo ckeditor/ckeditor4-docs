@@ -103,7 +103,7 @@ In the Bender.js dashboard you can run all (or part) of the tests located in the
 			button/
 			...
 		tickets/
-			(functional tests for specific [tickets](http://dev.ckeditor.com/report) which are not
+			(functional tests for specific tickets (http://dev.ckeditor.com/report) which are not
 				related to any specific features or are related to multiple features and plugins)
 			10146/
 			10212/

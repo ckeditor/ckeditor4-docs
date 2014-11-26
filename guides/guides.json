@@ -138,6 +138,14 @@
 								"meta_keywords": "ckeditor, editor, upgrade, upgrading, download, install, installation"
 							},
 							{
+								"name": "dev_patching",
+								"url": "dev/patching",
+								"title": "Patching",
+								"description": "How to patch older versions of CKEditor 4.",
+								"meta_description": "How to patch older versions of CKEditor 4.",
+								"meta_keywords": "ckeditor, editor, upgrade, patching, download, install, installation"
+							},
+							{
 								"name": "dev_upgrade_ckeditor_3",
 								"url": "dev/upgrade/upgrade_ckeditor_3",
 								"title": "Upgrading from CKEditor 3",

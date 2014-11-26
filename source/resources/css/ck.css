@@ -259,3 +259,8 @@ Also, make sure that there's reasonable vertical space.
 	white-space: pre-wrap; /* CSS 2.1 */
 	word-wrap: break-word; /* IE7 */
 }
+
+.guide-container h4
+{
+	margin-bottom:6px;
+}

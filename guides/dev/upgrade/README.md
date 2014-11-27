@@ -21,3 +21,12 @@ To upgrade CKEditor, proceed as follows:
 	* `contents.css`
 	* `styles.js`
 	* custom template files
+
+## Further Reading
+
+The following resources discuss related issues:
+
+* The [Upgrading from CKEditor 3](#!/guide/dev_upgrade_ckeditor_3) article shows how to upgrade from CKEditor 3 to CKEditor 4.
+* The [Upgrading from FCKeditor](#!/guide/dev_upgrade_fckeditor_2) article shows how to upgrade from FCKeditor to CKEditor 4.
+* The [API Changes in CKEditor 4](#!/guide/dev_api_changes) article describes some API changes between CKEditor 3 and CKEditor 4.
+* The [Patching Old Versions of CKEditor](#!/guide/dev_patching) article explains how to apply a selected patch on your CKEditor installation (warning: unrecommended method, for advanced users only).

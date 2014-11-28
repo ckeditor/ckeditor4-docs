@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Creating a Simple CKEditor Widget (Part 1)
 
 The aim of this tutorial is to demonstrate **how to create a basic CKEditor widget plugin**.

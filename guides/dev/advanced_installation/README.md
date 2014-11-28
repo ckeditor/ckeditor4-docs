@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Advanced Installation Concepts
 
 This section presents some more advanced installation tasks that you may want to perform. It is meant for all developers who installed CKEditor and want to upgrade to the latest version or customize their build by adding new plugins or changing a skin. You can also learn where to get CKEditor source code and how to create a custom production-ready build. Last but not least, see how to manually specify the editor path if for some reason you need to rename the `ckeditor.js` file.

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Read-Only Mode
 
 CKEditor API makes it possible to **render the editor content read-only** (and thus impossible for the user to edit). Some editor features that will not cause the user to modify the content will still be available, though. This includes, for example, the view of the content source code or features such as preview and editor interface maximization within the browser window. 

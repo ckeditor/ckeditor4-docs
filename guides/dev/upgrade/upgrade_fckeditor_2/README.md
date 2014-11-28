@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Upgrading from FCKeditor
 
 First of all, **an upgrade is the best thing you can do**, since FCKeditor is a retired product that is no longer supported. Its source code was frozen in 2010, no further updates are provided and as such, some issues may occur in modern browsers.

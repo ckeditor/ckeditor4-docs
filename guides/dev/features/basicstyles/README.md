@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Basic Text Styles: Bold, Italic and More
 
 <p class="requirements">

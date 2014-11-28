@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Editor User Interface Types
 
 Due to inherent differences between two editor types (classic and inline) dedicated solutions for the editor user interface are required. CKEditor thus comes with two UI versions:

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Right-to-Left (RTL) Reading Direction
 
 Most of us are used to read text from the left side of the page to the right,

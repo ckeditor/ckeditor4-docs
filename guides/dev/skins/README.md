@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Installing Skins
 
 The look and feel of the CKEditor user interface can be adjusted to your taste and customized through skins. Elements like the toolbar, dialog windows, buttons, and even their icons, can be changed to match the style of your website or application.

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Creating a CKEditor Plugin in 20 Lines of Code
 
 The aim of this tutorial is to demonstrate how to create a most basic CKEditor plugin.

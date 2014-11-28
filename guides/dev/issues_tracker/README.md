@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Issues Tracker Site
 
 CKEditor issues are handled in the [CKEditor Developer Center](http://dev.ckeditor.com/). This is the website used daily by the CKEditor core team to organize and distribute the development workflow. It is also the right place to report issues.

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Upgrading CKEditor
 
 This article describes the steps you need to take when you want to upgrade your CKEditor 4.x installation to the latest version.

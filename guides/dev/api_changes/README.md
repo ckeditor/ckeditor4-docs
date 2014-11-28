@@ -1,5 +1,11 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # API Changes in CKEditor 4
 
+This article describes CKEditor API changes between version 3 and version 4.
 
 ## Overview
 

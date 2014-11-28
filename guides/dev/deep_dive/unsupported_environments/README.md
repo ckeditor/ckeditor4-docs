@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Enabling CKEditor in Unsupported Environments
 
 By default, CKEditor is disabled in all unsupported environments through the CKEDITOR.env.isCompatible flag. The list of officially supported environments is [available here](#!/guide/dev_browsers) and is based on CKEditor Graded Browser Support.

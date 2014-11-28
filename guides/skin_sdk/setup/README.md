@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Setting It Up to Start a Custom Skin
 
 The starting point of developing a skin is choosing an existing skin to base

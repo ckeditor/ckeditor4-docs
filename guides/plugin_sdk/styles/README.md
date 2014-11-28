@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Plugin Stylesheets
 
 Every plugin may require including some additional stylesheet files. For instance, the [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin uses the [highlight.js](https://highlightjs.org/) library that stores color schemes in separate CSS files. The markup created by highlight.js contains only classes (no inline styles), so in order to implement code highlighting, one of the scheme CSS files needs to be loaded.

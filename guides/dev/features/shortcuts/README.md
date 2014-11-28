@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Keyboard Shortcuts
 
 Many functions in CKEditor have their equivalent keyboard shortcuts. This is one of the reasons why working with the editor is

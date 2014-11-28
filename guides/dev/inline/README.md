@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Inline Editing
 
 Inline Editing is a new technology introduced in CKEditor 4 that allows you to **select any editable element on the page and edit it in-place**. As a result, the editor can be used to edit content that looks just like the final page.

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # CKEditor Functionality Overview
 
 This section presents a whole variety of features that CKEditor has to offer. It is complemented by [**CKEditor SDK**](http://sdk.ckeditor.com), an awesome collection of **working editor samples** that present all concepts discussed here and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!

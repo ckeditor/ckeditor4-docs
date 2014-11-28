@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # The "Chameleon" Feature
 
 One nice feature of CKEditor is its flexibility to easily match a website color

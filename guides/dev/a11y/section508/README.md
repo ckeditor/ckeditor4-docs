@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Section 508 Amendment to the Rehabilitation Act of 1973
 
 CKEditor is compliant with the [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm). The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retrived from the [Department of State IRM Program for Accessible Computer/Communication Technology (IMPACT)](http://www.state.gov/m/irm/impact/126343.htm).

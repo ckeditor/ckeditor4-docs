@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Page Navigation Using the "Tab" Key
 
 To ease page navigation by using keyboard and further boost accessibility, CKEditor can be reached by using the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> shortcuts that are commonly used for navigating between page elements.

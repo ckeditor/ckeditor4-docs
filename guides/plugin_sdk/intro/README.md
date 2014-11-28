@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Plugin SDK Introduction
 
 The aim of this SDK is to show you how to create custom CKEditor plugins.

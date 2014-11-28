@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Bringing Your Skin to Life
 
 At this stage you have a started a skin that is eventually identical to the

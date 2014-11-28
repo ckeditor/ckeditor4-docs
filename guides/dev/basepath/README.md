@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Specifying the Editor Path #
 
 As explained in the [Loading CKEditor](#!/guide/dev_ckeditor_js_load) article, to make CKEditor work it is enough to include the `ckeditor.js` file in your pages. However, there are some situations when the original editor file name cannot be used:

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Toolbar Location
 
 CKEditor allows you to customize the editor toolbar location. By default, in [classic](#!/guide/dev_framed), `iframe`-based editors the toolbar is placed in the top part of the editor UI, above the editing area.

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Getting and Saving Data in CKEditor
 
 CKEditor helps you create content but it is the role of your website or application to deal with the data created in this way. Saving data is a server-side operation and you are free to implement the save functionality on your own, in any way you like. CKEditor is a pure JavaScript component and it does not offer anything more than JavaScript methods and events to access the data so that you could save it on the server.

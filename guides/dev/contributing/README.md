@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Contributing to CKEditor
 
 This section explains how you can contribute to CKEditor development. CKEditor is an Open Source product that is free for anyone to download, use, and customize. It has an amazing community around it that supports it in all possible ways. If you would like to contribute to its development, you can consider the following actions:

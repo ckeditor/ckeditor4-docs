@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Installing CKEditor with Package Managers
 
 **CKEditor 4.3.3** introduced support for two popular package managers, [Bower](http://bower.io/) and [Composer](https://getcomposer.org/). You can now use them to install CKEditor releases.

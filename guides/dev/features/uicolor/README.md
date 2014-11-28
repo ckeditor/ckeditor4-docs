@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Setting Editor User Interface Color
 
 The editor UI color can be easily adjusted by the developer to match the look and feel of a website or an application where CKEditor is embedded in.

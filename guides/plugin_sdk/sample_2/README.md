@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Creating a Simple CKEditor Plugin (Part 2)
 
 The aim of this tutorial is to demonstrate how to extend an existing CKEditor

@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Testing and Shaping It Up
 
 Once you have your skin working in the way you want in one browser, it is time

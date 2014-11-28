@@ -1,5 +1,9 @@
-#Creating a CKEditor Plugin with a Custom Dialog Window
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
 
+# Creating a CKEditor Plugin with a Custom Dialog Window
 
 The aim of this tutorial is to demonstrate how to create a custom plugin dialog
 window that contains various types of fields.
@@ -12,7 +16,7 @@ a dedicated toolbar button.
 
 The plugin will be named **simpleLink**.
 
-##Plugin Files
+## Plugin Files
 
 Firstly, we will need to create the `simpleLink` folder inside the
 `plugins` directory of the CKEditor installation.
@@ -39,7 +43,7 @@ To sum up, we will need the following file structure for our plugin to work:
 			* `plugin.js`
 
 
-##Plugin Source Code
+## Plugin Source Code
 
 With the following structure ready, it is time to open the `plugin.js` file
 in a text editor and to start creating the source code of the plugin.
@@ -55,7 +59,7 @@ function.  This function should contain the plugin name (`'simpleLink'`) and the
 plugin logic placed inside the {@link CKEDITOR.pluginDefinition#init init} function
 that is called upon  the initialization of the editor instance.
 
-###Creating an Editor Command
+### Creating an Editor Command
 
 We want our plugin to have a dialog window, so we need to define an editor
 command that opens a new dialog window. To do this,  we will need to use the
@@ -65,7 +69,7 @@ command that opens a new dialog window. To do this,  we will need to use the
 
 	editor.addCommand( 'simpleLinkDialog', new CKEDITOR.dialogCommand( 'simpleLinkDialog' ) );
 
-###Creating a Toolbar Button
+### Creating a Toolbar Button
 
 The plugin dialog window is to be opened by using a toolbar button. To this end,
 we need to define a button that will be associated with the dialog window. The
@@ -84,7 +88,7 @@ above by using the `command` parameter.
 		icon: this.path + 'images/icon.png'
 	});
 
-###CKEditor Initialization
+### CKEditor Initialization
 
 It is now time to initialize a CKEditor instance that will use the Simple Link
 plugin along with its toolbar button.
@@ -116,7 +120,7 @@ to see the new plugin toolbar button along with its tooltip.
 
 {@img pluginLoaded.png SimpleLink plugin button added to CKEditor toolbar}
 
-##Plugin Dialog Window
+## Plugin Dialog Window
 
 Up till now, most of the actions that we performed were equivalent to what we did
 while creating the [Abbreviation plugin](#!/guide/plugin_sdk_sample_1).
@@ -141,7 +145,7 @@ title and minimum dimensions, respectively.
 	<code>addCommand</code> function above.
 </p>
 
-###Dialog Window Tab
+### Dialog Window Tab
 
 The dialog window should also contain some contents, so we will begin with
 adding a tab along with its label. In all CKEditor dialog windows the contents
@@ -193,7 +197,7 @@ Properties** dialog window.
 
 {@img dialogElements1.png A SimpleLink plugin dialog window with one tab added}
 
-###Dialog Window Tab Elements
+### Dialog Window Tab Elements
 
 User interface elements that can be added to a dialog window tab are defined
 in the {@link CKEDITOR.dialog.definition.content#elements elements} parameter, which is an array of
@@ -209,7 +213,7 @@ placed inside the curly braces (`{}`), separated from one another with a
 comma. The {@link CKEDITOR.dialog.definition.uiElement#type type} parameter is a
 required one and defines the type of the  element.
 
-###UI Elements: HTML
+### UI Elements: HTML
 
 The first UI element we are going to use is the HTML type. The
 {@link CKEDITOR.ui.dialog.html html} type allows you to define the contents of a
@@ -228,7 +232,7 @@ window looks like this.
 
 {@img dialogElements2.png HTML element added in the SimpleLink plugin dialog window}
 
-###UI Elements: Textarea
+### UI Elements: Textarea
 
 The element to be placed underneath the description is the textarea element
 that will be obligatory to fill in. We will use it to add the text that is
@@ -262,7 +266,7 @@ The size of the textarea can obviously be customized. If you want to change the
 element's dimensions, use the `cols` and `rows` parameters as defined in the
 {@link CKEDITOR.dialog.definition.textarea textarea} constructor.
 
-###UI Elements: Text Field
+### UI Elements: Text Field
 
 Another UI element that we are going to use in the plugin is the text
 field (text input) element. We will use it to enter the Internet address
@@ -291,7 +295,7 @@ will look like this.
 
 {@img dialogElements4.png Text field element added in the SimpleLink plugin dialog window}
 
-###UI Elements: Selection Field
+### UI Elements: Selection Field
 
 Another type of UI elements that we are going to try out is the selection
 field (drop-down list). In this case we will use it to allow the user to
@@ -323,7 +327,7 @@ defined otherwise) is highlighted.
 
 {@img dialogElements5.png Selection field element added in the SimpleLink plugin dialog window}
 
-###UI Elements: Checkbox
+### UI Elements: Checkbox
 
 The final UI element to be added to the plugin dialog window is the checkbox.
 In this case the user will be able to select it if the link is to be opened
@@ -353,7 +357,7 @@ the UI elements added above.
 
 {@img dialogElements6.png Checkbox element added in the SimpleLink plugin dialog window}
 
-##Plugin Behavior
+## Plugin Behavior
 
 The plugin now looks good — the toolbar button is in place and the dialog
 window is complete with a couple of sample UI elements. There is, however,
@@ -602,7 +606,7 @@ The full contents of the `plugin.js` file look as follows:
 		}
 	});
 
-##Working Example
+## Working Example
 
 The plugin code is now ready. When you click the **Insert Link** toolbar button, the
 custom **Link Properties** dialog window will open. Fill in the obligatory
@@ -623,7 +627,7 @@ plugin dialog window added as link contents and attributes.
 
 {@img working3.png Link element shown in the Source view}
 
-##Further Enhancements
+## Further Enhancements
 
 The SimpleLink plugin is now able to add a new link element to the document by
 using a custom and simplified dialog window, but does not make it possible to

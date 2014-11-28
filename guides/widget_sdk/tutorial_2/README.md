@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Creating a Simple CKEditor Widget (Part 2)
 
 The aim of this tutorial is to demonstrate **how to extend an existing CKEditor widget with a dialog window**. This dialog window will be used to insert a new widget into the editor or modify an existing one and set some basic properties (width, alignment) for it.

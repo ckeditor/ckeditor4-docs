@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # CKEditor Best Practices
 
 This article contains a list of some best practices that we recommend when implementing CKEditor. Check the links for more information about particular items.

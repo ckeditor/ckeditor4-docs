@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Accessibility Support in CKEditor
 
 Accessibility support is a priority issue in CKEditor. CKEditor complies with most important industry standards, recommendations and checklists, including:

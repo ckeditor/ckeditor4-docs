@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Getting the Source Code
 
 Working with the source code of CKEditor may be useful. These are some possible situations that you may face:

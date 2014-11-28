@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Building CKEditor from Source Code
 
 If you are working with the CKEditor source code on your computer or in a local network, at some stage you will want to distribute it to your test or production environment.

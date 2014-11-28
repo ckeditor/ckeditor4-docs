@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Upgrading from CKEditor 3
 
 CKEditor 3 and 4 are mostly compatible, so an upgrade to the latest CKEditor 4 line is mostly hassle-free.

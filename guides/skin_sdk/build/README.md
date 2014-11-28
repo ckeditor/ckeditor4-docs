@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Building and Releasing Your Skin
 
 So far, you've worked on the "source version" of your skin. Now that your skin

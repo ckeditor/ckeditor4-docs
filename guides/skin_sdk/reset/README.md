@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Reset and External CSS
 
 As we know, CKEditor is used inside webpages. In fact, the CKEditor UI and the

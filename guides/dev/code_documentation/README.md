@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Code Documentation Standards
 
 Starting from version 4 CKEditor uses a customized version of [JSDuck](https://github.com/ckeditor/jsduck) as code documentation generator; previously [JSDoc](http://code.google.com/p/jsdoc-toolkit/) was used.

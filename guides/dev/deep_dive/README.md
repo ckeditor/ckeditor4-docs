@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # CKEditor Deep Dive
 
 This section presents some more advanced CKEditor concepts. It is meant for all developers who have at least some experience working with the editor, want to understand its internal mechanisms, and create their own advanced customizations.

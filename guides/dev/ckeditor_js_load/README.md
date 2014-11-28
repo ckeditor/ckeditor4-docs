@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Loading CKEditor Script
 
 CKEditor is a JavaScript application. To load it, you need to include a single file reference in your page. If you [installed](#!/guide/dev_installation) CKEditor in the `ckeditor` directory in the root of your website, you need to insert the following code fragment into the `<head>` section of your page:

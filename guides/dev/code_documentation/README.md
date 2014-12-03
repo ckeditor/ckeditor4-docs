@@ -83,8 +83,6 @@ This is an example of a class definition. It contains so many tags to show their
 	 *
 	 * @param {CKEDITOR.dom.element} [element] The DOM element upon which this editor
 	 * will be created.
-	 * @see CKEDITOR.editable
-	 * @see CKEDITOR.cofing#someVar
 	 */
 	CKEDITOR.editor = function( ) {
 	// ...
@@ -97,7 +95,7 @@ A minimal class documentation:
 	 *
 	 * @class
 	 */
-	CKEDITOR.editor = function( ) {
+	CKEDITOR.editor = function() {
 	// ...
 
 When you want to reopen the class declaration in another file, use this:
@@ -111,9 +109,6 @@ The order of tags may look strange, but you can remember it thanks to the follow
 > Since 3.0 there is a private class `CKEDITOR.editor` which extends `CKEDITOR.parent` and mixins `CKEDITOR.event` and `CKEDITOR.whatever`.
 >
 > It has a private constructor (switched order &mdash; explained later in the tags list) which accepts the following parameters: ...
->
-> See also: ...
-
 
 Important tag details:
 
@@ -122,8 +117,6 @@ Important tag details:
 * A constructor is in fact a separate documentation "instance", because it will be listed with methods. Thus, it may have its own `@private`, but it has to be placed below it, because everything before will be a part of the class description. However, two `@private` tags in one comment will not be accepted by JSLinter, so in this case the documentation should be split into two comments.
 
 	A constructor can also be declared completely independently from the class, which is useful when `CKEDITOR.tools.createClass` has been used.
-
-	Note that in the first example `@see` tags will a part of constructor definition, not class. They may therefore also be placed after mixins.
 
 ### Property and Configuration Variable ###
 
@@ -141,7 +134,6 @@ The following is an example of property documentation.
 	 * @static
 	 * @property {String/Boolean} [complicatedName=default value]
 	 * @member CKEDITOR.editor
-	 * @see CKEDITOR.whatever
 	 */
 	obj[ 'complicated' + 'Name' ] = this.name || genEditorName();
 

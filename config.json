@@ -19,6 +19,8 @@
 
 	"--seo": true,
 
+	"--external": "Blob",
+
 	"--": [
 		"repos/ckeditor-plugin-scayt",
 		"repos/ckeditor-plugin-wsc"

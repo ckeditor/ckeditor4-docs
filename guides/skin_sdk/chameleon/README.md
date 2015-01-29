@@ -12,4 +12,12 @@ The core editor API controls the input of the preferred color, but it is the ski
 
 For that purpose, the `CKEDITOR.skin.chameleon` function must be defined in the `skin.js` file. Please check the [Moono skin](#!/guide/skin_sdk_intro-section-2) files for full details.
 
-Note that adopting this feature is totally optional. A skin developer may decide to have a fixed color and not give the possibility to change it. Of course we do not recommend this, but if that is the case, it is enough to not defined the chameleon function in the `skin.js` file.
+Note that adopting this feature is totally optional. A skin developer may decide to have a fixed color and not give the possibility to change it. Of course we do not recommend this, but if that is the case, it is enough to set in the `skin.js` file the `CKEDITOR.skin.chameleon` property to `null`:
+
+	CKEDITOR.skin.chameleon = null;
+
+Or, for compatibility with older versions of CKEditor (prior to 4.4.7), set it to a function that returns an empty string:
+
+	CKEDITOR.skin.chameleon = function() {
+		return '';
+	};

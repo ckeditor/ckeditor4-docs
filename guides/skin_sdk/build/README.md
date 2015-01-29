@@ -25,3 +25,7 @@ This is the job done by CKBuilder on your skin:
 * Removes all unnecessary files.
 
 You skin is ready. The release version is the one to use on your websites or to distribute to others, while the source version can be shared to the world through services like [GitHub](http://github.com/).
+
+<p class="tip">
+	To avoid the manual installation process <a href="http://ckeditor.com/add/skin">submit your skins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
+</p>

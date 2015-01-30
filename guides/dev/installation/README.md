@@ -40,6 +40,7 @@ See the following example:
 	<!DOCTYPE html>
 	<html>
 		<head>
+			<meta charset="utf-8">
 			<title>A Simple Page with CKEditor</title>
 			<!-- Make sure the path to CKEditor is correct. -->
 			<script src="../ckeditor.js"></script>
@@ -72,7 +73,7 @@ Go ahead and play a bit more with the samples; try to add the same functionality
 1. Get familiar with [Advanced Content Filter](#!/guide/dev_acf). This is a useful tool that adjusts the content inserted into CKEditor to the features that are enabled and filters out disallowed content.
 1. [Modify your toolbar](#!/guide/dev_toolbar) to only include the features that you need. You can find the complete list of all toolbar buttons available in your build in the "Toolbar Configurations" sample.
 1. Learn about CKEditor features in the [Functionality Overview](#!/guide/dev_features) section.
-1. Visit the [CKEditor SDK](http://sdk.ckeditor.com) to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download. 
+1. Visit the [CKEditor SDK](http://sdk.ckeditor.com) to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.
 1. Browse the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) for some additional plugins or skins.
 1. Use [CKBuilder](http://ckeditor.com/builder) to create your custom CKEditor build.
 1. Browse the [Developer's Guide](#!/guide) for some further ideas on what to do with CKEditor and [join the community](http://ckeditor.com/forums) to discuss all things CKEditor with fellow developers!

@@ -32,18 +32,8 @@ The **Source Dialog** plugin:
 If you want to use it in an inline editor instance (which by default uses floating user interface), add the following to your configuration:
 
 	config.extraPlugins = 'sourcedialog';
-	
-If you are using [an "item by item" toolbar configuration](#!/guide/dev_toolbar-section-%22item-by-item%22-configuration), note that the button name for the source dialog is `Sourcedialog`:
 
-	config.toolbar = [
-		//... other toolbar groups
-		{name: 'tools', items: ['Sourcedialog']}
-	];
-	//or, using the alternate syntax
-	config.toolbar = [
-		//... other toolbar groups
-		['Sourcedialog']
-	];
+<p class="tip">If you are using <a href="#!/guide/dev_toolbar-section-%22item-by-item%22-configuration">an "item by item" toolbar configuration</a>, note that the button name for the source dialog is <code>Source<b>d</b>ialog</code>.</p>
 
 If, on the other hand, you want to replace the default source editing area with the source dialog for classic editor with fixed user interface, use the following settings:
 
@@ -60,14 +50,14 @@ If another plugin generates CKEditor output data format other than HTML, like fo
 
 ## Configuring Source Code Format
 
-At the moment the only aspect of the source code view that you can configure is the `tab-size` CSS property of the source editing area. Use the CKEDITOR.config.sourceAreaTabSize option to set the width of the tab character. Enter an integer 
+At the moment the only aspect of the source code view that you can configure is the `tab-size` CSS property of the source editing area. Use the CKEDITOR.config.sourceAreaTabSize option to set the width of the tab character. Enter an integer
 to denote the number of spaces that the tab will contain.
 
 	config.sourceAreaTabSize = 8;
-	
+
 Please note this is an experimental CSS property which may not be supported in all web browsers.
 
-## Source Code Editing Demo 
+## Source Code Editing Demo
 
 See the [working "Source Code Editing" sample](http://sdk.ckeditor.com/samples/sourcearea.html) that showcases both source editing plugins combined with classic and inline editor instances.
 

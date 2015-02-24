@@ -19,7 +19,7 @@
 
 	"--seo": true,
 
-	"--external": "Blob",
+	"--external": "Blob,File,FileReader",
 
 	"--": [
 		"repos/ckeditor-plugin-scayt",

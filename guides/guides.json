@@ -83,7 +83,7 @@
 						"description": "How to retrieve and save CKEditor data.",
 						"meta_description": "How to retrieve and save CKEditor data.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
-					}					
+					}
 				]
 			},
 			{
@@ -294,6 +294,14 @@
 										"description": "Table support with column resizing.",
 										"meta_description": "Table support with column resizing.",
 										"meta_keywords": "ckeditor, editor, wysiwyg, table, tables, cell, cells, row, rows, column, columns, resize, resizing, drag, mouse"
+									},
+									{
+										"name": "dev_media_embed",
+										"url": "dev/features/embed",
+										"title": "Embedding Content",
+										"description": "Embedding External Content in CKEditor.",
+										"meta_description": "Embedding External Content in CKEditor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, embed, media, content, video, youtube, vimeo, twitter, oembed"
 									},
 									{
 										"name": "dev_codesnippet",

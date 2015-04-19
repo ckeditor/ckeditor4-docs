@@ -5,6 +5,7 @@ For licensing, see LICENSE.md.
 
 # Styles
 
+<p class="tip">See the <a href="#!/guide/dev_styles">Applying Styles to Editor Content</a> guide for an overview of the styles system.</p>
 
 ## How Do I Customize the Styles Drop-Down List?
 

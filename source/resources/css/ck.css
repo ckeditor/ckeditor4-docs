@@ -161,12 +161,9 @@ blockquote
 .tip,
 .requirements
 {
-	border-radius: 3px;
-	box-shadow: 2px 2px 0 0 #ccc;
-
-	border: 1px solid #aaa;
-	padding: 1.2em 1.2em 1.2em 65px !important;
-	margin: 1em 0;
+	box-shadow: 0 4px 0 0 #ccc;
+	padding: 1.7em 1.3em 1.7em 6.5em !important;
+	margin: 1.5em 0 !important;
 	background: #f7f7f7;
 	overflow: hidden;
 	position: relative;
@@ -181,13 +178,14 @@ blockquote
 	content: url(../images/tip.png);
 	position: absolute;
 	top: 50%;
-	margin-top: -16px;
-	left: 1.2em;
+	/* Note: Half the height of the icon */
+	margin-top: -24px;
+	left: 1.5em;
 }
 
 .tip.alert
 {
-	background: #FFDB67;
+	background: #FFF9CC;
 }
 
 .tip.alert:before
@@ -196,14 +194,9 @@ blockquote
 	margin-top: -18px;
 }
 
-.requirements
-{
-	background: #DBF2C0;
-}
-
 .requirements:before
 {
-	content: url(../images/tick.png);
+	content: url(../images/require.png);
 }
 
 /* Hide image borders in guide index. */

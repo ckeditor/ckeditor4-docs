@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 CKEditor is a WYSIWYG editor, so it makes it easy for end users to work on HTML content without any knowledge of HTML whatsoever. More advanced users, however, sometimes want to access raw HTML source code for their content and CKEditor makes it possible by providing two dedicated plugins: [Source Editing Area](http://ckeditor.com/addon/sourcearea) and [Source Dialog](http://ckeditor.com/addon/sourcedialog).
 
-Both plugins introduce the <img src="guides/dev_sourcearea/sourcearea_03.png" alt="Source" title="Source"> toolbar button. There are a few differences between them, though.
+Both plugins introduce the <img class="inline" src="guides/dev_sourcearea/sourcearea_03.png" alt="Source" title="Source"> toolbar button. There are a few differences between them, though.
 
 The **Source Editing Area** plugin:
 

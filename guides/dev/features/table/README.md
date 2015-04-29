@@ -45,7 +45,7 @@ The following image presents a table that you can create in CKEditor along with 
 
 When enabled, the optional Table Resize plugin adds support for column resizing with your mouse.
 
-You need to hover your mouse over the column border to see the cursor change to <img src="guides/dev_table/col_resize_cursor.png"> to indicate that the column can be resized. Click and drag your mouse to set the desired column width.
+You need to hover your mouse over the column border to see the cursor change to <img class="inline"  src="guides/dev_table/col_resize_cursor.png"> to indicate that the column can be resized. Click and drag your mouse to set the desired column width.
 
 ## Table Support Demo 
 

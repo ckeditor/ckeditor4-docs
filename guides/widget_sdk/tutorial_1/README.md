@@ -132,7 +132,7 @@ After you reload the page and click the widget toolbar button, you will insert t
 
 {@img simplebox1_template_defined.png Simple Box widget template inserted into the editor}
 
-Note the small gray handle (<img src="guides/widget_sdk_tutorial_1/drag.png" alt="Drag handle">) in the top left-hand corner of a widget that appears when you hover over or select the widget. If you hover over it with your mouse, a "move" cursor will appear. All widgets can be dragged inside the editing area of CKEditor and dropped wherever you want to place them. And since the widget structure is immutable, there is no chance that the widget will become corrupted in the process or otherwise fall apart!
+Note the small gray handle (<img class="inline" src="guides/widget_sdk_tutorial_1/drag.png" alt="Drag handle">) in the top left-hand corner of a widget that appears when you hover over or select the widget. If you hover over it with your mouse, a "move" cursor will appear. All widgets can be dragged inside the editing area of CKEditor and dropped wherever you want to place them. And since the widget structure is immutable, there is no chance that the widget will become corrupted in the process or otherwise fall apart!
 
 ## Adding Editable Parts
 

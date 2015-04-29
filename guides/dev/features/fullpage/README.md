@@ -24,7 +24,7 @@ Full page mode is provided by the [IFrame Editing Area](http://ckeditor.com/addo
 
 With these settings in place, CKEditor will output the entire HTML page, including the elements outside the `<body>` section.
 
-<div class="note">
+<div class="tip">
 	<p>
 	Since in full page mode you usually want to be able to freely enter any HTML content without limitations, default editor <a href="#!/guide/dev_acf">content filtering</a> can be disabled to prevent CKEditor from removing disallowed elements.
 	</p>
@@ -39,7 +39,7 @@ The following image shows the source of a complete HTML page edited in CKEditor.
 
 ## Document Properties Plugin
 
-Additionally, you can use the optional [Document Properties](http://ckeditor.com/addon/docprops) plugin to manipulate some of the document metadata. When the plugin is enabled, it adds the **Document Properties** (<img src="guides/dev_fullpage/docprops.png">) toolbar button along with the matching **Document Properties** dialog window. You can use it to set the following:
+Additionally, you can use the optional [Document Properties](http://ckeditor.com/addon/docprops) plugin to manipulate some of the document metadata. When the plugin is enabled, it adds the **Document Properties** (<img class="inline" src="guides/dev_fullpage/docprops.png">) toolbar button along with the matching **Document Properties** dialog window. You can use it to set the following:
 
 * Page title, language direction and code, charset encoding and `DOCTYPE`.
 * Text color, background color or image, page margins.

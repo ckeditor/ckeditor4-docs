@@ -17,7 +17,7 @@ Once developed, their structure (but not necessarily their content) is immutable
 
 To illustrate this concept with an example, let us consider a basic captioned image widget.
 
-<img src="guides/dev_widgets/ckeditor_image_widget.png" alt="CKEditor captioned image widget" width="771" height="546">
+{@img ckeditor_image_widget.png CKEditor captioned image widget}
 
 The screenshot above shows the editor with two captioned image widget instances. The right one (Saturn V launch) is hovered, so a characteristic yellow frame marks editable areas and a drag icon appears.
 
@@ -42,7 +42,7 @@ Widgets are useful in all situations where you need to build a **predefined stru
 3. Annotations or references with source.
 4. Text blocks that should be repeated in multiple places across the page or pages with the same structure and styling.
 
-<img src="guides/dev_widgets/ckeditor_widgets.png" alt="Multiple CKEditor widgets" width="771" height="581">
+{@img ckeditor_widgets.png Multiple CKEditor widgets}
 
 The screenshot above shows a customized CKEditor instance that uses a few sample widgets: a captioned image ("Saturn V carrying Apollo 11"), a captioned quotation (Neil Armstrong's words), a simple box template (listing the mission crew), mathematical formula (orbit equation) as well as the dates inserted inline in the first paragraph.
 

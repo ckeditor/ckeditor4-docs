@@ -249,6 +249,13 @@ Also, make sure that there's reasonable vertical space.
 	box-sizing: content-box;
 }
 
+img.inline
+{
+	padding: 0 5px;
+	vertical-align: bottom;
+	border: none;
+}
+
 .guide-container a > img:hover
 {
 	border-color: #A0C9E4;

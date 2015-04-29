@@ -15,7 +15,7 @@ CKEditor 4 introduced the [Magic Line](http://ckeditor.com/addon/magicline) plug
 
 ## Usage
 
-The Magic Line plugin causes a red line with a handle (<img src="guides/dev_magicline/magicline_01.png" alt="Magic Line handle">) to appear when you hover you mouse over any such otherwise inaccessible place in an active editor.
+The Magic Line plugin causes a red line with a handle (<img class="inline" src="guides/dev_magicline/magicline_01.png" alt="Magic Line handle">) to appear when you hover you mouse over any such otherwise inaccessible place in an active editor.
 
 {@img magicline_02.png Using magic line to insert a paragraph inside a nested table.}
 

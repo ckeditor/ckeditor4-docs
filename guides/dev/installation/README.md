@@ -63,7 +63,7 @@ When you are done, open your sample page in the browser.
 
 **Congratulations! You have just installed and used CKEditor on your own page in virtually no time!**
 
-<img src="guides/dev_installation/ckeditor_on_page.png" alt="CKEditor added to your sample page" width="483" height="252">
+{@img ckeditor_on_page.png CKEditor added to your sample page}
 
 ## Next Steps
 

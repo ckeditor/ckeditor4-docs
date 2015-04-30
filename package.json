@@ -1,6 +1,6 @@
 {
 	"name": "ckeditor-docs",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "The official documentation of CKEditor 4. http://docs.ckeditor.com",
 	"dependencies": {
 		"grunt": "~0.4.5",
@@ -8,12 +8,10 @@
 		"grunt-contrib-copy": "~0.8.0",
 		"dargs": "~4.0.0"
 	},
-	"scripts": {
-	},
 	"author": "CKSource (http://cksource.com/)",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ckeditor/ckeditor-docs"
 	},
-	"license": "For licensing, see LICENSE.md or http://ckeditor.com/license."
+	"license": "For licensing, see LICENSE.md."
 }

@@ -11,6 +11,7 @@ Follow the steps listed below to build CKEditor documentation locally.
 ### Requirements
 * [Ruby](https://www.ruby-lang.org)
 * Custom CKEditor [JSDuck](https://github.com/ckeditor/jsduck) clone (installation instructions are provided below).
+* [NPM](https://www.npmjs.com/).
 
 ### Building Instructions
 
@@ -34,9 +35,13 @@ Checkout the `stable` branch of the `jsduck` repository and install the latest `
 	> git checkout stable
 	> gem install ckeditor-jsduck-<version>.gem
 
-Go back to the `ckeditor-docs` repository and execute `build.sh`:
+Go back to the `ckeditor-docs` repository and install [npm dependencies](package.json):
 
-	> sh build.sh
+    > npm install
+
+Then finally execute `grunt`:
+
+	> grunt
 
 ## Developer's Guide
 

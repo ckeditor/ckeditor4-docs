@@ -16,9 +16,9 @@ If you are having trouble installing, configuring, or integrating CKEditor to yo
 First of all, CKEditor comes with really extensive [documentation](#!/guides) that you should read.
 
 
-### Community Forum
+### Stack Overflow
 
-The [CKEditor Community Forums](http://ckeditor.com/forums/) the place where CKEditor developers and integrators can share their problems and solutions. CKEditor has grown as an Open Source product, thanks to the amazing community of developers and users. The community forum works in Open Source way, so you are encouraged to not only ask questions, but also answer them and help fellow developers. It will be much appreciated!
+The [CKEditor tag at Stack Overflow](http://stackoverflow.com/questions/tagged/ckeditor) is the place where CKEditor developers and integrators can share their problems and solutions. CKEditor has grown as an Open Source product, thanks to the amazing community of developers and users. The `ckeditor` tag at Stack Overflow works in an Open Source way, too, so you are encouraged to not only ask questions, but also answer them and help fellow developers. It will be much appreciated!
 
 
 ### Professional Support Channel
@@ -32,18 +32,19 @@ CKEditor is and has always been an Open Source product. We are proud to be a par
 
 If you also want to support the development of CKEditor, it will be most welcome. Here are a couple of things that you can do:
 
-* [Report bugs](#!/guide/dev_issues_readme) or feature requests and submit patches on our [Development site](http://dev.ckeditor.com/).
+* [Report bugs](#!/guide/dev_issues_readme) or feature requests on our [Development site](http://dev.ckeditor.com/).
+
+* [Submit code patches](#!/guide/dev_contributing_code) through pull requests in the [official CKEditor repository](https://github.com/ckeditor/ckeditor-dev).
 
 * Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.net/projects/p/ckeditor/).
 
 * Create CKEditor plugins with new functionality and publish them on the [CKEditor Add-Ons Repository](http://ckeditor.com/addons/plugins).
 
-* Join the [Community Forum](http://ckeditor.com/forums/) and share your knowledge with your fellow CKEditor users and developers.
+* Join Stack Overflow and share your knowledge with fellow CKEditor users and developers using the ["ckeditor" tag](http://stackoverflow.com/questions/tagged/ckeditor).
 
-* Buy [CKEditor Premium](http://cksource.com/ckeditor). This will not only let you support the development of new editor features, but it will also give you access to a [dedicated support channel](http://ckeditor.com/support) where CKEditor developers are available to help you solve any issues you might have.
+* Buy [CKEditor Premium](http://cksource.com/ckeditor). This will not only let you support the development of new editor features, but it will also give you access to a [dedicated support channel](http://ckeditor.com/support) where core CKEditor developers are available to help you solve any issues you might have.
 
 **Thank you for your support and for helping us make CKEditor better every day!**
-
 
 
 ## How Does CKEditor Premium Works?

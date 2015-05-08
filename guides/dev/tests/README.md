@@ -17,7 +17,7 @@ To run CKEditor tests you will need [Bender.js](https://github.com/benderjs/bend
 
 In order to install Bender.js globally, open the console and use `npm install`:
 
-	> npm install -g git://github.com/benderjs/benderjs.git
+	> npm install -g benderjs
 
 **Note:** You may need administrative rights to do this (e.g. `sudo`).
 
@@ -28,13 +28,6 @@ Now you can check whether Bender.js has installed properly. If you run Bender.js
 you should see the following message:
 
 	command argument is required
-
-### Updating Bender.js
-
-At the moment, Bender.js is not available as an `npm` package. If you want to update it, you need to uninstall the existing version and install again:
-
-	> npm uninstall -g benderjs
-	> npm install -g git://github.com/benderjs/benderjs.git
 
 ## Setting up CKEditor Tests
 
@@ -195,4 +188,4 @@ If you need, you can add the entire content of the `<html>` page element, for ex
 		<textarea id="editor">Lorem ipsum</textarea>
 	</body>
 
-To learn more about writing tests, check the [exiting tests code](https://github.com/ckeditor/ckeditor-dev/tree/master/tests).
+To learn more about writing tests, check the [existing tests code](https://github.com/ckeditor/ckeditor-dev/tree/master/tests).

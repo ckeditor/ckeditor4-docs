@@ -667,6 +667,14 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, contribute, contribution, localization, translation, translating, bug, bugs, issue, issues, requests, tracker, problem, problems, code, documentation, standards"
 					},
 					{
+						"name": "dev_contributing_code",
+						"url": "dev/contributing_code",
+						"title": "Contributing Code",
+						"description": "How to contribute code and provide patches to CKEditor.",
+						"meta_description": "How to contribute code and provide patches to CKEditor.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, code, contribute, contribution, patch, pull, request, repository"
+					},
+					{
 						"name": "dev_issues_readme",
 						"url": "dev/issues_readme",
 						"title": "Reporting Issues",

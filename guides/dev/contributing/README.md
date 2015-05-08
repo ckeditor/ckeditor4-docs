@@ -23,10 +23,12 @@ This section explains how you can contribute to CKEditor development. CKEditor i
 
 The following resources might be helpful if you decide to contribute to CKEditor development:
 
-1. **[Reporting Issues](#!/guide/dev_issues_readme)** &ndash; Learn how to check if the issue you are experiencing is a genuine CKEditor bug.
+1. **[Contributing Code](#!/guide/dev_contributing_code)** &ndash; Read how to propose code changes and patches for core CKEditor files.
 
-2. **[Issues Tracker Site](#!/guide/dev_issues_tracker)** &ndash; See how our bug tracker works and what should be included in a proper bug report.
+2. **[Reporting Issues](#!/guide/dev_issues_readme)** &ndash; Learn how to check if the issue you are experiencing is a genuine CKEditor bug.
 
-3. **[Code Documentation Standards](#!/guide/dev_code_documentation)** &ndash; Information about CKEditor source code documentation.
+3. **[Issues Tracker Site](#!/guide/dev_issues_tracker)** &ndash; See how our bug tracker works and what should be included in a proper bug report.
 
-4. **[Testing Environment and Writing Tests](#!/guide/dev_tests)** &ndash; Information about installing and running CKEditor testing environment and introduction to writing CKEditor tests.
+4. **[Code Documentation Standards](#!/guide/dev_code_documentation)** &ndash; Information about CKEditor source code documentation.
+
+5. **[Testing Environment and Writing Tests](#!/guide/dev_tests)** &ndash; Information about installing and running CKEditor testing environment and introduction to writing CKEditor tests.

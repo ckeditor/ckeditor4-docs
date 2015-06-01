@@ -17,7 +17,7 @@ The optional [Color Button](http://ckeditor.com/addon/colorbutton) plugin provid
 
 You can also add the optional [Color Dialog](http://ckeditor.com/addon/colordialog) plugin which extends the color selector with the **More Colors** option and a user-friendly way to select the desired color through a dedicated **Select Color** dialog window. When this plugin is enabled, the **More Colors** option appears automatically for the text and background color. 
 
-{@img colordialog_01.png The Select Color dialog window}
+{@img colordialog_03.png The Select Color dialog window}
 
 You can hide the **More Colors** feature by setting the CKEDITOR.config.colorButton_enableMore configuration option to `false`.
 

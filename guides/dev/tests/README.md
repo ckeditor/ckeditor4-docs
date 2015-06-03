@@ -15,9 +15,9 @@ To run CKEditor tests you will need [Bender.js](https://github.com/benderjs/bend
 * you installed the latest version of [Node.js](http://nodejs.org/),
 * you have administrative rights &mdash; needed to install Bender.js globally.
 
-In order to install Bender.js globally, open the console and use `npm install`:
+First, you need to install globally the [Bender.js command line interface](https://github.com/benderjs/benderjs-cli). To do so, open the console and use `npm install`:
 
-	> npm install -g benderjs
+	> npm install -g benderjs-cli
 
 **Note:** You may need administrative rights to do this (e.g. `sudo`).
 
@@ -27,7 +27,7 @@ Now you can check whether Bender.js has installed properly. If you run Bender.js
 
 you should see the following message:
 
-	command argument is required
+	Local Bender.js installation not found.
 
 ## Setting up CKEditor Tests
 
@@ -41,7 +41,7 @@ Go to the main CKEditor directory (it should contain the `bender.js`, `package.j
 
 	> cd ckeditor-dev
 
-You will now need to install required modules, like the [CKEditor plugin for Bender.js](https://github.com/benderjs/benderjs-ckeditor). To install all required modules use:
+You will now need to install the Bender.js engine (`benderjs-cli` installed globally uses a local `benderjs` module) and all required modules, like the [Sinon.JS plugin for Bender.js](https://github.com/benderjs/benderjs-sinon). To do so use:
 
 	> npm install
 
@@ -61,6 +61,8 @@ In order to run the tests, open the console and type:
 
 This will start the server in the verbose mode.
 
+<p class="tip">If you want to run tests from other hosts, like virtual machines, you may need to use <code>-H 0.0.0.0</code> option.</p>
+
 Now open a web browser. Bender.js dashboard is available under:
 
 	http://localhost:1030
@@ -74,7 +76,7 @@ At the moment, starting a daemon is supported **on Unix systems only**.
 If you want, you can specify a port or a hostname where Bender.js runs:
 
 	-p, --port		The port on which the server will run (default: 1030).
-	-H, --hostname	The hostname used to run the server (default: 0.0.0.0).
+	-H, --hostname	The hostname used to run the server (default: localhost).
 
 <p class="tip">
 	Some tests require the browser to be in focus. This means that you can not use other applications when running them.

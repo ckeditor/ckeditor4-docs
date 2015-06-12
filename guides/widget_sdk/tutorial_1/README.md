@@ -144,6 +144,10 @@ To change this and allow for some user input, we will need to define the `{@link
 	Please note that only elements defined in <code><a href="#!/api/CKEDITOR.dtd-property-S-editable">CKEDITOR.dtd.$editable</a></code> can be converted into editable widget elements.
 </p>
 
+<p class="tip alert">
+	Please note that editables <strong>have to</strong> be defined in the same order as the corresponding elements are placed in DOM. Otherwise, errors may occur when nesting widgets.
+</p>
+
 	editor.widgets.add( 'simplebox', {
 		// Code defined before...
 

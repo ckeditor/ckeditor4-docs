@@ -37,6 +37,16 @@ This difference makes the Media Embed plugin perfect for systems where the embed
 
 Both widgets can be easily [configured](#!/api/CKEDITOR.config-cfg-embed_provider) to use another [oEmbed](http://www.oembed.com/) provider or custom services.
 
+## Automatic Embedding on Paste
+
+If the [Auto Embed](http://ckeditor.com/addon/autoembed) plugin is enabled, then pasting a URL to a resource directly in the editing area will result in embedding it. This feature is configured to work with the Media Embed and Semantic Media Embed plugins. If you wish to make it work with your custom media embed widget (see [Implementing a New Embed Widget](#!/guide/dev_media_embed-section-implementing-a-new-embed-widget)) just change the {@link CKEDITOR.config#autoEmbed_widget} option.
+
+You can test auto embedding in the [Embedding Media](http://sdk.ckeditor.com/samples/mediaembed.html) sample.
+
 ## Implementing a New Embed Widget
 
 Both plugins utilize the {@link CKEDITOR.plugins.embedBase#createWidgetBaseDefinition Embed Base API} exposed by the [Embed Base plugin](http://ckeditor.com/addon/embedbase) which can be used to implement other types of widgets for embedding asynchronously retrieved content.
+
+## Embedding Media Demo
+
+See the [working "Embedding Media" sample](http://sdk.ckeditor.com/samples/embeddingmedia.html) that showcases the Media Embed and Auto Embed plugins.

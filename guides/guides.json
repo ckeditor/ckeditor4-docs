@@ -244,6 +244,14 @@
 										"description": "Adjusting the editor user interface language.",
 										"meta_description": "Adjusting the editor user interface language.",
 										"meta_keywords": "ckeditor, editor, wysiwyg, language, localization, localisation, translation, internationalization, ui, interface, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_notifications",
+										"url": "dev/features/notifications",
+										"title": "Notifications",
+										"description": "",
+										"meta_description": "",
+										"meta_keywords": "ckeditor, editor, wysiwyg, "
 									}
 								]
 							},

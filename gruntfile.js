@@ -61,7 +61,7 @@ module.exports = function( grunt ) {
 					guides: 'guides/guides.json',
 					output: 'build',
 					seo: true,
-					external: 'Blob,File,FileReader',
+					external: 'Blob,File,FileReader,DocumentFragment',
 					exclude: '../ckeditor-dev/plugins/codesnippet/lib'
 				}
 			}

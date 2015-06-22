@@ -5,7 +5,7 @@ For licensing, see LICENSE.md.
 
 # File Browser Integration
 
-CKEditor can be easily integrated with an external file browser/uploader.
+CKEditor can be easily integrated with an external file browser/uploader thanks to the [File Browser](http://ckeditor.com/addon/filebrowser) plugin which is included in every preset by default.
 
 Once properly set up, all file browser features will automatically
 become available. This includes the **Upload** tab `(1)` in the **Link**,
@@ -13,6 +13,8 @@ become available. This includes the **Upload** tab `(1)` in the **Link**,
 **Browse Server** button `(2)`.
 
 {@img image_dialog_browser_upload.png File browser features available for images in CKEditor}
+
+**Note:** Starting from CKEditor 4.5 it is also possible to [enable uploading pasted and dropped images](#!/guide/dev_upload_widget).
 
 ## Basic Configuration
 
@@ -164,3 +166,4 @@ browser refer to the following articles:
 
 - [Creating a Custom File Browser](#!/guide/dev_file_browser_api)
 - [Adding the File Browser to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
+- [Uploading Pasted and Dropped Images](#!/guide/upload_widget)

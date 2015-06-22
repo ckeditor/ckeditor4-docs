@@ -592,6 +592,14 @@
 								"description": "How to integrate a file browser with CKEditor dialog windows.",
 								"meta_description": "How to integrate a file browser with CKEditor dialog windows.",
 								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, manage, management, browse, browser, image, images, dialog, dialogs, window, windows"
+							},
+							{
+								"name": "dev_upload_widget",
+								"url": "dev/configuration/file_browse_upload/upload_widget",
+								"title": "Pasting and Dropping Images",
+								"description": "How to enable uploading pasted and dropped images in CKEditor.",
+								"meta_description": "How to enable uploading pasted and dropped images in CKEditor.",
+								"meta_keywords": "pasting images, uploading images, drag & drop, dragging images, ckeditor, editor, integrate, integration, file, files, upload, manage, management, browse, browser, image, images, dialog, dialogs, window, windows"
 							}
 						]
 					}

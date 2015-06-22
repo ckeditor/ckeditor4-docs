@@ -5,7 +5,7 @@ For licensing, see LICENSE.md.
 
 # File Browser API
 
-CKEditor can be easily integrated with your own file browser.
+CKEditor can be easily integrated with your own file browser thanks to the [File Browser](http://ckeditor.com/addon/filebrowser) plugin which is included in every preset by default.
 
 To connect a file browser that is already compatible with CKEditor (like
 [CKFinder](http://ckfinder.com)), follow the [File Browser (Uploader)](#!/guide/dev_file_browse_upload)

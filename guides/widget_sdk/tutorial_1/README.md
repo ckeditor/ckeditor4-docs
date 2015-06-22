@@ -165,6 +165,12 @@ After you reload the sample page and click the widget toolbar button again, the 
 
 {@img simplebox1_editables_defined.png Widget editables defined}
 
+### Nesting Widgets
+
+CKEditor 4.5 brought support for inserting widgets into other widget's nested editable parts. This means that for example an instance of simple box can be included in another simple box's content. Enabling this feature does not require any additional steps, but it is important to remember that widget to be nested must fulfill rules of [nested editable part's allowed content](#!/guide/widget_sdk_tutorial_1-section-limiting-available-formatting).
+
+Note that due to limitations of Internet Explorer 8 nested widgets may not be fully functional in this browser.
+
 ## Widget Styling
 
 Currently the widget does not look very impressive and does not stand out in the editor content. Let us add some styling to the structure it generates to make it more obvious that it constitutes a special unit of content.

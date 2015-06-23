@@ -92,11 +92,11 @@ Currently, we have defined content transformations for only a handful of editor 
 
 ## Filtering Pasted and Dropped Content
 
-An {@link CKEDITOR.config#pasteFilter additional filter} (called paste filter) can be configured to handle pasted and dropped content. It will be applied independently from the ACF, so it can be used as the only filter (with disabled ACF), or as a complementary filter (for example to filter pasted content with more strict rules than all other content).
+An {@link CKEDITOR.config#pasteFilter additional filter} (called *paste filter*) can be configured to handle pasted and dropped content. It will be applied independently from ACF, so it can be used as the only filter (with disabled ACF), or as a complementary filter (for example to filter pasted content with more strict rules than all other content).
 
-On browsers on which it is possible to recognize whether a content comes (was copied or dragged) from an editor the paste filter will be applied only to a content that does not come from any editor. At the time of writing (June 2015) content source can be recognized only on Blink and Webkit based browsers. On other browsers, if the the paste filter is enabled, it is applied to all pasted and dropped content.
+In browsers where it is possible to recognize whether the content comes (was copied or dragged) from an editor the paste filter will be applied only to content that does not come from any editor. At the time of writing (June 2015) content source can be recognized only in Blink and Webkit based browsers. In other browsers, if the paste filter is enabled, it is applied to all pasted and dropped content.
 
-**Note:** This filter is enabled on Chrome, Opera and Safari by default, because these browsers keep a messy content in the clipboard. On these browsers the paste filter is configured to `'semantic-content'` what means that it will strip all inline styles and classes (because these are classes used on the source page, not inside editor).
+**Note:** By default this filter is enabled in Chrome, Opera and Safari, because they keep messy HTML content in the clipboard. In these browsers the paste filter is configured to `'semantic-content'` which means that it will strip all inline styles and classes (because these are classes used on the source page, not inside the editor).
 
 Read more about the paste filter in the {@link CKEDITOR.config#pasteFilter} documentation.
 

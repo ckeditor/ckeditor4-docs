@@ -342,6 +342,14 @@
 										"description": "Using placeholders to create read-only elements editable through a dialog window.",
 										"meta_description": "Using placeholders to create read-only elements editable through a dialog window.",
 										"meta_keywords": "ckeditor, editor, wysiwyg, placeholder, placeholders, template, widget, drag, drop"
+									},
+									{
+										"name": "dev_drop_paste",
+										"url": "dev/features/drop_paste",
+										"title": "Dropping and pasting",
+										"description": "Dropping and pasting content (text, html, files, images) into the editor.",
+										"meta_description": "Dropping and pasting content (text, html, files, images) into the editor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, drag, drop, paste, insert, image, file"
 									}
 								]
 							},
@@ -602,12 +610,12 @@
 								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, manage, management, browse, browser, image, images, dialog, dialogs, window, windows"
 							},
 							{
-								"name": "dev_upload_widget",
-								"url": "dev/configuration/file_browse_upload/upload_widget",
-								"title": "Pasting and Dropping Images",
-								"description": "How to enable uploading pasted and dropped images in CKEditor.",
-								"meta_description": "How to enable uploading pasted and dropped images in CKEditor.",
-								"meta_keywords": "pasting images, uploading images, drag & drop, dragging images, ckeditor, editor, integrate, integration, file, files, upload, manage, management, browse, browser, image, images, dialog, dialogs, window, windows"
+								"name": "dev_file_upload",
+								"url": "dev/configuration/file_browse_upload/file_upload",
+								"title": "Uploading Dropped or Pasted Files",
+								"description": "How to enable uploading pasted and dropped files in CKEditor.",
+								"meta_description": "How to enable uploading pasted and dropped files in CKEditor.",
+								"meta_keywords": "ckeditor, paste, pasting, upload, uploading, drag, drop, dragging file, dropping file, dragging image, dropping image, editor, integrate, integration, file, files, upload, browse, browser, image, images"
 							}
 						]
 					}
@@ -668,6 +676,22 @@
 						"description": "Introduction to CKEditor Widgets.",
 						"meta_description": "Introduction to CKEditor Widgets.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins"
+					},
+					{
+						"name": "dev_files",
+						"url": "dev/deep_dive/files",
+						"title": "Files Handling",
+						"description": "Introduction to CKEditor Files Handling and Files Tools.",
+						"meta_description": "Introduction to CKEditor Files Handling and Files Tools.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, file, files, tools, clipboard"
+					},
+					{
+						"name": "dev_clipboard",
+						"url": "dev/deep_dive/clipboard",
+						"title": "Clipboard",
+						"description": "CKEditor Clipboard Deep Dive.",
+						"meta_description": "CKEditor Clipboard Deep Dive.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, clipboard, dataTransfer, clipboardData, files, paste, drop"
 					}
 				]
 			},

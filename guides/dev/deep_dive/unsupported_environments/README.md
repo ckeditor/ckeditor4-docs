@@ -3,11 +3,13 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Enabling CKEditor in Unsupported Environments
+# Enabling CKEditor in Unsupported Environments (CKEditor 4.0-4.4.8)
 
-By default, CKEditor is disabled in all unsupported environments through the CKEDITOR.env.isCompatible flag. The list of officially supported environments is [available here](#!/guide/dev_browsers) and is based on CKEditor Graded Browser Support.
+By default, CKEditor **4.0-4.4.8** is disabled in all unsupported environments through the CKEDITOR.env.isCompatible flag. The list of officially supported environments is [available here](#!/guide/dev_browsers) and is based on CKEditor Graded Browser Support.
 
 ## Why Is CKEditor Disabled in Some Environments?
+
+<p class="tip">Since version 4.5 CKEditor is only disabled in environments that are known to be incompatible. Therefore, <strong>this guide applies mostly to versions 4.0-4.4.8</strong> where CKEditor was disabled in environments which were not whitelisted.</p>
 
 There are usually two main reasons for that:
 

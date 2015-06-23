@@ -5,7 +5,7 @@ For licensing, see LICENSE.md.
 
 # Notifications
 
-Since 4.5 version CKEditor use notification to show user information about the operations status in the editor. Notifications let you show informations in the consistent way, all plugins using notifications API will show informations the same way. This API let you also show notifications in the default way or integrate editors notifications with the page or CMS notifications. Note that notifications do not work with dialogs so no dialog should be displayed when the notifications is to be shown.
+Since version 4.5 CKEditor use notification to show user information about the operations status in the editor. Notifications let you show informations in the consistent way, this means all plugins using notifications API will show informations the same way. This API let you also show notifications in the default way or integrate editors notifications with the website or CMS notifications. Note that notifications do not work with dialogs so no dialog should be displayed when the notifications is to be shown.
 
 There are multiple types of notifications. To learn more check CKEDITOR.plugins.notification-property-type.
 

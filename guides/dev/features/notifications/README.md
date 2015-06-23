@@ -5,15 +5,17 @@ For licensing, see LICENSE.md.
 
 # Notifications
 
-Since version 4.5 CKEditor use notification to show user information about the operations status in the editor. Notifications let you show informations in the consistent way, this means all plugins using notifications API will show informations the same way. This API let you also show notifications in the default way or integrate editors notifications with the website or CMS notifications. Note that notifications do not work with dialogs so no dialog should be displayed when the notifications is to be shown.
+<p class="requirements">This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through an optional plugins <a href="http://ckeditor.com/addon/notification">Notification</a> and <a href="http://ckeditor.com/addon/notificationaggregator">Notification Aggregator</a> that are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.</p>
 
-There are multiple types of notifications. To learn more check CKEDITOR.plugins.notification-property-type.
+Since CKEditor 4.5 it is possible to use notifications to show the user information about operations status in the editor. Notifications let you show information in a consistent way and all plugins using notifications API will show information in the same way. This API also allows you to integrate editor's notifications with your page (your CMS for example). Note that notifications do not work with dialogs so no dialog should be displayed when the notifications is to be shown.
+
+There are multiple types of notifications. To learn more check {@link CKEDITOR.plugins.notification#type}.
 
 {@img notification.png Inline Notifications example}
 
-To show simple notification you need to create `notification` instance and call `show` method or you can use `showNotification` shortcut:
+To show simple notification you need to create `notification` instance and call the {@link CKEDITOR.plugins.notification#show} method or you can use {@link CKEDITOR.editor#showNotification} shortcut:
 
-	// Editor needs `notification` plugin.
+	// Editor needs notification plugin.
 	var editor = CKEDITOR.replace( 'editor1', {
 		extraPlugins: 'notification'
 	} );
@@ -26,11 +28,11 @@ To show simple notification you need to create `notification` instance and call 
 		} );
 		notification1.show();
 
-		// Do the same, just an shortcut.
+		// Use shortuct - it has the same result as above.
 		var notification2 = editor.showNotification( 'Error occurred', 'warning' );
 	} );
 
-Note that `[showNotification](#!/api/CKEDITOR.editor-method-showNotification)` method is available even without the the notification plugin. Then the alert will be shown instead of notification.
+Note that {@link CKEDITOR.editor#showNotification} method is available even without the the notification plugin. Then an alert will be shown instead of notification.
 
 Once you create a notification you can update its state and even change its type:
 
@@ -44,28 +46,28 @@ Once you create a notification you can update its state and even change its type
 
 	notification.update( { type: 'success', message: 'File uploaded.' } );
 
-Note that someone may implement the notification interface in the custom way, for example show notification with the slide-in the animation. Then updating one notification is not the same as hiding one and showing another. One notification should show the status of one process so it is better to updated it to the `success` type instead of creating new one.
+Note that someone may implement the notification interface in the custom way, for example show notification with a slide-in animation. Then updating one notification is not the same as hiding one and showing another. One notification should show the status of one process so it is better to updated it to the `success` type instead of creating a new one every time the status changes.
 
-To learn more about notifications API check CKEDITOR.plugins.notification documentation.
+To learn more about notifications API check {@link CKEDITOR.plugins.notification} documentation.
 
-## Notification interface
+## Notification Interface
 
-By default notifications are shown at the top center of the editable area. However, they try to be visible as long as possible not leaving editable area. It means that notifications will move if part of the editable will be out of the viewport, so you can edit very long document and notification will still be visible. They also move below toolbar if you are using floating toolbar, but they will be not visible at all if the whole editor will not be visible:
+By default notifications are shown at the top center of the editable area. However, they try to be visible as long as possible without leaving the editable area. It means that notifications will move if part of the editable will be out of the viewport, so you can edit very long document and notification will still be visible. They also move below toolbar if you are using [floating toolbar](#!/guide/dev_uitypes-section-floating-user-interface), but they will not be visible at all if the whole editor is not visible:
 
 {@img notification_stick.png Notifications sticks to the viewport border to be visible as long as possible}
 
-Notifications can also hide after the timeout. By default `info` and `success` notifications hide after 5 seconds what can be changed using `CKEDITOR.config.notification_duration`. `warning` notification needs to be hidden manually. `progres` notifications also are not hidden automatically. They wait for the next progress update and to be finally changed to `success` or `warning`. It is also possible to change the notification duration per instance.
+Notifications can also hide after a timeout. By default `info` and `success` notifications hide after 5 seconds what can be changed using {@link CKEDITOR.config#notification_duration}. The `warning` notification needs to be hidden manually. The `progress` notifications are also not hidden automatically. They wait for the next progress update and to be finally changed to `success` or `warning`. It is also possible to change the notification duration per instance.
 
-User can also hide notifications manually: using `X` button or `Esc` key.
+User can also hide notifications manually: by using the `X` button or *Esc* key.
 
-If you want to make sure that notification will be shown after the update that update needs be marked as
-[important](#!/api/CKEDITOR.plugins.notification-method-update). This is also important because of the accessibility reason: important updates will be read by screen reader and rest of the updates will not, because we do not want to spam user with tons of messages if the notification is updated very often.
+If you want to make sure that a notification will be shown after an update, then that update needs to be marked as
+{@link CKEDITOR.plugins.notification#update important}. This is also important because of the accessibility reason &ndash; important updates will be read by screen reader and rest of the updates will not, because we do not want to spam the user with tons of messages if a notification is updated very often.
 
-## Notification integration
+## Notification Integration
 
-If you want to replace standard notification interface with the custom one or you want to integrate editors notifications with the page/CMS notifications you can do it listening notification events: `notificationShow`, `notificationUpdated` and `notificationHide`.
+If you want to replace standard notification interface with a custom one or you want to integrate editors notifications with your page/CMS ones you can do it by listening to notification events: {@link CKEDITOR.editor#notificationShow}, {@link CKEDITOR.editor#notificationUpdate} and {@link CKEDITOR.editor#notificationHide}.
 
-To prevent notifications to be shown it is not enough to prevent `notificationShow` but you need too cancel `notificationUpdate` too, otherwise important update will display the notification.
+To prevent notifications from being shown it is not enough to prevent {@link CKEDITOR.editor#notificationShow} but you need too cancel {@link CKEDITOR.editor#notificationUpdate} too, otherwise important updates will display the notification.
 
 	editor.on( 'notificationShow', function( evt ) {
 		alert( evt.data.notification.message );
@@ -89,13 +91,13 @@ Note that if you cancel `notificationUpdate` event it means only that the notifi
 
 If you cancel `notificationHide` it will be hidden, does not matter if duration passed, user press `X` button or `Esc`.
 
-## Notifications aggregator
+## Notifications Aggregator
 
-If you want to show one notification aggregating many small tasks you can use notifications aggregator.
+If you want to show one notification aggregating many small tasks you can use {@link CKEDITOR.plugins.notificationAggregator notification aggregator}.
 
 {@img notification_aggregator.png Notifications aggregator example}
 
-	// Editor needs `notificationaggregator` plugin.
+	// Editor needs the notificationaggregator plugin.
 	var editor = CKEDITOR.replace( 'editor1', {
 		extraPlugins: 'notificationaggregator'
 	} );
@@ -115,6 +117,6 @@ If you want to show one notification aggregating many small tasks you can use no
 		task2.update( 10 );
 	} );
 
-It is also possible to create separate template for single item message so if aggregator handle only one task it will not looks strange (for example 'Loaidng file.' instead of 'Loading files 1 of 1.').
+It is also possible to create separate template for single item message so if aggregator handles only one task it will not look strange (for example 'Loading file.' instead of 'Loading files 1 of 1.').
 
-See CKEDITOR.plugins.notificationAggregator and http://docs.ckeditor.dev/#!/api/CKEDITOR.plugins.notificationAggregator.task.
+Read more in {@link CKEDITOR.plugins.notificationAggregator} and {@link CKEDITOR.plugins.notificationAggregator.task}.

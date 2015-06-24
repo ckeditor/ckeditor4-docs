@@ -3,13 +3,13 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Enabling CKEditor in Unsupported Environments (CKEditor 4.0-4.4.8)
+# Enabling CKEditor in Unsupported Environments (CKEditor &lt;4.4.8)
 
-By default, CKEditor **4.0-4.4.8** is disabled in all unsupported environments through the CKEDITOR.env.isCompatible flag. The list of officially supported environments is [available here](#!/guide/dev_browsers) and is based on CKEditor Graded Browser Support.
+By default, CKEditor **4.0 - 4.4.8** is disabled in all unsupported environments through the CKEDITOR.env.isCompatible flag. The list of officially supported environments is [available here](#!/guide/dev_browsers-section-officially-supported-browsers).
 
 ## Why Is CKEditor Disabled in Some Environments?
 
-<p class="tip">Since version 4.5 CKEditor is only disabled in environments that are known to be incompatible. Therefore, <strong>this guide applies mostly to versions 4.0-4.4.8</strong> where CKEditor was disabled in environments which were not whitelisted.</p>
+<p class="tip">Since version 4.5 CKEditor is only disabled in environments that are known to be incompatible. Therefore, <strong>this guide applies mostly to versions &lt;4.4.8</strong> where CKEditor was disabled in environments which were not explicitly whitelisted.</p>
 
 There are usually two main reasons for that:
 
@@ -30,7 +30,9 @@ If you, however, would like to check how CKEditor works in some untested environ
 
 ## Changing the `env.isCompatible` Flag
 
-By default, the CKEDITOR.env.isCompatible flag is set to `true` when a supported environment is detected. When you, however, manually set it to `true` in your configuration, CKEditor will be enabled in all environments, including the unsupported ones.
+By default, in CKEditor &lt;4.4.8 the CKEDITOR.env.isCompatible flag was set to `true` when a supported environment is detected. When you, however, manually set it to `true` in your configuration, CKEditor would be enabled in all environments, including the unsupported ones.
+
+In CKEditor 4.5 and beyond, the CKEDITOR.env.isCompatible flag is set to `true` for all environments except the explicitely blacklisted ones.
 
 This flag is checked only in functions creating an editor instance, like CKEDITOR.replace, CKEDITOR.inline, or CKEDITOR.appendTo. This means that the flag can be modified before creating an editor instance, but after the `<script>` tag that adds the CKEditor script to the page. For example:
 
@@ -50,7 +52,7 @@ Or even later, when creating an instance:
 
 ## Blacklisting Some Unsupported Environments
 
-The code above has one major drawback: it enables CKEditor in all environments, including those where the editor no longer works, like in older Internet Explorer versions. It is thus wise to safeguard against such cases by blacklisting Internet Explorer 7 and below.
+Changing the CKEDITOR.env.isCompatible flag to `true` with no fine-tuning has one major drawback: it enables CKEditor in all environments, including those where the editor no longer works, like in older Internet Explorer versions. It is thus wise to safeguard against such cases by blacklisting Internet Explorer 7 and below.
 
 	// Enable CKEditor in all environments except IE7 and below.
 	if ( !CKEDITOR.env.ie || CKEDITOR.env.version > 7 )

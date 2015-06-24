@@ -32,7 +32,7 @@ If you, however, would like to check how CKEditor works in some untested environ
 
 By default, in CKEditor &lt;4.4.8 the CKEDITOR.env.isCompatible flag was set to `true` when a supported environment is detected. When you, however, manually set it to `true` in your configuration, CKEditor would be enabled in all environments, including the unsupported ones.
 
-In CKEditor 4.5 and beyond, the CKEDITOR.env.isCompatible flag is set to `true` for all environments except the explicitely blacklisted ones.
+In CKEditor 4.5 and beyond, the CKEDITOR.env.isCompatible flag is set to `true` for all environments except the explicitly blacklisted ones.
 
 This flag is checked only in functions creating an editor instance, like CKEDITOR.replace, CKEDITOR.inline, or CKEDITOR.appendTo. This means that the flag can be modified before creating an editor instance, but after the `<script>` tag that adds the CKEditor script to the page. For example:
 

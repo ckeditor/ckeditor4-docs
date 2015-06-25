@@ -22,22 +22,18 @@ The {@link CKEDITOR.config#uploadUrl uploadUrl} setting contains the location of
 
 The sample below shows basic configuration code that can be used to configure pasting and dragging images into CKEditor. Note that you also need to load specific plugin to handle dropped files.
 
-	CKEDITOR.replace( 'editor1', {
-		extraPlugins: 'image2,uploadimage',
-		uploadUrl: '/uploader/upload.php'
-	} );
+	config.extraPlugins = 'uploadimage';
+	config.uploadUrl = '/uploader/upload.php';
 
 <p class="tip">As a fallback solution if <code>uploadUrl</code> is not set and <code>filebrowserUploadUrl</code> is provided for the <strong>File Browser</strong> plugin,
 then the Upload Image plugin will try to use <code>filebrowserUploadUrl</code> instead and send there dragged and pasted images.</p>
 
-It is also possible to set the specific URL for the specific plugin. For example if you want to use [Upload Image](http://ckeditor.com/addon/uploadimage") you can set {@link CKEDITOR.config#uploadImageUrl uploaImagedUrl} which will be used instead of {@link CKEDITOR.config#uploadUrl uploadUrl}.
+It is also possible to set the specific URL for the specific plugin. For example if you want to use [Upload Image](http://ckeditor.com/addon/uploadimage) you can set {@link CKEDITOR.config#uploadImageUrl uploadImagedUrl} which will be used instead of {@link CKEDITOR.config#uploadUrl uploadUrl}.
 
 **Example** &mdash; Setting Up Image upload plugin
 
-	CKEDITOR.replace( 'editor1', {
-		extraPlugins: 'image2,uploadimage',
-		imageUploadUrl: '/uploader/upload.php?type=Images'
-	} );
+	config.extraPlugins = 'uploadimage';
+	config.imageUploadUrl = '/uploader/upload.php?type=Images';
 
 To learn more about upload URL see {@link CKEDITOR.fileTools#getUploadUrl getUploadUrl}.
 
@@ -47,7 +43,7 @@ To make uploading on drop or paste work you need also a server side application 
 
 ### Server Side Configuration
 
-The <a href="http://ckeditor.com/addon/uploadimage">Upload Image</a> plugin is using different API than the [File Browser](#!/guide/dev_file_browse_api) plugin and expects JSON responses.
+The [Upload Image](http://ckeditor.com/addon/uploadimage) plugin is using different API than the [File Browser](#!/guide/dev_file_browse_api) plugin and expects JSON responses.
 
 #### Request
 
@@ -191,7 +187,5 @@ Thus for CKFinder there is no need to specify {@link CKEDITOR.config#uploadUrl u
 If for any reason you have to do this, then please note that the path to the connector must include `responseType=json` in the query string
  so that CKFinder returned the proper response.
 
-	CKEDITOR.replace( 'editor1', {
-		extraPlugins: 'image2,uploadimage',
-		uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json'
-	} );
+	config.extraPlugins = 'uploadimage';
+	config.uploadUrl = '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json';

@@ -3,7 +3,7 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Embedding Content
+# Embedding Media Resources with oEmbed
 
 <p class="requirements">
 	This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
@@ -39,14 +39,18 @@ Both widgets can be easily [configured](#!/api/CKEDITOR.config-cfg-embed_provide
 
 ## Automatic Embedding on Paste
 
-If the [Auto Embed](http://ckeditor.com/addon/autoembed) plugin is enabled, then pasting a URL to a resource directly in the editing area will result in embedding it. This feature is configured to work with the Media Embed and Semantic Media Embed plugins. If you wish to make it work with your custom media embed widget (see [Implementing a New Embed Widget](#!/guide/dev_media_embed-section-implementing-a-new-embed-widget)) just change the {@link CKEDITOR.config#autoEmbed_widget} option.
+If the optional [Auto Embed](http://ckeditor.com/addon/autoembed) plugin is enabled, pasting the resource URL directly into the editing area will result in embedding it. By default this feature is configured to work with the Media Embed and Semantic Media Embed plugins.
 
-You can test auto embedding in the [Embedding Media](http://sdk.ckeditor.com/samples/mediaembed.html) sample.
+If you wish to make it work with your custom media embed widget (see [Implementing a New Embed Widget](#!/guide/dev_media_embed-section-implementing-a-new-embed-widget)), just change the {@link CKEDITOR.config#autoEmbed_widget} option to point to your widget, for example:
+
+	config.autoEmbed_widget = 'customEmbed';
+
+You can test auto embedding in the [Embedding Media Resources with oEmbed](http://sdk.ckeditor.com/samples/mediaembed.html) sample.
 
 ## Implementing a New Embed Widget
 
-Both plugins utilize the {@link CKEDITOR.plugins.embedBase#createWidgetBaseDefinition Embed Base API} exposed by the [Embed Base plugin](http://ckeditor.com/addon/embedbase) which can be used to implement other types of widgets for embedding asynchronously retrieved content.
+Both plugins utilize the {@link CKEDITOR.plugins.embedBase#createWidgetBaseDefinition Embed Base API} exposed by the [Embed Base](http://ckeditor.com/addon/embedbase) plugin which can be used to implement other types of widgets for embedding asynchronously retrieved content.
 
 ## Embedding Media Demo
 
-See the [working "Embedding Media" sample](http://sdk.ckeditor.com/samples/embeddingmedia.html) that showcases the Media Embed and Auto Embed plugins.
+See the [working "Embedding Media Resources with oEmbed" sample](http://sdk.ckeditor.com/samples/embeddingmedia.html) that showcases the Media Embed and Auto Embed plugins.

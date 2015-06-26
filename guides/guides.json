@@ -306,10 +306,10 @@
 									{
 										"name": "dev_media_embed",
 										"url": "dev/features/embed",
-										"title": "Embedding Content",
-										"description": "Embedding External Content in CKEditor.",
-										"meta_description": "Embedding External Content in CKEditor.",
-										"meta_keywords": "ckeditor, editor, wysiwyg, embed, media, content, video, youtube, vimeo, twitter, oembed"
+										"title": "Embedding Media Resources",
+										"description": "Embedding External Content in CKEditor with oEmbed.",
+										"meta_description": "Embedding External Content in CKEditor with oEmbed.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, embed, media, oembed, embedding, content, video, youtube, vimeo, twitter"
 									},
 									{
 										"name": "dev_codesnippet",

@@ -58,9 +58,7 @@ Another useful property of the paste event is the `DataTransfer` property. Since
  * data in the various types, like `text/html`, `text/plain`, `application/json` or `application/rtf`.
  * dropped or pasted [files](http://www.w3.org/TR/FileAPI/), so they can be read or uploaded.
 
-CKEditor use {@link CKEDITOR.plugins.clipboard#dataTransfer dataTransfer facade} to hide implementation differences between browsers. Thanks to this facade you can {@link CKEDITOR.plugins.clipboard.dataTransfer#setData set} and {@link CKEDITOR.plugins.clipboard.dataTransfer#getData get} data of any type. See the example of the dataTransfer facade usage in the SDK.
-
-**TODO:** link to the DataTransfer SDK sample
+Limited browser capabilities related to clipboard support required implementing a rich {@link CKEDITOR.plugins.clipboard#dataTransfer facade} for this feature which partially works as a polyfill. It allows to achieve results which are not possible normally. For instance, it is possible to {@link CKEDITOR.plugins.clipboard.dataTransfer#setData set} and {@link CKEDITOR.plugins.clipboard.dataTransfer#getData get} various data types (while all versions of Internet Explorer support only text) and to know what was a source of the data that was dropped.
 
 If the browser support clipboard API it is also very simple to recognize pasted data type. If the `dataValue` is empty this means that the `paste` event contains data in the `dataTransfer` object (paste event will not be fire with empty `dataValue` and `dataTransfer`). If in the `paste` event whit the priority `1` editor check if the `text/html` data are available in the `dataTransfer` object and if so, copy this data to `dataValue` and set type to be `html`. If not it checks `text/plain`. If both types are empty it means that `dataTransfer` contains files or data in some other format. If the `dataValue` property is not set in any listener {@link editor.insertHtml} will not be called.
 
@@ -74,15 +72,97 @@ If you want add support to same data format the paste even is the best place to 
 		}
 	} );
 
-This is also the why how files are handled. To learn more about pasting and dropping files see [file handing guide](#!/guide/dev_files).
+This is also the way how files are handled. To learn more about pasting and dropping files see [file handing guide](#!/guide/dev_files).
+
+{@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer} has also a method to check what was the {@link CKEDITOR.plugins.clipboard.dataTransfer#getTransferType getTransferType}: if the data comes from the same editor, anther editor or external source. This recognition works perfectly file for drag and drop, but for copy and paste, because of browsers limitations, we are not able to recognize the source in every case, so we assume that it is {@link CKEDITOR#DATA_TRANSFER_EXTERNAL external}.
 
 ## Copy, Cut and Paste
 
-### Paste bin
+CKEditor is doing its best to paste proper, filtered data when used paste content into the editor. CKEditor use hybrid solution try to get data using clipboard API and the paste bin.
 
 ### Clipboard API
 
+It would be perfect to get data using Clipboard API, so simple `paste` which get [clipboardData](http://www.w3.org/TR/clipboard-apis/#widl-ClipboardEvent-clipboardData) listener would be enough. It would be good to try to get [clipboardData](http://www.w3.org/TR/clipboard-apis/#widl-ClipboardEvent-clipboardData) and use backup solution if there are no data. Unfortunately, at the moment of writing this article we know about the cases on all browsers, expect Firefox, which was fixed recently, where data are pasted using native paste, but are not available through the browsers Clipboard API.
+If data are available throw [clipboard API](http://www.w3.org/TR/clipboard-apis/) CKEditor fires {@link CKEDITOR.editor.paste paste event} with this data as a {@link CKEDITOR.plugins.clipboard.dataTransfer dataTransfer} and empty `dataValue`.
+If it is not possible, CKEditor use paste bin.
+
+### Paste bin
+
+Paste bin is the CKEditor mechanism to capture native paste. The mechanism works the way described below.
+
+ * CKEditor for the moment before the paste move the selection the the special container.
+ * Let browser to do the native paste.
+ * Get the content of this container.
+ * Remove container.
+ * Fire {@link CKEDITOR.editor.paste paste event} with captured data a `dataValue`.
+
+It is vary tricky to prevent browser blinking and scrolling. Up to version 4.5 this was the main mechanism for pasting. Now this is backup solution when clipboard API is not supported properly.
+
+### Cut and Copy
+
+Since 4.5 version CKEditor has a custom cut and copy handling what means that it copy or cut selected HTML using {@link CKEDITOR.editor#getSelectedHtml} and {@link CKEDITOR.editor#extractSelectedHtml extractSelectedHtml} and put them to {@link CKEDITOR.plugins.clipboard.dataTransfer dataTransfer} object as `text/html` data. Using these methods we get the same, focused on what used expected, content. To avoid the security alert on Internet Explorer when you copy using keyboard shortcuts we do not use custom methods there and we let browser get or extract selected data.
+
 ## Drag and Drop
 
-**TODO:** Dragstart, Dragend, Drop events
+Since 4.5 version CKEditor handle manually dragging and dropping. CKEditor use native browser drag and drop mechanism and listen on `dragstart`, `dragend`, `dragover` and `drop` events on the editable area and fire editors events:
 
+ * {@link CKEDITOR.editor#dragstart},
+ * {@link CKEDITOR.editor#dragend},
+ * {@link CKEDITOR.editor#drop}.
+
+In this events listeners the whole drag and drop happens so CKEditor get dragged content, find the range at the drop position and fire the {@link CKEDITOR.editor.paste paste event}. Note that this events does not need to be, based on native events. For example drag and drop of the block widgets use [lineutils](http://ckeditor.com/addon/lineutils) and listen on mouse events, but fire {@link CKEDITOR.editor#dragstart}, {@link CKEDITOR.editor#dragend} and {@link CKEDITOR.editor#drop} event so the drag and drop is handled by the same code.
+
+Note that {@link CKEDITOR.editor#drop drop event} will fired {@link CKEDITOR.editor.paste paste event} which is the one which should be used for data transformation. Drag and drop event are designed for passing some information from the drag to drop or setting proper drop position.
+
+An interesting example of this feature is how drag and drop of [widgets](#!/guide/dev_widgets) is implemented:
+
+	editor.on( 'dragstart', function( evt ) {
+		var target = evt.data.target;
+
+		if ( WidgetRepository.isDomDragHandler( target ) ) {
+			evt.data.dataTransfer.setData( 'cke/widget-id', widget.id );
+		}
+	} );
+
+As you can see &ndash; when user drags a widget its id is stored in the data under the `cke/widget-id` type. This allows to find and handle that specific widget instance on {@link CKEDITOR.editor#paste drop}.
+
+Another example can be found in the ["Drag and Drop Integration" sample](http://sdk.ckeditor.com/samples/draganddrop.html) where the facade is used to store an object with contact details that are dragged into editor from outside of it. At the same time, other data types are set to correctly handle dropping this item in other places than editor (e.g. in a textarea).
+
+	// When an item in the contact list is dragged, copy its data into drag and drop data transfer.
+	// This data is later read by editor#paste listener in the hcard plugin defined above.
+	CKEDITOR.document.getById( 'contactList' ).on( 'dragstart', function( evt ) {
+		// ...
+
+		// Initialization of CKEditor's data transfer facade is a necessary step to extend and unify
+		// native browser capabilities. For instance, Internet Explorer does not support any other data type than 'text'.
+		// Note: evt is and instance of CKEDITOR.dom.event, not a native event.
+		CKEDITOR.plugins.clipboard.initDragDataTransfer( evt );
+
+		var dataTransfer = evt.data.dataTransfer,
+			target = evt.data.getTarget();
+
+		// We pass an object with contact details. Based on it, the editor#paste listener in the hcard plugin
+		// will create HTML to be inserted into editor. We could set text/html here as well, but:
+		// * it is more elegant and logical solution that this logic is kept in the hcard plugin,
+		// * we do not know now where the content will be dropped and the HTML to be inserted
+		// might vary depend on the drop target.
+		dataTransfer.setData( 'contact', CONTACTS[ target.data( 'contact' ) ] );
+	} );
+
+	// ....
+
+	// Handle dropping a contact by transforming contact object into an HTML.
+	// Note: all pasted and dropped content is handled in one event - editor#paste.
+	editor.on( 'paste', function( evt ) {
+		var contact = evt.data.dataTransfer.getData( 'contact' );
+		if ( !contact ) {
+			return;
+		}
+
+		evt.data.dataValue =
+			'<span class="h-card">' +
+				'<a href="mailto:' + contact.email + '" class="p-name u-email">' + contact.name + '</a>' +
+				' ' +
+				'<span class="p-tel">(' + contact.tel + ')</span>' +
+			'</span>';
+	} );

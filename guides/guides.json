@@ -346,7 +346,7 @@
 									{
 										"name": "dev_drop_paste",
 										"url": "dev/features/drop_paste",
-										"title": "Dropping and pasting",
+										"title": "Dropping and Pasting",
 										"description": "Dropping and pasting content (text, html, files, images) into the editor.",
 										"meta_description": "Dropping and pasting content (text, html, files, images) into the editor.",
 										"meta_keywords": "ckeditor, editor, wysiwyg, drag, drop, paste, insert, image, file"

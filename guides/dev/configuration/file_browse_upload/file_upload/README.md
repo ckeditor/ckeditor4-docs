@@ -28,7 +28,7 @@ The sample below shows basic configuration code that can be used to configure pa
 <p class="tip">As a fallback solution if <code>uploadUrl</code> is not set and <code>filebrowserUploadUrl</code> is provided for the <strong>File Browser</strong> plugin,
 then the Upload Image plugin will try to use <code>filebrowserUploadUrl</code> instead and send there dragged and pasted images.</p>
 
-It is also possible to set the specific URL for the specific plugin. For example if you want to use [Upload Image](http://ckeditor.com/addon/uploadimage) you can set {@link CKEDITOR.config#uploadImageUrl uploadImagedUrl} which will be used instead of {@link CKEDITOR.config#uploadUrl uploadUrl}.
+It is also possible to set the specific URL for the specific plugin. For example if you want to use [Upload Image](http://ckeditor.com/addon/uploadimage) you can set `config.uploadImagedUrl` which will be used instead of {@link CKEDITOR.config#uploadUrl uploadUrl}.
 
 **Example** &mdash; Setting Up Image upload plugin
 
@@ -49,7 +49,7 @@ The [Upload Image](http://ckeditor.com/addon/uploadimage) plugin is using differ
 
 The default request for file uploads is a file as a form data with the 'upload' field.
 
-#### Response: File uploaded successfully
+#### Response: File Uploaded Successfully
 
 When file is uploaded successfully then JSON response with the following entries is expected:
 
@@ -94,13 +94,13 @@ When file could not be uploaded then JSON response with the following entries is
 }
 ```
 
-### Editor side configuration
+### Editor Side Configuration
 
 Alternatively to changing server API you can change the editors API, so overwrite the way editor build requests and handle responses. You can do it using {@link CKEDITOR.editor#fileUploadRequest} and {@link CKEDITOR.editor#fileUploadResponse} events.
 
 #### Request
 
-Using {@link CKEDITOR.editor#fileUploadRequest} event you can change how editor request works.  If the event is not {@link CKEDITOR.eventInfo@stop stopped} or {@link CKEDITOR.eventInfo@cancel canceled}, the default request will be sent.
+Using {@link CKEDITOR.editor#fileUploadRequest} event you can change how editor request works.  If the event is not {@link CKEDITOR.eventInfo#stop stopped} or {@link CKEDITOR.eventInfo#cancel canceled}, the default request will be sent.
 
 If you want to change this behavior you can add a custom listener with the default priority and {@link CKEDITOR.eventInfo#stop stop} the event which will prevent the default behavior. For example to send the data directly (without a form):
 

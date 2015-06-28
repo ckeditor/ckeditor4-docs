@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 One of the CKEditor features is that it takes care over the input data you paste or drop into the editor. The [clipboard](http://ckeditor.com/addon/clipboard) plugin which is included in every preset implements a custom input content handling, what means that the editor will handle pasted and, since version 4.5, dropped content.
 
-All pasted and dropped content is passed through the {@link CKEDITOR.editor#paste} event what makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like [Advanced Content Filter and paste filter](), [Paste From Word filter]() or [support for uploading dropped files]().
+All pasted and dropped content is passed through the {@link CKEDITOR.editor#paste} event what makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like [Advanced Content Filter and paste filter](#!/guide/dev_drop_paste-section-filtering), [Paste From Word filter](#!/guide/dev_drop_paste-section-paste-from-word) or [support for uploading dropped files](#!/guide/dev_drop_paste-section-file-upload).
 
 Note that browsers support clipboard operations differently and because of that the behavior of the drag and drop or copy and paste may be slightly different in different browsers.
 
@@ -40,7 +40,7 @@ as well as three other options:
 
 * {@link CKEDITOR.config#pasteFromWordNumberedHeadingToList},
 * {@link CKEDITOR.config#pasteFromWordCleanupFile},
-* {@link CKEDITOR.config#pasteFromPromptCleanup}.
+* {@link CKEDITOR.config#pasteFromWordPromptCleanup}.
 
 ## File Upload
 
@@ -48,10 +48,10 @@ Another feature related to the clipboard is uploading dropped or pasted files or
 
 Note that this feature is limited because of browsers and operating systems limitations. File API is not supported in Internet Explorer 9 and below so dropped files can not be handled. Support for pasting whole files and fragments of files (e.g. images) varies between browsers and operating systems.
 
-See the [working "Uploading Dropped and Pasted Images" sample](http://sdk.ckeditor.com/samples/imageupload.html).
+See the [working "Uploading Dropped and Pasted Images" sample](http://sdk.ckeditor.com/samples/fileupload.html#uploading-dropped-and-pasted-images).
 
 Read more about [enabling support for uploading dropped and pasted files](#!/guide/dev_file_upload).
 
 <video width="550" height="391" controls>
-  <source src="guides/dev_drop_paste/upload.mp4" type="video/mp4">
+	<source src="guides/dev_drop_paste/upload.mp4" type="video/mp4" />
 </video>

@@ -50,9 +50,15 @@ Note that `dataValue` is a JavaScript string with an HTML what means that it may
 
 CKEditor performs its input data transformations (like cleanup, type recognition, formating document form word, files uploading) the same way, using paste listeners.
 
-The `evt.data.dataValue` is the most important property, this is the HTML which will be passed to the {@link CKEDITOR.editor#method-insertHtml} method in the last {@link CKEDITOR.editor#paste paste} listener. But the {@link CKEDITOR.editor#paste paste event} contains more useful properties like `evt.data.method` (`'drop'` or `'paste'`) or `evt.data.type` (`'auto'`, `'html'` or `'text'`).
+The `evt.data.dataValue` is the most important property, this is the HTML which will be passed to the {@link CKEDITOR.editor#method-insertHtml} method in the last {@link CKEDITOR.editor#paste paste} listener.
 
-The `evt.data.type`'s role is to tell the editor what was the original type of the data being pasted. It affects how this content is later handled upon insertion. If you pasted a plain text into a paragraph it should inherit that paragraph's formating. So if the paragraph was red and bold the text should be red and bold too:
+But the {@link CKEDITOR.editor#paste paste event} contains more useful properties like `evt.data.method` (`'drop'` or `'paste'`) or `evt.data.type` (`'auto'`, `'html'` or `'text'`). Refer to the {@link CKEDITOR.editor#paste} documentation to learn about all available properties.
+
+### Content Type
+
+The `evt.data.type`'s role is to tell the editor what was the original type of the data being pasted. It affects how this content is later handled upon insertion.
+
+For instance, if you pasted a plain text into a paragraph it should inherit that paragraph's formating. So if the paragraph was red and bold the text should be red and bold too:
 
 	<p><span style="color:#FF0000"><strong>Lorem ^ ipsum</strong></span></p>
 
@@ -60,7 +66,7 @@ The `evt.data.type`'s role is to tell the editor what was the original type of t
 
 	<p><span style="color:#FF0000"><strong>Lorem foo ipsum</strong></span></p>
 
-But if the content that was pasted was an HTML, then the formatting that it originally had should be preserved:
+But if the content that was pasted was an HTML, then the formatting that it originally had should be preserved, even though the `dataValue` may not contain any obvious HTML tags:
 
 	<p><span style="color:#FF0000"><strong>Lorem ^ ipsum</strong></span></p>
 
@@ -70,11 +76,13 @@ But if the content that was pasted was an HTML, then the formatting that it orig
 	foo
 	<span style="color:#FF0000"><strong> ipsum</strong></span></p>
 
-Note that in both cases pasted `dataValue` is an HTML string, for example `'text'` data may contain line breaks (`<br>`) and paragraphs. We call it an "HTMLified plain text".
+Note that in both cases pasted `dataValue` is an HTML string. If a plain text is pasted and `type` is set to `'text'`, then `dataValue` contains am "HTMLified" version of that plain text. It means that line breaks are replaced with `<br>`, double ones create separate paragraphs, etc.
 
-In many cases everything what editor gets from the clipboard is an HTML string (see the "Paste bin" section below) so CKEditor is not able to guess what was the type of the pasted content. For instance, when `dataValue` equals `'foo'`, then was it copied from a website or from a text editor? At the time of writing this guide it is only possible to recognize the real type on Chrome, Firefox and Opera, so on other browsers the type depends on {@link CKEDITOR.config#clipboard_defaultContentType} (so it is `'html'`).
+### Content Type Recognition
 
-This recognition is also done in the {@CKEDITOR.editor#paste paste event} lister, with a priority 6, so listeners with higher priorities may see the `type == 'auto'` what means that the type is not yet recognized.
+In many cases everything what editor gets from the clipboard is an HTML string (see the "Paste bin" section below) so CKEditor is not able to guess what was the type of the pasted content. For instance, when `dataValue` equals `'foo'`, then was it copied from a website or from a text editor? At the time of writing this guide it is only possible to recognize the real type on Chrome, Firefox and Opera, so on other browsers the type depends on {@link CKEDITOR.config#clipboard_defaultContentType} (hence, most of the time it is `'html'` regardless of what was pasted).
+
+This recognition is also done in the {@link CKEDITOR.editor#paste paste event} lister, with a priority 6, so listeners with higher priorities may see the `type == 'auto'` what means that the type is not yet recognized.
 
 ## Data Transfer
 
@@ -83,7 +91,7 @@ Another useful property of the paste event is the `evt.data.dataTransfer` proper
 * data in various types, like `text/html`, `text/plain`, `application/json` or `application/rtf`.
 * dropped or pasted [files](http://www.w3.org/TR/FileAPI/), so they can be read and uploaded.
 
-Limited browser capabilities related to clipboard support required implementing a rich {@link CKEDITOR.plugins.clipboard.dataTransfer facade} for this feature which partially works as a polyfill. It allows to achieve results which are not possible normally. For instance, it is possible to {@link CKEDITOR.plugins.clipboard.dataTransfer#setData set} and {@link CKEDITOR.plugins.clipboard.dataTransfer#getData get} various data types (while all versions of Internet Explorer [support only `Text` and `URL`](https://msdn.microsoft.com/en-us/library/ms536744(v=vs.85).aspx)) and to know what was a source of the data that was dropped.
+Limited browser capabilities related to clipboard support required implementing a rich {@link CKEDITOR.plugins.clipboard.dataTransfer facade} for this feature which partially works as a polyfill. It allows to achieve results which are not possible normally. For instance, it is possible to {@link CKEDITOR.plugins.clipboard.dataTransfer#setData set} and {@link CKEDITOR.plugins.clipboard.dataTransfer#getData get} various data types (while all versions of Internet Explorer [support only `Text` and `URL`](http://bit.ly/1HrSxlJ)) and to know what was a source of the data that was dropped.
 
 ### Handling Various Data Types with Clipboard API
 

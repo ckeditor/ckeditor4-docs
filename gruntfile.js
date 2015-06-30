@@ -12,7 +12,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'default', [ 'jsduck:docs', 'copy:source' ] );
 
 	grunt.initConfig( {
-		CKEDITOR_DEV: getCKEditorPath(),
+		path: grunt.option( 'path' ) || getCKEditorPath(),
 
 		copy: {
 			source: {
@@ -39,10 +39,10 @@ module.exports = function( grunt ) {
 		jsduck: {
 			docs: {
 				src: [
-					'<%= CKEDITOR_DEV %>/core',
-					'<%= CKEDITOR_DEV %>/plugins',
-					'<%= CKEDITOR_DEV %>/adapters',
-					'<%= CKEDITOR_DEV %>/ckeditor.js',
+					'<%= path %>/core',
+					'<%= path %>/plugins',
+					'<%= path %>/adapters',
+					'<%= path %>/ckeditor.js',
 
 					'repos/ckeditor-plugin-scayt',
 					'repos/ckeditor-plugin-wsc'
@@ -58,15 +58,22 @@ module.exports = function( grunt ) {
 					tags: 'source/customs.rb',
 					warnings: '-nodoc',
 					welcome: 'source/welcome.html',
-					guides: 'guides/guides.json',
+					guides: grunt.option( 'guides' ) || 'guides/guides.json',
 					output: 'build',
-					seo: true,
 					external: 'Blob,File,FileReader,DocumentFragment',
-					exclude: '../ckeditor-dev/plugins/codesnippet/lib'
+					exclude: '<%= path %>/plugins/codesnippet/lib'
 				}
 			}
 		}
 	} );
+
+	// SEO is on by default, unless disabled via command–line `--seo false`.
+	// This option is set here because JSDuck does not simply accept `seo: false` in config.
+	if ( grunt.option( 'seo' ) !== false ) {
+		grunt.config( 'jsduck.docs.options.seo', true );
+	}
+
+	grunt.log.writeln(JSON.stringify(grunt.config(), null, 2));
 
 	function getCKEditorPath() {
 		grunt.log.writeln( 'CKEditor Documentation Builder v' + grunt.file.readJSON( 'package.json' ).version + '.' );

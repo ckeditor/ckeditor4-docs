@@ -677,18 +677,18 @@
 						"meta_description": "Introduction to CKEditor Widgets.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, widgets, widget, plugin, plugins"
 					},
-					{
-						"name": "dev_files",
-						"url": "dev/deep_dive/files",
-						"title": "Files Handling",
-						"description": "Introduction to CKEditor Files Handling and Files Tools.",
-						"meta_description": "Introduction to CKEditor Files Handling and Files Tools.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, file, files, tools, clipboard"
-					},
+//					{
+//						"name": "dev_files",
+//						"url": "dev/deep_dive/files",
+//						"title": "Files Handling",
+//						"description": "Introduction to CKEditor Files Handling and Files Tools.",
+//						"meta_description": "Introduction to CKEditor Files Handling and Files Tools.",
+//						"meta_keywords": "ckeditor, editor, wysiwyg, file, files, tools, clipboard"
+//					},
 					{
 						"name": "dev_clipboard",
 						"url": "dev/deep_dive/clipboard",
-						"title": "Clipboard",
+						"title": "Clipboard Integration",
 						"description": "CKEditor Clipboard Deep Dive.",
 						"meta_description": "CKEditor Clipboard Deep Dive.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, clipboard, dataTransfer, clipboardData, files, paste, drop"

@@ -73,8 +73,6 @@ module.exports = function( grunt ) {
 		grunt.config( 'jsduck.docs.options.seo', true );
 	}
 
-	grunt.log.writeln(JSON.stringify(grunt.config(), null, 2));
-
 	function getCKEditorPath() {
 		grunt.log.writeln( 'CKEditor Documentation Builder v' + grunt.file.readJSON( 'package.json' ).version + '.' );
 

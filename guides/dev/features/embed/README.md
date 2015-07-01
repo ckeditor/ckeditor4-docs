@@ -53,4 +53,4 @@ Both plugins utilize the {@link CKEDITOR.plugins.embedBase#createWidgetBaseDefin
 
 ## Embedding Media Demo
 
-See the [working "Embedding Media Resources with oEmbed" sample](http://sdk.ckeditor.com/samples/embeddingmedia.html) that showcases the Media Embed and Auto Embed plugins.
+See the [working "Embedding Media Resources with oEmbed" sample](http://sdk.ckeditor.com/samples/mediaembed.html) that showcases the Media Embed and Auto Embed plugins.

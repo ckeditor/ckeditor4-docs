@@ -34,6 +34,8 @@ You should see a result similar to:
 
 <img src="guides/skin_sdk_compatibility_with_ckeditor_4_5/notifications.png" alt="Notifications example" width="1077" height="412">
 
+**Note:** Notifications use the same close icon as dialogs do. It may not fix in the custom skin.
+
 ## Support For Dialog Busy State
 
 You can add a support for displaying that a dialog is in a busy state in these steps.

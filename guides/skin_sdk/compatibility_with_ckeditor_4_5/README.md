@@ -8,7 +8,7 @@ It is highly recommended to bring a compatibility for CKEditor 4.5 to your skin 
 
 You can add a support for notifications to your skin in these three easy steps.
 
-1. Add the [`notification.css`](https://github.com/ckeditor/ckeditor-dev/blob/master/skins/moono/notification.css) file from the [Moono skin](http://ckeditor.com/addon/moono) to your skin's directory.
+1. Add the [notification.css](https://github.com/ckeditor/ckeditor-dev/blob/master/skins/moono/notification.css) file from the [Moono skin](http://ckeditor.com/addon/moono) to your skin's directory.
 
 2. In the `editor.css` file of your skin add the following line:
 

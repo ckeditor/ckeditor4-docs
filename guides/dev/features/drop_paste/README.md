@@ -44,7 +44,7 @@ as well as three other options:
 
 ## File Upload
 
-Another feature related to the clipboard is uploading dropped or pasted files or images. It lets you not only drop or paste files into the document, but also paste part of the image from the image processor. [Upload Widget](http://ckeditor.com/addon/uploadwidget), [File Tools](http://ckeditor.com/addon/filetools) and [Notification](http://ckeditor.com/addon/notification) plugins create a flexible API which let developer handle files the way they need. To learn more about these APIs check [notification](#!/guide/dev_notifications), [files](#!/guide/dev_files) and [clipboard](#!/guide/dev_clipboard) guides.
+Another feature related to the clipboard is uploading dropped or pasted files or images. It lets you not only drop or paste files into the document, but also paste part of the image from the image processor. [Upload Widget](http://ckeditor.com/addon/uploadwidget), [File Tools](http://ckeditor.com/addon/filetools) and [Notification](http://ckeditor.com/addon/notification) plugins create a flexible API which let developer handle files the way they need. To learn more about these APIs check the [notification](#!/guide/dev_notifications) and [clipboard](#!/guide/dev_clipboard) guides.
 
 Note that this feature is limited because of browsers and operating systems limitations. File API is not supported in Internet Explorer 9 and below so dropped files can not be handled. Support for pasting whole files and fragments of files (e.g. images) varies between browsers and operating systems.
 

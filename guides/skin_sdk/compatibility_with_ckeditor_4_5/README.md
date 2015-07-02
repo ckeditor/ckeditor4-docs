@@ -36,6 +36,8 @@ You should see a result similar to:
 
 **Note:** Notifications use the same close icon as dialogs do. It may not fix in the custom skin.
 
+**Note:** Because notifications use smart position you can not change their position using only CSS. To learn more check [notifications guide](http://docs.ckeditor.com/#!/guide/dev_notifications).
+
 ## Support For Dialog Busy State
 
 You can add a support for displaying that a dialog is in a busy state in these steps.

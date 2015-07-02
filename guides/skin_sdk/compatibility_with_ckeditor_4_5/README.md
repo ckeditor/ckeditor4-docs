@@ -32,8 +32,7 @@ To test it you will need to install the [Notification](http://ckeditor.com/addon
 	editor.showNotification( 'Task started!' );
 	editor.showNotification( 'Task aborted!', 'warning' );
 	editor.showNotification( 'Task completed!', 'success' );
-	var notification = editor.showNotification( 'Task in progress...', 'progress' );
-	notification.update( { progress: 0.75 } );
+	editor.showNotification( 'Task in progress...', 'progress', 0.75 );
 
 **Note:** If you see JavaScript alerts instead of notifications, then it means that you have not enabled the Notification plugin correctly.
 

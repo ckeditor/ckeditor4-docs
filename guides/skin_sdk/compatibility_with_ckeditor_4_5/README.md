@@ -16,12 +16,6 @@ You can add a support for notifications to your skin in these three easy steps.
 	@import url("notification.css");
 	```
 
-	just after:
-
-	```
-	@import url("presets.css");
-	```
-
 	See [example](https://github.com/ckeditor/ckeditor-dev/blob/a513a923aeab1b388efbec2022af1f6d8403376a/skins/moono/editor.css#L47).
 
 3. Modify `notification.css` file to match your skin's styles.

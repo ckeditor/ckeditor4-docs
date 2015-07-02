@@ -28,7 +28,7 @@ The sample below shows basic configuration code that can be used to configure pa
 <p class="tip">As a fallback solution if <code>uploadUrl</code> is not set and <code>filebrowserUploadUrl</code> is provided for the <strong>File Browser</strong> plugin,
 then the Upload Image plugin will try to use <code>filebrowserUploadUrl</code> instead and send there dragged and pasted images.</p>
 
-It is also possible to set the specific URL for the specific plugin. For example if you want to use [Upload Image](http://ckeditor.com/addon/uploadimage) you can set `config.uploadImagedUrl` which will be used instead of {@link CKEDITOR.config#uploadUrl uploadUrl}.
+It is also possible to set the specific URL for the specific plugin. For example if you want to use [Upload Image](http://ckeditor.com/addon/uploadimage) you can set {@link CKEDITOR.config#imageUploadUrl imageUploadUrl} which will be used instead of {@link CKEDITOR.config#uploadUrl uploadUrl}.
 
 **Example** &mdash; Setting Up Image upload plugin
 

@@ -34,7 +34,7 @@ You should see a result similar to:
 
 <img src="guides/skin_sdk_compatibility_with_ckeditor_4_5/notifications.png" alt="Notifications example" width="1077" height="412">
 
-**Note:** Notifications use the same close icon as dialogs do. It may not fix in the custom skin.
+**Note:** Notifications use the same close icon as dialogs do. It may not fit in the custom skin.
 
 **Note:** Because notifications use smart position you can not change their position using only CSS. To learn more check [notifications guide](http://docs.ckeditor.com/#!/guide/dev_notifications).
 

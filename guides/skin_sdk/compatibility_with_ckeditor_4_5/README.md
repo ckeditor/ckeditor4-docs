@@ -2,7 +2,7 @@
 
 Two of the new features introduced in [CKEditor 4.5](http://ckeditor.com/blog/CKEditor-4.4-Released) require additional styles to be added to a skin's CSS. The two features are &ndash; [notifications](http://docs.ckeditor.com/#!/guide/dev_notifications) and [dialog busy state](http://docs.ckeditor.com/#!/api/CKEDITOR.dialog-method-setState)). Notifications do not work with an incompatible skin. Dialogs gracefully degrade from a spinner to a static hourglass.
 
-It is highly recommended to bring a compatibility for CKEditor 4.5 to your skin because both these new feature are an important part of CKEditor 4.5 release and will be used by many users.
+It is highly recommended to make your skin compatible with CKEditor 4.5 because both these new features are an important part of CKEditor 4.5 release and will be used by many users.
 
 ## Support For Notifications
 
@@ -20,7 +20,7 @@ You can add a support for notifications to your skin in these three easy steps.
 
 3. Modify `notification.css` file to match your skin's styles.
 
-To test it you will need to install the [Notification](http://ckeditor.com/addon/notification) plugin, or you can simply [download this package](http://ckeditor.com/builder/download/ee8ec0f757d5c15bbbb154f30151ea7c) that already contains this plugin and [install your skin in it](#!/guide/skin_sdk_setup). Then, open in your browser the `samples/index.html` file and call the following code to open few notifications:
+To test it, you will need to install the [Notification](http://ckeditor.com/addon/notification) plugin, or simply [download this package](http://ckeditor.com/builder/download/ee8ec0f757d5c15bbbb154f30151ea7c) which already contains this plugin and [install your skin in it](#!/guide/skin_sdk_setup). Then, open the `samples/index.html` file in your browser and call the following code to open few notifications:
 
 	var editor = CKEDITOR.instances.editor;
 	editor.showNotification( 'Task started!' );
@@ -33,10 +33,6 @@ To test it you will need to install the [Notification](http://ckeditor.com/addon
 You should see a result similar to:
 
 <img src="guides/skin_sdk_compatibility_with_ckeditor_4_5/notifications.png" alt="Notifications example" width="1077" height="412">
-
-**Note:** Notifications use the same close icon as dialogs do. It may not fit in the custom skin.
-
-**Note:** Because notifications use smart position you can not change their position using only CSS. To learn more check [notifications guide](http://docs.ckeditor.com/#!/guide/dev_notifications).
 
 ## Support For Dialog Busy State
 
@@ -103,7 +99,7 @@ You can add a support for displaying that a dialog is in a busy state in these s
 
 3. Adjust the added styles to make the modifications match your skin's styles.
 
-To test it open in your browser the `samples/index.html` file, then open some dialog (e.g. the Link dialog) and execute the following code in the console:
+To test it, open the `samples/index.html` file in your browser, then open some dialog (e.g. the Link dialog) and execute the following code in the console:
 
 	CKEDITOR.dialog.getCurrent().setState( CKEDITOR.DIALOG_STATE_BUSY );
 

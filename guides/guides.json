@@ -1074,6 +1074,14 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, customize, customization, customise, customisation, build, release"
 					}
 				]
+			},
+			{
+				"name": "skin_sdk_compatibility_with_ckeditor_4_5",
+				"url": "skin_sdk/compatibility_with_ckeditor_4_5",
+				"title": "Skin Compatibility with CKEditor 4.5",
+				"description": "How to bring a compatibility with CKEditor 4.5 to your skin.",
+				"meta_description": "How to bring a compatibility with CKEditor 4.5 to your skin.",
+				"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, notification, busy, dialog, compatibility"
 			}
 		]
 	}

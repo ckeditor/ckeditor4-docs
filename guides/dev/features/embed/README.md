@@ -37,6 +37,16 @@ This difference makes the Media Embed plugin perfect for systems where the embed
 
 Both widgets can be easily [configured](#!/api/CKEDITOR.config-cfg-embed_provider) to use another [oEmbed](http://www.oembed.com/) provider or custom services.
 
+## Adjusting the Default Content Provider
+
+The default configuration of the Media Embed and Semantic Media Embed plugins uses the public service provided by [Iframely](https://iframely.com/). This service is free for CKEditor users and goes through a dedicated embedding endpoint.
+
+Iframely can also be configured to be hosted on your server &mdash; you can read more about it in the ["Self-host Iframely APIs"](https://iframely.com/docs/host) article.
+
+<p class="tip">
+	The default configuration using the public Iframely service does not support SSL. If you need SSL support, you should either host Iframely locally on your server or use the public service through the <a href="http://iframe.ly">iframe.ly</a> domain with your own API key. 
+</p>
+
 ## Automatic Embedding on Paste
 
 If the optional [Auto Embed](http://ckeditor.com/addon/autoembed) plugin is enabled, pasting the resource URL directly into the editing area will result in embedding it. By default this feature is configured to work with the Media Embed and Semantic Media Embed plugins.

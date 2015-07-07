@@ -78,7 +78,7 @@ need to enable the Abbreviation context menu for each selected `<abbr>` element:
 		});
 	}
 
-By using the {@link CKEDITOR.menu.addListener addListener} method we will add an event listener function that will be called whenever the context menu is fired.
+By using the {@link CKEDITOR.menu#addListener addListener} method we will add an event listener function that will be called whenever the context menu is fired.
 
 At this point we just check if the current element, or any of its parents, is an `<abbr>`. If this is true, we simply return the menu item to activate (`abbrItem`) saying that it is enabled but not in the "selected state" (CKEDITOR.TRISTATE_OFF).
 

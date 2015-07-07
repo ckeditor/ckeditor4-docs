@@ -17,7 +17,7 @@ By default, browser native spell check functionality is disabled in the editor. 
 
 	config.disableNativeSpellChecker = false;
 
-After reloading the editor you should be able to see the spelling corrections underlined in your editor content. 
+After reloading the editor you should be able to see the spelling corrections underlined in your editor content.
 
 **Note**: If the [Context Menu](http://ckeditor.com/addon/contextmenu) plugin is enabled, it is necessary to hold the <kbd>Ctrl</kbd> key when right-clicking misspelled words to see their suggestions.
 
@@ -46,8 +46,8 @@ You can find them on the CKEDITOR.config page, starting from `scayt_` and `wsc_`
 <p class="tip">
 	The out-of-the-box spell checking functionality is ad-supported. If you want to remove the
 	ads, you can <a href="http://cksource.com/ckeditor/services#spellCheck">purchase a license here</a>.
-</dp>
+</p>
 
-## Spell Checking Demo 
+## Spell Checking Demo
 
 See the [working "Spell Checker and Spell Check As You Type" sample](http://sdk.ckeditor.com/samples/spellchecker.html) that showcases both Spell Check As You Type and spell checking in a dialog window.

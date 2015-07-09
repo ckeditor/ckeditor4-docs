@@ -71,11 +71,9 @@ By default notifications are displayed at the top center of the editable area. H
 
 Notifications can also hide after a timeout.
 
-* By default, `info` and `success` notifications hide after 5 seconds &mdash; this can be changed using the {@link CKEDITOR.config#notification_duration} option.
+* By default, `info` and `success` notifications hide after 5 seconds &mdash; this can be changed using the {@link CKEDITOR.config#notification_duration} option. The notification duration can also be changed on an instance basis.
 * The `warning` notifications need to be hidden manually.
 * The `progress` notifications are also not hidden automatically. They wait for the next progress update and to be finally changed to `success` or `warning`.
-
-The {@link CKEDITOR.config#notification_duration notification duration} can also be changed on an instance basis.
 
 The user can always hide notifications manually by using the `X` button or the <kbd>Esc</kbd> key.
 

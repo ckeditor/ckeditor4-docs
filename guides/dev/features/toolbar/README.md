@@ -3,7 +3,7 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Toolbar Customization
+# Toolbar Configuration
 
 While CKEditor is a full-featured WYSIWYG editor, not all of its options
 may be needed in all cases. Because of this, toolbar customization is
@@ -20,24 +20,50 @@ one of the most common requirements.
 
 There are several approaches to CKEditor toolbar configuration to choose from:
 
- * [Using the Toolbar Configurator](#!/guide/dev_toolbar-section-toolbar-configurator)
- * [Toolbar Groups Configuration](#!/guide/dev_toolbar-section-toolbar-groups-configuration)
- * ["Item by Item" Configuration](#!/guide/dev_toolbar-section-%22item-by-item%22-configuration)
+ * [Using the toolbar configurator](#!/guide/dev_toolbar-section-toolbar-configurator) &mdash; the most recommended and easy to use solution.
+ * [Toolbar groups configuration](#!/guide/dev_toolbar-section-toolbar-groups-configuration)
+ * ["Item by item" configuration](#!/guide/dev_toolbar-section-%22item-by-item%22-configuration)
 
 ## Toolbar Configurator
 
 <p class="requirements">
-	Toolbar Configurator will be available in each official CKEditor installation package starting from <strong>CKEditor 4.5</strong>. 
+	Toolbar configurator was introduced in <strong>CKEditor 4.5</strong> and is be available in each official CKEditor installation package. 
 </p>
 
 The new toolbar utility, which you can find in your CKEditor distribution package, makes configuring an accessible toolbar a breeze.
 It is the **most recommended way to set up the editor toolbar**.
 
-You can use it to change the order of toolbar groups, select and deselect buttons, or break the toolbar into rows. Your current configuration is previewed live on the attached editor instance so you get instant feedback regarding the look and feel of your toolbar. When you are happy with your settings just click the button to get the source code to paste into your [editor configuration](#!/guide/dev_configuration).
+You can use it to change the order of toolbar groups, select and deselect buttons, or break the toolbar into rows. Your current configuration is previewed live in the attached editor instance so you get instant feedback regarding the look and feel of your toolbar. When you are happy with your settings you can just copy the generated source code to paste into your [editor configuration](#!/guide/dev_configuration).
+
+To open the toolbar configurator, go to the `/samples/` folder of your CKEditor installation and open the `index.html` file in your browser. You should be able to see a working CKEditor sample which confirms that the installation succeeded.
+
+Click the **Toolbar Configurator** button in the top right-hand corner of the sample page to proceed to editing your toolbar.
+
+{@img ckeditor-4.5-sample.png New CKEditor 4.5 sample with Toolbar Configurator button}
+
+There are two types of toolbar configurator available: the **basic**, more visual one and the **advanced** one. The editor shown in the toolbar configurator contains all the features and buttons available in a particular CKEditor build.
+
+### Basic Toolbar Configurator
+
+The basic toolbar configurator uses the "[toolbar groups](#!/guide/dev_toolbar-section-toolbar-groups-configuration)" approach which is the recommended way to arrange the editor toolbar. You can modify the order of the toolbar groups by clicking the Up and Down arrows and toggle button visibility by selecting and deselecting the checkboxes. Use the "Add row separator" button to create a new toolbar row.
+
+{@img toolbar_configurator_basic.png CKEditor 4.5 basic toolbar configurator}
+
+When you are happy with your toolbar, click the "Get toolbar config" button to display the generated toolbar configuration. Add your new toolbar code to your [editor configuration](#!/guide/dev_configuration) &mdash; if you have already changed some other configuration options, do remember to merge both configurations. Last but not least, **clear your browser cache** after any configuration change!
+
+### Advanced Toolbar Configurator
+
+The basic, more visual toolbar configurator is based on the "toolbar groups" concept. However, if you would like to create a completely custom toolbar with an "[item by item](#!/guide/dev_toolbar-section-%22item-by-item%22-configuration)" configuration, and precisely define the visibility and position of each toolbar button, you can achieve this with the advanced toolbar configurator.
+
+{@img toolbar_configurator_advanced.png CKEditor 4.5 advanced toolbar configurator}
+
+In this case you start with a CKEditor instance and a code editor with current toolbar configuration. You can manually edit the toolbar code in the code editor and the toolbar preview will be updated live as you type. Unused toolbar items available in your editor configuration are listed on the right to make it easier to add them back should you wish to do so.
+
+When you are happy with your toolbar, copy the modified toolbar configuration from the code editor. Add your new toolbar code to your [editor configuration](#!/guide/dev_configuration) &mdash; if you have already changed some other configuration options, do remember to merge both configurations. Last but not least, **clear your browser cache** after any configuration change!
 
 ## Toolbar Groups Configuration
 
-**Note:** This method requires manual crafting of the toolbar configuration code and is recommended to more advanced users.
+**Note:** This approach is used in the [basic mode of the toolbar configurator](#!/guide/dev_toolbar-section-basic-toolbar-configurator), which is a much more recommended method to customize the editor toolbar. If you do not want to use the toolbar configurator, this method requires manual crafting of the toolbar configuration code and is recommended to more advanced users.
 
 CKEditor 4 introduced a new concept for toolbar organization which is based on "grouping" instead of the traditional "item by item positioning" way.
 
@@ -84,7 +110,7 @@ The most evident problem with grouping configuration is that it is not possible 
 
 ## "Item by Item" Configuration
 
-**Note:** This method requires manual crafting of the toolbar configuration code and is recommended to more advanced users.
+**Note:** This approach is used in the [advanced mode of the toolbar configurator](#!/guide/dev_toolbar-section-advanced-toolbar-configurator), which is a much more recommended method to customize the editor toolbar. If you do not want to use the toolbar configurator, this method requires manual crafting of the toolbar configuration code and is recommended to more advanced users.
 
 Other than the grouping configuration, it is also possible to have more control over every single element in the toolbar by defining their precise position. That is done by configuring a "toolbar definition".
 

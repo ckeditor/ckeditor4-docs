@@ -472,11 +472,11 @@
 								"items": [
 									{
 										"name": "dev_toolbar",
-										"url": "dev/configuration/toolbar",
+										"url": "dev/features/toolbar",
 										"title": "Toolbar Configuration",
 										"description": "How to configure CKEditor toolbar.",
 										"meta_description": "How to configure CKEditor toolbar.",
-										"meta_keywords": "ckeditor, editor, wysiwyg, toolbar, button, buttons, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
+										"meta_keywords": "ckeditor, editor, wysiwyg, toolbar, button, buttons, configurator, basic, advanced, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 									},
 									{
 										"name": "dev_toolbarlocation",

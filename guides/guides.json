@@ -366,7 +366,7 @@
 									},
 									{
 										"name": "dev_styles",
-										"url": "dev/configuration/styles",
+										"url": "dev/features/styles",
 										"title": "Styles Drop-down",
 										"description": "Applying styles to editor content and using Stylesheet Parser plugin.",
 										"meta_description": "Applying styles to editor content and using Stylesheet Parser plugin.",
@@ -395,7 +395,7 @@
 								"items": [
 									{
 										"name": "dev_spellcheck",
-										"url": "dev/configuration/spellcheck",
+										"url": "dev/features/spellcheck",
 										"title": "Spell Checking",
 										"description": "Using Spell Check dialog window and Spell Check As You Type (SCAYT).",
 										"meta_description": "Using Spell Check dialog window and Spell Check As You Type (SCAYT).",
@@ -522,7 +522,7 @@
 								"items": [
 									{
 										"name": "dev_output_format",
-										"url": "dev/configuration/output_format",
+										"url": "dev/features/output_format",
 										"title": "HTML Output Formatting",
 										"description": "How to configure CKEditor output formatting.",
 										"meta_description": "How to configure CKEditor output formatting.",

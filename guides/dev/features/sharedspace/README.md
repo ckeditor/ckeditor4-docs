@@ -61,4 +61,8 @@ See the [working "Shared Toolbar and Bottom Bar" sample](http://sdk.ckeditor.com
 
 ## Related Features
 
-If you are looking for an alternative method to change the editor user interface, see the [Toolbar Location](#!/guide/dev_toolbarlocation) feature that lets you customize the toolbar position within the editor user interface.
+Refer to the following resources for more information about editor toolbar:
+
+ * The [Toolbar Configuration](#!/guide/dev_toolbar) article explains how to set up the editor toolbar using the toolbar configurator (CKEditor 4.5+).
+ * The [Understanding CKEditor Toolbar Concepts](#!/guide/dev_toolbarconcepts) article explains the basic concepts behind the editor toolbar.
+ * The [Toolbar Location](#!/guide/dev_toolbarlocation) feature lets you change the toolbar position in classic editor.

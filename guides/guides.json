@@ -485,6 +485,14 @@
 										"description": "Adjusting editor toolbar location.",
 										"meta_description": "Adjusting editor toolbar location.",
 										"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, location, position, buttons, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
+									},
+									{
+										"name": "dev_toolbarconcepts",
+										"url": "dev/features/toolbarconcepts",
+										"title": "Toolbar Concepts",
+										"description": "Understanding CKEditor toolbar concepts.",
+										"meta_description": "Understanding CKEditor toolbar concepts.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, buttons, groups, items, accessibility, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change"
 									}
 								]
 							},

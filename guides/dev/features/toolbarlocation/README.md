@@ -27,5 +27,6 @@ See the [working "Toolbar Location Adjustment" sample](http://sdk.ckeditor.com/s
 
 Refer to the following resources for more information about the editor toolbar:
 
- * The [Toolbar Configuration](#!/guide/dev_toolbar) article explains how to configure the editor toolbar.
+ * The [Toolbar Configuration](#!/guide/dev_toolbar) article explains how to set up the editor toolbar using the toolbar configurator (CKEditor 4.5+).
+ * The [Understanding CKEditor Toolbar Concepts](#!/guide/dev_toolbarconcepts) article explains the basic concepts behind the editor toolbar.
  * The [Shared Toolbar and Bottom Bar](#!/guide/dev_sharedspace) feature lets you place the toolbar in a designated page element and share it among multiple editor instances used on one page.

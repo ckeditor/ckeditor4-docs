@@ -82,4 +82,4 @@ Go ahead and play a bit more with the sample; try to change your configuration a
 1. Visit the [CKEditor SDK](http://sdk.ckeditor.com) to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.
 1. Browse the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) for some additional plugins or skins.
 1. Use [CKBuilder](http://ckeditor.com/builder) to create your custom CKEditor build.
-1. Browse the [Developer's Guide](#!/guide) for some further ideas on what to do with CKEditor and join the CKEditor community at [Stack Overflow](http://stackoverflow.com/questions/tagged/ckeditor) to discuss all things CKEditor with fellow developers!
+1. Browse the [Developer's Guide](#!/guide) for some further ideas on what to do with CKEditor and join the CKEditor community at [Stack Overflow](http://stackoverflow.com/questions/tagged/ckeditors) to discuss all things CKEditor with fellow developers!

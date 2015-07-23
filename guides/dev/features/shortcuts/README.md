@@ -44,7 +44,6 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 * <kbd>Shift+Ctrl+4</kbd> &ndash; Enables enetring content (by adding a new paragraph) after a problematic element such as an image, table or `<div>` element that starts or ends a document, list, or even adjacent horizontal lines.
 * <kbd>Backspace</kbd>, <kbd>Del</kbd> &ndash; Deletes a character.
 * <kbd>Ctrl+Backspace</kbd>, <kbd>Ctrl+Del</kbd> &ndash; Deletes a word.
-* <kbd>Ctrl+Backspace</kbd>, <kbd>Ctrl+Del</kbd> &ndash; Deletes a word.
 
 ### Undo and Redo
 
@@ -102,7 +101,7 @@ The list below contains available keyboard shortcuts grouped by problem areas.
     option, a drop-down list option, an elements path element, or a dialog window tab once selected.
 	Also enters a context menu submenu, if it is available.
 
-## Accessibility and Keyboard Shortcuts Demo 
+## Accessibility and Keyboard Shortcuts Demo
 
 See the [working "Accessibility Support and Keyboard Shortcuts" sample](http://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
 

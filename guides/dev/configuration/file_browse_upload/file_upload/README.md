@@ -150,6 +150,8 @@ Finally, you can also tell the {@link CKEDITOR.fileTools.fileLoader file loader}
 		evt.cancel();
 	} );
 
+Note that if the content of the image editor will be pasted, it will be received as a Base64 data and the file created form this data will need a name. In such cases name is based on the MIME type. To change this behavior use {@link CKEDITOR.config#fileTools_defaultFileName} option.
+
 #### Response
 
 If you want to handle the response manually, you need to add a listener to {@link CKEDITOR.editor#fileUploadResponse} event and call {@link CKEDITOR.eventInfo#stop} to prevent the default behavior. The listener should set the URL to the file on the server and the file name; additionally, it can also set the message from the server. If the response is to the error message, and the upload failed, then the event should be {@link CKEDITOR.eventInfo#cancel canceled}, so the file loader will change {@link CKEDITOR.fileTools.fileLoader#status its status} to `error`.

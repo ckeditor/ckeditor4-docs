@@ -790,6 +790,14 @@
 						"description": "Information about the CKEditor licensing model.",
 						"meta_description": "Information about the CKEditor licensing model.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, support, license, licensing, open, source, premium, free"
+					},
+				    {
+					  	"name": "dev_errors",
+					    "url": "dev/errors",
+					  	"title": "Error reference",
+					  	"description": "Detailed description of CKEditor error codes.",
+					  	"meta_description": "Detailed description of CKEditor error codes.",
+					  	"meta_keywords": "ckeditor, editor, wysiwyg, error, codes"
 					}
 				]
 			},

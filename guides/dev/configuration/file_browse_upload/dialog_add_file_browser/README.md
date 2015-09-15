@@ -3,7 +3,7 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-Adding File Browser to Dialog
+Adding File Manager to Dialog
 =============================
 
 CKEditor can be easily integrated with your own file browser thanks to the [File Browser](http://ckeditor.com/addon/filebrowser) plugin which is included in every preset by default.

@@ -591,15 +591,31 @@
 						"meta_keywords": "ckeditor, editor, integrate, integration, jQuery, file, files, upload, uploading, uploader, manage, management, browse, browser, image, images"
 					},
 					{
-						"title": "File Browser and Upload",
+						"title": "File Manager",
 						"items": [
 							{
 								"name": "dev_file_browse_upload",
 								"url": "dev/configuration/file_browse_upload",
-								"title": "Introduction",
+								"title": "File Manager Integration",
 								"description": "How to integrate CKEditor with a file browser and support file uploads.",
 								"meta_description": "How to integrate CKEditor with a file browser and support file uploads.",
 								"meta_keywords": "ckeditor, editor, integrate, integration, file, files, upload, uploading, manage, management, browse, browser, image, images"
+							},
+							{
+								"name": "dev_file_manager_configuration",
+								"url": "dev/configuration/file_browse_upload/file_manager_configuration",
+								"title": "Advanced Configuration",
+								"description": "How to configure CKEditor with a file browser and support file uploads.",
+								"meta_description": "How to configure CKEditor with a file browser and support file uploads.",
+								"meta_keywords": "ckeditor, editor, integrate, integration, configure, configuration, file, files, upload, uploading, manage, management, browse, browser, image, images"
+							},
+							{
+								"name": "dev_ckfinder_integration",
+								"url": "dev/configuration/file_browse_upload/ckfinder_integration",
+								"title": "CKFinder Integration",
+								"description": "How to integrate CKEditor with CKFinder.",
+								"meta_description": "How to integrate CKEditor with CKFinder.",
+								"meta_keywords": "ckeditor, editor, ckfinder, integrate, integration, configure, configuration, file, files, upload, uploading, manage, management, browse, browser, image, images"
 							},
 							{
 								"name": "dev_file_browser_api",

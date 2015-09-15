@@ -621,9 +621,9 @@
 								"name": "dev_file_browser_api",
 								"url": "dev/configuration/file_browse_upload/file_browser_api",
 								"title": "File Browser API",
-								"description": "How to use CKEditor File Browser API.",
-								"meta_description": "How to use CKEditor File Browser API.",
-								"meta_keywords": "ckeditor, editor, integrate, integration, API, file, files, upload, uploader, manage, management, browse, browser, image, images"
+								"description": "How to use the CKEditor File Browser API and integrate a custom file manager.",
+								"meta_description": "How to use the CKEditor File Browser API and integrate a custom file manager.",
+								"meta_keywords": "ckeditor, editor, integrate, integration, API, file, files, upload, uploader, manager, manage, management, browse, browser, image, images"
 							},
 							{
 								"name": "dev_dialog_add_file_browser",

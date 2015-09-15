@@ -3,24 +3,22 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# File Browser API
+# File Browser API - Creating a Custom File Manager
 
-CKEditor can be easily integrated with your own file browser thanks to the [File Browser](http://ckeditor.com/addon/filebrowser) plugin which is included in every preset by default.
+<p class="requirements">
+	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="http://ckeditor.com/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+</p>
 
-To connect a file browser that is already compatible with CKEditor (like
-[CKFinder](http://ckfinder.com)), follow the [File Browser (Uploader)](#!/guide/dev_file_browse_upload)
-documentation.
+To connect a file browser/uploader that is already compatible with CKEditor, refer to the [File Manager Integration](#!/guide/dev_file_browse_upload) article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
+check the [CKFinder Integration](#!/guide/dev_ckfinder_integration) article.
 
-Interaction Between CKEditor and File Browser
----------------------------------------------
+## Interaction Between CKEditor and File Manager
 
-CKEditor automatically sends some additional arguments to the file
-browser:
+CKEditor automatically sends some additional arguments to the file manager:
 
-- {@link CKEDITOR.editor#name CKEditor} – name of the CKEditor instance,
-- {@link CKEDITOR.editor#langCode langCode} – CKEditor language (`en` for English),
-- `CKEditorFuncNum` – anonymous function reference number used to pass the URL of
-a file to CKEditor (a random number).
+* {@link CKEDITOR.editor#name CKEditor} &ndash; the name of the CKEditor instance.
+* {@link CKEDITOR.editor#langCode langCode} &ndash; CKEditor language (`en` for English).
+* `CKEditorFuncNum` &ndash; anonymous function reference number used to pass the URL of a file to CKEditor (a random number).
 
 For example:
 
@@ -41,35 +39,27 @@ In order to browse files, CKEditor will call:
 
 The call includes the following elements:
 
-- `/browser/browse.php?type=Images` – the value of the
-	`filebrowserBrowseUrl` parameter,
-- `&CKEditor=editor2&CKEditorFuncNum=2&langCode=de` – the information
-	added by CKEditor:
-	- `CKEditor=editor2` – the name of a CKEditor instance
-		(`editor2`),
-	- `CKEditorFuncNum=2` – the reference number of an anonymous
-		function that should be used in the
-		{@link CKEDITOR.tools#callFunction callFunction},
-	- `langCode=de` – language code (in this case: German). This
+* `/browser/browse.php?type=Images` &ndash; the value of the `filebrowserBrowseUrl` parameter.
+* `&CKEditor=editor2&CKEditorFuncNum=2&langCode=de` &ndash; the information added by CKEditor:
+	* `CKEditor=editor2` &ndash; the name of the CKEditor instance (`editor2`).
+	* `CKEditorFuncNum=2` &ndash; the reference number of an anonymous
+		function that should be used in the {@link CKEDITOR.tools#callFunction callFunction} method.
+	* `langCode=de` &ndash; the language code (in this case: `de` for German). This
 		parameter can be used to send localized error messages.
 
-Passing the URL of the Selected File
-------------------------------------
+## Passing the URL of the Selected File
 
-To send back the file URL from an external file browser, call
+To send back the file URL from an external file manager, call
 {@link CKEDITOR.tools#callFunction} and pass `CKEditorFuncNum` as the first
 argument:
 
     window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl [, data] );
 
-If `data` (the third argument) is a string, it will be displayed by
-CKEditor. This parameter is usually used to display an error message if
-a problem occurs during the file upload.
+If `data` (the third argument) is a string, it will be displayed by CKEditor. This parameter is usually used to display an error message if a problem occurs during the file upload.
 
 ### Example 2
 
-The following example shows how to send the URL from a file browser
-using JavaScript code:
+The following example shows how to send the URL from a file manager using JavaScript code:
 
 	// Helper function to get parameters from the query string.
 	function getUrlParam( paramName ) {
@@ -84,8 +74,7 @@ using JavaScript code:
 
 ### Example 3
 
-The following code shows how to send back the URL of an uploaded file
-from the PHP connector:
+The following code shows how to send back the URL of an uploaded file from the PHP connector:
 
 	<?php
 		// Required: anonymous function reference number as explained above.
@@ -105,31 +94,34 @@ from the PHP connector:
 
 ### Example 4
 
-If `data` is a function, it will be executed in the scope of the button
-that called the file browser. It means that the server connector can
-have direct access CKEditor and the dialog window to which the button
-belongs.
+If `data` is a function, it will be executed in the scope of the button that called the file manager. It means that the server connector can have direct access to CKEditor and the dialog window to which the button belongs.
 
-Suppose that apart from passing the `fileUrl` value that is assigned to
-an appropriate field automatically based on the dialog window definition
-you also want to set the `alt` attribute, if the file browser was opened
-in the **Image Properties** dialog window. In order to do this, pass an
-anonymous function as a third argument:
+Suppose that apart from passing the `fileUrl` value that is assigned to an appropriate field automatically based on the dialog window definition you also want to set the `alt` attribute, if the file manager was opened in the **Image Properties** dialog window. In order to do this, pass an anonymous function as a third argument:
 
 	window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl, function() {
 		// Get the reference to a dialog window.
 		var element,
 			dialog = this.getDialog();
-		// Check if this is the Image dialog window.
+		// Check if this is the Image Properties dialog window.
 		if ( dialog.getName() == 'image' ) {
-			// Get the reference to a text field that holds the "alt" attribute.
+			// Get the reference to a text field that stores the "alt" attribute.
 			element = dialog.getContentElement( 'info', 'txtAlt' );
 			// Assign the new value.
 			if ( element )
 				element.setValue( 'alt text' );
 		}
 		...
-		// Return false to stop further execution - in such case CKEditor will ignore the second argument (fileUrl)
-		// and the onSelect function assigned to a button that called the file browser (if defined).
+		// Return "false" to stop further execution. In such case CKEditor will ignore the second argument ("fileUrl")
+		// and the "onSelect" function assigned to the button that called the file manager (if defined).
 		[return false;]
 	});
+
+## Further Reading
+
+For more information on integrating CKEditor with a file manager refer to the following articles:
+
+* [File Manager Integration](#!/guide/dev_file_browse_upload)
+* [Advanced File Manager Configuration](#!/guide/dev_file_manager_configuration)
+* [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
+* [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
+* [CKFinder Integration](#!/guide/ckfinder_integration)

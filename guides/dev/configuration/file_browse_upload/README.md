@@ -43,7 +43,7 @@ CKEditor integration with a file manager can be customized to your needs. It is 
 For more advanced information on integrating CKEditor with a file manager refer to the following articles:
 
 * [Advanced File Manager Configuration](#!/guide/dev_file_manager_configuration)
-* [Creating a Custom File Manager](#!/guide/dev_file_browser_api)
+* [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)
 * [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
 * [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
 * [CKFinder Integration](#!/guide/ckfinder_integration)

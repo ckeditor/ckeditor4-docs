@@ -55,7 +55,7 @@ The sample below shows some basic configuration code that can be used to insert 
 For more information on integrating CKEditor with a file manager refer to the following articles:
 
 * [File Manager Integration](#!/guide/dev_file_browse_upload)
-* [Creating a Custom File Manager](#!/guide/dev_file_browser_api)
+* [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)
 * [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
 * [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
 * [CKFinder Integration](#!/guide/ckfinder_integration)

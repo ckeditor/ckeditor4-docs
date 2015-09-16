@@ -3,7 +3,7 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor Error Reference
+# CKEditor Error Codes Reference
 
 List of CKEditor error codes and their explanation. These error codes are used by the editor to log information about errors and warnings to the JavaScript console.
 

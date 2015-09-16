@@ -3,22 +3,23 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor error reference
+# CKEditor Error Reference
 
-List of CKEditor error codes and their explanation.
+List of CKEditor error codes and their explanation. These error codes are used by the editor to log information about errors and warnings to the JavaScript console.
 
 ## autoembed-no-widget-def
 
 * Location: `plugins/autoembed/plugin.js`
-* Description: Incorrect config.autoEmbed_widget value. No widget definition found.
+* Description: Incorrect {@link CKEDITOR.config#autoEmbed_widget} value. No widget definition found.
 * Additional data: none
 
 ## editor-plugin-required
+
 * Location: `core/editor.js`
 * Description: Plugin cannot be removed from the plugins list, because it's required by other plugin.
 * Additional data:
-	* plugin: Name of the plugin that cannot be removed.
-	* requiredBy: Name of the plugin which requirements blocks the removal.
+	* `plugin`: Name of the plugin that cannot be removed.
+	* `requiredBy`: Name of the plugin which requirements blocks the removal.
 
 ## embedbase-widget-invalid
 
@@ -31,19 +32,29 @@ List of CKEditor error codes and their explanation.
 * Location: `plugins/filetools/plugin.js`
 * Description: Error occurred during parsing the upload response. Text could not be parsed to JSON.
 * Additional data:
-	* responseText - upload response text
+	* `responseText`: upload response text
 
 ## mathjax-config
 
 * Location: `plugins/mathjax/plugin.js`
-* Description: Config.mathJaxLib property is not set. For more information check [config.mathJaxLib documentation](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-mathJaxLib).
+* Description: Config.mathJaxLib property is not set. For more information check {@link CKEDITOR.config#mathJaxLib}.
 * Additional data: none
 
-## uploadimage-config
+## range-endcontainer
 
-* Location: `plugins/uploadimage/plugin.js`
-* Description: Upload URL for the Upload Image feature was not defined. For more information check [file upload guide](http://docs.ckeditor.com/#!/guide/dev_file_upload).
-* Additional data: none
+* Location: `core/dom/range.js`
+* Description: End container element is not a descendant of root element.
+* Additional data:
+	* `endContainer`
+	* `root`
+
+## range-startcontainer
+
+* Location: `core/dom/range.js`
+* Description: Start container element is not a descendant of root element.
+* Additional data:
+	* `startContainer`
+	* `root`
 
 ## selection-fake-reset
 
@@ -57,26 +68,8 @@ List of CKEditor error codes and their explanation.
 * Description: Selection is no longer fake.
 * Additional data: none
 
-## range-startcontainer
+## uploadimage-config
 
-* Location: `core/dom/range.js`
-* Description: Start container element is not a descendant of root element.
-* Additional data:
-	* `startContainer`
-	* `root`
-
-## range-endcontainer
-
-* Location: `core/dom/range.js`
-* Description: End container element is not a descendant of root element.
-* Additional data:
-	* `endContainer`
-	* `root`
-
-## resourcemanager-not-found
-
-* Location: `core/dom/range.js`
-* Description: Resource could not be loaded.
-* Additional data:
-	* `resources`: Names of the resources that could not be loaded.
-	* `location`: Location that was used to find resources.
+* Location: `plugins/uploadimage/plugin.js`
+* Description: Upload URL for the Upload Image feature was not defined. For more information check [file upload guide](http://docs.ckeditor.com/#!/guide/dev_file_upload).
+* Additional data: none

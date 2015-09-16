@@ -20,7 +20,7 @@ List of CKEditor error codes and their explanation.
 	* plugin: Name of the plugin that cannot be removed.
 	* requiredBy: Name of the plugin which requirements blocks the removal.
 
-## embedbase-widget-not-valid
+## embedbase-widget-invalid
 
 * Location: `plugins/embedbase/plugin.js`
 * Description: Widget no longer belongs to current editor's widgets list and is no longer valid.

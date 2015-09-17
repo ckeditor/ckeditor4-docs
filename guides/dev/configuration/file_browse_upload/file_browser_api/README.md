@@ -29,17 +29,17 @@ For example:
 Suppose that CKEditor was created using the following JavaScript call:
 
 	CKEDITOR.replace( 'editor2', {
-		filebrowserBrowseUrl: '/browser/browse.php?type=Images',
+		filebrowserBrowseUrl: '/browser/browse.php?type=Files',
 		filebrowserUploadUrl: '/uploader/upload.php?type=Files'
 	});
 
 In order to browse files, CKEditor will call:
 
-    /browser/browse.php?type=Images&CKEditor=editor2&CKEditorFuncNum=2&langCode=de
+	/browser/browse.php?type=Files&CKEditor=editor2&CKEditorFuncNum=2&langCode=de
 
 The call includes the following elements:
 
-* `/browser/browse.php?type=Images` &ndash; the value of the `filebrowserBrowseUrl` parameter.
+* `/browser/browse.php?type=Files` &ndash; the value of the `filebrowserBrowseUrl` parameter.
 * `&CKEditor=editor2&CKEditorFuncNum=2&langCode=de` &ndash; the information added by CKEditor:
 	* `CKEditor=editor2` &ndash; the name of the CKEditor instance (`editor2`).
 	* `CKEditorFuncNum=2` &ndash; the reference number of an anonymous
@@ -53,68 +53,118 @@ To send back the file URL from an external file manager, call
 {@link CKEDITOR.tools#callFunction} and pass `CKEditorFuncNum` as the first
 argument:
 
-    window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl [, data] );
+	window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl [, data] );
 
 If `data` (the third argument) is a string, it will be displayed by CKEditor. This parameter is usually used to display an error message if a problem occurs during the file upload.
 
 ### Example 2
 
-The following example shows how to send the URL from a file manager using JavaScript code:
+The following example shows how to send the URL from a file manager using JavaScript code (save it as `browse.php`):
 
-	// Helper function to get parameters from the query string.
-	function getUrlParam( paramName ) {
-		var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' ) ;
-		var match = window.location.search.match(reParam) ;
-
-		return ( match && match.length > 1 ) ? match[ 1 ] : null ;
-	}
-	var funcNum = getUrlParam( 'CKEditorFuncNum' );
-	var fileUrl = '/path/to/file.txt';
-	window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl );
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Example: Browsing Files</title>
+		<script>
+			// Helper function to get parameters from the query string.
+			function getUrlParam( paramName ) {
+				var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
+				var match = window.location.search.match( reParam );
+	
+				return ( match && match.length > 1 ) ? match[1] : null;
+			}
+			// Simulate user action of selecting a file to be returned to CKEditor.
+			function returnFileUrl() {
+	
+				var funcNum = getUrlParam( 'CKEditorFuncNum' );
+				var fileUrl = '/path/to/file.txt';
+				window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl );
+				window.close();
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="returnFileUrl()">Select File</button>
+	</body>
+	</html>
 
 ### Example 3
-
-The following code shows how to send back the URL of an uploaded file from the PHP connector:
-
-	<?php
-		// Required: anonymous function reference number as explained above.
-		$funcNum = $_GET['CKEditorFuncNum'] ;
-		// Optional: instance name (might be used to load a specific configuration file or anything else).
-		$CKEditor = $_GET['CKEditor'] ;
-		// Optional: might be used to provide localized messages.
-		$langCode = $_GET['langCode'] ;
-
-		// Check the $_FILES array and save the file. Assign the correct path to a variable ($url).
-		$url = '/path/to/uploaded/file.ext';
-		// Usually you will only assign something here if the file could not be uploaded.
-		$message = ;
-
-		echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
-	?>
-
-### Example 4
 
 If `data` is a function, it will be executed in the scope of the button that called the file manager. It means that the server connector can have direct access to CKEditor and the dialog window to which the button belongs.
 
 Suppose that apart from passing the `fileUrl` value that is assigned to an appropriate field automatically based on the dialog window definition you also want to set the `alt` attribute, if the file manager was opened in the **Image Properties** dialog window. In order to do this, pass an anonymous function as a third argument:
 
-	window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl, function() {
-		// Get the reference to a dialog window.
-		var element,
-			dialog = this.getDialog();
-		// Check if this is the Image Properties dialog window.
-		if ( dialog.getName() == 'image' ) {
-			// Get the reference to a text field that stores the "alt" attribute.
-			element = dialog.getContentElement( 'info', 'txtAlt' );
-			// Assign the new value.
-			if ( element )
-				element.setValue( 'alt text' );
-		}
-		...
-		// Return "false" to stop further execution. In such case CKEditor will ignore the second argument ("fileUrl")
-		// and the "onSelect" function assigned to the button that called the file manager (if defined).
-		[return false;]
-	});
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Example: Browsing Files</title>
+		<script>
+			// Helper function to get parameters from the query string.
+			function getUrlParam( paramName ) {
+				var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
+				var match = window.location.search.match( reParam );
+	
+				return ( match && match.length > 1 ) ? match[1] : null;
+			}
+			// Simulate user action of selecting a file to be returned to CKEditor.
+			function returnFileUrl() {
+	
+				var funcNum = getUrlParam( 'CKEditorFuncNum' );
+				var fileUrl = 'http://c.cksource.com/a/1/img/sample.jpg';
+				window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl, function() {
+					// Get the reference to a dialog window.
+					var dialog = this.getDialog();
+					// Check if this is the Image Properties dialog window.
+					if ( dialog.getName() == 'image' ) {
+						// Get the reference to a text field that stores the "alt" attribute.
+						var element = dialog.getContentElement( 'info', 'txtAlt' );
+						// Assign the new value.
+						if ( element )
+							element.setValue( 'alt text' );
+					}
+					// Return "false" to stop further execution. In such case CKEditor will ignore the second argument ("fileUrl")
+					// and the "onSelect" function assigned to the button that called the file manager (if defined).
+					// return false;
+				} );
+				window.close();
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="returnFileUrl()">Select File</button>
+	</body>
+	</html>
+
+### Example 4
+
+The following code shows how to send back the URL of an uploaded file from the PHP connector (save it as `upload.php`):
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Example: File Upload</title>
+	</head>
+	<body>
+	<?php
+	// Required: anonymous function reference number as explained above.
+	$funcNum = $_GET['CKEditorFuncNum'] ;
+	// Optional: instance name (might be used to load a specific configuration file or anything else).
+	$CKEditor = $_GET['CKEditor'] ;
+	// Optional: might be used to provide localized messages.
+	$langCode = $_GET['langCode'] ;
+	
+	// Check the $_FILES array and save the file. Assign the correct path to a variable ($url).
+	$url = '/path/to/uploaded/file.ext';
+	// Usually you will only assign something here if the file could not be uploaded.
+	$message = 'The uploaded file has been renamed';
+	
+	echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
+	?>
+	</body>
+	</html>
 
 ## Further Reading
 

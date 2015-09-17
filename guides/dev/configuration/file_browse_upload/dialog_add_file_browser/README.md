@@ -3,125 +3,87 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-Adding File Manager to Dialog
-=============================
+# Adding File Manager to a Dialog Window
 
-The aim of this article is to explain to plugin authors on how to create CKEditor dialog windows that integrate with a file manager. 
+The aim of this article is to explain to plugin authors how to create CKEditor dialog windows that integrate seamlessly with a file manager. 
 
 <p class="requirements">
 	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="http://ckeditor.com/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </p>
 
-To connect a file browser that is already compatible with CKEditor (like
-[CKFinder](http://ckfinder.com)), follow the [File Browser (Uploader)](#!/guide/dev_file_browse_upload)
-documentation.
+To connect a file browser/uploader that is already compatible with CKEditor, refer to the [File Manager Integration](#!/guide/dev_file_browse_upload) article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
+check the [CKFinder Integration](#!/guide/dev_ckfinder_integration) article.
 
-Dialogs
--------
+## Dialog Windows
 
-Please refer to the {@link CKEDITOR.dialog.definition Dialog definition API} for
-general help on how to create a dialog box.
+Please refer to the CKEditor {@link CKEDITOR.dialog.definition dialog definition API} for general information on how to create a dialog window.
 
-Filebrowser Plugin
-------------------
+## The File Browser Plugin
 
-The `filebrowser` plugin is built-in into CKEditor. It's only purpose is
-to provide an API inside of CKEditor to easily integrate any external
-file browser with it and to add file browser features to various
-CKEditor components (usually to dialogs).
+The [File Browser](http://ckeditor.com/addon/filebrowser) plugin is built-in into CKEditor. Its only purpose is to provide an API inside CKEditor to easily integrate any external file manager and to add file browser/uploader features to various CKEditor components (usually to dialog windows).
 
-### Adding "Browse Server" button
+### Adding the "Browse Server" Button
 
-To assign the filebrowser plugin to an element inside of a dialog box,
-set the "filebrowser" property. For example in the `image` plugin source
-there is:
+To assign the File Browser plugin to an element inside a dialog window, set the `filebrowser` property. For example in the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/image/dialogs/image.js) you can find the following code:
 
 	{
 		type: 'button',
-		hidden: true,
 		id: 'browse',
-		filebrowser: 'Link:txtUrl',
+		// ...
 		label: editor.lang.common.browseServer,
-		style: 'float:right',
+		hidden: true,
+		filebrowser: 'info:txtUrl'
 	},
 
-This button will be hidden by default (`hidden:true`). The filebrowser
-plugin looks for all elements with the filebrowser attribute and unhides
-them if appropriate configuration setting is available
-([filebrowserBrowseUrl/filebrowserUploadUrl](#!/guide/dev_file_browse_upload-section-1)).
+This button will be hidden by default (`hidden:true`). The File Browser plugin looks for all elements with the `filebrowser` attribute and unveils them if an appropriate configuration setting is available ([`filebrowserBrowseUrl`/`filebrowserUploadUrl`](#!/guide/dev_file_browse_upload-section-basic-configuration)).
 
-The action performed by the plugin depends on the element
-type, for {@link CKEDITOR.dialog.definition.fileButton fileButton}
-it is **QuickUpload**, for other elements the default action is
-**Browse**. In the example above, the file browser will be launched (in
-a popup) when button is clicked.
+The action performed by the plugin depends on the element type. For {@link CKEDITOR.dialog.definition.fileButton fileButton}
+it is **QuickUpload**, for other elements the default action is **Browse**. In the example above, the file manager will be launched (in
+a popup) when the button is clicked.
 
-The `'Link:txtUrl'` value instructs the plugin to update an
-element with id `txtUrl` inside of the `Link` tab when
-`CKEDITOR.tools.callFunction( funcNum )` is called (see [Custom File
-Browser](#!/guide/dev_file_browser_api)).
+The `'info:txtUrl'` value instructs the plugin to update an element with the ID of `txtUrl` inside the `info` tab when CKEDITOR.tools.callFunction is called (see [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)).
 
-### Adding "Quick Upload" support
+### Adding "Quick Upload" Support
 
-Again, to see how we can handle file uploads in our dialog box, we'll
-use working example from CKEditor. In the `image` plugin there is a definition
-of the `Upload` tab:
+Again, to see how file uploads can be handled in a dialog window, the following working example from CKEditor will be used. In the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/image/dialogs/image.js) you can find the following definition of the `Upload` tab:
 
 	{
 		id: 'Upload',
 		hidden: true,
 		filebrowser: 'uploadButton',
 		label: editor.lang.image.upload,
-		elements: [
-			{
-				type: 'file',
-				id: 'upload',
-				label: editor.lang.image.btnUpload,
-				style: 'height:40px',
-				size: 38
-			},
-			{
-				type: 'fileButton',
-				id: 'uploadButton',
-				filebrowser: 'info:txtUrl',
-				label: editor.lang.image.btnUpload,
-				'for': [ 'Upload', 'upload' ]
-			}
-		]
+		elements: [ {
+			type: 'file',
+			id: 'upload',
+			label: editor.lang.image.btnUpload,
+			style: 'height:40px',
+			size: 38
+		},
+		{
+			type: 'fileButton',
+			id: 'uploadButton',
+			filebrowser: 'info:txtUrl',
+			label: editor.lang.image.btnUpload,
+			'for': [ 'Upload', 'upload' ]
+		} ]
 	},
 
-This example is a little bit more complicated than the previous one,
-because 1) we have here a definition of the whole tab 2) we need two
-elements:
-{@link CKEDITOR.dialog.definition.file file}
-and
-{@link CKEDITOR.dialog.definition.fileButton fileButton}
-to upload a file.
+This example is slightly more complicated than the previous one, because:
 
-In the example above, the id of a tab is `'Upload'`. It is hidden by
-default (`hidden:true`). As already mentioned, the filebrowser plugin
-looks for all elements with the filebrowser attribute and unhides them
-if appropriate configuration setting is available. In this case, the tab will
-be unhidden automatically if a filebrowser setting for `'uploadButton'`
-(because of `filebrowser:'uploadButton'`) will be available (`filebrowserUploadUrl`).
+* It contains the definition of the entire dialog window tab.
+* Two elements ({@link CKEDITOR.dialog.definition.file file} and {@link CKEDITOR.dialog.definition.fileButton fileButton}) are needed to upload a file.
 
-The `file` element is simple and doesn't need to be explained, it is
-just an input element that will store the name of a file that will be
-uploaded.
+In the example above, the ID of the tab is `'Upload'`. The tab is hidden by default (`hidden:true`). As mentioned above, the File Browser plugin looks for all elements with the `filebrowser` attribute and unveils them if an appropriate configuration setting is available. In this case, the tab will be shown automatically if a `filebrowser` setting for `'uploadButton'` (because of `filebrowser:'uploadButton'`) will be available (`filebrowserUploadUrl`).
 
-The `fileButton` element is more interesting. The `'info:txtUrl'` value
-instructs the filebrowser plugin to update an element with id `txtUrl`
-inside of the `info` tab when `CKEDITOR.tools.callFunction( funcNum )` is
-called (see [Custom File Browser](#!/guide/dev_file_browser_api)).
-The `'for': [ 'Upload', 'upload'   ]` line is used to connect
-fileButton with file element. It is an instruction for CKEditor to
-upload a file using the `'file'` element with id `'upload'` (second
-value) inside of the `'Upload'` tab (first value).
+The `file` element is just an input element that will store the name of the file that will be uploaded.
 
-### Advanced configuration (Browsing)
+The `fileButton` element is more interesting. The `'info:txtUrl'` value instructs the File Browser plugin to update an element with the ID of `txtUrl` inside the `info` tab when CKEDITOR.tools.callFunction is called (see [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)).
 
-It is possible to define your own function that will be called when file
-is selected/uploaded.
+The `'for': [ 'Upload', 'upload'   ]` line is used to connect `fileButton` with the `file` element. It is an instruction for CKEditor to upload the file using the `'file'` element with the ID of `'upload'` (second value) inside the `'Upload'` tab (first value).
+
+### Advanced Configuration - Browsing
+
+It is possible to define your own function that will be called when a file is selected/uploaded.
 
 	{
 		type: 'button',
@@ -140,26 +102,19 @@ is selected/uploaded.
 				var dialog = this.getDialog();
 				dialog.getContentElement( 'tab1', 'id1' ).setValue( data[ 'fileUrl' ] );
 
-				// Do not call the built-in onSelect command
+				// Do not call the built-in onSelect command.
 				return false;
 			}
 		}
 	}
 
-In this example we're setting the action to 'Browse' to call the file
-browser when button is clicked. `'target'` is not required, because
-we'll update the target element in the custom `onSelect` function.
+In this example the action is set to `'Browse'` in order to call the file manager when the button is clicked. Setting `'target'` is not required, because the target element will be updated in the custom `onSelect` function.
 
-As explained in the [documentation](#!/guide/dev_file_browser_api),
-we have called `CKEDITOR.tools.callFunction( funcNum, fileUrl, data );`
-when user selected a file. The fileUrl and data arguments are passed to
-our custom `onSelect` function and we can use it to update the target
-element.
+As explained in the [File Browser API documentation](#!/guide/dev_file_browser_api), `CKEDITOR.tools.callFunction( funcNum, fileUrl, data );` is called when the user selected a file. The `fileUrl` and `data` arguments are passed to the custom `onSelect` function and can be used to update the target element.
 
-### Advanced configuration (Quick Uploads)
+### Advanced Configuration - Quick Uploads
 
-In a similar way like we configured the button to open the file browser,
-we can configure the fileButton.
+In a similar way that a button can be configured to open the file manager, you can also configure the file button.
 
 	{
 		type: 'file',
@@ -177,17 +132,25 @@ we can configure the fileButton.
 			target: 'tab1:id1',
 			onSelect: function( fileUrl, errorMessage ) {
 				alert( 'The url of uploaded file is: ' + fileUrl + '\nerrorMessage: ' + errorMessage );
-				// Do not call the built-in onSelect command
+				// Do not call the built-in onSelect command.
 				// return false;
 			}
 		},
 		'for': [ 'tab1', 'id2' ]
 	}
 
-In the `filebrowser.params` attribute we can add additional arguments to
-be passed in the query string to the external file browser.
-`filebrowser.target` is the target element to be updated when file is
-returned by the server connector (uploader) - we don't need it if we
-define our own `onSelect` function (`filebrowser.onSelect`) and update
-the target element in this function, just like we did in previous
-example.
+Additional arguments to be passed in the query string to the external file manager can be added in the `filebrowser.params` attribute.
+
+`filebrowser.target` is the target element to be updated when the file is returned by the server connector (uploader) &mdash; you do not need it if you define your own `onSelect` function (`filebrowser.onSelect`) and update the target element in this function, just like it was done in the previous example.
+
+## Further Reading
+
+For more information on integrating CKEditor with a file manager refer to the following articles:
+
+* [File Manager Integration](#!/guide/dev_file_browse_upload)
+* [Advanced File Manager Configuration](#!/guide/dev_file_manager_configuration)
+* [CKFinder Integration](#!/guide/ckfinder_integration)
+* [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)
+* [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
+
+See also the [CKEditor Plugin SDK](#!/guide/plugin_sdk_intro) with tutorials on creating your own plugins with dialog windows.

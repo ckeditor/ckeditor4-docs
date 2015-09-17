@@ -172,6 +172,6 @@ For more information on integrating CKEditor with a file manager refer to the fo
 
 * [File Manager Integration](#!/guide/dev_file_browse_upload)
 * [Advanced File Manager Configuration](#!/guide/dev_file_manager_configuration)
+* [CKFinder Integration](#!/guide/ckfinder_integration)
 * [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
 * [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
-* [CKFinder Integration](#!/guide/ckfinder_integration)

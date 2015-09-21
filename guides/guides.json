@@ -708,6 +708,14 @@
 						"description": "CKEditor Clipboard Deep Dive.",
 						"meta_description": "CKEditor Clipboard Deep Dive.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, clipboard, dataTransfer, clipboardData, files, paste, drop"
+					},
+					{
+						"name": "dev_errors",
+						"url": "dev/errors",
+						"title": "Error Codes Reference",
+						"description": "Detailed description of CKEditor error codes.",
+						"meta_description": "Detailed description of CKEditor error codes.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, error, codes"
 					}
 				]
 			},

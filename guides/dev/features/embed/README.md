@@ -39,7 +39,7 @@ Both widgets can be easily [configured](#!/api/CKEDITOR.config-cfg-embed_provide
 
 ## Adjusting the Default Content Provider
 
-The default configuration of the Media Embed and Semantic Media Embed plugins uses the public service provided by [Iframely](https://iframely.com/). This service is free for CKEditor users and goes through a dedicated embedding endpoint.
+The default configuration of the Media Embed and Semantic Media Embed plugins uses the public service provided by [Iframely](https://iframely.com/). By default an anonymized API endpoint is configured which allows for 1000 hits a month. For better control of API usage it is recommended to <a href="https://iframely.com/plans">set up an account at Iframely</a>. The free "Developer" tier comes with similar set of features and restrictions.
 
 Iframely can also be configured to be hosted on your server &mdash; you can read more about it in the ["Self-host Iframely APIs"](https://iframely.com/docs/host) article.
 

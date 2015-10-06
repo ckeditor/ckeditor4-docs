@@ -18,3 +18,7 @@ See these topics if you want to bring your CKEditor knowledge to a whole new lev
 2. **[Enabling CKEditor in Unsupported Environments (CKEditor &lt;4.4.8)](#!/guide/dev_unsupported_environments)** &ndash; Experimental feature that lets you display CKEditor on devices and setups that are not [officially supported](#!/guide/dev_browsers). Since version 4.5 CKEditor will display even in environments which are not yet supported what makes this guide obsolete.
 
 3. **[Widgets](#!/guide/dev_widgets)** &ndash; Innovative CKEditor feature that lets you create rich content entities grouping multiple HTML elements.
+
+4. **[Clipboard Integration](#!/guide/dev_clipboard)** &ndash; A thorough explanation of how CKEditor integration with clipboard works under the hood.
+
+5. **[Error Code Reference](#!/guide/dev_errors)** &ndash; Explanation of CKEditor error codes that are logged to the JavaScript console.

@@ -711,7 +711,7 @@
 					},
 					{
 						"name": "dev_errors",
-						"url": "dev/errors",
+						"url": "dev/deep_dive/errors",
 						"title": "Error Code Reference",
 						"description": "Detailed description of CKEditor error codes.",
 						"meta_description": "Detailed description of CKEditor error codes.",

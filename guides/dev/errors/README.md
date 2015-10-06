@@ -3,47 +3,51 @@ Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor Error Codes Reference
+# CKEditor Error Code Reference
 
-List of CKEditor error codes and their explanation. These error codes are used by the editor to log information about errors and warnings to the JavaScript console.
+<p class="requirements">
+	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="http://ckeditor.com/download">Download</a> site.
+</p>
+
+This article contains the list of CKEditor error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
 
 ## autoembed-no-widget-def
 
 * Location: `plugins/autoembed/plugin.js`
 * Description: Incorrect {@link CKEDITOR.config#autoEmbed_widget} value. No widget definition found.
-* Additional data: none
+* Additional data: None.
 
 ## editor-plugin-required
 
 * Location: `core/editor.js`
-* Description: Plugin cannot be removed from the plugins list, because it's required by other plugin.
+* Description: A plugin cannot be removed from the plugins list because it is required by another plugin.
 * Additional data:
-	* `plugin`: Name of the plugin that cannot be removed.
-	* `requiredBy`: Name of the plugin which requirements blocks the removal.
+	* `plugin`: The name of the plugin that cannot be removed.
+	* `requiredBy`: The name of the plugin whose requirements block the removal.
 
 ## embedbase-widget-invalid
 
 * Location: `plugins/embedbase/plugin.js`
-* Description: Widget no longer belongs to current editor's widgets list and is no longer valid.
-* Additional data: none
+* Description: A widget no longer belongs to the current editor's widgets list and is no longer valid.
+* Additional data: None.
 
 ## filetools-response-error
 
 * Location: `plugins/filetools/plugin.js`
-* Description: Error occurred during parsing the upload response. Text could not be parsed to JSON.
+* Description: An error occurred when parsing the upload response. Text could not be parsed to JSON.
 * Additional data:
-	* `responseText`: upload response text
+	* `responseText`: Upload response text.
 
 ## mathjax-config
 
 * Location: `plugins/mathjax/plugin.js`
-* Description: Config.mathJaxLib property is not set. For more information check {@link CKEDITOR.config#mathJaxLib}.
-* Additional data: none
+* Description: The CKEDITOR.config#mathJaxLib property is not set. Refer to {@link CKEDITOR.config#mathJaxLib API documentation} for more information.
+* Additional data: None.
 
 ## range-endcontainer
 
 * Location: `core/dom/range.js`
-* Description: End container element is not a descendant of root element.
+* Description: End container element is not a descendant of the root element.
 * Additional data:
 	* `endContainer`
 	* `root`
@@ -51,7 +55,7 @@ List of CKEditor error codes and their explanation. These error codes are used b
 ## range-startcontainer
 
 * Location: `core/dom/range.js`
-* Description: Start container element is not a descendant of root element.
+* Description: Start container element is not a descendant of the root element.
 * Additional data:
 	* `startContainer`
 	* `root`
@@ -59,17 +63,17 @@ List of CKEditor error codes and their explanation. These error codes are used b
 ## selection-fake-reset
 
 * Location: `core/selection.js`
-* Description: Wrong selection instance resets fake selection.
-* Additional data: none
+* Description: Incorrect selection instance resets the fake selection.
+* Additional data: None.
 
 ## selection-not-fake
 
 * Location: `core/selection.js`
-* Description: Selection is no longer fake.
-* Additional data: none
+* Description: The selection is no longer fake.
+* Additional data: None.
 
 ## uploadimage-config
 
 * Location: `plugins/uploadimage/plugin.js`
-* Description: Upload URL for the Upload Image feature was not defined. For more information check [file upload guide](http://docs.ckeditor.com/#!/guide/dev_file_upload).
-* Additional data: none
+* Description: Upload URL for the Upload Image feature was not defined. Refer to the [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) article for more information.
+* Additional data: None.

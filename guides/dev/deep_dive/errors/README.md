@@ -38,7 +38,7 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Additional data:
 	* `responseText`: Upload response text.
 
-## mathjax-config
+## mathjax-no-config
 
 * Location: `plugins/mathjax/plugin.js`
 * Description: The CKEDITOR.config#mathJaxLib property is not set. Refer to {@link CKEDITOR.config#mathJaxLib API documentation} for more information.

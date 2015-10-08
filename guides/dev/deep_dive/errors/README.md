@@ -17,6 +17,12 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: Incorrect {@link CKEDITOR.config#autoEmbed_widget} value. No widget definition found.
 * Additional data: None.
 
+## editor-destroy-iframe
+
+* Location: `plugins/wysiwygarea/plugin.js`
+* Description: Editor’s iframe could not be destroyed correctly, because it had been unloaded before editor was destroyed. Make sure to destroy the editor before detaching it from the DOM.
+* Additional data: none
+
 ## editor-plugin-required
 
 * Location: `core/editor.js`

@@ -16,9 +16,7 @@ The list of officially supported browsers contains those which the CKEditor core
     * 8.0 and 9.0 &ndash; close to full support,
     * 10 and 11 &ndash; full support,
     * 9.0 Quirks Mode and 9.0 Compatibility Mode &ndash; limited support.
-  * **Microsoft Edge**:
-    * Latest stable release &ndash; support under evaluation.
-  * **Firefox, Chrome, Safari, Opera**:
+  * **Firefox, Chrome, Safari, Microsoft Edge, Opera**:
     * Latest stable release &ndash; full support.
 * **Mobile environments**:
   * **Safari** (iOS 6+) &ndash; close to full support,

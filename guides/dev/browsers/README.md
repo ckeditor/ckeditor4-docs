@@ -16,9 +16,7 @@ The list of officially supported browsers contains those which the CKEditor core
     * 8.0 and 9.0 &ndash; close to full support,
     * 10 and 11 &ndash; full support,
     * 9.0 Quirks Mode and 9.0 Compatibility Mode &ndash; limited support.
-  * **Microsoft Edge**:
-    * Latest stable release &ndash; support under evaluation.
-  * **Firefox, Chrome, Safari, Opera**:
+  * **Firefox, Chrome, Safari, Microsoft Edge, Opera**:
     * Latest stable release &ndash; full support.
 * **Mobile environments**:
   * **Safari** (iOS 6+) &ndash; close to full support,
@@ -41,10 +39,6 @@ Using both modes is highly unrecommended, because they put the browser in legacy
 
 * In Quirks Mode most of the new features are not going to work including [inline editing](http://docs.ckeditor.com/#!/guide/dev_inline) and [widgets](http://docs.ckeditor.com/#!/guide/dev_widgets). We recommend checking whether particular features work acceptably prior to incorporating them.
 * In Compatibility Mode most features work similarly to Internet Explorer 8.0, but the user interface looks worse.
-
-### Microsoft Edge
-
-As of June 2015, due to current stability issues of Microsoft Edge the core team was only able to check that CKEditor 4.5 works in this browser, but was unable to address some of the encountered issues. The compatibility will be actively checked and will be improved together with next Microsoft Edge releases.
 
 ### A Word About Mobile Environments
 

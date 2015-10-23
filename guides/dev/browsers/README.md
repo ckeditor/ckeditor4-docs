@@ -40,10 +40,6 @@ Using both modes is highly unrecommended, because they put the browser in legacy
 * In Quirks Mode most of the new features are not going to work including [inline editing](http://docs.ckeditor.com/#!/guide/dev_inline) and [widgets](http://docs.ckeditor.com/#!/guide/dev_widgets). We recommend checking whether particular features work acceptably prior to incorporating them.
 * In Compatibility Mode most features work similarly to Internet Explorer 8.0, but the user interface looks worse.
 
-### Microsoft Edge
-
-As of June 2015, due to current stability issues of Microsoft Edge the core team was only able to check that CKEditor 4.5 works in this browser, but was unable to address some of the encountered issues. The compatibility will be actively checked and will be improved together with next Microsoft Edge releases.
-
 ### A Word About Mobile Environments
 
 CKEditor is generally compatible with **iOS 6+** (iPhone and iPad), though we still think that the usability aspect needs further development.

@@ -151,6 +151,22 @@ Finally, you can also tell the {@link CKEDITOR.fileTools.fileLoader file loader}
 		evt.cancel();
 	} );
 
+Starting from CKEditor 4.6, there is also the possibility of passing additional data to the request via `requestData` parameter of {@link CKEDITOR.fileTools.fileUploadRequest fileUploadRequest event}. That data will be passed to all requests made by {@link CKEDITOR.fileTools.fileLoader file loader}. If you need to add data only to requests made by specific upload widget, you should use {@link CKEDITOR.fileTools.uploadWidgetDefinition#additionalRequestParameters}.
+
+If you want to pass some data, listen to `fileUploadRequest` event and add data as a property of `evt.requestData`:
+
+	editor.on( 'fileUploadRequest', function( evt ) {
+		evt.requestData.foo = 'bar';
+	} );
+
+You can also pass additional files to the request, adding to `evt.requestData` an object with 2 keys: `name` - name of file and `file` - the file itself (as `Blob` or `File` instance):
+
+	editor.on( 'fileUploadRequest', function( evt ) {
+		evt.requestData.otherFile = { name: 'file', file: myBlob };
+	} );
+
+Note that the default file to be uploaded is also a property of `evt.requestData` named `upload` and it can be overwritten when neccessary.
+
 Note that if the content of an image editor is pasted, it will be received as Base64 data and the file created from this data will need a name. In such cases the name is based on the MIME type. To change this behavior use the CKEDITOR.config.fileTools_defaultFileName option.
 
 #### Response

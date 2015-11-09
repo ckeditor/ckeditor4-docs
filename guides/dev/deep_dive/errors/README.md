@@ -20,14 +20,14 @@ This article contains the list of CKEditor error codes and their explanation. Th
 ## editor-destroy-iframe
 
 * Location: `plugins/wysiwygarea/plugin.js`
-* Description: Editor’s iframe could not be destroyed correctly, because it had been unloaded before editor was destroyed. Make sure to destroy the editor before detaching it from the DOM.
-* Additional data: none
+* Description: The editor's `<iframe>` could not be destroyed correctly because it had been unloaded before the editor was destroyed. Make sure to destroy the editor before detaching it from the DOM.
+* Additional data: None.
 
 ## editor-incorrect-destroy
 
 * Location: `core/editor.js`
-* Description: Editor is being destroyed before it is fully initialized.
-* Additional data: none
+* Description: The editor is being destroyed before it is fully initialized.
+* Additional data: None.
 
 ## editor-plugin-required
 

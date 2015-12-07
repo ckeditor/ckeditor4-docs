@@ -155,6 +155,9 @@ The following code shows how to send back the URL of an uploaded file from the P
 	$CKEditor = $_GET['CKEditor'] ;
 	// Optional: might be used to provide localized messages.
 	$langCode = $_GET['langCode'] ;
+	// Optional: compare it with the value of `ckCsrfToken` sent in a cookie to protect your server side uploader against CSRF.
+	// Available since CKEditor 4.5.6.
+	$token = $_POST['ckCsrfToken'] ;
 	
 	// Check the $_FILES array and save the file. Assign the correct path to a variable ($url).
 	$url = '/path/to/uploaded/file.ext';

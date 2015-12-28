@@ -792,6 +792,14 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, accessibility, a11y, usability, wcag, atag, wai, aria, wai-aria, 508, disability, disabled, high, contrast, browser, support, screenreader, screen, reader, voiceover, chromevox, jaws"
 					},
 					{
+						"name": "dev_section508",
+						"url": "dev/section508",
+						"title": "Section 508 Compliance",
+						"description": "CKEditor Compliance with Section 508 Amendment to the Rehabilitation Act of 1973.",
+						"meta_description": "CKEditor Compliance with Section 508 Amendment to the Rehabilitation Act of 1973.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, compliance, accessibility, a11y, usability, section 508, wai, aria, wai-aria, 508, disability, disabled, high, contrast, browser, support, screenreader, screen, reader, voiceover, chromevox, jaws"
+					},
+					{
 						"name": "dev_license",
 						"url": "dev/license",
 						"title": "License",

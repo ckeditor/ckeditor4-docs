@@ -264,3 +264,17 @@ img.inline
 {
 	margin-bottom:6px;
 }
+
+.section508 td:first-child { width:50%; }
+.section508 td:nth-child(2) { width:25%; }
+
+#center-container .guide-container table.section508 td,
+#center-container .guide-container table.section508 th {
+	border: 1px solid #f0f0f0;
+	padding: 3px 7px 2px;
+}
+
+.guide-container .x-panel-body table.section508 tr:first-child td {
+	font-weight:normal;
+	color:inherit;
+}

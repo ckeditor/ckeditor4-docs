@@ -1,4 +1,4 @@
-# Section 508 Compliance
+# CKEditor Section 508 Compliance
 
 This article decribes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
 
@@ -72,7 +72,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(l) When electronic forms are used, the form shall allow people using Assistive Technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.</td>
-<td align="left"><ul><li>When CKEditor is embedded inside a form, <kbd>Tab</kbd> order works with the editor like any other regular form input.</li> <li>The editor is designed to let screen readers read out its name.</li> <li>All forms' elements inside the editor dialogs have proper labels exposed to Assistive Technology. Additionally, all form elements can be reached with keyboard.</li></ul></td>
+<td align="left"><ul><li>When CKEditor is embedded inside a form, <kbd>Tab</kbd> order works with the editor like any other regular form input.</li> <li>The editor is designed to let screen readers read out its name.</li> <li>All form elements inside the editor dialogs have proper labels exposed to Assistive Technology. Additionally, all form elements can be reached with keyboard.</li></ul></td>
 <td align="left"></td>
 </tr>
 </tbody></table>
@@ -104,17 +104,17 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(d) Documents shall be organized so they are readable without requiring an associated style sheet.</td>
 <td align="left"><ul> <li>CKEditor and its dialogs are still usable without cascading style sheets.</li> <li>Toolbar buttons appear as textual links without CSS.</li></ul></td>
-<td align="left">The editor is optimized to use with Windows High Contrast mode.</td>
+<td align="left">CKEditor is optimized to use with Windows High Contrast mode.</td>
 </tr>
 <tr>
 <td align="left">(e) Redundant text links shall be provided for each active region of a server-side image map.</td>
 <td align="left">N/A</td>
-<td align="left">There are no image maps in the editor.</td>
+<td align="left">There are no image maps in CKEditor.</td>
 </tr>
 <tr>
 <td align="left">(f) Client-side image maps shall be provided instead of server-side image maps except where the regions cannot be defined with an available geometric shape.</td>
 <td align="left">N/A</td>
-<td align="left">There are no image maps in the editor.</td>
+<td align="left">There are no image maps in CKEditor.</td>
 </tr>
 <tr>
 <td align="left">(g) Row and column headers shall be identified for data tables.</td>
@@ -128,13 +128,13 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(i) Frames shall be titled with text that facilitates frame identification and navigation.</td>
-<td align="left">Iframe elements in the editor, such as the WYSIWYG editing area and drop-down lists, are given screen reader accessible labels.</td>
+<td align="left">Iframe elements in CKEditor (such as the WYSIWYG editing area and drop-down lists) are given screen reader accessible labels.</td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">(j) Pages shall be designed to avoid causing the screen to flicker with a frequency greater than 2 Hz and lower than 55 Hz.</td>
 <td align="left">N/A</td>
-<td align="left">There is no blinking or flickering content in the editor. Moveable UI elements such as dialogs can only be moved in a smooth fashion by the user.</td>
+<td align="left">There is no blinking or flickering content in CKEditor. Moveable UI elements such as dialogs can only be moved in a smooth fashion by the user.</td>
 </tr>
 <tr>
 <td align="left">(k) A text-only page, with equivalent information or functionality, shall be provided to make a web site comply with the provisions of this part, when compliance cannot be accomplished in any other way. The content of the text-only page shall be updated whenever the primary page changes.</td>
@@ -143,7 +143,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(l) When pages utilize scripting languages to display content, or to create interface elements, the information provided by the script shall be identified with functional text that can be read by Assistive Technology.</td>
-<td align="left">All UI elements (e.g. toolbar buttons, dialog tabs) in the editor come with screen reader accessible labels.</td>
+<td align="left">All UI elements (e.g. toolbar buttons, dialog tabs) in CKEditor come with screen reader accessible labels.</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -153,18 +153,18 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(n) When electronic forms are designed to be completed on-line, the form shall allow people using Assistive Technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.</td>
-<td align="left"><ul><li>When the editor is embedded inside a form, <kbd>Tab</kbd> order works with the editor like with any other regular form input.</li> <li>The editor is designed to let screen readers read out its name.</li> <li>All form elements inside the editor dialogs have proper labels exposed to Assistive Technology. Additionally, all form elements can be reached with keyboard.</li></ul></td>
+<td align="left"><ul><li>When CKEditor is embedded inside a form, <kbd>Tab</kbd> order works with the editor like with any other regular form input.</li> <li>CKEditor is designed to let screen readers read out its name.</li> <li>All form elements inside the editor dialogs have proper labels exposed to Assistive Technology. Additionally, all form elements can be reached with keyboard.</li></ul></td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">(o) A method shall be provided that permits users to skip repetitive navigation links.</td>
-<td align="left"><ul> <li>Pressing <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> to change focus to the editor from the outside will put the focus directly into the editing area, instead of other focusable elements of the editor (e.g. toolbar buttons).</li> <li>The toolbar can be accessed with <kbd>Alt+F10</kbd> and it is divided into groups that can be navigated with the <kbd>Tab</kbd> key. The navigation inside those groups is possible with <kbd>Arrow</kbd> keys.</li> <li>CKEditor has keyboard shortcuts for most frequently used features.</li></ul></td>
+<td align="left"><ul> <li>Pressing <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> to change focus to CKEditor from the outside will put the focus directly into the editing area, instead of other focusable elements of the editor (e.g. toolbar buttons).</li> <li>The toolbar can be accessed with <kbd>Alt+F10</kbd> and it is divided into groups that can be navigated with the <kbd>Tab</kbd> key. The navigation inside those groups is possible with <kbd>Arrow</kbd> keys.</li> <li>CKEditor has keyboard shortcuts for most frequently used features.</li></ul></td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">(p) When a timed response is required, the user shall be alerted and given sufficient time to indicate more time is required.</td>
 <td align="left">N/A</td>
-<td align="left">There are no timeouts in CKEditor UI elements. The only time-affected elements of the editor UI are notifications for action statuses, which do not require any user input.</td>
+<td align="left">There are no timeouts in CKEditor UI elements. The only time-affected elements of the editor UI are notifications for action statuses which do not require any user input.</td>
 </tr>
 </tbody></table>
 
@@ -174,7 +174,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <th align="left">Criteria</th>
 <th align="left">Level of Support &amp; Supporting Features</th>
-<th align="left">Remarks and explanations</th>
+<th align="left">Remarks and Explanations</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -195,7 +195,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(d) Voice mail, messaging, auto-attendant, and interactive voice response telecommunications systems that require a response from a user within a time interval, shall give an alert when the time interval is about to run out, and shall provide sufficient time for the user to indicate more time is required.</td>
 <td align="left">N/A</td>
-<td align="left">Editor is not a telecommunications system. In addition, there are no timeouts in it.</td>
+<td align="left">CKEditor is not a telecommunications system. Additionally, there are no timeouts in it.</td>
 </tr>
 <tr>
 <td align="left">(e) Where provided, caller identification and similar telecommunications functions shall also be available for users of TTYs, and for users who cannot see displays.</td>
@@ -280,7 +280,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(e) Display or presentation of alternate text presentation or audio descriptions shall be user-selectable unless permanent.</td>
-<td align="left">Information contained in <a href="https://www.youtube.com/user/CKEditor/videos">screencasts showcasing CKEditor</a> is also available in the text form on the blog as they are just supplements to the textual content. Therefore text presentation is completely user-selectable as it is the primary source of content.</td>
+<td align="left">Information contained in <a href="https://www.youtube.com/user/CKEditor/videos">screencasts showcasing CKEditor</a> is also available in the text form on the blog as they are just supplements to textual content. Therefore text presentation is completely user-selectable as it is the primary source of content.</td>
 <td align="left"></td>
 </tr>
 </tbody></table>
@@ -337,27 +337,27 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(i) Products shall be designed to avoid causing the screen to flicker with a frequency greater than 2 Hz and lower than 55 Hz.</td>
 <td align="left">N/A</td>
-<td align="left">There is no blinking or flickering content in the editor. Moveable UI elements such as dialogs can only be moved in a smooth fashion by the user.</td>
+<td align="left">There is no blinking or flickering content in CKEditor. Moveable UI elements such as dialogs can only be moved in a smooth fashion by the user.</td>
 </tr>
 <tr>
 <td align="left">(j) (1) Products which are freestanding, non-portable, and intended to be used in one location and which have operable controls shall comply with the following: The position of any operable control shall be determined with respect to a vertical plane, which is 48 inches in length, centered on the operable control, and at the maximum protrusion of the product within the 48 inch length on products which are freestanding, non-portable, and intended to be used in one location and which have operable controls.</td>
 <td align="left">N/A</td>
-<td align="left">CKEditor is a software application, independent of the physical device which is used to run it.</td>
+<td align="left">CKEditor is a software application independent of the physical device which is used to run it.</td>
 </tr>
 <tr>
 <td align="left">(j)(2) Products which are freestanding, non-portable, and intended to be used in one location and which have operable controls shall comply with the following: Where any operable control is 10 inches or less behind the reference plane, the height shall be 54 inches maximum and 15 inches minimum above the floor.</td>
 <td align="left">N/A</td>
-<td align="left">CKEditor is a software application, independent of the physical device which is used to run it.</td>
+<td align="left">CKEditor is a software application independent of the physical device which is used to run it.</td>
 </tr>
 <tr>
 <td align="left">(j)(3) Products which are freestanding, non-portable, and intended to be used in one location and which have operable controls shall comply with the following: Where any operable control is more than 10 inches and not more than 24 inches behind the reference plane, the height shall be 46 inches maximum and 15 inches minimum above the floor.</td>
 <td align="left">N/A</td>
-<td align="left">CKEditor is a software application, independent of the physical device which is used to run it.</td>
+<td align="left">CKEditor is a software application independent of the physical device which is used to run it.</td>
 </tr>
 <tr>
 <td align="left">(j)(4) Products which are freestanding, non-portable, and intended to be used in one location and which have operable controls shall comply with the following: Operable controls shall not be more than 24 inches behind the reference plane.</td>
 <td align="left">N/A</td>
-<td align="left">CKEditor is a software application, independent of the physical device which is used to run it.</td>
+<td align="left">CKEditor is a software application independent of the physical device which is used to run it.</td>
 </tr>
 </tbody></table>
 
@@ -367,7 +367,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <th align="left">Criteria</th>
 <th align="left">Level of Support &amp; Supporting Features</th>
-<th align="left">Remarks and explanations</th>
+<th align="left">Remarks and Explanations</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -378,7 +378,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(b) If a product utilizes touchscreens or touch-operated controls, an input method shall be provided that complies with 1194.23 (k) (1) through (4).</td>
 <td align="left">N/A</td>
-<td align="left">CKEditor, as a software application, is independent of a device used as a primary input source.</td>
+<td align="left">CKEditor is a software application independent of the physical device which is used to run it.</td>
 </tr>
 <tr>
 <td align="left">(c) When biometric forms of user identification or control are used, an alternative form of identification or activation, which does not require the user to possess particular biological characteristics, shall also be provided.</td>
@@ -404,12 +404,12 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(a) At least one mode of operation and information retrieval that does not require user vision shall be provided, or support for Assistive Technology used by people who are blind or visually impaired shall be provided.</td>
 <td align="left">CKEditor is an application intended to be run inside a web browser, therefore its support for Assistive Technology is provided by the web browser.</td>
-<td align="left"><ul><li>CKEditor is optimized for use with Firefox (web browser) and JAWS (screen reader), as that environment is the most standards-compliant implementation of screen reading for the web. It is assumed that since the testing is done in the most standards-compliant solution, other standards-compliant environments should also work correctly.</li> <li>CKEditor uses WAI-ARIA bindings to improve its visibility to Assistive Technology.</li></ul></td>
+<td align="left"><ul><li>CKEditor is optimized for use with Firefox (web browser) and JAWS (screen reader), as that environment is the most standards-compliant implementation of screen reading for the Web. It is assumed that since the testing is done in the most standards-compliant solution, other standards-compliant environments should also work correctly.</li> <li>CKEditor uses WAI-ARIA bindings to improve its visibility to Assistive Technology.</li></ul></td>
 </tr>
 <tr>
 <td align="left">(b) At least one mode of operation and information retrieval that does not require visual acuity greater than 20/70 shall be provided in audio and enlarged print output working together or independently, or support for Assistive Technology used by people who are visually impaired shall be provided.</td>
 <td align="left">CKEditor is an application intended to be run inside a web browser, therefore its support for Assistive Technology is provided by the web browser.</td>
-<td align="left"><ul><li>CKEditor is optimized for use with Firefox (web browser) and JAWS (screen reader), as that environment is the most standards-compliant implementation of screen reading for the web. It is assumed that since the testing is done in the most standards-compliant solution, other standards-compliant environments should also work correctly.</li> <li>CKEditor uses WAI-ARIA bindings to improve its visibility to Assistive Technology.</li></ul></td>
+<td align="left"><ul><li>CKEditor is optimized for use with Firefox (web browser) and JAWS (screen reader), as that environment is the most standards-compliant implementation of screen reading for the Web. It is assumed that since the testing is done in the most standards-compliant solution, other standards-compliant environments should also work correctly.</li> <li>CKEditor uses WAI-ARIA bindings to improve its visibility to Assistive Technology.</li></ul></td>
 </tr>
 <tr>
 <td align="left">(c) At least one mode of operation and information retrieval that does not require user hearing shall be provided, or support for Assistive Technology used by people who are deaf or hard of hearing shall be provided.</td>
@@ -419,7 +419,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(d) Where audio information is important for the use of a product, at least one mode of operation and information retrieval shall be provided in an enhanced auditory fashion, or support for assistive hearing devices shall be provided.</td>
 <td align="left">N/A</td>
-<td align="left">There is no audio in the editor.</td>
+<td align="left">There is no audio in CKEditor.</td>
 </tr>
 <tr>
 <td align="left">(e) At least one mode of operation and information retrieval that does not require user speech shall be provided, or support for Assistive Technology used by people with disabilities shall be provided.</td>
@@ -458,3 +458,11 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <td align="left"></td>
 </tr>
 </tbody></table>
+
+## Related Features
+
+Refer to the following resources for more information about accessibility in CKEditor:
+
+* The [Accessibility Support in CKEditor](#!/guide/dev_a11y) article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The [Keyboard Shortcuts](#!/guide/dev_shortcuts) article lists all keyboard shortcuts supported in CKEditor.
+* The [Page Navigation Using the "Tab" Key](#!/guide/dev_tabindex) article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.

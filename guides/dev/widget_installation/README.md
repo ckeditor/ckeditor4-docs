@@ -15,13 +15,17 @@ All widget plugins are optional. If you want to add them to your CKEditor 4.3+ b
 
 ### Through CKBuilder
 
-The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page and find the widget plugins in the **Available Plugins** list on the right. The following widgets were introduced together with CKEditor 4.3:
+The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page and find the widget plugins in the **Available Plugins** list on the right. The following widgets were introduced in CKEditor 4.3 and above:
 
-* **[Enhanced Image](http://ckeditor.com/addon/image2)** &ndash; a plugin that lets you add captioned images with "click and drag" resizing.
-* **[Mathematical Formulas](http://ckeditor.com/addon/mathjax)** &ndash; a plugin that lets you add mathematical formulas written in TeX.
-* **[Placeholder](http://ckeditor.com/addon/placeholder)** &ndash; a plugin that lets you create non-editable text fragments.
-* **[Code Snippet](http://ckeditor.com/addon/codesnippet)** &ndash; a plugin that lets you insert rich code snippets with syntax highlighting into editor content.
-* **[Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi)** &ndash; a plugin that lets you insert rich code snippets with GeSHi syntax highlighting engine integrated.
+* **[Enhanced Image](http://ckeditor.com/addon/image2)** &ndash; A plugin that lets you add captioned images with "click and drag" resizing.
+* **[Mathematical Formulas](http://ckeditor.com/addon/mathjax)** &ndash; A plugin that lets you add mathematical formulas written in TeX.
+* **[Placeholder](http://ckeditor.com/addon/placeholder)** &ndash; A plugin that lets you create non-editable text fragments.
+* **[Code Snippet](http://ckeditor.com/addon/codesnippet)** &ndash; A plugin that lets you insert rich code snippets with syntax highlighting into editor content.
+* **[Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi)** &ndash; A plugin that lets you insert rich code snippets with GeSHi syntax highlighting engine integrated.
+* **[Media Embed](http://ckeditor.com/addon/embed)** &ndash; A plugin that lets you embed media resources (videos, images, tweets, etc.) hosted by other services directly in the editor.
+* **[Semantic Media Embed](http://ckeditor.com/addon/embedsemantic)** &ndash; A plugin that lets you embed media resources with semantic output (videos, images, tweets, etc.) hosted by other services directly in the editor.
+* **[Upload Image](http://ckeditor.com/addon/uploadimage)** &ndash; A plugin that enables support for uploading images that were dropped or pasted into the editor.
+* **[Upload Widget](http://ckeditor.com/addon/uploadwidget)** &ndash; A plugin that implements a base class for creating non-blocking, live upload of files while the user is editing content.
 
 <img src="guides/dev_widget_installation/add_widget_ckbuilder_3.png" alt="Selected Plugins and Available Plugins lists in CKBuilder" width="786" height="491">
 

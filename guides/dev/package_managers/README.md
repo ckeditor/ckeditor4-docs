@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # Installing CKEditor with Package Managers
 
 <p class="requirements">
-	Support for <a href="http://bower.io/">Bower</a> and <a href="https://getcomposer.org/">Composer</a> was introduced in <strong>CKEditor 4.3.3</strong>. You can now use them to install CKEditor releases.
+	Support for <a href="http://bower.io/">Bower</a> and <a href="https://getcomposer.org/">Composer</a> was introduced in <strong>CKEditor 4.3.3</strong> and for <a href="https://www.npmjs.com/">npm</a> in <strong>CKEditor 4.5.7</strong>. You can now use them to install CKEditor releases.
 </p>
 
 Both package managers will install the <code>standard-all</code> CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the <code>ckeditor.js</code> file and enabled. <a href="http://ckeditor.com/presets">See here</a> for a comparison of packages.
@@ -27,6 +27,41 @@ It is thus recommended to use of the following strategies:
 * [Using a custom configuration file](#!/guide/dev_configuration-section-using-a-custom-configuration-file).
 
 Both options are explained in more detail in the [Setting CKEditor Configuration](http://docs.ckeditor.com/#!/guide/dev_configuration) article.
+
+## npm
+
+This article assumes that you have **npm** already installed and added to your `PATH`. If this is not the case, please follow the [installation guide](https://docs.npmjs.com/getting-started/installing-node).
+
+### Usage
+
+In order to fetch the most recent build execute the following command:
+
+	npm install ckeditor
+
+By default CKEditor will be placed in the `node_modules/ckeditor` directory.
+
+### Adding CKEditor as Dependency Using the `package.json` File
+
+You may add CKEditor to the dependencies list using `--save` flag:
+
+    npm install ckeditor --save
+    
+or manually editing your `package.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
+
+	{
+		"name": "my-project",
+		"dependencies": {
+			"ckeditor": "4.5.7"
+		}
+	}
+
+Then execute the following command:
+
+	npm update
+	
+### Fetching Particular Build Preset
+
+Currently only the `standard-all` CKEditor installation preset can be fetched.
 
 ## Bower
 

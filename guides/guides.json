@@ -800,6 +800,14 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, compliance, accessibility, a11y, usability, section 508, wai, aria, wai-aria, 508, disability, disabled, high, contrast, browser, support, screenreader, screen, reader, voiceover, chromevox, jaws"
 					},
 					{
+						"name": "dev_wcag",
+						"url": "dev/wcag",
+						"title": "WCAG 2.0 Compliance",
+						"description": "CKEditor Compliance with Web Content Accessibility Guidelines (WCAG) 2.0.",
+						"meta_description": "CKEditor Compliance with Web Content Accessibility Guidelines (WCAG) 2.0.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, compliance, accessibility, a11y, usability, wcag, wai, aria, wai-aria, disability, disabled, high, contrast, browser, support, screenreader, screen, reader, voiceover, chromevox, jaws"
+					},
+					{
 						"name": "dev_license",
 						"url": "dev/license",
 						"title": "License",

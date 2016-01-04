@@ -17,12 +17,12 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </thead><tbody>
 <tr>
 <td align="left">(a) When software is designed to run on a system that has a keyboard, product functions shall be executable from a keyboard where the function itself or the result of performing a function can be discerned textually.</td>
-<td align="left">All CKEditor features can be reached with keyboard. There are also some keyboard shortcuts available for most frequently used features.</td>
+<td align="left">All CKEditor features can be reached with keyboard. <a href="#!/guide/dev_shortcuts">Keyboard shortcuts</a> are available for the most frequently used features.</td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">(b) Applications shall not disrupt or disable activated features of other products that are identified as accessibility features, where those features are developed and documented according to industry standards. Applications also shall not disrupt or disable activated features of any operating system that are identified as accessibility features where the application programming interface for those accessibility features has been documented by the manufacturer of the operating system and is available to the product developer.</td>
-<td align="left">CKEditor is an application intended to be run inside a web browser, therefore it does not communicate directly with Assistive Technology. It is, however, developed in a way that ensures its full cooperation with browser's accessibility features.</td>
+<td align="left">CKEditor is an application intended to be run inside a web browser, therefore it does not communicate directly with Assistive Technology. It is, however, developed in a way that ensures its full cooperation with browser accessibility features.</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -47,7 +47,11 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(g) Applications shall not override user selected contrast and color selections and other individual display attributes.</td>
-<td align="left"><ul> <li>CKEditor can use operating system's High Contrast mode if it is run in a compliant browser.</li> <li>CKEditor is stylable via user's stylesheets.</li></ul></td>
+<td align="left">
+<ul>
+<li>CKEditor can use operating system High Contrast mode if it is run in a compliant browser.</li>
+<li>CKEditor can by styled with user stylesheets.</li>
+</ul></td>
 <td align="left">CKEditor is optimized to use with Windows High Contrast mode.</td>
 </tr>
 <tr>
@@ -62,7 +66,11 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(j) When a product permits a user to adjust color and contrast settings, a variety of color selections capable of producing a range of contrast levels shall be provided.</td>
-<td align="left"><ul> <li>CKEditor uses the operating system's High Contrast mode if it is run in a compliant web browser.</li> <li>CKEditor is stylable via user's stylesheets.</li></ul></td>
+<td align="left">
+<ul>
+<li>CKEditor uses the operating system High Contrast mode if it is run in a compliant web browser.</li>
+<li>CKEditor can by styled with user stylesheets.</li>
+</ul></td>
 <td align="left">CKEditor is optimized to use with Windows High Contrast mode.</td>
 </tr>
 <tr>
@@ -98,12 +106,20 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(c) Web pages shall be designed so that all information conveyed with color is also available without color, for example from context or markup.</td>
-<td align="left"><ul> <li>Toolbar buttons will appear as textual buttons in operating system's High Contrast mode.</li> <li>Selection of text and background colors is still possible with textual labels in the color selection panels.</li></ul></td>
+<td align="left">
+<ul>
+<li>Toolbar buttons will appear as textual buttons in operating system High Contrast mode.</li>
+<li>Selection of text and background colors is still possible with textual labels in the color selection panels.</li>
+</ul></td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">(d) Documents shall be organized so they are readable without requiring an associated style sheet.</td>
-<td align="left"><ul> <li>CKEditor and its dialogs are still usable without cascading style sheets.</li> <li>Toolbar buttons appear as textual links without CSS.</li></ul></td>
+<td align="left">
+<ul>
+<li>CKEditor and its dialogs are still usable without cascading style sheets.</li>
+<li>Toolbar buttons appear as textual links without CSS.</li>
+</ul></td>
 <td align="left">CKEditor is optimized to use with Windows High Contrast mode.</td>
 </tr>
 <tr>
@@ -153,12 +169,21 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(n) When electronic forms are designed to be completed on-line, the form shall allow people using Assistive Technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.</td>
-<td align="left"><ul><li>When CKEditor is embedded inside a form, <kbd>Tab</kbd> order works with the editor like with any other regular form input.</li> <li>CKEditor is designed to let screen readers read out its name.</li> <li>All form elements inside the editor dialogs have proper labels exposed to Assistive Technology. Additionally, all form elements can be reached with keyboard.</li></ul></td>
+<td align="left">
+<ul>
+<li>When CKEditor is embedded inside a form, <kbd>Tab</kbd> order works with the editor like with any other regular form input.</li> <li>CKEditor is designed to let screen readers read out its name.</li>
+<li>All form elements inside the editor dialogs have proper labels exposed to Assistive Technology. Additionally, all form elements can be reached with keyboard.</li>
+</ul></td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">(o) A method shall be provided that permits users to skip repetitive navigation links.</td>
-<td align="left"><ul> <li>Pressing <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> to change focus to CKEditor from the outside will put the focus directly into the editing area, instead of other focusable elements of the editor (e.g. toolbar buttons).</li> <li>The toolbar can be accessed with <kbd>Alt+F10</kbd> and it is divided into groups that can be navigated with the <kbd>Tab</kbd> key. The navigation inside those groups is possible with <kbd>Arrow</kbd> keys.</li> <li>CKEditor has keyboard shortcuts for most frequently used features.</li></ul></td>
+<td align="left">
+<ul>
+<li>Pressing <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> to change focus to CKEditor from the outside will put the focus directly into the editing area, instead of other focusable elements of the editor (e.g. toolbar buttons).</li>
+<li>The toolbar can be accessed with <kbd>Alt+F10</kbd> and it is divided into groups that can be navigated with the <kbd>Tab</kbd> key. The navigation inside those groups is possible with <kbd>Arrow</kbd> keys.</li>
+<li><a href="#!/guide/dev_shortcuts">Keyboard shortcuts</a> are available for the most frequently used features.</li>
+</ul></td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -423,12 +448,22 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </tr>
 <tr>
 <td align="left">(e) At least one mode of operation and information retrieval that does not require user speech shall be provided, or support for Assistive Technology used by people with disabilities shall be provided.</td>
-<td align="left">All CKEditor features can be reached with keyboard and/or mouse. Keyboard shortcuts are available for the most frequently used features. The use of user speech is not required for operating the editor.</td>
+<td align="left">
+<ul>
+<li>All CKEditor features can be reached with keyboard and/or mouse.</li>
+<li><a href="#!/guide/dev_shortcuts">Keyboard shortcuts</a> are available for the most frequently used features.</li>
+<li>The use of user speech is not required for operating the editor.</li>
+</ul></td>
 <td align="left"></td>
 </tr>
 <tr>
 <td align="left">(f) At least one mode of operation and information retrieval that does not require fine motor control or simultaneous actions and that is operable with limited reach and strength shall be provided.</td>
-<td align="left">All CKEditor features can be reached with keyboard. Keyboard shortcuts are available for the most frequently used features. A mouse is thus not required for using the editor.</td>
+<td align="left">
+<ul>
+<li>All CKEditor features can be reached with keyboard and/or mouse.</li>
+<li><a href="#!/guide/dev_shortcuts">Keyboard shortcuts</a> are available for the most frequently used features.</li>
+<li>A mouse is thus not required for using the editor.</li>
+</ul></td>
 <td align="left"></td>
 </tr>
 </tbody></table>

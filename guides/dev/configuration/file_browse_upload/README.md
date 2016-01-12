@@ -13,7 +13,7 @@ Once properly set up, all file manager features will automatically become availa
 
 {@img image_dialog_browser_upload.png File browser features available for images in CKEditor}
 
-**Note:** Starting from CKEditor 4.5 it is also possible to [enable uploading pasted and dropped images](#!/guide/dev_upload_widget).
+**Note:** Starting from CKEditor 4.5 it is also possible to [enable uploading pasted and dropped images](#!/guide/dev_file_upload).
 
 ## Basic Configuration
 

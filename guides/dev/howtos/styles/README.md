@@ -64,4 +64,6 @@ For more details on the definition format and best practices on how to customize
 
 ## How Do I Use the Styles on Images, Tables or Other Elements?
 
-If you added some [custom style definitions](#!/guide/dev_howtos_styles-section-how-do-i-customize-the-styles-drop-down-list%3F) for objects such as tables or images, you need to select these objects first before you will be able to apply the style. Object styles are only shown in the **Styles** drop-down list and can be applied *after* the element was selected in the editor.
+If you added some [custom style definitions](#!/guide/dev_howtos_styles-section-how-do-i-customize-the-styles-drop-down-list%3F) for objects such as tables or images, you need to select these objects first before you will be able to apply the style. Object styles are only shown in the **Styles** drop-down list and can be applied *after* the element was selected in the editor as shown in the image below when the table is selected.
+
+{@img styles_03.png Object styles shown after selecting a table}

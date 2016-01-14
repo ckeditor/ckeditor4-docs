@@ -893,14 +893,6 @@
 						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, dialog, dialogs, window, popup, tab, tabs, default, resize, resizing, developer, tools"
 					},
 					{
-						"name": "dev_howtos_miscellaneous",
-						"url": "dev/howtos/miscellaneous",
-						"title": "Miscellaneous",
-						"description": "Miscellaneous most frequently asked question and answers.",
-						"meta_description": "Miscellaneous most frequently asked question and answers.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, write, writing, data, content, compress, compression, compressing, source, code"
-					},
-					{
 						"name": "dev_howtos_bugs_and_features",
 						"url": "dev/howtos/bugs_and_features",
 						"title": "Bugs and New Features",

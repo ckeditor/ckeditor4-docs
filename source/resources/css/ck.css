@@ -231,6 +231,17 @@ Also, make sure that there's reasonable vertical space.
 	}
 }
 
+@media all and (min-width: 1650px) and (min-height: 500px)
+{
+	#dev_section508-section-ckeditor-section-508-compliance + div.toc,
+	#dev_wcag-section-ckeditor-wcag-2\.0-compliance + div.toc
+	{
+		position: relative;
+		top:0;
+		right:0;
+	}
+}
+
 .guide-container img
 {
 	border: 1px solid #E8E8E8;
@@ -278,6 +289,7 @@ img.inline
 #center-container .guide-container table.wcag th {
 	border: 1px solid #f0f0f0;
 	padding: 3px 7px 2px;
+	font-size: 1.1em;
 }
 
 .guide-container .x-panel-body table.section508 tr:first-child td {

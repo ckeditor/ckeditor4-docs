@@ -93,9 +93,9 @@
 						"name": "dev_advanced_installation",
 						"url": "dev/advanced_installation",
 						"title": "Introduction",
-						"description": "More advanced installation tasks, like installing additional components, upgrading and building.",
-						"meta_description": "More advanced installation tasks, like installing additional components, upgrading and building.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, download, upgrade, upgrading, build, building, plugins, widgets, widget, plugin, skin, skins, source, code"
+						"description": "More advanced installation tasks, like installing additional components, upgrading, building and using package managers.",
+						"meta_description": "More advanced installation tasks, like installing additional components, upgrading, building and using package managers.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, npm, package, composer, bower, download, upgrade, upgrading, build, building, plugins, widgets, widget, plugin, skin, skins, source, code"
 					},
 					{
 						"title": "Installing Components",

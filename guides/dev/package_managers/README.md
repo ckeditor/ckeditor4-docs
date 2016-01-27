@@ -9,9 +9,9 @@ For licensing, see LICENSE.md.
 	Support for <a href="http://bower.io/">Bower</a> and <a href="https://getcomposer.org/">Composer</a> was introduced in <strong>CKEditor 4.3.3</strong> and for <a href="https://www.npmjs.com/">npm</a> in <strong>CKEditor 4.5.7</strong>. You can now use them to install CKEditor releases.
 </p>
 
-Both package managers will install the <code>standard-all</code> CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the <code>ckeditor.js</code> file and enabled. <a href="http://ckeditor.com/presets">See here</a> for a comparison of packages.
+The package managers will install the `standard-all` CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the `ckeditor.js` file and enabled. [See here](http://ckeditor.com/presets) for a comparison of packages.
 
-Additional plugins included in the <code>standard-all</code> preset can be enabled in your configuration by using the <a href="#!/api/CKEDITOR.config-cfg-extraPlugins">config.extraPlugins</a> option.
+Additional plugins included in the `standard-all` preset can be enabled in your configuration by using the CKEDITOR.config#extraPlugins option.
 
 For example, if you wanted to add the **Text Color** and **Background Color** buttons to your toolbar (the Standard preset does not include them by default), you should add the following to your custom editor configuration:
 
@@ -26,27 +26,27 @@ It is thus recommended to use of the following strategies:
 * [Defining configuration in-page](#!/guide/dev_configuration-section-defining-configuration-in-page).
 * [Using a custom configuration file](#!/guide/dev_configuration-section-using-a-custom-configuration-file).
 
-Both options are explained in more detail in the [Setting CKEditor Configuration](http://docs.ckeditor.com/#!/guide/dev_configuration) article.
+Both options are explained in more detail in the [Setting CKEditor Configuration](#!/guide/dev_configuration) article.
 
 ## npm
 
-This article assumes that you have **npm** already installed and added to your `PATH`. If this is not the case, please follow the [installation guide](https://docs.npmjs.com/getting-started/installing-node).
+This article assumes that you have **npm** already installed and added to your `PATH`. If this is not the case, please follow the official [npm installation guide](https://docs.npmjs.com/getting-started/installing-node).
 
 ### Usage
 
-In order to fetch the most recent build execute the following command:
+In order to fetch the most recent build, execute the following command:
 
 	npm install ckeditor
 
 By default CKEditor will be placed in the `node_modules/ckeditor` directory.
 
-### Adding CKEditor as Dependency Using the `package.json` File
+### Adding CKEditor as a Dependency Using the `package.json` File
 
-You may add CKEditor to the dependencies list using `--save` flag:
+You may add CKEditor to the dependencies list by using the `--save` flag:
 
     npm install ckeditor --save
     
-or manually editing your `package.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
+or by manually editing your `package.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
 
 	{
 		"name": "my-project",
@@ -59,23 +59,23 @@ Then execute the following command:
 
 	npm update
 	
-### Fetching Particular Build Preset
+### Fetching a Particular Build Preset
 
 Currently only the `standard-all` CKEditor installation preset can be fetched.
 
 ## Bower
 
-This article assumes that you have **Bower** already installed and added to your `PATH`. If this is not the case, please follow the [installation guide](http://bower.io/#installing-bower).
+This article assumes that you have **Bower** already installed and added to your `PATH`. If this is not the case, please follow the official [Bower installation guide](http://bower.io/#installing-bower).
 
 ### Usage
 
-In order to fetch the most recent build execute the following command:
+In order to fetch the most recent build, execute the following command:
 
 	bower install ckeditor
 
 By default CKEditor will be placed in the `bower_components/ckeditor` directory.
 
-### Adding CKEditor as Dependency Using the `bower.json` File
+### Adding CKEditor as a Dependency Using the `bower.json` File
 
 You may add CKEditor to the dependencies list inside your `bower.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
 
@@ -90,7 +90,7 @@ Then execute the following command:
 
 	bower update
 
-### Fetching Particular Build Preset
+### Fetching a Particular Build Preset
 
 By default only the `standard-all` CKEditor installation preset can be fetched. However, there is a workaround to install a diffrent package using the `#<preset>/<version>` syntax.
 
@@ -116,7 +116,7 @@ Then execute the following command:
 
 	composer update
 
-### Fetching Particular Build Preset
+### Fetching a Particular Build Preset
 
 There is a way for Composer to fetch CKEditor built with a desired preset. For each preset you can subscribe to the following branches:
 

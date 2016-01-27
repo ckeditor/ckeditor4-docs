@@ -198,7 +198,7 @@
 						"title": "Using Package Managers",
 						"description": "How to install CKEditor using package managers like Bower or Composer.",
 						"meta_description": "How to install CKEditor using package managers like Bower or Composer.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, package, manager, composer, bower, preset"
+						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, package, manager, composer, bower, npm, node, preset"
 					},
 					{
 						"name": "dev_basepath",

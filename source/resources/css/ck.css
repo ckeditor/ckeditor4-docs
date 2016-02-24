@@ -286,13 +286,16 @@ img.inline
 #center-container .guide-container table.section508 td,
 #center-container .guide-container table.section508 th,
 #center-container .guide-container table.wcag td,
-#center-container .guide-container table.wcag th {
+#center-container .guide-container table.wcag th,
+#center-container .guide-container table.a11ychecker td,
+#center-container .guide-container table.a11ychecker th {
 	border: 1px solid #f0f0f0;
 	padding: 3px 7px 2px;
 	font-size: 1.1em;
 }
 
-.guide-container .x-panel-body table.section508 tr:first-child td {
+.guide-container .x-panel-body table.section508 tr:first-child td,
+.guide-container .x-panel-body table.a11ychecker tr:first-child td {
 	font-weight:normal;
 	color:inherit;
 }

@@ -423,6 +423,14 @@
 								"title": "Accessibility Support",
 								"items": [
 									{
+										"name": "dev_accessibility_checker",
+										"url": "dev/features/accessibility_checker",
+										"title": "Accessibility Checker",
+										"description": "Check and fix accessibility issues in content.",
+										"meta_description": "Check and fix accessibility issues in content.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, accessibility, a11y, checker, check, issue, fix, fixes"
+									},
+									{
 										"name": "dev_shortcuts",
 										"url": "dev/features/shortcuts",
 										"title": "Keyboard Shortcuts",

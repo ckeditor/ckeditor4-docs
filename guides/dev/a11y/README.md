@@ -131,6 +131,7 @@ See the [working "Accessibility Support and Keyboard Shortcuts" sample](http://s
 
 Refer to the following resources for more information about accessibility in CKEditor:
 
+* The [Checking Content Accessibility](#!/guide/dev_accessibility_checker) article describes an innovative Accessibility Checker plugin that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
 * The [Keyboard Shortcuts](#!/guide/dev_shortcuts) article lists all keyboard shortcuts supported in CKEditor.
 * The [Page Navigation Using the "Tab" Key](#!/guide/dev_tabindex) article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The [CKEditor Section 508 Compliance](#!/guide/dev_section508) article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).

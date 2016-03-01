@@ -101,6 +101,10 @@ The list below contains available keyboard shortcuts grouped by problem areas.
     option, a drop-down list option, an elements path element, or a dialog window tab once selected.
 	Also enters a context menu submenu, if it is available.
 
+## Accessibility Checker Plugin
+
+Please refer to the [Keyboard Shortcuts](#!/guide/dev_accessibility_checker-section-keyboard-shortcuts) section of the [Checking Content Accessibility](#!/guide/dev_accessibility_checker) article.
+
 ## Accessibility and Keyboard Shortcuts Demo
 
 See the [working "Accessibility Support and Keyboard Shortcuts" sample](http://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
@@ -110,6 +114,7 @@ See the [working "Accessibility Support and Keyboard Shortcuts" sample](http://s
 Refer to the following resources for more information about accessibility in CKEditor:
 
 * The [Accessibility Support in CKEditor](#!/guide/dev_a11y) article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The [Checking Content Accessibility](#!/guide/dev_accessibility_checker) article describes an innovative Accessibility Checker plugin that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
 * The [Page Navigation Using the "Tab" Key](#!/guide/dev_tabindex) article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The [CKEditor Section 508 Compliance](#!/guide/dev_section508) article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
 * The [CKEditor WCAG 2.0 Compliance](#!/guide/dev_wcag) article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.

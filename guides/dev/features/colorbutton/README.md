@@ -29,7 +29,11 @@ Use the CKEDITOR.config.colorButton_colors configuration option to define a cust
 
 	config.colorButton_colors = 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16';
 
-This will cause the color list to only contain the seven colors listed above:
+Additionally, since CKEditor 4.5.8 you can also disable the "Automatic" option by setting the CKEDITOR.config.colorButton_enableAutomatic option to `false`.
+
+	config.colorButton_enableAutomatic = false;
+
+These settings will cause the color list to only contain the seven colors listed above, with no "Automatic" option available:
 
 {@img colorbutton_04.png The customized color list}
 

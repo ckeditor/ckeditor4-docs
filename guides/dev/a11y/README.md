@@ -119,19 +119,26 @@ Color blind users may have trouble accessing information that is conveyed with c
 
 The following features can be used by developers to ensure that content created with CKEditor is accessible.
 
+#### Accessibility Checker
+
+The innovative [Accessibility Checker](#!/guide/dev_accessibility_checker) tool lets you inspect the accessibility level of content created in the editor and fix reported issues, often fully automatically. It is a **must-have addon** for government institutions and companies that are often required by law to ensure the content they produce meets accessibility standards. See the [working demo](http://sdk.ckeditor.com/samples/accessibilitychecker.html) and get the plugin [here](http://ckeditor.com/addon/a11ychecker).
+
 #### Setting Language of Parts for Editor Content
 
 The optional Language plugin, introduced in CKEditor 4.3, implements the [WCAG 3.1.2 Language of Parts](http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) specification. It lets you assign one of the pre-configured languages to a text selection. See the [working demo](http://sdk.ckeditor.com/samples/language.html) and get the plugin [here](http://ckeditor.com/addon/language).
 
-## Accessibility Features Demo
+## Accessibility Features Demos
 
-See the [working "Accessibility Support and Keyboard Shortcuts" sample](http://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
+See the following working samples to check some accessibility-related features of CKEditor:
+
+* The ["Accessibility Support and Keyboard Shortcuts" sample](http://sdk.ckeditor.com/samples/accessibility.html) showcases such features as the Accessibility Help dialog or the usage of keyboard shortcuts.
+* The ["Accessibility Checker" sample](http://sdk.ckeditor.com/samples/accessibilitychecker.html) shows how to detect and fix accessibility issues in your editor content.
 
 ## Related Features
 
 Refer to the following resources for more information about accessibility in CKEditor:
 
-* The [Checking Content Accessibility](#!/guide/dev_accessibility_checker) article describes an innovative Accessibility Checker plugin that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
+* The [Managing Content Accessibility with Accessibility Checker](#!/guide/dev_accessibility_checker) article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
 * The [Keyboard Shortcuts](#!/guide/dev_shortcuts) article lists all keyboard shortcuts supported in CKEditor.
 * The [Page Navigation Using the "Tab" Key](#!/guide/dev_tabindex) article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The [CKEditor Section 508 Compliance](#!/guide/dev_section508) article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).

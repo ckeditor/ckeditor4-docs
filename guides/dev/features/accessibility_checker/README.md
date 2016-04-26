@@ -1,4 +1,4 @@
-# Checking Content Accessibility
+# Managing Content Accessibility with Accessibility Checker
 
 <div class="requirements">
 <p>
@@ -6,6 +6,9 @@
 </p>
 <p>
 	Accessibility Checker is available under a <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> or commercial license. <a href="https://cksource.com/contact">Contact</a> us for more details.
+</p>
+<p>
+	Quail, the default accessibility tests library, requires <strong>jQuery 1.x</strong> to run. You thus need to add jQuery 1.x to any site that is going to use Accessibility Checker.
 </p>
 </div>
 
@@ -272,6 +275,10 @@ Accessibility Checker comes with good keyboard support. The following table desc
 </table>
 
 Please note that the predefined keyboard shortcuts can be changed with the custom configuration.
+
+## Accessibility Checker Demo
+
+See the [working "Accessibility Checker" sample](http://sdk.ckeditor.com/samples/accessibilitychecker.html) where you can try how to detect and fix accessibility issues in your editor content.
 
 ## Related Features
 

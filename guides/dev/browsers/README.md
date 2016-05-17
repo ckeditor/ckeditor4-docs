@@ -32,12 +32,13 @@ These browsers are generally fully compatible with CKEditor with just a few exce
 * There is no support for uploading pasted and dropped files (required APIs are not available).
 * In Internet Explorer 8.0 the [Mathematical Formulas](http://ckeditor.com/addons/search/plugins/mathjax), [Code Snippet](http://ckeditor.com/addon/codesnippet), [Embed](http://ckeditor.com/addon/embed) and [Semantic Embed](http://ckeditor.com/addon/embedsemantic) widgets are not supported.
 * In Internet Explorer 8.0 there is no support for nested [widgets](#!/guide/dev_widgets).
+* In Internet Explorer 8.0 there is no support for [Accessibility Checker](#!/guide/dev_accessibility_checker).
 
 ### Internet Explorer 9.0 Quirks and Compatibility Modes
 
 Using both modes is highly unrecommended, because they put the browser in legacy modes which are very limited. Hence, the level of support is limited, too:
 
-* In Quirks Mode most of the new features are not going to work including [inline editing](http://docs.ckeditor.com/#!/guide/dev_inline) and [widgets](http://docs.ckeditor.com/#!/guide/dev_widgets). We recommend checking whether particular features work acceptably prior to incorporating them.
+* In Quirks Mode most of the new features are not going to work including [inline editing](http://docs.ckeditor.com/#!/guide/dev_inline), [widgets](http://docs.ckeditor.com/#!/guide/dev_widgets) and [Accessibility Checker](#!/guide/dev_accessibility_checker). We recommend checking whether particular features work acceptably prior to incorporating them.
 * In Compatibility Mode most features work similarly to Internet Explorer 8.0, but the user interface looks worse.
 
 ### A Word About Mobile Environments

@@ -8,7 +8,7 @@
 	Accessibility Checker is available under a <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> or commercial license. <a href="https://cksource.com/contact">Contact</a> us for more details.
 </p>
 <p>
-	Quail, the default accessibility tests library, requires <strong>jQuery 1.x</strong> to run. You thus need to add jQuery 1.x to any site that is going to use Accessibility Checker.
+	Quail, the default accessibility tests library, requires <strong>jQuery 1.x or later</strong> to run. You thus need to add jQuery 1.x (or later) to any site that is going to use Accessibility Checker.
 </p>
 </div>
 

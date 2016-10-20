@@ -27,7 +27,7 @@ If you use the [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/
 	</head>
 
 <p class="tip">
-    You can preview themes in the Code Snippet sample that is added to the <code>samples</code> folder of each CKEditor build that includes the plugin. You can also browse them on the <a href="http://highlightjs.org/static/test.html">highlight.js demo page</a>.
+    You can preview themes in the <a href="http://sdk.ckeditor.com/samples/codesnippet.html">"Inserting Code Snippets" sample</a>. You can also browse them on the <a href="http://highlightjs.org/static/test.html">highlight.js demo page</a>.
 </p>
 
 ### Target Page
@@ -57,7 +57,7 @@ In [classic editor](#!/guide/dev_framed) use the CKEDITOR.config.codeSnippet_the
 
     config.codeSnippet_theme = 'school_book';
 
-For a complete list of available themes see the Code Snippet sample that is added to the <code>samples</code> folder of each CKEditor build that includes the plugin or the [highlight.js's demo page](http://highlightjs.org/static/test.html).
+For a complete list of available themes see the [Inserting Code Snippets sample](http://sdk.ckeditor.com/samples/codesnippet.html) or the [highlight.js's demo page](http://highlightjs.org/static/test.html).
 
 {@img codesnippet_05.png}
 

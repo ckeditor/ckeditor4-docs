@@ -39,13 +39,18 @@ Both widgets can be easily [configured](#!/api/CKEDITOR.config-cfg-embed_provide
 
 ## Adjusting the Default Content Provider
 
-The default configuration of the Media Embed and Semantic Media Embed plugins uses the public service provided by [Iframely](https://iframely.com/). By default an anonymized API endpoint is configured which allows for 1000 hits a month. For better control of API usage it is recommended to <a href="https://iframely.com/plans">set up an account at Iframely</a>. The free "Developer" tier comes with similar set of features and restrictions.
+The default configuration of the Media Embed and Semantic Media Embed plugins uses the public service provided by [Iframely](https://iframely.com/). By default an anonymized API endpoint is configured which allows for 1000 hits a month. For better control of API usage it is recommended to [set up an account at Iframely](https://iframely.com/plans) and use your private API key. The free "Developer" tier comes with similar set of features and restrictions.
 
 Iframely can also be configured to be hosted on your server &mdash; you can read more about it in the ["Self-host Iframely APIs"](https://iframely.com/docs/host) article.
 
-<p class="tip">
-	The default configuration using the public Iframely service does not support SSL. If you need SSL support, you should either host Iframely locally on your server or use the public service through the <a href="http://iframe.ly">iframe.ly</a> domain with your own API key. 
-</p>
+<div class="tip">
+	<p>
+		The default configuration using the public Iframely service does not support SSL. If you need SSL support, you should either host Iframely locally on your server or use the public service through the <a href="http://iframe.ly">iframe.ly</a> domain with your own API key.
+	</p>
+	<p>
+		Some services (like Google Maps) require setting up your API key, too. The default account used by the plugins is just for demonstration purposes. In Google API Settings, "Accept requests from these HTTP referrers (web sites)" is set to accept only <code>ckeditor.com</code>.
+	</p>
+</div>
 
 ## Automatic Embedding on Paste
 

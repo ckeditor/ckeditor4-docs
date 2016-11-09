@@ -99,10 +99,10 @@ Since widgets are a lot more complex structures than standard content, only clas
 Sample widget styles:
 
 	// Enhanced Image (http://ckeditor.com/addon/image2) style.
-	{ type: 'widget', widget: 'image', attributes: { 'class': 'bigBanner' } }
+	{ name: 'Banner', type: 'widget', widget: 'image', attributes: { 'class': 'bigBanner' } }
 
 	// Code snippet (http://ckeditor.com/addon/codesnippet) style.
-	{ type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
+	{ name: 'Narrow Code', type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
 
 If you are interested in seeing how this works in practice, see the [little demo of widget styling](http://ckeditor.com/tmp/4.4.0/widget-styles.html) that we prepared. It contains some further explanations as well as a working editor instance that includes the Enhanced Image and Code Snippet widgets with additional styling.
 

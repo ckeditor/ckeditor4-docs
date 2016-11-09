@@ -194,6 +194,10 @@ If for any reason you need to do this, note that the path to the connector must 
 	config.extraPlugins = 'uploadimage';
 	config.uploadUrl = '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json';
 
+## Dropping and Pasting Upload Demo
+
+See the [working "Uploading Dropped and Pasted Images" sample](http://sdk.ckeditor.com/samples/fileupload.html#uploading-dropped-and-pasted-images) for an example of the Upload Image plugin integration with CKEditor and CKFinder.
+
 ## Further Reading
 
 For more information on pasting, dropping and uploading files with CKEditor refer to the following articles:

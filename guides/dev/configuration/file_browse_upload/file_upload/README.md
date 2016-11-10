@@ -220,7 +220,7 @@ For more information on pasting, dropping and uploading files with CKEditor refe
 
 * [File Manager Integration](#!/guide/dev_file_browse_upload)
 * [Advanced File Manager Configuration](#!/guide/dev_file_manager_configuration)
-* [CKFinder Integration](#!/guide/ckfinder_integration)
+* [CKFinder Integration](#!/guide/dev_ckfinder_integration)
 * [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)
 * [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
 * [Dropping and Pasting into Editor Content](#!/guide/dev_drop_paste)

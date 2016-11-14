@@ -83,6 +83,14 @@
 						"description": "How to retrieve and save CKEditor data.",
 						"meta_description": "How to retrieve and save CKEditor data.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
+					},
+					{
+						"name": "dev_example_setups",
+						"url": "dev/example_setups",
+						"title": "Example CKEditor Setups",
+						"description": "Setups showcased on demo pages explained in details.",
+						"meta_description": "Setups showcased on demo pages explained in details.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
 					}
 				]
 			},

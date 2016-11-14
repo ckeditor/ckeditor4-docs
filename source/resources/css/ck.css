@@ -299,3 +299,29 @@ img.inline
 	font-weight:normal;
 	color:inherit;
 }
+
+.guide-container .responsive img {
+	width: 100%;
+	height: auto;
+}
+
+.guide-container .x-panel-body ul > li > ul {
+	margin-bottom: 0;
+}
+
+.guide-container .x-panel-body ol > li > ol {
+	margin-bottom: 0;
+}
+
+.guide-container td.hints-benchmark {
+	width:210px;
+}
+
+.guide-container td.hints-result {
+	width:110px;
+}
+
+#center-container .guide-container table.hints td, #center-container .guide-container table.hints th {
+	padding:8px;
+	text-align: left;
+}

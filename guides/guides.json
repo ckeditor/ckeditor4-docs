@@ -365,6 +365,14 @@
 										"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, bold, italic, underline, strike, strikethrough, subscript, superscript, formatting, format, text, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 									},
 									{
+										"name": "dev_copyformatting",
+										"url": "dev/features/copyformatting",
+										"title": "Copying Text Formatting",
+										"description": "Copying document formatting with the Copy Formatting feature.",
+										"meta_description": "Copying document formatting with the Copy Formatting feature.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, formatting, style, styles, text"
+									},
+									{
 										"name": "dev_removeformat",
 										"url": "dev/features/removeformat",
 										"title": "Removing Text Formatting",

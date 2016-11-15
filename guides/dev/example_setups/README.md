@@ -4,7 +4,7 @@ For licensing, see LICENSE.md.
 -->
 # Example CKEditor Setups
 
-This article explains in details sample editor configurations on [CKEditor Home page](http://ckeditor.com) and [CKEditor Features page](http://ckeditor.com/features).
+This article is a detailed explanation of sample editor configurations on [CKEditor Home page](http://ckeditor.com) and [CKEditor Features page](http://ckeditor.com/features).
 
 ## Article Editor
 
@@ -20,7 +20,7 @@ The Article Editor is based on the [Standard package](http://ckeditor.com/downlo
    * [Enhanced Image](http://ckeditor.com/addon/image2) to provide captioned images.
    * [Upload Image](http://ckeditor.com/addon/uploadimage), [Upload File](http://ckeditor.com/addon/uploadfile) to support file uploads via drag&drop and pasting images from clipboard.
  * Adjusted the toolbar configuration to display buttons in a single row.
- * Adjusted CSS styles, including using Roboto font from [Google Fonts](https://developers.google.com/fonts/docs/getting_started).
+ * Adjusted CSS styles, including usage of Roboto font from [Google Fonts](https://developers.google.com/fonts/docs/getting_started).
 
 <div class="responsive">
 {@img editor1.png Article Editor}
@@ -28,7 +28,7 @@ The Article Editor is based on the [Standard package](http://ckeditor.com/downlo
 
 ## Document Editor
 
-The Document Editor demo showcases an editor designed for creating documents. Documents are usually later printed or exported into PDF files using tools like [wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf) or [PhantomJS](https://github.com/ariya/phantomjs) (note: PhantomJS 2.x has currently a [known zoom issue](https://github.com/ariya/phantomjs/issues/13997)). 
+The Document Editor demo showcases an editor designed for creating documents which are usually later printed or exported into PDF files using tools like [wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf) or [PhantomJS](https://github.com/ariya/phantomjs) (note: PhantomJS 2.x has currently a [known zoom issue](https://github.com/ariya/phantomjs/issues/13997)). 
 
 <p class="tip">
 To try out this configuration visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository.
@@ -38,10 +38,10 @@ The Document Editor is based on the [Full package](http://ckeditor.com/download)
 
  * Added three additional plugins:
    * [Table Resize](http://ckeditor.com/addon/tableresize) to enable table columns resizing.
-   * [Upload Image](http://ckeditor.com/addon/uploadimage), [Upload File](http://ckeditor.com/addon/uploadfile) to support file uploads via drag&drop and pasting images from clipboard.
+   * [Upload Image](http://ckeditor.com/addon/uploadimage), [Upload File](http://ckeditor.com/addon/uploadfile) to support file uploads via drag & drop and pasting images from clipboard.
  * Adjusted the toolbar configuration to display buttons in a single row.
- * Reduced the number of buttons in the toolbar as full preset comes with plenty of them. 
- * Adjusted CSS styles, to render the document in a way that resembles real sheet of paper.
+ * Reduced the number of buttons in the toolbar (full preset comes with plenty of them). 
+ * Adjusted CSS styles, to render the document in a way that resembles a real sheet of paper.
 
 
 <div class="responsive">
@@ -76,7 +76,7 @@ The Developer Site Editor is based on the [Standard package](http://ckeditor.com
  * Added five additional plugins:
    * [Code Snippet](http://ckeditor.com/addon/codesnippet) and [Mathematical Formulas](http://ckeditor.com/addon/mathjax) for inserting code snippets and mathematical formulas.
    * [Enhanced Image](http://ckeditor.com/addon/image2) to provide captioned images.
-   * [Upload Image](http://ckeditor.com/addon/uploadimage), [Upload File](http://ckeditor.com/addon/uploadfile) to support file uploads via drag&drop and pasting images from clipboard.
+   * [Upload Image](http://ckeditor.com/addon/uploadimage), [Upload File](http://ckeditor.com/addon/uploadfile) to support file uploads via drag & drop and pasting images from clipboard.
  * Adjusted the toolbar configuration to display buttons in a single row, also removed a few buttons.
 
 <div class="responsive">
@@ -85,13 +85,13 @@ The Developer Site Editor is based on the [Standard package](http://ckeditor.com
 
 ## Drag & Drop
 
-The Drag&Drop demo showcases possible usage of CKEditor interface for handling drag and drop operations.
+The Drag & Drop demo showcases possible usage of CKEditor interface for handling drag and drop operations.
 
 <p class="tip">
 To try out this configuration visit the <a href="http://sdk.ckeditor.com/samples/draganddrop.html">CKEditor SDK</a> website.
 </p>
 
-The Drag&Drop sample allows you to drag contacts from the list on the right-hand side to the inline editor on the left-hand side. They are inserted into the editor as custom [widgets](#!/guide/dev_widgets) representing the h-card microformat.
+The Drag & Drop sample allows you to drag contacts from the list on the right-hand side to the inline editor on the left-hand side. They are inserted into the editor as custom [widgets](#!/guide/dev_widgets) representing the h-card microformat.
 
 <div class="responsive">
 {@img editor5.png Drag & Drop}
@@ -113,12 +113,12 @@ To try out this configuration visit the <a href="http://sdk.ckeditor.com/samples
 
 All setups above used some additional plugins which are not included by default in basic/standard/full distributions. 
 
-There are multiple ways of loading CKEditor library inside an application, each of them having its pros and cons, that are especially important when more and more multiple additional plugins are loaded.
+There are multiple ways of loading CKEditor library inside an application (each of them having its pros and cons) that are especially important when multiple additional plugins are loaded.
 For better understanding of key differences also read [CKEditor Best Practices](#!/guide/dev_best_practices) and [Advanced Installation Concepts](#!/guide/dev_advanced_installation>).
 
 ### Manual download & installation of additional plugins (not recommended)
 
-Although at first glance it looks like the simplest way of adding plugins to CKEditor, it is not only inefficient but also may result
+Although at a first glance it looks like the simplest way of adding plugins to CKEditor, it is not only inefficient but also may result
 in headache when trying to add a plugin A, that requires plugin B, that requires plugin C (...and so on).
 
 In a brief summary it involves the following steps:
@@ -146,7 +146,7 @@ The easiest way of using CKEditor if additional 3rd party plugins are not used. 
     <li>Adding a <code>&lt;script&gt;</code> tag that loads ckeditor.js from CDN. For more information read <a href="http://cdn.ckeditor.com/">CDN documentation</a>.</li>
     <li>In case of using 3rd party plugins:
         <ol>
-            <li>Downloading them manually from the <a href="http://ckeditor.com/addons/plugins/all">addons repository</a>.</li>
+            <li>Downloading them manually from the <a href="http://ckeditor.com/addons/plugins/all">add-ons repository</a>.</li>
             <li>Downloading plugins requirements manually.</li>
         </ol>
      </li>

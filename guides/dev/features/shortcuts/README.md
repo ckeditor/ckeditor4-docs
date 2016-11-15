@@ -76,6 +76,12 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 * <kbd>Ctrl+I</kbd> &ndash; Applies *italics* formatting to a text fragment.
 * <kbd>Ctrl+U</kbd> &ndash; Applies <span style="text-decoration: underline;">underline</span> formatting to a text fragment.
 
+### Copy Formatting
+
+* <kbd>Ctrl+Shift+C</kbd> &ndash; Copies the inline formatting from a text fragment and enables the sticky mode.
+* <kbd>Ctrl+Shift+V</kbd> &ndash; Applies the previously copied inline formatting to a text fragment.
+* <kbd>Esc</kbd> &ndash; Disables the sticky mode.
+
 ## Rich Text
 
 * <kbd>Ctrl+L</kbd> &ndash; Opens the **Link** dialog window.

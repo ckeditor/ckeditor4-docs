@@ -87,7 +87,7 @@ There are three standard style types, each one related to the element used in th
 
 ## Widget Styles
 
-[Widgets](#!/guide/dev_widgets) are special rich content units and therefore standard styles (like block or object ones) cannot be applied to them. Only styles of a special type (called simply `'widget'`) work with widgets.
+[Widgets](#!/guide/dev_widgets) are special rich content units and therefore standard styles (like block or object ones) cannot be applied to them. Only styles of a special type (called `'widget'`) work with widgets.
 
 To define a widget style you need to specify two additional properties in your style definition:
 
@@ -101,12 +101,15 @@ Sample widget styles:
 	// Enhanced Image (http://ckeditor.com/addon/image2) style.
 	{ name: 'Banner', type: 'widget', widget: 'image', attributes: { 'class': 'bigBanner' } }
 
-	// Code snippet (http://ckeditor.com/addon/codesnippet) style.
+	// Code Snippet (http://ckeditor.com/addon/codesnippet) style.
 	{ name: 'Narrow Code', type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
 
-If you are interested in seeing how this works in practice, see the [little demo of widget styling](http://sdk.ckeditor.com/samples/styles.html) that we prepared. It contains some further explanations as well as a working editor instance that includes the Enhanced Image, Embed Semantic, Code Snippet and Mathematical Formulas widgets with additional styling.
-There are some known limitations for styling widgets. Widget styles for a specific widget type cannot be exclusive which means there is now way to create styles which will disable other styles when applied (see [Allow to link widget style definitions, so applying one style might disable the other](http://dev.ckeditor.com/ticket/13818) for more details). The other limitation
-concerns only Placeholder widgets, which due to its simple nature does not store and preserved classes or styles when editor is switched to source mode.
+To see how this works in practice, refer to the [Widget Styles](http://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the [captioned image](#!/guide/dev_captionedimage), [embedded media resources](#!/guide/dev_media_embed) and [mathematical formulas](#!/guide/dev_mathjax) widgets with additional styling.
+
+There are some known limitations for styling widgets:
+
+* Widget styles for a specific widget type cannot be exclusive which means there is no way to create styles that will disable other styles when applied (see [Ticket #13818](http://dev.ckeditor.com/ticket/13818) for more details).
+* Due to the simplicity of the [Placeholder](#!/guide/dev_placeholder) widget it does not store and preserve classes or styles when the editor is switched to source mode.
 
 ## The Stylesheet Parser Plugin
 

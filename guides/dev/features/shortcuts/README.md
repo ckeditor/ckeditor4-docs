@@ -8,7 +8,10 @@ For licensing, see LICENSE.md.
 Many functions in CKEditor have their equivalent keyboard shortcuts. This is one of the reasons why working with the editor is
 simple and efficient.
 
-The list below contains available keyboard shortcuts grouped by problem areas.
+The list below contains available keyboard shortcuts grouped by problem areas. You can also learn about keyboard shortcuts directly in the editor:
+
+* Through the [Accessibility Instructions](#!/guide/dev_a11y-section-accessibility-instructions-dialog-window) dialog window.
+* Through toolbar button tooltips and context menu entries (CKEditor 4.6 or later).
 
 <div class="requirements">
 	<p>

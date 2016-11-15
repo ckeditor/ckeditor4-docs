@@ -63,7 +63,13 @@ Once the editor is in focus (i.e. it is an active element for the user), its ent
 * <kbd>Alt+F11</kbd> &ndash; Moves the focus to the elements path. <kbd>Enter</kbd> and <kbd>Esc</kbd> can be used here as well.
 * <kbd>Tab</kbd>, <kbd>Shift+Tab</kbd> and <kbd>Arrow</kbd> keys &ndash; Move through toolbar groups and buttons as well as context menu options and dialog window elements.
 
-There are plenty other keyboard shortcuts that can be utilized. For most editor functions we have chosen the key combinations that the user will naturally use. Everything else is clarified in the [documentation](#!/guide/dev_shortcuts) as well as the **Accessibility Instructions** dialog window (<kbd>Alt+0</kbd>). You can also try out the [working demo](http://sdk.ckeditor.com/samples/accessibility.html). The editor usage through the keyboard is most intuitive and as straightforward as possible.
+There are plenty other keyboard shortcuts that can be utilized. For most editor functions we have chosen the key combinations that the user will naturally use. Everything else is clarified in the [documentation](#!/guide/dev_shortcuts) as well as the **Accessibility Instructions** dialog window (<kbd>Alt+0</kbd>).
+
+Additionally, for CKEditor 4.6 and later, all keyboard shortcuts available for a particular action or command are displayed directly in the editor, in toolbar button tooltips or context menu entries.
+
+{@img keyboardshortcuts_01.png Keyboard shortcuts visible in the editor context menu}
+
+You can also try out the [working demo](http://sdk.ckeditor.com/samples/accessibility.html). The editor usage through the keyboard is most intuitive and as straightforward as possible.
 
 ### Assistive Technology Support
 
@@ -91,7 +97,7 @@ In CKEditor this includes the toolbar and bottom bar, panels and drop-down lists
 
 Instead of bothering the user and forcing to hear lots of instructions every time an editor instance is reached, in CKEditor we simply remind the keyboard shortcut required to get help. When a user presses the <kbd>Alt+0</kbd> keyboard shortcut, the **Accessibility Instructions** dialog window is opened. It contains some detailed information about the accessibility features of CKEditor, including all keyboard shortcuts needed to navigate the editor and use its features.
 
-{@img a11y_01.png Accessibility Instructions dialog window}
+{@img a11yhelp_01.png Accessibility Instructions dialog window}
 
 Thanks to this feature users do not need to be trained or pointed to documentation to understand how to use the editor, as the help is there whenever they need it.
 

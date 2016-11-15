@@ -104,7 +104,9 @@ Sample widget styles:
 	// Code snippet (http://ckeditor.com/addon/codesnippet) style.
 	{ name: 'Narrow Code', type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
 
-If you are interested in seeing how this works in practice, see the [little demo of widget styling](http://ckeditor.com/tmp/4.4.0/widget-styles.html) that we prepared. It contains some further explanations as well as a working editor instance that includes the Enhanced Image and Code Snippet widgets with additional styling.
+If you are interested in seeing how this works in practice, see the [little demo of widget styling](http://sdk.ckeditor.com/samples/styles.html) that we prepared. It contains some further explanations as well as a working editor instance that includes the Enhanced Image, Embed Semantic, Code Snippet and Mathematical Formulas widgets with additional styling.
+There are some known limitations for styling widgets. Widget styles for a specific widget type cannot be exclusive which means there is now way to create styles which will disable other styles when applied (see [Allow to link widget style definitions, so applying one style might disable the other](http://dev.ckeditor.com/ticket/13818) for more details). The other limitation
+concerns only Placeholder widgets, which due to its simple nature does not store and preserved classes or styles when editor is switched to source mode.
 
 ## The Stylesheet Parser Plugin
 

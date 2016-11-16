@@ -19,7 +19,7 @@ The optional [Enhanced Image](http://ckeditor.com/addon/image2) plugin introduce
 
 Below you can see a captioned image inserted into the editor content. When you hover it with your mouse, the editable areas (the image and its caption) become outlined. The resizing and positioning handles along with their tooltips will appear, too.
 
-{@img captionedimage_01.png}
+{@img captionedimage_01.png Captioned image}
 
 ## File Browser Integration
 
@@ -27,7 +27,7 @@ The Enhanced Image plugin can be [integrated with a file browser](#!/guide/dev_f
 
 Below you can see the plugin's Image Properties dialog window with the file browser integrated. The Browse Server button as well as the Upload tab will appear.
 
-{@img captionedimage_02.png}
+{@img captionedimage_02.png File manager integrated with Enhanced Image dialog}
 
 ## Image Alignment and Classes
 
@@ -58,6 +58,16 @@ Do remember, though, that you need to define the CSS rules for these classes in 
 * For [inline editor](#!/guide/dev_inline) the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">`, i.e. within the `<head>` section of the page.
 
 See the following [showcase](http://ckeditor.com/tmp/4.4.0/widget-styles.html) of captioned image styling and alignment done through classes.
+
+## Making Alternative Text Mandatory
+
+Since CKEditor 4.6 it is possible to make setting alternative text for captioned images obligatory for the users. This helps increase image [accessibility](#!/guide/dev_a11y) and is required by several accessibility standards.
+
+To make alternative text mandatory, set the CKEDITOR.config.image2_altRequired configuration option:
+
+    config.image2_altRequired = true;
+
+{@img captionedimage_03.png Alternative text required by the Enhanced Image dialog}
 
 ## Captioned Image Demo 
 

@@ -8,7 +8,7 @@ This article is a detailed explanation of sample editor configurations shown on 
 
 ## Article Editor
 
-The Article Editor demo showcases an editor designed mainly for writing web text content like blog posts, articles etc. 
+The Article Editor demo showcases an editor designed mainly for writing web text content like blog posts, articles etc.
 
 <p class="tip">
   Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
@@ -29,7 +29,7 @@ The Article Editor is based on the [Standard package](http://ckeditor.com/downlo
 
 ## Document Editor
 
-The Document Editor demo showcases a more robust editor designed for creating documents which are usually later printed or exported to PDF files using tools like [wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf) or [PhantomJS](https://github.com/ariya/phantomjs) (note: PhantomJS 2.x currently has a [known zoom issue](https://github.com/ariya/phantomjs/issues/13997)). 
+The Document Editor demo showcases a more robust editor designed for creating documents which are usually later printed or exported to PDF files using tools like [wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf) or [PhantomJS](https://github.com/ariya/phantomjs) (note: PhantomJS 2.x currently has a [known zoom issue](https://github.com/ariya/phantomjs/issues/13997)).
 
 <p class="tip">
   Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
@@ -52,7 +52,7 @@ The Document Editor is based on the [Full package](http://ckeditor.com/download)
 ## Inline Editor
 
 The Inline Editor demo showcases [inline editing](#!/guide/dev_inline) that allows you to edit any element on the page in-place.
- 
+
 <p class="tip">
   Visit the <a href="http://sdk.ckeditor.com/samples/inline.html">CKEditor SDK</a> website to try out this configuration.
 </p>
@@ -65,8 +65,8 @@ Inline editor provides a real WYSIWYG experience "out of the box" because unlike
 
 ## Developer Site Editor
 
-The Developer Site Editor demo showcases a sample editor for technical websites. The most interesting features presented in this configuration are [Code Snippets](#!/guide/dev_codesnippet) and [Mathematical Formulas](#!/guide/dev_mathjax). Both plugins support independent blocks of content rendered with the help of external JavaScript libraries. 
- 
+The Developer Site Editor demo showcases a sample editor for technical websites. The most interesting features presented in this configuration are [Code Snippets](#!/guide/dev_codesnippet) and [Mathematical Formulas](#!/guide/dev_mathjax). Both plugins support independent blocks of content rendered with the help of external JavaScript libraries.
+
 <p class="tip">
   Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
 </p>
@@ -111,7 +111,7 @@ This demo showcases the <strong>Accessibility Checker</strong> plugin &mdash; an
 
 ## Hints for Production Environment (All Setups)
 
-All setups above used some additional plugins which are not included by default in the Basic, Standard or Full distributions. 
+All setups above used some additional plugins which are not included by default in the Basic, Standard or Full distributions.
 
 There are multiple ways of loading the CKEditor library inside an application (each of them having its pros and cons) that are especially important when multiple additional plugins are loaded.
 
@@ -159,13 +159,13 @@ This is the easiest way of using CKEditor if additional third-party plugins are 
 <tr><th>Plugin installation complexity</th><td style="width:60px">Moderate - High</td>
 <td>Plugins authored by CKSource are available on CDN and can be easily enabled throogh CKEDITOR.config.extraPlugins. Third-party plugins need to be downloaded locally and <a href="http://cdn.ckeditor.com/#plugins">enabled as external plugins</a>.</td></tr>
 <tr><th>Toolbar configuration complexity</th><td>High</td><td>The toolbar configurator is not available so understanding what button names to use may be challenging.</td></tr>
-<tr><th>Complexity of future upgrades</th><td>Low - Moderate</td><td>As easy as changing the version number in a single <code>&gt;script&lt;</code> tag. Locally stored third-party plugins must be updated manually.</td></tr>
+<tr><th>Complexity of future upgrades</th><td>Low - Moderate</td><td>As easy as changing the version number in a single <code>&lt;script&gt;</code> tag. Locally stored third-party plugins must be updated manually.</td></tr>
 <tr><th>Number of files requested by the browser</th><td>High</td><td>Each plugin results in a couple of additional HTTP requests (plugin, language file, icon).</td></tr>
 <tr><th>Performance</th><td>Moderate - High</td><td>Larger number of HTTP requests is compensated by fast network and endpoints located very close to the end user. Additional benefit caused by the fact that browsers load requests from multiple domains in parallel.</td></tr>
 </table>
 
 ### Using Builder (Recommended)
- 
+
 Using [Builder](http://ckeditor.com/builder) to build a bundle with all required plugins is highly recommended in case of using customized packages, especially those with additional third-party plugins.
 
 Refer to the [Installing Plugins &ndash; Online Builder Installation](#!/guide/dev_plugins-section-through-ckbuilder) article for information about building a custom editor package.

@@ -11,7 +11,7 @@ The aim of this article is to get you up and running with CKEditor in two minute
 
 Visit the official [CKEditor Download](http://ckeditor.com/download) site. For a production site we recommend you choose the default **Standard Package** and click the **Download CKEditor** button to get the `.zip` installation file. If you want to try out more editor features, you can download the **Full Package** instead.
 
-<a href="http://ckeditor.com/download"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="696" height="321"></a>
+<a href="http://ckeditor.com/download"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="932" height="502"></a>
 
 ## Unpacking
 
@@ -24,7 +24,7 @@ CKEditor comes with a sample that you can check to verify if the installation wa
 Open the following page in the browser to see the sample:
 `http://<your site>/ckeditor/samples/index.html`
 
-{@img ckeditor_sample.png CKEditor sample available in each installation package}
+<img src="guides/dev_installation/ckeditor_sample.png" alt="CKEditor sample available in each installation package" width="802" height="530">
 
 Additionally, you can click the Toolbar Configurator button on the editor sample page to open a handy tool that will let you [adjust the toolbar](#!/guide/dev_toolbar) to your needs.
 
@@ -34,7 +34,7 @@ If the sample works correctly, you are ready to build your own site with CKEdito
 
 To start, create a simple HTML page with a `<textarea>` element in it. You will then need to do two things:
 
-1. Add a call to the CKEditor script in the `<script>` element of your page.
+1. Include the  `<script>` element loading CKEditor in your page.
 2. Use the [`CKEDITOR.replace()`](#!/api/CKEDITOR-method-replace) method to replace the existing `<textarea>` element with CKEditor.
 
 See the following example:

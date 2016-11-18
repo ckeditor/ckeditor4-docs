@@ -11,7 +11,7 @@ It is a total WYSIWYG experience, because not only the edited content looks like
 
 To try it out, see the [inline editing demo](http://sdk.ckeditor.com/samples/inline.html).
 
-<img src="guides/dev_ckeditor_js_load/inline_example.png" alt="Inline editor example" width="585" height="294">
+<img src="guides/dev_ckeditor_js_load/inline_example.png" alt="Inline editor example">
 
 ## Content Styles = Page Styles
 

@@ -144,7 +144,7 @@ If the editor behaves differently when testing and during development, try to ad
 
 CKEditor tests use the [YUI library](http://yuilibrary.com/) for assertions provided by the [Bender.js YUI plugin](https://github.com/benderjs/benderjs-yui/).
 
-The testing environment provides a bunch of [tools](https://github.com/benderjs/benderjs-ckeditor/blob/master/static/tools.js) useful when creating tests and the [Editor Bot](https://github.com/benderjs/benderjs-ckeditor/blob/master/static/bot.js) which helps you create and manage an editor instance.
+The testing environment provides a bunch of [tools](https://github.com/ckeditor/ckeditor-dev/blob/master/tests/_benderjs/ckeditor/static/tools.js) useful when creating tests and the [Editor Bot](https://github.com/ckeditor/ckeditor-dev/blob/master/tests/_benderjs/ckeditor/static/bot.js) which helps you create and manage an editor instance.
 
 ### Sample Test File
 

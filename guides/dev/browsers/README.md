@@ -66,10 +66,11 @@ It is possible to skip the compatibility check and [enable CKEditor in all envir
 Besides the browser support described above we are also introducing the following table to define the list of browsers and assistive technologies supported by CKEditor:
 
  * [JAWS](http://www.freedomscientific.com/products/fs/JAWS-product-page.asp) Latest Stable:
-   * **Firefox** Latest Stable on Windows 7 or 8
+   * **Firefox** Latest Stable on Windows 7, 8 or 10
  * High Contrast:
-   * **Firefox** Latest Stable on Windows 7 or 8
-   * **Internet Explorer** 9+ on Windows 7 or 8
+   * **Firefox** Latest Stable on Windows 7, 8 or 10
+   * **Internet Explorer** 9+ on Windows 7, 8 or 10
+   * **Microsoft Edge** Latest Stable on Windows 10
 
 Refer to the [Accessibility Support in CKEditor](#!/guide/dev_a11y) article to learn about CKEditor compliance with some well-known accessibility standards and why we treat Firefox + JAWS as our reference environment for testing. You will also get an overview of available accessibility-related features there.
 

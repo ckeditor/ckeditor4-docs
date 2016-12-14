@@ -350,6 +350,14 @@
 										"description": "Dropping and pasting content (text, html, files, images) into the editor.",
 										"meta_description": "Dropping and pasting content (text, html, files, images) into the editor.",
 										"meta_keywords": "ckeditor, editor, wysiwyg, drag, drop, paste, insert, image, file"
+									},
+									{
+										"name": "dev_paste_from_word",
+										"url": "dev/features/pastefromword",
+										"title": "Paste from Word",
+										"description": "Pasting content from MS Word document into the editor.",
+										"meta_description": "Pasting content from MS Word document into the editor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, paste, insert, word, pastefromword"
 									}
 								]
 							},

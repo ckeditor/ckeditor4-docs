@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 One of the CKEditor features is that it takes care over the input data you paste or drop into the editor. The [Clipboard](http://ckeditor.com/addon/clipboard) plugin which is included in every preset implements custom input content handling, which means that the editor will handle pasted and &mdash; since version 4.5 &mdash; dropped content.
 
-All pasted and dropped content is passed through the {@link CKEDITOR.editor#paste} event which makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like [Advanced Content Filter and paste filter](#!/guide/dev_drop_paste-section-filtering), [Paste from Word filter](#!/guide/dev_drop_paste-section-paste-from-word) or [support for uploading dropped files](#!/guide/dev_drop_paste-section-file-upload).
+All pasted and dropped content is passed through the {@link CKEDITOR.editor#paste} event which makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like [Advanced Content Filter and paste filter](#!/guide/dev_drop_paste-section-filtering), [Paste from Word filter](#!/guide/dev_paste_from_word) or [support for uploading dropped files](#!/guide/dev_drop_paste-section-file-upload).
 
 Note that browsers support clipboard operations differently and because of that the behavior of the drag and drop or copy and paste may be slightly different between browsers.
 
@@ -29,19 +29,6 @@ Additionally, since CKEditor 4.5 it is possible to configure a [separate filter 
 
 You can also read more about [content filtering](#!/guide/dev_acf) in general and see the [working "Content Filtering" sample](http://sdk.ckeditor.com/samples/acf.html).
 
-## Paste from Word
-
-HTML exposed by Microsoft Word does not comply to any imaginable rules. It is a poetry of what can be done wrong. Therefore, a separate filter had to be created to normalize this content. It is implemented in the [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin and, beside the standard filtering options described in the previous sections, it has additional settings:
-
-* CKEDITOR.config.pasteFromWordRemoveFontStyles (to be deprecated in favor of Advanced Content Filter)
-* CKEDITOR.config.pasteFromWordCleanupFile
-* CKEDITOR.config.pasteFromWordPromptCleanup
-
-Note that for CKEditor versions older than 4.6 the following options were available, too:
-
-* CKEDITOR.config.pasteFromWordNumberedHeadingToList
-* CKEDITOR.config.pasteFromWordRemoveStyles
-
 ## File Upload
 
 Another feature related to the clipboard is uploading dropped or pasted files or images. It lets you not only drop or paste files into the document, but also paste a part of the image copied from the image editor. The [Upload Widget](http://ckeditor.com/addon/uploadwidget), [File Tools](http://ckeditor.com/addon/filetools) and [Notification](http://ckeditor.com/addon/notification) plugins create a flexible API which lets the developers handle files the way they need. To learn more about these APIs check the [Notifications](#!/guide/dev_notifications), [Clipboard Integration](#!/guide/dev_clipboard) and [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) articles.
@@ -58,6 +45,7 @@ See the following samples for examples of pasting and dropping into editor conte
 
 * The ["Uploading Dropped and Pasted Images"](http://sdk.ckeditor.com/samples/fileupload.html#uploading-dropped-and-pasted-images) sample.
 * The ["Drag and Drop Integration"](http://sdk.ckeditor.com/samples/draganddrop.html) sample.
+* The ["Paste from Word"](http://sdk.ckeditor.com/samples/pastefromword.html) sample.
 
 ## Further Reading
 
@@ -65,5 +53,6 @@ For more information on pasting, dropping and uploading files with CKEditor refe
 
 * [Clipboard Integration](#!/guide/dev_clipboard)
 * [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload)
+* [Paste from Word](#!/guide/dev_paste_from_word)
 * [Content Filtering (ACF)](#!/guide/dev_acf)
 * [Advanced Content Filter](#!/guide/dev_advanced_content_filter)

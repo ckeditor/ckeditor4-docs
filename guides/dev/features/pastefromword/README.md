@@ -14,6 +14,17 @@ The following sample content from Word document:
 will look like below after pasting to CKEditor with [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin:
 {@img pastefromword_02.png}
 
+Here is another sample with more fancy content:
+{@img pastefromword_03.png}
+
+after pasting will look like:
+{@img pastefromword_04.png}
+
+In the above example you can see that, after pasting to CKEditor, first list has different list item markers than in the Word document.
+As far as pasting lists with different list item markers is supported (check the second and third list in the above example) this is the specific case. Such list
+style is not natively supported by the browser. However, it can be adjusted by using extra
+CSS rules (see [related stackoverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style this properly).
+
 ## Filters
 
 HTML exposed by Microsoft Word does not comply to any imaginable rules. It is a poetry of what can be done wrong. Therefore, a separate filter had to be created to normalize this content. It is implemented in the [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin and, beside the [standard filtering options](#!/guide/dev_drop_paste-section-filtering-content), it has additional settings:

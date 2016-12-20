@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 	with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-Starting from CKEditor 4.5 it is possible to enable uploading pasted and dropped images. This article is about the editor-server configuration for pasted and dropped files since it uses a different API than the [File Browser](#!/guide/dev_file_browse_api) plugin. To get an overview about this feature, refer to the [Dropping and Pasting into Editor Content](#!/guide/dev_drop_paste) article.
+Starting from CKEditor 4.5 it is possible to enable uploading pasted and dropped images. This article is about the editor-server configuration for pasted and dropped files since it uses a different API than the [File Browser](#!/guide/dev_file_browser_api) plugin. To get an overview about this feature, refer to the [Dropping and Pasting into Editor Content](#!/guide/dev_drop_paste) article.
 
 ## Basic Configuration
 
@@ -44,7 +44,7 @@ To make uploading on drop or paste work you need a server-side application that 
 
 ### Server-Side Configuration
 
-The [Upload Image](http://ckeditor.com/addon/uploadimage) plugin uses a different API than the [File Browser](#!/guide/dev_file_browse_api) plugin and expects JSON responses.
+The [Upload Image](http://ckeditor.com/addon/uploadimage) plugin uses a different API than the [File Browser](#!/guide/dev_file_browser_api) plugin and expects JSON responses.
 
 #### Request
 

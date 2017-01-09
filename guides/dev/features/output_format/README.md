@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -111,7 +111,7 @@ Numerous [configuration options](#!/guide/dev_configuration) let you tweak CKEdi
 	</li>
 </ul>
 
-## HTML Output Formatting Demo 
+## HTML Output Formatting Demo
 
 See the [working "HTML Output Formatting" sample](http://sdk.ckeditor.com/samples/htmlformatting.html) that showcases how to control HTML output produced by CKEditor.
 

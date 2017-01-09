@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -29,7 +29,7 @@ When filing an issue, please bear these important things in mind:
  * The "Priority", "Milestone", "Version", "Assign to" and "Keywords" fields are reserved for the core development team.
  * Make sure **you are using the latest CKEditor version**. Maybe your issue has already been fixed.
  * For a detailed guide on how to properly report a new issue go to the [Ticket Specs page](https://dev.ckeditor.com/wiki/TicketSpecs).
- 
+
 ## Reporting an Issue
 
 Before clicking the following link, make sure you have read the instructions above!

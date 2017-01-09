@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -62,7 +62,7 @@ Due to the dynamic nature of floating UI, **some editor features are unavailable
 * [Source Editing Area](http://ckeditor.com/addon/sourcearea) is not available &mdash; an alternative solution using a [dialog window for source code editing](http://ckeditor.com/addon/sourcedialog) should be used. Refer to the [Source Code Editing](#!/guide/dev_sourcearea) documentation.
 * The following configuration options that control the size of the editor are ignored: CKEDITOR.config.height and CKEDITOR.config.width.
 
-## User Interface Types Demo 
+## User Interface Types Demo
 
 The following samples are available for two CKEditor user interface types:
 

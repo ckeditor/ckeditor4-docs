@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -20,7 +20,7 @@ There are {@link CKEDITOR.plugins.notification#type four types of notifications}
 * `success` &ndash; Information about an operation that finished successfully (e.g. "File uploaded.", "Data imported.").
 * `progress` &ndash; Information about the progress of an operation. When the operation is done, the notification type should be changed to `success`.
 
-The image below shows an example of a success and a progress notification. 
+The image below shows an example of a success and a progress notification.
 
 {@img notification.png Notifications example}
 

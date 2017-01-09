@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -52,11 +52,11 @@ Using CKBuilder is a recommended solution, however, if you have plugins develope
 	For example, the [Language plugin](http://ckeditor.com/addon/language) would be installed into this folder: `<CKEditor folder>/plugins/language`.
 
 3. **Check and resolve plugin dependencies.** If a plugin needs others to work, you will need to add these manually as well.
-	
+
 4. **Enable the plugin.** Use the {@link CKEDITOR.config#extraPlugins extraPlugins} setting to add the plugin to your confiuration:
 
 		config.extraPlugins = 'language';
-	
+
 	If a plugin has any dependencies, you will need to enable these, too.
 
 Your plugin will now be available in your CKEditor installation.

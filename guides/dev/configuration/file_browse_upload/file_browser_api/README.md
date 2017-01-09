@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -71,12 +71,12 @@ The following example shows how to send the URL from a file manager using JavaSc
 			function getUrlParam( paramName ) {
 				var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
 				var match = window.location.search.match( reParam );
-	
+
 				return ( match && match.length > 1 ) ? match[1] : null;
 			}
 			// Simulate user action of selecting a file to be returned to CKEditor.
 			function returnFileUrl() {
-	
+
 				var funcNum = getUrlParam( 'CKEditorFuncNum' );
 				var fileUrl = '/path/to/file.txt';
 				window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl );
@@ -105,12 +105,12 @@ Suppose that apart from passing the `fileUrl` value that is assigned to an appro
 			function getUrlParam( paramName ) {
 				var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
 				var match = window.location.search.match( reParam );
-	
+
 				return ( match && match.length > 1 ) ? match[1] : null;
 			}
 			// Simulate user action of selecting a file to be returned to CKEditor.
 			function returnFileUrl() {
-	
+
 				var funcNum = getUrlParam( 'CKEditorFuncNum' );
 				var fileUrl = 'http://c.cksource.com/a/1/img/sample.jpg';
 				window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl, function() {
@@ -158,12 +158,12 @@ The following code shows how to send back the URL of an uploaded file from the P
 	// Optional: compare it with the value of `ckCsrfToken` sent in a cookie to protect your server side uploader against CSRF.
 	// Available since CKEditor 4.5.6.
 	$token = $_POST['ckCsrfToken'] ;
-	
+
 	// Check the $_FILES array and save the file. Assign the correct path to a variable ($url).
 	$url = '/path/to/uploaded/file.ext';
 	// Usually you will only assign something here if the file could not be uploaded.
 	$message = 'The uploaded file has been renamed';
-	
+
 	echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
 	?>
 	</body>

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -25,7 +25,7 @@ Open the `config.js` file available in your `ckeditor` directory, and edit the `
 
 	// Enable all default text formats:
 	config.format_tags = 'p;h1;h2;h3;h4;h5;h6;pre;address;div';
-	
+
 	// Enable a limited set of text formats:
 	config.format_tags = 'p;h1;h2;pre;div';
 
@@ -45,7 +45,7 @@ If you want to change the default settings for a particular editor instance, pro
 	CKEDITOR.replace( 'editor1', {
 		format_tags: 'p;h1;h2;h3;h4;h5;h6;pre;address;div'
 	});
-	
+
 	// Enable a limited set of text formats:
 	CKEDITOR.replace( 'editor1', {
 		format_tags: 'p;h1;h2;pre;div'
@@ -77,7 +77,7 @@ Remember that depending on your use case, the CSS classes for text formats need 
 	The block-level text format feature is automatically integrated with <a href="#!/guide/dev_acf">Advanced Content Filter</a>, so all custom format definitions are treated as allowed by the editor content filtering mechanism.
 </p>
 
-## Block-Level Text Formats Demo 
+## Block-Level Text Formats Demo
 
 See the [working "Applying Block-Level Text Formats" sample](http://sdk.ckeditor.com/samples/format.html) that showcases the usage and customization of basic text formatting.
 

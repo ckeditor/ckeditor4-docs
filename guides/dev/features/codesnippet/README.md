@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -90,6 +90,6 @@ Full installation instructions can be found in the [Iserting Code Snippets Using
 
 Since **Internet Explorer 8** support was dropped in [highlight.js](http://highlightjs.org) 7.3 (see the [GitHub ticket](https://github.com/isagalaev/highlight.js/issues/280)), the default implementation of the Code Snippet plugin will not provide any higlighting in this browser version. To solve this problem use a custom highlighter.
 
-## Code Snippets Demo 
+## Code Snippets Demo
 
 See the [working "Inserting Code Snippets" sample](http://sdk.ckeditor.com/samples/codesnippet.html) that shows a few instances of the code snippet widgets as well as the syntax highlighter themes which are available in the default implementation.

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -152,7 +152,7 @@ You can also further customize the Stylesheet Parser plugin by setting the CKEDI
 	// and any class defined for no specific element.
 	config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;
 
-## Editor Styles Demo 
+## Editor Styles Demo
 
 See the [working "Applying Styles to Editor Content" sample](http://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation.
 

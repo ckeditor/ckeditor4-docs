@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -12,7 +12,7 @@ one of the most common requirements.
 <div class="tip">
 	The <strong>most recommended approach to adjusting the editor</strong> to your needs is to start from creating a
 	<a href="http://ckeditor.com/builder">custom build</a>, removing unwanted features before they even
-	make it to your toolbar. It is a bad practice to download the Full package and then 
+	make it to your toolbar. It is a bad practice to download the Full package and then
 	<a href="#!/api/CKEDITOR.config-cfg-removePlugins">remove plugins</a> or
 	<a href="#!/api/CKEDITOR.config-cfg-removeButtons">buttons</a> in your configuration.
 	You will only be loading unnecessary stuff without any good reason.
@@ -27,7 +27,7 @@ There are several approaches to CKEditor toolbar configuration to choose from:
 ## Toolbar Configurator
 
 <p class="requirements">
-	Toolbar configurator was introduced in <strong>CKEditor 4.5</strong> and is available in each official CKEditor installation package. 
+	Toolbar configurator was introduced in <strong>CKEditor 4.5</strong> and is available in each official CKEditor installation package.
 </p>
 
 The new toolbar utility, which you can find in your CKEditor distribution package, makes configuring an accessible toolbar a breeze.
@@ -61,7 +61,7 @@ In this case you start with a CKEditor instance and a code editor with current t
 
 When you are happy with your toolbar, copy the modified toolbar configuration from the code editor. Add your new toolbar code to your [editor configuration](#!/guide/dev_configuration) &mdash; if you have already changed some other configuration options, do remember to merge both configurations. Last but not least, **clear your browser cache** after any configuration change!
 
-## Custom Toolbar Demo 
+## Custom Toolbar Demo
 
 See the [working "Custom Editor Toolbar" sample](http://sdk.ckeditor.com/samples/toolbar.html) that showcases an editor instance with a one-row toolbar set to include just a few most relevant editing features.
 

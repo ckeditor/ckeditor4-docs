@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -33,7 +33,7 @@ CKEditor support for creating and editing tables is provided by three separate t
 The following two helper plugins extend the Table Properties and Cell Properties dialog windows with additional features:
 
 * The [Color Dialog](http://ckeditor.com/addon/colordialog) plugin &ndash; provides a user-friendly way to select the cell background and border color through a dedicated **Select Color** dialog window with a color table.
-* The [Advanced Tab for Dialogs](http://ckeditor.com/addon/dialogadvtab) plugin &ndash; provides the **Advanced** tab for the Table Properties dialog window and allows for setting the table ID, language direction, inline CSS style and stylesheet class. 
+* The [Advanced Tab for Dialogs](http://ckeditor.com/addon/dialogadvtab) plugin &ndash; provides the **Advanced** tab for the Table Properties dialog window and allows for setting the table ID, language direction, inline CSS style and stylesheet class.
 
 The **Table** and **Table Tools** plugins are included in the Standard and Full installation packages. **Color Dialog** and  **Advanced Tab for Dialogs** are only available in the Full distribution, while the **Table Resize** plugin is optional &mdash; they may be [added to your CKEditor build](#!/guide/dev_plugins).
 
@@ -47,6 +47,6 @@ When enabled, the optional Table Resize plugin adds support for column resizing 
 
 You need to hover your mouse over the column border to see the cursor change to <img class="inline"  src="guides/dev_table/col_resize_cursor.png"> to indicate that the column can be resized. Click and drag your mouse to set the desired column width.
 
-## Table Support Demo 
+## Table Support Demo
 
 See the [working "Table Support with Column Resizing" sample](http://sdk.ckeditor.com/samples/table.html) that showcases CKEditor support for creating and editing tables, including table column resizing with your mouse.

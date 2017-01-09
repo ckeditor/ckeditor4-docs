@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -23,7 +23,7 @@ This feature is aimed at developers who would like to integrate CKEditor with po
 	Please note that currently no official standard exists for the BBCode markup language, so its implementation for different platforms may vary. This means that before using CKEditor to output BBCode you might need to adjust the default implementation to your own environment.
 </p>
 
-## BBCode Output Demo 
+## BBCode Output Demo
 
 See the [working "BBCode Editing" sample](http://sdk.ckeditor.com/samples/bbcode.html) that showcases a CKEditor instance configured to output BBCode and customized to be a better fit for a typical BBCode environment.
 

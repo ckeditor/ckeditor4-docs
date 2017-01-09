@@ -1,11 +1,11 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Adding File Manager to a Dialog Window
 
-The aim of this article is to explain to plugin authors how to create CKEditor dialog windows that integrate seamlessly with a file manager. 
+The aim of this article is to explain to plugin authors how to create CKEditor dialog windows that integrate seamlessly with a file manager.
 
 <p class="requirements">
 	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="http://ckeditor.com/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.

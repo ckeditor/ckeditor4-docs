@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -28,7 +28,7 @@ When you click the magic line's handle, a new paragraph will be inserted into th
 If the default striking red color does not suit you, you can easily modify it by setting the CKEDITOR.config.magicline_color configuration option, for example:
 
     CKEDITOR.config.magicline_color = '#0000FF';
-    
+
 This will change magic line's color to blue, as presented in the image below.
 
 {@img magicline_04.png Changing the magic line color.}
@@ -44,7 +44,7 @@ You can also adjust the keyboard shortcuts by setting the CKEDITOR.config.magicl
 
     // Changes the keyboard shortcut to Ctrl + ".".
     CKEDITOR.config.magicline_keystrokeNext = CKEDITOR.CTRL + 190;
-    
+
     // Changes the keyboard shortcut to Ctrl + ",".
     CKEDITOR.config.magicline_keystrokePrevious = CKEDITOR.CTRL + 188;
 
@@ -60,6 +60,6 @@ The CKEDITOR.config.magicline_tabuList option lets you blacklist certain element
 
     CKEDITOR.config.magicline_tabuList = [ 'data-tabu' ];
 
-## Magic Line Demo 
+## Magic Line Demo
 
 See the [working "Magic Line" sample](http://sdk.ckeditor.com/samples/magicline.html) that showcases how Magic Line helps solve issues with cursor placement before or after elements such as nested tables, `<div>` elements, adjacent lists, or multiple horizontal rules.

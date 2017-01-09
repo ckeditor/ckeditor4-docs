@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -179,7 +179,7 @@ Another example can be found in the ["Drag and Drop Integration" sample](http://
 		// The target may be some element inside the draggable div (e.g. the image), so get the div.h-card.
 		var target = evt.data.getTarget().getAscendant( 'div', true );
 
-		// Initialization of CKEditor data transfer facade is a necessary step to extend and unify native 
+		// Initialization of CKEditor data transfer facade is a necessary step to extend and unify native
 		// browser capabilities. For instance, Internet Explorer does not support any other data type than 'text' and 'URL'.
 		// Note: evt is an instance of CKEDITOR.dom.event, not a native event.
 		CKEDITOR.plugins.clipboard.initDragDataTransfer( evt );

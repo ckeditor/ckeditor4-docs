@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -37,7 +37,7 @@ Captioned images can be easily aligned through their Image Properties dialog win
 		<img alt="MyImage" src="myimage.png" />
 		<figcaption>MyCaption</figcaption>
 	</figure>
-	
+
 Thanks to the CKEDITOR.config.image2_alignClasses option introduced in CKEditor 4.4 you can use CSS classes for setting image alignment. Additionally, the CKEDITOR.config.image2_captionedClass option allows you to assign a custom class to the `<figure>` element of a captioned image. Both these options combined give you far better control over the styling process.
 
 For example, the following configuration:
@@ -69,6 +69,6 @@ To make alternative text mandatory, set the CKEDITOR.config.image2_altRequired c
 
 {@img captionedimage_03.png Alternative text required by the Enhanced Image dialog}
 
-## Captioned Image Demo 
+## Captioned Image Demo
 
 See the [working "Creating Captioned Images" sample](http://sdk.ckeditor.com/samples/captionedimage.html) that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -45,7 +45,7 @@ By default CKEditor will be placed in the `node_modules/ckeditor` directory.
 You may add CKEditor to the dependencies list by using the `--save` flag:
 
     npm install ckeditor --save
-    
+
 or by manually editing your `package.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
 
 	{
@@ -58,7 +58,7 @@ or by manually editing your `package.json` file. Just make sure to create a refe
 Then execute the following command:
 
 	npm update
-	
+
 ### Fetching a Particular Build Preset
 
 Currently only the `standard-all` CKEditor installation preset can be fetched.
@@ -127,7 +127,7 @@ There is a way for Composer to fetch CKEditor built with a desired preset. For e
 The following table will explain the relation between a build and the JSON `require` value:
 
 preset | standard-all | basic | standard | full
- --- | --- | --- | --- | --- 
+ --- | --- | --- | --- | ---
 latest | `dev-latest` | `dev-basic/latest` | `dev-standard/latest` | `dev-full/latest`
 stable | `dev-stable` | `dev-basic/stable` | `dev-standard/stable` | `dev-full/stable`
 4.3.x | `dev-4.3.x` | `dev-basic/4.3.x` | `dev-standard/4.3.x` | `dev-full/4.3.x`

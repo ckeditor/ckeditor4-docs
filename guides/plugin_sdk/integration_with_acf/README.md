@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -165,7 +165,7 @@ accepting `<abbr>` back again:
 The `allowedContent: 'p abbr'` rule means that all attributes will be striped out from
 the `<abbr>` tag, including `title` and `id`. The **Abbreviation** plugin, however, still provides
 a dialog window for editing both abbreviations (tag contents) and explanations (`title`) as
-well as the **Advanced Settings** tab for setting the `id`. It turns out that the **Explanation** 
+well as the **Advanced Settings** tab for setting the `id`. It turns out that the **Explanation**
 field and the second tab are no longer necessary since the `title` and `id` attributes will
 be discarded.
 
@@ -250,7 +250,7 @@ Read more about {@link CKEDITOR.feature#contentForms contentForms} in CKEditor J
 	entire modified plugin folder</a> inluding the icon and the fully commented source code.
 </p>
 
-## Abbreviation Plugin Demo 
+## Abbreviation Plugin Demo
 
 See the [working "Abbreviation (Custom Plugin with Dialog, Context Menu and ACF Support)" sample](http://sdk.ckeditor.com/samples/abbr.html) that shows the final version of the Abbreviation plugin integrated with an editor instance.
 

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -17,4 +17,4 @@ By default CKEditor does not include a file browser or uploader. You can, howeve
 
 Since CKEditor 4.5 it is possible to enable uploading images pasted from clipboard or dragged and dropped into the editor. Please refer to the [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) article for more information.
 
-Do note that this still requires [integrating a file manager](#!/guide/dev_file_browse_upload) to handle the server-side part of the upload.  
+Do note that this still requires [integrating a file manager](#!/guide/dev_file_browse_upload) to handle the server-side part of the upload.

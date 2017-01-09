@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -19,9 +19,9 @@ To receive the result such as this:
 
 Please note that this option is only applicable to [classic](#!/guide/dev_framed) editor. In case of [inline](#!/guide/dev_inline) editor the toolbar position is set dynamically depending on the position of the editable element on the screen.
 
-## Toolbar Location Demo 
+## Toolbar Location Demo
 
-See the [working "Toolbar Location Adjustment" sample](http://sdk.ckeditor.com/samples/toolbarlocation.html) that showcases how to place the editor toolbar at the bottom of its interface. 
+See the [working "Toolbar Location Adjustment" sample](http://sdk.ckeditor.com/samples/toolbarlocation.html) that showcases how to place the editor toolbar at the bottom of its interface.
 
 ## Related Features
 

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -34,7 +34,7 @@ To upgrade CKEditor 3 to CKEditor 4, proceed as follows:
 	* The easiest way is to choose one of the pre-defined presets like Standard or Full.
 	* If you want to include any additional plugins, use the [CKBuilder](http://ckeditor.com/builder) service to create a custom build.
 3. **Extract** (decompress) the downloaded archive to the original editor directory, for example `ckeditor`.
-4. **Review** all configuration files that you have changed in CKEditor 3 (see the backup folder) and **apply** your changes to new CKEditor 4 files. These could include (but are not limited to) the following files: 
+4. **Review** all configuration files that you have changed in CKEditor 3 (see the backup folder) and **apply** your changes to new CKEditor 4 files. These could include (but are not limited to) the following files:
 	* `config.js`
 	* `contents.css`
 	* `plugins/styles/styles/default.js`

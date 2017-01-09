@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -54,7 +54,7 @@ Using CKBuilder is a recommended solution, however, if you have skins developed 
 3. **Enable the skin.** Use the {@link CKEDITOR.config#skin skin} setting to add the skin to your confiuration:
 
 		config.skin = 'kama';
-	
+
 Your skin will now be available in your CKEditor installation.
 
 <p class="tip">

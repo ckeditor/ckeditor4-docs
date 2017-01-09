@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -69,7 +69,7 @@ Additionally, you can define the resizing directions in order to have more contr
 By default CKEditor is allowed to only resize vertically. This is achieved thanks to setting the CKEDITOR.config.resize_dir configuration option to `'vertical'`
 
 	config.resize_dir = 'vertical';
-	
+
 If you set the CKEDITOR.config.resize_dir configuration option to `'horizontal'`, CKEditor window will only be resizable in horizontal dimension.
 
 	config.resize_dir = 'horizontal';
@@ -78,7 +78,7 @@ If you want to allow both vertical and horizontal resizing, you need to set the 
 
 	config.resize_dir = 'both';
 
-## Editor Resizing Customization Demo 
+## Editor Resizing Customization Demo
 
 See the [working "Editor Resizing Customization" sample](http://sdk.ckeditor.com/samples/resize.html) that showcases an editor instance with modified resizing settings.
 

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -19,7 +19,7 @@ Since version 4.3 placeholders are inserted as inline widgets, so they have [all
 
 Please note that the default placeholder implementation might easily be extended. You could, for example, customize the dialog window to show a drop-down list with pre-defined options that can be selected to fill the placeholder.
 
-## Placeholder Demo 
+## Placeholder Demo
 
 See the [working "Using Placeholders" sample](http://sdk.ckeditor.com/samples/placeholder.html) that showcases a possible use for the Placeholder plugin in automatic replies sent from a Customer Support system.
 

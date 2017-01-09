@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -26,7 +26,7 @@ Open the `config.js` file available in your `ckeditor` directory, and edit the `
 
 	// For the Basic preset:
 	config.removeButtons = 'Cut,Copy,Paste,Undo,Redo,Anchor';
-	
+
 	// For the Standard preset:
 	config.removeButtons = '';
 
@@ -46,7 +46,7 @@ If you want to change the default settings for a particular editor instance, pro
 	CKEDITOR.replace( 'editor1', {
 		removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor'
 	});
-	
+
 	// For the Standard preset:
 	CKEDITOR.replace( 'editor1', {
 		removeButtons: ''
@@ -77,15 +77,15 @@ The following example configures CKEditor to output bold with an inline CSS styl
 		element: 'span',
 		styles: { 'font-weight': 'bold' }
 	};
-	
+
 	config.coreStyles_italic = { element: 'i', overrides: 'em' };
-	
+
 	config.coreStyles_subscript = {
 		element: 'span',
 		attributes: { 'class': 'Subscript' },
 		overrides: 'sub'
 	};
-	
+
 	config.coreStyles_superscript = {
 		element: 'span',
 		attributes: { 'class': 'Superscript' },
@@ -106,7 +106,7 @@ Remember that depending on your use case, the CSS classes for basic text styles 
 	</p>
 </div>
 
-## Basic Text Styles Demo 
+## Basic Text Styles Demo
 
 See the [working "Basic Text Styles: Bold, Italic and More" sample](http://sdk.ckeditor.com/samples/basicstyles.html) that showcases the usage and customization of basic text formatting.
 

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 The [Remove Format](http://ckeditor.com/addon/removeformat) plugin provides the ability to quickly remove any text formatting that is applied through inline HTML elements and CSS styles, like [basic text styles](#!/guide/dev_basicstyles) (bold, italic, etc.), font family and size, [text and background colors](#!/guide/dev_colorbutton) or styles applied through the [Styles drop-down](#!/guide/dev_styles). Note that it does not change [text formats](#!/guide/dev_format) applied at block level.
 
 When enabled, the plugin adds the **Remove Format** toolbar button. Since this feature applies to inline styles, you need to select the text fragment whose formatting is to be removed before pressing the button.
- 
+
 The image below shows a sample text with some styling &mdash; different typefaces, font sizes, italics, inline styles and colors &mdash; applied.
 
 {@img removeformat_03.png Remove Format feature in CKEditor}
@@ -21,7 +21,7 @@ The second image presents the same text after the formatting cleanup done throug
 
 {@img removeformat_04.png Inline text formatting removed with Remove Format}
 
-## Removing Text Formatting Demo 
+## Removing Text Formatting Demo
 
 See the [working "Removing Text Formatting" sample](http://sdk.ckeditor.com/samples/removeformat.html) that showcases the usage of the inline formatting cleanup functionality.
 

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -16,12 +16,12 @@ To upgrade CKEditor, proceed as follows:
 1. **Rename** your existing editor folder to a backup folder, for example `ckeditor_old`.
 2. **Download** the latest version from the official [CKEditor Download](http://ckeditor.com/download) site.
 	* If you are using one of the pre-defined presets like Standard or Full, download the same one.
-	* If you created a custom CKEditor build, you have a few options, as described in your backed-up `build-config.js` file. 
+	* If you created a custom CKEditor build, you have a few options, as described in your backed-up `build-config.js` file.
 		* You can use the unique link to download the updated version of your custom build using the latest editor release.
 		* You can use the unique link to CKBuilder pre-loaded with your custom build configuration and using the latest editor release.
 		* You can go to the [CKBuilder site](http://ckeditor.com/builder) and click the **Upload build-config.js** button. Select your backed-up custom build configuration file and download the updated build containing the latest versions of all selected plugins.
 3. **Extract** (decompress) the downloaded archive to the original editor directory, for example `ckeditor`.
-4. **Copy** all configuration files that you have changed from the backup directory to their corresponding positions in the new directory. These could include (but are not limited to) the following files: 
+4. **Copy** all configuration files that you have changed from the backup directory to their corresponding positions in the new directory. These could include (but are not limited to) the following files:
 	* `config.js`
 	* `contents.css`
 	* `styles.js`

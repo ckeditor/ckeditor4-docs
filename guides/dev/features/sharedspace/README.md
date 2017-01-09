@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -55,9 +55,9 @@ The Shared Space feature affects a crucial editor element &mdash; its user inter
 config.removePlugins = 'resize';
 </pre>
 
-## Shared Toolbar and Bottom Bar Demo 
+## Shared Toolbar and Bottom Bar Demo
 
-See the [working "Shared Toolbar and Bottom Bar" sample](http://sdk.ckeditor.com/samples/sharedspace.html) that showcases how multiple editor instances can share the same toolbar and bottom bar. 
+See the [working "Shared Toolbar and Bottom Bar" sample](http://sdk.ckeditor.com/samples/sharedspace.html) that showcases how multiple editor instances can share the same toolbar and bottom bar.
 
 ## Related Features
 

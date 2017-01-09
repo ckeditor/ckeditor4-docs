@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -13,7 +13,7 @@ The optional [Copy Formatting](http://ckeditor.com/addon/copyformatting) plugin 
 
 When enabled, the plugin adds the **Copy Formatting** (<img src="guides/dev_copyformatting/copyformatting-button.png" alt="Copy Formatting toolbar button" style="vertical-align: bottom;">) toolbar button. To copy styles, place your cursor inside the text (or select a styled document fragment) and press the button or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut. Then place the cursor inside some word or select a part of the text to apply formatting to it. The copied formatting can also be applied by using the <kbd>Ctrl+Shift+V</kbd> keyboard shortcut.
 
-{@img copyformatting_01.png Copied formatting being applied to a text fragment} 
+{@img copyformatting_01.png Copied formatting being applied to a text fragment}
 
 <div class="tip">
     <p>
@@ -102,7 +102,7 @@ The special "disabled" cursor can be switched off by setting the CKEDITOR.config
     More advanced modifications of cursors used by Copy Formatting can be done by adding custom styles to the editor stylesheet.
 </p>
 
-## Copy Formatting Demo 
+## Copy Formatting Demo
 
 See the [working "Using the Copy Formatting Feature" sample](http://sdk.ckeditor.com/samples/copyformatting.html) that showcases the usage and customization of this feature.
 

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -15,7 +15,7 @@ The optional [Color Button](http://ckeditor.com/addon/colorbutton) plugin provid
 
 ## More Colors Option and Color Dialog
 
-You can also add the optional [Color Dialog](http://ckeditor.com/addon/colordialog) plugin which extends the color selector with the **More Colors** option and a user-friendly way to select the desired color through a dedicated **Select Color** dialog window. When this plugin is enabled, the **More Colors** option appears automatically for the text and background color. 
+You can also add the optional [Color Dialog](http://ckeditor.com/addon/colordialog) plugin which extends the color selector with the **More Colors** option and a user-friendly way to select the desired color through a dedicated **Select Color** dialog window. When this plugin is enabled, the **More Colors** option appears automatically for the text and background color.
 
 {@img colordialog_03.png The Select Color dialog window}
 
@@ -54,7 +54,7 @@ You can also decide how the color definition is stored by setting the CKEDITOR.c
 		element: 'font',
 		attributes: { 'color': '#(color)' }
 	};
-	
+
 	config.colorButton_backStyle = {
     	element: 'font',
     	styles: { 'background-color': '#(color)' }
@@ -65,7 +65,7 @@ CKEditor will then output the color definition as `<font>` elements with `color`
 	<p><font color="#800080">This is my text color.</font><br />
 	<font style="background-color:#FFFF00;">This is my background color</font></p>
 
-## Text and Background Color Demo 
+## Text and Background Color Demo
 
 See the [working "Setting Text and Background Color" sample](http://sdk.ckeditor.com/samples/colorbutton.html) that showcases the usage and customization of the text and background color features.
 

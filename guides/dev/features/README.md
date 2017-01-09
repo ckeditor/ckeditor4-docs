@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -25,6 +25,6 @@ This part describes features that are targeted at developers who implement CKEdi
 * **Editor UI** &ndash; Fixed and floating UI as well as sharing UI among numerous editor instances.
 * **Toolbar** &ndash; Customizing the editor toolbar.
 * **API Usage** &ndash; Using rich CKEditor API.
-* **Output Control** &ndash; Adjusting editor output by setting the HTML format or making the editor work on BBCode. 
+* **Output Control** &ndash; Adjusting editor output by setting the HTML format or making the editor work on BBCode.
 * **Utilities** &ndash; Additional tools that make configuring and extending CKEditor easier.
- 
+

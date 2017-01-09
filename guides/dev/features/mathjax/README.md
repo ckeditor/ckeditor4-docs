@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -32,17 +32,17 @@ In order to display mathematical formulas on a target page, i.e. the page where 
 By default the MathJax library is loaded from the [official MathJax CDN](http://docs.mathjax.org/en/latest/start.html#using-the-mathjax-content-delivery-network-cdn). You can however use the CKEDITOR.config.mathJaxLib setting to use a different path, either a local resource or a different web resource. This configuration option accepts a full or an absolute path. For example:
 
 	config.mathJaxLib = 'http:\/\/example.com\/libs\/MathJax.js';
-	
+
 ## Changing Default Class
 
 You can also modify the default class for `<span>` elements that are automatically converted into mathematical formulas widgets. Use the CKEDITOR.config.mathJaxClass option to provide a custom class. For example this setting:
 
 	config.mathJaxClass = 'equation';
-	
+
 will turn all `<span class="equation">` elements into mathematical formulas widgets, including this one:
 
 	<span class="equation">\( \sqrt{\frac{a}{b}} \)</span>
 
-## Mathematical Formulas Demo 
+## Mathematical Formulas Demo
 
 See the [working "Creating Mathematical Formulas" sample](http://sdk.ckeditor.com/samples/mathjax.html) that showcases the Mathematical Formulas plugin with its MathJax widget that supports writing equations in TeX.

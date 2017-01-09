@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -54,7 +54,7 @@ Whenever a change is made in the editor, CKEditor fires the [change](#!/api/CKED
 The following example shows how to listen to the `change` event and print the total number of bytes to the console:
 
 	var editor = CKEDITOR.replace( 'editor1' );
-	
+
 	// The "change" event is fired whenever a change is made in the editor.
 	editor.on( 'change', function( evt ) {
 		// getData() returns CKEditor's HTML content.

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -32,9 +32,9 @@ When you are satisfied with your choice, you can copy the working UI color confi
 
 Although this feature is mainly useful for developers who are working on their CKEditor customizations, it can also be made available to end users. A developer can implement it in the administration panel of a CMS or a similar site builder application where the users are able to adjust the look of a website or application. User's choice can then be read from the editor instance by using the CKEDITOR.editor.getUiColor method and saved (e.g. in the application's database) to be served as [in-page configuration](#!/guide/dev_configuration-section-defining-configuration-in-page) when creating subsequent editor instances.
 
-## UI Color Picker Demo 
+## UI Color Picker Demo
 
-See the [working "UI Color Picker" sample](http://sdk.ckeditor.com/samples/uicolorpicker.html) that showcases how easy it can be to set the editor UI color with the color picker tool. 
+See the [working "UI Color Picker" sample](http://sdk.ckeditor.com/samples/uicolorpicker.html) that showcases how easy it can be to set the editor UI color with the color picker tool.
 
 ## Related Features
 

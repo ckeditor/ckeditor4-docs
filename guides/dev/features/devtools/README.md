@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -31,9 +31,9 @@ The Developer Tools plugin provides two configuration options:
 * CKEDITOR.config.devtools_styles &ndash; sets the CSS styles applied to the tooltip.
 * CKEDITOR.config.devtools_textCallback &ndash; contains a function that returns the text displayed in the tooltip.
 
-## Developer Tools Demo 
+## Developer Tools Demo
 
-See the [working "Developer Tools" sample](http://sdk.ckeditor.com/samples/devtools.html) that showcases how easy it can be to get information about editor dialog windows and their elements. 
+See the [working "Developer Tools" sample](http://sdk.ckeditor.com/samples/devtools.html) that showcases how easy it can be to get information about editor dialog windows and their elements.
 
 ## Related Features
 

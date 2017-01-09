@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -23,9 +23,9 @@ Please note that not all configuration setting are available for each CKEditor b
 
 CKEditor is a truly flexible tool with a modular structure — most editor functionality is based on plugins. Some core plugins are necessary for the editor to work or depend on one another, however, there are lots of optional plugins that you can skip when you do not need the functionality that they provide.
 
-Remember that one of the most important [CKEditor best practices](#!/guide/dev_best_practices) is to customize your editor build with CKBuilder and remove unneeded functionality before it makes it to your package. It is a bad practice to download the Full package and then remove plugins or buttons in your configuration. You will only be loading unnecessary stuff without any good reason. Check out the [4 Common CKEditor Installation Mistakes And How To Avoid Them](http://ckeditor.com/blog/4-Common-CKEditor-Installation-Mistakes-And-How-To-Avoid-Them) for a more thorough explanation of this practice. 
+Remember that one of the most important [CKEditor best practices](#!/guide/dev_best_practices) is to customize your editor build with CKBuilder and remove unneeded functionality before it makes it to your package. It is a bad practice to download the Full package and then remove plugins or buttons in your configuration. You will only be loading unnecessary stuff without any good reason. Check out the [4 Common CKEditor Installation Mistakes And How To Avoid Them](http://ckeditor.com/blog/4-Common-CKEditor-Installation-Mistakes-And-How-To-Avoid-Them) for a more thorough explanation of this practice.
 
-If you, however, want to disable some functionality that comes from a CKEditor plugin and is still in your build, you can use the {@link CKEDITOR.config#removePlugins} setting to prevent the plugin from loading. 
+If you, however, want to disable some functionality that comes from a CKEditor plugin and is still in your build, you can use the {@link CKEDITOR.config#removePlugins} setting to prevent the plugin from loading.
 
 	// Remove one plugin.
 	config.removePlugins = 'elementspath';
@@ -37,7 +37,7 @@ Do remember to use the [CKBuilder online service](http://ckeditor.com/builder) t
 
 ## How Do I Find Code Examples Showing CKEditor Customization?
 
-[CKEditor SDK](http://sdk.ckeditor.com/) was created to present a broad range of existing features, usage scenarios and customization options for CKEditor. Each SDK sample contains a short description and references as well as one or more CKEditor instances to play with. Scroll down to the "Get Sample Source Code" of each sample to view the source code ready to copy and implement in your own solution. 
+[CKEditor SDK](http://sdk.ckeditor.com/) was created to present a broad range of existing features, usage scenarios and customization options for CKEditor. Each SDK sample contains a short description and references as well as one or more CKEditor instances to play with. Scroll down to the "Get Sample Source Code" of each sample to view the source code ready to copy and implement in your own solution.
 
 The figure below presents one of the CKEditor samples, [Creating Mathematical Formulas](http://sdk.ckeditor.com/samples/mathjax.html), opened in a browser.
 

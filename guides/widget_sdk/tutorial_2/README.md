@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2016, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -448,6 +448,6 @@ If you double click an existing widget instance, the dialog window will open aga
 
 {@img simplebox2_example1.png Updated Simple Box widget}
 
-## Simple Box Widget Demo 
+## Simple Box Widget Demo
 
 See the [working "SimpleBox (Creating a Custom Widget)" sample](http://sdk.ckeditor.com/samples/simplebox.html) that shows the final version of the Simple Box widget integrated with an editor instance.

@@ -96,7 +96,7 @@ To define a widget style you need to specify two additional properties in your s
 
 Starting from **CKEditor 4.6.2** an additional, optional property has been introduced:
 
-* `group` &ndash; Defines excluding styles. Two styles from the same [group](#!/api/CKEDITOR.style.customHandlers.widget-property-group) cannot be applied to the same widget instance simultaneously. When excluding styles are applied, the latest one is used while all previous styles are removed.
+* `group` &ndash; Defines excluding styles. Must be set to a string representing single group or array of groups. Two styles from the same `group` cannot be applied to the same widget instance simultaneously. When excluding styles are applied, the latest one is used while all previous styles are removed.
 
 Since widgets are a lot more complex structures than standard content, only classes defined in the style definition will be applied to them. Other attributes and inline styles will be ignored. Most often classes will be applied to widget's main element, but this behavior may be customized by the widget itself.
 
@@ -109,9 +109,11 @@ Sample widget styles:
 	{ name: 'Narrow Code', type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
 
 	// Media Embed (http://ckeditor.com/addon/embed) styles.
-	{ name: '240p ', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-240p' }, group: 'size' },
-	{ name: '360p ', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-360p' }, group: 'size' },
-	{ name: '480p ', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-480p' }, group: 'size' }
+	{ name: '240p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-240p' }, group: 'size' },
+	{ name: '360p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-360p' }, group: 'size' },
+	{ name: '480p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-480p' }, group: 'size' },
+	{ name: 'left', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-left' }, group: 'alignment' },
+	{ name: 'thumb', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-thumb' }, group: [ 'size', 'alignment' ] }
 
 To see how this works in practice, refer to the [Widget Styles](http://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the [captioned image](#!/guide/dev_captionedimage), [embedded media resources](#!/guide/dev_media_embed) and [mathematical formulas](#!/guide/dev_mathjax) widgets with additional styling.
 

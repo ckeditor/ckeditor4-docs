@@ -76,9 +76,9 @@ This command opens the `abbrDialog` dialog that we are going to define in a mome
 
 ## Creating the Toolbar Button
 
-The plugin dialog window is to be opened by using a toolbar button. To this
-end, we need to define a button that will be associated with the dialog
-window.
+The plugin dialog window is opened using a toolbar button. To this
+end, we need to define a button that will be associated with the
+dialog window.
 
 	editor.ui.addButton( 'Abbr', {
 		label: 'Insert Abbreviation',
@@ -135,13 +135,13 @@ Clicking the button should open the `abbrDialog` dialog window. One interesting 
 
 In the code above we registered the `abbrDialog` dialog name, telling the editor to load the dialog definition from the `dialog/abbr.js` file out of the plugin installation folder (`this.path`).
 
-### The Dialog Defintion
+### The Dialog Definition
 
 It is time to work on the `dialogs/abbr.js` file itself. First, we will simply repeat the CKEDITOR.dialog.add call, but now we will return the dialog definition to the editor:
 
 	CKEDITOR.dialog.add( 'abbrDialog', function ( editor ) {
 		return {
-			... The dialog defition comes here ...
+			... The dialog definition comes here ...
 		};
 	});
 

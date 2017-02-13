@@ -76,7 +76,7 @@ This command opens the `abbrDialog` dialog that we are going to define in a mome
 
 ## Creating the Toolbar Button
 
-The plugin dialog window is opened using a toolbar button. To this
+The plugin dialog window is opened by using a toolbar button. To this
 end, we need to define a button that will be associated with the
 dialog window.
 

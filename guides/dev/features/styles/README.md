@@ -115,10 +115,6 @@ Sample widget styles:
 
 To see how this works in practice, refer to the [Widget Styles](http://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the [captioned image](#!/guide/dev_captionedimage), [embedded media resources](#!/guide/dev_media_embed) and [mathematical formulas](#!/guide/dev_mathjax) widgets with additional styling.
 
-There are some known limitations for styling widgets:
-
-* Due to the simplicity of the [Placeholder](#!/guide/dev_placeholder) widget it does not store and preserve classes or styles when the editor is switched to the source mode.
-
 ## The Stylesheet Parser Plugin
 
 <p class="requirements">

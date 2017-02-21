@@ -94,7 +94,7 @@ To define a widget style you need to specify two additional properties in your s
 * `type` &ndash; Must be set to `'widget'`. This informs the style system that this is a widget style.
 * `widget` &ndash; Must be set to the name of the widget to which this style will be applicable. Widget names can be verified by browsing the [editorInstance.widgets.registered](#!/api/CKEDITOR.plugins.widget.repository-property-registered) object in your browser's developer tools.
 
-Starting with **CKEditor 4.6.2** an optional `group` property has been introduced, providing a way to define excluding styles. It can be set to a string representing single group or array of strings. Two styles from the same `group` cannot be applied to the same widget instance simultaneously. When excluding styles are applied, the latest one is used while all previous styles are removed.
+Starting from **CKEditor 4.6.2** an optional `group` property has been introduced, providing a way to define mutually exclusive styles. It can be set to a string representing a single group or to an array of strings. Two styles from the same `group` cannot be applied to the same widget instance simultaneously. When mutually exclusive styles are applied, the latest one is used while all the previous styles are removed.
 
 Since widgets are a lot more complex structures than standard content, only classes defined in the style definition will be applied to them. Other attributes and inline styles will be ignored. Most often classes will be applied to widget's main element, but this behavior may be customized by the widget itself.
 

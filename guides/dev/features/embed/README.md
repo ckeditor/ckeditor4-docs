@@ -14,7 +14,7 @@ The optional [Media Embed](http://ckeditor.com/addon/embed) and [Semantic Media 
 Both widgets allow to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in the editor. By default the plugins use the [Iframely](https://iframely.com/) proxy service which supports over [1715 content providers](https://iframely.com/domains) such as [YouTube](http://youtube.com), [Vimeo](http://vimeo.com), [Twitter](http://twitter.com), [Instagram](http://instagtram.com), [Imgur](http://imgur.com), [GitHub](http://github.com), or [Google Maps](maps.google.com).
 
 <p class="tip">
-  Since 4.6 the content provider URL is set to empty by default. The former default URL is still available, although i'ts recommended to set up an account on the [Iframely](https://iframely.com/) service for better API usage tracking.
+  Since 4.7 the content provider URL is set to empty by default. The former default URL is still available, although it's recommended to set up an account on the [Iframely](https://iframely.com/) service for better control over embedded content.
 </p>
 
 ## Media Embed vs Semantic Media Embed
@@ -43,7 +43,7 @@ Both widgets can be easily [configured](#!/api/CKEDITOR.config-cfg-embed_provide
 
 ## Adjusting the Content Provider
 
-As of 4.6 there is no default content provider for the Media Embed and Semantic Media Embed plugins, atlthough the former default anonymized API endpoint is still available for use. This service is provided by [Iframely](https://iframely.com/) and allows for 1000 hits a month. For better control of API usage it is recommended to [set up an account at Iframely](https://iframely.com/plans). The free "Developer" tier comes with similar set of features and restrictions.
+As of 4.7 there is no default content provider for the Media Embed and Semantic Media Embed plugins, although the former default anonymized API endpoint is still available for use. This service is provided by [Iframely](https://iframely.com/) and allows for 1000 hits a month. For better control of API usage it is recommended to [set up an account at Iframely](https://iframely.com/plans). The free "Developer" tier comes with similar set of features and restrictions.
 
 Iframely can also be configured to be hosted on your server &mdash; you can read more about it in the ["Self-host Iframely APIs"](https://iframely.com/docs/host) article.
 
@@ -55,9 +55,6 @@ Iframely can also be configured to be hosted on your server &mdash; you can read
 		Some services (like Google Maps) require setting up your API key, too. The default account used by the plugins is just for demonstration purposes. In Google API Settings, "Accept requests from these HTTP referrers (web sites)" is set to accept only <code>ckeditor.com</code>.
 	</p>
 </div>
-<p class="tip">
-	The pre-4.6 default configuration using the public Iframely service does not support SSL. If you need SSL support, you should either host Iframely locally on your server or use the public service through the <a href="http://iframe.ly">iframe.ly</a> domain with your own API key.
-</p>
 
 ## Automatic Embedding on Paste
 

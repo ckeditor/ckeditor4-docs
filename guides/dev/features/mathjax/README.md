@@ -25,7 +25,7 @@ Equations are inserted as widgets, so they have [all advantages of widgets](#!/g
 
 In order to display mathematical formulas on a target page, i.e. the page where content produced by CKEditor will be visible, the target page needs to [include the MathJax script](http://docs.mathjax.org/en/latest/start.html). It is advisable to use the same MathJax library version as set in the CKEDITOR.config.mathJaxLib configuration option. For example for the default setting this would be:
 
-	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 
 ## Changing Path to MathJax Library
 

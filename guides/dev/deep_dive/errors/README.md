@@ -39,7 +39,7 @@ This article contains the list of CKEditor error codes and their explanation. Th
 
 ## embed-no-provider-url
 * Location: `plugins/embed/plugin.js`
-* Description: No embed provider URL [configured](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-embed_provider). Since 4.7.0 this value is empty by default.
+* Description: No [embed provider URL](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-embed_provider) configured. Since CKEditor 4.7.0 this value is empty by default.
 * Additional data: None.
 
 ## embedbase-widget-invalid

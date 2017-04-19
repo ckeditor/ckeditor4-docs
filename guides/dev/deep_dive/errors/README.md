@@ -37,6 +37,11 @@ This article contains the list of CKEditor error codes and their explanation. Th
 	* `plugin`: The name of the plugin that cannot be removed.
 	* `requiredBy`: The name of the plugin whose requirements block the removal.
 
+## embed-no-provider-url
+* Location: `plugins/embed/plugin.js`
+* Description: No [embed provider URL](http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-embed_provider) configured. Since CKEditor 4.7.0 this value is empty by default.
+* Additional data: None.
+
 ## embedbase-widget-invalid
 
 * Location: `plugins/embedbase/plugin.js`

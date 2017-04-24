@@ -121,7 +121,7 @@ To learn more about pasting and dropping files see the [file handling guide](#!/
 
 ## Copy, Cut and Paste
 
-CKEditor wants to intercept pasted data in every browser. Unfortunately, the Clipboard API is not yet available in every browser (and, for example, in Safari this API is available, but there is no `text/html` type available), so CKEditor uses a hybrid solution to get the data using the Clipboard API and a paste bin.
+CKEditor wants to intercept pasted data in every browser. Unfortunately, the Clipboard API is not yet available in all browsers, so CKEditor uses a hybrid solution to get the data using the Clipboard API and a paste bin.
 
 ### Clipboard API
 
@@ -135,11 +135,11 @@ A paste bin is a CKEditor mechanism to capture native paste. The mechanism works
 
 * When an attempt to paste the data is discovered, a moment before the paste really happens, CKEditor moves the selection to a special hidden container called the *paste bin*.
 * Next, CKEditor waits to let the browser do the native paste into that paste bin.
-* After a short timeout (well... Safari needs more time) CKEditor gets the content of this container.
+* After a short timeout CKEditor gets the content of this container.
 * Then, CKEditor moves the selection back to the {@link CKEDITOR.editable} and removes the paste bin.
 * Finally, CKEditor fires the {@link CKEDITOR.editor#paste paste event} with captured data as the `dataValue`.
 
-It is very tricky to prevent the browser from blinking and scrolling. Up to version 4.5 this was the main mechanism for pasting and many bugs were reported and needed our patches. Now this is a backup solution when the Clipboard API is not supported properly. It is used in Internet Explorer, Chrome for Android and Safari.
+It is very tricky to prevent the browser from blinking and scrolling. Up to version 4.5 this was the main mechanism for pasting and many bugs were reported and needed our patches. Now this is a backup solution when the Clipboard API is not supported properly. It is used in Internet Explorer, Edge and Chrome for Android.
 
 ### Cut and Copy
 

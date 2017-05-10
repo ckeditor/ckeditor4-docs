@@ -20,10 +20,17 @@ Advanced Content Filter works in two modes:
 
 In both modes it is possible to extend the filter configuration by using the {@link CKEDITOR.config#extraAllowedContent} setting or to trim it down by using the {@link CKEDITOR.config#disallowedContent} setting.
 
-<p class="tip">
-	If you want to disable Advanced Content Filter, set {@link CKEDITOR.config#allowedContent} to <code>true</code>. All available editor features will be activated and input data will not be filtered. Note that you cannot use {@link CKEDITOR.config#disallowedContent} when ACF is disabled.
-</p>
-
+<div class="tip">
+    <p>
+        <strong>ACF does not replace a security filter for your website content.</strong> If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
+    </p>
+    <p>
+        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities. Although ACF is not a security filter, leaving it in defult, automatic mode should minimise the risk of XSS issues.
+    </p>
+    <p>
+   		If you want to disable Advanced Content Filter, set {@link CKEDITOR.config#allowedContent} to <code>true</code>. All available editor features will be activated and input data will not be filtered. Note that you cannot use {@link CKEDITOR.config#disallowedContent} when ACF is disabled.
+    </p>
+</div>
 
 ## Automatic Mode
 

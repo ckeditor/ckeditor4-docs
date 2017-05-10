@@ -13,6 +13,15 @@ Advanced Content Filter (ACF) is a CKEditor core feature that **filters incoming
 
 By default, ACF works in **automatic mode**. It means that out-of-the-box CKEditor will only allow content that was *defined as allowed* by enabled editor features (buttons, plugins). For example if the **Image** button is enabled, CKEditor will allow `<img>` tags and so on. This default behavior makes sense as otherwise the user would not be able to easily work with elements that cannot be recognized by any of available plugins without editing the HTML source code manually.
 
+<div class="tip">
+    <p>
+        <strong>ACF does not replace a security filter for your website content.</strong> If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
+    </p>
+    <p>
+        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities. Although ACF is not a security filter, leaving it in defult, automatic mode should minimise the risk of XSS issues.
+    </p>
+</div>
+
 ## Configuring ACF
 
 **Note:** In this article, instead of writing "attributes, styles, and classes", "**properties**" will be used as a shorthand.

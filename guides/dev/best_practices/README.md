@@ -69,3 +69,18 @@ or, if you are using the HTML5 `DOCTYPE`, to:
 
 ### Use CKEditor for what it was made for
 Last but not least, [use CKEditor for what it was designed for](#!/guide/dev_basics-section-what-ckeditor-is). Learn from the best: Visit the [CKEditor SDK](http://sdk.ckeditor.com/) to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
+
+## Security
+
+### Filter content server-side
+
+**No editor features (such as [Advanced Content Filter (ACF)](#!/guide/dev_acf) or paste filter) should be treated as security filters.** If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
+
+### Use ACF in default, automatic mode
+
+Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities. Although ACF is not a security filter, leaving it in defult, automatic mode should minimise the risk of XSS issues.
+
+### Disable source mode
+
+[Source mode](#!/guide/dev_sourcearea) is an advanced feature that lets your users insert HTML code into your website and is not really needed in most use cases (after all, you are installing a WYSIWYG editor to avoid the need to write content in HTML). Disabling it is thus highly recommended.
+

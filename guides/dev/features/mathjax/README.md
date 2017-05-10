@@ -27,9 +27,13 @@ In order to display mathematical formulas on a target page, i.e. the page where 
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 
-## Changing Path to MathJax Library
+## Setting the Path to MathJax Library
 
-By default the MathJax library is loaded from the [official MathJax CDN](http://docs.mathjax.org/en/latest/start.html#using-the-mathjax-content-delivery-network-cdn). You can however use the CKEDITOR.config.mathJaxLib setting to use a different path, either a local resource or a different web resource. This configuration option accepts a full or an absolute path. For example:
+In order to enable the Mathematical Formulas plugin, you need to configure the CKEDITOR.config.mathJaxLib option and set the path to the MathJax library. This value is empty by default, but you can use the free cdnjs service:
+
+    config.mathJaxLib = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML';
+
+You can also use a different path, either a local resource or a different web resource. This configuration option accepts a full or an absolute path. For example:
 
 	config.mathJaxLib = 'http:\/\/example.com\/libs\/MathJax.js';
 

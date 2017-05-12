@@ -6,16 +6,14 @@ For licensing, see LICENSE.md.
 # Embedding Media Resources with oEmbed
 
 <p class="requirements">
-	This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>. In order to enable the plugin you need to <a href="#!/guide/dev_media_embed-section-configuring-the-content-provider">configure the content provider</a> first.
 </p>
 
 The optional [Media Embed](http://ckeditor.com/addon/embed) and [Semantic Media Embed](http://ckeditor.com/addon/embedsemantic) plugins introduce two new [widget](#!/guide/dev_widgets) types &mdash; an embedded media resource and an embedded media resource with a semantic output.
 
-Both widgets allow to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in the editor. By default the plugins use the [Iframely](https://iframely.com/) proxy service which supports over [1715 content providers](https://iframely.com/domains) such as [YouTube](http://youtube.com), [Vimeo](http://vimeo.com), [Twitter](http://twitter.com), [Instagram](http://instagtram.com), [Imgur](http://imgur.com), [GitHub](http://github.com), or [Google Maps](maps.google.com).
+{@img mediaembed_01.png An article with a YouTube video and a tweet embedded}
 
-<p class="tip">
-  Since 4.7 the content provider URL is set to empty by default. The former default URL is still available, although it's recommended to set up an account on the <a href="https://iframely.com/">Iframely</a> service for better control over embedded content.
-</p>
+Both widgets allow to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in the editor. In order to use the widget, you need to set up the content provider in your editor configuration first. We recommend to use the [Iframely](https://iframely.com/) proxy service which supports over [1715 content providers](https://iframely.com/domains) such as [YouTube](http://youtube.com), [Vimeo](http://vimeo.com), [Twitter](http://twitter.com), [Instagram](http://instagtram.com), [Imgur](http://imgur.com), [GitHub](http://github.com), or [Google Maps](maps.google.com).
 
 ## Media Embed vs Semantic Media Embed
 
@@ -39,13 +37,19 @@ This difference makes the Media Embed plugin perfect for systems where the embed
 
 ## Configuring the Content Provider
 
-Both widgets can be easily [configured](#!/api/CKEDITOR.config-cfg-embed_provider) to use another [oEmbed](http://www.oembed.com/) provider or custom services.
+<p class="tip">
+  Since CKEditor 4.7 the content provider URL is set to empty by default. The former default URL is still available, although it is recommended to set up an account on the <a href="https://iframely.com/">Iframely</a> service for better control over embedded content.
+</p>
 
-As of 4.7 there is no default content provider for the Media Embed and Semantic Media Embed plugins.
+The default CKEditor configuration up till version 4.7 was using an anonymized endpoint provided by Iframely, however, it did not include several features such as Google Maps. It is still possible to use it by setting the CKEDITOR.config.embed_provider in the following way:
 
-Formerly CKEditor has been using anonymized endpoint provided by [Iframely](https://iframely.com/), however it did not include several features such as Google Maps. It's still possible to use it, you'll find it in [configuration option](#!/api/CKEDITOR.config-cfg-embed_provider) documentation, however for better control of API usage it is recommended to [set up an account at Iframely](https://iframely.com/plans). The free "Developer" tier does not have this restriction.
+	config.embed_provider = '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}'
+
+However, for better control of API usage it is recommended to [set up an account at Iframely](https://iframely.com/plans). The free "Developer" tier does not have this restriction.
 
 Iframely can also be configured to be hosted on your server &mdash; you can read more about it in the ["Self-host Iframely APIs"](https://iframely.com/docs/host) article.
+
+At the same time both widgets can be easily [configured](#!/api/CKEDITOR.config-cfg-embed_provider) to use another [oEmbed](http://www.oembed.com/) provider or custom services.
 
 ## Automatic Embedding on Paste
 

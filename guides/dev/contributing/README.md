@@ -7,7 +7,7 @@ For licensing, see LICENSE.md.
 
 This section explains how you can contribute to CKEditor development. CKEditor is an Open Source product that is free for anyone to download, use, and customize. It has an amazing community around it that supports it in all possible ways. If you would like to contribute to its development, you can consider the following actions:
 
-1. [Report bugs](#!/guide/dev_issues_readme) or feature requests and submit patches on our [Development site](http://dev.ckeditor.com/).
+1. [Report bugs](#!/guide/dev_issues_readme) or feature requests through the CKEditor [GitHub repository](https://github.com/ckeditor/ckeditor-dev/pulls).
 
 2. Fork CKEditor at [GitHub](https://github.com/ckeditor/ckeditor-dev), fix bugs or propose new functionality by using [pull requests](#!/guide/dev_contributing_code).
 

@@ -13,7 +13,7 @@ The optional [Media Embed](http://ckeditor.com/addon/embed) and [Semantic Media 
 
 {@img mediaembed_01.png An article with a YouTube video and a tweet embedded}
 
-Both widgets allow to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in the editor. In order to use the widget, you need to set up the content provider in your editor configuration first. We recommend to use the [Iframely](https://iframely.com/) proxy service which supports over [1715 content providers](https://iframely.com/domains) such as [YouTube](http://youtube.com), [Vimeo](http://vimeo.com), [Twitter](http://twitter.com), [Instagram](http://instagtram.com), [Imgur](http://imgur.com), [GitHub](http://github.com), or [Google Maps](maps.google.com).
+Both widgets allow to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in the editor. In order to use the widget, you need to set up the content provider in your editor configuration first. We recommend to use the [Iframely](https://iframely.com/) proxy service which supports over [1800 content providers](https://iframely.com/domains) such as [YouTube](http://youtube.com), [Vimeo](http://vimeo.com), [Twitter](http://twitter.com), [Instagram](http://instagtram.com), [Imgur](http://imgur.com), [GitHub](http://github.com), or [Google Maps](maps.google.com).
 
 ## Media Embed vs Semantic Media Embed
 

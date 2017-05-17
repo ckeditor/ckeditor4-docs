@@ -9,9 +9,9 @@ For licensing, see LICENSE.md.
     This feature is provided through the <a href="http://ckeditor.com/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-The [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin allows you to paste content from Microsoft Word and maintain original content formatting.
+The [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin allows you to paste content from Microsoft Word and maintain original content structure and formatting.
 
-When enabled, it automatically detects Word content and transforms its structure and formatting to CKEditor styles. It also adds the **Paste from Word** toolbar button (<img src="guides/dev_pastefromword/pastefromword-button.png" alt="Paste from Word toolbar button" style="vertical-align: bottom;">) which makes it possible to paste clipboard data this way only on demand.
+When enabled, it automatically detects Word content and transforms its structure and formatting to clean HTML. It also adds the **Paste from Word** toolbar button (<img src="guides/dev_pastefromword/pastefromword-button.png" alt="Paste from Word toolbar button" style="vertical-align: bottom;">) which makes it possible to paste clipboard data this way only on demand.
 
 ## Supported Features
 
@@ -33,7 +33,7 @@ Paste from Word retains the following formatting:
     * Borders and shading
     * Cell size (width and height)
     * Cell alignment
-    * Text formatting
+    * Text formatting (as listed above)
 * Paste from Excel
     * Cell formatting (size, background, borders, special characters)
     * Row and column size

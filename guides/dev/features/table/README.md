@@ -9,7 +9,7 @@ For licensing, see LICENSE.md.
 	Features described in this article are provided through several plugins that may not be included in the CKEditor preset available from the <a href="http://ckeditor.com/download">Download</a> site which you are using and may <a href="#!/guide/dev_plugins">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-CKEditor support for creating and editing tables is provided by three separate table-related plugins as well as two helper plugins.
+CKEditor support for creating and editing tables is provided by four separate table-related plugins as well as two helper plugins.
 
 * The [Table](http://ckeditor.com/addon/table) plugin &ndash; adds the **Table Properties** dialog window with support for creating tables and setting basic table properties, such as:
 	* Number of rows and columns.
@@ -29,13 +29,17 @@ CKEditor support for creating and editing tables is provided by three separate t
 	* Inserting and deleting cells, rows and columns.
 	* Merging and splitting cells horizontally and vertically.
 * The [Table Resize](http://ckeditor.com/addon/tableresize) plugin &ndash; adds support for column resizing with your mouse.
+* The [Table Selection](http://ckeditor.com/addon/tableselection) plugin (CKEditor 4.7+) &ndash; introduces support for the custom selection system for tables that lets you:
+	* Select an arbitrary rectangular table fragment &mdash; a few cells from different rows, a column (or a few of them) or a row (or multiple rows).
+	* Apply formatting or add a link to all selected cells at once.
+	* Cut, copy and paste entire rows or columns.
 
 The following two helper plugins extend the Table Properties and Cell Properties dialog windows with additional features:
 
 * The [Color Dialog](http://ckeditor.com/addon/colordialog) plugin &ndash; provides a user-friendly way to select the cell background and border color through a dedicated **Select Color** dialog window with a color table.
 * The [Advanced Tab for Dialogs](http://ckeditor.com/addon/dialogadvtab) plugin &ndash; provides the **Advanced** tab for the Table Properties dialog window and allows for setting the table ID, language direction, inline CSS style and stylesheet class.
 
-The **Table** and **Table Tools** plugins are included in the Standard and Full installation packages. **Color Dialog** and  **Advanced Tab for Dialogs** are only available in the Full distribution, while the **Table Resize** plugin is optional &mdash; they may be [added to your CKEditor build](#!/guide/dev_plugins).
+The **Table**, **Table Tools** and **Table Selection** plugins are included in the Standard and Full installation packages. **Color Dialog** and  **Advanced Tab for Dialogs** are only available in the Full distribution, while the **Table Resize** plugin is optional &mdash; they may be [added to your CKEditor build](#!/guide/dev_plugins).
 
 The following image presents a table that you can create in CKEditor along with the table context menu options provided by the Table and Table Tools plugins.
 

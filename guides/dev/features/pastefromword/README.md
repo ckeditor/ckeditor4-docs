@@ -37,7 +37,7 @@ Paste from Word retains the following formatting:
 * Paste from Excel
     * Cell formatting (size, background, borders, special characters)
     * Row and column size
-    * Text formatting
+    * Text formatting (as listed above)
 * Advanced formatting
     * Default styles
     * User-defined styles
@@ -108,6 +108,7 @@ See the [working "Pasting content from Microsoft Word" sample](http://sdk.ckedit
 
 Refer to the following resources for more information about pasting content:
 
+* The [Pasting content from Microsoft Excel](#!/guide/dev_pastefromexcel) article contains more information about the Paste from Excel feature.
 * The [Clipboard Integration](#!/guide/dev_clipboard) article explains how Clipboard API is implemented in CKEditor.
 * The [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) article describes drag&drop in CKEditor.
 * The [Content Filtering (ACF)](#!/guide/dev_acf) is an introduction to CKEditor's unique content filtering system.

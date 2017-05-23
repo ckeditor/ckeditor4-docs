@@ -304,6 +304,14 @@
 										"meta_keywords": "ckeditor, editor, wysiwyg, paste, insert, word, pastefromword"
 									},
 									{
+										"name": "dev_pastefromexcel",
+										"url": "dev/features/pastefromexcel",
+										"title": "Paste from Excel",
+										"description": "Pasting content from Microsoft Excel documents into the editor.",
+										"meta_description": "Pasting content from Microsoft Excel documents into the editor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, paste, insert, excel, pastefromword, spreadsheet"
+									},
+									{
 										"name": "dev_table",
 										"url": "dev/features/table",
 										"title": "Tables with Column Resizing",

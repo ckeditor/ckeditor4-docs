@@ -74,7 +74,7 @@ Last but not least, [use CKEditor for what it was designed for](#!/guide/dev_bas
 
 ### Filter content server-side
 
-**No editor features (such as [Advanced Content Filter (ACF)](#!/guide/dev_acf) or paste filter) should be treated as security filters.** If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
+**No editor features (such as [Advanced Content Filter (ACF)](#!/guide/dev_acf) or paste filter) should be treated as security filters.** If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website. The same applies to publishing content on your website. Before displaying content on your website coming from untrusted users, regardless whether CKEditor is enabled or not, you should filter the content against XSS. The reason is that malicious users can disable CKEditor in a browser or use software to alter the POST request and send anything. 
 
 ### Use ACF in default, automatic mode
 

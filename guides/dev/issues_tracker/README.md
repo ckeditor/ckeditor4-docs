@@ -5,7 +5,10 @@ For licensing, see LICENSE.md.
 
 # Issues Tracker Site
 
-CKEditor issues are handled in the [CKEditor Developer Center](http://dev.ckeditor.com/). This is the website used daily by the CKEditor core team to organize and distribute the development workflow. It is also the right place to report issues.
+CKEditor issues are handled in the [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) since the 4.7.0 release
+which took place on May 25th, 2017. The [former tracking system](https://dev.ckeditor.com) is still be available in the read-only mode and all past issues are still available publicly.
+
+The issues page is used daily by the CKEditor core team to organize and distribute the development workflow. It is also the right place to report issues.
 
 Before you attempt to report an issue, please make sure you read this page and thus help us optimize the management of issues.
 
@@ -26,14 +29,13 @@ Please provide the following when reporting new issues. The more information you
 When filing an issue, please bear these important things in mind:
 
  * **Submit separate reports for each issue.** Do not include more than one issue in the same report.
- * The "Priority", "Milestone", "Version", "Assign to" and "Keywords" fields are reserved for the core development team.
  * Make sure **you are using the latest CKEditor version**. Maybe your issue has already been fixed.
- * For a detailed guide on how to properly report a new issue go to the [Ticket Specs page](https://dev.ckeditor.com/wiki/TicketSpecs).
+ * Follow the instructions in the  **issue template** when reporting an issue.
 
 ## Reporting an Issue
 
 Before clicking the following link, make sure you have read the instructions above!
 
-If you are not a registered user of our tracker, take a minute to [create a new account in the CKEditor Developer Center](https://dev.ckeditor.com/register). Only authenticated users can create tickets.
+Only registered GitHub users may create issues, if you are not registered, take a minute to [create a GitHub account](https://github.com/join?source=header-repo).
 
-This is it. Once you log in, you will be ready to [report a CKEditor issue](https://dev.ckeditor.com/newticket).
+This is it. Once you log in, you will be ready to [report a CKEditor issue](https://github.com/ckeditor/ckeditor-dev/issues/new).

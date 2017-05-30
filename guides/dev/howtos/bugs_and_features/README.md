@@ -13,7 +13,7 @@ The [Reporting Issues](#!/guide/dev_issues_readme) article contains all the info
 
 ## How Do I Request New CKEditor Features?
 
-If you feel there is an interesting feature missing in CKEditor, go to the [Development site](http://dev.ckeditor.com/) and file a ticket.
+If you feel there is an interesting feature missing in CKEditor, go to the our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) and file a new issue.
 
 Please make sure you read the [Issues Tracker Site](#!/guide/dev_issues_tracker) article beforehand in order to make it easier for the developers to examine the issue. It is also recommended to start from a search at the [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins/all) to see whether the proposed functionality has not been implemented yet and offered as a plugin, either an official one or a community-provided add-on.
 

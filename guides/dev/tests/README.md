@@ -82,7 +82,7 @@ If you want, you can specify a port or a hostname where Bender.js runs:
 	Some tests require the browser to be in focus. This means that you can not use other applications when running them.
 </p>
 
-Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again (when opened directly), they should pass. If a test fails a few times in a row, it is a sign that something went wrong. [Report a CKEditor issue](#!/guide/dev_issues_readme) on our [Development site](http://dev.ckeditor.com) in such case. Remember to include a link to the failing test and information about the browser in which it fails.
+Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again (when opened directly), they should pass. If a test fails a few times in a row, it is a sign that something went wrong. [Report a CKEditor issue](#!/guide/dev_issues_readme) on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) in such case. Remember to include a link to the failing test and information about the browser in which it fails.
 
 ## CKEditor Tests Structure
 

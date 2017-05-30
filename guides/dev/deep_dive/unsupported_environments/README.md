@@ -78,6 +78,6 @@ Although this is not a recommended approach, it is also possible to edit the CKE
 
 ## Help Us by Reporting Issues!
 
-Enabling CKEditor in unsupported environments is an experimental feature aimed at developers who are willing to help us bring official support to a wider range of devices and setups. We would thus appreciate if you [reported any issues](#!/guide/dev_issues_tracker) that you find on our [Development site](http://dev.ckeditor.com/). Do remember to describe the tested environment (operating system, browser, device) in as much detail as possible.
+Enabling CKEditor in unsupported environments is an experimental feature aimed at developers who are willing to help us bring official support to a wider range of devices and setups. We would thus appreciate if you [reported any issues](#!/guide/dev_issues_tracker) that you find on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues). Do remember to describe the tested environment (operating system, browser, device) in as much detail as possible.
 
 If you are particularly interested in using CKEditor on mobile devices, you can check the results of our [recent study](http://dev.ckeditor.com/ticket/11712#comment:5) on the state of CKEditor support in iOS and Android.

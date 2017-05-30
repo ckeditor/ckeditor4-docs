@@ -29,7 +29,7 @@ CKEditor is and has always been an Open Source product. We are proud to be a par
 
 If you also want to support the development of CKEditor, it will be most welcome. Here are a couple of things that you can do:
 
-* [Report bugs](#!/guide/dev_issues_readme) or feature requests on our [Development site](http://dev.ckeditor.com/).
+* [Report bugs](#!/guide/dev_issues_readme) or feature requests on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues).
 
 * [Submit code patches](#!/guide/dev_contributing_code) through pull requests in the [official CKEditor repository](https://github.com/ckeditor/ckeditor-dev).
 

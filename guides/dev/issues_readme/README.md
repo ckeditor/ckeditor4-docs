@@ -5,7 +5,7 @@ For licensing, see LICENSE.md.
 
 # Reporting Issues
 
-If you feel you found an issue in CKEditor, we will be grateful for letting us know. Before you create a bug report, however, please read our guidelines on how to do it properly and most eficiently. You can also take a look at the ["So You Think You Found a Bug"](http://ckeditor.com/blog/So-you-think-you-found-a-bug) post that was published a while ago on our blog.
+If you feel you found an issue in CKEditor, we will be grateful for letting us know. Before you create a bug report, however, please read our guidelines on how to do it properly and most efficiently.
 
 ## Reproduce on Demo Page
 

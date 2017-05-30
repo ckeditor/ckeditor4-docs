@@ -100,7 +100,7 @@ CKEditor source code is stored in the Git repository. The development takes plac
 
 ### Select the Changes You Want to Port
 
-If you are reading this document, most probably you already know which feature you want to port. Whenever you find a change that you need to port it is recommended to find in which ticket on the [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) or [former Development site](http://dev.ckeditor.com/) the change has been tracked.
+If you are reading this document, most probably you already know which feature you want to port. Whenever you find a change that you need to port it is recommended to find in which ticket on the [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) or a [former Development site](http://dev.ckeditor.com/) the change has been tracked.
 
 #### Example
 

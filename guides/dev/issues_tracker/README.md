@@ -36,14 +36,13 @@ When filing an issue, please bear these important things in mind:
 
 Before clicking the following link, make sure you have read the instructions above!
 
-Only registered GitHub users may create issues, if you are not registered, take a minute to [create a GitHub account](https://github.com/join?source=header-repo).
+Only registered GitHub users may create issues, if you are not registered, take a minute to [create a GitHub account](https://github.com/join).
 
 This is it. Once you log in, you will be ready to [report a CKEditor issue](https://github.com/ckeditor/ckeditor-dev/issues/new).
 
-## Issue State
+### Labels
 
-After reporting an issue, it is processed by the development team. At any point you may check what progress have been already made.
-The best way is to check the issue labels. All available labels:
+Every issue may be marked with the following labels:
 
 * Status labels - current issue status
     * <span style="background-color:#e6e6e6">status:pending</span> - more information is needed to proceed with the issue,
@@ -60,9 +59,3 @@ The best way is to check the issue labels. All available labels:
 * Other - additional information
     * <span style="background-color:#aaaaaa">support</span> - issue reported by the licensed client,
     * <span style="background-color:#34d058">easy</span> - relatively easy to fix, this is a perfect issue if you are willing to [create a Pull Request](#!/guide/dev_contributing_code)
-    
-Apart from the issue labels you may also check if:
-
-* Someone is assigned to the issue, which means work is in progress.
-* Reviewer is assigned - review is in progress or done (depending on the review status).
-    

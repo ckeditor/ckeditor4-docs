@@ -17,8 +17,8 @@ Most of the issues are reproducible on the demo. If you have a different case th
 
 ## Avoid Duplicates
 
-Before you file a new ticket, make sure your issue has not been reported yet. Use the [search page](https://github.com/ckeditor/ckeditor-dev/issues) to check it.
-If the issue is already reported just put a (+1) reaction in it. During our transition period you could also check [CKEditor's former bug tracker](https://dev.ckeditor.com). If the issue
+Before you file a new issue, make sure your issue has not been reported yet. Use the [search page](https://github.com/ckeditor/ckeditor-dev/issues) to check it.
+If the issue is already reported just put a 👍 (+1) reaction in it. During our GitHub transition period you could also check [CKEditor's former bug tracker](https://dev.ckeditor.com). If the issue
 is there but not in GitHub, put a reference link to the original Trac issue.
 
 CKEditor is in active development, so there is a chance that we have already fixed your issue in the current code base. You should thus also test it on our last **Nightly Build**: <http://nightly.ckeditor.com/>

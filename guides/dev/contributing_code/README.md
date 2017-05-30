@@ -37,7 +37,7 @@ To propose a bug fix or a new functionality you need to create a pull request in
 
 ## Branches
 
-When the environment is set up and running you can start working on your patch. First, create a separate branch to group your changes. If there is a ticket on http://dev.ckeditor.com/ use its number, otherwise [create a new ticket](#!/guide/dev_issues_tracker) yourself and use its number or just pick any meaningful name:
+When the environment is set up and running you can start working on your patch. First, create a separate branch to group your changes. If there is an issue on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) use its number, otherwise [create a new issue](#!/guide/dev_issues_tracker) yourself and use its number or just pick any meaningful name:
 
 	git checkout -b t/12345
 

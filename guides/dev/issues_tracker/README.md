@@ -5,8 +5,9 @@ For licensing, see LICENSE.md.
 
 # Issues Tracker Site
 
-CKEditor issues are handled in the [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) since the 4.7.0 release
-which took place on May 25th, 2017. The [former tracking system](https://dev.ckeditor.com) is still available in the read-only mode and all past issues are still available publicly.
+<p class="tip">
+    CKEditor issues are handled through the <a href="https://github.com/ckeditor/ckeditor-dev/issues">GitHub issues page</a> since the CKEditor 4.7 release (May 25th, 2017). The <a href="https://dev.ckeditor.com">former tracking system</a> is still available in the read-only mode and all past issues are still available publicly.
+</p>
 
 The issues page is used daily by the CKEditor core team to organize and distribute the development workflow. It is also the right place to report issues.
 
@@ -36,7 +37,7 @@ When filing an issue, please bear these important things in mind:
 
 Before clicking the following link, make sure you have read the instructions above!
 
-Only registered GitHub users may create issues, if you are not registered, take a minute to [create a GitHub account](https://github.com/join).
+Only registered GitHub users may create issues. If you are not registered, take a minute to [create a GitHub account](https://github.com/join).
 
 This is it. Once you log in, you will be ready to [report a CKEditor issue](https://github.com/ckeditor/ckeditor-dev/issues/new).
 
@@ -44,18 +45,20 @@ This is it. Once you log in, you will be ready to [report a CKEditor issue](http
 
 Every issue may be marked with the following labels:
 
-* Status labels - current issue status
-    * <span style="background-color:#e6e6e6">status:pending</span> - more information is needed to proceed with the issue,
-    * <span style="background-color:#e6e6e6">status:confirmed</span> - issue confirmed by the development team
-* Type labels - the type of the issue
-    * <span style="background-color:#b60205;color:#FFF">type:bug</span> - a bug,
-    * <span style="background-color:#1d76db;color:#FFF">type:feature</span> - a feature,
-    * <span style="background-color:#fbca04">type:task</span> - any other issue (refactoring, typo fix, etc)
-* Resolution labels - how and why issue was resolved
-    * <span style="background-color:#444444;color:#FFF">resolution:fixed</span> - issue had been fixed and merged to `master`/`major` branch,
-    * <span style="background-color:#444444;color:#FFF">resolution:invalid</span> - not a valid issue (not reproducible, 3rd-party bug, etc),
-    * <span style="background-color:#444444;color:#FFF">resolution:duplicate</span> - duplicate of already reported issue,
-    * <span style="background-color:#444444;color:#FFF">resolution:wontfix</span> - the issue is valid, however CKSource does not plan to fix it
-* Other - additional information
-    * <span style="background-color:#aaaaaa">support</span> - issue reported by the licensed client,
-    * <span style="background-color:#34d058">easy</span> - relatively easy to fix, this is a perfect issue if you are willing to [create a Pull Request](#!/guide/dev_contributing_code)
+* Status labels &ndash; current issue status:
+    * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:pending</span> &ndash; More information is needed to proceed with the issue.
+    * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:confirmed</span> &ndash; Issue confirmed by the development team.
+* Type labels - the type of the issue:
+    * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">type:bug</span> &ndash; A bug.
+    * <span style="background-color:#1d76db;color:#FFF;padding:0 3px 0 3px">type:feature</span> &ndash; A feature request.
+    * <span style="background-color:#fbca04;padding:0 3px 0 3px">type:task</span>&ndash; Any other issue (refactoring, typo fix, etc).
+* Resolution labels &ndash; how and why the issue was resolved:
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:fixed</span> &ndash; The issue was fixed and merged to the `master`/`major` branch.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, 3rd-party bug, etc).
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:duplicate</span> &ndash; A duplicate of an already reported issue.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:wontfix</span> &ndash; The issue is valid, however CKSource does not plan to fix it.
+* Browser labels &ndash; for browser-specific bugs:
+    * <span style="background-color:#5319e7;color:#FFF;padding:0 3px 0 3px">browser:NNN</span> &ndash; The issue can only be reproduced in a particular browser.
+* Other - additional information:
+    * <span style="background-color:#aaaaaa;padding:0 3px 0 3px">support</span> &ndash; An issue reported by a commercially licensed client.
+    * <span style="background-color:#34d058;padding:0 3px 0 3px">easy</span> &ndash; Relatively easy to fix, this is a perfect issue if you are willing to [create a Pull Request](#!/guide/dev_contributing_code).

@@ -51,7 +51,7 @@ Every change which can be tested automatically should have at least one automate
 	If you do not know how to write tests for your patch, you can make an <a href="#!/guide/dev_contributing-section-proposing-incomplete-patches">incomplete pull request</a> and the core team will give you some hints or perhaps someone else from the community will step in.
 </p>
 
-Some type of features or bugs cannot be tested automatically. In such cases, make sure to create a manual test (see [this one](https://github.com/ckeditor/ckeditor-dev/tree/master/tests/tickets/12735) for instance).
+Some types of features or bugs cannot be tested automatically. In such cases, create a manual test (see [this one](https://github.com/ckeditor/ckeditor-dev/tree/master/tests/tickets/12735) for instance).
 
 <p class="tip">
 	To see manual tests in the Bender.js dashboard you need to change the filter from <code>is:unit</code> to <code>is:manual</code>.

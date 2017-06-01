@@ -58,6 +58,7 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 * <kbd>Ctrl+X</kbd>, <kbd>Shift+Del</kbd> &ndash; Cuts a text fragment to clipboard.
 * <kbd>Ctrl+C</kbd> &ndash; Copies a text fragment to clipboard.
 * <kbd>Ctrl+V</kbd>, <kbd>Shift+Insert</kbd> &ndash; Pastes a text fragment from clipboard.
+* <kbd>Shift+Ctrl+V</kbd> &ndash; Pastes content from clipboard as plain text.
 
 ### Text Selection
 

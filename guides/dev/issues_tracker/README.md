@@ -53,10 +53,10 @@ Every issue may be marked with the following labels:
     * <span style="background-color:#1d76db;color:#FFF;padding:0 3px 0 3px">type:feature</span> &ndash; A feature request.
     * <span style="background-color:#fbca04;padding:0 3px 0 3px">type:task</span>&ndash; Any other issue (refactoring, typo fix, etc).
 * Resolution labels &ndash; how and why the issue was resolved:
-    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:fixed</span> &ndash; The issue was fixed and merged to the `master`/`major` branch.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, 3rd-party bug, etc).
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:duplicate</span> &ndash; A duplicate of an already reported issue.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:wontfix</span> &ndash; The issue is valid, however CKSource does not plan to fix it.
+    * If the issue is closed and there is no resolution label, it means that the issue was fixed and merged to the `master`/`major` branch.
 * Browser labels &ndash; for browser-specific bugs:
     * <span style="background-color:#5319e7;color:#FFF;padding:0 3px 0 3px">browser:NNN</span> &ndash; The issue can only be reproduced in a particular browser.
 * Other - additional information:

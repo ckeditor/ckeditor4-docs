@@ -126,7 +126,7 @@ The following is an example of property documentation.
 	 * A unique identifier of this editor instance.
 	 *
 	 * **Note:** It will be originated from the ID or the name
-	 * attribute of the {@link #element}, otherwise a name pattern of
+	 * attribute of the `element`, otherwise a name pattern of
 	 * 'editor{n}' will be used.
 	 *
 	 * @private

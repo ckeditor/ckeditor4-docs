@@ -56,7 +56,7 @@ module.exports = function( grunt ) {
 					'head-html-common': 'source/head-html-common.html',
 					footer: 'Copyright &copy; 2003-2017, <a href=\"http://cksource.com\" style=\"color:#085585\">CKSource</a> - Frederico Knabben. All rights reserved. | <a href=\"LICENSE.html\" style=\"color:#085585\">License</a> | Generated with <a href=\"https://github.com/senchalabs/jsduck\">JSDuck</a>.',
 					tags: 'source/customs.rb',
-					warnings: ['-nodoc', '-image_unused', '-link:guides/dev/code_documentation'],
+					warnings: [ '-nodoc', '-image_unused' ],
 					welcome: 'source/welcome.html',
 					guides: grunt.option( 'guides' ) || 'guides/guides.json',
 					output: 'build',

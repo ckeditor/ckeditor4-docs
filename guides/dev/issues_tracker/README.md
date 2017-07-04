@@ -46,19 +46,24 @@ This is it. Once you log in, you will be ready to [report a CKEditor issue](http
 Every issue may be marked with the following labels:
 
 * Status labels &ndash; current issue status:
-    * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:pending</span> &ndash; More information is needed to proceed with the issue.
     * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:confirmed</span> &ndash; Issue confirmed by the development team.
+    * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:pending</span> &ndash; More information is needed to proceed with the issue.    
 * Type labels - the type of the issue:
     * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">type:bug</span> &ndash; A bug.
     * <span style="background-color:#1d76db;color:#FFF;padding:0 3px 0 3px">type:feature</span> &ndash; A feature request.
     * <span style="background-color:#fbca04;padding:0 3px 0 3px">type:task</span>&ndash; Any other issue (refactoring, typo fix, etc).
-* Resolution labels &ndash; how and why the issue was resolved:
-    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, 3rd-party bug, etc).
+* Resolution labels &ndash; how and why the issue was resolved:    
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:duplicate</span> &ndash; A duplicate of an already reported issue.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:expired</span> &ndash; Issue reporter did not provide enough information to reproduce the issue for a long time.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, 3rd-party bug, etc).
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:upstream</span> &ndash; Issue in the dependent software.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:wontfix</span> &ndash; The issue is valid, however CKSource does not plan to fix it.
     * If the issue is closed and there is no resolution label, it means that the issue was fixed and merged to the `master`/`major` branch.
 * Browser labels &ndash; for browser-specific bugs:
     * <span style="background-color:#5319e7;color:#FFF;padding:0 3px 0 3px">browser:NNN</span> &ndash; The issue can only be reproduced in a particular browser.
+* Plugin labels &ndash; for plugin specific bugs:
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">plugin:NNN</span> &ndash; The issue can only be reproduced with a particular plugin enabled.
 * Other - additional information:
-    * <span style="background-color:#aaaaaa;padding:0 3px 0 3px">support</span> &ndash; An issue reported by a commercially licensed client.
     * <span style="background-color:#34d058;padding:0 3px 0 3px">easy</span> &ndash; Relatively easy to fix, this is a perfect issue if you are willing to [create a Pull Request](#!/guide/dev_contributing_code).
+    * <span style="background-color:#b60205;padding:0 3px 0 3px">regression</span> &ndash; This issue is a regression.
+    * <span style="background-color:#aaaaaa;padding:0 3px 0 3px">support</span> &ndash; An issue reported by a commercially licensed client.

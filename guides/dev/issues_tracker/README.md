@@ -54,15 +54,15 @@ Every issue may be marked with the following labels:
     * <span style="background-color:#fbca04;padding:0 3px 0 3px">type:task</span>&ndash; Any other issue (refactoring, typo fix, etc).
 * Resolution labels &ndash; how and why the issue was resolved:    
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:duplicate</span> &ndash; A duplicate of an already reported issue.
-    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:expired</span> &ndash; Issue reporter did not provide enough information to reproduce the issue for a long time.
-    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, 3rd-party bug, etc).
-    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:upstream</span> &ndash; Issue in the dependent software.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:expired</span> &ndash; Issue reporter did not provide enough information to reproduce the issue for at least 2 weeks.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, wrong request type, support requests, etc).
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:upstream</span> &ndash; Issue in the 3rd party software.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:wontfix</span> &ndash; The issue is valid, however CKSource does not plan to fix it.
     * If the issue is closed and there is no resolution label, it means that the issue was fixed and merged to the `master`/`major` branch.
 * Browser labels &ndash; for browser-specific bugs:
     * <span style="background-color:#5319e7;color:#FFF;padding:0 3px 0 3px">browser:NNN</span> &ndash; The issue can only be reproduced in a particular browser.
 * Plugin labels &ndash; for plugin specific bugs:
-    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">plugin:NNN</span> &ndash; The issue can only be reproduced with a particular plugin enabled.
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">plugin:NNN</span> &ndash; The plugin which is probable cause of the issue.
 * Other - additional information:
     * <span style="background-color:#34d058;padding:0 3px 0 3px">easy</span> &ndash; Relatively easy to fix, this is a perfect issue if you are willing to [create a Pull Request](#!/guide/dev_contributing_code).
     * <span style="background-color:#b60205;padding:0 3px 0 3px">regression</span> &ndash; This issue is a regression.

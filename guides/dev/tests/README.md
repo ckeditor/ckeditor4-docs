@@ -140,6 +140,47 @@ Please note that some CKEditor plugins are needed for reasons that might not be 
 
 If the editor behaves differently when testing and during development, try to add all plugins you use during the development (you can find such list in the [`config.js`](https://github.com/ckeditor/ckeditor-dev/blob/master/config.js) file) and then remove redundant ones. Please note that adding all existing CKEditor plugins might not be a good solution since, for example, the [BBCode plugin](http://ckeditor.com/addon/bbcode) will strip HTML in your output.
 
+### Tagging Tests
+
+Each test should be properly tagged, so it is easy to group and filter them while running. Tags should be added using `bender-tags` meta comment, like:
+
+    /* bender-tags: editor */
+    // Rest of the file...
+
+In case of unit tests `bender-tags` meta comment should be placed in `*.js` file and in `*.md` file for manual tests.
+
+**Common tags used in tests**:
+
+* bug/feature - test covers bug fix or a new feature. If test suit contains more general tests this tag should be omitted,
+* &lt;CKEditor version&gt; - CKEditor target version,
+* &lt;number&gt; - reference to GitHub issue,
+* trac&lt;number&gt; - reference to Trac issue,
+* custom - if test covers some specific area of the editor, additional tags can be use (like `word`, `selection`, etc).
+
+**For manual tests only**:
+
+* tc - test case, required to filter out generic tests (it is usually used together with &lt;CKEditor version&gt; tag so it is possible to test changes introduced in a specific version/release).
+
+There might be a situation where single `*.js` file contains many tests and referencing specific issue in `bender-tags` might be misleading. In such cases, the issue
+should be referenced right before specific test which covers the issue:
+
+    // #<number>
+    'test case scenario 1...'
+
+or with additional comment:
+
+    // Additional comment (#<number>).
+    'test case scenario 2...'
+
+If there is a need to reference Trac issue instead of the GitHub one, full URL should be used:
+
+    // http://dev.ckeditor.com/ticket/<number>
+    'test some Trac issue scenario 1...'
+        
+    // Additional comment (http://dev.ckeditor.com/ticket/<number>).
+    'test some Trac issue scenario 2...'
+
+
 ### Test Tools
 
 CKEditor tests use the [YUI library](http://yuilibrary.com/) for assertions provided by the [Bender.js YUI plugin](https://github.com/benderjs/benderjs-yui/).
@@ -150,7 +191,7 @@ The testing environment provides a bunch of [tools](https://github.com/ckeditor/
 
 A sample CKEditor test file might look like this:
 
-	/* bender-tags: editor,unit */
+	/* bender-tags: editor */
 	/* bender-ckeditor-plugins: toolbar,basicstyles */
 
 	'use strict';

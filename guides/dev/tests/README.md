@@ -142,24 +142,23 @@ If the editor behaves differently when testing and during development, try to ad
 
 ### Tagging Tests
 
-Each test should be properly tagged, so it is easy to group and filter them while running. Tags should be added using `bender-tags` meta comment, like:
+Each test should be properly tagged, so it is easy to group and filter them. Tags should be added using the `bender-tags` meta comment, like:
 
     /* bender-tags: editor */
     // Rest of the file...
 
-In case of unit tests `bender-tags` meta comment should be placed in `*.js` file and in `*.md` file for manual tests.
+In case of unit tests the `bender-tags` meta comment should be placed in `*.js` file and in `*.md` file for manual tests.
 
-**Common tags used in tests**:
+#### Common tags used in tests:
 
-* bug/feature - test covers bug fix or a new feature. If test suit contains more general tests this tag should be omitted,
-* &lt;CKEditor version&gt; - CKEditor target version,
-* &lt;number&gt; - reference to GitHub issue,
-* trac&lt;number&gt; - reference to Trac issue,
-* custom - if test covers some specific area of the editor, additional tags can be use (like `word`, `selection`, etc).
+* `<number>` (optional) - reference to GitHub issue id,
+* `trac<number>` (optional) - reference to Trac issue id,
+* `<custom>` (`editor` by default), e.g. `word`, `selection` - specific area or function of the editor covered by tests.
 
-**For manual tests only**:
+#### For manual tests only:
 
-* tc - test case, required to filter out generic tests (it is usually used together with &lt;CKEditor version&gt; tag so it is possible to test changes introduced in a specific version/release).
+* `bug/feature` - test covers bug fix or a new feature,
+* `<CKEditor version>`, e.g. `4.6.2`, `4.7.0` - targeted version of CKEditor by this given patch (usually means upcoming minor or major release).
 
 There might be a situation where single `*.js` file contains many tests and referencing specific issue in `bender-tags` might be misleading. In such cases, the issue
 should be referenced right before specific test which covers the issue:

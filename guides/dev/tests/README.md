@@ -163,7 +163,7 @@ In case of unit tests the `bender-tags` meta comment should be placed in `*.js` 
 There might be a situation where single `*.js` file contains many tests and referencing specific issue in `bender-tags` might be misleading. In such cases, the issue
 should be referenced right before specific test which covers the issue:
 
-    // #<number>
+    // (#<number>)
     'test case scenario 1...'
 
 or with additional comment:
@@ -173,7 +173,7 @@ or with additional comment:
 
 If there is a need to reference Trac issue instead of the GitHub one, full URL should be used:
 
-    // http://dev.ckeditor.com/ticket/<number>
+    // (http://dev.ckeditor.com/ticket/<number>)
     'test some Trac issue scenario 1...'
         
     // Additional comment (http://dev.ckeditor.com/ticket/<number>).

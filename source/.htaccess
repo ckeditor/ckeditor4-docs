@@ -1,5 +1,22 @@
 <IfModule mod_rewrite.c>
-	RewriteEngine on
+    RewriteEngine on
 
- 	RewriteRule ^user$ http://docs.cksource.com/CKEditor_3.x/Users_Guide [L,R=301]
+    RewriteRule ^user$ http://docs.cksource.com/CKEditor_3.x/Users_Guide [L,R=301]
+
+    # Redirect to HTTPS
+    RewriteCond %{HTTPS} off
+    # Excludes
+    # RewriteCond %{REQUEST_URI} !^/apps
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Set "protossl" to "s" if we were accessed via https://.  This is used later
+    # if you enable "www." stripping or enforcement, in order to ensure that
+    # you don't bounce between http and https.
+    RewriteRule ^ - [E=protossl]
+    RewriteCond %{HTTPS} on
+    RewriteRule ^ - [E=protossl:s]
+
+    # Redirect from www to non-www with HTTPS in mind
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 </IfModule>

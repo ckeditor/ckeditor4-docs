@@ -47,12 +47,12 @@ Every issue may be marked with the following labels:
 
 * Status labels &ndash; current issue status:
     * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:confirmed</span> &ndash; Issue confirmed by the development team.
-    * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:pending</span> &ndash; More information is needed to proceed with the issue.    
+    * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:pending</span> &ndash; More information is needed to proceed with the issue.
 * Type labels - the type of the issue:
     * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">type:bug</span> &ndash; A bug.
     * <span style="background-color:#1d76db;color:#FFF;padding:0 3px 0 3px">type:feature</span> &ndash; A feature request.
     * <span style="background-color:#fbca04;padding:0 3px 0 3px">type:task</span>&ndash; Any other issue (refactoring, typo fix, etc).
-* Resolution labels &ndash; how and why the issue was resolved:    
+* Resolution labels &ndash; how and why the issue was resolved:
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:duplicate</span> &ndash; A duplicate of an already reported issue.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:expired</span> &ndash; Issue reporter did not provide enough information to reproduce the issue for at least 2 weeks.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, wrong request type, support requests, etc).
@@ -67,3 +67,4 @@ Every issue may be marked with the following labels:
     * <span style="background-color:#34d058;padding:0 3px 0 3px">easy</span> &ndash; Relatively easy to fix, this is a perfect issue if you are willing to [create a Pull Request](#!/guide/dev_contributing_code).
     * <span style="background-color:#b60205;padding:0 3px 0 3px">regression</span> &ndash; This issue is a regression.
     * <span style="background-color:#aaaaaa;padding:0 3px 0 3px">support</span> &ndash; An issue reported by a commercially licensed client.
+    * <span style="background-color:#c5def5;color:#000;padding:0 3px 0 3px">target:NNN</span> &ndash; Tells the branch that the issue should be merged to.

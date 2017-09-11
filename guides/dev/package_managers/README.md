@@ -161,6 +161,10 @@ CKEditor team maintains the following NuGet packages:
 
 Just open your command line in directory, where you'd like to install CKEditor, and use the following:
 
-`nuget install <packageID>`, e.g. `nuget install ckeditor-standard`
+	nuget install <packageID>
+
+e.g.
+
+	nuget install ckeditor-standard`
 
 You'll find the package installed into a directory like `ckeditor-standard.4.7.2`.

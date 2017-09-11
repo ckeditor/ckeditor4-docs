@@ -146,6 +146,10 @@ For example, let us consider that we want to include the `full` preset of the mo
 
 ## NuGet
 
+This article assumes that you have **NuGet** command line client already up and running. If this is not the case, please follow [these instructions](https://docs.microsoft.com/en-us/nuget/guides/install-nuget#nuget-cli).
+
+### Supported Packages
+
 CKEditor team maintains the following NuGet packages:
 
 * [ckeditor-basic](https://www.nuget.org/packages/ckeditor-basic)
@@ -153,9 +157,10 @@ CKEditor team maintains the following NuGet packages:
 * [ckeditor-standard-all](https://www.nuget.org/packages/ckeditor-standard-all)
 * [ckeditor-full](https://www.nuget.org/packages/ckeditor-full)
 
-Download NuGet command line client
+### Usage
 
-1. [Install NuGet command-line client](https://docs.microsoft.com/en-us/nuget/guides/install-nuget#nuget-cli) if you don't have it yet.
-1. `nuget install <packageID>`, e.g. `nuget install ckeditor-standard`
+Just open your command line in directory, where you'd like to install CKEditor, and use the following:
+
+`nuget install <packageID>`, e.g. `nuget install ckeditor-standard`
 
 You'll find the package installed into a directory like `ckeditor-standard.4.7.2`.

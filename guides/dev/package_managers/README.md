@@ -6,10 +6,10 @@ For licensing, see LICENSE.md.
 # Installing CKEditor with Package Managers
 
 <p class="requirements">
-	Support for <a href="http://bower.io/">Bower</a> and <a href="https://getcomposer.org/">Composer</a> was introduced in <strong>CKEditor 4.3.3</strong> and for <a href="https://www.npmjs.com/">npm</a> in <strong>CKEditor 4.5.7</strong>. You can now use them to install CKEditor releases.
+	Support for <a href="http://bower.io/">Bower</a> and <a href="https://getcomposer.org/">Composer</a> was introduced in <strong>CKEditor 4.3.3</strong> and for <a href="https://www.npmjs.com/">npm</a> in <strong>CKEditor 4.5.7</strong>. Official NuGet packages are available since <strong>CKEditor 4.7.3</strong>.
 </p>
 
-The package managers will install the `standard-all` CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the `ckeditor.js` file and enabled. [See here](http://ckeditor.com/presets) for a comparison of packages.
+With the exception of NuGet, by default the package managers will install the `standard-all` CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the `ckeditor.js` file and enabled. [See here](http://ckeditor.com/presets) for a comparison of editor presets.
 
 Additional plugins included in the `standard-all` preset can be enabled in your configuration by using the CKEDITOR.config#extraPlugins option.
 
@@ -146,11 +146,11 @@ For example, let us consider that we want to include the `full` preset of the mo
 
 ## NuGet
 
-This article assumes that you have **NuGet** command line client already up and running. If this is not the case, please follow [these instructions](https://docs.microsoft.com/en-us/nuget/guides/install-nuget#nuget-cli).
+This article assumes that you have the **NuGet** command line client already up and running. If this is not the case, please follow [these instructions](https://docs.microsoft.com/en-us/nuget/guides/install-nuget#nuget-cli).
 
 ### Supported Packages
 
-CKEditor team maintains the following NuGet packages:
+The CKEditor team maintains the following NuGet packages:
 
 * [ckeditor-basic](https://www.nuget.org/packages/ckeditor-basic)
 * [ckeditor-standard](https://www.nuget.org/packages/ckeditor-standard)
@@ -159,12 +159,12 @@ CKEditor team maintains the following NuGet packages:
 
 ### Usage
 
-Just open your command line in directory, where you'd like to install CKEditor, and use the following:
+Open your command line in the directory where you would like to install CKEditor, and use the following:
 
 	nuget install <packageID>
 
 e.g.
 
-	nuget install ckeditor-standard`
+	nuget install ckeditor-standard
 
-You'll find the package installed into a directory like `ckeditor-standard.4.7.2`.
+You will find the package installed into a directory like `ckeditor-standard.4.7.3`.

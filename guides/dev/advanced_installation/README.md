@@ -27,6 +27,6 @@ See these topics if you want to learn more:
 	* [Getting Source Code](#!/guide/dev_source) &ndash; How to get CKEditor source code for development or test purposes.
 	* [Building from Source](#!/guide/dev_build) &ndash; How to build CKEditor from source code to create a custom production-ready package.
 
-4. **[Using Package Managers](#!/guide/dev_package_managers)** &ndash; How to install CKEditor with npm, Bower and Composer.
+4. **[Using Package Managers](#!/guide/dev_package_managers)** &ndash; How to install CKEditor with npm, Bower, Composer and NuGet.
 
 5. **[Specifying the Editor Path](#!/guide/dev_basepath)** &ndash; What to do if you cannot use the original `ckeditor.js` file name.

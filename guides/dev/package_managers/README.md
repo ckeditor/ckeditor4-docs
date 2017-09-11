@@ -143,3 +143,28 @@ For example, let us consider that we want to include the `full` preset of the mo
 <p class="tip">
 	Only branches starting from CKEditor version <strong>4.3.x</strong> and higher are supported in this way.
 </p>
+
+## NuGet
+
+This article assumes that you have **NuGet** command line client already up and running. If this is not the case, please follow [these instructions](https://docs.microsoft.com/en-us/nuget/guides/install-nuget#nuget-cli).
+
+### Supported Packages
+
+CKEditor team maintains the following NuGet packages:
+
+* [ckeditor-basic](https://www.nuget.org/packages/ckeditor-basic)
+* [ckeditor-standard](https://www.nuget.org/packages/ckeditor-standard)
+* [ckeditor-standard-all](https://www.nuget.org/packages/ckeditor-standard-all)
+* [ckeditor-full](https://www.nuget.org/packages/ckeditor-full)
+
+### Usage
+
+Just open your command line in directory, where you'd like to install CKEditor, and use the following:
+
+	nuget install <packageID>
+
+e.g.
+
+	nuget install ckeditor-standard`
+
+You'll find the package installed into a directory like `ckeditor-standard.4.7.2`.

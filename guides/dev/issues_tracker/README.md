@@ -63,8 +63,13 @@ Every issue may be marked with the following labels:
     * <span style="background-color:#5319e7;color:#FFF;padding:0 3px 0 3px">browser:NNN</span> &ndash; The issue can only be reproduced in a particular browser.
 * Plugin labels &ndash; for plugin specific bugs:
     * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">plugin:NNN</span> &ndash; The plugin which probably causes the issue.
+* Changelog labels:
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">changelog:skip</span> &ndash; Changelog entry should not be added for a given issue.
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">changelog:api</span> &ndash; Changelog entry should be put in the API section of changelog.
 * Other - additional information:
     * <span style="background-color:#34d058;padding:0 3px 0 3px">easy</span> &ndash; Relatively easy to fix, this is a perfect issue if you are willing to [create a Pull Request](#!/guide/dev_contributing_code).
     * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">regression</span> &ndash; This issue is a regression.
     * <span style="background-color:#aaaaaa;padding:0 3px 0 3px">support</span> &ndash; An issue reported by a commercially licensed client.
+    * <span style="background-color:#34d058;padding:0 3px 0 3px">review:junior</span> &ndash; Pull requests that can be reviewed by a Junior Developer before being reviewed by the Reviewer.
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">accessibility</span> &ndash; Issue related to accessibility.
     * <span style="background-color:#c5def5;color:#000;padding:0 3px 0 3px">target:NNN</span> &ndash; Tells the branch that the issue should be merged to.

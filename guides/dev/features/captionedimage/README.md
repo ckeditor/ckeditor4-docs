@@ -71,4 +71,4 @@ To make alternative text mandatory, set the CKEDITOR.config.image2_altRequired c
 
 ## Captioned Image Demo
 
-See the [working "Creating Captioned Images" sample](http://sdk.ckeditor.com/samples/captionedimage.html) that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.
+See the [working "Creating Captioned Images" sample](https://sdk.ckeditor.com/samples/captionedimage.html) that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.

@@ -54,7 +54,7 @@ The Document Editor is based on the [Full package](http://ckeditor.com/download)
 The Inline Editor demo showcases [inline editing](#!/guide/dev_inline) that allows you to edit any element on the page in-place.
 
 <p class="tip">
-  Visit the <a href="http://sdk.ckeditor.com/samples/inline.html">CKEditor SDK</a> website to try out this configuration.
+  Visit the <a href="https://sdk.ckeditor.com/samples/inline.html">CKEditor SDK</a> website to try out this configuration.
 </p>
 
 Inline editor provides a real WYSIWYG experience "out of the box" because unlike in [classic editor](#!/guide/dev_framed), there is no `<iframe>` element surrounding the editing area. The CSS styles used for editor content are exactly the same as on the target page where the content is rendered.
@@ -88,7 +88,7 @@ The Developer Site Editor is based on the [Standard package](http://ckeditor.com
 The Drag & Drop demo showcases possible usage of CKEditor interface for handling drag and drop operations.
 
 <p class="tip">
-  Visit the <a href="http://sdk.ckeditor.com/samples/draganddrop.html">CKEditor SDK</a> website to try out this configuration.
+  Visit the <a href="https://sdk.ckeditor.com/samples/draganddrop.html">CKEditor SDK</a> website to try out this configuration.
 </p>
 
 The Drag & Drop sample allows you to drag contacts from the list on the right-hand side to the inline editor on the left-hand side. The contacts are inserted into the editor as custom [widgets](#!/guide/dev_widgets) representing the h-card microformat.
@@ -102,7 +102,7 @@ The Drag & Drop sample allows you to drag contacts from the list on the right-ha
 This demo showcases the <strong>Accessibility Checker</strong> plugin &mdash; an innovative solution that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
 
 <p class="tip">
-  Visit the <a href="http://sdk.ckeditor.com/samples/accessibilitychecker.html">CKEditor SDK</a> website to try out this configuration.
+  Visit the <a href="https://sdk.ckeditor.com/samples/accessibilitychecker.html">CKEditor SDK</a> website to try out this configuration.
 </p>
 
 <div class="responsive">

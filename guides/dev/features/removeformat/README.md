@@ -23,7 +23,7 @@ The second image presents the same text after the formatting cleanup done throug
 
 ## Removing Text Formatting Demo
 
-See the [working "Removing Text Formatting" sample](http://sdk.ckeditor.com/samples/removeformat.html) that showcases the usage of the inline formatting cleanup functionality.
+See the [working "Removing Text Formatting" sample](https://sdk.ckeditor.com/samples/removeformat.html) that showcases the usage of the inline formatting cleanup functionality.
 
 ## Related Features
 

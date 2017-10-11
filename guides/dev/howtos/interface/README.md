@@ -62,7 +62,7 @@ Since version 4.5 each CKEditor installation package includes a handy tool calle
 
 The [Accessibility Support in CKEditor](#!/guide/dev_a11y) contains lots of useful information on using the CKEditor interface with your keyboard or with assistive devices such as screen readers.
 
-CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. Read more [here](#!/guide/dev_tabindex) and see the [working demo](http://sdk.ckeditor.com/samples/tabindex.html) here.
+CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. Read more [here](#!/guide/dev_tabindex) and see the [working demo](https://sdk.ckeditor.com/samples/tabindex.html) here.
 
 Many functions in CKEditor have their equivalent keyboard shortcuts. This is one of the reasons why working with the editor is simple and efficient.
 

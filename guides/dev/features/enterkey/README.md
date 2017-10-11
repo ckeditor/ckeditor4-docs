@@ -31,4 +31,4 @@ Both configuration settings can use one of the following options:
 
 ## Enter Key Configuration Demo
 
-See the [working "Enter Key Configuration" sample](http://sdk.ckeditor.com/samples/enterkey.html) that showcases the effects of using different settings for <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys on editor output.
+See the [working "Enter Key Configuration" sample](https://sdk.ckeditor.com/samples/enterkey.html) that showcases the effects of using different settings for <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys on editor output.

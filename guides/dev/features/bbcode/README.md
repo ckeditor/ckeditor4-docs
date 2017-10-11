@@ -25,7 +25,7 @@ This feature is aimed at developers who would like to integrate CKEditor with po
 
 ## BBCode Output Demo
 
-See the [working "BBCode Editing" sample](http://sdk.ckeditor.com/samples/bbcode.html) that showcases a CKEditor instance configured to output BBCode and customized to be a better fit for a typical BBCode environment.
+See the [working "BBCode Editing" sample](https://sdk.ckeditor.com/samples/bbcode.html) that showcases a CKEditor instance configured to output BBCode and customized to be a better fit for a typical BBCode environment.
 
 ## Related Features
 

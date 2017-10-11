@@ -113,7 +113,7 @@ Numerous [configuration options](#!/guide/dev_configuration) let you tweak CKEdi
 
 ## HTML Output Formatting Demo
 
-See the [working "HTML Output Formatting" sample](http://sdk.ckeditor.com/samples/htmlformatting.html) that showcases how to control HTML output produced by CKEditor.
+See the [working "HTML Output Formatting" sample](https://sdk.ckeditor.com/samples/htmlformatting.html) that showcases how to control HTML output produced by CKEditor.
 
 ## Related Features
 

@@ -102,7 +102,7 @@ For CKEditor versions older than 4.6 the following options were available, too:
 
 ## Paste from Word Demo
 
-See the [working "Pasting content from Microsoft Word" sample](http://sdk.ckeditor.com/samples/pastefromword.html) that showcases the Paste from Word plugin.
+See the [working "Pasting content from Microsoft Word" sample](https://sdk.ckeditor.com/samples/pastefromword.html) that showcases the Paste from Word plugin.
 
 ## Related Features
 

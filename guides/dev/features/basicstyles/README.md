@@ -108,7 +108,7 @@ Remember that depending on your use case, the CSS classes for basic text styles 
 
 ## Basic Text Styles Demo
 
-See the [working "Basic Text Styles: Bold, Italic and More" sample](http://sdk.ckeditor.com/samples/basicstyles.html) that showcases the usage and customization of basic text formatting.
+See the [working "Basic Text Styles: Bold, Italic and More" sample](https://sdk.ckeditor.com/samples/basicstyles.html) that showcases the usage and customization of basic text formatting.
 
 ## Related Features
 

@@ -68,7 +68,7 @@ or, if you are using the HTML5 `DOCTYPE`, to:
 	<meta charset="utf-8">
 
 ### Use CKEditor for what it was made for
-Last but not least, [use CKEditor for what it was designed for](#!/guide/dev_basics-section-what-ckeditor-is). Learn from the best: Visit the [CKEditor SDK](http://sdk.ckeditor.com/) to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
+Last but not least, [use CKEditor for what it was designed for](#!/guide/dev_basics-section-what-ckeditor-is). Learn from the best: Visit the [CKEditor SDK](https://sdk.ckeditor.com/) to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
 
 ## Security
 

@@ -21,7 +21,7 @@ Please note that this option is only applicable to [classic](#!/guide/dev_framed
 
 ## Toolbar Location Demo
 
-See the [working "Toolbar Location Adjustment" sample](http://sdk.ckeditor.com/samples/toolbarlocation.html) that showcases how to place the editor toolbar at the bottom of its interface.
+See the [working "Toolbar Location Adjustment" sample](https://sdk.ckeditor.com/samples/toolbarlocation.html) that showcases how to place the editor toolbar at the bottom of its interface.
 
 ## Related Features
 

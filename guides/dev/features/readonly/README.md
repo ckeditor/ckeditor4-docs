@@ -25,4 +25,4 @@ The same can be achieved by setting the `disabled` attribute for the `<textarea>
 
 ## Read-Only Mode Demo
 
-See also the [working "Read-Only Mode" sample](http://sdk.ckeditor.com/samples/readonly.html) that showcases toggling between the read-only and editable mode.
+See also the [working "Read-Only Mode" sample](https://sdk.ckeditor.com/samples/readonly.html) that showcases toggling between the read-only and editable mode.

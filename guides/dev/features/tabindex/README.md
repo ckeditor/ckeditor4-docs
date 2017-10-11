@@ -23,7 +23,7 @@ This will cause CKEditor to become the third page element that you will enter wh
 
 ## "Tab" Key Based Navigation Demo
 
-See the [working "Page Navigation Using the "Tab" Key" sample](http://sdk.ckeditor.com/samples/tabindex.html) where you can try this page navigation method in practice.
+See the [working "Page Navigation Using the "Tab" Key" sample](https://sdk.ckeditor.com/samples/tabindex.html) where you can try this page navigation method in practice.
 
 ## Related Features
 

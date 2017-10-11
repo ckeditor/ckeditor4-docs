@@ -30,7 +30,7 @@ Depending on whether your definitions were placed inline or in an external file,
 	// For a definition in an external file.
 	config.stylesSet = 'my_styles:http://www.example.com/styles.js';
 
-For more details on the definition format and best practices on how to customize the styles please refer to the [Applying Styles to Editor Content](#!/guide/dev_styles) article and see the relevant [CKEditor SDK sample](http://sdk.ckeditor.com/samples/styles.html).
+For more details on the definition format and best practices on how to customize the styles please refer to the [Applying Styles to Editor Content](#!/guide/dev_styles) article and see the relevant [CKEditor SDK sample](https://sdk.ckeditor.com/samples/styles.html).
 
 
 ### Stylesheet Parser Plugin
@@ -42,7 +42,7 @@ You can also populate the **Styles** drop-down list with style definitions added
 
 The optional [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin can be used to point to an external CSS stylesheet containing style definitions. It will help you use existing CSS styles and display them in the **Styles** drop-down list without a need to define them specifically for CKEditor as [described here](#!/guide/dev_howtos_styles-section-how-do-i-customize-the-styles-drop-down-list%3F).
 
-For more information on using the plugin refer to [The Stylesheet Parser Plugin](#!/guide/dev_styles-section-the-stylesheet-parser-plugin) article and see the relevant [CKEditor SDK sample](http://sdk.ckeditor.com/samples/styles.html).
+For more information on using the plugin refer to [The Stylesheet Parser Plugin](#!/guide/dev_styles-section-the-stylesheet-parser-plugin) article and see the relevant [CKEditor SDK sample](https://sdk.ckeditor.com/samples/styles.html).
 
 
 ## How Do I Add Custom Styles Based on CSS Classes?

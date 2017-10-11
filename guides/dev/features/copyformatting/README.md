@@ -104,7 +104,7 @@ The special "disabled" cursor can be switched off by setting the CKEDITOR.config
 
 ## Copy Formatting Demo
 
-See the [working "Using the Copy Formatting Feature" sample](http://sdk.ckeditor.com/samples/copyformatting.html) that showcases the usage and customization of this feature.
+See the [working "Using the Copy Formatting Feature" sample](https://sdk.ckeditor.com/samples/copyformatting.html) that showcases the usage and customization of this feature.
 
 ## Related Features
 

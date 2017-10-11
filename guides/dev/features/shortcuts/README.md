@@ -117,7 +117,7 @@ Please refer to the [Keyboard Shortcuts](#!/guide/dev_accessibility_checker-sect
 
 ## Accessibility and Keyboard Shortcuts Demo
 
-See the [working "Accessibility Support and Keyboard Shortcuts" sample](http://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
+See the [working "Accessibility Support and Keyboard Shortcuts" sample](https://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
 
 ## Related Features
 

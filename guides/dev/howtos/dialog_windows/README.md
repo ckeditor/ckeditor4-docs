@@ -93,7 +93,7 @@ If, for example, you want to open the **Upload** tab first to make it more conve
 
 ## How Do I Learn the Names of CKEditor Dialog Window Fields?
 
-If you want to customize a dialog window, the easiest and most convenient way is to enable the [Developer Tools](#!/guide/dev_devtools) plugin that displays the names and IDs of all dialog window elements when you hover them with your mouse. You can see the plugin demo in [CKEditor SDK](http://sdk.ckeditor.com/samples/devtools.html).
+If you want to customize a dialog window, the easiest and most convenient way is to enable the [Developer Tools](#!/guide/dev_devtools) plugin that displays the names and IDs of all dialog window elements when you hover them with your mouse. You can see the plugin demo in [CKEditor SDK](https://sdk.ckeditor.com/samples/devtools.html).
 
 The following figure shows the tooltip that describes the **URL** field of the **Link** dialog window that is displayed after the **Developer Tools** plugin was enabled.
 

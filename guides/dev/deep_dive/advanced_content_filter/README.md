@@ -50,7 +50,7 @@ Consider the following configuration for an editor with ACF working in default, 
 
 In this setup several tags will not be allowed in the editor because there is no plugin or button that is responsible for creating and editing this kind of content. This pertains to elements such as `<img>` (Image feature), `<table>` and its descendants (Table and Table Tools plugins) and `<hr>` (Horizontal Rule feature) as well as `<u>`, `<s>`, `<sub>` and `<sup>` that are normally provided by the Basic Styles plugin, but whose buttons were removed in the configuration. The **Format** drop-down list was trimmed down, too, so unsupported formats will also be removed.
 
-See the [Advanced Content Filter &ndash; Automatic Mode](http://sdk.ckeditor.com/samples/acf.html) sample for a live demonstration.
+See the [Advanced Content Filter &ndash; Automatic Mode](https://sdk.ckeditor.com/samples/acf.html) sample for a live demonstration.
 
 <p class="tip">
 	If you want to configure the editor to work in automatic mode, but need to enable additional HTML tags, attributes, styles, or classes, use the {@link CKEDITOR.config#extraAllowedContent} configuration option. <strong>Since CKEditor 4.4</strong> you can also disallow some of the automatically allowed content by using the {@link CKEDITOR.config#disallowedContent}.
@@ -81,7 +81,7 @@ This will have the following effect:
 * `img(left,right)[!src,alt,width,height]` &ndash; The `src` attribute is obligatory for the `<img>` tag. The `alt`, `width`, `height` and `class` attributes are accepted, but `class` must be either `class="left"` or `class="right"`.
 * Several toolbar buttons and dialog window fields that are responsible for the features which were not explicitely listed as allowed will be removed. In the Standard editor preset this will mean that, for example, the Strike-through, Numbered List, Bulleted List, Anchor, Table and Horizontal Line toolbar buttons will be gone, just like most of the fields of the Image Properties dialog window and formats from the Format drop-down list.
 
-See the [Advanced Content Filter &ndash; Custom Mode](http://sdk.ckeditor.com/samples/acf_custom.html) sample for a live demonstration.
+See the [Advanced Content Filter &ndash; Custom Mode](https://sdk.ckeditor.com/samples/acf_custom.html) sample for a live demonstration.
 
 ## Content Transformations
 
@@ -111,8 +111,8 @@ Read more about the paste filter in the {@link CKEDITOR.config#pasteFilter} docu
 
 The following samples are available for two ACF modes:
 
-* The [Advanced Content Filter &ndash; Automatic Mode](http://sdk.ckeditor.com/samples/acf.html) sample shows the default implementation of ACF and its customization.
-* The [Advanced Content Filter &ndash; Custom Mode](http://sdk.ckeditor.com/samples/acfcustom.html) sample shows how the custom ACF mode works.
+* The [Advanced Content Filter &ndash; Automatic Mode](https://sdk.ckeditor.com/samples/acf.html) sample shows the default implementation of ACF and its customization.
+* The [Advanced Content Filter &ndash; Custom Mode](https://sdk.ckeditor.com/samples/acfcustom.html) sample shows how the custom ACF mode works.
 
 ## Further Reading
 

@@ -50,4 +50,4 @@ You can find them on the CKEDITOR.config page, starting from `scayt_` and `wsc_`
 
 ## Spell Checking Demo
 
-See the [working "Spell Checker and Spell Check As You Type" sample](http://sdk.ckeditor.com/samples/spellchecker.html) that showcases both Spell Check As You Type and spell checking in a dialog window.
+See the [working "Spell Checker and Spell Check As You Type" sample](https://sdk.ckeditor.com/samples/spellchecker.html) that showcases both Spell Check As You Type and spell checking in a dialog window.

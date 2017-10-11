@@ -21,7 +21,7 @@ Please note that the default placeholder implementation might easily be extended
 
 ## Placeholder Demo
 
-See the [working "Using Placeholders" sample](http://sdk.ckeditor.com/samples/placeholder.html) that showcases a possible use for the Placeholder plugin in automatic replies sent from a Customer Support system.
+See the [working "Using Placeholders" sample](https://sdk.ckeditor.com/samples/placeholder.html) that showcases a possible use for the Placeholder plugin in automatic replies sent from a Customer Support system.
 
 ## Related Features
 

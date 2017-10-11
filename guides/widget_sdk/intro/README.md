@@ -29,4 +29,4 @@ Learning by example is always the best idea, so check our **widget tutorials** t
 
  1. **[Part 1](#!/guide/widget_sdk_tutorial_1)** &ndash; Develop a **basic template widget** that lets the user insert a simple box with a title and comment fields into the document.
  2. **[Part 2](#!/guide/widget_sdk_tutorial_2)** &ndash; Modify the simple box widget by adding a **widget dialog window with widget editing capabilities**.
- 3. **[Demo](http://sdk.ckeditor.com/samples/simplebox.html)** &ndash; See the **working demo** of the custom widget created in the tutorials live in action in CKEditor SDK.
+ 3. **[Demo](https://sdk.ckeditor.com/samples/simplebox.html)** &ndash; See the **working demo** of the custom widget created in the tutorials live in action in CKEditor SDK.

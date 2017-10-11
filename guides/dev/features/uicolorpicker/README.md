@@ -34,7 +34,7 @@ Although this feature is mainly useful for developers who are working on their C
 
 ## UI Color Picker Demo
 
-See the [working "UI Color Picker" sample](http://sdk.ckeditor.com/samples/uicolorpicker.html) that showcases how easy it can be to set the editor UI color with the color picker tool.
+See the [working "UI Color Picker" sample](https://sdk.ckeditor.com/samples/uicolorpicker.html) that showcases how easy it can be to set the editor UI color with the color picker tool.
 
 ## Related Features
 

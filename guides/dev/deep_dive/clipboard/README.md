@@ -171,7 +171,7 @@ An interesting example of this feature is how drag and drop of [widgets](#!/guid
 
 As you can see, when the user drags a widget, its ID is stored in the data under the `cke/widget-id` type. This allows you to find and handle that specific widget instance on {@link CKEDITOR.editor#drop drop}.
 
-Another example can be found in the ["Drag and Drop Integration" sample](http://sdk.ckeditor.com/samples/draganddrop.html) where the  {@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer facade} is used to store an object with contact details that are dragged into the editor from outside of it.
+Another example can be found in the ["Drag and Drop Integration" sample](https://sdk.ckeditor.com/samples/draganddrop.html) where the  {@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer facade} is used to store an object with contact details that are dragged into the editor from outside of it.
 
 	// When an item in the contact list is dragged, copy its data into drag and drop data transfer.
 	// This data is later read by the editor#paste listener in the hcard plugin defined above.

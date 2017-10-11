@@ -113,7 +113,7 @@ Sample widget styles:
 	{ name: 'left', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-left' }, group: 'alignment' },
 	{ name: 'thumb', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-thumb' }, group: [ 'size', 'alignment' ] }
 
-To see how this works in practice, refer to the [Widget Styles](http://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the [captioned image](#!/guide/dev_captionedimage), [embedded media resources](#!/guide/dev_media_embed) and [mathematical formulas](#!/guide/dev_mathjax) widgets with additional styling.
+To see how this works in practice, refer to the [Widget Styles](https://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the [captioned image](#!/guide/dev_captionedimage), [embedded media resources](#!/guide/dev_media_embed) and [mathematical formulas](#!/guide/dev_mathjax) widgets with additional styling.
 
 ## The Stylesheet Parser Plugin
 
@@ -158,7 +158,7 @@ You can also further customize the Stylesheet Parser plugin by setting the CKEDI
 
 ## Editor Styles Demo
 
-See the [working "Applying Styles to Editor Content" sample](http://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation.
+See the [working "Applying Styles to Editor Content" sample](https://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation.
 
 ## Related Features
 

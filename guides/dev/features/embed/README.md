@@ -59,7 +59,7 @@ If you wish to make it work with your custom media embed widget (see [Implementi
 
 	config.autoEmbed_widget = 'customEmbed';
 
-You can test auto embedding in the [Embedding Media Resources with oEmbed](http://sdk.ckeditor.com/samples/mediaembed.html) sample.
+You can test auto embedding in the [Embedding Media Resources with oEmbed](https://sdk.ckeditor.com/samples/mediaembed.html) sample.
 
 ## Implementing a New Embed Widget
 
@@ -67,4 +67,4 @@ Both plugins utilize the {@link CKEDITOR.plugins.embedBase#createWidgetBaseDefin
 
 ## Embedding Media Demo
 
-See the [working "Embedding Media Resources with oEmbed" sample](http://sdk.ckeditor.com/samples/mediaembed.html) that showcases the Media Embed and Auto Embed plugins.
+See the [working "Embedding Media Resources with oEmbed" sample](https://sdk.ckeditor.com/samples/mediaembed.html) that showcases the Media Embed and Auto Embed plugins.

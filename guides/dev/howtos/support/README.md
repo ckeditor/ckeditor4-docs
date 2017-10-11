@@ -35,11 +35,11 @@ If you also want to support the development of CKEditor, it will be most welcome
 
 * Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.net/projects/p/ckeditor/).
 
-* Create CKEditor plugins with new functionality and publish them in the [CKEditor Add-Ons Repository](http://ckeditor.com/addons/plugins).
+* Create CKEditor plugins with new functionality and publish them in the [CKEditor Add-Ons Repository](https://ckeditor.com/cke4/addons/plugins/all).
 
 * Join Stack Overflow and share your knowledge with fellow CKEditor users and developers using the ["ckeditor" tag](http://stackoverflow.com/questions/tagged/ckeditor).
 
-* Buy [CKEditor Premium](http://cksource.com/ckeditor). This will not only let you support the development of new editor features, but it will also give you access to a [dedicated support channel](http://ckeditor.com/support) where core CKEditor developers are available to help you solve any issues you might have.
+* Buy [CKEditor Premium](http://cksource.com/ckeditor). This will not only let you support the development of new editor features, but it will also give you access to a [dedicated support channel](https://ckeditor.com/ckeditor-4/support/) where core CKEditor developers are available to help you solve any issues you might have.
 
 **Thank you for your support and for helping us make CKEditor better every day!**
 

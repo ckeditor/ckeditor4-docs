@@ -6,8 +6,8 @@
 
 Two of the new features introduced in [CKEditor 4.5](https://ckeditor.com/blog/CKEditor-4.4-Released) require additional styles to be added to the skin's CSS. These two features are:
 
-* [Notifications](http://docs.ckeditor.com/#!/guide/dev_notifications)
-* [Busy dialog state](http://docs.ckeditor.com/#!/api/CKEDITOR.dialog-method-setState).
+* [Notifications](#!/guide/dev_notifications)
+* [Busy dialog state](#!/api/CKEDITOR.dialog-method-setState).
 
 Notifications do not work with an incompatible skin. Dialog state gracefully degrades from a spinner to a static hourglass.
 

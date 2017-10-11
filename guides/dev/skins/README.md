@@ -11,7 +11,7 @@ The default installation of CKEditor comes with the [Moono skin](https://ckedito
 
 ## Where to Look for Skins?
 
-The [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins) is an online service designed to find and share editor plugins and skins. Its structure, with comprehensive descriptions and screenshots, makes it easy to understand the skin features and the comment system lets you socialize with the CKEditor community or provide instant feedback. If you are a skin designer, the repository is also the best place to showcase your skills and reach a large user base.
+The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) is an online service designed to find and share editor plugins and skins. Its structure, with comprehensive descriptions and screenshots, makes it easy to understand the skin features and the comment system lets you socialize with the CKEditor community or provide instant feedback. If you are a skin designer, the repository is also the best place to showcase your skills and reach a large user base.
 
 ## Online Builder Installation
 
@@ -31,7 +31,7 @@ When you install your custom build, you will see it uses the skin that you added
 
 ### Through Add-on Repository
 
-Visit the skin page in the [Add-ons Repository](http://ckeditor.com/addons/skins/all) and click the "**Add to my editor**" button.
+Visit the skin page in the [Add-ons Repository](https://ckeditor.com/cke4/addons/skins/all) and click the "**Add to my editor**" button.
 
 <img src="guides/dev_skins/add_skin_ckbuilder_1.png" alt="Adding a skin to the editor build" width="416" height="151">
 
@@ -58,5 +58,5 @@ Using CKBuilder is a recommended solution, however, if you have skins developed 
 Your skin will now be available in your CKEditor installation.
 
 <p class="tip">
-	To avoid the manual installation process <a href="http://ckeditor.com/add/skin">submit your skins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
+	To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/skin">submit your skins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </p>

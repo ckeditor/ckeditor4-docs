@@ -207,7 +207,7 @@ If the build that you used had spell checker plugins (`scayt` or `wsc`), then yo
 
 #### Third-Party Plugins from the Addons Repository
 
-If you used third-party plugins from the addons repository, make sure you download them again from the [addons repository](http://ckeditor.com/addons/plugins/all), taking the appropriate versions.
+If you used third-party plugins from the addons repository, make sure you download them again from the [addons repository](https://ckeditor.com/cke4/addons/plugins/all), taking the appropriate versions.
 
 ### Run CKBuilder
 

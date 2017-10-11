@@ -16,7 +16,7 @@ CKEditor is a highly flexible tool that you can easily customize to your needs. 
 
 A full listing of configuration settings that you can change in order to customize the editor to your needs can be found in the {@link CKEDITOR.config CKEditor JavaScript API}. Use the methods described in the  [Setting CKEditor Configuration](#!/guide/dev_configuration) article from the Developer's Guide.
 
-Please note that not all configuration setting are available for each CKEditor build. Some of them are provided by plugins that may be missing in your editor installation. You can check which plugins are included in the official presets in this [comparison table](http://ckeditor.com/presets).
+Please note that not all configuration setting are available for each CKEditor build. Some of them are provided by plugins that may be missing in your editor installation. You can check which plugins are included in the official presets in this [comparison table](https://ckeditor.com/cke4/presets).
 
 
 ## How Do I Remove Unneeded CKEditor Functionality?

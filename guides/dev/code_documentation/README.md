@@ -9,7 +9,7 @@ Starting from version 4 CKEditor uses a customized version of [JSDuck](https://g
 
 JSDuck's comment format differs from JSDoc's and both generators have different feature lists. Thus, with CKEditor 4 release, the entire source code documentation was reformatted in a new, consistent way.
 
-The resulting CKEditor API documentation is always available at <http://docs.ckeditor.com/#!/api>.
+The resulting CKEditor API documentation is always available at <https://docs.ckeditor.com/ckeditor4/docs/#!/api>.
 
 ## Useful Links ##
 
@@ -18,7 +18,7 @@ The resulting CKEditor API documentation is always available at <http://docs.cke
 * [JSDuck Wiki](https://github.com/senchalabs/jsduck/wiki/Guide)
 * [Tags list](https://github.com/senchalabs/jsduck/wiki/@class)
 * [Markdown format - basics](http://daringfireball.net/projects/markdown/basics)
-* [CKEditor API documentation](http://docs.ckeditor.com/#!/api)
+* [CKEditor API documentation](#!/api)
 
 ## JSDuck vs JSDoc &mdash; Important Differences ##
 

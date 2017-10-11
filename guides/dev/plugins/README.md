@@ -11,7 +11,7 @@ The default installation of CKEditor (that you are probably using now) includes 
 
 ## Where to Look for Plugins?
 
-The [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins) is an online service designed to find and share editor plugins. Its structure, with plugin categories, comprehensive descriptions, and screenshots, makes it easy to understand the plugin features and the comment system lets you socialize with the CKEditor community or provide instant feedback. If you are a plugin developer, the repository is also the best place to showcase your skills and reach a large user base.
+The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) is an online service designed to find and share editor plugins. Its structure, with plugin categories, comprehensive descriptions, and screenshots, makes it easy to understand the plugin features and the comment system lets you socialize with the CKEditor community or provide instant feedback. If you are a plugin developer, the repository is also the best place to showcase your skills and reach a large user base.
 
 ## Online Builder Installation
 
@@ -31,7 +31,7 @@ When you install your custom build, you will see that the additional plugins (in
 
 ### Through Add-on Repository
 
-Visit the plugin page in the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) and click the "**Add to my editor**" button.
+Visit the plugin page in the [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) and click the "**Add to my editor**" button.
 
 <img src="guides/dev_plugins/add_plugin_ckbuilder_1.png" alt="Adding a plugin to the editor build" width="416" height="146">
 
@@ -62,5 +62,5 @@ Using CKBuilder is a recommended solution, however, if you have plugins develope
 Your plugin will now be available in your CKEditor installation.
 
 <p class="tip">
-	To avoid the manual installation process <a href="http://ckeditor.com/add/plugin">submit your plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
+	To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/plugin">submit your plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </p>

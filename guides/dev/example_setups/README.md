@@ -4,7 +4,7 @@ For licensing, see LICENSE.md.
 -->
 # Example CKEditor Setups
 
-This article is a detailed explanation of sample editor configurations shown on the [CKEditor Homepage](http://ckeditor.com) and [CKEditor Features page](http://ckeditor.com/features).
+This article is a detailed explanation of sample editor configurations shown on the [CKEditor Homepage](https://ckeditor.com/ckeditor-4/).
 
 ## Article Editor
 
@@ -125,7 +125,7 @@ in a headache when trying to add plugin A, that requires plugin B, that requires
 In a brief summary it involves the following steps:
 <ol>
     <li>Downloading the predefined package (Basic/Standard/Full) from the <a href="https://ckeditor.com/ckeditor-4/download/">Download page</a>.</li>
-    <li>Downloading additional plugins manually from the <a href="http://ckeditor.com/addons/plugins/all">Add-ons Repository</a>.</li>
+    <li>Downloading additional plugins manually from the <a href="https://ckeditor.com/cke4/addons/plugins/all/all">Add-ons Repository</a>.</li>
     <li>Downloading plugins required by additional plugins manually.</li>
     <li>Enabling additional plugins manually through CKEDITOR.config.extraPlugins.</li>
 </ol>
@@ -147,7 +147,7 @@ This is the easiest way of using CKEditor if additional third-party plugins are 
     <li>Adding a <code>&lt;script&gt;</code> tag that loads <code>ckeditor.js</code> from CDN. For more information refer to the <a href="http://cdn.ckeditor.com/">CDN documentation</a>.</li>
     <li>In case of using third-party plugins:
         <ol>
-            <li>Downloading them manually from the <a href="http://ckeditor.com/addons/plugins/all">Add-ons Repository</a>.</li>
+            <li>Downloading them manually from the <a href="https://ckeditor.com/cke4/addons/plugins/all">Add-ons Repository</a>.</li>
             <li>Downloading plugin requirements manually.</li>
         </ol>
      </li>

@@ -36,7 +36,7 @@ In both modes it is possible to extend the filter configuration by using the {@l
 
 Advanced Content Filter works in automatic mode when the {@link CKEDITOR.config#allowedContent} setting is not provided. During editor initialization, editor features add their rules to the filter. As a result, only the content that may be edited using currently loaded features is allowed, and all the rest is filtered out.
 
-Please note that this means that **ACF is tightly connected with editor configuration**. Take the official CKEditor presets (Basic, Standard and Full). Each one of them includes a different set of features (toolbar buttons, keyboard shortcuts, content styles) and as a result, the same content pasted into editor instances with these configurations [will look completely different](http://ckeditor.com/demo#acf), as CKEditor will adjust it to what is available in a particular setup.
+Please note that this means that **ACF is tightly connected with editor configuration**. Take the official CKEditor presets (Basic, Standard and Full). Each one of them includes a different set of features (toolbar buttons, keyboard shortcuts, content styles) and as a result, the same content pasted into editor instances with these configurations [will look completely different](https://sdk.ckeditor.com/samples/acf.html), as CKEditor will adjust it to what is available in a particular setup.
 
 Whenever you adjust your editor configuration, for example by using the CKEDITOR.config.removePlugins and CKEDITOR.config.removeButtons methods or customizing the **Format** and **Styles** drop-down lists, these changes will affect the filter and the automatic ACF mode will make the editor remove content corresponding to disabled features.
 

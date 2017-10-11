@@ -9,7 +9,7 @@ For licensing, see LICENSE.md.
 	Support for <a href="http://bower.io/">Bower</a> and <a href="https://getcomposer.org/">Composer</a> was introduced in <strong>CKEditor 4.3.3</strong> and for <a href="https://www.npmjs.com/">npm</a> in <strong>CKEditor 4.5.7</strong>. Official NuGet packages are available since <strong>CKEditor 4.7.3</strong>.
 </p>
 
-With the exception of NuGet, by default the package managers will install the `standard-all` CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the `ckeditor.js` file and enabled. [See here](http://ckeditor.com/presets) for a comparison of editor presets.
+With the exception of NuGet, by default the package managers will install the `standard-all` CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the `ckeditor.js` file and enabled. [See here](https://ckeditor.com/cke4/presets) for a comparison of editor presets.
 
 Additional plugins included in the `standard-all` preset can be enabled in your configuration by using the CKEDITOR.config#extraPlugins option.
 

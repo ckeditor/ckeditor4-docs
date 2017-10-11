@@ -11,7 +11,7 @@ This section explains how you can contribute to CKEditor development. CKEditor i
 
 2. Fork CKEditor at [GitHub](https://github.com/ckeditor/ckeditor-dev), fix bugs or propose new functionality by using [pull requests](#!/guide/dev_contributing_code).
 
-3. Create your own plugins or skins and submit them to [CKEditor Add-Ons Repository](http://ckeditor.com/addons/plugins).
+3. Create your own plugins or skins and submit them to [CKEditor Add-Ons Repository](https://ckeditor.com/cke4/addons/plugins/all).
 
 4. Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.com/ckeditor/ckeditor/).
 

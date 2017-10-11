@@ -80,7 +80,7 @@ Reviewing takes a lot of time and the core team is not always able to find time 
 
 There are two main groups of changes that usually cannot be accepted as pull requests:
 
-* New plugins. If you want to propose a new functionality which does not require changes in the core plugins, we kindly ask you to create a new plugin and add it to the [Add-Ons Repository](http://ckeditor.com/addons/plugins). The reason for that is that the core developers are able to maintain a limited number of plugins.
+* New plugins. If you want to propose a new functionality which does not require changes in the core plugins, we kindly ask you to create a new plugin and add it to the [Add-Ons Repository](https://ckeditor.com/cke4/addons/plugins/all). The reason for that is that the core developers are able to maintain a limited number of plugins.
 * Changes in language files. All localization fixes and improvements should be done through the [CKEditor UI Translation Center](https://www.transifex.net/projects/p/ckeditor/). Read more in the [Localization](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) guide.
 
 ## Proposing Incomplete Patches

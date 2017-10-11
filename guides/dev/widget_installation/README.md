@@ -37,7 +37,7 @@ When you install your custom build, you will see that the additional widget plug
 
 ### Through Add-on Repository
 
-Visit the widget plugin page in the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) and click the "**Add to my editor**" button.
+Visit the widget plugin page in the [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) and click the "**Add to my editor**" button.
 
 <img src="guides/dev_widget_installation/add_widget_ckbuilder_1.png" alt="Adding a widget plugin to the editor build" width="420" height="186">
 
@@ -52,5 +52,5 @@ Please note that in CKBuilder all plugin dependencies will be resolved automatic
 Last but not least, you can [add widget plugins manually](#!/guide/dev_plugins-section-3) by downloading the `.zip` packages,  adding them to an existing CKEditor 4.3+ installation, and modifying the editor configuration manually. This is not a recommended solution, though, and should only be used by experienced CKEditor developers. Be mindful of widget dependencies!
 
 <p class="tip">
-	To avoid the manual installation process <a href="http://ckeditor.com/add/plugin">submit your widget plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
+	To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/plugin">submit your widget plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </p>

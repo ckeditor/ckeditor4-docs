@@ -86,7 +86,7 @@ Numerous [configuration options](#!/guide/dev_configuration) let you tweak CKEdi
 <ul style="margin-bottom:40px">
 	<li>Entities support:
 		<ul>
-			<li style="float: left;"><a href="http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-basicEntities">config.basicEntities</a></li>
+			<li style="float: left;"><a href="#!/api/CKEDITOR.config-cfg-basicEntities">config.basicEntities</a></li>
 			<li style="float: left;margin-left:30px"><a href="#!/api/CKEDITOR.config-cfg-entities">config.entities</a></li>
 			<li style="float: left;margin-left:30px"><a href="#!/api/CKEDITOR.config-cfg-entities_greek">config.entities_greek</a></li>
 			<li style="float: left;margin-left:30px"><a href="#!/api/CKEDITOR.config-cfg-entities_latin">config.entities_latin</a></li>

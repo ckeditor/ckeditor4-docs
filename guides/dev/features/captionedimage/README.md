@@ -57,7 +57,7 @@ Do remember, though, that you need to define the CSS rules for these classes in 
 * For [classic editor](#!/guide/dev_framed) it can be done by defining additional styles in the stylesheets loaded by the editor. The same styles must be provided on the target page where the content will be loaded.
 * For [inline editor](#!/guide/dev_inline) the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">`, i.e. within the `<head>` section of the page.
 
-See the following [showcase](http://ckeditor.com/tmp/4.4.0/widget-styles.html) of captioned image styling and alignment done through classes.
+See the following [showcase](https://sdk.ckeditor.com/samples/styles.html#widget-styles) of captioned image styling and alignment done through classes.
 
 ## Making Alternative Text Mandatory
 

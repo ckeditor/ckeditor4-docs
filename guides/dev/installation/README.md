@@ -80,6 +80,6 @@ Go ahead and play a bit more with the sample; try to change your configuration a
 1. [Modify your toolbar](#!/guide/dev_toolbar) to only include the features that you need. You can find the useful visual toolbar configurator directly in your editor sample.
 1. Learn about CKEditor features in the [Functionality Overview](#!/guide/dev_features) section.
 1. Visit the [CKEditor SDK](http://sdk.ckeditor.com) to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.
-1. Browse the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) for some additional plugins or skins.
+1. Browse the [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) for some additional plugins or skins.
 1. Use [CKBuilder](https://ckeditor.com/cke4/builder) to create your custom CKEditor build.
 1. Browse the [Developer's Guide](#!/guide) for some further ideas on what to do with CKEditor and join the CKEditor community at [Stack Overflow](http://stackoverflow.com/questions/tagged/ckeditors) to discuss all things CKEditor with fellow developers!

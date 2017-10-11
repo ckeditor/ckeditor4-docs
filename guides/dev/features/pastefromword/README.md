@@ -59,7 +59,7 @@ Here are some areas where the new, Advanced Paste from Word really shines:
 * Tight integration with Advanced Content Filter to efficiently adjust formatting coming from Word to what is allowed in a particular editor configuration.
 * Clean and valid HTML markup.
 
-**Note:** Some Paste from Word configuration options were either dropped in CKEditor 4.6 or changed their default values. Please refer to the [release notes](http://ckeditor.com/release/CKEditor-4.6.0) for more details.
+**Note:** Some Paste from Word configuration options were either dropped in CKEditor 4.6 or changed their default values. Please refer to the [release notes](https://ckeditor.com/cke4/release/CKEditor-4.6.0) for more details.
 
 ## Sample
 

@@ -13,7 +13,7 @@ CKEditor is distributed under the [GPL](http://www.gnu.org/licenses/gpl.html), [
 
 Because CKEditor has an active community that openly develops and shares add-ons, which you are welcome to take part in. Open Source applications are totally free! They do not include adware or limited trial periods, and can be used in commercial projects.
 
-If you are wondering whether you can use CKEditor under an Open Source license in your project, check the appropriate [FAQ](http://ckeditor.com/support/faq/open%20source) section.
+If you are wondering whether you can use CKEditor under an Open Source license in your project, check the appropriate [FAQ](https://ckeditor.com/ckeditor-4/support//faq/open%20source) section.
 
 ## Commercial License
 

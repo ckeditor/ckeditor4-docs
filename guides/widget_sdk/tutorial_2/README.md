@@ -77,7 +77,7 @@ Open the `dialogs/simplebox.js` file in a text editor now. For a start, we will 
 	} );
 
 <p class="tip">
-	See the <a href="http://docs.ckeditor.com/#!/api/CKEDITOR.dialog.definition">CKEDITOR.dialog.definition</a> documentation for a full reference on defining editor dialog windows.
+	See the <a href="#!/api/CKEDITOR.dialog.definition">CKEDITOR.dialog.definition</a> documentation for a full reference on defining editor dialog windows.
 </p>
 
 In our case we will give the dialog window a name (`simplebox`) and use the `{@link CKEDITOR.dialog.definition#title title}`, `{@link CKEDITOR.dialog.definition#minWidth minWidth}`, and `{@link CKEDITOR.dialog.definition#minHeight minHeight}` parameters to define its title and minimum dimensions, respectively.

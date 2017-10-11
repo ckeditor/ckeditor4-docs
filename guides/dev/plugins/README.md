@@ -25,7 +25,7 @@ The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page
 
 Drag the plugins that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with all selected plugins included.
 
-When you install your custom build, you will see that the additional plugins (in this example: [Language](http://ckeditor.com/addon/language)) are available in your CKEditor.
+When you install your custom build, you will see that the additional plugins (in this example: [Language](https://ckeditor.com/cke4/addon/language)) are available in your CKEditor.
 
 <img src="guides/dev_plugins/add_plugin_ckbuilder_4.png" alt="A custom CKEditor build with the Language plugin" width="502" height="205">
 
@@ -49,7 +49,7 @@ Using CKBuilder is a recommended solution, however, if you have plugins develope
 
 2. **Copy** the plugin files to the `plugins` folder of your CKEditor installation. Each plugin must be placed in a sub-folder that matches its "technical" name.
 
-	For example, the [Language plugin](http://ckeditor.com/addon/language) would be installed into this folder: `<CKEditor folder>/plugins/language`.
+	For example, the [Language plugin](https://ckeditor.com/cke4/addon/language) would be installed into this folder: `<CKEditor folder>/plugins/language`.
 
 3. **Check and resolve plugin dependencies.** If a plugin needs others to work, you will need to add these manually as well.
 

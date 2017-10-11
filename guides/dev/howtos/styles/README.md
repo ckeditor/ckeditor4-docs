@@ -35,12 +35,12 @@ For more details on the definition format and best practices on how to customize
 
 ### Stylesheet Parser Plugin
 
-You can also populate the **Styles** drop-down list with style definitions added in an external CSS stylesheet file. Check [The Stylesheet Parser Plugin](#!/guide/dev_styles-section-the-stylesheet-parser-plugin) article for more information about using the  optional [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin.
+You can also populate the **Styles** drop-down list with style definitions added in an external CSS stylesheet file. Check [The Stylesheet Parser Plugin](#!/guide/dev_styles-section-the-stylesheet-parser-plugin) article for more information about using the  optional [Stylesheet Parser](https://ckeditor.com/cke4/addon/stylesheetparser) plugin.
 
 
 ## How Do I Add Existing CSS Styles from an External File to Editor Output and the Styles Drop-Down List?
 
-The optional [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin can be used to point to an external CSS stylesheet containing style definitions. It will help you use existing CSS styles and display them in the **Styles** drop-down list without a need to define them specifically for CKEditor as [described here](#!/guide/dev_howtos_styles-section-how-do-i-customize-the-styles-drop-down-list%3F).
+The optional [Stylesheet Parser](https://ckeditor.com/cke4/addon/stylesheetparser) plugin can be used to point to an external CSS stylesheet containing style definitions. It will help you use existing CSS styles and display them in the **Styles** drop-down list without a need to define them specifically for CKEditor as [described here](#!/guide/dev_howtos_styles-section-how-do-i-customize-the-styles-drop-down-list%3F).
 
 For more information on using the plugin refer to [The Stylesheet Parser Plugin](#!/guide/dev_styles-section-the-stylesheet-parser-plugin) article and see the relevant [CKEditor SDK sample](https://sdk.ckeditor.com/samples/styles.html).
 

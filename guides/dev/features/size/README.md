@@ -42,9 +42,9 @@ For example:
 
 ## Alternative Solutions
 
-The editor can also be configured to [automatically adjust its height to the size of content](#!/guide/dev_autogrow) entered in its editing area thanks to an optional [Auto Grow](http://ckeditor.com/addon/autogrow) plugin.
+The editor can also be configured to [automatically adjust its height to the size of content](#!/guide/dev_autogrow) entered in its editing area thanks to an optional [Auto Grow](https://ckeditor.com/cke4/addon/autogrow) plugin.
 
-Additionally, the [Editor Resize](http://ckeditor.com/addon/resize) plugin provides numerous resize options for the classic editor, including the manual resize handle, setting minimum and maximum editor dimensions after resizing or influencing the resize direction. It even allows changing the editor size on the fly!
+Additionally, the [Editor Resize](https://ckeditor.com/cke4/addon/resize) plugin provides numerous resize options for the classic editor, including the manual resize handle, setting minimum and maximum editor dimensions after resizing or influencing the resize direction. It even allows changing the editor size on the fly!
 
 ## Editor Size Demo
 

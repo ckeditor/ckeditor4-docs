@@ -6,10 +6,10 @@ For licensing, see LICENSE.md.
 # Dropping and Pasting into Editor Content
 
 <p class="requirements">
-	Some of these features were introduced in <strong>CKEditor 4.5</strong>. They are provided through the <a href="http://ckeditor.com/addon/clipboard">Clipboard</a>, <a href="http://ckeditor.com/addon/pastefromword">Paste from Word</a> and <a href="http://ckeditor.com/addon/uploadimage">Upload Image</a> plugins. Part of them are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and may <a href="#!/guide/dev_plugins">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	Some of these features were introduced in <strong>CKEditor 4.5</strong>. They are provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a>, <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> and <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugins. Part of them are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and may <a href="#!/guide/dev_plugins">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-One of the CKEditor features is that it takes care over the input data you paste or drop into the editor. The [Clipboard](http://ckeditor.com/addon/clipboard) plugin which is included in every preset implements custom input content handling, which means that the editor will handle pasted and &mdash; since version 4.5 &mdash; dropped content.
+One of the CKEditor features is that it takes care over the input data you paste or drop into the editor. The [Clipboard](https://ckeditor.com/cke4/addon/clipboard) plugin which is included in every preset implements custom input content handling, which means that the editor will handle pasted and &mdash; since version 4.5 &mdash; dropped content.
 
 All pasted and dropped content is passed through the {@link CKEDITOR.editor#paste} event which makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like [Advanced Content Filter and paste filter](#!/guide/dev_drop_paste-section-filtering), [Paste from Word filter](#!/guide/dev_paste_from_word) or [support for uploading dropped files](#!/guide/dev_drop_paste-section-file-upload).
 
@@ -31,7 +31,7 @@ You can also read more about [content filtering](#!/guide/dev_acf) in general an
 
 ## File Upload
 
-Another feature related to the clipboard is uploading dropped or pasted files or images. It lets you not only drop or paste files into the document, but also paste a part of the image copied from the image editor. The [Upload Widget](http://ckeditor.com/addon/uploadwidget), [File Tools](http://ckeditor.com/addon/filetools) and [Notification](http://ckeditor.com/addon/notification) plugins create a flexible API which lets the developers handle files the way they need. To learn more about these APIs check the [Notifications](#!/guide/dev_notifications), [Clipboard Integration](#!/guide/dev_clipboard) and [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) articles.
+Another feature related to the clipboard is uploading dropped or pasted files or images. It lets you not only drop or paste files into the document, but also paste a part of the image copied from the image editor. The [Upload Widget](https://ckeditor.com/cke4/addon/uploadwidget), [File Tools](https://ckeditor.com/cke4/addon/filetools) and [Notification](https://ckeditor.com/cke4/addon/notification) plugins create a flexible API which lets the developers handle files the way they need. To learn more about these APIs check the [Notifications](#!/guide/dev_notifications), [Clipboard Integration](#!/guide/dev_clipboard) and [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) articles.
 
 Note that this feature is limited because of browsers and operating systems limitations. File API is not supported in Internet Explorer 9 and below so dropped files cannot be handled. Support for pasting whole files and fragments of files (e.g. images) varies between browsers and operating systems.
 

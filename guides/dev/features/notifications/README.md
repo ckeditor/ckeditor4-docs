@@ -9,7 +9,7 @@ For licensing, see LICENSE.md.
 	This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-The optional [Notification](http://ckeditor.com/addon/notification) and [Notification Aggregator](http://ckeditor.com/addon/notificationaggregator) plugins introduced in CKEditor 4.5 make it possible to show the user information about the status of selected operations directly in the editor.
+The optional [Notification](https://ckeditor.com/cke4/addon/notification) and [Notification Aggregator](https://ckeditor.com/cke4/addon/notificationaggregator) plugins introduced in CKEditor 4.5 make it possible to show the user information about the status of selected operations directly in the editor.
 
 The new notification system lets you display all sorts of information in a consistent way because all plugins using the {@link CKEDITOR.plugins.notification notification API} will show information in the same way. This API also allows you to integrate the editor's notifications with your website (your CMS for example). Note that notifications do not work with dialog windows so no dialog should be displayed when the notification is to be shown.
 

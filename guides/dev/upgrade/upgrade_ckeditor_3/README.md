@@ -15,7 +15,7 @@ CKEditor 3 and 4 are mostly compatible, so an upgrade to the latest CKEditor 4 l
 
 Here is a list of the most notable changes between CKEditor 3 and 4.
 
-1. The new default [Moono skin](http://ckeditor.com/addon/moono) was introduced.
+1. The new default [Moono skin](https://ckeditor.com/cke4/addon/moono) was introduced.
 2. The installation package no longer includes all possible CKEditor plugins. You can now either choose one of the pre-defined packages (Basic, Standard, Full) or create a custom build by using the [CKBuilder](http://ckeditor.com/builder) service.
 3. All CKEditor plugins, both created by the CKEditor team and by the community, are available in the new [Add-ons Repository](http://ckeditor.com/addons/plugins/all), where you can browse them and easily add to your custom build.
 4. The new [Advanced Content Filter](http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter) adjusts your content to your editor configuration and strips disallowed content.

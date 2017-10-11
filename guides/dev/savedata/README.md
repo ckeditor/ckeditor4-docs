@@ -63,7 +63,7 @@ The following example shows how to listen to the `change` event and print the to
 
 ## The Save Plugin
 
-A dedicated **[Save](http://ckeditor.com/addon/save)** plugin for CKEditor is available, too. It provides the <img class="inline" src="guides/dev_savedata/save_01.png" title="Save" alt="Save"> button, which fires the [save](#!/api/CKEDITOR.editor-event-save) event, but it currently works only for classic editor placed inside the `<form>` element.
+A dedicated **[Save](https://ckeditor.com/cke4/addon/save)** plugin for CKEditor is available, too. It provides the <img class="inline" src="guides/dev_savedata/save_01.png" title="Save" alt="Save"> button, which fires the [save](#!/api/CKEDITOR.editor-event-save) event, but it currently works only for classic editor placed inside the `<form>` element.
 
 ## Getting and Saving Data Demos
 

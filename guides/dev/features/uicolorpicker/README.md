@@ -10,11 +10,11 @@ For licensing, see LICENSE.md.
 	Features described in this article are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 <p>
-	Please note that this feature can only be used for editor skins that are compatible with the so-called <a href="#!/guide/skin_sdk_chameleon">"chameleon" feature</a>. The skins created by CKSource, i.e. <a href="http://ckeditor.com/addon/moono">Moono</a> and <a href="http://ckeditor.com/addon/kama">Kama</a>, already support it. If you are using a custom skin, you will need to define the <a href="#!/api/CKEDITOR.skin-method-chameleon">CKEDITOR.skin.chameleon</a> function in your <code>skin.js</code> file.
+	Please note that this feature can only be used for editor skins that are compatible with the so-called <a href="#!/guide/skin_sdk_chameleon">"chameleon" feature</a>. The skins created by CKSource, i.e. <a href="https://ckeditor.com/cke4/addon/moono">Moono</a> and <a href="https://ckeditor.com/cke4/addon/kama">Kama</a>, already support it. If you are using a custom skin, you will need to define the <a href="#!/api/CKEDITOR.skin-method-chameleon">CKEDITOR.skin.chameleon</a> function in your <code>skin.js</code> file.
 </p>
 </div>
 
-[CKEditor UI color can be set manually](#!/guide/dev_uicolor) in the editor configuration, but adjusting the UI color can be even easier than that. To make use of the second method, your CKEditor build needs to include the optional [UI Color Picker](http://ckeditor.com/addon/uicolor) plugin.
+[CKEditor UI color can be set manually](#!/guide/dev_uicolor) in the editor configuration, but adjusting the UI color can be even easier than that. To make use of the second method, your CKEditor build needs to include the optional [UI Color Picker](https://ckeditor.com/cke4/addon/uicolor) plugin.
 
 When the plugin is enabled, it adds a new **UI Color Picker** button (<img class="inline" src="guides/dev_uicolorpicker/uicolorpicker.png">) to your toolbar. Clicking this button opens the **UI Color Picker** dialog window where you have a few options to find the right color.
 

@@ -5,7 +5,7 @@ For licensing, see LICENSE.md.
 
 # Plugin Stylesheets
 
-Every plugin may require including some additional stylesheet files. For instance, the [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin uses the [highlight.js](https://highlightjs.org/) library that stores color schemes in separate CSS files. The markup created by highlight.js contains only classes (no inline styles), so in order to implement code highlighting, one of the scheme CSS files needs to be loaded.
+Every plugin may require including some additional stylesheet files. For instance, the [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin uses the [highlight.js](https://highlightjs.org/) library that stores color schemes in separate CSS files. The markup created by highlight.js contains only classes (no inline styles), so in order to implement code highlighting, one of the scheme CSS files needs to be loaded.
 
 <p class="tip">
 	Unless stylesheets are a part of some external library (like highlight.js), the recommended place to keep them is inside the <code>styles</code> directory in your plugin's folder.
@@ -50,7 +50,7 @@ If you are [sharing a plugin](http://ckeditor.com/addons/plugins/all) that needs
 
 ## Special Case: Stylesheets Required Only Inside the Editor
 
-It may happen that your plugin requires some styles to be applied only inside the editor. For instance, it may add special information about blocks like the [Show Blocks](http://ckeditor.com/addon/showblocks) plugin. In such case your plugin can use the CKEDITOR.addCss method which lets you include the stylesheets directly in the plugin JavaScript file, without using separate CSS files.
+It may happen that your plugin requires some styles to be applied only inside the editor. For instance, it may add special information about blocks like the [Show Blocks](https://ckeditor.com/cke4/addon/showblocks) plugin. In such case your plugin can use the CKEDITOR.addCss method which lets you include the stylesheets directly in the plugin JavaScript file, without using separate CSS files.
 
 This method has to be called before the [editable](#!/api/CKEDITOR.editable) is set up and only once for all editors. Therefore, unlike in the previous example, it should be called from the plugin `onLoad` callback:
 

@@ -456,7 +456,7 @@ Information and the operation of user interface must be understandable. See [ref
 		<tr>
 			<td><b>3.1.2 Language of Parts:</b> The human language of each passage or phrase in the content can be programmatically determined except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text.</td>
 			<td>AA</td>
-			<td>The <a href="http://ckeditor.com/addon/language">Language</a> plugin allows the editor user to properly mark parts of text as fragments in a particular language using the <code>lang</code> attribute.</td>
+			<td>The <a href="https://ckeditor.com/cke4/addon/language">Language</a> plugin allows the editor user to properly mark parts of text as fragments in a particular language using the <code>lang</code> attribute.</td>
 			<td>
 				<ul>
 					<li><a href="http://www.w3.org/TR/WCAG20-TECHS/H57.html">H57</a></li>

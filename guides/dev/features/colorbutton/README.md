@@ -9,13 +9,13 @@ For licensing, see LICENSE.md.
 	This feature is provided through optional plugins that are only included in the Full preset available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add them to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-The optional [Color Button](http://ckeditor.com/addon/colorbutton) plugin provides the ability to define font and background color for text created in CKEditor. When enabled, it adds the **Text Color** and **Background Color** toolbar buttons that open a color selection drop-down list. If you want to quickly [remove colors](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](http://ckeditor.com/addon/removeformat) plugin.
+The optional [Color Button](https://ckeditor.com/cke4/addon/colorbutton) plugin provides the ability to define font and background color for text created in CKEditor. When enabled, it adds the **Text Color** and **Background Color** toolbar buttons that open a color selection drop-down list. If you want to quickly [remove colors](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
 
 {@img colorbutton_05.png The Text Color and Background Color features}
 
 ## More Colors Option and Color Dialog
 
-You can also add the optional [Color Dialog](http://ckeditor.com/addon/colordialog) plugin which extends the color selector with the **More Colors** option and a user-friendly way to select the desired color through a dedicated **Select Color** dialog window. When this plugin is enabled, the **More Colors** option appears automatically for the text and background color.
+You can also add the optional [Color Dialog](https://ckeditor.com/cke4/addon/colordialog) plugin which extends the color selector with the **More Colors** option and a user-friendly way to select the desired color through a dedicated **Select Color** dialog window. When this plugin is enabled, the **More Colors** option appears automatically for the text and background color.
 
 {@img colordialog_03.png The Select Color dialog window}
 

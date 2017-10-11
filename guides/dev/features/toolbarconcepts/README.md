@@ -43,7 +43,7 @@ Note that there are unused groups in the above configuration. This is "by design
 
 The most important benefit of toolbar grouping configuration over the "item by item" configuration is: **automation**.
 
-It is now possible for plugin developers to define into which toolbar group their plugins should add buttons. For example, the [Image](http://ckeditor.com/addon/image) plugin includes its button in the `insert` group, while the [Undo and Redo](http://ckeditor.com/addon/undo) buttons go into the `undo` sub-group.
+It is now possible for plugin developers to define into which toolbar group their plugins should add buttons. For example, the [Image](https://ckeditor.com/cke4/addon/image) plugin includes its button in the `insert` group, while the [Undo and Redo](https://ckeditor.com/cke4/addon/undo) buttons go into the `undo` sub-group.
 
 While not mandatory, having all groups and sub-groups configured (including the ones that you do not use) is recommended because at any moment in the future, when a new plugin gets installed, its button will automatically appear in the toolbar without further configuration requirements.
 

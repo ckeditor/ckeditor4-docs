@@ -6,10 +6,10 @@ For licensing, see LICENSE.md.
 # Pasting Content from Microsoft Word
 
 <p class="requirements">
-    This feature is provided through the <a href="http://ckeditor.com/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+    This feature is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-The [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin allows you to paste content from Microsoft Word and maintain original content structure and formatting.
+The [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin allows you to paste content from Microsoft Word and maintain original content structure and formatting.
 
 When enabled, it automatically detects Word content and transforms its structure and formatting to clean HTML. It also adds the **Paste from Word** toolbar button (<img src="guides/dev_pastefromword/pastefromword-button.png" alt="Paste from Word toolbar button" style="vertical-align: bottom;">) which makes it possible to paste clipboard data this way only on demand.
 
@@ -67,7 +67,7 @@ The following sample content from a Microsoft Word document:
 
 {@img pastefromword_01.png Sample Word document}
 
-will look like below after pasting to CKEditor with the [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin enabled:
+will look like below after pasting to CKEditor with the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin enabled:
 
 {@img pastefromword_02.png Word content pasted into CKEditor}
 
@@ -86,7 +86,7 @@ CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questio
 
 ## Filters
 
-HTML exposed by Microsoft Word does not comply to any imaginable rules. It is a poetry of what can be done wrong. Therefore, a separate filter had to be created to normalize this content. It is implemented in the [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin and, beside the [standard filtering options](#!/guide/dev_drop_paste-section-filtering-content), it has additional settings:
+HTML exposed by Microsoft Word does not comply to any imaginable rules. It is a poetry of what can be done wrong. Therefore, a separate filter had to be created to normalize this content. It is implemented in the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin and, beside the [standard filtering options](#!/guide/dev_drop_paste-section-filtering-content), it has additional settings:
 
 * CKEDITOR.config.pasteFromWordCleanupFile
 * CKEDITOR.config.pasteFromWordPromptCleanup

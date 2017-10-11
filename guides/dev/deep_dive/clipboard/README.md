@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # Clipboard Integration
 
 <p class="requirements">
-	This feature is provided through the <a href="http://ckeditor.com/addon/clipboard">Clipboard</a> plugin that is included in all CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site.
+	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a> plugin that is included in all CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site.
 </p>
 
 One of the most important CKEditor features is the integration with the operating system's clipboard. The main role of this feature is to intercept any content that is being pasted, dropped, cut, copied or dragged from or to the editor. This allows to apply certain rules to this content, for instance with [Advanced Content Filter](#!/guide/dev_advanced_content_filter).
@@ -155,7 +155,7 @@ Since version 4.5 CKEditor handles dragging and dropping manually. CKEditor uses
 * {@link CKEDITOR.editor#dragend},
 * {@link CKEDITOR.editor#drop}.
 
-Listeners for these events perform the entire drag and drop operation, which means that CKEditor puts dragged content into the {@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer} object (if `dragstart` is inside it), gets dragged content, finds a range at the drop position and fires the {@link CKEDITOR.editor#paste paste event}. Note that these events do not need to be based on native events. For example, the drag and drop of the block widgets uses [Line Utilities](http://ckeditor.com/addon/lineutils) and listens for mouse events, but fires the {@link CKEDITOR.editor#dragstart}, {@link CKEDITOR.editor#dragend} and {@link CKEDITOR.editor#drop} events so the drag and drop is handled by the same code and hence can be processed in the same way.
+Listeners for these events perform the entire drag and drop operation, which means that CKEditor puts dragged content into the {@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer} object (if `dragstart` is inside it), gets dragged content, finds a range at the drop position and fires the {@link CKEDITOR.editor#paste paste event}. Note that these events do not need to be based on native events. For example, the drag and drop of the block widgets uses [Line Utilities](https://ckeditor.com/cke4/addon/lineutils) and listens for mouse events, but fires the {@link CKEDITOR.editor#dragstart}, {@link CKEDITOR.editor#dragend} and {@link CKEDITOR.editor#drop} events so the drag and drop is handled by the same code and hence can be processed in the same way.
 
 Note that the {@link CKEDITOR.editor#drop drop event} fires the {@link CKEDITOR.editor#paste paste event} which is the one which should be used for data transformations such as filtering or uploading files.
 

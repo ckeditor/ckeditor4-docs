@@ -14,11 +14,11 @@ For licensing, see LICENSE.md.
 	</p>
 </div>
 
-With full page mode and the optional [Document Properties](http://ckeditor.com/addon/docprops) plugin you can use CKEditor to edit entire HTML pages (from `<html>` to `</html>`), including the page metadata like `DOCTYPE`, character set encoding, meta tags, text and background color, or margins.
+With full page mode and the optional [Document Properties](https://ckeditor.com/cke4/addon/docprops) plugin you can use CKEditor to edit entire HTML pages (from `<html>` to `</html>`), including the page metadata like `DOCTYPE`, character set encoding, meta tags, text and background color, or margins.
 
 ## Full Page Mode
 
-Full page mode is provided by the [IFrame Editing Area](http://ckeditor.com/addon/wysiwygarea) (`wysiwygarea`) plugin which means it is only available for classic, `iframe`-based editor with fixed UI. It can be enabled by setting the CKEDITOR.config.fullPage option to `true` in your [editor configuration](#!/guide/dev_configuration):
+Full page mode is provided by the [IFrame Editing Area](https://ckeditor.com/cke4/addon/wysiwygarea) (`wysiwygarea`) plugin which means it is only available for classic, `iframe`-based editor with fixed UI. It can be enabled by setting the CKEDITOR.config.fullPage option to `true` in your [editor configuration](#!/guide/dev_configuration):
 
 	config.fullPage = true;
 
@@ -39,7 +39,7 @@ The following image shows the source of a complete HTML page edited in CKEditor.
 
 ## Document Properties Plugin
 
-Additionally, you can use the optional [Document Properties](http://ckeditor.com/addon/docprops) plugin to manipulate some of the document metadata. When the plugin is enabled, it adds the **Document Properties** (<img class="inline" src="guides/dev_fullpage/docprops.png">) toolbar button along with the matching **Document Properties** dialog window. You can use it to set the following:
+Additionally, you can use the optional [Document Properties](https://ckeditor.com/cke4/addon/docprops) plugin to manipulate some of the document metadata. When the plugin is enabled, it adds the **Document Properties** (<img class="inline" src="guides/dev_fullpage/docprops.png">) toolbar button along with the matching **Document Properties** dialog window. You can use it to set the following:
 
 * Page title, language direction and code, charset encoding and `DOCTYPE`.
 * Text color, background color or image, page margins.

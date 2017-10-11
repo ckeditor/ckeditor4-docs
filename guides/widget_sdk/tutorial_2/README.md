@@ -11,7 +11,7 @@ The aim of this tutorial is to demonstrate **how to extend an existing CKEditor 
 [Widgets are an innovative feature](#!/guide/dev_widgets) that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
 
 * CKEditor 4.3 and above.
-* The [Widget plugin](http://ckeditor.com/addon/widget) along with its dependencies.
+* The [Widget plugin](https://ckeditor.com/cke4/addon/widget) along with its dependencies.
 
 ## Introduction
 

@@ -9,7 +9,7 @@ For licensing, see LICENSE.md.
 	This feature is provided through an optional plugin that is not included in the CKEditor distribution packages available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-An optional CKEditor plugin called [Developer Tools](http://ckeditor.com/addon/devtools) displays tooltips with information about editor dialog windows, such as:
+An optional CKEditor plugin called [Developer Tools](https://ckeditor.com/cke4/addon/devtools) displays tooltips with information about editor dialog windows, such as:
 
 * dialog window name,
 * dialog window tab name,

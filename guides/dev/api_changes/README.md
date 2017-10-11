@@ -28,7 +28,7 @@ The listener function sent to `CKEDITOR.event#on` can now return the Boolean `fa
 `CKEDITOR.config.corePlugins` is not needed anymore. The "core plugins" are now really part of the core, although their API signatures are left untouched:
 
  * `plugins/selection/plugin.js` => `core/selection.js`.
-	The "Select All" feature originally provided by the `selection` plugin is now a standalone [Select All](http://ckeditor.com/addon/selectall) plugin.
+	The "Select All" feature originally provided by the `selection` plugin is now a standalone [Select All](https://ckeditor.com/cke4/addon/selectall) plugin.
  * `plugins/styles/plugin.js` => `core/style.js`
  * `plugins/styles/styles/default.js` => `core/styles.js`
  * `plugins/domiterator/plugin.js` => `core/dom/iterator.js`

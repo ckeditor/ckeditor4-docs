@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 CKEditor support for creating and editing tables is provided by four separate table-related plugins as well as two helper plugins.
 
-* The [Table](http://ckeditor.com/addon/table) plugin &ndash; adds the **Table Properties** dialog window with support for creating tables and setting basic table properties, such as:
+* The [Table](https://ckeditor.com/cke4/addon/table) plugin &ndash; adds the **Table Properties** dialog window with support for creating tables and setting basic table properties, such as:
 	* Number of rows and columns.
 	* Table width and height.
 	* Cell padding and spacing.
@@ -19,7 +19,7 @@ CKEditor support for creating and editing tables is provided by four separate ta
 	* Table border size.
 	* Table alignment on the page.
 	* Table caption and summary.
-* The [Table Tools](http://ckeditor.com/addon/tabletools) plugin &ndash; adds a more advanced context menu for table items and the **Cell Properties** dialog window with support for features such as:
+* The [Table Tools](https://ckeditor.com/cke4/addon/tabletools) plugin &ndash; adds a more advanced context menu for table items and the **Cell Properties** dialog window with support for features such as:
 	* Cell type.
 	* Cell width and height.
 	* Word wrap settings.
@@ -28,16 +28,16 @@ CKEditor support for creating and editing tables is provided by four separate ta
 	* Cell and border color.
 	* Inserting and deleting cells, rows and columns.
 	* Merging and splitting cells horizontally and vertically.
-* The [Table Resize](http://ckeditor.com/addon/tableresize) plugin &ndash; adds support for column resizing with your mouse.
-* The [Table Selection](http://ckeditor.com/addon/tableselection) plugin (CKEditor 4.7+) &ndash; introduces support for the custom selection system for tables that lets you:
+* The [Table Resize](https://ckeditor.com/cke4/addon/tableresize) plugin &ndash; adds support for column resizing with your mouse.
+* The [Table Selection](https://ckeditor.com/cke4/addon/tableselection) plugin (CKEditor 4.7+) &ndash; introduces support for the custom selection system for tables that lets you:
 	* Select an arbitrary rectangular table fragment &mdash; a few cells from different rows, a column (or a few of them) or a row (or multiple rows).
 	* Apply formatting or add a link to all selected cells at once.
 	* Cut, copy and paste entire rows or columns.
 
 The following two helper plugins extend the Table Properties and Cell Properties dialog windows with additional features:
 
-* The [Color Dialog](http://ckeditor.com/addon/colordialog) plugin &ndash; provides a user-friendly way to select the cell background and border color through a dedicated **Select Color** dialog window with a color table.
-* The [Advanced Tab for Dialogs](http://ckeditor.com/addon/dialogadvtab) plugin &ndash; provides the **Advanced** tab for the Table Properties dialog window and allows for setting the table ID, language direction, inline CSS style and stylesheet class.
+* The [Color Dialog](https://ckeditor.com/cke4/addon/colordialog) plugin &ndash; provides a user-friendly way to select the cell background and border color through a dedicated **Select Color** dialog window with a color table.
+* The [Advanced Tab for Dialogs](https://ckeditor.com/cke4/addon/dialogadvtab) plugin &ndash; provides the **Advanced** tab for the Table Properties dialog window and allows for setting the table ID, language direction, inline CSS style and stylesheet class.
 
 The **Table**, **Table Tools** and **Table Selection** plugins are included in the Standard and Full installation packages. **Color Dialog** and  **Advanced Tab for Dialogs** are only available in the Full distribution, while the **Table Resize** plugin is optional &mdash; they may be [added to your CKEditor build](#!/guide/dev_plugins).
 

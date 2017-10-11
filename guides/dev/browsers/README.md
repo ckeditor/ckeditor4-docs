@@ -30,7 +30,7 @@ The list of officially supported browsers contains those which the CKEditor core
 These browsers are generally fully compatible with CKEditor with just a few exceptions. Namely:
 
 * There is no support for uploading pasted and dropped files (required APIs are not available).
-* In Internet Explorer 8.0 the [Mathematical Formulas](http://ckeditor.com/addons/search/plugins/mathjax), [Code Snippet](http://ckeditor.com/addon/codesnippet), [Embed](http://ckeditor.com/addon/embed) and [Semantic Embed](http://ckeditor.com/addon/embedsemantic) widgets are not supported.
+* In Internet Explorer 8.0 the [Mathematical Formulas](http://ckeditor.com/addons/search/plugins/mathjax), [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet), [Embed](https://ckeditor.com/cke4/addon/embed) and [Semantic Embed](https://ckeditor.com/cke4/addon/embedsemantic) widgets are not supported.
 * In Internet Explorer 8.0 there is no support for nested [widgets](#!/guide/dev_widgets).
 * In Internet Explorer 8.0 there is no support for [Accessibility Checker](#!/guide/dev_accessibility_checker).
 

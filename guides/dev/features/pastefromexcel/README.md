@@ -6,10 +6,10 @@ For licensing, see LICENSE.md.
 # Pasting Content from Microsoft Excel
 
 <p class="requirements">
-    This feature was introduced in <strong>CKEditor 4.7</strong>. It is provided through the <a href="http://ckeditor.com/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+    This feature was introduced in <strong>CKEditor 4.7</strong>. It is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-The [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin allows you to also paste content from **Microsoft Excel** and maintain original content structure and formatting. As of CKEditor 4.7 some more advanced Excel features are not supported yet and will be added in future CKEditor releases.
+The [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin allows you to also paste content from **Microsoft Excel** and maintain original content structure and formatting. As of CKEditor 4.7 some more advanced Excel features are not supported yet and will be added in future CKEditor releases.
 
 When the plugin is enabled, it automatically detects Excel content and transforms its structure and formatting to clean HTML. It also adds the **Paste from Word** toolbar button (<img src="guides/dev_pastefromword/pastefromword-button.png" alt="Paste from Word toolbar button" style="vertical-align: bottom;">) which makes it possible to paste clipboard data this way only on demand.
 
@@ -33,7 +33,7 @@ The following sample content from a Microsoft Excel document:
 
 {@img pastefromexcel_01.png Sample Excel document}
 
-will look like below after pasting to CKEditor with the [Paste from Word](http://ckeditor.com/addon/pastefromword) plugin enabled:
+will look like below after pasting to CKEditor with the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin enabled:
 
 {@img pastefromexcel_02.png Excel content pasted into CKEditor}
 

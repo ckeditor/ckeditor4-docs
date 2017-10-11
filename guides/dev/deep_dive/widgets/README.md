@@ -48,7 +48,7 @@ The screenshot above shows a customized CKEditor instance that uses a few sample
 
 ## Technical Background
 
-Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic [Widget plugin](http://ckeditor.com/addon/widget)**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins/all), and can be added to your editor installation as described in the [Widget Installation](#!/guide/dev_widget_installation) article.
+Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic [Widget plugin](https://ckeditor.com/cke4/addon/widget)**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins/all), and can be added to your editor installation as described in the [Widget Installation](#!/guide/dev_widget_installation) article.
 
 ## Further Reading
 

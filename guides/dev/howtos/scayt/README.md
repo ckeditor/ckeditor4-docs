@@ -17,7 +17,7 @@ If you want to turn on the [Spell Check As You Type (SCAYT)](#!/guide/dev_spellc
 
 ## How Do I Disable SCAYT in CKEditor?
 
-If you want to completely disable the [Spell Check As You Type (SCAYT)](#!/guide/dev_spellcheck-section-spell-check-as-you-type-%28scayt%29) feature in CKEditor, remove the [SpellCheckAsYouType (SCAYT)](http://ckeditor.com/addon/scayt) from your CKEditor build with CKBuilder or alternatively, disable the `scayt` plugin using the CKEDITOR.config#removePlugins configuration setting.
+If you want to completely disable the [Spell Check As You Type (SCAYT)](#!/guide/dev_spellcheck-section-spell-check-as-you-type-%28scayt%29) feature in CKEditor, remove the [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) from your CKEditor build with CKBuilder or alternatively, disable the `scayt` plugin using the CKEDITOR.config#removePlugins configuration setting.
 
 	config.removePlugins = 'scayt';
 

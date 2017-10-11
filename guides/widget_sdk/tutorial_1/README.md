@@ -11,7 +11,7 @@ The aim of this tutorial is to demonstrate **how to create a basic CKEditor widg
 [Widgets are an innovative feature](#!/guide/dev_widgets) that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
 
 * CKEditor 4.3 and above.
-* The [Widget plugin](http://ckeditor.com/addon/widget) along with its dependencies.
+* The [Widget plugin](https://ckeditor.com/cke4/addon/widget) along with its dependencies.
 
 ## Introduction
 
@@ -50,7 +50,7 @@ With the following structure ready, it is time to open the `plugin.js` file in a
 
 All CKEditor plugins are created by using the `CKEDITOR.plugins#add` function. This function should contain the plugin name (again, the same as the directory name, so `simplebox` in our case) and the plugin logic placed inside the `{@link CKEDITOR.pluginDefinition#init init}` function that is called upon the initialization of the editor instance.
 
-The `simplebox` plugin is going to define the `simplebox` widget. To do this, the plugin needs to reference the generic [Widget plugin](http://ckeditor.com/addon/widget) that provides the [Widget API](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget). This is done in the `{@link CKEDITOR.pluginDefinition#requires requires}` property.
+The `simplebox` plugin is going to define the `simplebox` widget. To do this, the plugin needs to reference the generic [Widget plugin](https://ckeditor.com/cke4/addon/widget) that provides the [Widget API](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget). This is done in the `{@link CKEDITOR.pluginDefinition#requires requires}` property.
 
 Additionally, as we are going to define a toolbar button, the `icons` property needs to be set and include the name of the icon file.
 

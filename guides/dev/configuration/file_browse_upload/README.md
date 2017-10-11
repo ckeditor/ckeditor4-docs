@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # File Manager Integration
 
 <p class="requirements">
-	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="http://ckeditor.com/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </p>
 
 Once properly set up, all file manager features will automatically become available. This includes the **Upload** tab `(1)` in the **Link**, **Image**, and **Flash Properties** dialog windows as well as the **Browse Server** button `(2)`.

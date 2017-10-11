@@ -15,7 +15,7 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 
 <div class="requirements">
 	<p>
-		The <strong>Accessibility Instructions</strong> dialog window is provided through the <a href="http://ckeditor.com/addon/a11yhelp">Accessibility Help</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+		The <strong>Accessibility Instructions</strong> dialog window is provided through the <a href="https://ckeditor.com/cke4/addon/a11yhelp">Accessibility Help</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 	</p>
 	<p>
 		Note that some shortcuts only work if the functionality behind them is included in your editor build.

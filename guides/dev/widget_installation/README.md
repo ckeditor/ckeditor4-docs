@@ -17,21 +17,21 @@ All widget plugins are optional. If you want to add them to your CKEditor 4.3+ b
 
 The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page and find the widget plugins in the **Available Plugins** list on the right. The following widgets were introduced in CKEditor 4.3 and above:
 
-* **[Enhanced Image](http://ckeditor.com/addon/image2)** &ndash; A plugin that lets you add captioned images with "click and drag" resizing.
-* **[Mathematical Formulas](http://ckeditor.com/addon/mathjax)** &ndash; A plugin that lets you add mathematical formulas written in TeX.
-* **[Placeholder](http://ckeditor.com/addon/placeholder)** &ndash; A plugin that lets you create non-editable text fragments.
-* **[Code Snippet](http://ckeditor.com/addon/codesnippet)** &ndash; A plugin that lets you insert rich code snippets with syntax highlighting into editor content.
-* **[Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi)** &ndash; A plugin that lets you insert rich code snippets with GeSHi syntax highlighting engine integrated.
-* **[Media Embed](http://ckeditor.com/addon/embed)** &ndash; A plugin that lets you embed media resources (videos, images, tweets, etc.) hosted by other services directly in the editor.
-* **[Semantic Media Embed](http://ckeditor.com/addon/embedsemantic)** &ndash; A plugin that lets you embed media resources with semantic output (videos, images, tweets, etc.) hosted by other services directly in the editor.
-* **[Upload Image](http://ckeditor.com/addon/uploadimage)** &ndash; A plugin that enables support for uploading images that were dropped or pasted into the editor.
-* **[Upload Widget](http://ckeditor.com/addon/uploadwidget)** &ndash; A plugin that implements a base class for creating non-blocking, live upload of files while the user is editing content.
+* **[Enhanced Image](https://ckeditor.com/cke4/addon/image2)** &ndash; A plugin that lets you add captioned images with "click and drag" resizing.
+* **[Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax)** &ndash; A plugin that lets you add mathematical formulas written in TeX.
+* **[Placeholder](https://ckeditor.com/cke4/addon/placeholder)** &ndash; A plugin that lets you create non-editable text fragments.
+* **[Code Snippet](https://ckeditor.com/cke4/addon/codesnippet)** &ndash; A plugin that lets you insert rich code snippets with syntax highlighting into editor content.
+* **[Code Snippet GeSHi](https://ckeditor.com/cke4/addon/codesnippetgeshi)** &ndash; A plugin that lets you insert rich code snippets with GeSHi syntax highlighting engine integrated.
+* **[Media Embed](https://ckeditor.com/cke4/addon/embed)** &ndash; A plugin that lets you embed media resources (videos, images, tweets, etc.) hosted by other services directly in the editor.
+* **[Semantic Media Embed](https://ckeditor.com/cke4/addon/embedsemantic)** &ndash; A plugin that lets you embed media resources with semantic output (videos, images, tweets, etc.) hosted by other services directly in the editor.
+* **[Upload Image](https://ckeditor.com/cke4/addon/uploadimage)** &ndash; A plugin that enables support for uploading images that were dropped or pasted into the editor.
+* **[Upload Widget](https://ckeditor.com/cke4/addon/uploadwidget)** &ndash; A plugin that implements a base class for creating non-blocking, live upload of files while the user is editing content.
 
 <img src="guides/dev_widget_installation/add_widget_ckbuilder_3.png" alt="Selected Plugins and Available Plugins lists in CKBuilder" width="786" height="491">
 
 Drag the widget plugin that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with widget plugins included.
 
-When you install your custom build, you will see that the additional widget plugins (in this example: [Mathematical Formulas](http://ckeditor.com/addon/mathjax)) are available in your CKEditor.
+When you install your custom build, you will see that the additional widget plugins (in this example: [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax)) are available in your CKEditor.
 
 <img src="guides/dev_widget_installation/add_widget_ckbuilder_4.png" alt="A custom CKEditor build with the Mathematical Formulas widget" width="528" height="218">
 

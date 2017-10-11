@@ -22,6 +22,6 @@ If, for example, you want CKEditor to output the self-closing tags in the HTML4 
 
 ## How Do I Output BBCode Instead of HTML Code Using CKEditor?
 
-You should try the [BBCode plugin](http://ckeditor.com/addon/bbcode). See the [BBCode Editing sample](https://sdk.ckeditor.com/samples/bbcode.html) and the [documentation](#!/guide/dev_bbcode) for more information.
+You should try the [BBCode plugin](https://ckeditor.com/cke4/addon/bbcode). See the [BBCode Editing sample](https://sdk.ckeditor.com/samples/bbcode.html) and the [documentation](#!/guide/dev_bbcode) for more information.
 
 <img src="guides/dev_bbcode/bbcode_02.png" alt="CKEditor content created in BBCode">

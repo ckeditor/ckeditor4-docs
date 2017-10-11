@@ -9,17 +9,17 @@ For licensing, see LICENSE.md.
 	This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-The optional [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin allows you to insert rich code fragments and see a live preview with highlighted syntax. Its original implementation uses the [highlight.js](http://highlightjs.org) library, but the plugin exposes a convenient [interface](#!/api/CKEDITOR.plugins.codesnippet.highlighter) for hooking any other library, even a server-side one.
+The optional [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin allows you to insert rich code fragments and see a live preview with highlighted syntax. Its original implementation uses the [highlight.js](http://highlightjs.org) library, but the plugin exposes a convenient [interface](#!/api/CKEDITOR.plugins.codesnippet.highlighter) for hooking any other library, even a server-side one.
 
 {@img codesnippet_01.png}
 
 ## Enabling Syntax Highlighting
 
-If you are using the [classic editor](#!/guide/dev_framed), you do not need to perform any additional steps other than [adding](#!/guide/dev_plugins) the optional [Code Snippet](http://ckeditor.com/addon/codesnippet) plugin to your build to enable syntax highlighting inside CKEditor.
+If you are using the [classic editor](#!/guide/dev_framed), you do not need to perform any additional steps other than [adding](#!/guide/dev_plugins) the optional [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin to your build to enable syntax highlighting inside CKEditor.
 
 ### Inline and div-based Editors
 
-If you use the [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor, you will need to perform an additional step after installing the plugin, since the highlighter stylesheet will not be loaded automatically by the editor. You will thus need to link the stylesheet for the chosen `highlight.js` theme in the `<head>` section of your page. The following code will load the default theme:
+If you use the [inline](#!/guide/dev_inline) or [div-based](https://ckeditor.com/cke4/addon/divarea) editor, you will need to perform an additional step after installing the plugin, since the highlighter stylesheet will not be loaded automatically by the editor. You will thus need to link the stylesheet for the chosen `highlight.js` theme in the `<head>` section of your page. The following code will load the default theme:
 
 	<head>
 		...
@@ -61,7 +61,7 @@ For a complete list of available themes see the [Inserting Code Snippets sample]
 
 {@img codesnippet_05.png}
 
-In [inline](#!/guide/dev_inline) or [div-based](http://ckeditor.com/addon/divarea) editor and on the target page that displays content created with CKEditor you can switch between themes by loading the different theme's stylesheets. See the [Enabling Syntax Highlighting](#!/guide/dev_codesnippet-section-enabling-syntax-highlighting) section for more information.
+In [inline](#!/guide/dev_inline) or [div-based](https://ckeditor.com/cke4/addon/divarea) editor and on the target page that displays content created with CKEditor you can switch between themes by loading the different theme's stylesheets. See the [Enabling Syntax Highlighting](#!/guide/dev_codesnippet-section-enabling-syntax-highlighting) section for more information.
 
 ## Changing Supported Languages
 
@@ -82,7 +82,7 @@ For more information on how to implement a custom highlighter check the [Code Sn
 
 ## Server-side Highlighter
 
-The Code Snippet plugin interface was designed with extensibility in mind. As a sample implementation the [GeSHi](http://qbnz.com/highlighter/) highlighter integration was created and is available as a separate [Code Snippet GeSHi](http://ckeditor.com/addon/codesnippetgeshi) plugin.
+The Code Snippet plugin interface was designed with extensibility in mind. As a sample implementation the [GeSHi](http://qbnz.com/highlighter/) highlighter integration was created and is available as a separate [Code Snippet GeSHi](https://ckeditor.com/cke4/addon/codesnippetgeshi) plugin.
 
 Full installation instructions can be found in the [Iserting Code Snippets Using GeSHi](#!/guide/dev_codesnippetgeshi) article.
 

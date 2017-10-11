@@ -135,12 +135,12 @@ In every test you can specify the list of plugins which will be loaded by using 
 
 Please note that some CKEditor plugins are needed for reasons that might not be immediately obvious, for example:
 
-* [IFrame Editing Area](http://ckeditor.com/addon/wysiwygarea) (`wysiwygarea`) &ndash; Skipping this plugin will prevent the editor from firing the [instanceReady](#!/api/CKEDITOR.editor-event-instanceReady) event and many others. However, this plugin is loaded automatically when using the Editor Bot.
-* [Editor Toolbar](http://ckeditor.com/addon/toolbar) (`toolbar`) &ndash; Needed for enabling features that rely on [Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf).
-* [Undo](http://ckeditor.com/addon/undo) (`undo`) &ndash; Needed to fire the [change](#!/api/CKEDITOR.editor-event-change) event.
-* [Basic Styles](http://ckeditor.com/addon/basicstyles) (`basicstyles`) &ndash; Needed to preserve basic text formatting in your test HTML, otherwise [Advanced Content Filter](#!/guide/dev_advanced_content_filter) will remove all `<strong>`, `<em>`, `<u>` tags and so on.
+* [IFrame Editing Area](https://ckeditor.com/cke4/addon/wysiwygarea) (`wysiwygarea`) &ndash; Skipping this plugin will prevent the editor from firing the [instanceReady](#!/api/CKEDITOR.editor-event-instanceReady) event and many others. However, this plugin is loaded automatically when using the Editor Bot.
+* [Editor Toolbar](https://ckeditor.com/cke4/addon/toolbar) (`toolbar`) &ndash; Needed for enabling features that rely on [Advanced Content Filter](#!/guide/plugin_sdk_integration_with_acf).
+* [Undo](https://ckeditor.com/cke4/addon/undo) (`undo`) &ndash; Needed to fire the [change](#!/api/CKEDITOR.editor-event-change) event.
+* [Basic Styles](https://ckeditor.com/cke4/addon/basicstyles) (`basicstyles`) &ndash; Needed to preserve basic text formatting in your test HTML, otherwise [Advanced Content Filter](#!/guide/dev_advanced_content_filter) will remove all `<strong>`, `<em>`, `<u>` tags and so on.
 
-If the editor behaves differently when testing and during development, try to add all plugins you use during the development (you can find such list in the [`config.js`](https://github.com/ckeditor/ckeditor-dev/blob/master/config.js) file) and then remove redundant ones. Please note that adding all existing CKEditor plugins might not be a good solution since, for example, the [BBCode plugin](http://ckeditor.com/addon/bbcode) will strip HTML in your output.
+If the editor behaves differently when testing and during development, try to add all plugins you use during the development (you can find such list in the [`config.js`](https://github.com/ckeditor/ckeditor-dev/blob/master/config.js) file) and then remove redundant ones. Please note that adding all existing CKEditor plugins might not be a good solution since, for example, the [BBCode plugin](https://ckeditor.com/cke4/addon/bbcode) will strip HTML in your output.
 
 ### Tagging Tests
 

@@ -11,7 +11,7 @@ A skin is an add-on for CKEditor that makes it possible to change the look and f
 
 ## The "Moono" Skin
 
-[Moono](http://ckeditor.com/addon/moono) is the default skin of CKEditor. It is the one included in the standard CKEditor distributions. It is actively maintained by the CKEditor core developers and should be used as the starting point for the creation and maintenance of custom skins.
+[Moono](https://ckeditor.com/cke4/addon/moono) is the default skin of CKEditor. It is the one included in the standard CKEditor distributions. It is actively maintained by the CKEditor core developers and should be used as the starting point for the creation and maintenance of custom skins.
 
 ## The Anatomy of a Skin
 

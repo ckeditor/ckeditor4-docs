@@ -9,7 +9,7 @@ For licensing, see LICENSE.md.
     This feature was introduced in <strong>CKEditor 4.6</strong>. It is provided through an optional plugin that is included in the Full preset available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
 
-The optional [Copy Formatting](http://ckeditor.com/addon/copyformatting) plugin provides the ability to easily copy text formatting from one place in the document and apply it to another.
+The optional [Copy Formatting](https://ckeditor.com/cke4/addon/copyformatting) plugin provides the ability to easily copy text formatting from one place in the document and apply it to another.
 
 When enabled, the plugin adds the **Copy Formatting** (<img src="guides/dev_copyformatting/copyformatting-button.png" alt="Copy Formatting toolbar button" style="vertical-align: bottom;">) toolbar button. To copy styles, place your cursor inside the text (or select a styled document fragment) and press the button or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut. Then place the cursor inside some word or select a part of the text to apply formatting to it. The copied formatting can also be applied by using the <kbd>Ctrl+Shift+V</kbd> keyboard shortcut.
 

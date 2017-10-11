@@ -127,11 +127,11 @@ The following features can be used by developers to ensure that content created 
 
 #### Accessibility Checker
 
-The innovative [Accessibility Checker](#!/guide/dev_accessibility_checker) tool lets you inspect the accessibility level of content created in the editor and fix reported issues, often fully automatically. It is a **must-have addon** for government institutions and companies that are often required by law to ensure the content they produce meets accessibility standards. See the [working demo](https://sdk.ckeditor.com/samples/accessibilitychecker.html) and get the plugin [here](http://ckeditor.com/addon/a11ychecker).
+The innovative [Accessibility Checker](#!/guide/dev_accessibility_checker) tool lets you inspect the accessibility level of content created in the editor and fix reported issues, often fully automatically. It is a **must-have addon** for government institutions and companies that are often required by law to ensure the content they produce meets accessibility standards. See the [working demo](https://sdk.ckeditor.com/samples/accessibilitychecker.html) and get the plugin [here](https://ckeditor.com/cke4/addon/a11ychecker).
 
 #### Setting Language of Parts for Editor Content
 
-The optional Language plugin, introduced in CKEditor 4.3, implements the [WCAG 3.1.2 Language of Parts](http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) specification. It lets you assign one of the pre-configured languages to a text selection. See the [working demo](https://sdk.ckeditor.com/samples/language.html) and get the plugin [here](http://ckeditor.com/addon/language).
+The optional Language plugin, introduced in CKEditor 4.3, implements the [WCAG 3.1.2 Language of Parts](http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) specification. It lets you assign one of the pre-configured languages to a text selection. See the [working demo](https://sdk.ckeditor.com/samples/language.html) and get the plugin [here](https://ckeditor.com/cke4/addon/language).
 
 ## Accessibility Features Demos
 

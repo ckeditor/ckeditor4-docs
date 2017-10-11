@@ -35,7 +35,7 @@ The code above creates the following UI elements in a sample dialog window tab.
 
 {@img dialog_01.png Sample dialog window tab containing two fields with default values}
 
-You can also customize existing dialog windows and give them default values. The following code sets the default **URL** field value for the [Link](http://ckeditor.com/addon/link) dialog window.
+You can also customize existing dialog windows and give them default values. The following code sets the default **URL** field value for the [Link](https://ckeditor.com/cke4/addon/link) dialog window.
 
 	CKEDITOR.on( 'dialogDefinition', function( ev ) {
 		// Take the dialog name and its definition from the event data.
@@ -70,7 +70,7 @@ If you want to change your CKEditor configuration to show a different tab on ope
 
 Firstly, you will need to know the names of the dialog window and the tab that you want to set as default, so use the [Developer Tools](#!/guide/dev_howtos_dialog_windows-section-how-do-i-learn-the-names-of-ckeditor-dialog-window-fields%3F) plugin to get these.
 
-Once you have the names you can add the following code into the page that contains your CKEditor instance. The example below sets the [Image Properties](http://ckeditor.com/addon/image) dialog window to open the **Link** tab by default.
+Once you have the names you can add the following code into the page that contains your CKEditor instance. The example below sets the [Image Properties](https://ckeditor.com/cke4/addon/image) dialog window to open the **Link** tab by default.
 
 	CKEDITOR.on('dialogDefinition', function( ev ) {
 		// Take the dialog window name and its definition from the event data.

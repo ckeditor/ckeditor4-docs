@@ -7,7 +7,7 @@ For licensing, see LICENSE.md.
 
 The look and feel of the CKEditor user interface can be adjusted to your taste and customized through skins. Elements like the toolbar, dialog windows, buttons, and even their icons, can be changed to match the style of your website or application.
 
-The default installation of CKEditor comes with the [Moono skin](http://ckeditor.com/addon/moono).
+The default installation of CKEditor comes with the [Moono skin](https://ckeditor.com/cke4/addon/moono).
 
 ## Where to Look for Skins?
 
@@ -25,7 +25,7 @@ The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page
 
 When you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with the selected skin included.
 
-When you install your custom build, you will see it uses the skin that you added (in this example: [Kama](http://ckeditor.com/addon/kama)).
+When you install your custom build, you will see it uses the skin that you added (in this example: [Kama](https://ckeditor.com/cke4/addon/kama)).
 
 <img src="guides/dev_skins/add_skin_ckbuilder_4.png" alt="A custom CKEditor build using the Kama skin" width="466" height="200">
 
@@ -49,7 +49,7 @@ Using CKBuilder is a recommended solution, however, if you have skins developed 
 
 2. **Copy** the skin files to the `skins` folder of your CKEditor installation. Each skin must be placed in a sub-folder that matches its "technical" name.
 
-	For example, the [Kama skin](http://ckeditor.com/addon/kama) would be installed into this folder: `<CKEditor folder>/skins/kama`.
+	For example, the [Kama skin](https://ckeditor.com/cke4/addon/kama) would be installed into this folder: `<CKEditor folder>/skins/kama`.
 
 3. **Enable the skin.** Use the {@link CKEDITOR.config#skin skin} setting to add the skin to your confiuration:
 

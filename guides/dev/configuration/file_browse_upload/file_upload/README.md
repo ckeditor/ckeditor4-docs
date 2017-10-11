@@ -7,7 +7,7 @@ For licensing, see LICENSE.md.
 
 <p class="requirements">
 	Uploading pasted and dragged images was introduced in <strong>CKEditor 4.5</strong>. It is provided through an optional
-	<a href="http://ckeditor.com/addon/uploadimage">Upload Image</a> plugin that is not included in the CKEditor presets available from
+	<a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugin that is not included in the CKEditor presets available from
 	the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a>
 	with <a href="http://ckeditor.com/builder">CKBuilder</a>.
 </p>
@@ -29,7 +29,7 @@ The sample below shows basic configuration code that can be used to configure pa
 	As a fallback solution, if CKEDITOR.config.uploadUrl is not set and CKEDITOR.config.filebrowserUploadUrl is provided for the File Browser plugin, the Upload Image plugin will try to use CKEDITOR.config.filebrowserUploadUrl instead and send the dragged and pasted images there.
 </p>
 
-It is also possible to set a specific URL for a specific upload plugin. For example if you want to use [Upload Image](http://ckeditor.com/addon/uploadimage), you can set CKEDITOR.config.imageUploadUrl which will be used instead of CKEDITOR.config.uploadUrl.
+It is also possible to set a specific URL for a specific upload plugin. For example if you want to use [Upload Image](https://ckeditor.com/cke4/addon/uploadimage), you can set CKEDITOR.config.imageUploadUrl which will be used instead of CKEDITOR.config.uploadUrl.
 
 ### Example &mdash; Setting Up Image Upload Plugin
 
@@ -44,7 +44,7 @@ To make uploading on drop or paste work you need a server-side application that 
 
 ### Server-Side Configuration
 
-The [Upload Image](http://ckeditor.com/addon/uploadimage) plugin uses a different API than the [File Browser](#!/guide/dev_file_browser_api) plugin and expects JSON responses.
+The [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin uses a different API than the [File Browser](#!/guide/dev_file_browser_api) plugin and expects JSON responses.
 
 #### Request
 
@@ -208,7 +208,7 @@ CKEditor can be easily integrated with [CKFinder](http://cksource.com/ckfinder),
 
 #### Example &mdash; Custom uploadUrl for CKFinder
 
-As mentioned above, if CKEDITOR.config.uploadUrl is not set, CKEDITOR.config.filebrowserUploadUrl is used by the [Upload Image](http://ckeditor.com/addon/uploadimage) plugin. As a result, for CKFinder there is no need to specify CKEDITOR.config.uploadUrl separately.
+As mentioned above, if CKEDITOR.config.uploadUrl is not set, CKEDITOR.config.filebrowserUploadUrl is used by the [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin. As a result, for CKFinder there is no need to specify CKEDITOR.config.uploadUrl separately.
 
 If for any reason you need to do this, note that the path to the connector must include `responseType=json` in the query string to make CKFinder return a response in the proper JSON format.
 

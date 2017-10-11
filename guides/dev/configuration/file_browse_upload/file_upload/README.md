@@ -8,7 +8,7 @@ For licensing, see LICENSE.md.
 <p class="requirements">
 	Uploading pasted and dragged images was introduced in <strong>CKEditor 4.5</strong>. It is provided through an optional
 	<a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugin that is not included in the CKEditor presets available from
-	the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a>
+	the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a>
 	with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 

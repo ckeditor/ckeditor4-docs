@@ -9,9 +9,9 @@ The aim of this article is to get you up and running with CKEditor in two minute
 
 ## Download
 
-Visit the official [CKEditor Download](http://ckeditor.com/download) site. For a production site we recommend you choose the default **Standard Package** and click the **Download CKEditor** button to get the `.zip` installation file. If you want to try out more editor features, you can download the **Full Package** instead.
+Visit the official [CKEditor Download](https://ckeditor.com/ckeditor-4/download/) site. For a production site we recommend you choose the default **Standard Package** and click the **Download CKEditor** button to get the `.zip` installation file. If you want to try out more editor features, you can download the **Full Package** instead.
 
-<a href="http://ckeditor.com/download"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="932" height="502"></a>
+<a href="https://ckeditor.com/ckeditor-4/download/"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="932" height="502"></a>
 
 ## Unpacking
 

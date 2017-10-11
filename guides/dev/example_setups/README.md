@@ -14,7 +14,7 @@ The Article Editor demo showcases an editor designed mainly for writing web text
   Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
 </p>
 
-The Article Editor is based on the [Standard package](http://ckeditor.com/download) with a few modifications:
+The Article Editor is based on the [Standard package](https://ckeditor.com/ckeditor-4/download/) with a few modifications:
 
  * Added five additional plugins:
    * [Auto Embed](https://ckeditor.com/cke4/addon/autoembed) and [Semantic Media Embed](https://ckeditor.com/cke4/addon/embedsemantic) for inserting [embedded media resources](#!/guide/dev_media_embed) like videos (e.g. from YouTube, Vimeo), tweets or slideshows.
@@ -35,7 +35,7 @@ The Document Editor demo showcases a more robust editor designed for creating do
   Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
 </p>
 
-The Document Editor is based on the [Full package](http://ckeditor.com/download) with a few modifications:
+The Document Editor is based on the [Full package](https://ckeditor.com/ckeditor-4/download/) with a few modifications:
 
  * Added three additional plugins:
    * [Table Resize](https://ckeditor.com/cke4/addon/tableresize) to enable [table columns resizing](#!/guide/dev_table-section-table-resizing-with-your-mouse).
@@ -71,7 +71,7 @@ The Developer Site Editor demo showcases a sample editor for technical websites.
   Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
 </p>
 
-The Developer Site Editor is based on the [Standard package](http://ckeditor.com/download) with a few modifications:
+The Developer Site Editor is based on the [Standard package](https://ckeditor.com/ckeditor-4/download/) with a few modifications:
 
  * Added five additional plugins:
    * [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) and [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax) for inserting code snippets and mathematical formulas.
@@ -124,7 +124,7 @@ in a headache when trying to add plugin A, that requires plugin B, that requires
 
 In a brief summary it involves the following steps:
 <ol>
-    <li>Downloading the predefined package (Basic/Standard/Full) from the <a href="http://ckeditor.com/download">Download page</a>.</li>
+    <li>Downloading the predefined package (Basic/Standard/Full) from the <a href="https://ckeditor.com/ckeditor-4/download/">Download page</a>.</li>
     <li>Downloading additional plugins manually from the <a href="http://ckeditor.com/addons/plugins/all">Add-ons Repository</a>.</li>
     <li>Downloading plugins required by additional plugins manually.</li>
     <li>Enabling additional plugins manually through CKEDITOR.config.extraPlugins.</li>

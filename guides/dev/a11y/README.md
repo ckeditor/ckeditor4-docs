@@ -16,7 +16,7 @@ It also includes a number of features that make it easy to use with assistive te
 
 ## Background
 
-Accessibility support in CKEditor goes back to early CKEditor 3.x releases; its most important foundation was work done in strict cooperation with IBM accessibility experts already in 2010, for [CKEditor 3.2](http://ckeditor.com/blog/CKEditor-3.2-released). Our unique approach has always focused on providing accessible solutions that not only satisfy the requirements defined in the standards but also are [usable in practical terms](http://ckeditor.com/blog/CKEditor-WAI-ARIA-Usable-Accessibility). We also strive to evoke accessibility-friendly approach in our customers by stressing out that [good accessibility support increases business opportunities](http://ckeditor.com/blog/Commercial-Benefits-of-Accessibility) and has lots of commercial benefits.
+Accessibility support in CKEditor goes back to early CKEditor 3.x releases; its most important foundation was work done in strict cooperation with IBM accessibility experts already in 2010, for [CKEditor 3.2](https://ckeditor.com/blog/CKEditor-3.2-released). Our unique approach has always focused on providing accessible solutions that not only satisfy the requirements defined in the standards but also are [usable in practical terms](https://ckeditor.com/blog/CKEditor-WAI-ARIA-Usable-Accessibility). We also strive to evoke accessibility-friendly approach in our customers by stressing out that [good accessibility support increases business opportunities](https://ckeditor.com/blog/Commercial-Benefits-of-Accessibility) and has lots of commercial benefits.
 
 ## Supported Platforms
 

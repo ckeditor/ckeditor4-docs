@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # Basic Text Styles: Bold, Italic and More
 
 <p class="requirements">
-	This feature is provided through a plugin that is included in all official CKEditor distributions (Basic, Standard, Full) available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
+	This feature is provided through a plugin that is included in all official CKEditor distributions (Basic, Standard, Full) available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
 </p>
 
 The [Basic Styles](https://ckeditor.com/cke4/addon/basicstyles) plugin provides the ability to add some basic text formatting to your document. When enabled, it adds the **Bold**, **Italic**, **Underline**, **Strikethrough**, **Subscript** and **Superscript** toolbar buttons that apply these styles. If you want to quickly [remove basic styles](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.

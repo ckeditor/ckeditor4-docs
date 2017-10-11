@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # BBCode Editing
 
 <p class="requirements">
-	This feature is provided through an optional plugin that is not included in the CKEditor distribution packages available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+	This feature is provided through an optional plugin that is not included in the CKEditor distribution packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
 [BBCode](http://en.wikipedia.org/wiki/BBCode) is a lightweight markup language which is used in some message board engines. An optional CKEditor plugin called [BBCode Output Format](https://ckeditor.com/cke4/addon/bbcode) configures CKEditor to output BBCode format instead of (X)HTML. It also customizes some editor settings to better match the BBCode environment.

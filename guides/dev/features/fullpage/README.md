@@ -10,7 +10,7 @@ For licensing, see LICENSE.md.
 		Both full page editing and the Documentation Properties plugin are only supported for <a href="#!/guide/dev_framed">classic editor</a> with <a href="#!/guide/dev_uitypes-section-fixed-user-interface">fixed user interface</a>.
 	</p>
 	<p>
-	Some aspects of this feature are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+	Some aspects of this feature are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 	</p>
 </div>
 

@@ -30,7 +30,7 @@ If you were using CKEditor 3 in the past, you can either try to create a CKEdito
 To upgrade CKEditor 3 to CKEditor 4, proceed as follows:
 
 1. **Rename** your existing editor folder to a backup folder, for example `ckeditor_old`.
-2. **Download** the latest version from the official [CKEditor Download](http://ckeditor.com/download) site.
+2. **Download** the latest version from the official [CKEditor Download](https://ckeditor.com/ckeditor-4/download/) site.
 	* The easiest way is to choose one of the pre-defined presets like Standard or Full.
 	* If you want to include any additional plugins, use the [CKBuilder](https://ckeditor.com/cke4/builder) service to create a custom build.
 3. **Extract** (decompress) the downloaded archive to the original editor directory, for example `ckeditor`.

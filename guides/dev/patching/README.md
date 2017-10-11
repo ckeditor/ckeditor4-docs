@@ -30,7 +30,7 @@ It is unlikely that you can apply a patch to the package that you already run on
 
 ### Release Version
 
-The release version is a CKEditor package that was processed by [CKBuilder](#!/guide/dev_build-section-about-ckbuilder-%28command-line%29) in order to reduce the number of files and minify the resulting code. The release version is offered for download on [CKEditor download page](http://ckeditor.com/download) and also by the [CKEditor online builder](https://ckeditor.com/cke4/builder).
+The release version is a CKEditor package that was processed by [CKBuilder](#!/guide/dev_build-section-about-ckbuilder-%28command-line%29) in order to reduce the number of files and minify the resulting code. The release version is offered for download on [CKEditor download page](https://ckeditor.com/ckeditor-4/download/) and also by the [CKEditor online builder](https://ckeditor.com/cke4/builder).
 
 ### Source Version
 
@@ -108,7 +108,7 @@ Suppose you are interested in porting a patch for the following problem:
 
     Remove Format button did not remove the <cite> element in versions prior to 4.4.5.
 
-By looking into the [changelog](http://ckeditor.com/whatsnew) you find a link to [ticket #12311](http://dev.ckeditor.com/ticket/12311). The ticket not only explains what the problem was and how to reproduce it, but at the end it also contains a link to a changeset where the code fix was introduced: [http://github.com/ckeditor/ckeditor-dev/commit/b373ace](http://github.com/ckeditor/ckeditor-dev/commit/b373ace)
+By looking into the [changelog](https://ckeditor.com/cke4/release-notes) you find a link to [ticket #12311](http://dev.ckeditor.com/ticket/12311). The ticket not only explains what the problem was and how to reproduce it, but at the end it also contains a link to a changeset where the code fix was introduced: [http://github.com/ckeditor/ckeditor-dev/commit/b373ace](http://github.com/ckeditor/ckeditor-dev/commit/b373ace)
 
 The hash of the changeset is `b373ace`.
 

@@ -71,7 +71,7 @@ The [Keyboard Shortcuts](#!/guide/dev_shortcuts) article describes available key
 
 ## How Do I Configure CKEditor to Use the `Arrow` Keys to Navigate Between All Toolbar Buttons?
 
-In [CKEditor 3.6](http://ckeditor.com/blog/CKEditor_3.6_released) the concept of **toolbar button groups** was introduced to enable faster and more efficient navigation using the keyboard or assistive devices. In all previous versions of the editor, the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keys had the same effect as using the <kbd>Right Arrow</kbd> and <kbd>Left Arrow</kbd> keys and were used to cycle between consecutive toolbar buttons.
+In [CKEditor 3.6](https://ckeditor.com/blog/CKEditor_3.6_released) the concept of **toolbar button groups** was introduced to enable faster and more efficient navigation using the keyboard or assistive devices. In all previous versions of the editor, the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keys had the same effect as using the <kbd>Right Arrow</kbd> and <kbd>Left Arrow</kbd> keys and were used to cycle between consecutive toolbar buttons.
 
 Since CKEditor 3.6, <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> navigate between toolbar button groups, while the <kbd>Arrow</kbd> keys are used to cycle between the buttons within a group.
 

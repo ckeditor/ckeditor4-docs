@@ -8,13 +8,13 @@ For licensing, see LICENSE.md.
 This article describes the steps you need to take when you want to upgrade your CKEditor 4.x installation to the latest version.
 
 <p class="tip">
-	<strong>The latest CKEditor is always the greatest CKEditor.</strong> New releases add cool new features, support for the latest browser versions, and bug fixes. The changelog is published <a href="http://ckeditor.com/whatsnew">here</a> and you can also learn about new releases by following our <a href="http://ckeditor.com/blog-list">blog</a>, <a href="http://www.facebook.com/ckeditor">Facebook</a>, <a href="https://plus.google.com/+ckeditor/posts">Google+</a>, or <a href="http://twitter.com/ckeditor">Twitter</a> pages.
+	<strong>The latest CKEditor is always the greatest CKEditor.</strong> New releases add cool new features, support for the latest browser versions, and bug fixes. The changelog is published <a href="https://ckeditor.com/cke4/release-notes">here</a> and you can also learn about new releases by following our <a href="https://ckeditor.com/blog/">blog</a>, <a href="http://www.facebook.com/ckeditor">Facebook</a>, <a href="https://plus.google.com/+ckeditor/posts">Google+</a>, or <a href="http://twitter.com/ckeditor">Twitter</a> pages.
 </p>
 
 To upgrade CKEditor, proceed as follows:
 
 1. **Rename** your existing editor folder to a backup folder, for example `ckeditor_old`.
-2. **Download** the latest version from the official [CKEditor Download](http://ckeditor.com/download) site.
+2. **Download** the latest version from the official [CKEditor Download](https://ckeditor.com/ckeditor-4/download/) site.
 	* If you are using one of the pre-defined presets like Standard or Full, download the same one.
 	* If you created a custom CKEditor build, you have a few options, as described in your backed-up `build-config.js` file.
 		* You can use the unique link to download the updated version of your custom build using the latest editor release.

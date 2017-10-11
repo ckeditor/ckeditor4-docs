@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # Using Placeholders
 
 <p class="requirements">
-	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_widget_installation">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
 The optional [Placeholder](https://ckeditor.com/cke4/addon/placeholder) plugin allows you to create and modify read-only elements that are only editable through the **Placeholder Properties** dialog window. This feature is useful in all sorts of templates and texts that are repeated in numerous places whose format should not be modified.

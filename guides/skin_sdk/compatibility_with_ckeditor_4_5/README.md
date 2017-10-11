@@ -4,7 +4,7 @@
 	The features described in this article were introduced in <strong>CKEditor 4.5</strong>.
 </p>
 
-Two of the new features introduced in [CKEditor 4.5](http://ckeditor.com/blog/CKEditor-4.4-Released) require additional styles to be added to the skin's CSS. These two features are:
+Two of the new features introduced in [CKEditor 4.5](https://ckeditor.com/blog/CKEditor-4.4-Released) require additional styles to be added to the skin's CSS. These two features are:
 
 * [Notifications](http://docs.ckeditor.com/#!/guide/dev_notifications)
 * [Busy dialog state](http://docs.ckeditor.com/#!/api/CKEDITOR.dialog-method-setState).

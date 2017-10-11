@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # Clipboard Integration
 
 <p class="requirements">
-	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a> plugin that is included in all CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site.
+	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a> plugin that is included in all CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </p>
 
 One of the most important CKEditor features is the integration with the operating system's clipboard. The main role of this feature is to intercept any content that is being pasted, dropped, cut, copied or dragged from or to the editor. This allows to apply certain rules to this content, for instance with [Advanced Content Filter](#!/guide/dev_advanced_content_filter).

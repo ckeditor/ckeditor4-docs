@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # CKEditor Error Code Reference
 
 <p class="requirements">
-	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="http://ckeditor.com/download">Download</a> site.
+	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </p>
 
 This article contains the list of CKEditor error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.

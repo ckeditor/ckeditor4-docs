@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # Notifications
 
 <p class="requirements">
-	This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">need to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+	This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_plugins">need to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
 The optional [Notification](https://ckeditor.com/cke4/addon/notification) and [Notification Aggregator](https://ckeditor.com/cke4/addon/notificationaggregator) plugins introduced in CKEditor 4.5 make it possible to show the user information about the status of selected operations directly in the editor.

@@ -15,7 +15,7 @@ CKEditor should be [upgraded frequently](#!/guide/dev_upgrade) as bug fixes and 
 If you modified any distribution files to add your custom configuration, pay special attention to not overwrite your content (including `config.js`, `contents.css`, `styles.js` and custom template files) when upgrading.
 
 ### Use minified versions
-You should always use minified CKEditor versions ([official releases](http://ckeditor.com/download), [optimized](https://ckeditor.com/cke4/builder) [builds](#!/guide/dev_build)) in production environments. The [development, source code version](#!/guide/dev_source) is only suitable for tests and development.
+You should always use minified CKEditor versions ([official releases](https://ckeditor.com/ckeditor-4/download/), [optimized](https://ckeditor.com/cke4/builder) [builds](#!/guide/dev_build)) in production environments. The [development, source code version](#!/guide/dev_source) is only suitable for tests and development.
 
 Additionally, it is good to enable `gzip` compression in your server settings.
 

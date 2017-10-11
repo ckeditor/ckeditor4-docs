@@ -11,7 +11,7 @@ one of the most common requirements.
 
 <div class="tip">
 	The <strong>most recommended approach to adjusting the editor</strong> to your needs is to start from creating a
-	<a href="http://ckeditor.com/builder">custom build</a>, removing unwanted features before they even
+	<a href="https://ckeditor.com/cke4/builder">custom build</a>, removing unwanted features before they even
 	make it to your toolbar. It is a bad practice to download the Full package and then
 	<a href="#!/api/CKEDITOR.config-cfg-removePlugins">remove plugins</a> or
 	<a href="#!/api/CKEDITOR.config-cfg-removeButtons">buttons</a> in your configuration.

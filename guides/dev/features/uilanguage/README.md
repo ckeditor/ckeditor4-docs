@@ -27,7 +27,7 @@ This will cause CKEditor to be displayed in German to all users for whom a match
 
 The developer is also able to force CKEditor to always use just one pre-defined UI localization. This will mean that no matter what locale settings the user browsers and operating systems use, CKEditor will always be displayed in the language set by the developer.
 
-This feature may come in handy for all homogeneous environments where the entire user base speaks the same language. The developer will then be able to create a [custom build](http://ckeditor.com/builder) stripped of all redundant language files except for the desired localization.
+This feature may come in handy for all homogeneous environments where the entire user base speaks the same language. The developer will then be able to create a [custom build](https://ckeditor.com/cke4/builder) stripped of all redundant language files except for the desired localization.
 
 If you want to define the language that will override all user settings, use the CKEDITOR.config.language configuration setting.
 

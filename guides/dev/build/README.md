@@ -53,7 +53,7 @@ The builder will be executed and the resulting build will be created in the `dev
 
 ## About CKBuilder (Command Line)
 
-The building process is handled by the command line version of [CKBuilder](http://ckeditor.com/builder). It is a powerful application that makes several enhancements to the source code: it loads the configuration file, resolves plugin dependencies, merges and minifies files, creates icon strips, and performs many other build-related tasks.
+The building process is handled by the command line version of [CKBuilder](https://ckeditor.com/cke4/builder). It is a powerful application that makes several enhancements to the source code: it loads the configuration file, resolves plugin dependencies, merges and minifies files, creates icon strips, and performs many other build-related tasks.
 
 For the first run, `build.sh` will need to [download CKBuilder](http://download.cksource.com/CKBuilder/) and copy it into the `dev/builder/ckbuilder/<ckbuilder version>` folder, so an Internet connection is required. Once the file is available, no more downloads are necessary (though if possible, the script will try to perform an update on consecutive runs).
 

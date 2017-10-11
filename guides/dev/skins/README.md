@@ -19,7 +19,7 @@ If you found an interesting skin in the Add-ons Repository, you can easily add i
 
 ### Through CKBuilder
 
-The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page and select the skin that you wish to use in the **Available Skins** section.
+The easiest method is to visit the [CKBuilder](https://ckeditor.com/cke4/builder) page and select the skin that you wish to use in the **Available Skins** section.
 
 <img src="guides/dev_skins/add_skin_ckbuilder_3.png" alt="Available Skins lists in CKBuilder" width="779" height="133">
 

@@ -19,7 +19,7 @@ If you found some interesting plugins in the Add-ons Repository, you can easily 
 
 ### Through CKBuilder
 
-The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page and find the plugins that you wish to have in the **Available Plugins** list on the right.
+The easiest method is to visit the [CKBuilder](https://ckeditor.com/cke4/builder) page and find the plugins that you wish to have in the **Available Plugins** list on the right.
 
 <img src="guides/dev_plugins/add_plugin_ckbuilder_3.png" alt="Selected Plugins and Available Plugins lists in CKBuilder" width="778" height="494">
 

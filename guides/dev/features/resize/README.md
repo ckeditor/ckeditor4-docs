@@ -7,7 +7,7 @@ For licensing, see LICENSE.md.
 
 <div class="requirements">
 	<p>
-		This feature is provided through the <a href="https://ckeditor.com/cke4/addon/resize">Editor Resize</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+		This feature is provided through the <a href="https://ckeditor.com/cke4/addon/resize">Editor Resize</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 	</p>
 	<p>
 		Width and height manipulation is only supported for <a href="#!/guide/dev_framed">classic editor</a> and does not work in <a href="#!/guide/dev_inline">inline editor</a>.

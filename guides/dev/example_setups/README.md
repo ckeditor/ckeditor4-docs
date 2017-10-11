@@ -166,7 +166,7 @@ This is the easiest way of using CKEditor if additional third-party plugins are 
 
 ### Using Builder (Recommended)
 
-Using [Builder](http://ckeditor.com/builder) to build a bundle with all required plugins is highly recommended in case of using customized packages, especially those with additional third-party plugins.
+Using [Builder](https://ckeditor.com/cke4/builder) to build a bundle with all required plugins is highly recommended in case of using customized packages, especially those with additional third-party plugins.
 
 Refer to the [Installing Plugins &ndash; Online Builder Installation](#!/guide/dev_plugins-section-through-ckbuilder) article for information about building a custom editor package.
 
@@ -175,7 +175,7 @@ Refer to the [Installing Plugins &ndash; Online Builder Installation](#!/guide/d
 <tr><th>Plugin installation complexity</th><td style="width:60px">Low</td>
 <td>As simple as selecting additional plugins from the list of all available plugins.</td></tr>
 <tr><th>Toolbar configuration complexity</th><td>Low</td><td>The toolbar configurator is included in the downloaded CKEditor package and is aware of all included plugins.</td></tr>
-<tr><th>Complexity of future upgrades</th><td>Low</td><td>As easy as uploading the <code>build-config.js</code> file to the <a href="http://ckeditor.com/builder">Online Builder</a> and regenerating the package.</td></tr>
+<tr><th>Complexity of future upgrades</th><td>Low</td><td>As easy as uploading the <code>build-config.js</code> file to the <a href="https://ckeditor.com/cke4/builder">Online Builder</a> and regenerating the package.</td></tr>
 <tr><th>Number of files requested by the browser</th><td>Low</td><td>Plugins are bundled into a single <code>ckeditor.js</code> file. Icons are merged into a sprite. Language files are merged.</td></tr>
 <tr><th>Performance</th><td>High</td><td>The only problem might be in slow networks where CKEditor is hosted and/or in a misconfigured server without file compression enabled. Such setup would influence not only CKEditor but would also slow down the whole web application.</td></tr>
 </table>

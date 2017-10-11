@@ -33,7 +33,7 @@ If you, however, want to disable some functionality that comes from a CKEditor p
 	// Remove multiple plugins.
 	config.removePlugins = 'elementspath,save,font';
 
-Do remember to use the [CKBuilder online service](http://ckeditor.com/builder) to download a truly customized version of CKEditor!
+Do remember to use the [CKBuilder online service](https://ckeditor.com/cke4/builder) to download a truly customized version of CKEditor!
 
 ## How Do I Find Code Examples Showing CKEditor Customization?
 

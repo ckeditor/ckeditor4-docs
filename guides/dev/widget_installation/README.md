@@ -6,7 +6,7 @@ For licensing, see LICENSE.md.
 # Installing Widgets
 
 <p class="requirements">
-	This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">need to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
 ## Online Builder Installation
@@ -15,7 +15,7 @@ All widget plugins are optional. If you want to add them to your CKEditor 4.3+ b
 
 ### Through CKBuilder
 
-The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page and find the widget plugins in the **Available Plugins** list on the right. The following widgets were introduced in CKEditor 4.3 and above:
+The easiest method is to visit the [CKBuilder](https://ckeditor.com/cke4/builder) page and find the widget plugins in the **Available Plugins** list on the right. The following widgets were introduced in CKEditor 4.3 and above:
 
 * **[Enhanced Image](https://ckeditor.com/cke4/addon/image2)** &ndash; A plugin that lets you add captioned images with "click and drag" resizing.
 * **[Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax)** &ndash; A plugin that lets you add mathematical formulas written in TeX.

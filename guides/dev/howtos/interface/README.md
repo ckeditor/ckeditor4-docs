@@ -13,7 +13,7 @@ The **elements path** displays information about the HTML elements of the docume
 
 {@img elementspath_03.png The elements path of CKEditor}
 
-If you want to get rid of it, it is most recommended that you remove the [Elements Path](https://ckeditor.com/cke4/addon/elementspath) plugin in [CKBuilder](http://ckeditor.com/builder) when creating your custom build.
+If you want to get rid of it, it is most recommended that you remove the [Elements Path](https://ckeditor.com/cke4/addon/elementspath) plugin in [CKBuilder](https://ckeditor.com/cke4/builder) when creating your custom build.
 
 Alternatively, you can use the CKEDITOR.config.removePlugins setting to remove the plugin:
 

@@ -29,7 +29,7 @@ You can add support for notifications to your skin in these three easy steps.
 
 3. Modify the `notification.css` file to match your skin's styles.
 
-To test it, you will need to [add the Notification plugin to your build](#!/guide/dev_plugins), or simply [download this package](http://ckeditor.com/builder/download/ee8ec0f757d5c15bbbb154f30151ea7c) which already contains this plugin and [install your skin in it](#!/guide/skin_sdk_setup). Then, open the `samples/index.html` file in your browser and call the following code to open a few notifications:
+To test it, you will need to [add the Notification plugin to your build](#!/guide/dev_plugins), or simply [download this package](https://ckeditor.com/cke4/builder/download/ee8ec0f757d5c15bbbb154f30151ea7c) which already contains this plugin and [install your skin in it](#!/guide/skin_sdk_setup). Then, open the `samples/index.html` file in your browser and call the following code to open a few notifications:
 
 	var editor = CKEDITOR.instances.editor;
 	editor.showNotification( 'Task started!' );

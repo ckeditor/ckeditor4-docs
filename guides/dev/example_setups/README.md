@@ -4,7 +4,7 @@ For licensing, see LICENSE.md.
 -->
 # Example CKEditor Setups
 
-This article is a detailed explanation of sample editor configurations shown on the [CKEditor Homepage](https://ckeditor.com/ckeditor-4/).
+This article is a detailed explanation of sample editor configurations shown on the [CKEditor 4 Homepage](https://ckeditor.com/ckeditor-4/).
 
 ## Article Editor
 
@@ -21,7 +21,7 @@ The Article Editor is based on the [Standard package](https://ckeditor.com/ckedi
    * [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to provide [captioned images](#!/guide/dev_captionedimage).
    * [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) and [Upload File](https://ckeditor.com/cke4/addon/uploadfile) to support [file uploads via drag&drop and pasting](#!/guide/dev_drop_paste) images from clipboard.
  * Adjusted the [toolbar configuration](#!/guide/dev_toolbar) to display buttons in a single row.
- * Adjusted [content CSS styles](#!/guide/dev_styles), including usage of Roboto font from [Google Fonts](https://developers.google.com/fonts/docs/getting_started).
+ * Adjusted [content CSS styles](#!/guide/dev_styles), including usage of [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) font from [Google Fonts](https://developers.google.com/fonts/docs/getting_started).
 
 <div class="responsive">
 {@img editor1.png Article Editor}
@@ -54,47 +54,13 @@ The Document Editor is based on the [Full package](https://ckeditor.com/ckeditor
 The Inline Editor demo showcases [inline editing](#!/guide/dev_inline) that allows you to edit any element on the page in-place.
 
 <p class="tip">
-  Visit the <a href="https://sdk.ckeditor.com/samples/inline.html">CKEditor SDK</a> website to try out this configuration.
+  Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
 </p>
 
 Inline editor provides a real WYSIWYG experience "out of the box" because unlike in [classic editor](#!/guide/dev_framed), there is no `<iframe>` element surrounding the editing area. The CSS styles used for editor content are exactly the same as on the target page where the content is rendered.
 
 <div class="responsive">
 {@img editor3.png Inline Editor}
-</div>
-
-## Developer Site Editor
-
-The Developer Site Editor demo showcases a sample editor for technical websites. The most interesting features presented in this configuration are [Code Snippets](#!/guide/dev_codesnippet) and [Mathematical Formulas](#!/guide/dev_mathjax). Both plugins support independent blocks of content rendered with the help of external JavaScript libraries.
-
-<p class="tip">
-  Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
-</p>
-
-The Developer Site Editor is based on the [Standard package](https://ckeditor.com/ckeditor-4/download/) with a few modifications:
-
- * Added five additional plugins:
-   * [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) and [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax) for inserting code snippets and mathematical formulas.
-   * [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to provide [captioned images](#!/guide/dev_captionedimage).
-   * [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) and [Upload File](https://ckeditor.com/cke4/addon/uploadfile) to support [file uploads via drag&drop and pasting](#!/guide/dev_drop_paste) images from clipboard.
- * Adjusted the [toolbar configuration](#!/guide/dev_toolbar) to display buttons in a single row and removed a few redundant buttons.
-
-<div class="responsive">
-{@img editor4.png Developer Site Editor}
-</div>
-
-## Drag & Drop
-
-The Drag & Drop demo showcases possible usage of CKEditor interface for handling drag and drop operations.
-
-<p class="tip">
-  Visit the <a href="https://sdk.ckeditor.com/samples/draganddrop.html">CKEditor SDK</a> website to try out this configuration.
-</p>
-
-The Drag & Drop sample allows you to drag contacts from the list on the right-hand side to the inline editor on the left-hand side. The contacts are inserted into the editor as custom [widgets](#!/guide/dev_widgets) representing the h-card microformat.
-
-<div class="responsive">
-{@img editor5.png Drag &amp; Drop}
 </div>
 
 ## Accessibility Checker

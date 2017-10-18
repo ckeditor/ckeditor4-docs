@@ -52,6 +52,7 @@ Every issue may be marked with the following labels:
     * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">type:bug</span> &ndash; A bug.
     * <span style="background-color:#1d76db;color:#FFF;padding:0 3px 0 3px">type:feature</span> &ndash; A feature request.
     * <span style="background-color:#fbca04;padding:0 3px 0 3px">type:task</span>&ndash; Any other issue (refactoring, typo fix, etc).
+    * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">type:failingtest</span> &ndash; A failing test.
 * Resolution labels &mdash; how and why the issue was resolved:
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:duplicate</span> &ndash; A duplicate of an already reported issue.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:expired</span> &ndash; Issue reporter did not provide enough information to reproduce the issue for at least 2 weeks.

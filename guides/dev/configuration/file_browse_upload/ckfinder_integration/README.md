@@ -120,4 +120,4 @@ For more information on integrating CKEditor with a file manager refer to the fo
 * [Advanced File Manager Configuration](#!/guide/dev_file_manager_configuration)
 * [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)
 * [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
-* [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
+* [Uploading Pasted and Dropped Files](#!/guide/dev_file_upload)

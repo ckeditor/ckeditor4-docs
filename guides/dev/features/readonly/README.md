@@ -1,11 +1,11 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Read-Only Mode
 
-CKEditor API makes it possible to **render the editor content read-only** (and thus impossible for the user to edit). Some editor features that will not cause the user to modify the content will still be available, though. This includes, for example, the view of the content source code or features such as preview and editor interface maximization within the browser window. 
+CKEditor API makes it possible to **render the editor content read-only** (and thus impossible for the user to edit). Some editor features that will not cause the user to modify the content will still be available, though. This includes, for example, the view of the content source code or features such as preview and editor interface maximization within the browser window.
 
 The most crucial element of the API is the [setReadOnly()](#!/api/CKEDITOR.editor-method-setReadOnly) method which puts the editor into the read-only state and restores it to the editable state.
 
@@ -20,9 +20,9 @@ This is what CKEditor looks like when it is in read-only mode.
 CKEditor can be configured to open in the read-only mode on startup by setting the CKEDITOR.config.readOnly configuration option to `true`. For example:
 
     config.readOnly = true;
-    
+
 The same can be achieved by setting the `disabled` attribute for the `<textarea>` element that CKEditor replaces.
 
 ## Read-Only Mode Demo
 
-See also the [working "Read-Only Mode" sample](http://sdk.ckeditor.com/samples/readonly.html) that showcases toggling between the read-only and editable mode.
+See also the [working "Read-Only Mode" sample](https://sdk.ckeditor.com/samples/readonly.html) that showcases toggling between the read-only and editable mode.

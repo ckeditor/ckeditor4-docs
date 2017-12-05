@@ -1,15 +1,15 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Automatic Editor Height Adjustment to Content
 
 <p class="requirements">
-	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
-The optional [Auto Grow](http://ckeditor.com/addon/autogrow) plugin makes it possible to configure CKEditor to automatically expand and shrink vertically depending on the amount and size of content entered in its editing area.
+The optional [Auto Grow](https://ckeditor.com/cke4/addon/autogrow) plugin makes it possible to configure CKEditor to automatically expand and shrink vertically depending on the amount and size of content entered in its editing area.
 
 ## Minimum and Maximum Height
 
@@ -37,7 +37,7 @@ When even more content is added, the editor will expand until it reaches the hei
 {@img autogrow_03.png}
 
 At the same time, when you start deleting the content that you have just entered, you will see that the editor starts shrinking until it reaches the defined minimum auto grow height of 250 pixels.
-    
+
 ## Height Adjustment on Startup
 
 By default, the editor with the Auto Grow feature enabled will adjust its height once it gets into focus, so the page that includes it will be partly redrawn. You can, however, prevent this behavior by using the CKEDITOR.config.autoGrow_onStartup option to make the editor grow the moment it is created, i.e. on page startup.
@@ -54,9 +54,9 @@ An additional CKEDITOR.config.autoGrow_bottomSpace option lets you insert some e
 
 With this setting in place, the 50-pixel-high space below the content will always be preserved. This is visible in the sample as well as the second image above.
 
-## Auto Grow Demo 
+## Auto Grow Demo
 
-See the [working "Automatic Editor Height Adjustment to Content" sample](http://sdk.ckeditor.com/samples/autogrow.html) that shows how the editor can automatically expand and shrink vertically to fit the content.
+See the [working "Automatic Editor Height Adjustment to Content" sample](https://sdk.ckeditor.com/samples/autogrow.html) that shows how the editor can automatically expand and shrink vertically to fit the content.
 
 ## Related Features
 

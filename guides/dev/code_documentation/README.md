@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -9,7 +9,7 @@ Starting from version 4 CKEditor uses a customized version of [JSDuck](https://g
 
 JSDuck's comment format differs from JSDoc's and both generators have different feature lists. Thus, with CKEditor 4 release, the entire source code documentation was reformatted in a new, consistent way.
 
-The resulting CKEditor API documentation is always available at <http://docs.ckeditor.com/#!/api>.
+The resulting CKEditor API documentation is always available at <https://docs.ckeditor.com/ckeditor4/docs/#!/api>.
 
 ## Useful Links ##
 
@@ -18,7 +18,7 @@ The resulting CKEditor API documentation is always available at <http://docs.cke
 * [JSDuck Wiki](https://github.com/senchalabs/jsduck/wiki/Guide)
 * [Tags list](https://github.com/senchalabs/jsduck/wiki/@class)
 * [Markdown format - basics](http://daringfireball.net/projects/markdown/basics)
-* [CKEditor API documentation](http://docs.ckeditor.com/#!/api)
+* [CKEditor API documentation](#!/api)
 
 ## JSDuck vs JSDoc &mdash; Important Differences ##
 
@@ -40,7 +40,7 @@ The resulting CKEditor API documentation is always available at <http://docs.cke
 The `@license` and `@fileOverview` tags are legacy comments that will not be parsed by JSDuck.
 
 	/**
-	 * @license Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+	 * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 	 * For licensing, see LICENSE.md or http://ckeditor.com/license
 	 */
 
@@ -126,7 +126,7 @@ The following is an example of property documentation.
 	 * A unique identifier of this editor instance.
 	 *
 	 * **Note:** It will be originated from the ID or the name
-	 * attribute of the {@link #element}, otherwise a name pattern of
+	 * attribute of the `element`, otherwise a name pattern of
 	 * 'editor{n}' will be used.
 	 *
 	 * @private

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -38,7 +38,7 @@ If you have any doubts about the content of the plugin and its configuration, re
 
 ## Context Menu Support
 
-Context menu support in CKEditor is implemented by the [Context Menu plugin](http://ckeditor.com/addon/contextmenu).
+Context menu support in CKEditor is implemented by the [Context Menu plugin](https://ckeditor.com/cke4/addon/contextmenu).
 
 The context menu implementation should be placed inside the {@link CKEDITOR.pluginDefinition#init init} function in the plugin file, following the command and button definitions:
 

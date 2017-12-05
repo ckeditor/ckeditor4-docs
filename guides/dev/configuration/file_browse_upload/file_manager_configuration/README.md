@@ -1,12 +1,12 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Advanced File Manager Configuration
 
 <p class="requirements">
-	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="http://ckeditor.com/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </p>
 
 As mentioned in the introductory [File Manager Integration](#!/guide/dev_file_browse_upload) article, CKEditor can not only be integrated with an external application providing file browser and uploader capabilities, but the extent of this integration can be fine-tuned to your needs.
@@ -55,7 +55,7 @@ The sample below shows some basic configuration code that can be used to insert 
 For more information on integrating CKEditor with a file manager refer to the following articles:
 
 * [File Manager Integration](#!/guide/dev_file_browse_upload)
-* [CKFinder Integration](#!/guide/ckfinder_integration)
+* [CKFinder Integration](#!/guide/dev_ckfinder_integration)
 * [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)
 * [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
-* [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
+* [Uploading Pasted and Dropped Files](#!/guide/dev_file_upload)

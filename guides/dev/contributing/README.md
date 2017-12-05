@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -7,13 +7,13 @@ For licensing, see LICENSE.md.
 
 This section explains how you can contribute to CKEditor development. CKEditor is an Open Source product that is free for anyone to download, use, and customize. It has an amazing community around it that supports it in all possible ways. If you would like to contribute to its development, you can consider the following actions:
 
-1. [Report bugs](#!/guide/dev_issues_readme) or feature requests and submit patches on our [Development site](http://dev.ckeditor.com/).
+1. [Report bugs](#!/guide/dev_issues_readme) or feature requests through the CKEditor [GitHub repository](https://github.com/ckeditor/ckeditor-dev/issues).
 
 2. Fork CKEditor at [GitHub](https://github.com/ckeditor/ckeditor-dev), fix bugs or propose new functionality by using [pull requests](#!/guide/dev_contributing_code).
 
-3. Create your own plugins or skins and submit them to [CKEditor Add-Ons Repository](http://ckeditor.com/addons/plugins).
+3. Create your own plugins or skins and submit them to [CKEditor Add-Ons Repository](https://ckeditor.com/cke4/addons/plugins/all).
 
-4. Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.net/projects/p/ckeditor/).
+4. Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.com/ckeditor/ckeditor/).
 
 5. Join StackOverflow and share your knowledge with [fellow CKEditor users and developers](http://stackoverflow.com/questions/tagged/ckeditor).
 

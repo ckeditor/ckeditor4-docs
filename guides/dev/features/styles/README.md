@@ -1,15 +1,15 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Applying Styles to Editor Content
 
 <p class="requirements">
-	This feature is provided through the <a href="http://ckeditor.com/addon/stylescombo">Styles Combo</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/stylescombo">Styles Combo</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
-The [Styles Combo](http://ckeditor.com/addon/stylescombo) plugin adds the **Styles** drop-down list to the CKEditor toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor. If you want to quickly [remove inline and object styles](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](http://ckeditor.com/addon/removeformat) plugin.
+The [Styles Combo](https://ckeditor.com/cke4/addon/stylescombo) plugin adds the **Styles** drop-down list to the CKEditor toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor. If you want to quickly [remove inline and object styles](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
 
 {@img styles_01.png}
 
@@ -87,32 +87,41 @@ There are three standard style types, each one related to the element used in th
 
 ## Widget Styles
 
-[Widgets](#!/guide/dev_widgets) are special rich content units and therefore standard styles (like block or object ones) cannot be applied to them. Only styles of a special type (called simply `'widget'`) work with widgets.
+[Widgets](#!/guide/dev_widgets) are special rich content units and therefore standard styles (like block or object ones) cannot be applied to them. Only styles of a special type (called `'widget'`) work with widgets.
 
 To define a widget style you need to specify two additional properties in your style definition:
 
 * `type` &ndash; Must be set to `'widget'`. This informs the style system that this is a widget style.
 * `widget` &ndash; Must be set to the name of the widget to which this style will be applicable. Widget names can be verified by browsing the [editorInstance.widgets.registered](#!/api/CKEDITOR.plugins.widget.repository-property-registered) object in your browser's developer tools.
 
+Starting from **CKEditor 4.6.2** an optional `group` property has been introduced, providing a way to define mutually exclusive styles. It can be set to a string representing a single group or to an array of strings. Two styles from the same `group` cannot be applied to the same widget instance simultaneously. When mutually exclusive styles are applied, the latest one is used while all the previous styles are removed.
+
 Since widgets are a lot more complex structures than standard content, only classes defined in the style definition will be applied to them. Other attributes and inline styles will be ignored. Most often classes will be applied to widget's main element, but this behavior may be customized by the widget itself.
 
 Sample widget styles:
 
-	// Enhanced Image (http://ckeditor.com/addon/image2) style.
-	{ type: 'widget', widget: 'image', attributes: { 'class': 'bigBanner' } }
+	// Enhanced Image (https://ckeditor.com/cke4/addon/image2) style.
+	{ name: 'Banner', type: 'widget', widget: 'image', attributes: { 'class': 'bigBanner' } }
 
-	// Code snippet (http://ckeditor.com/addon/codesnippet) style.
-	{ type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
+	// Code Snippet (https://ckeditor.com/cke4/addon/codesnippet) style.
+	{ name: 'Narrow Code', type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
 
-If you are interested in seeing how this works in practice, see the [little demo of widget styling](http://ckeditor.com/tmp/4.4.0/widget-styles.html) that we prepared. It contains some further explanations as well as a working editor instance that includes the Enhanced Image and Code Snippet widgets with additional styling.
+	// Media Embed (https://ckeditor.com/cke4/addon/embed) styles.
+	{ name: '240p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-240p' }, group: 'size' },
+	{ name: '360p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-360p' }, group: 'size' },
+	{ name: '480p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-480p' }, group: 'size' },
+	{ name: 'left', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-left' }, group: 'alignment' },
+	{ name: 'thumb', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-thumb' }, group: [ 'size', 'alignment' ] }
+
+To see how this works in practice, refer to the [Widget Styles](https://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the [captioned image](#!/guide/dev_captionedimage), [embedded media resources](#!/guide/dev_media_embed) and [mathematical formulas](#!/guide/dev_mathjax) widgets with additional styling.
 
 ## The Stylesheet Parser Plugin
 
 <p class="requirements">
-	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
-Another method of customizing the styles for the document created in CKEditor and populating the drop-down list with style definitions coming from an external CSS stylesheet file is also available. The optional [Stylesheet Parser](http://ckeditor.com/addon/stylesheetparser) plugin lets you use your existing CSS styles without the need to define the styles specifically for CKEditor in the format presented above.
+Another method of customizing the styles for the document created in CKEditor and populating the drop-down list with style definitions coming from an external CSS stylesheet file is also available. The optional [Stylesheet Parser](https://ckeditor.com/cke4/addon/stylesheetparser) plugin lets you use your existing CSS styles without the need to define the styles specifically for CKEditor in the format presented above.
 
 <p class="tip">
 	Please note that the Stylesheet Parser plugin is incompatible with <a href="#!/guide/dev_advanced_content_filter">Advanced Content Filter</a>, so it disables the filter after installing.
@@ -147,15 +156,16 @@ You can also further customize the Stylesheet Parser plugin by setting the CKEDI
 	// and any class defined for no specific element.
 	config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;
 
-## Editor Styles Demo 
+## Editor Styles Demo
 
-See the [working "Applying Styles to Editor Content" sample](http://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation.
+See the [working "Applying Styles to Editor Content" sample](https://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation.
 
 ## Related Features
 
-Refer to the following resources for more information about text styling:
+Refer to the following resources for more information about text styling and formatting:
 
-* The [Removing Text Formatting](#!/guide/dev_removeformat) article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.
 * The [Basic Text Styles: Bold, Italic and More](#!/guide/dev_basicstyles) article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting.
+* The [Using the Copy Formatting Feature](#!/guide/dev_fcopyformatting) article explains how to copy text formatting between document fragments.
+* The [Removing Text Formatting](#!/guide/dev_removeformat) article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.
 * The [Applying Block-Level Text Formats](#!/guide/dev_format) article presents how to apply formatting to entire text blocks and not just text selections.
 * The [Setting Text and Background Color](#!/guide/dev_colorbutton) article explains how to use and customize the **Text Color** and **Background Color** features.

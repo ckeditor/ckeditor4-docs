@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
@@ -231,6 +231,17 @@ Also, make sure that there's reasonable vertical space.
 	}
 }
 
+@media all and (min-width: 1650px) and (min-height: 500px)
+{
+	#dev_section508-section-ckeditor-section-508-compliance + div.toc,
+	#dev_wcag-section-ckeditor-wcag-2\.0-compliance + div.toc
+	{
+		position: relative;
+		top:0;
+		right:0;
+	}
+}
+
 .guide-container img
 {
 	border: 1px solid #E8E8E8;
@@ -263,4 +274,54 @@ img.inline
 .guide-container h4
 {
 	margin-bottom:6px;
+}
+
+.section508 td:first-child,
+.wcag td:first-child {
+	width:50%;
+}
+
+.section508 td:nth-child(2) { width:25%; }
+
+#center-container .guide-container table.section508 td,
+#center-container .guide-container table.section508 th,
+#center-container .guide-container table.wcag td,
+#center-container .guide-container table.wcag th,
+#center-container .guide-container table.a11ychecker td,
+#center-container .guide-container table.a11ychecker th {
+	border: 1px solid #f0f0f0;
+	padding: 3px 7px 2px;
+	font-size: 1.1em;
+}
+
+.guide-container .x-panel-body table.section508 tr:first-child td,
+.guide-container .x-panel-body table.a11ychecker tr:first-child td {
+	font-weight:normal;
+	color:inherit;
+}
+
+.guide-container .responsive img {
+	width: 100%;
+	height: auto;
+}
+
+.guide-container .x-panel-body ul > li > ul {
+	margin-bottom: 0;
+}
+
+.guide-container .x-panel-body ol > li > ol {
+	margin-bottom: 0;
+}
+
+.guide-container td.hints-benchmark {
+	width:210px;
+}
+
+.guide-container td.hints-result {
+	width:110px;
+}
+
+#center-container .guide-container table.hints td, #center-container .guide-container table.hints th {
+	padding:8px;
+	text-align: left;
 }

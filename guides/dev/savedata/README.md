@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -54,7 +54,7 @@ Whenever a change is made in the editor, CKEditor fires the [change](#!/api/CKED
 The following example shows how to listen to the `change` event and print the total number of bytes to the console:
 
 	var editor = CKEDITOR.replace( 'editor1' );
-	
+
 	// The "change" event is fired whenever a change is made in the editor.
 	editor.on( 'change', function( evt ) {
 		// getData() returns CKEditor's HTML content.
@@ -63,11 +63,11 @@ The following example shows how to listen to the `change` event and print the to
 
 ## The Save Plugin
 
-A dedicated **[Save](http://ckeditor.com/addon/save)** plugin for CKEditor is available, too. It provides the <img class="inline" src="guides/dev_savedata/save_01.png" title="Save" alt="Save"> button, which fires the [save](#!/api/CKEDITOR.editor-event-save) event, but it currently works only for classic editor placed inside the `<form>` element.
+A dedicated **[Save](https://ckeditor.com/cke4/addon/save)** plugin for CKEditor is available, too. It provides the <img class="inline" src="guides/dev_savedata/save_01.png" title="Save" alt="Save"> button, which fires the [save](#!/api/CKEDITOR.editor-event-save) event, but it currently works only for classic editor placed inside the `<form>` element.
 
 ## Getting and Saving Data Demos
 
 The following samples are available for getting and saving data in CKEditor:
 
-* The [Saving Data in CKEditor Replacing a Textarea](http://sdk.ckeditor.com/samples/savetextarea.html) sample shows how to save data for classic and inline editor replacing a `<textarea>` element.
-* The [CKEditor in Ajax Applications](http://sdk.ckeditor.com/samples/saveajax.html) sample shows how to dynamically create and destroy the editor and how to use the [change](#!/api/CKEDITOR.editor-event-change) event.
+* The [Saving Data in CKEditor Replacing a Textarea](https://sdk.ckeditor.com/samples/savetextarea.html) sample shows how to save data for classic and inline editor replacing a `<textarea>` element.
+* The [CKEditor in Ajax Applications](https://sdk.ckeditor.com/samples/saveajax.html) sample shows how to dynamically create and destroy the editor and how to use the [change](#!/api/CKEDITOR.editor-event-change) event.

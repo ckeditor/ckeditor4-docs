@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -12,7 +12,7 @@ tags and can give different results for each one of them.
 
 ## The HTML Output Writer
 
-The [HTML Output Writer plugin](http://ckeditor.com/addon/htmlwriter) makes it possible to generate advanced output formatting with CKEditor.
+The [HTML Output Writer plugin](https://ckeditor.com/cke4/addon/htmlwriter) makes it possible to generate advanced output formatting with CKEditor.
 
 The *writer* is used by the CKEDITOR.htmlDataProcessor class to write output data.
 The current writer for a specific editor instance can be retrieved with the {@link CKEDITOR.htmlDataProcessor#writer editor.dataProcessor.writer} property.
@@ -86,7 +86,7 @@ Numerous [configuration options](#!/guide/dev_configuration) let you tweak CKEdi
 <ul style="margin-bottom:40px">
 	<li>Entities support:
 		<ul>
-			<li style="float: left;"><a href="http://docs.ckeditor.com/#!/api/CKEDITOR.config-cfg-basicEntities">config.basicEntities</a></li>
+			<li style="float: left;"><a href="#!/api/CKEDITOR.config-cfg-basicEntities">config.basicEntities</a></li>
 			<li style="float: left;margin-left:30px"><a href="#!/api/CKEDITOR.config-cfg-entities">config.entities</a></li>
 			<li style="float: left;margin-left:30px"><a href="#!/api/CKEDITOR.config-cfg-entities_greek">config.entities_greek</a></li>
 			<li style="float: left;margin-left:30px"><a href="#!/api/CKEDITOR.config-cfg-entities_latin">config.entities_latin</a></li>
@@ -111,9 +111,9 @@ Numerous [configuration options](#!/guide/dev_configuration) let you tweak CKEdi
 	</li>
 </ul>
 
-## HTML Output Formatting Demo 
+## HTML Output Formatting Demo
 
-See the [working "HTML Output Formatting" sample](http://sdk.ckeditor.com/samples/htmlformatting.html) that showcases how to control HTML output produced by CKEditor.
+See the [working "HTML Output Formatting" sample](https://sdk.ckeditor.com/samples/htmlformatting.html) that showcases how to control HTML output produced by CKEditor.
 
 ## Related Features
 

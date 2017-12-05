@@ -1,15 +1,15 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Source Code Editing
 
 <p class="requirements">
-	Features described in this article are provided through plugins that may not be included in the CKEditor preset available from the <a href="http://ckeditor.com/download">Download</a> site that you are using and may <a href="#!/guide/dev_plugins">need to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	Features described in this article are provided through plugins that may not be included in the CKEditor preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site that you are using and may <a href="#!/guide/dev_plugins">need to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
-CKEditor is a WYSIWYG editor, so it makes it easy for end users to work on HTML content without any knowledge of HTML whatsoever. More advanced users, however, sometimes want to access raw HTML source code for their content and CKEditor makes it possible by providing two dedicated plugins: [Source Editing Area](http://ckeditor.com/addon/sourcearea) and [Source Dialog](http://ckeditor.com/addon/sourcedialog).
+CKEditor is a WYSIWYG editor, so it makes it easy for end users to work on HTML content without any knowledge of HTML whatsoever. More advanced users, however, sometimes want to access raw HTML source code for their content and CKEditor makes it possible by providing two dedicated plugins: [Source Editing Area](https://ckeditor.com/cke4/addon/sourcearea) and [Source Dialog](https://ckeditor.com/cke4/addon/sourcedialog).
 
 Both plugins introduce the <img class="inline" src="guides/dev_sourcearea/sourcearea_03.png" alt="Source" title="Source"> toolbar button. There are a few differences between them, though.
 
@@ -59,7 +59,7 @@ Please note this is an experimental CSS property which may not be supported in a
 
 ## Source Code Editing Demo
 
-See the [working "Source Code Editing" sample](http://sdk.ckeditor.com/samples/sourcearea.html) that showcases both source editing plugins combined with classic and inline editor instances.
+See the [working "Source Code Editing" sample](https://sdk.ckeditor.com/samples/sourcearea.html) that showcases both source editing plugins combined with classic and inline editor instances.
 
 ## Related Features
 

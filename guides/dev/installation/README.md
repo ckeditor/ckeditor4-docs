@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -9,9 +9,9 @@ The aim of this article is to get you up and running with CKEditor in two minute
 
 ## Download
 
-Visit the official [CKEditor Download](http://ckeditor.com/download) site. For a production site we recommend you choose the default **Standard Package** and click the **Download CKEditor** button to get the `.zip` installation file. If you want to try out more editor features, you can download the **Full Package** instead.
+Visit the official [CKEditor Download](https://ckeditor.com/ckeditor-4/download/) site. For a production site we recommend you choose the default **Standard Package** and click the **Download CKEditor** button to get the `.zip` installation file. If you want to try out more editor features, you can download the **Full Package** instead.
 
-<a href="http://ckeditor.com/download"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="696" height="321"></a>
+<a href="https://ckeditor.com/ckeditor-4/download/"><img src="guides/dev_installation/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="914" height="440"></a>
 
 ## Unpacking
 
@@ -24,7 +24,7 @@ CKEditor comes with a sample that you can check to verify if the installation wa
 Open the following page in the browser to see the sample:
 `http://<your site>/ckeditor/samples/index.html`
 
-{@img ckeditor_sample.png CKEditor sample available in each installation package}
+<img src="guides/dev_installation/ckeditor_sample.png" alt="CKEditor sample available in each installation package" width="802" height="530">
 
 Additionally, you can click the Toolbar Configurator button on the editor sample page to open a handy tool that will let you [adjust the toolbar](#!/guide/dev_toolbar) to your needs.
 
@@ -34,7 +34,7 @@ If the sample works correctly, you are ready to build your own site with CKEdito
 
 To start, create a simple HTML page with a `<textarea>` element in it. You will then need to do two things:
 
-1. Add a call to the CKEditor script in the `<script>` element of your page.
+1. Include the  `<script>` element loading CKEditor in your page.
 2. Use the [`CKEDITOR.replace()`](#!/api/CKEDITOR-method-replace) method to replace the existing `<textarea>` element with CKEditor.
 
 See the following example:
@@ -69,7 +69,7 @@ When you are done, open your test page in the browser.
 
 ## Using the CDN
 
-Instead of downloading CKEditor to your server and hosting it you can also use the CDN version. Go to the [official CKEditor CDN](http://cdn.ckeditor.com/) page for more details. 
+Instead of downloading CKEditor to your server and hosting it you can also use the CDN version. Go to the [official CKEditor CDN](http://cdn.ckeditor.com/) page for more details.
 
 ## Next Steps
 
@@ -80,6 +80,6 @@ Go ahead and play a bit more with the sample; try to change your configuration a
 1. [Modify your toolbar](#!/guide/dev_toolbar) to only include the features that you need. You can find the useful visual toolbar configurator directly in your editor sample.
 1. Learn about CKEditor features in the [Functionality Overview](#!/guide/dev_features) section.
 1. Visit the [CKEditor SDK](http://sdk.ckeditor.com) to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.
-1. Browse the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) for some additional plugins or skins.
-1. Use [CKBuilder](http://ckeditor.com/builder) to create your custom CKEditor build.
+1. Browse the [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) for some additional plugins or skins.
+1. Use [CKBuilder](https://ckeditor.com/cke4/builder) to create your custom CKEditor build.
 1. Browse the [Developer's Guide](#!/guide) for some further ideas on what to do with CKEditor and join the CKEditor community at [Stack Overflow](http://stackoverflow.com/questions/tagged/ckeditors) to discuss all things CKEditor with fellow developers!

@@ -1,12 +1,12 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Clipboard Integration
 
 <p class="requirements">
-	This feature is provided through the <a href="http://ckeditor.com/addon/clipboard">Clipboard</a> plugin that is included in all CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site.
+	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a> plugin that is included in all CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </p>
 
 One of the most important CKEditor features is the integration with the operating system's clipboard. The main role of this feature is to intercept any content that is being pasted, dropped, cut, copied or dragged from or to the editor. This allows to apply certain rules to this content, for instance with [Advanced Content Filter](#!/guide/dev_advanced_content_filter).
@@ -121,7 +121,7 @@ To learn more about pasting and dropping files see the [file handling guide](#!/
 
 ## Copy, Cut and Paste
 
-CKEditor wants to intercept pasted data in every browser. Unfortunately, the Clipboard API is not yet available in every browser (and, for example, in Safari this API is available, but there is no `text/html` type available), so CKEditor uses a hybrid solution to get the data using the Clipboard API and a paste bin.
+CKEditor wants to intercept pasted data in every browser. Unfortunately, the Clipboard API is not yet available in all browsers, so CKEditor uses a hybrid solution to get the data using the Clipboard API and a paste bin.
 
 ### Clipboard API
 
@@ -135,11 +135,11 @@ A paste bin is a CKEditor mechanism to capture native paste. The mechanism works
 
 * When an attempt to paste the data is discovered, a moment before the paste really happens, CKEditor moves the selection to a special hidden container called the *paste bin*.
 * Next, CKEditor waits to let the browser do the native paste into that paste bin.
-* After a short timeout (well... Safari needs more time) CKEditor gets the content of this container.
+* After a short timeout CKEditor gets the content of this container.
 * Then, CKEditor moves the selection back to the {@link CKEDITOR.editable} and removes the paste bin.
 * Finally, CKEditor fires the {@link CKEDITOR.editor#paste paste event} with captured data as the `dataValue`.
 
-It is very tricky to prevent the browser from blinking and scrolling. Up to version 4.5 this was the main mechanism for pasting and many bugs were reported and needed our patches. Now this is a backup solution when the Clipboard API is not supported properly. It is used in Internet Explorer, Chrome for Android and Safari.
+It is very tricky to prevent the browser from blinking and scrolling. Up to version 4.5 this was the main mechanism for pasting and many bugs were reported and needed our patches. Now this is a backup solution when the Clipboard API is not supported properly. It is used in Internet Explorer, Edge and Chrome for Android.
 
 ### Cut and Copy
 
@@ -155,7 +155,7 @@ Since version 4.5 CKEditor handles dragging and dropping manually. CKEditor uses
 * {@link CKEDITOR.editor#dragend},
 * {@link CKEDITOR.editor#drop}.
 
-Listeners for these events perform the entire drag and drop operation, which means that CKEditor puts dragged content into the {@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer} object (if `dragstart` is inside it), gets dragged content, finds a range at the drop position and fires the {@link CKEDITOR.editor#paste paste event}. Note that these events do not need to be based on native events. For example, the drag and drop of the block widgets uses [Line Utilities](http://ckeditor.com/addon/lineutils) and listens for mouse events, but fires the {@link CKEDITOR.editor#dragstart}, {@link CKEDITOR.editor#dragend} and {@link CKEDITOR.editor#drop} events so the drag and drop is handled by the same code and hence can be processed in the same way.
+Listeners for these events perform the entire drag and drop operation, which means that CKEditor puts dragged content into the {@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer} object (if `dragstart` is inside it), gets dragged content, finds a range at the drop position and fires the {@link CKEDITOR.editor#paste paste event}. Note that these events do not need to be based on native events. For example, the drag and drop of the block widgets uses [Line Utilities](https://ckeditor.com/cke4/addon/lineutils) and listens for mouse events, but fires the {@link CKEDITOR.editor#dragstart}, {@link CKEDITOR.editor#dragend} and {@link CKEDITOR.editor#drop} events so the drag and drop is handled by the same code and hence can be processed in the same way.
 
 Note that the {@link CKEDITOR.editor#drop drop event} fires the {@link CKEDITOR.editor#paste paste event} which is the one which should be used for data transformations such as filtering or uploading files.
 
@@ -171,7 +171,7 @@ An interesting example of this feature is how drag and drop of [widgets](#!/guid
 
 As you can see, when the user drags a widget, its ID is stored in the data under the `cke/widget-id` type. This allows you to find and handle that specific widget instance on {@link CKEDITOR.editor#drop drop}.
 
-Another example can be found in the ["Drag and Drop Integration" sample](http://sdk.ckeditor.com/samples/draganddrop.html) where the  {@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer facade} is used to store an object with contact details that are dragged into the editor from outside of it.
+Another example can be found in the ["Drag and Drop Integration" sample](https://sdk.ckeditor.com/samples/draganddrop.html) where the  {@link CKEDITOR.plugins.clipboard.dataTransfer DataTransfer facade} is used to store an object with contact details that are dragged into the editor from outside of it.
 
 	// When an item in the contact list is dragged, copy its data into drag and drop data transfer.
 	// This data is later read by the editor#paste listener in the hcard plugin defined above.
@@ -179,7 +179,7 @@ Another example can be found in the ["Drag and Drop Integration" sample](http://
 		// The target may be some element inside the draggable div (e.g. the image), so get the div.h-card.
 		var target = evt.data.getTarget().getAscendant( 'div', true );
 
-		// Initialization of CKEditor data transfer facade is a necessary step to extend and unify native 
+		// Initialization of CKEditor data transfer facade is a necessary step to extend and unify native
 		// browser capabilities. For instance, Internet Explorer does not support any other data type than 'text' and 'URL'.
 		// Note: evt is an instance of CKEDITOR.dom.event, not a native event.
 		CKEDITOR.plugins.clipboard.initDragDataTransfer( evt );

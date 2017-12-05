@@ -1,15 +1,15 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Shared Toolbar and Bottom Bar
 
 <p class="requirements">
-	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
-An optional CKEditor plugin called [Shared Space](http://ckeditor.com/addon/sharedspace) lets you put the editor toolbar and bottom bar in selected page elements detached from the editing areas and then share these UI elements among numerous editor instances.
+An optional CKEditor plugin called [Shared Space](https://ckeditor.com/cke4/addon/sharedspace) lets you put the editor toolbar and bottom bar in selected page elements detached from the editing areas and then share these UI elements among numerous editor instances.
 
 This feature can be used for both [classic](#!/guide/dev_framed), `iframe`-based editors, and [inline](#!/guide/dev_inline) editors. In case of inline editor instances this will ensure that the toolbar will always remain in one designated place on the page which may be beneficial is some usage scenarios.
 
@@ -48,16 +48,16 @@ An editor instance with such configuration will use the shared toolbar (the `top
 
 The Shared Space feature affects a crucial editor element &mdash; its user interface &mdash; so some fine-tuning of the editor configuration might be needed. Here are a few tips:
 
-* The [Editor Resize](http://ckeditor.com/addon/resize) plugin should be disabled as it would not work in this context.
-* Since CKEditor 4.5.5 the [Maximize](http://ckeditor.com/addon/maximize) plugin is disabled automatically in the shared space context.
+* The [Editor Resize](https://ckeditor.com/cke4/addon/resize) plugin should be disabled as it would not work in this context.
+* Since CKEditor 4.5.5 the [Maximize](https://ckeditor.com/cke4/addon/maximize) plugin is disabled automatically in the shared space context.
 
 <pre>
 config.removePlugins = 'resize';
 </pre>
 
-## Shared Toolbar and Bottom Bar Demo 
+## Shared Toolbar and Bottom Bar Demo
 
-See the [working "Shared Toolbar and Bottom Bar" sample](http://sdk.ckeditor.com/samples/sharedspace.html) that showcases how multiple editor instances can share the same toolbar and bottom bar. 
+See the [working "Shared Toolbar and Bottom Bar" sample](https://sdk.ckeditor.com/samples/sharedspace.html) that showcases how multiple editor instances can share the same toolbar and bottom bar.
 
 ## Related Features
 

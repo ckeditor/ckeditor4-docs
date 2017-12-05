@@ -1,15 +1,15 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Basic Text Styles: Bold, Italic and More
 
 <p class="requirements">
-	This feature is provided through a plugin that is included in all official CKEditor distributions (Basic, Standard, Full) available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
+	This feature is provided through a plugin that is included in all official CKEditor distributions (Basic, Standard, Full) available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
 </p>
 
-The [Basic Styles](http://ckeditor.com/addon/basicstyles) plugin provides the ability to add some basic text formatting to your document. When enabled, it adds the **Bold**, **Italic**, **Underline**, **Strikethrough**, **Subscript** and **Superscript** toolbar buttons that apply these styles. If you want to quickly [remove basic styles](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](http://ckeditor.com/addon/removeformat) plugin.
+The [Basic Styles](https://ckeditor.com/cke4/addon/basicstyles) plugin provides the ability to add some basic text formatting to your document. When enabled, it adds the **Bold**, **Italic**, **Underline**, **Strikethrough**, **Subscript** and **Superscript** toolbar buttons that apply these styles. If you want to quickly [remove basic styles](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
 
 
 Basic text styles work on text selections; check the [Text Formats](#!/guide/dev_format) feature for block-level text formatting.
@@ -26,7 +26,7 @@ Open the `config.js` file available in your `ckeditor` directory, and edit the `
 
 	// For the Basic preset:
 	config.removeButtons = 'Cut,Copy,Paste,Undo,Redo,Anchor';
-	
+
 	// For the Standard preset:
 	config.removeButtons = '';
 
@@ -46,7 +46,7 @@ If you want to change the default settings for a particular editor instance, pro
 	CKEDITOR.replace( 'editor1', {
 		removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor'
 	});
-	
+
 	// For the Standard preset:
 	CKEDITOR.replace( 'editor1', {
 		removeButtons: ''
@@ -77,15 +77,15 @@ The following example configures CKEditor to output bold with an inline CSS styl
 		element: 'span',
 		styles: { 'font-weight': 'bold' }
 	};
-	
+
 	config.coreStyles_italic = { element: 'i', overrides: 'em' };
-	
+
 	config.coreStyles_subscript = {
 		element: 'span',
 		attributes: { 'class': 'Subscript' },
 		overrides: 'sub'
 	};
-	
+
 	config.coreStyles_superscript = {
 		element: 'span',
 		attributes: { 'class': 'Superscript' },
@@ -106,15 +106,16 @@ Remember that depending on your use case, the CSS classes for basic text styles 
 	</p>
 </div>
 
-## Basic Text Styles Demo 
+## Basic Text Styles Demo
 
-See the [working "Basic Text Styles: Bold, Italic and More" sample](http://sdk.ckeditor.com/samples/basicstyles.html) that showcases the usage and customization of basic text formatting.
+See the [working "Basic Text Styles: Bold, Italic and More" sample](https://sdk.ckeditor.com/samples/basicstyles.html) that showcases the usage and customization of basic text formatting.
 
 ## Related Features
 
-Refer to the following resources for more information about text styling:
+Refer to the following resources for more information about text styling and formatting:
 
+* The [Using the Copy Formatting Feature](#!/guide/dev_fcopyformatting) article explains how to copy text formatting between document fragments.
 * The [Removing Text Formatting](#!/guide/dev_removeformat) article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.
-* The [Applying Block-Level Text Formats](#!/guide/dev_format) article presents how to apply formatting to entire text blocks and not just text selections.
 * The [Applying Styles to Editor Content](#!/guide/dev_styles) article discusses creating more semantically correct text styles.
+* The [Applying Block-Level Text Formats](#!/guide/dev_format) article presents how to apply formatting to entire text blocks and not just text selections.
 * The [Setting Text and Background Color](#!/guide/dev_colorbutton) article explains how to use and customize the **Text Color** and **Background Color** features.

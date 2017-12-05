@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -12,6 +12,15 @@ For licensing, see LICENSE.md.
 Advanced Content Filter (ACF) is a CKEditor core feature that **filters incoming HTML content** by transforming and deleting disallowed elements, attributes, classes and styles. If you paste content into CKEditor and notice that some elements are removed, then chances are high that it was removed by ACF.
 
 By default, ACF works in **automatic mode**. It means that out-of-the-box CKEditor will only allow content that was *defined as allowed* by enabled editor features (buttons, plugins). For example if the **Image** button is enabled, CKEditor will allow `<img>` tags and so on. This default behavior makes sense as otherwise the user would not be able to easily work with elements that cannot be recognized by any of available plugins without editing the HTML source code manually.
+
+<div class="tip">
+    <p>
+        <strong>ACF does not replace a security filter for your website content.</strong> If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
+    </p>
+    <p>
+        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities. For example, if you decide to allow all attributes in HTML elements, you will allow users to enter <code>onclick</code>, <code>onload</code>, <code>onerror</code> handlers. Although ACF is not a security filter, leaving it in defult, automatic mode should minimise the risk of XSS issues.
+    </p>
+</div>
 
 ## Configuring ACF
 
@@ -123,8 +132,8 @@ Bold text can be represented on websites by `<strong>`, `<b>`, or `<span style="
 
 The following samples are available for two ACF modes:
 
-* The [Advanced Content Filter &ndash; Automatic Mode](http://sdk.ckeditor.com/samples/acf.html) sample shows the default implementation of ACF and its customization.
-* The [Advanced Content Filter &ndash; Custom Mode](http://sdk.ckeditor.com/samples/acfcustom.html) sample shows how the custom ACF mode works.
+* The [Advanced Content Filter &ndash; Automatic Mode](https://sdk.ckeditor.com/samples/acf.html) sample shows the default implementation of ACF and its customization.
+* The [Advanced Content Filter &ndash; Custom Mode](https://sdk.ckeditor.com/samples/acfcustom.html) sample shows how the custom ACF mode works.
 
 ## Further Reading
 

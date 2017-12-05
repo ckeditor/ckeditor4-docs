@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -7,7 +7,7 @@ For licensing, see LICENSE.md.
 
 <div class="requirements">
 	<p>
-		This feature is provided through the <a href="http://ckeditor.com/addon/resize">Editor Resize</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+		This feature is provided through the <a href="https://ckeditor.com/cke4/addon/resize">Editor Resize</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 	</p>
 	<p>
 		Width and height manipulation is only supported for <a href="#!/guide/dev_framed">classic editor</a> and does not work in <a href="#!/guide/dev_inline">inline editor</a>.
@@ -69,7 +69,7 @@ Additionally, you can define the resizing directions in order to have more contr
 By default CKEditor is allowed to only resize vertically. This is achieved thanks to setting the CKEDITOR.config.resize_dir configuration option to `'vertical'`
 
 	config.resize_dir = 'vertical';
-	
+
 If you set the CKEDITOR.config.resize_dir configuration option to `'horizontal'`, CKEditor window will only be resizable in horizontal dimension.
 
 	config.resize_dir = 'horizontal';
@@ -78,9 +78,9 @@ If you want to allow both vertical and horizontal resizing, you need to set the 
 
 	config.resize_dir = 'both';
 
-## Editor Resizing Customization Demo 
+## Editor Resizing Customization Demo
 
-See the [working "Editor Resizing Customization" sample](http://sdk.ckeditor.com/samples/resize.html) that showcases an editor instance with modified resizing settings.
+See the [working "Editor Resizing Customization" sample](https://sdk.ckeditor.com/samples/resize.html) that showcases an editor instance with modified resizing settings.
 
 ## Related Features
 

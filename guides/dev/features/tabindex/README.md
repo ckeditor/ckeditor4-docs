@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -23,11 +23,14 @@ This will cause CKEditor to become the third page element that you will enter wh
 
 ## "Tab" Key Based Navigation Demo
 
-See the [working "Page Navigation Using the "Tab" Key" sample](http://sdk.ckeditor.com/samples/tabindex.html) where you can try this page navigation method in practice.
+See the [working "Page Navigation Using the "Tab" Key" sample](https://sdk.ckeditor.com/samples/tabindex.html) where you can try this page navigation method in practice.
 
 ## Related Features
 
 Refer to the following resources for more information about accessibility in CKEditor:
 
 * The [Accessibility Support in CKEditor](#!/guide/dev_a11y) article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The [Managing Content Accessibility with Accessibility Checker](#!/guide/dev_accessibility_checker) article describes an innovative Accessibility Checker plugin that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
 * The [Keyboard Shortcuts](#!/guide/dev_shortcuts) article lists all keyboard shortcuts supported in CKEditor.
+* The [CKEditor Section 508 Compliance](#!/guide/dev_section508) article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
+* The [CKEditor WCAG 2.0 Compliance](#!/guide/dev_wcag) article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.

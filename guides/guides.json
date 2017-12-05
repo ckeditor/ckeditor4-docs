@@ -83,6 +83,14 @@
 						"description": "How to retrieve and save CKEditor data.",
 						"meta_description": "How to retrieve and save CKEditor data.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
+					},
+					{
+						"name": "dev_example_setups",
+						"url": "dev/example_setups",
+						"title": "Example CKEditor Setups",
+						"description": "Setups showcased on demo pages explained in details.",
+						"meta_description": "Setups showcased on demo pages explained in details.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, classic, framed, inline, save, saving, submit, submitting, post, posting, data, content, server, ajax, change, form, textarea"
 					}
 				]
 			},
@@ -93,9 +101,9 @@
 						"name": "dev_advanced_installation",
 						"url": "dev/advanced_installation",
 						"title": "Introduction",
-						"description": "More advanced installation tasks, like installing additional components, upgrading and building.",
-						"meta_description": "More advanced installation tasks, like installing additional components, upgrading and building.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, download, upgrade, upgrading, build, building, plugins, widgets, widget, plugin, skin, skins, source, code"
+						"description": "More advanced installation tasks, like installing additional components, upgrading, building and using package managers.",
+						"meta_description": "More advanced installation tasks, like installing additional components, upgrading, building and using package managers.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, npm, package, composer, bower, download, upgrade, upgrading, build, building, plugins, widgets, widget, plugin, skin, skins, source, code"
 					},
 					{
 						"title": "Installing Components",
@@ -198,7 +206,7 @@
 						"title": "Using Package Managers",
 						"description": "How to install CKEditor using package managers like Bower or Composer.",
 						"meta_description": "How to install CKEditor using package managers like Bower or Composer.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, package, manager, composer, bower, preset"
+						"meta_keywords": "ckeditor, editor, wysiwyg, install, installation, package, manager, composer, bower, npm, node, preset"
 					},
 					{
 						"name": "dev_basepath",
@@ -288,6 +296,22 @@
 										"meta_keywords": "ckeditor, editor, wysiwyg, image, images, caption, captioned, image2, enhanced, widget, resizing, drag, drop"
 									},
 									{
+										"name": "dev_pastefromword",
+										"url": "dev/features/pastefromword",
+										"title": "Paste from Word",
+										"description": "Pasting content from Microsoft Word documents into the editor.",
+										"meta_description": "Pasting content from Microsoft Word documents into the editor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, paste, insert, word, pastefromword"
+									},
+									{
+										"name": "dev_pastefromexcel",
+										"url": "dev/features/pastefromexcel",
+										"title": "Paste from Excel",
+										"description": "Pasting content from Microsoft Excel documents into the editor.",
+										"meta_description": "Pasting content from Microsoft Excel documents into the editor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, paste, insert, excel, pastefromword, spreadsheet"
+									},
+									{
 										"name": "dev_table",
 										"url": "dev/features/table",
 										"title": "Tables with Column Resizing",
@@ -357,6 +381,14 @@
 										"meta_keywords": "ckeditor, editor, wysiwyg, style, styles, bold, italic, underline, strike, strikethrough, subscript, superscript, formatting, format, text, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 									},
 									{
+										"name": "dev_copyformatting",
+										"url": "dev/features/copyformatting",
+										"title": "Copying Text Formatting",
+										"description": "Copying document formatting with the Copy Formatting feature.",
+										"meta_description": "Copying document formatting with the Copy Formatting feature.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, formatting, style, styles, text"
+									},
+									{
 										"name": "dev_removeformat",
 										"url": "dev/features/removeformat",
 										"title": "Removing Text Formatting",
@@ -422,6 +454,14 @@
 							{
 								"title": "Accessibility Support",
 								"items": [
+									{
+										"name": "dev_accessibility_checker",
+										"url": "dev/features/accessibility_checker",
+										"title": "Accessibility Checker",
+										"description": "Check and fix accessibility issues in content.",
+										"meta_description": "Check and fix accessibility issues in content.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, accessibility, a11y, checker, check, issue, fix, fixes"
+									},
 									{
 										"name": "dev_shortcuts",
 										"url": "dev/features/shortcuts",
@@ -773,7 +813,7 @@
 				]
 			},
 			{
-				"title": "Additional Information",
+				"title": "Compatibility, Compliance, License",
 				"items": [
 					{
 						"name": "dev_browsers",
@@ -790,6 +830,22 @@
 						"description": "Accessibility compliance and overview of accessibility-related features.",
 						"meta_description": "Accessibility compliance and overview of accessibility-related features.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, accessibility, a11y, usability, wcag, atag, wai, aria, wai-aria, 508, disability, disabled, high, contrast, browser, support, screenreader, screen, reader, voiceover, chromevox, jaws"
+					},
+					{
+						"name": "dev_section508",
+						"url": "dev/section508",
+						"title": "Section 508 Compliance",
+						"description": "CKEditor Compliance with Section 508 Amendment to the Rehabilitation Act of 1973.",
+						"meta_description": "CKEditor Compliance with Section 508 Amendment to the Rehabilitation Act of 1973.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, compliance, accessibility, a11y, usability, section 508, wai, aria, wai-aria, 508, disability, disabled, high, contrast, browser, support, screenreader, screen, reader, voiceover, chromevox, jaws"
+					},
+					{
+						"name": "dev_wcag",
+						"url": "dev/wcag",
+						"title": "WCAG 2.0 Compliance",
+						"description": "CKEditor Compliance with Web Content Accessibility Guidelines (WCAG) 2.0.",
+						"meta_description": "CKEditor Compliance with Web Content Accessibility Guidelines (WCAG) 2.0.",
+						"meta_keywords": "ckeditor, editor, wysiwyg, compatibility, compliance, accessibility, a11y, usability, wcag, wai, aria, wai-aria, disability, disabled, high, contrast, browser, support, screenreader, screen, reader, voiceover, chromevox, jaws"
 					},
 					{
 						"name": "dev_license",
@@ -875,14 +931,6 @@
 						"description": "Most frequently asked question and answers about dialog windows in CKEditor.",
 						"meta_description": "Most frequently asked question and answers about dialog windows in CKEditor.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, dialog, dialogs, window, popup, tab, tabs, default, resize, resizing, developer, tools"
-					},
-					{
-						"name": "dev_howtos_miscellaneous",
-						"url": "dev/howtos/miscellaneous",
-						"title": "Miscellaneous",
-						"description": "Miscellaneous most frequently asked question and answers.",
-						"meta_description": "Miscellaneous most frequently asked question and answers.",
-						"meta_keywords": "ckeditor, editor, wysiwyg, howto, howtos, faq, questions, answers, write, writing, data, content, compress, compression, compressing, source, code"
 					},
 					{
 						"name": "dev_howtos_bugs_and_features",

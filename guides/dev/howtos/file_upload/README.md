@@ -1,18 +1,20 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # File Upload
 
+The following article contains tips about uploading and managing files in CKEditor. Refer to the [File Manager](#!/guide/dev_file_browse_upload) section of the documentation for more information about this topic.
+
 
 ## How Do I Upload Files or Images Using CKEditor?
 
-By default CKEditor does not include a file browser or uploader. You can, however, create a [custom file browser](#!/guide/dev_file_browse_upload) or use an existing one, like [CKFinder](http://ckfinder.com/).
+By default CKEditor does not include a file browser or uploader. You can, however, create a [custom file browser](#!/guide/dev_file_browser_api) or [use an existing one](#!/guide/dev_file_browse_upload), like [CKFinder](https://cksource.com/ckfinder).
 
 
 ## How Do I Paste a Local Image from my Clipboard to CKEditor?
 
-It is not possible to paste a local file (like an image) directly to a website located on the server. This issue has nothing to do with CKEditor, but is related to the security model of the Internet browsers.
+Since CKEditor 4.5 it is possible to enable uploading images pasted from clipboard or dragged and dropped into the editor. Please refer to the [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) article for more information.
 
-If you want to add images to your document, you need to upload them to a server first. You can either upload them to a server manually and then insert them using the [Insert Image](http://ckeditor.com/addon/image) feature, giving the URL of the image, or integrate CKEditor with a [file browser and uploader](#!/guide/dev_file_browse_upload) like [CKFinder](http://ckfinder.com/) and use it to upload the image from your local computer to the server inside the CKEditor interface.
+Do note that this still requires [integrating a file manager](#!/guide/dev_file_browse_upload) to handle the server-side part of the upload.

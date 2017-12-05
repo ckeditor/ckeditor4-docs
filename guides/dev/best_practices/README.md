@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -15,12 +15,12 @@ CKEditor should be [upgraded frequently](#!/guide/dev_upgrade) as bug fixes and 
 If you modified any distribution files to add your custom configuration, pay special attention to not overwrite your content (including `config.js`, `contents.css`, `styles.js` and custom template files) when upgrading.
 
 ### Use minified versions
-You should always use minified CKEditor versions ([official releases](http://ckeditor.com/download), [optimized](http://ckeditor.com/builder) [builds](#!/guide/dev_build)) in production environments. The [development, source code version](#!/guide/dev_source) is only suitable for tests and development.
+You should always use minified CKEditor versions ([official releases](https://ckeditor.com/ckeditor-4/download/), [optimized](https://ckeditor.com/cke4/builder) [builds](#!/guide/dev_build)) in production environments. The [development, source code version](#!/guide/dev_source) is only suitable for tests and development.
 
 Additionally, it is good to enable `gzip` compression in your server settings.
 
 ### Do not be afraid of custom builds
-If you want to skip some editor features, [customize your build with CKBuilder](http://ckeditor.com/builder) and remove unneeded functionality.
+If you want to skip some editor features, [customize your build with CKBuilder](https://ckeditor.com/cke4/builder) and remove unneeded functionality.
 
 It is a bad practice to download the Full package and then [remove plugins](#!/api/CKEDITOR.config-cfg-removePlugins) or [buttons](#!/api/CKEDITOR.config-cfg-removeButtons) in your configuration. You will only be loading unnecessary stuff without any good reason.
 
@@ -68,4 +68,23 @@ or, if you are using the HTML5 `DOCTYPE`, to:
 	<meta charset="utf-8">
 
 ### Use CKEditor for what it was made for
-Last but not least, [use CKEditor for what it was designed for](#!/guide/dev_basics-section-what-ckeditor-is). Learn from the best: Visit the [CKEditor SDK](http://sdk.ckeditor.com/) to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
+Last but not least, [use CKEditor for what it was designed for](#!/guide/dev_basics-section-what-ckeditor-is). Learn from the best: Visit the [CKEditor SDK](https://sdk.ckeditor.com/) to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
+
+## Security
+
+### Filter content server-side
+
+**No editor features (such as [Advanced Content Filter (ACF)](#!/guide/dev_acf) or paste filter) should be treated as security filters.** If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website. The same applies to publishing content on your website. Before displaying content on your website coming from untrusted users, regardless whether CKEditor is enabled or not, you should filter the content against XSS. The reason is that malicious users can disable CKEditor in a browser or use software to alter the POST request and send anything. 
+
+### Use ACF in default, automatic mode
+
+Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities.
+
+For example, if you decide to allow all attributes in HTML elements, you will allow users to enter `onclick`, `onload`, `onerror` handlers. If you decide to allow all HMTL elements, users will be able to insert all elements which are easy to use for XSS attacks, e.g. `<iframe>`s, `<script>` tags or `<meta>` tags.
+
+Although ACF is not a security filter, leaving it in defult, automatic mode should minimise the risk of XSS issues.
+
+### Disable source mode
+
+[Source mode](#!/guide/dev_sourcearea) is an advanced feature that lets your users insert HTML code into your website and is not really needed in most use cases (after all, you are installing a WYSIWYG editor to avoid the need to write content in HTML). Disabling it is thus highly recommended.
+

@@ -1,21 +1,21 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Setting Text and Background Color
 
 <p class="requirements">
-	This feature is provided through optional plugins that are only included in the Full preset available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add them to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature is provided through optional plugins that are only included in the Full preset available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also <a href="#!/guide/dev_plugins">add them to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
-The optional [Color Button](http://ckeditor.com/addon/colorbutton) plugin provides the ability to define font and background color for text created in CKEditor. When enabled, it adds the **Text Color** and **Background Color** toolbar buttons that open a color selection drop-down list. If you want to quickly [remove colors](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](http://ckeditor.com/addon/removeformat) plugin.
+The optional [Color Button](https://ckeditor.com/cke4/addon/colorbutton) plugin provides the ability to define font and background color for text created in CKEditor. When enabled, it adds the **Text Color** and **Background Color** toolbar buttons that open a color selection drop-down list. If you want to quickly [remove colors](#!/guide/dev_removeformat) from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
 
 {@img colorbutton_05.png The Text Color and Background Color features}
 
 ## More Colors Option and Color Dialog
 
-You can also add the optional [Color Dialog](http://ckeditor.com/addon/colordialog) plugin which extends the color selector with the **More Colors** option and a user-friendly way to select the desired color through a dedicated **Select Color** dialog window. When this plugin is enabled, the **More Colors** option appears automatically for the text and background color. 
+You can also add the optional [Color Dialog](https://ckeditor.com/cke4/addon/colordialog) plugin which extends the color selector with the **More Colors** option and a user-friendly way to select the desired color through a dedicated **Select Color** dialog window. When this plugin is enabled, the **More Colors** option appears automatically for the text and background color.
 
 {@img colordialog_03.png The Select Color dialog window}
 
@@ -29,7 +29,11 @@ Use the CKEDITOR.config.colorButton_colors configuration option to define a cust
 
 	config.colorButton_colors = 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16';
 
-This will cause the color list to only contain the seven colors listed above:
+Additionally, since CKEditor 4.5.8 you can also disable the "Automatic" option by setting the CKEDITOR.config.colorButton_enableAutomatic option to `false`.
+
+	config.colorButton_enableAutomatic = false;
+
+These settings will cause the color list to only contain the seven colors listed above, with no "Automatic" option available:
 
 {@img colorbutton_04.png The customized color list}
 
@@ -50,7 +54,7 @@ You can also decide how the color definition is stored by setting the CKEDITOR.c
 		element: 'font',
 		attributes: { 'color': '#(color)' }
 	};
-	
+
 	config.colorButton_backStyle = {
     	element: 'font',
     	styles: { 'background-color': '#(color)' }
@@ -61,14 +65,15 @@ CKEditor will then output the color definition as `<font>` elements with `color`
 	<p><font color="#800080">This is my text color.</font><br />
 	<font style="background-color:#FFFF00;">This is my background color</font></p>
 
-## Text and Background Color Demo 
+## Text and Background Color Demo
 
-See the [working "Setting Text and Background Color" sample](http://sdk.ckeditor.com/samples/colorbutton.html) that showcases the usage and customization of the text and background color features.
+See the [working "Setting Text and Background Color" sample](https://sdk.ckeditor.com/samples/colorbutton.html) that showcases the usage and customization of the text and background color features.
 
 ## Related Features
 
-Refer to the following resources for more information about text styling:
+Refer to the following resources for more information about text styling and formatting:
 
+* The [Using the Copy Formatting Feature](#!/guide/dev_fcopyformatting) article explains how to copy text formatting between document fragments.
 * The [Removing Text Formatting](#!/guide/dev_removeformat) article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.
 * The [Basic Text Styles: Bold, Italic and More](#!/guide/dev_basicstyles) article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting.
 * The [Applying Styles to Editor Content](#!/guide/dev_styles) article discusses creating more semantically correct text styles.

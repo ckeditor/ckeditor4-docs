@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -14,7 +14,7 @@ CKEditor 4 is almost totally backward compatible with CKEditor 3 (v3) in terms o
 This page lists the most relevant changes and the proper way to port them to CKEditor 4.
 
 <p class="tip">
-	Please note that this list was created before the <strong>CKEditor 4.0 release</strong> and is not updated anymore. For further API changes see the <a href="http://ckeditor.com/whatsnew">CKEditor changelog</a>.
+	Please note that this list was created before the <strong>CKEditor 4.0 release</strong> and is not updated anymore. For further API changes see the <a href="https://ckeditor.com/cke4/release-notes">CKEditor changelog</a>.
 </p>
 
 ## Changes
@@ -28,7 +28,7 @@ The listener function sent to `CKEDITOR.event#on` can now return the Boolean `fa
 `CKEDITOR.config.corePlugins` is not needed anymore. The "core plugins" are now really part of the core, although their API signatures are left untouched:
 
  * `plugins/selection/plugin.js` => `core/selection.js`.
-	The "Select All" feature originally provided by the `selection` plugin is now a standalone [Select All](http://ckeditor.com/addon/selectall) plugin.
+	The "Select All" feature originally provided by the `selection` plugin is now a standalone [Select All](https://ckeditor.com/cke4/addon/selectall) plugin.
  * `plugins/styles/plugin.js` => `core/style.js`
  * `plugins/styles/styles/default.js` => `core/styles.js`
  * `plugins/domiterator/plugin.js` => `core/dom/iterator.js`

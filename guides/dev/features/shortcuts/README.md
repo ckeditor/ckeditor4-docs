@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -8,11 +8,14 @@ For licensing, see LICENSE.md.
 Many functions in CKEditor have their equivalent keyboard shortcuts. This is one of the reasons why working with the editor is
 simple and efficient.
 
-The list below contains available keyboard shortcuts grouped by problem areas.
+The list below contains available keyboard shortcuts grouped by problem areas. You can also learn about keyboard shortcuts directly in the editor:
+
+* Through the [Accessibility Instructions](#!/guide/dev_a11y-section-accessibility-instructions-dialog-window) dialog window.
+* Through toolbar button tooltips and context menu entries (CKEditor 4.6 or later).
 
 <div class="requirements">
 	<p>
-		The <strong>Accessibility Instructions</strong> dialog window is provided through the <a href="http://ckeditor.com/addon/a11yhelp">Accessibility Help</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+		The <strong>Accessibility Instructions</strong> dialog window is provided through the <a href="https://ckeditor.com/cke4/addon/a11yhelp">Accessibility Help</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also <a href="#!/guide/dev_plugins">add it to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 	</p>
 	<p>
 		Note that some shortcuts only work if the functionality behind them is included in your editor build.
@@ -55,6 +58,7 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 * <kbd>Ctrl+X</kbd>, <kbd>Shift+Del</kbd> &ndash; Cuts a text fragment to clipboard.
 * <kbd>Ctrl+C</kbd> &ndash; Copies a text fragment to clipboard.
 * <kbd>Ctrl+V</kbd>, <kbd>Shift+Insert</kbd> &ndash; Pastes a text fragment from clipboard.
+* <kbd>Shift+Ctrl+V</kbd> &ndash; Pastes content from clipboard as plain text.
 
 ### Text Selection
 
@@ -75,6 +79,12 @@ The list below contains available keyboard shortcuts grouped by problem areas.
 * <kbd>Ctrl+B</kbd> &ndash; Applies **bold** formatting to a text fragment.
 * <kbd>Ctrl+I</kbd> &ndash; Applies *italics* formatting to a text fragment.
 * <kbd>Ctrl+U</kbd> &ndash; Applies <span style="text-decoration: underline;">underline</span> formatting to a text fragment.
+
+### Copy Formatting
+
+* <kbd>Ctrl+Shift+C</kbd> &ndash; Copies the inline formatting from a text fragment and enables the sticky mode.
+* <kbd>Ctrl+Shift+V</kbd> &ndash; Applies the previously copied inline formatting to a text fragment.
+* <kbd>Esc</kbd> &ndash; Disables the sticky mode.
 
 ## Rich Text
 
@@ -101,13 +111,20 @@ The list below contains available keyboard shortcuts grouped by problem areas.
     option, a drop-down list option, an elements path element, or a dialog window tab once selected.
 	Also enters a context menu submenu, if it is available.
 
+## Accessibility Checker Plugin
+
+Please refer to the [Keyboard Shortcuts](#!/guide/dev_accessibility_checker-section-keyboard-shortcuts) section of the [Managing Content Accessibility with Accessibility Checker](#!/guide/dev_accessibility_checker) article.
+
 ## Accessibility and Keyboard Shortcuts Demo
 
-See the [working "Accessibility Support and Keyboard Shortcuts" sample](http://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
+See the [working "Accessibility Support and Keyboard Shortcuts" sample](https://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
 
 ## Related Features
 
 Refer to the following resources for more information about accessibility in CKEditor:
 
 * The [Accessibility Support in CKEditor](#!/guide/dev_a11y) article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The [Managing Content Accessibility with Accessibility Checker](#!/guide/dev_accessibility_checker) article describes an innovative Accessibility Checker plugin that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
 * The [Page Navigation Using the "Tab" Key](#!/guide/dev_tabindex) article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
+* The [CKEditor Section 508 Compliance](#!/guide/dev_section508) article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
+* The [CKEditor WCAG 2.0 Compliance](#!/guide/dev_wcag) article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.

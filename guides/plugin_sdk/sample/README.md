@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -108,7 +108,7 @@ Please note that you can influence the position of the button in the toolbar gro
 
 	// This could position the button at the beginning of the "insert" group.
 	toolbar: 'insert,0'
-	
+
 	// This could position the button at the end of the "insert" group.
 	toolbar: 'insert,100'
 
@@ -183,9 +183,9 @@ of code! Since the `editor.insertHtml` method can be used to add arbitrary HTML 
 the document, you can replace the timestamp logic with your own customized code in
 order to insert other types of content into your document.
 
-## Timestamp Plugin Demo 
+## Timestamp Plugin Demo
 
-See the [working "Timestamp (Creating a Most Basic CKEditor Plugin)" sample](http://sdk.ckeditor.com/samples/timestamp.html) that shows the Timestamp plugin integrated with an editor instance.
+See the [working "Timestamp (Creating a Most Basic CKEditor Plugin)" sample](https://sdk.ckeditor.com/samples/timestamp.html) that shows the Timestamp plugin integrated with an editor instance.
 
 ## Further Reading
 

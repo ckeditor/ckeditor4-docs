@@ -1,11 +1,15 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Issues Tracker Site
 
-CKEditor issues are handled in the [CKEditor Developer Center](http://dev.ckeditor.com/). This is the website used daily by the CKEditor core team to organize and distribute the development workflow. It is also the right place to report issues.
+<p class="tip">
+    CKEditor issues are handled through the <a href="https://github.com/ckeditor/ckeditor-dev/issues">GitHub issues page</a> since the CKEditor 4.7 release (May 25th, 2017). The <a href="https://dev.ckeditor.com">former tracking system</a> is still available in the read-only mode and all past issues are still available publicly.
+</p>
+
+The issues page is used daily by the CKEditor core team to organize and distribute the development workflow. It is also the right place to report issues.
 
 Before you attempt to report an issue, please make sure you read this page and thus help us optimize the management of issues.
 
@@ -26,14 +30,47 @@ Please provide the following when reporting new issues. The more information you
 When filing an issue, please bear these important things in mind:
 
  * **Submit separate reports for each issue.** Do not include more than one issue in the same report.
- * The "Priority", "Milestone", "Version", "Assign to" and "Keywords" fields are reserved for the core development team.
  * Make sure **you are using the latest CKEditor version**. Maybe your issue has already been fixed.
- * For a detailed guide on how to properly report a new issue go to the [Ticket Specs page](https://dev.ckeditor.com/wiki/TicketSpecs).
- 
+ * Follow the instructions in the  **issue template** when reporting an issue.
+
 ## Reporting an Issue
 
 Before clicking the following link, make sure you have read the instructions above!
 
-If you are not a registered user of our tracker, take a minute to [create a new account in the CKEditor Developer Center](https://dev.ckeditor.com/register). Only authenticated users can create tickets.
+Only registered GitHub users may create issues. If you are not registered, take a minute to [create a GitHub account](https://github.com/join).
 
-This is it. Once you log in, you will be ready to [report a CKEditor issue](https://dev.ckeditor.com/newticket).
+Once you log in, you will be ready to [report a CKEditor issue](https://github.com/ckeditor/ckeditor-dev/issues/new).
+
+### Labels
+
+Every issue may be marked with the following labels:
+
+* Status labels &mdash; current issue status:
+    * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:confirmed</span> &ndash; An issue confirmed by the development team.
+    * <span style="background-color:#e6e6e6;padding:0 3px 0 3px">status:pending</span> &ndash; More information is needed to proceed with the issue.
+* Type labels &mdash; the type of the issue:
+    * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">type:bug</span> &ndash; A bug.
+    * <span style="background-color:#1d76db;color:#FFF;padding:0 3px 0 3px">type:feature</span> &ndash; A feature request.
+    * <span style="background-color:#fbca04;padding:0 3px 0 3px">type:task</span>&ndash; Any other issue (refactoring, typo fix, etc).
+    * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">type:failingtest</span> &ndash; A failing test.
+* Resolution labels &mdash; how and why the issue was resolved:
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:duplicate</span> &ndash; A duplicate of an already reported issue.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:expired</span> &ndash; Issue reporter did not provide enough information to reproduce the issue for at least 2 weeks.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, wrong request type, support requests, etc).
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:upstream</span> &ndash; Issue in the third-party software.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:wontfix</span> &ndash; The issue is valid, however, CKSource does not plan to fix it.
+    * If an issue is closed and there is no resolution label, it means that the issue was fixed and merged to the `master` or `major` branch.
+* Browser labels &mdash; for browser-specific bugs:
+    * <span style="background-color:#5319e7;color:#FFF;padding:0 3px 0 3px">browser:NNN</span> &ndash; The issue can only be reproduced in a particular browser.
+* Plugin labels &mdash; for plugin-specific bugs:
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">plugin:NNN</span> &ndash; The plugin which probably causes the issue.
+* Changelog labels:
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">changelog:skip</span> &ndash; A changelog entry should not be added for a given issue.
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">changelog:api</span> &ndash; A changelog entry should be put in the API section of the changelog.
+* Other &mdash; additional information:
+    * <span style="background-color:#34d058;padding:0 3px 0 3px">easy</span> &ndash; Relatively easy to fix. This is a perfect issue if you are willing to [create a Pull Request](#!/guide/dev_contributing_code).
+    * <span style="background-color:#b60205;color:#FFF;padding:0 3px 0 3px">regression</span> &ndash; This issue is a regression.
+    * <span style="background-color:#aaaaaa;padding:0 3px 0 3px">support</span> &ndash; An issue reported by a commercially licensed client.
+    * <span style="background-color:#34d058;padding:0 3px 0 3px">review:easy</span> &ndash; Pull requests that can be reviewed by a Junior Developer before being reviewed by the Reviewer.
+    * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">accessibility</span> &ndash; Issue related to accessibility.
+    * <span style="background-color:#c5def5;color:#000;padding:0 3px 0 3px">target:NNN</span> &ndash; Denotes the branch that the issue should be merged to.

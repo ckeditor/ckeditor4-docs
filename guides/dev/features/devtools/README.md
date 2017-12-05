@@ -1,15 +1,15 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Using Developer Tools Plugin to Customize Dialog Windows
 
 <p class="requirements">
-	This feature is provided through an optional plugin that is not included in the CKEditor distribution packages available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature is provided through an optional plugin that is not included in the CKEditor distribution packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_plugins">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
-An optional CKEditor plugin called [Developer Tools](http://ckeditor.com/addon/devtools) displays tooltips with information about editor dialog windows, such as:
+An optional CKEditor plugin called [Developer Tools](https://ckeditor.com/cke4/addon/devtools) displays tooltips with information about editor dialog windows, such as:
 
 * dialog window name,
 * dialog window tab name,
@@ -31,9 +31,9 @@ The Developer Tools plugin provides two configuration options:
 * CKEDITOR.config.devtools_styles &ndash; sets the CSS styles applied to the tooltip.
 * CKEDITOR.config.devtools_textCallback &ndash; contains a function that returns the text displayed in the tooltip.
 
-## Developer Tools Demo 
+## Developer Tools Demo
 
-See the [working "Developer Tools" sample](http://sdk.ckeditor.com/samples/devtools.html) that showcases how easy it can be to get information about editor dialog windows and their elements. 
+See the [working "Developer Tools" sample](https://sdk.ckeditor.com/samples/devtools.html) that showcases how easy it can be to get information about editor dialog windows and their elements.
 
 ## Related Features
 

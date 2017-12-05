@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -11,7 +11,7 @@ The default installation of CKEditor (that you are probably using now) includes 
 
 ## Where to Look for Plugins?
 
-The [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins) is an online service designed to find and share editor plugins. Its structure, with plugin categories, comprehensive descriptions, and screenshots, makes it easy to understand the plugin features and the comment system lets you socialize with the CKEditor community or provide instant feedback. If you are a plugin developer, the repository is also the best place to showcase your skills and reach a large user base.
+The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) is an online service designed to find and share editor plugins. Its structure, with plugin categories, comprehensive descriptions, and screenshots, makes it easy to understand the plugin features and the comment system lets you socialize with the CKEditor community or provide instant feedback. If you are a plugin developer, the repository is also the best place to showcase your skills and reach a large user base.
 
 ## Online Builder Installation
 
@@ -19,19 +19,19 @@ If you found some interesting plugins in the Add-ons Repository, you can easily 
 
 ### Through CKBuilder
 
-The easiest method is to visit the [CKBuilder](http://ckeditor.com/builder) page and find the plugins that you wish to have in the **Available Plugins** list on the right.
+The easiest method is to visit the [CKBuilder](https://ckeditor.com/cke4/builder) page and find the plugins that you wish to have in the **Available Plugins** list on the right.
 
 <img src="guides/dev_plugins/add_plugin_ckbuilder_3.png" alt="Selected Plugins and Available Plugins lists in CKBuilder" width="778" height="494">
 
 Drag the plugins that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with all selected plugins included.
 
-When you install your custom build, you will see that the additional plugins (in this example: [Language](http://ckeditor.com/addon/language)) are available in your CKEditor.
+When you install your custom build, you will see that the additional plugins (in this example: [Language](https://ckeditor.com/cke4/addon/language)) are available in your CKEditor.
 
 <img src="guides/dev_plugins/add_plugin_ckbuilder_4.png" alt="A custom CKEditor build with the Language plugin" width="502" height="205">
 
 ### Through Add-on Repository
 
-Visit the plugin page in the [Add-ons Repository](http://ckeditor.com/addons/plugins/all) and click the "**Add to my editor**" button.
+Visit the plugin page in the [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) and click the "**Add to my editor**" button.
 
 <img src="guides/dev_plugins/add_plugin_ckbuilder_1.png" alt="Adding a plugin to the editor build" width="416" height="146">
 
@@ -49,18 +49,18 @@ Using CKBuilder is a recommended solution, however, if you have plugins develope
 
 2. **Copy** the plugin files to the `plugins` folder of your CKEditor installation. Each plugin must be placed in a sub-folder that matches its "technical" name.
 
-	For example, the [Language plugin](http://ckeditor.com/addon/language) would be installed into this folder: `<CKEditor folder>/plugins/language`.
+	For example, the [Language plugin](https://ckeditor.com/cke4/addon/language) would be installed into this folder: `<CKEditor folder>/plugins/language`.
 
 3. **Check and resolve plugin dependencies.** If a plugin needs others to work, you will need to add these manually as well.
-	
+
 4. **Enable the plugin.** Use the {@link CKEDITOR.config#extraPlugins extraPlugins} setting to add the plugin to your confiuration:
 
 		config.extraPlugins = 'language';
-	
+
 	If a plugin has any dependencies, you will need to enable these, too.
 
 Your plugin will now be available in your CKEditor installation.
 
 <p class="tip">
-	To avoid the manual installation process <a href="http://ckeditor.com/add/plugin">submit your plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
+	To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/plugin">submit your plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </p>

@@ -1,12 +1,12 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # CKEditor Error Code Reference
 
 <p class="requirements">
-	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="http://ckeditor.com/download">Download</a> site.
+	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </p>
 
 This article contains the list of CKEditor error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
@@ -20,14 +20,14 @@ This article contains the list of CKEditor error codes and their explanation. Th
 ## editor-destroy-iframe
 
 * Location: `plugins/wysiwygarea/plugin.js`
-* Description: Editor’s iframe could not be destroyed correctly, because it had been unloaded before editor was destroyed. Make sure to destroy the editor before detaching it from the DOM.
-* Additional data: none
+* Description: The editor's `<iframe>` could not be destroyed correctly because it had been unloaded before the editor was destroyed. Make sure to destroy the editor before detaching it from the DOM.
+* Additional data: None.
 
 ## editor-incorrect-destroy
 
 * Location: `core/editor.js`
-* Description: Editor is being destroyed before it is fully initialized.
-* Additional data: none
+* Description: The editor is being destroyed before it is fully initialized.
+* Additional data: None.
 
 ## editor-plugin-required
 
@@ -36,6 +36,11 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Additional data:
 	* `plugin`: The name of the plugin that cannot be removed.
 	* `requiredBy`: The name of the plugin whose requirements block the removal.
+
+## embed-no-provider-url
+* Location: `plugins/embed/plugin.js`
+* Description: No [embed provider URL](#!/api/CKEDITOR.config-cfg-embed_provider) configured. Since CKEditor 4.7.0 this value is empty by default.
+* Additional data: None.
 
 ## embedbase-widget-invalid
 
@@ -88,4 +93,10 @@ This article contains the list of CKEditor error codes and their explanation. Th
 
 * Location: `plugins/uploadimage/plugin.js`
 * Description: Upload URL for the Upload Image feature was not defined. Refer to the [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) article for more information.
+* Additional data: None.
+
+## uploadfile-config
+
+* Location: `plugins/uploadfile/plugin.js`
+* Description: Upload URL for the Upload File feature was not defined. Refer to the [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload) article for more information.
 * Additional data: None.

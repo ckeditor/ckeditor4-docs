@@ -1,19 +1,19 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # File Manager Integration
 
 <p class="requirements">
-	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="http://ckeditor.com/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </p>
 
 Once properly set up, all file manager features will automatically become available. This includes the **Upload** tab `(1)` in the **Link**, **Image**, and **Flash Properties** dialog windows as well as the **Browse Server** button `(2)`.
 
 {@img image_dialog_browser_upload.png File browser features available for images in CKEditor}
 
-**Note:** Starting from CKEditor 4.5 it is also possible to [enable uploading pasted and dropped images](#!/guide/dev_upload_widget).
+**Note:** Starting from CKEditor 4.5 it is also possible to [enable uploading pasted and dropped images](#!/guide/dev_file_upload).
 
 ## Basic Configuration
 
@@ -43,8 +43,8 @@ CKEditor integration with a file manager can be customized to your needs. It is 
 For more advanced information on integrating CKEditor with a file manager refer to the following articles:
 
 * [Advanced File Manager Configuration](#!/guide/dev_file_manager_configuration)
-* [CKFinder Integration](#!/guide/ckfinder_integration)
+* [CKFinder Integration](#!/guide/dev_ckfinder_integration)
 * [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)
 * [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
-* [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
+* [Uploading Pasted and Dropped Files](#!/guide/dev_file_upload)
 

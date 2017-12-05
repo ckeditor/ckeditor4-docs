@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -9,9 +9,9 @@ Inline Editing is a new technology introduced in CKEditor 4 that allows you to *
 
 It is a total WYSIWYG experience, because not only the edited content looks like the final outcome, but also the page and the context where the content is placed is the real one. Unlike in [classic editor](#!/guide/dev_framed), there is no `<iframe>` element created for the editing area. The CSS styles used for editor content are exactly the same as on the target page where this content is rendered!
 
-To try it out, see the [inline editing demo](http://sdk.ckeditor.com/samples/inline.html).
+To try it out, see the [inline editing demo](https://sdk.ckeditor.com/samples/inline.html).
 
-<img src="guides/dev_ckeditor_js_load/inline_example.png" alt="Inline editor example" width="585" height="294">
+<img src="guides/dev_ckeditor_js_load/inline_example.png" alt="Inline editor example">
 
 ## Content Styles = Page Styles
 
@@ -52,9 +52,9 @@ When you click inside the content of this `<div>` element, the CKEditor toolbar 
 
 Since CKEditor 4.2 you can also turn `<textarea>` elements into inline editors. When you call the CKEDITOR.inline method on a `<textarea>`, an additional `<div>` element with inline editing enabled will replace the original `<textarea>`.
 
-## Inline Editing Demo 
+## Inline Editing Demo
 
-See the [working "Inline Editor" sample](http://sdk.ckeditor.com/samples/inline.html) that showcases a few usage scenarios for inline editing.
+See the [working "Inline Editor" sample](https://sdk.ckeditor.com/samples/inline.html) that showcases a few usage scenarios for inline editing.
 
 ## Further Reading
 

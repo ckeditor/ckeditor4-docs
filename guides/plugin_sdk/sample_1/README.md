@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -76,9 +76,9 @@ This command opens the `abbrDialog` dialog that we are going to define in a mome
 
 ## Creating the Toolbar Button
 
-The plugin dialog window is to be opened by using a toolbar button. To this
-end, we need to define a button that will be associated with the dialog
-window.
+The plugin dialog window is opened by using a toolbar button. To this
+end, we need to define a button that will be associated with the
+dialog window.
 
 	editor.ui.addButton( 'Abbr', {
 		label: 'Insert Abbreviation',
@@ -91,12 +91,12 @@ The above CKEDITOR.ui.addButton function call created a button named `'Abbr'` wi
  * `label` &ndash; the textual part of the button (if visible) and its tooltip.
  * `command` &ndash; the command to be executed once the button is activated. This is the command we created in the previous step.
  * `toolbar` &ndash; the [toolbar group](#!/guide/dev_toolbar-section-toolbar-groups-configuration) into which the button will be added.
- 
+
 Please note that you can influence the position of the button in the toolbar group by providing an optional index, for example:
 
 	// This could position the button at the beginning of the "insert" group.
 	toolbar: 'insert,0'
-	
+
 	// This could position the button at the end of the "insert" group.
 	toolbar: 'insert,100'
 
@@ -135,13 +135,13 @@ Clicking the button should open the `abbrDialog` dialog window. One interesting 
 
 In the code above we registered the `abbrDialog` dialog name, telling the editor to load the dialog definition from the `dialog/abbr.js` file out of the plugin installation folder (`this.path`).
 
-### The Dialog Defintion
+### The Dialog Definition
 
 It is time to work on the `dialogs/abbr.js` file itself. First, we will simply repeat the CKEDITOR.dialog.add call, but now we will return the dialog definition to the editor:
 
 	CKEDITOR.dialog.add( 'abbrDialog', function ( editor ) {
 		return {
-			... The dialog defition comes here ...
+			... The dialog definition comes here ...
 		};
 	});
 

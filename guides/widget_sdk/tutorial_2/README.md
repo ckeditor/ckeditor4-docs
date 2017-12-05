@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -11,7 +11,7 @@ The aim of this tutorial is to demonstrate **how to extend an existing CKEditor 
 [Widgets are an innovative feature](#!/guide/dev_widgets) that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
 
 * CKEditor 4.3 and above.
-* The [Widget plugin](http://ckeditor.com/addon/widget) along with its dependencies.
+* The [Widget plugin](https://ckeditor.com/cke4/addon/widget) along with its dependencies.
 
 ## Introduction
 
@@ -77,7 +77,7 @@ Open the `dialogs/simplebox.js` file in a text editor now. For a start, we will 
 	} );
 
 <p class="tip">
-	See the <a href="http://docs.ckeditor.com/#!/api/CKEDITOR.dialog.definition">CKEDITOR.dialog.definition</a> documentation for a full reference on defining editor dialog windows.
+	See the <a href="#!/api/CKEDITOR.dialog.definition">CKEDITOR.dialog.definition</a> documentation for a full reference on defining editor dialog windows.
 </p>
 
 In our case we will give the dialog window a name (`simplebox`) and use the `{@link CKEDITOR.dialog.definition#title title}`, `{@link CKEDITOR.dialog.definition#minWidth minWidth}`, and `{@link CKEDITOR.dialog.definition#minHeight minHeight}` parameters to define its title and minimum dimensions, respectively.
@@ -448,6 +448,6 @@ If you double click an existing widget instance, the dialog window will open aga
 
 {@img simplebox2_example1.png Updated Simple Box widget}
 
-## Simple Box Widget Demo 
+## Simple Box Widget Demo
 
-See the [working "SimpleBox (Creating a Custom Widget)" sample](http://sdk.ckeditor.com/samples/simplebox.html) that shows the final version of the Simple Box widget integrated with an editor instance.
+See the [working "SimpleBox (Creating a Custom Widget)" sample](https://sdk.ckeditor.com/samples/simplebox.html) that shows the final version of the Simple Box widget integrated with an editor instance.

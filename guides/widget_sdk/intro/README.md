@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -8,7 +8,7 @@ For licensing, see LICENSE.md.
 The aim of this SDK is to show you how to create a basic CKEditor widget.
 
 <p class="requirements">
-	This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="http://ckeditor.com/download">Download</a> site and <a href="#!/guide/dev_widget_installation">needs to be added to your custom build</a> with <a href="http://ckeditor.com/builder">CKBuilder</a>.
+	This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and <a href="#!/guide/dev_widget_installation">needs to be added to your custom build</a> with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
 
 ## What is a Widget?
@@ -21,7 +21,7 @@ Read more about widgets in the general [Introduction to Widgets](#!/guide/dev_wi
 
 ## Technical Background
 
-Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic [Widget plugin](http://ckeditor.com/addon/widget)**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in [CKEditor Add-ons Repository](http://ckeditor.com/addons/plugins/all), and can be added to your editor installation as described in the [Widget Installation](#!/guide/dev_widget_installation) article.
+Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic [Widget plugin](https://ckeditor.com/cke4/addon/widget)**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all), and can be added to your editor installation as described in the [Widget Installation](#!/guide/dev_widget_installation) article.
 
 ## Developing a Custom Widget
 
@@ -29,4 +29,4 @@ Learning by example is always the best idea, so check our **widget tutorials** t
 
  1. **[Part 1](#!/guide/widget_sdk_tutorial_1)** &ndash; Develop a **basic template widget** that lets the user insert a simple box with a title and comment fields into the document.
  2. **[Part 2](#!/guide/widget_sdk_tutorial_2)** &ndash; Modify the simple box widget by adding a **widget dialog window with widget editing capabilities**.
- 3. **[Demo](http://sdk.ckeditor.com/samples/simplebox.html)** &ndash; See the **working demo** of the custom widget created in the tutorials live in action in CKEditor SDK.
+ 3. **[Demo](https://sdk.ckeditor.com/samples/simplebox.html)** &ndash; See the **working demo** of the custom widget created in the tutorials live in action in CKEditor SDK.

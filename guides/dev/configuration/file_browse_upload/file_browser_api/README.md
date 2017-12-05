@@ -1,12 +1,12 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # File Browser API - Creating a Custom File Manager
 
 <p class="requirements">
-	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="http://ckeditor.com/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </p>
 
 To connect a file browser/uploader that is already compatible with CKEditor, refer to the [File Manager Integration](#!/guide/dev_file_browse_upload) article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
@@ -71,12 +71,12 @@ The following example shows how to send the URL from a file manager using JavaSc
 			function getUrlParam( paramName ) {
 				var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
 				var match = window.location.search.match( reParam );
-	
+
 				return ( match && match.length > 1 ) ? match[1] : null;
 			}
 			// Simulate user action of selecting a file to be returned to CKEditor.
 			function returnFileUrl() {
-	
+
 				var funcNum = getUrlParam( 'CKEditorFuncNum' );
 				var fileUrl = '/path/to/file.txt';
 				window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl );
@@ -105,12 +105,12 @@ Suppose that apart from passing the `fileUrl` value that is assigned to an appro
 			function getUrlParam( paramName ) {
 				var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
 				var match = window.location.search.match( reParam );
-	
+
 				return ( match && match.length > 1 ) ? match[1] : null;
 			}
 			// Simulate user action of selecting a file to be returned to CKEditor.
 			function returnFileUrl() {
-	
+
 				var funcNum = getUrlParam( 'CKEditorFuncNum' );
 				var fileUrl = 'http://c.cksource.com/a/1/img/sample.jpg';
 				window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl, function() {
@@ -155,12 +155,15 @@ The following code shows how to send back the URL of an uploaded file from the P
 	$CKEditor = $_GET['CKEditor'] ;
 	// Optional: might be used to provide localized messages.
 	$langCode = $_GET['langCode'] ;
-	
+	// Optional: compare it with the value of `ckCsrfToken` sent in a cookie to protect your server side uploader against CSRF.
+	// Available since CKEditor 4.5.6.
+	$token = $_POST['ckCsrfToken'] ;
+
 	// Check the $_FILES array and save the file. Assign the correct path to a variable ($url).
 	$url = '/path/to/uploaded/file.ext';
 	// Usually you will only assign something here if the file could not be uploaded.
 	$message = 'The uploaded file has been renamed';
-	
+
 	echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
 	?>
 	</body>
@@ -172,6 +175,6 @@ For more information on integrating CKEditor with a file manager refer to the fo
 
 * [File Manager Integration](#!/guide/dev_file_browse_upload)
 * [Advanced File Manager Configuration](#!/guide/dev_file_manager_configuration)
-* [CKFinder Integration](#!/guide/ckfinder_integration)
+* [CKFinder Integration](#!/guide/dev_ckfinder_integration)
 * [Adding the File Manager to Dialog Windows](#!/guide/dev_dialog_add_file_browser)
-* [Uploading Pasted and Dropped Images](#!/guide/upload_widget)
+* [Uploading Pasted and Dropped Images](#!/guide/dev_file_upload)

@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -29,6 +29,6 @@ Both configuration settings can use one of the following options:
 	</p>
 </div>
 
-## Enter Key Configuration Demo 
+## Enter Key Configuration Demo
 
-See the [working "Enter Key Configuration" sample](http://sdk.ckeditor.com/samples/enterkey.html) that showcases the effects of using different settings for <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys on editor output.
+See the [working "Enter Key Configuration" sample](https://sdk.ckeditor.com/samples/enterkey.html) that showcases the effects of using different settings for <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys on editor output.

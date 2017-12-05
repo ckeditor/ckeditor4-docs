@@ -1,15 +1,15 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Applying Block-Level Text Formats
 
 <p class="requirements">
-	This feature is provided through a plugin that is included in the Standard and Full presets available from the official CKEditor <a href="http://ckeditor.com/download">Download</a> site, although some text formats are disabled in the Standard preset.
+	This feature is provided through a plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text formats are disabled in the Standard preset.
 </p>
 
-The [Format](http://ckeditor.com/addon/format) plugin provides the ability to add block-level text formatting to your document. When enabled, it introduces the <img class="inline" src="guides/dev_format/format_01.png" alt="Paragraph Format" title="Paragraph Format"> toolbar button that applies these text formats. The formats work on block level which means that you do not need to select any text in order to apply them and entire blocks will be affected by your choice.
+The [Format](https://ckeditor.com/cke4/addon/format) plugin provides the ability to add block-level text formatting to your document. When enabled, it introduces the <img class="inline" src="guides/dev_format/format_01.png" alt="Paragraph Format" title="Paragraph Format"> toolbar button that applies these text formats. The formats work on block level which means that you do not need to select any text in order to apply them and entire blocks will be affected by your choice.
 
 {@img format_02.png Format drop-down available in CKEditor toolbar}
 
@@ -25,7 +25,7 @@ Open the `config.js` file available in your `ckeditor` directory, and edit the `
 
 	// Enable all default text formats:
 	config.format_tags = 'p;h1;h2;h3;h4;h5;h6;pre;address;div';
-	
+
 	// Enable a limited set of text formats:
 	config.format_tags = 'p;h1;h2;pre;div';
 
@@ -45,7 +45,7 @@ If you want to change the default settings for a particular editor instance, pro
 	CKEDITOR.replace( 'editor1', {
 		format_tags: 'p;h1;h2;h3;h4;h5;h6;pre;address;div'
 	});
-	
+
 	// Enable a limited set of text formats:
 	CKEDITOR.replace( 'editor1', {
 		format_tags: 'p;h1;h2;pre;div'
@@ -77,9 +77,9 @@ Remember that depending on your use case, the CSS classes for text formats need 
 	The block-level text format feature is automatically integrated with <a href="#!/guide/dev_acf">Advanced Content Filter</a>, so all custom format definitions are treated as allowed by the editor content filtering mechanism.
 </p>
 
-## Block-Level Text Formats Demo 
+## Block-Level Text Formats Demo
 
-See the [working "Applying Block-Level Text Formats" sample](http://sdk.ckeditor.com/samples/format.html) that showcases the usage and customization of basic text formatting.
+See the [working "Applying Block-Level Text Formats" sample](https://sdk.ckeditor.com/samples/format.html) that showcases the usage and customization of basic text formatting.
 
 ## Related Features
 

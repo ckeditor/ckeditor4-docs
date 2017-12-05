@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -37,7 +37,7 @@ To propose a bug fix or a new functionality you need to create a pull request in
 
 ## Branches
 
-When the environment is set up and running you can start working on your patch. First, create a separate branch to group your changes. If there is a ticket on http://dev.ckeditor.com/ use its number, otherwise [create a new ticket](#!/guide/dev_issues_tracker) yourself and use its number or just pick any meaningful name:
+When the environment is set up and running you can start working on your patch. First, create a separate branch to group your changes. If there is an issue on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) use its number, otherwise [create a new issue](#!/guide/dev_issues_tracker) yourself and use its number or just pick any meaningful name:
 
 	git checkout -b t/12345
 
@@ -51,7 +51,7 @@ Every change which can be tested automatically should have at least one automate
 	If you do not know how to write tests for your patch, you can make an <a href="#!/guide/dev_contributing-section-proposing-incomplete-patches">incomplete pull request</a> and the core team will give you some hints or perhaps someone else from the community will step in.
 </p>
 
-Some type of features or bugs cannot be tested automatically. In such cases, make sure to create a manual test (see [this one](https://github.com/ckeditor/ckeditor-dev/tree/master/tests/tickets/12735) for instance).
+Some types of features or bugs cannot be tested automatically. In such cases, create a manual test (see [this one](https://github.com/ckeditor/ckeditor-dev/tree/master/tests/tickets/12735) for instance).
 
 <p class="tip">
 	To see manual tests in the Bender.js dashboard you need to change the filter from <code>is:unit</code> to <code>is:manual</code>.
@@ -80,7 +80,7 @@ Reviewing takes a lot of time and the core team is not always able to find time 
 
 There are two main groups of changes that usually cannot be accepted as pull requests:
 
-* New plugins. If you want to propose a new functionality which does not require changes in the core plugins, we kindly ask you to create a new plugin and add it to the [Add-Ons Repository](http://ckeditor.com/addons/plugins). The reason for that is that the core developers are able to maintain a limited number of plugins.
+* New plugins. If you want to propose a new functionality which does not require changes in the core plugins, we kindly ask you to create a new plugin and add it to the [Add-Ons Repository](https://ckeditor.com/cke4/addons/plugins/all). The reason for that is that the core developers are able to maintain a limited number of plugins.
 * Changes in language files. All localization fixes and improvements should be done through the [CKEditor UI Translation Center](https://www.transifex.net/projects/p/ckeditor/). Read more in the [Localization](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) guide.
 
 ## Proposing Incomplete Patches

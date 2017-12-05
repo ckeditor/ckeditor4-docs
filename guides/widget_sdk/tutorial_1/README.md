@@ -1,5 +1,5 @@
 <!--
-Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -11,13 +11,13 @@ The aim of this tutorial is to demonstrate **how to create a basic CKEditor widg
 [Widgets are an innovative feature](#!/guide/dev_widgets) that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
 
 * CKEditor 4.3 and above.
-* The [Widget plugin](http://ckeditor.com/addon/widget) along with its dependencies.
+* The [Widget plugin](https://ckeditor.com/cke4/addon/widget) along with its dependencies.
 
 ## Introduction
 
 We are going to develop a basic template widget that lets the user insert a simple box with a title and comment fields into the document. The widget will create a predefined content structure that will be added to the document when the user clicks a dedicated toolbar button.
 
-Please note that technically **widgets are defined in [CKEditor plugins](http://docs.ckeditor.com/#!/guide/plugin_sdk_intro)** so all the rules of creating plugins as well as the [Plugin API](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins) apply to them. Additionally, widgets also expose a dedicated [Widget API](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget) that we are going to use (and explain) in this tutorial.
+Please note that technically **widgets are defined in [CKEditor plugins](#!/guide/plugin_sdk_intro)** so all the rules of creating plugins as well as the [Plugin API](#!/api/CKEDITOR.plugins) apply to them. Additionally, widgets also expose a dedicated [Widget API](#!/api/CKEDITOR.plugins.widget) that we are going to use (and explain) in this tutorial.
 
 The widget plugin will be named `simplebox`.
 
@@ -50,7 +50,7 @@ With the following structure ready, it is time to open the `plugin.js` file in a
 
 All CKEditor plugins are created by using the `CKEDITOR.plugins#add` function. This function should contain the plugin name (again, the same as the directory name, so `simplebox` in our case) and the plugin logic placed inside the `{@link CKEDITOR.pluginDefinition#init init}` function that is called upon the initialization of the editor instance.
 
-The `simplebox` plugin is going to define the `simplebox` widget. To do this, the plugin needs to reference the generic [Widget plugin](http://ckeditor.com/addon/widget) that provides the [Widget API](http://docs.ckeditor.com/#!/api/CKEDITOR.plugins.widget). This is done in the `{@link CKEDITOR.pluginDefinition#requires requires}` property.
+The `simplebox` plugin is going to define the `simplebox` widget. To do this, the plugin needs to reference the generic [Widget plugin](https://ckeditor.com/cke4/addon/widget) that provides the [Widget API](#!/api/CKEDITOR.plugins.widget). This is done in the `{@link CKEDITOR.pluginDefinition#requires requires}` property.
 
 Additionally, as we are going to define a toolbar button, the `icons` property needs to be set and include the name of the icon file.
 
@@ -209,7 +209,7 @@ After you reload the page and insert the widget again, you will see that thanks 
 
 ## Adjusting Advanced Content Filter
 
-You might remember that since the [introduction of content filtering](http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter) in CKEditor [each plugin that adds editor content must define a list of HTML elements, classes, and styles](http://docs.ckeditor.com/#!/guide/plugin_sdk_integration_with_acf) that need to be added to the filter for the editor to allow them. Additionally, you should also define the {@link CKEDITOR.feature#requiredContent minimum HTML code} that is required for the feature to work which will cause the widget to be disabled if the user configuration overwrites the filtering rules added to the filter by this feature.
+You might remember that since the [introduction of content filtering](#!/guide/dev_advanced_content_filter) in CKEditor [each plugin that adds editor content must define a list of HTML elements, classes, and styles](#!/guide/plugin_sdk_integration_with_acf) that need to be added to the filter for the editor to allow them. Additionally, you should also define the {@link CKEDITOR.feature#requiredContent minimum HTML code} that is required for the feature to work which will cause the widget to be disabled if the user configuration overwrites the filtering rules added to the filter by this feature.
 
 The need for these changes might not have been immediately visible so far in our sample since we just kept on reloading the same page and did not try to load the data back into the editor. Let us simulate this scenario now by inserting the widget again, going to Source view and back to WYSIWYG view.
 
@@ -278,7 +278,7 @@ Content filter adjustments for editable widget parts are done straight in their 
 In this case we allowed just bold, italic, and line breaks in both fields and additionally lists and paragraphs in the content field.
 
 <p class="tip">
-	Please note that thanks to <a href="http://docs.ckeditor.com/#!/guide/dev_advanced_content_filter-section-4">content transformations</a> with the configuration used above the editor will allow all forms of bold and italic formatting (so for example <code>&lt;strong&gt</code>, <code>&lt;b&gt</code> and <code>&lt;span style="font-weight:700|800|900|bold"&gt</code>). It is enough to list just one of the forms and others will get transformed automatically to the allowed form.
+	Please note that thanks to <a href="#!/guide/dev_advanced_content_filter-section-4">content transformations</a> with the configuration used above the editor will allow all forms of bold and italic formatting (so for example <code>&lt;strong&gt</code>, <code>&lt;b&gt</code> and <code>&lt;span style="font-weight:700|800|900|bold"&gt</code>). It is enough to list just one of the forms and others will get transformed automatically to the allowed form.
 </p>
 
 When you reload the page now, you will see that when you try to edit the widget fields, some toolbar items become greyed out (meaning they are not available in this context) and you will be unable to use them. Likewise, if you used them in Source mode, the editor would cut them out when switching to WYSIWYG view or saving the document.

@@ -3,7 +3,7 @@
 	url = https://github.com/ckeditor/ckeditor-dev.git
 [submodule "repos/ckeditor-plugin-scayt"]
 	path = repos/ckeditor-plugin-scayt
-	url = git@github.com:WebSpellChecker/ckeditor-plugin-scayt.git
+	url = https://github.com/WebSpellChecker/ckeditor-plugin-scayt.git
 [submodule "repos/ckeditor-plugin-wsc"]
 	path = repos/ckeditor-plugin-wsc
-	url = git@github.com:WebSpellChecker/ckeditor-plugin-wsc.git
+	url = https://github.com/WebSpellChecker/ckeditor-plugin-wsc.git

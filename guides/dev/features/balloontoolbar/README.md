@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 This plugin adds a possibility to display a toolbar, pointing at a particular element in the editor content.
 
-[[IMG]]
+{@img balloon-toolbar.png}
 
 ## Toolbar Contexts
 
@@ -28,7 +28,7 @@ editor.balloonToolbars.create ( {
 } );
 ```
 
-[[GIF from SDK mby? As one clicks between the link and the image.]]
+{@img balloon-toolbar.gif}
 
 For more information on creating contexts, see <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.plugins.balloontoolbar.contextManager-method-create"><code>contextManager.create</code></a> API docs.
 

@@ -519,6 +519,14 @@
 										"meta_keywords": "ckeditor, editor, wysiwyg, toolbar, button, buttons, configurator, basic, advanced, configuration, configure, modify, modification, change, customize, customization, customise, customisation"
 									},
 									{
+										"name": "dev_balloontoolbar",
+										"url": "dev/features/balloontoolbar",
+										"title": "Balloon Toolbar",
+										"description": "Using Balloon Toolbars in CKEditor.",
+										"meta_description": "Using Balloon Toolbars in CKEditor.",
+										"meta_keywords": "ckeditor, editor, wysiwyg, ui, interface, toolbar, buttons, balloon, inline, floating"
+									},
+									{
 										"name": "dev_toolbarlocation",
 										"url": "dev/features/toolbarlocation",
 										"title": "Toolbar Location",

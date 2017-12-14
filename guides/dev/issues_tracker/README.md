@@ -56,7 +56,8 @@ Every issue may be marked with the following labels:
 * Resolution labels &mdash; how and why the issue was resolved:
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:duplicate</span> &ndash; A duplicate of an already reported issue.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:expired</span> &ndash; Issue reporter did not provide enough information to reproduce the issue for at least 2 weeks.
-    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (not reproducible, wrong request type, support requests, etc).
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:invalid</span> &ndash; Not a valid issue (wrong request type, support requests, etc).
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:cantreproduce</span> &ndash; A valid bug report that is not reproducible.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:upstream</span> &ndash; Issue in the third-party software.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:wontfix</span> &ndash; The issue is valid, however, CKSource does not plan to fix it.
     * If an issue is closed and there is no resolution label, it means that the issue was fixed and merged to the `master` or `major` branch.

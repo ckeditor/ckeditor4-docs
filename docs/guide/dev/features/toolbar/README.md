@@ -20,7 +20,7 @@ one of the most common requirements.
 
 <info-box hint>
 	The <strong>most recommended approach to adjusting the editor</strong> to your needs is to start from creating a
-	<a href="http://ckeditor.com/builder">custom build</a>, removing unwanted features before they even
+	<a href="https://ckeditor.com/cke4/builder">custom build</a>, removing unwanted features before they even
 	make it to your toolbar. It is a bad practice to download the Full package and then
 	TODO:<a href="#!/api/CKEDITOR.config-cfg-removePlugins">remove plugins</a> or
 	TODO:<a href="#!/api/CKEDITOR.config-cfg-removeButtons">buttons</a> in your configuration.
@@ -72,7 +72,7 @@ When you are happy with your toolbar, copy the modified toolbar configuration fr
 
 ## Custom Toolbar Demo
 
-See the [working "Custom Editor Toolbar" sample](http://sdk.ckeditor.com/samples/toolbar.html) that showcases an editor instance with a one-row toolbar set to include just a few most relevant editing features.
+See the [working "Custom Editor Toolbar" sample](https://sdk.ckeditor.com/samples/toolbar.html) that showcases an editor instance with a one-row toolbar set to include just a few most relevant editing features.
 
 ## Related Features
 

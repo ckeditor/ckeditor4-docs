@@ -104,7 +104,7 @@ The following figure shows the tooltip that describes the **URL** field of the *
 
 CKEditor dialog windows can be resized by using the resizing grip located in the bottom right-hand corner of a dialog window (for RTL languages — in the bottom left-hand corner).
 
-{@img captionedimage_03.png The resizing grip of a CKEditor dialog window}
+{@img howtos_captionedimage_03.png The resizing grip of a CKEditor dialog window}
 
 You can disable the resizing feature completely by setting the {@link CKEDITOR.dialog.definition#resizable resizable} parameter to  CKEDITOR#DIALOG_RESIZE_NONE.
 

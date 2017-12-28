@@ -6,7 +6,8 @@
 		"grunt": "~0.4.5",
 		"load-grunt-tasks": "~0.6.0",
 		"grunt-contrib-copy": "~0.8.0",
-		"dargs": "~4.0.0"
+		"dargs": "~4.0.0",
+	  	"umberto": "^0.3.43"
 	},
 	"author": "CKSource (http://cksource.com/)",
 	"repository": {

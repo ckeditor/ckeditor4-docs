@@ -1,6 +1,6 @@
 ---
 category: api-reference
 ---
-# API Reference
+# CKEditor 4 API Reference
 
 Coming soon...

@@ -214,9 +214,12 @@
 	{
 	  "name": "API",
 	  "id": "api-reference",
-	  "sourceDir": "api",
+	  "sourceDir": "api/data",
 	  "slug": "api",
-	  "type": "jsduck"
+	  "type": "jsduck",
+	  "middlewares": [
+		"relation-fixer"
+	  ]
 	}
   ]
 }

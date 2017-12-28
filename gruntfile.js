@@ -10,6 +10,7 @@ module.exports = function( grunt ) {
 
 	grunt.loadTasks( 'dev/tasks' );
 	grunt.registerTask( 'default', [ 'jsduck:docs', 'copy:source' ] );
+	grunt.registerTask( 'api', [ 'jsduck:api' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
@@ -60,6 +61,29 @@ module.exports = function( grunt ) {
 					welcome: 'source/welcome.html',
 					guides: grunt.option( 'guides' ) || 'guides/guides.json',
 					output: 'build',
+					external: 'Blob,File,FileReader,DocumentFragment',
+					exclude: '<%= path %>/plugins/codesnippet/lib',
+					'ignore-html': 'source'
+				}
+			},
+			api: {
+				src: [
+					'<%= path %>/core',
+					'<%= path %>/plugins',
+					'<%= path %>/adapters',
+					'<%= path %>/ckeditor.js',
+
+					'repos/ckeditor-plugin-scayt',
+					'repos/ckeditor-plugin-wsc'
+				],
+
+				cmd: 'ckeditor-jsduck',
+
+				options: {
+					tags: 'source/customs.rb',
+					warnings: [ '-nodoc', '-image_unused' ],
+					output: 'docs/api/data',
+					export: 'full',
 					external: 'Blob,File,FileReader,DocumentFragment',
 					exclude: '<%= path %>/plugins/codesnippet/lib',
 					'ignore-html': 'source'

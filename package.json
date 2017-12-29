@@ -1,21 +1,22 @@
 {
-	"name": "ckeditor-docs",
-	"version": "1.0.0",
-	"description": "The official documentation of CKEditor 4. http://docs.ckeditor.com",
-	"dependencies": {
-		"dargs": "~4.0.0",
-		"fs-extra": "^5.0.0",
-		"glob": "^7.1.2",
-		"grunt": "~0.4.5",
-		"grunt-contrib-copy": "~0.8.0",
-		"load-grunt-tasks": "~0.6.0",
-		"mime": "^2.1.0",
-		"umberto": "^0.3.43"
-	},
-	"author": "CKSource (http://cksource.com/)",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ckeditor/ckeditor-docs"
-	},
-	"license": "For licensing, see LICENSE.md."
+  "name": "ckeditor-docs",
+  "version": "1.0.0",
+  "description": "The official documentation of CKEditor 4. http://docs.ckeditor.com",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "dargs": "~4.0.0",
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "grunt": "~0.4.5",
+    "grunt-contrib-copy": "~0.8.0",
+    "load-grunt-tasks": "~0.6.0",
+    "mime": "^2.1.0",
+    "umberto": "^0.3.43"
+  },
+  "author": "CKSource (http://cksource.com/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckeditor/ckeditor-docs"
+  },
+  "license": "For licensing, see LICENSE.md."
 }

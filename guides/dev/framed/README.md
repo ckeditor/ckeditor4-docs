@@ -9,7 +9,7 @@ Classic editing is still probably the most common way to use CKEditor. In this u
 
 This method is used in the [Quick Start Guide](#!/guide/dev_installation-section-adding-ckeditor-to-your-page) example. To try it out, see also the [classic editing demo](https://sdk.ckeditor.com/samples/classic.html).
 
-<img src="guides/dev_ckeditor_js_load/classic_example.png" alt="Classic editor example">
+<img src="%BASE_PATH%/assets/img/classic_example.png" alt="Classic editor example">
 
 ## Content Styles vs. Page Styles
 

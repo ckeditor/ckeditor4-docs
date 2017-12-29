@@ -1087,7 +1087,7 @@
 					{
 						"name": "skin_sdk_chameleon",
 						"url": "skin_sdk/chameleon",
-						"title": "\"Chameleon\" Feature",
+						"title": "Chameleon Feature",
 						"description": "Information about CKEditor \"chameleon\" feature.",
 						"meta_description": "Information about CKEditor \"chameleon\" feature.",
 						"meta_keywords": "ckeditor, editor, wysiwyg, skin, skins, tutorial, sample, sdk, example, development, chameleon, color, colour, ui, interface"

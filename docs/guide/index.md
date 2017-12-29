@@ -1,6 +1,6 @@
 ---
 category: guide
 ---
-# CKEditor 4 guides
+# CKEditor 4 Guides
 
 Coming soon...

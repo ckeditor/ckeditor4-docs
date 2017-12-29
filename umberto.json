@@ -25,7 +25,8 @@
 				{
 				  "name": "Inserting CKEditor",
 				  "id": "inserting-ckeditor",
-				  "slug": "inserting-ckeditor"
+				  "slug": "inserting-ckeditor",
+				  "order": 70
 				}
 			  ]
 			},
@@ -37,17 +38,20 @@
 				{
 				  "name": "Installing Components",
 				  "id": "installing-components",
-				  "slug": "installing-components"
+				  "slug": "installing-components",
+				  "order": 28
 				},
 				{
 				  "name": "Upgrading",
 				  "id": "upgrading",
-				  "slug": "upgrading"
+				  "slug": "upgrading",
+				  "order": 32
 				},
 				{
 				  "name": "Building CKEditor",
 				  "id": "building-ckeditor",
-				  "slug": "building-ckeditor"
+				  "slug": "building-ckeditor",
+				  "order": 36
 				}
 			  ]
 			},
@@ -147,7 +151,8 @@
 				{
 				  "name": "Advanced Content Filter",
 				  "id": "advanced-content-filter",
-				  "slug": "advanced-content-filter"
+				  "slug": "advanced-content-filter",
+				  "order": 30
 				}
 			  ]
 			},
@@ -158,8 +163,8 @@
 			},
 			{
 			  "name": "Compatibility, Compliance, License",
-			  "id": "compatibility",
-			  "slug": "compatibility"
+			  "id": "compatibility-compliance-license",
+			  "slug": "compatibility-compliance-license"
 			},
 			{
 			  "name": "HOWTOs",
@@ -170,19 +175,20 @@
 		},
 		{
 		  "name": "CKEditor 4 Plugin SDK",
-		  "id": "cke4-plugin-sdk",
-		  "slug": "cke4-plugin-sdk",
+		  "id": "ckeditor-4-plugin-sdk",
+		  "slug": "ckeditor-4-plugin-sdk",
 		  "categories": [
 			{
 			  "name": "Simple Plugin Tutorial",
 			  "id": "simple-plugin-tutorial",
-			  "slug": "simple-plugin-tutorial"
+			  "slug": "simple-plugin-tutorial",
+			  "order": 50
 			}
 		  ]
 		},
 		{
 		  "name": "CKEditor 4 Widget SDK",
-		  "id": "cke4-widget-sdk",
+		  "id": "ckeditor-4-widget-sdk",
 		  "slug": "cke4-widget-sdk",
 		  "categories": [
 			{
@@ -194,8 +200,8 @@
 		},
 		{
 		  "name": "CKEditor 4 Skin SDK",
-		  "id": "cke4-skin-sdk",
-		  "slug": "cke4-skin-sdk",
+		  "id": "ckeditor-4-skin-sdk",
+		  "slug": "ckeditor-4-skin-sdk",
 		  "categories": [
 			{
 			  "name": "Advanced Concepts",
@@ -204,8 +210,8 @@
 			},
 			{
 			  "name": "Creating a Custom Skin",
-			  "id": "creating-custom-skin",
-			  "slug": "creating-custom-skin"
+			  "id": "creating-a-custom-skin",
+			  "slug": "creating-a-custom-skin"
 			}
 		  ]
 		}

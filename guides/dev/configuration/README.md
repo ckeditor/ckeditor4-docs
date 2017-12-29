@@ -3,7 +3,7 @@ Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-#Setting CKEditor Configuration
+# Setting CKEditor Configuration
 
 CKEditor comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. The main configuration file is named `config.js`. This file can be found in the root of the CKEditor installation folder.
 

@@ -17,8 +17,8 @@ module.exports = ( {
 	assetsDir,
 	guidesConfig
 } = {} ) => {
-	fs.emptyDirSync( path.resolve( dstDir ) );
-	fs.emptyDirSync( path.resolve( assetsDir ) );
+	// fs.emptyDirSync( path.resolve( dstDir ) ); // TODO: uncomment later
+	// fs.emptyDirSync( path.resolve( assetsDir ) );
 
 	const sourceFilePaths = glob.sync( path.join( srcDir, '**', '*' ), {
 		ignore: [
@@ -38,6 +38,12 @@ module.exports = ( {
 			// TODO: Process the file.
 			fileContent = addFrontMatter( fileContent, filePath.replace( 'guides/', '' ), guidesConfig );
 
+			if ( !fileContent ) {
+				console.error( `Failed to port guide: ${ filePath }` );
+
+				continue;
+			}
+
 			outputPath = path.resolve( dstDir, filePath.replace( 'guides/', '' ) );
 		} else if ( mimeType.startsWith( 'image/' ) ) {
 			outputPath = path.resolve( assetsDir, 'img', path.basename( filePath ) );
@@ -45,21 +51,18 @@ module.exports = ( {
 			outputPath = path.resolve( assetsDir, path.basename( filePath ) );
 		}
 
-		const outputDir = path.dirname( outputPath );
+		// const outputDir = path.dirname( outputPath );
 
-		if ( fs.existsSync( outputPath ) ) {
-			filesToRename.push( filePath );
-
-			continue;
-		}
+		// TODO: uncomment
+		// if ( fs.existsSync( outputPath ) ) {
+		// 	filesToRename.push( filePath );
+		//
+		// 	continue;
+		// }
 
 		if ( filesToRename.length > 0 ) {
 			continue;
 		}
-
-		// if ( !fs.existsSync( outputDir ) ) {
-		// 	fs.mkdirsSync( outputDir );
-		// }
 
 		try {
 			fs.outputFileSync( outputPath, fileContent )
@@ -67,13 +70,6 @@ module.exports = ( {
 		} catch ( err ) {
 			console.error( `Error writing ${ outputPath }: ${ err }` )
 		}
-
-		// try {
-		// 	fs.copySync( path.resolve( filePath ), outputPath )
-		// 	console.log( `Successfully written ${ outputPath }` )
-		// } catch ( err ) {
-		// 	console.error( `Error writing ${ outputPath }: ${ err }` )
-		// }
 	}
 
 	if ( filesToRename.length > 0 ) {

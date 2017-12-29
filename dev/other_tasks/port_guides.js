@@ -3,7 +3,7 @@ const path = require( 'path' );
 
 portGuides( {
 	srcDir: 'guides',
-	dstDir: path.resolve( 'tmp/guide' ),
-	assetsDir: path.resolve( 'tmp/assets' ),
+	dstDir: path.resolve( 'docs/guide' ),
+	assetsDir: path.resolve( 'docs/assets' ),
 	guidesConfig: require( '../../guides/guides.json' )
 } );

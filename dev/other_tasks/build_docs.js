@@ -10,6 +10,6 @@
 const Umberto = require( 'umberto' );
 
 Umberto.buildSingleProject( {
-	skipApi: true,
+	skipApi: false,
 	skipValidation: true
 } );

@@ -10,9 +10,18 @@ const cheerio = require( 'cheerio' );
 
 module.exports = ( content, guidesConfig ) => {
 	let newContent = content;
-	const regexp = /\[([^\]]+)\]\((#!\/[^\s)]+)\)/g;
 
-	newContent = newContent.replace( regexp, ( match, linkText, href ) => {
+	// Fix JSDoc links.
+	const regexpJsd = /{@link\s+(CKEDITOR[^\s}]+)\s*([^}]*)/g;
+
+	newContent = newContent.replace( regexpJsd, ( match, href, linkText ) => {
+
+	} );
+
+	// Fix markdown links.
+	const regexpMd = /\[([^\]]+)\]\((#!\/[^\s)]+)\)/g;
+
+	newContent = newContent.replace( regexpMd, ( match, linkText, href ) => {
 		if ( href.startsWith( '#!/guide' ) ) {
 			if ( href === '#!/guides' ) {
 				return `{@link guide ${ linkText }}`;
@@ -36,9 +45,21 @@ module.exports = ( content, guidesConfig ) => {
 
 			return `{@link ${ newHref }${ hashAndRest } ${ linkText }}`;
 		} else if ( href.startsWith( '#!/api' ) ) {
-			// TODO
+			href = href.replace( '-section-', '#' )
+				.replace( '-property-S-', '#' )
+				.replace( '-property-', '#' )
+				.replace( '-static-method-', '#' )
+				.replace( '-method-', '#' )
+				.replace( '-event-', '#' )
+				.replace( '-cfg-', '#' );
 
-			return match;
+			if ( href === '#!/api' ) {
+				return `{@link api ${ linkText }}`;
+			}
+
+			const apiHref = path.basename( href );
+
+			return `{@linkapi ${ apiHref } ${ linkText }}`;
 		} else {
 			console.warn( 'Unexpected link.' );
 		}

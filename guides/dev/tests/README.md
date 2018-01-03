@@ -191,44 +191,50 @@ The testing environment provides a bunch of [tools](https://github.com/ckeditor/
 
 A sample CKEditor test file might look like this:
 
-	/* bender-tags: editor */
-	/* bender-ckeditor-plugins: toolbar,basicstyles */
+``` js
+/* bender-tags: editor */
+/* bender-ckeditor-plugins: toolbar,basicstyles */
 
-	'use strict';
+'use strict';
 
-	bender.test( {
-		'test initial selection after setData': function() {
-			bender.editorBot.create( {
-				startupData: '<p>Lorem <b>[ipsum]</b></p>'
-			}, function( bot ) {
-				// Many selection-related tests may require focusing the editor.
-				bot.editor.focus();
+bender.test( {
+    'test initial selection after setData': function() {
+        bender.editorBot.create( {
+            startupData: '<p>Lorem <b>[ipsum]</b></p>'
+        }, function( bot ) {
+            // Many selection-related tests may require focusing the editor.
+            bot.editor.focus();
 
-				assert.areSame( '<p>^Lorem <strong>[ipsum]</strong></p>',
-					bot.htmlWithSelection() );
-			} );
-		},
+            assert.areSame( '<p>^Lorem <strong>[ipsum]</strong></p>',
+                bot.htmlWithSelection() );
+        } );
+    },
 
-		'test some other case': function() {
-			// ...
-		},
+    'test some other case': function() {
+        // ...
+    },
 
-		// ...
-	} );
+    // ...
+} );
+```
 
 For every test you can create an HTML file with the same name (so for `yourtest.js` you can create `yourtest.html`). Such file will be automatically combined with your JavaScript code by [DOM combiner](https://github.com/benderjs/dom-combiner) to create an output test file. If the HTML file does not exist, the output test file will have an empty `<body>` section.
 
 In the HTML file you can put the content of the `<body>` section, so it may look like this:
 
-	<textarea id="editor">Lorem ipsum</textarea>
+``` html
+<textarea id="editor">Lorem ipsum</textarea>
+```
 
 If you need, you can add the entire content of the `<html>` page element, for example to set some attributes or add a `<head>` section:
 
-	<head>
-		<script src="_helpers/tools.js"></script>
-	</head>
-	<body>
-		<textarea id="editor">Lorem ipsum</textarea>
-	</body>
+``` html
+<head>
+    <script src="_helpers/tools.js"></script>
+</head>
+<body>
+    <textarea id="editor">Lorem ipsum</textarea>
+</body>
+```
 
 To learn more about writing tests, check the [existing tests code](https://github.com/ckeditor/ckeditor-dev/tree/master/tests).

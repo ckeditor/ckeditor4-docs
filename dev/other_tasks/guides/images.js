@@ -18,7 +18,10 @@ module.exports = ( content ) => {
 		return match.replace( imagePath, path.join( imagesDir, imagePath ) );
 	} );
 
-	const $ = cheerio.load( newContent, { decodeEntities: false } );
+	const $ = cheerio.load( newContent, {
+		decodeEntities: false,
+		xmlMode: true
+	} );
 
 	$( 'img' ).each( function() {
 		const src = $( this ).attr( 'src' );
@@ -32,5 +35,5 @@ module.exports = ( content ) => {
 		}
 	} );
 
-	return $( 'body' ).html();
+	return $.html();
 };

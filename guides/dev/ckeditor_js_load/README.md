@@ -7,10 +7,12 @@ For licensing, see LICENSE.md.
 
 CKEditor is a JavaScript application. To load it, you need to include a single file reference in your page. If you [installed](#!/guide/dev_installation) CKEditor in the `ckeditor` directory in the root of your website, you need to insert the following code fragment into the `<head>` section of your page:
 
-	<head>
-		...
-		<script src="/ckeditor/ckeditor.js"></script>
-	</head>
+``` html
+<head>
+    ...
+    <script src="/ckeditor/ckeditor.js"></script>
+</head>
+```
 
 When this file is loaded, the [CKEditor JavaScript API](#!/api) is ready to be used.
 

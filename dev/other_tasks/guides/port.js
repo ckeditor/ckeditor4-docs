@@ -20,7 +20,7 @@ module.exports = ( {
 	assetsDir,
 	guidesConfig
 } = {} ) => {
-	// fs.emptyDirSync( path.resolve( dstDir ) ); // TODO: uncomment later
+	// fs.emptyDirSync( path.resolve( dstDir ) );
 	// fs.emptyDirSync( path.resolve( assetsDir ) );
 
 	const sourceFilePaths = glob.sync( path.join( srcDir, '**', '*' ), {
@@ -38,7 +38,6 @@ module.exports = ( {
 		let fileContent = fs.readFileSync( filePath );
 
 		if ( mimeType === 'text/markdown' ) {
-			// TODO: Process the file.
 			fileContent = fileContent.toString();
 			fileContent = fixImages( fileContent );
 			fileContent = fixLinks( fileContent, guidesConfig );
@@ -58,9 +57,7 @@ module.exports = ( {
 			outputPath = path.resolve( assetsDir, path.basename( filePath ) );
 		}
 
-		// const outputDir = path.dirname( outputPath );
-
-		// TODO: uncomment
+		// TODO: Uncomment to check for file conflicts.
 		// if ( fs.existsSync( outputPath ) ) {
 		// 	filesToRename.push( filePath );
 		//

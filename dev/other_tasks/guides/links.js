@@ -15,6 +15,10 @@ module.exports = ( content, guidesConfig ) => {
 	const regexpJsd = /{@link\s+(CKEDITOR[^\s}]+)\s*([^}]*)}/g;
 
 	newContent = newContent.replace( regexpJsd, ( match, href, linkText ) => {
+		if ( href === 'api' ) {
+			return `{@link ${ href } ${ linkText }}`;
+		}
+
 		return `{@linkapi ${ href } ${ linkText }}`;
 	} );
 
@@ -32,7 +36,10 @@ module.exports = ( content, guidesConfig ) => {
 	} );
 
 	// Fix HTML links.
-	const $ = cheerio.load( newContent );
+	const $ = cheerio.load( newContent, {
+		decodeEntities: false,
+		xmlMode: true
+	} );
 
 	$( 'a' ).each( function() {
 		const match = $( this ).toString();
@@ -50,7 +57,7 @@ module.exports = ( content, guidesConfig ) => {
 		}
 	} );
 
-	newContent = $( 'body' ).html();
+	newContent = $.html();
 
 	return newContent;
 };

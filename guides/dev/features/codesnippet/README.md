@@ -21,10 +21,12 @@ If you are using the [classic editor](#!/guide/dev_framed), you do not need to p
 
 If you use the [inline](#!/guide/dev_inline) or [div-based](https://ckeditor.com/cke4/addon/divarea) editor, you will need to perform an additional step after installing the plugin, since the highlighter stylesheet will not be loaded automatically by the editor. You will thus need to link the stylesheet for the chosen `highlight.js` theme in the `<head>` section of your page. The following code will load the default theme:
 
-	<head>
-		...
-		<link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
-	</head>
+``` html
+<head>
+    ...
+    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+</head>
+```
 
 <p class="tip">
     You can preview themes in the <a href="https://sdk.ckeditor.com/samples/codesnippet.html">"Inserting Code Snippets" sample</a>. You can also browse them on the <a href="http://highlightjs.org/static/test.html">highlight.js demo page</a>.
@@ -36,15 +38,19 @@ To see the highlighter styles on the target page where CKEditor content is displ
 
 Attach it to the `<head>` section of your page. The following code will load the `highlight.js` library and the stylesheet for the default theme:
 
-	<head>
-		...
-		<link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
-		<script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
-	</head>
+``` html
+<head>
+    ...
+    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+</head>
+```
 
 Inititalize `highlight.js` on all `<pre><code> .. </code></pre>` elements with the following code:
 
-	<script>hljs.initHighlightingOnLoad();</script>
+``` html
+<script>hljs.initHighlightingOnLoad();</script>
+```
 
 <p class="tip">
     You might also want to initialize the highlighter only on selected elements. In this case you will need to use the <code>hljs.highlightBlock()</code> method on each DOM element containing the code to highlight. See the "Custom Initialization" section on the <a href="http://highlightjs.org/usage">highlight.js Usage</a> page for more information.</p>

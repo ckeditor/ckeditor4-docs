@@ -12,10 +12,10 @@ module.exports = ( content, guidesConfig ) => {
 	let newContent = content;
 
 	// Fix JSDoc links.
-	const regexpJsd = /{@link\s+(CKEDITOR[^\s}]+)\s*([^}]*)/g;
+	const regexpJsd = /{@link\s+(CKEDITOR[^\s}]+)\s*([^}]*)}/g;
 
 	newContent = newContent.replace( regexpJsd, ( match, href, linkText ) => {
-
+		return `{@linkapi ${ href } ${ linkText }}`;
 	} );
 
 	// Fix markdown links.
@@ -23,50 +23,79 @@ module.exports = ( content, guidesConfig ) => {
 
 	newContent = newContent.replace( regexpMd, ( match, linkText, href ) => {
 		if ( href.startsWith( '#!/guide' ) ) {
-			if ( href === '#!/guides' ) {
-				return `{@link guide ${ linkText }}`;
-			}
-
-			href = href.replace( '-section-', '#' );
-
-			const guideNamePre = path.basename( href );
-			const hashIndex = guideNamePre.indexOf( '#' );
-			const hashAndRest = hashIndex > 0 ? guideNamePre.substring( hashIndex ) : '';
-			const guideName = hashIndex > 0 ? guideNamePre.substring( 0, hashIndex ) : guideNamePre;
-			const targetGuideConfig = getGuideConfig( guideName, guidesConfig );
-
-			if ( !targetGuideConfig ) {
-				console.warn( `Couldnt find guideConfig for link ${ match }` );
-
-				return match;
-			}
-
-			const newHref = path.join( 'guide', targetGuideConfig.url, 'README' );
-
-			return `{@link ${ newHref }${ hashAndRest } ${ linkText }}`;
+			return buildLinkToGuide( match, linkText, href, guidesConfig );
 		} else if ( href.startsWith( '#!/api' ) ) {
-			href = href.replace( '-section-', '#' )
-				.replace( '-property-S-', '#' )
-				.replace( '-property-', '#' )
-				.replace( '-static-method-', '#' )
-				.replace( '-method-', '#' )
-				.replace( '-event-', '#' )
-				.replace( '-cfg-', '#' );
-
-			if ( href === '#!/api' ) {
-				return `{@link api ${ linkText }}`;
-			}
-
-			const apiHref = path.basename( href );
-
-			return `{@linkapi ${ apiHref } ${ linkText }}`;
+			return buildLinkToAPI( linkText, href );
 		} else {
 			console.warn( 'Unexpected link.' );
 		}
 	} );
 
+	// Fix HTML links.
+	const $ = cheerio.load( newContent );
+
+	$( 'a' ).each( function() {
+		const match = $( this ).toString();
+		const linkText = $( this ).text();
+		const href = $( this ).attr( 'href' );
+
+		if ( !href ) {
+			return true;
+		}
+
+		if ( href.startsWith( '#!/guide' ) ) {
+			$( this ).replaceWith( buildLinkToGuide( match, linkText, href, guidesConfig ) );
+		} else if ( href.startsWith( '#!/api' ) ) {
+			$( this ).replaceWith( buildLinkToAPI( linkText, href ) );
+		}
+	} );
+
+	newContent = $( 'body' ).html();
+
 	return newContent;
 };
+
+function buildLinkToGuide( match, linkText, href, guidesConfig ) {
+	if ( href === '#!/guides' ) {
+		return `{@link guide ${ linkText }}`;
+	}
+
+	href = href.replace( '-section-', '#' );
+
+	const guideNamePre = path.basename( href );
+	const hashIndex = guideNamePre.indexOf( '#' );
+	const hashAndRest = hashIndex > 0 ? guideNamePre.substring( hashIndex ) : '';
+	const guideName = hashIndex > 0 ? guideNamePre.substring( 0, hashIndex ) : guideNamePre;
+	const targetGuideConfig = getGuideConfig( guideName, guidesConfig );
+
+	if ( !targetGuideConfig ) {
+		console.warn( `Couldnt find guideConfig for link ${ match }` );
+
+		return match;
+	}
+
+	const newHref = path.join( 'guide', targetGuideConfig.url, 'README' );
+
+	return `{@link ${ newHref }${ hashAndRest } ${ linkText }}`;
+}
+
+function buildLinkToAPI( linkText, href ) {
+	href = href.replace( '-section-', '#' )
+		.replace( '-property-S-', '#' )
+		.replace( '-property-', '#' )
+		.replace( '-static-method-', '#' )
+		.replace( '-method-', '#' )
+		.replace( '-event-', '#' )
+		.replace( '-cfg-', '#' );
+
+	if ( href === '#!/api' ) {
+		return `{@link api ${ linkText }}`;
+	}
+
+	const apiHref = path.basename( href );
+
+	return `{@linkapi ${ apiHref } ${ linkText }}`;
+}
 
 function getGuideConfig( name, guidesData ) {
 	for ( const item of guidesData ) {

@@ -13,9 +13,9 @@ module.exports = ( content ) => {
 		xmlMode: true
 	} );
 
-	$( 'div.tip, div.requirements' ).each( function() {
+	$( '.tip, .requirements' ).each( function() {
 		const type = $( this ).attr( 'class' ) === 'tip' ? 'hint' : 'info';
-		$( this ).replaceWith( `<info-box ${ type }>${ $( this ).html() }</info-box>` );
+		$( this ).replaceWith( `<info-box ${ type }>${ $( this ).html().replace( /\n\t/g, ' ' ) }</info-box>` );
 	} );
 
 	return $.html();

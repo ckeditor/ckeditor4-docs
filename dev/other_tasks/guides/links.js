@@ -12,13 +12,9 @@ module.exports = ( content, guidesConfig ) => {
 	let newContent = content;
 
 	// Fix JSDoc links.
-	const regexpJsd = /{@link\s+(CKEDITOR[^\s}]+)\s*([^}]*)}/g;
+	const regexpJsd = /{@link\s+(CKEDITOR[^\s}]*)\s*([^}]*)}/g;
 
 	newContent = newContent.replace( regexpJsd, ( match, href, linkText ) => {
-		if ( href === 'api' ) {
-			return `{@link ${ href } ${ linkText }}`;
-		}
-
 		return `{@linkapi ${ href } ${ linkText }}`;
 	} );
 
@@ -64,7 +60,7 @@ module.exports = ( content, guidesConfig ) => {
 
 function buildLinkToGuide( match, linkText, href, guidesConfig ) {
 	if ( href === '#!/guides' ) {
-		return `{@link guide ${ linkText }}`;
+		return `{@link guide/index ${ linkText }}`;
 	}
 
 	href = href.replace( '-section-', '#' );
@@ -96,7 +92,7 @@ function buildLinkToAPI( linkText, href ) {
 		.replace( '-cfg-', '#' );
 
 	if ( href === '#!/api' ) {
-		return `{@link api ${ linkText }}`;
+		return `{@link api/index ${ linkText }}`;
 	}
 
 	const apiHref = path.basename( href );

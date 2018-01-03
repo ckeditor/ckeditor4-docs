@@ -61,33 +61,35 @@ If `data` (the third argument) is a string, it will be displayed by CKEditor. Th
 
 The following example shows how to send the URL from a file manager using JavaScript code (save it as `browse.php`):
 
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Example: Browsing Files</title>
-		<script>
-			// Helper function to get parameters from the query string.
-			function getUrlParam( paramName ) {
-				var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
-				var match = window.location.search.match( reParam );
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example: Browsing Files</title>
+    <script>
+        // Helper function to get parameters from the query string.
+        function getUrlParam( paramName ) {
+            var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
+            var match = window.location.search.match( reParam );
 
-				return ( match && match.length > 1 ) ? match[1] : null;
-			}
-			// Simulate user action of selecting a file to be returned to CKEditor.
-			function returnFileUrl() {
+            return ( match && match.length > 1 ) ? match[1] : null;
+        }
+        // Simulate user action of selecting a file to be returned to CKEditor.
+        function returnFileUrl() {
 
-				var funcNum = getUrlParam( 'CKEditorFuncNum' );
-				var fileUrl = '/path/to/file.txt';
-				window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl );
-				window.close();
-			}
-		</script>
-	</head>
-	<body>
-		<button onclick="returnFileUrl()">Select File</button>
-	</body>
-	</html>
+            var funcNum = getUrlParam( 'CKEditorFuncNum' );
+            var fileUrl = '/path/to/file.txt';
+            window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl );
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="returnFileUrl()">Select File</button>
+</body>
+</html>
+```
 
 ### Example 3
 
@@ -95,79 +97,83 @@ If `data` is a function, it will be executed in the scope of the button that cal
 
 Suppose that apart from passing the `fileUrl` value that is assigned to an appropriate field automatically based on the dialog window definition you also want to set the `alt` attribute, if the file manager was opened in the **Image Properties** dialog window. In order to do this, pass an anonymous function as a third argument:
 
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Example: Browsing Files</title>
-		<script>
-			// Helper function to get parameters from the query string.
-			function getUrlParam( paramName ) {
-				var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
-				var match = window.location.search.match( reParam );
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example: Browsing Files</title>
+    <script>
+        // Helper function to get parameters from the query string.
+        function getUrlParam( paramName ) {
+            var reParam = new RegExp( '(?:[\?&]|&)' + paramName + '=([^&]+)', 'i' );
+            var match = window.location.search.match( reParam );
 
-				return ( match && match.length > 1 ) ? match[1] : null;
-			}
-			// Simulate user action of selecting a file to be returned to CKEditor.
-			function returnFileUrl() {
+            return ( match && match.length > 1 ) ? match[1] : null;
+        }
+        // Simulate user action of selecting a file to be returned to CKEditor.
+        function returnFileUrl() {
 
-				var funcNum = getUrlParam( 'CKEditorFuncNum' );
-				var fileUrl = 'http://c.cksource.com/a/1/img/sample.jpg';
-				window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl, function() {
-					// Get the reference to a dialog window.
-					var dialog = this.getDialog();
-					// Check if this is the Image Properties dialog window.
-					if ( dialog.getName() == 'image' ) {
-						// Get the reference to a text field that stores the "alt" attribute.
-						var element = dialog.getContentElement( 'info', 'txtAlt' );
-						// Assign the new value.
-						if ( element )
-							element.setValue( 'alt text' );
-					}
-					// Return "false" to stop further execution. In such case CKEditor will ignore the second argument ("fileUrl")
-					// and the "onSelect" function assigned to the button that called the file manager (if defined).
-					// return false;
-				} );
-				window.close();
-			}
-		</script>
-	</head>
-	<body>
-		<button onclick="returnFileUrl()">Select File</button>
-	</body>
-	</html>
+            var funcNum = getUrlParam( 'CKEditorFuncNum' );
+            var fileUrl = 'http://c.cksource.com/a/1/img/sample.jpg';
+            window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl, function() {
+                // Get the reference to a dialog window.
+                var dialog = this.getDialog();
+                // Check if this is the Image Properties dialog window.
+                if ( dialog.getName() == 'image' ) {
+                    // Get the reference to a text field that stores the "alt" attribute.
+                    var element = dialog.getContentElement( 'info', 'txtAlt' );
+                    // Assign the new value.
+                    if ( element )
+                        element.setValue( 'alt text' );
+                }
+                // Return "false" to stop further execution. In such case CKEditor will ignore the second argument ("fileUrl")
+                // and the "onSelect" function assigned to the button that called the file manager (if defined).
+                // return false;
+            } );
+            window.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="returnFileUrl()">Select File</button>
+</body>
+</html>
+```
 
 ### Example 4
 
 The following code shows how to send back the URL of an uploaded file from the PHP connector (save it as `upload.php`):
 
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Example: File Upload</title>
-	</head>
-	<body>
-	<?php
-	// Required: anonymous function reference number as explained above.
-	$funcNum = $_GET['CKEditorFuncNum'] ;
-	// Optional: instance name (might be used to load a specific configuration file or anything else).
-	$CKEditor = $_GET['CKEditor'] ;
-	// Optional: might be used to provide localized messages.
-	$langCode = $_GET['langCode'] ;
-	// Optional: compare it with the value of `ckCsrfToken` sent in a cookie to protect your server side uploader against CSRF.
-	// Available since CKEditor 4.5.6.
-	$token = $_POST['ckCsrfToken'] ;
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example: File Upload</title>
+</head>
+<body>
+<?php
+// Required: anonymous function reference number as explained above.
+$funcNum = $_GET['CKEditorFuncNum'] ;
+// Optional: instance name (might be used to load a specific configuration file or anything else).
+$CKEditor = $_GET['CKEditor'] ;
+// Optional: might be used to provide localized messages.
+$langCode = $_GET['langCode'] ;
+// Optional: compare it with the value of `ckCsrfToken` sent in a cookie to protect your server side uploader against CSRF.
+// Available since CKEditor 4.5.6.
+$token = $_POST['ckCsrfToken'] ;
 
-	// Check the $_FILES array and save the file. Assign the correct path to a variable ($url).
-	$url = '/path/to/uploaded/file.ext';
-	// Usually you will only assign something here if the file could not be uploaded.
-	$message = 'The uploaded file has been renamed';
+// Check the $_FILES array and save the file. Assign the correct path to a variable ($url).
+$url = '/path/to/uploaded/file.ext';
+// Usually you will only assign something here if the file could not be uploaded.
+$message = 'The uploaded file has been renamed';
 
-	echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
-	?>
-	</body>
-	</html>
+echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
+?>
+</body>
+</html>
+```
 
 ## Further Reading
 

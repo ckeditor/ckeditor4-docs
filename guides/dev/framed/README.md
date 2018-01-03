@@ -59,28 +59,30 @@ Apart from the CKEDITOR.replace method you can also use the following options to
 
 To insert a CKEditor instance, you can use the following sample that creates a basic HTML page containing a form with a `<textarea>` element that is replaced with CKEditor.
 
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>CKEditor Classic Editing Sample</title>
-		<!-- Make sure the path to CKEditor is correct. -->
-		<script src="/ckeditor/ckeditor.js"></script>
-	</head>
-	<body>
-		<form method="post">
-			<p>
-				My Editor:<br>
-				<textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
-				<script>
-					CKEDITOR.replace( 'editor1' );
-				</script>
-			</p>
-			<p>
-				<input type="submit">
-			</p>
-		</form>
-	</body>
-	</html>
+``` html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CKEditor Classic Editing Sample</title>
+    <!-- Make sure the path to CKEditor is correct. -->
+    <script src="/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+    <form method="post">
+        <p>
+            My Editor:<br>
+            <textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
+            <script>
+                CKEDITOR.replace( 'editor1' );
+            </script>
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+</body>
+</html>
+```
 
 ## Classic Editing Demo
 

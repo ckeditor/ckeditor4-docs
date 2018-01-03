@@ -11,6 +11,7 @@ const fs = require( 'fs-extra' );
 const mime = require( 'mime' );
 const fixImages = require( './images' );
 const fixLinks = require( './links' );
+const fixInfoBoxes = require( './info_boxes' );
 const addFrontMatter = require( './front_matter' );
 
 module.exports = ( {
@@ -41,6 +42,7 @@ module.exports = ( {
 			fileContent = fileContent.toString();
 			fileContent = fixImages( fileContent );
 			fileContent = fixLinks( fileContent, guidesConfig );
+			fileContent = fixInfoBoxes( fileContent );
 			fileContent = addFrontMatter( fileContent, filePath.replace( 'guides/', '' ), guidesConfig );
 
 			if ( !fileContent ) {

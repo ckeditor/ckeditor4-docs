@@ -13,4 +13,4 @@ To quickly enable High Contrast easily on Windows, just use <kbd>SHIFT+ALT+PRINT
 
 CKEditor offers great support for High Contrast, limited to Firefox and Internet Explorer (other browsers don't support High Contrast).  When enabled, the editor is rendered as clear lines and the toolbar buttons present text labels, instead of icon images.
 
-Skin developers must take this in consideration and make the necessary CSS styling to support High Contrast. This can be easily done by using the `.cke_hc` class name, which is set at the outer element of the editor UI. Usage examples can be find in the [Moono skin](#!/guide/skin_sdk_intro-section-2) files.
+Skin developers must take this in consideration and make the necessary CSS styling to support High Contrast. This can be easily done by using the `.cke_hc` class name, which is set at the outer element of the editor UI. Usage examples can be find in the [Moono skin](#!/guide/skin_sdk_intro-section-the-%22moono%22-skin) files.

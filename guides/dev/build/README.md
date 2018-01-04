@@ -8,7 +8,7 @@ For licensing, see LICENSE.md.
 If you are working with the CKEditor source code on your computer or in a local network, at some stage you will want to distribute it to your test or production environment.
 
 <p class="tip">
-	<strong>Never distribute the source version of CKEditor to production websites</strong>. There are serious <a href="#!/guide/dev_source-section-2">performance implications</a> of doing this.
+	<strong>Never distribute the source version of CKEditor to production websites</strong>. There are serious <a href="#!/guide/dev_source-section-performance">performance implications</a> of doing this.
 </p>
 
 Instead, you must create a CKEditor "build" or "release version" (in contrast to the "source version"). It is an optimized, production-ready CKEditor distribution.

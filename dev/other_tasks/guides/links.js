@@ -63,7 +63,8 @@ function buildLinkToGuide( match, linkText, href, guidesConfig ) {
 		return `{@link guide/index ${ linkText }}`;
 	}
 
-	href = href.replace( '-section-', '#' );
+	href = href.replace( '-section-', '#' )
+		.replace( '%22', '' );
 
 	const guideNamePre = path.basename( href );
 	const hashIndex = guideNamePre.indexOf( '#' );

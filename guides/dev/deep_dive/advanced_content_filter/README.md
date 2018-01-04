@@ -89,11 +89,11 @@ Advanced Content Filter not only removes disallowed HTML elements, their classes
 
 Consider the Bold feature. In HTML code it may be represented by `<strong>`, `<b>`, or even a `<span style="font-weight:700|800|900|bold">` element. Suppose that the {@link CKEDITOR.config#allowedContent} setting contains only a rule for the `<b>` element. Does this mean that when pasting the `<strong>` or `<span>` element they will be removed?
 
-No. The editor will transform all of them to `<b>` elements. As a result the editor will contain only `<b>` elements and the visual form of pasted content will be preserved. Exactly the same will happen if you leave the default {@link CKEDITOR.config#allowedContent} value (in [automatic mode](#!/guide/dev_advanced_content_filter-section-2)) &mdash; all Bold feature forms will be unified to the preferred `<strong>` form.
+No. The editor will transform all of them to `<b>` elements. As a result the editor will contain only `<b>` elements and the visual form of pasted content will be preserved. Exactly the same will happen if you leave the default {@link CKEDITOR.config#allowedContent} value (in [automatic mode](#!/guide/dev_advanced_content_filter-section-automatic-mode)) &mdash; all Bold feature forms will be unified to the preferred `<strong>` form.
 
 Suppose that the `'img[!src,alt,width,height]'` setting (`<img>` tag with required `src` and three optional attributes) was added to Allowed Content Rules. Image size should be set with attributes, so for example a pasted image whose size was set with styles will be transformed to an image with attributes (note that it will not be possible in all scenarios &mdash; only pixel-based size can be transformed).
 
-The content transformation feature is fully automatic and there is no need to configure it. The only thing you have to do is set the {@link CKEDITOR.config#allowedContent} option or use the default value ([automatic mode](#!/guide/dev_advanced_content_filter-section-2)).
+The content transformation feature is fully automatic and there is no need to configure it. The only thing you have to do is set the {@link CKEDITOR.config#allowedContent} option or use the default value ([automatic mode](#!/guide/dev_advanced_content_filter-section-automatic-mode)).
 
 Currently, we have defined content transformations for only a handful of editor features, but their number will increase in future releases.
 

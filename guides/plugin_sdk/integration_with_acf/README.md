@@ -138,7 +138,7 @@ is simply invalid within this configuration environment.
 
 This is not the case with the **Abbreviation** button which shows up, but in fact no longer
 makes any sense because the user configuration overwrites any rules
-[automatically added](#!/guide/plugin_sdk_integration_with_acf-section-2) by this feature.
+[automatically added](#!/guide/plugin_sdk_integration_with_acf-section-integrating-with-acf-to-activate-editor-features) by this feature.
 
 By specifying the {@link CKEDITOR.feature#property-requiredContent requiredContent} property
 in the command definition we make sure that the **Abbreviation** button will adaptively

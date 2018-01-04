@@ -278,7 +278,7 @@ Content filter adjustments for editable widget parts are done straight in their 
 In this case we allowed just bold, italic, and line breaks in both fields and additionally lists and paragraphs in the content field.
 
 <p class="tip">
-	Please note that thanks to <a href="#!/guide/dev_advanced_content_filter-section-4">content transformations</a> with the configuration used above the editor will allow all forms of bold and italic formatting (so for example <code>&lt;strong&gt</code>, <code>&lt;b&gt</code> and <code>&lt;span style="font-weight:700|800|900|bold"&gt</code>). It is enough to list just one of the forms and others will get transformed automatically to the allowed form.
+	Please note that thanks to <a href="#!/guide/dev_advanced_content_filter-section-content-transformations">content transformations</a> with the configuration used above the editor will allow all forms of bold and italic formatting (so for example <code>&lt;strong&gt</code>, <code>&lt;b&gt</code> and <code>&lt;span style="font-weight:700|800|900|bold"&gt</code>). It is enough to list just one of the forms and others will get transformed automatically to the allowed form.
 </p>
 
 When you reload the page now, you will see that when you try to edit the widget fields, some toolbar items become greyed out (meaning they are not available in this context) and you will be unable to use them. Likewise, if you used them in Source mode, the editor would cut them out when switching to WYSIWYG view or saving the document.

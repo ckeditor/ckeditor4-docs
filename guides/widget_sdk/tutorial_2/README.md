@@ -56,7 +56,7 @@ We will start from registering the widget dialog window by calling the standard 
 
 This code registers the `simplebox` dialog window name, telling the editor to load the dialog window definition from the `dialogs/simplebox.js` file from the plugin installation directory (`this.path`).
 
-Additionally, to create the automatic binding between the widget and the dialog window (just like we did for the [widget button in part 1](#!/guide/widget_sdk_tutorial_1-section-6) of the tutorial), we need to define the `{@link CKEDITOR.plugins.widget.definition#dialog dialog}` property of the widget definition inside the `editor.widgets.add` method. This will ensure that the `simplebox` dialog window will be opened when creating a new Simple Box widget or editing an existing one.
+Additionally, to create the automatic binding between the widget and the dialog window (just like we did for the [widget button in part 1](#!/guide/widget_sdk_tutorial_1-section-widget-toolbar-button) of the tutorial), we need to define the `{@link CKEDITOR.plugins.widget.definition#dialog dialog}` property of the widget definition inside the `editor.widgets.add` method. This will ensure that the `simplebox` dialog window will be opened when creating a new Simple Box widget or editing an existing one.
 
 	editor.widgets.add( 'simplebox', {
 		// Code defined before...

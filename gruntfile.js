@@ -34,7 +34,7 @@ module.exports = function( grunt ) {
 				done();
 			} );
 	} );
-	grunt.registerTask('docs', [ 'api', 'umberto' ] );
+	grunt.registerTask('docs', [ 'api', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),

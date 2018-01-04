@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.html or http://ckeditor.com/license
  */
 
@@ -54,7 +54,7 @@ module.exports = function( grunt ) {
 					title: 'CKEditor 4 Documentation',
 					'head-html': 'source/head-html.html',
 					'head-html-common': 'source/head-html-common.html',
-					footer: 'Copyright &copy; 2003-2017, <a href=\"http://cksource.com\" style=\"color:#085585\">CKSource</a> - Frederico Knabben. All rights reserved. | <a href=\"LICENSE.html\" style=\"color:#085585\">License</a> | Generated with <a href=\"https://github.com/senchalabs/jsduck\">JSDuck</a>.',
+					footer: 'Copyright &copy; 2003-2018, <a href=\"http://cksource.com\" style=\"color:#085585\">CKSource</a> - Frederico Knabben. All rights reserved. | <a href=\"LICENSE.html\" style=\"color:#085585\">License</a> | Generated with <a href=\"https://github.com/senchalabs/jsduck\">JSDuck</a>.',
 					tags: 'source/customs.rb',
 					warnings: [ '-nodoc', '-image_unused' ],
 					welcome: 'source/welcome.html',

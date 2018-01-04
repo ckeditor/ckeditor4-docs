@@ -5,12 +5,36 @@
 
 'use strict';
 
+const Umberto = require( 'umberto' );
+
 module.exports = function( grunt ) {
 	require( 'load-grunt-tasks' )( grunt );
 
+	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadTasks( 'dev/tasks' );
 	grunt.registerTask( 'default', [ 'jsduck:docs', 'copy:source' ] );
 	grunt.registerTask( 'api', [ 'jsduck:api' ] );
+	grunt.registerTask( 'umberto', function() {
+		const done = this.async();
+
+		const skipApi = grunt.option( 'skipApi' );
+		const skipValidation = grunt.option( 'skipValidation' );
+		const dev = grunt.option( 'dev' );
+		const clean = grunt.option( 'clean' );
+
+		return Umberto.buildSingleProject( {
+			skipApi,
+			skipValidation,
+			dev,
+			clean
+		} )
+			.then( done )
+			.catch( err => {
+				grunt.log.error( `Building Documentation failed: ${ err }`);
+				done();
+			} );
+	} );
+	grunt.registerTask('docs', [ 'api', 'umberto' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
@@ -87,6 +111,26 @@ module.exports = function( grunt ) {
 					external: 'Blob,File,FileReader,DocumentFragment',
 					exclude: '<%= path %>/plugins/codesnippet/lib',
 					'ignore-html': 'source'
+				}
+			}
+		},
+
+		docs: {
+			options: {
+				skipApi: false,
+				skipValidation: false,
+				dev: false,
+				clean: true
+			}
+		},
+
+		connect: {
+			server: {
+				options: {
+					port: 9001,
+					base: 'build/docs',
+					keepalive: true,
+					open: 'http://localhost:9001/ckeditor4/1.0.0/guide/dev_installation.html'
 				}
 			}
 		}

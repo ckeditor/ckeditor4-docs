@@ -18,6 +18,13 @@ module.exports = ( content, guidesConfig ) => {
 		return `{@linkapi ${ href } ${ linkText }}`;
 	} );
 
+	// Fix backtick links.
+	const regexpBt = /\`(CKEDITOR[^\s\`)(}{]*)\`/g;
+
+	newContent = newContent.replace( regexpBt, ( match, href ) => {
+		return `{@linkapi ${ href }}`;
+	} );
+
 	// Fix markdown links.
 	const regexpMd = /\[([^\]]+)\]\((#!\/[^\s)]+)\)/g;
 
@@ -59,12 +66,12 @@ module.exports = ( content, guidesConfig ) => {
 };
 
 function buildLinkToGuide( match, linkText, href, guidesConfig ) {
-	if ( href === '#!/guides' ) {
+	if ( href === '#!/guide' ) {
 		return `{@link guide/index ${ linkText }}`;
 	}
 
 	href = href.replace( '-section-', '#' )
-		.replace( '%22', '' );
+		.replace( /%22/g, '' );
 
 	const guideNamePre = path.basename( href );
 	const hashIndex = guideNamePre.indexOf( '#' );

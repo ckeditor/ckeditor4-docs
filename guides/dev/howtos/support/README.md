@@ -13,7 +13,7 @@ If you are having trouble installing, configuring, or integrating CKEditor to yo
 
 ### Documentation
 
-First of all, CKEditor comes with really extensive [documentation](#!/guides) that you should read and [plenty of samples](https://sdk.ckeditor.com/) that you can try out and even download to copy and implement in your own environment.
+First of all, CKEditor comes with really extensive [documentation](#!/guide) that you should read and [plenty of samples](https://sdk.ckeditor.com/) that you can try out and even download to copy and implement in your own environment.
 
 ### Stack Overflow
 

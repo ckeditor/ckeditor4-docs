@@ -30,7 +30,7 @@ See the [working "Removing Text Formatting" sample](https://sdk.ckeditor.com/sam
 Refer to the following resources for more information about text styling and formatting:
 
 * The [Basic Text Styles: Bold, Italic and More](#!/guide/dev_basicstyles) article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting to text selections.
-* The [Using the Copy Formatting Feature](#!/guide/dev_fcopyformatting) article explains how to copy text formatting between document fragments.
+* The [Using the Copy Formatting Feature](#!/guide/dev_copyformatting) article explains how to copy text formatting between document fragments.
 * The [Applying Styles to Editor Content](#!/guide/dev_styles) article discusses creating more semantically correct text styles.
 * The [Setting Text and Background Color](#!/guide/dev_colorbutton) article explains how to use and customize the **Text Color** and **Background Color** features.
 * The [Applying Block-Level Text Formats](#!/guide/dev_format) article presents how to apply formatting to entire text blocks and not just text selections.

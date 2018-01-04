@@ -23,24 +23,28 @@ Inline Editing is enabled directly on HTML elements through the HTML5 `contented
 
 Suppose, for example, that you want to make a `<div>` element with an ID of `editor1` editable. In order to achieve this, it is enough to do the following:
 
-	<div id="editor1" contenteditable="true">
-		<h1>Inline Editing in Action!</h1>
-		<p>The "div" element that contains this text is now editable.
-	</div>
+``` html
+<div id="editor1" contenteditable="true">
+    <h1>Inline Editing in Action!</h1>
+    <p>The "div" element that contains this text is now editable.</p>
+</div>
+```
 
 It is also possible to enable inline editing with explicit code, by calling the CKEDITOR.inline method for the element that needs to have it enabled. Note that in this case you need to turn off automatic editor creation first by setting the CKEDITOR.disableAutoInline option to `true`.
 
 Do remember that if the DOM element for which inline editing is being enabled does not have the `contenteditable` attribute set to `true`, the editor will start in read-only mode.
 
-	<div id="editor1" contenteditable="true">
-		<h1>Inline Editing in Action!</h1>
-		<p>The "div" element that contains this text is now editable.
-	</div>
-	<script>
-		// Turn off automatic editor creation first.
-		CKEDITOR.disableAutoInline = true;
-		CKEDITOR.inline( 'editor1' );
-	</script>
+``` html
+<div id="editor1" contenteditable="true">
+    <h1>Inline Editing in Action!</h1>
+    <p>The "div" element that contains this text is now editable.</p>
+</div>
+<script>
+    // Turn off automatic editor creation first.
+    CKEDITOR.disableAutoInline = true;
+    CKEDITOR.inline( 'editor1' );
+</script>
+```
 
 When you click inside the content of this `<div>` element, the CKEditor toolbar will appear.
 

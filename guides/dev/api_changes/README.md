@@ -101,7 +101,9 @@ If you wanted to check for old IEs before IE9, instead of checking for each of t
 
 You should check in the following simpler way in v4:
 
-	if ( CKEDITOR.env.version < 9 )
+``` js
+if ( CKEDITOR.env.version < 9 )
+```
 
 ---
 
@@ -111,17 +113,21 @@ language entries.
 
 So, in v3 you had:
 
-	CKEDITOR.plugins.setLang( 'myplugin', 'en', {
-		myplugin: {
-			title: 'My Plugin'
-		}
-	} );
+``` js
+CKEDITOR.plugins.setLang( 'myplugin', 'en', {
+    myplugin: {
+        title: 'My Plugin'
+    }
+} );
+```
 
 In v4 it should be changed to:
 
-	CKEDITOR.plugins.setLang( 'myplugin', 'en', {
-		title: 'My Plugin'
-	} );
+``` js
+CKEDITOR.plugins.setLang( 'myplugin', 'en', {
+    title: 'My Plugin'
+} );
+```
 
 In this way the entry will be available under `editor.lang.myplugin.title`.
 
@@ -130,9 +136,11 @@ In this way the entry will be available under `editor.lang.myplugin.title`.
 The `CKEDITOR.editor` constructor now receives two additional optional parameters (besides the configuration object)
 to simplify creator implementation:
 
-	CKEDITOR.editor( config,
-	 	/** @type {CKEDITOR.dom.element} */ element,
-	 	/** @type {Number} */ elementMode );
+``` js
+CKEDITOR.editor( config,
+    /** @type {CKEDITOR.dom.element} */ element,
+    /** @type {Number} */ elementMode );
+```
 
 ---
 
@@ -164,7 +172,7 @@ The `CKEDITOR.editor#themeSpace` event was replaced with `CKEDITOR.editor#uiSpac
 
 ---
 
-The `CKEDITOR.htmlParser.fragment.fromHtml( fragmentHtml, fixForBody, /** @type {CKEDITOR.htmlParser.element} */ contextNode )` method changed signature to `CKEDITOR.htmlParser.fragment.fromHtml( fragmentHtml, /** @type {CKEDITOR.htmlParser.element/String} */ parent, fixForBody )`.
+The `{@linkapi CKEDITOR.htmlParser.fragment#fromHtml CKEDITOR.htmlParser.fragment.fromHtml}( fragmentHtml, fixForBody, /** @type { {@linkapi CKEDITOR.htmlParser.element CKEDITOR.htmlParser.element} } */ contextNode )` method changed signature to `{@linkapi CKEDITOR.htmlParser.fragment#fromHtml CKEDITOR.htmlParser.fragment.fromHtml}( fragmentHtml, /** @type { {@linkapi CKEDITOR.htmlParser.element CKEDITOR.htmlParser.element}/String } */ parent, fixForBody )`.
 
 ---
 
@@ -179,4 +187,6 @@ The `CKEDITOR.replaceByClassEnabled` option is not available anymore. It is now 
 
 `CKEDITOR.dtd.$captionBlock` was removed. In order to check if one element can appear inside a table caption, use the DTD check instead:
 
-	assert.isTrue( !!CKEDITOR.dtd.caption[ element.getName() ] );
+``` js
+assert.isTrue( !!CKEDITOR.dtd.caption[ element.getName() ] );
+```

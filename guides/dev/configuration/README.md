@@ -15,12 +15,14 @@ All available configuration options can be found in the API documentation. Refer
 
 The best way to set the CKEditor configuration is in-page, when creating editor instances. This method lets you avoid modifying the original distribution files in the CKEditor installation folder, making the upgrade task easier.
 
-In-page settings can be passed to any of the editor instance creation functions, namely CKEDITOR#replace and CKEDITOR#appendTo. For example:
+In-page settings can be passed to any of the editor instance creation functions, namely {@linkapi CKEDITOR#replace} and {@linkapi CKEDITOR#appendTo}. For example:
 
-	CKEDITOR.replace( 'editor1', {
-		language: 'fr',
-		uiColor: '#9AB8F3'
-	});
+``` js
+CKEDITOR.replace( 'editor1', {
+    language: 'fr',
+    uiColor: '#9AB8F3'
+});
+```
 
 Note that the configuration options are passed through a literal object definition (starting with a "`{`" symbol and ending with a "`}`" symbol). Because of this the proper syntax for each option is <code><i>configuration name</i> : <i>configuration value</i></code>. Be sure to not use the "equal" character (`=`) in place of the colon character (`:`).
 
@@ -28,10 +30,12 @@ Note that the configuration options are passed through a literal object definiti
 
 CKEditor settings can also be configured by using the `config.js` file. By default this file is mostly empty. To change CKEditor configuration, add the settings that you want to modify to the `config.js` file. For example:
 
-	CKEDITOR.editorConfig = function( config ) {
-		config.language = 'fr';
-		config.uiColor = '#AADC6E';
-	};
+``` js
+CKEDITOR.editorConfig = function( config ) {
+    config.language = 'fr';
+    config.uiColor = '#AADC6E';
+};
+```
 
 In order to apply the configuration settings, the CKEDITOR.editorConfig function must always be defined. The `config.js` file will be executed in the scope of your page, so you can also make references to variables defined in-page or even in other JavaScript files.
 
@@ -41,9 +45,11 @@ Using a custom configuration file is another recommended method of setting CKEdi
 
 Suppose you copied the `config.js` file to a folder named `custom` in the root of your website. You also renamed the file to `ckeditor_config.js`. At that point it is enough to only set the {@link CKEDITOR.config#customConfig customConfig} configuration option when creating the editor instances to use the customized settings defined in the file. For example:
 
-	CKEDITOR.replace( 'editor1', {
-		customConfig: '/custom/ckeditor_config.js'
-	});
+``` js
+CKEDITOR.replace( 'editor1', {
+    customConfig: '/custom/ckeditor_config.js'
+});
+```
 
 The custom configuration file must look just like the default `config.js` file.
 
@@ -60,9 +66,11 @@ You are not required to only use one of the above configuration options. The met
 
 It is also possible to completely avoid loading an external configuration file, reducing the number of files loaded. To do that, you need to set the {@link CKEDITOR.config#customConfig} setting to an empty string. For example:
 
-	CKEDITOR.replace( 'editor1', {
-		customConfig: ''
-	});
+``` js
+CKEDITOR.replace( 'editor1', {
+    customConfig: ''
+});
+```
 
 This setting is definitely recommended, if you are not setting the configuration in the `config.js` file nor a custom configuration file.
 

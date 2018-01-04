@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 The [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin allows you to paste content from Microsoft Word and maintain original content structure and formatting.
 
-When enabled, it automatically detects Word content and transforms its structure and formatting to clean HTML. It also adds the **Paste from Word** toolbar button (<img src="guides/dev_pastefromword/pastefromword-button.png" alt="Paste from Word toolbar button" style="vertical-align: bottom;">) which makes it possible to paste clipboard data this way only on demand.
+When enabled, it automatically detects Word content and transforms its structure and formatting to clean HTML. It also adds the **Paste from Word** toolbar button (<img class="inline" src="guides/dev_pastefromword/pastefromword-button.png" alt="Paste from Word toolbar button">) which makes it possible to paste clipboard data this way only on demand.
 
 ## Supported Features
 
@@ -88,17 +88,17 @@ CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questio
 
 HTML exposed by Microsoft Word does not comply to any imaginable rules. It is a poetry of what can be done wrong. Therefore, a separate filter had to be created to normalize this content. It is implemented in the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin and, beside the [standard filtering options](#!/guide/dev_drop_paste-section-filtering-content), it has additional settings:
 
-* CKEDITOR.config.pasteFromWordCleanupFile
-* CKEDITOR.config.pasteFromWordPromptCleanup
+* {@linkapi CKEDITOR.config.pasteFromWordCleanupFile CKEDITOR.config.pasteFromWordCleanupFile}
+* {@linkapi CKEDITOR.config.pasteFromWordPromptCleanup CKEDITOR.config.pasteFromWordPromptCleanup}
 
 Starting from version 4.6 of CKEditor the following options were deprecated:
 
-* CKEDITOR.config.pasteFromWordRemoveFontStyles (deprecated in favor of Advanced Content Filter)
+* {@linkapi CKEDITOR.config.pasteFromWordRemoveFontStyles CKEDITOR.config.pasteFromWordRemoveFontStyles} (deprecated in favor of Advanced Content Filter)
 
 For CKEditor versions older than 4.6 the following options were available, too:
 
-* CKEDITOR.config.pasteFromWordNumberedHeadingToList
-* CKEDITOR.config.pasteFromWordRemoveStyles
+* {@linkapi CKEDITOR.config.pasteFromWordNumberedHeadingToList CKEDITOR.config.pasteFromWordNumberedHeadingToList}
+* {@linkapi CKEDITOR.config.pasteFromWordRemoveStyles CKEDITOR.config.pasteFromWordRemoveStyles}
 
 ## Paste from Word Demo
 

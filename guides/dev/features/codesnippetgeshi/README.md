@@ -32,34 +32,37 @@ First of all you need to add both the Code Snippet GeSHi plugin and its dependen
 1. Extract GeSHi files to the chosen location &mdash; for example into the `lib/geshi/` directory.
 1. Create a `colorize.php` file (e.g. in the `lib/` directory) and set its content to the following:
 
-		<?php
-
-		if ( function_exists( 'stream_resolve_include_path' ) && stream_resolve_include_path( 'geshi/geshi.php' ) === FALSE ) {
-			die( '<pre class="html">Please install the GeSHi library. Refer to plugins/codesnippetgeshi/README.md for more information.</pre>' );
-		}
-
-		include_once 'geshi/geshi.php';
-
-		$json_string = file_get_contents( 'php://input' );
-		$json_object = json_decode( $json_string );
-
-		$geshi = new GeSHi( $json_object->html, $json_object->lang );
-
-		echo $geshi->parse_code();
-
+    ``` php
+    <?php
+    
+    if ( function_exists( 'stream_resolve_include_path' ) && stream_resolve_include_path( 'geshi/geshi.php' ) === FALSE ) {
+        die( '<pre class="html">Please install the GeSHi library. Refer to plugins/codesnippetgeshi/README.md for more information.</pre>' );
+    }
+    
+    include_once 'geshi/geshi.php';
+    
+    $json_string = file_get_contents( 'php://input' );
+    $json_object = json_decode( $json_string );
+    
+    $geshi = new GeSHi( $json_object->html, $json_object->lang );
+    
+    echo $geshi->parse_code();
+    ```
 
     This file will be queried each time the syntax highlighting is needed.
 
 1. At this point you may have a following directory structure:
 
-		lib/
-			geshi/
-				<GeSHi directories...>
-				geshi.php
-			colorize.php
-		ckeditor/
-			<CKEditor files and directories...>
-			ckeditor.js
+    ```
+    lib/
+        geshi/
+            <GeSHi directories...>
+            geshi.php
+        colorize.php
+    ckeditor/
+        <CKEditor files and directories...>
+        ckeditor.js
+    ```
 
 <p class="tip">
 	It is a good practice to place external libraries outside the CKEditor directory as it makes <a href="#!/guide/dev_upgrade">future updates</a> easier.
@@ -69,10 +72,12 @@ First of all you need to add both the Code Snippet GeSHi plugin and its dependen
 
 Go to your [CKEditor configuration](#!/guide/dev_configuration) and set the CKEDITOR.config.codeSnippetGeshi_url option. For example for in-page configuration you can use the following code:
 
-	CKEDITOR.replace( 'editor1', {
-		extraPlugins: 'codesnippetgeshi',
-		codeSnippetGeshi_url: '../lib/colorize.php'
-	} );
+``` js
+CKEDITOR.replace( 'editor1', {
+    extraPlugins: 'codesnippetgeshi',
+    codeSnippetGeshi_url: '../lib/colorize.php'
+} );
+```
 
 You can find more information about setting configuration in the [Setting Configuration guide](#!/guide/dev_configuration).
 

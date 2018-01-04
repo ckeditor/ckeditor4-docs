@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 One of the CKEditor features is that it takes care over the input data you paste or drop into the editor. The [Clipboard](https://ckeditor.com/cke4/addon/clipboard) plugin which is included in every preset implements custom input content handling, which means that the editor will handle pasted and &mdash; since version 4.5 &mdash; dropped content.
 
-All pasted and dropped content is passed through the {@link CKEDITOR.editor#paste} event which makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like [Advanced Content Filter and paste filter](#!/guide/dev_drop_paste-section-filtering), [Paste from Word filter](#!/guide/dev_paste_from_word) or [support for uploading dropped files](#!/guide/dev_drop_paste-section-file-upload).
+All pasted and dropped content is passed through the {@link CKEDITOR.editor#paste} event which makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like [Advanced Content Filter and paste filter](#!/guide/dev_drop_paste-section-filtering), [Paste from Word filter](#!/guide/dev_pastefromword) or [support for uploading dropped files](#!/guide/dev_drop_paste-section-file-upload).
 
 Note that browsers support clipboard operations differently and because of that the behavior of the drag and drop or copy and paste may be slightly different between browsers.
 
@@ -53,6 +53,6 @@ For more information on pasting, dropping and uploading files with CKEditor refe
 
 * [Clipboard Integration](#!/guide/dev_clipboard)
 * [Uploading Dropped or Pasted Files](#!/guide/dev_file_upload)
-* [Paste from Word](#!/guide/dev_paste_from_word)
+* [Paste from Word](#!/guide/dev_pastefromword)
 * [Content Filtering (ACF)](#!/guide/dev_acf)
 * [Advanced Content Filter](#!/guide/dev_advanced_content_filter)

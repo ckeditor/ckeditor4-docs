@@ -20,11 +20,12 @@ By default, CKEditor is looking for the `ckeditor.js` file in the `<script>` tag
 ## Solution: CKEDITOR_BASEPATH ##
 
 When loading the editor script, CKEditor is looking for the global `CKEDITOR_BASEPATH` JavaScript variable that contains the editor installation path. If it is defined, its value is used. Otherwise the automatic detection process described above takes place. In order to solve this uncommon loading issue it is thus enough to define the `CKEDITOR_BASEPATH` variable. For example:
+```
+<script>
+    var CKEDITOR_BASEPATH = '/ckeditor/';
+</script>
 
-	<script>
-		var CKEDITOR_BASEPATH = '/ckeditor/';
-	</script>
-
-	<script src="all_my_scripts.js"></script>
+<script src="all_my_scripts.js"></script>
+```
 
 Note that this global JavaScript variable must be set ***before*** you include the CKEditor code. In the example above the variable definition was placed in-page, but it could also be included inside the `all_my_scripts.js` file, at the beginning (or in any case &mdash; before the editor code).

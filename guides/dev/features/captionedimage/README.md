@@ -33,24 +33,30 @@ Below you can see the plugin's Image Properties dialog window with the file brow
 
 Captioned images can be easily aligned through their Image Properties dialog windows, including centering them in the editor content. By default the alignment is added through inline styles, producing the code like the following example:
 
-	<figure class="image" style="float:right">
-		<img alt="MyImage" src="myimage.png" />
-		<figcaption>MyCaption</figcaption>
-	</figure>
+``` html
+<figure class="image" style="float:right">
+    <img alt="MyImage" src="myimage.png" />
+    <figcaption>MyCaption</figcaption>
+</figure>
+```
 
 Thanks to the CKEDITOR.config.image2_alignClasses option introduced in CKEditor 4.4 you can use CSS classes for setting image alignment. Additionally, the CKEDITOR.config.image2_captionedClass option allows you to assign a custom class to the `<figure>` element of a captioned image. Both these options combined give you far better control over the styling process.
 
 For example, the following configuration:
 
-	config.image2_alignClasses = [ 'image-left', 'image-center', 'image-right' ];
-    config.image2_captionedClass = 'image-captioned';
+```
+config.image2_alignClasses = [ 'image-left', 'image-center', 'image-right' ];
+config.image2_captionedClass = 'image-captioned';
+```
 
 will produce class-driven, stylable markup that lets you avoid inflexible and non-semantic inline CSS code:
 
-	<figure class="image-captioned image-right">
-    	<img alt="MyImage" src="myimage.png" />
-    	<figcaption>MyCaption</figcaption>
-	</figure>
+``` html
+<figure class="image-captioned image-right">
+    <img alt="MyImage" src="myimage.png" />
+    <figcaption>MyCaption</figcaption>
+</figure>
+```
 
 Do remember, though, that you need to define the CSS rules for these classes in your stylesheet. Once this configuration option is set, corresponding style definitions must be supplied to the editor:
 
@@ -65,7 +71,9 @@ Since CKEditor 4.6 it is possible to make setting alternative text for captioned
 
 To make alternative text mandatory, set the CKEDITOR.config.image2_altRequired configuration option:
 
-    config.image2_altRequired = true;
+```
+config.image2_altRequired = true;
+```
 
 {@img captionedimage_03.png Alternative text required by the Enhanced Image dialog}
 

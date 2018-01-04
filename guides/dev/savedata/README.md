@@ -15,11 +15,13 @@ Some applications need to handle all data on the client side, sending it to the 
 
 To retrieve the editor data, call the CKEDITOR.editor.getData method of the editor instance. For an editor instance with an ID of `editor1`, this would look like the following:
 
-	<script>
-		var data = CKEDITOR.instances.editor1.getData();
+``` js
+<script>
+    var data = CKEDITOR.instances.editor1.getData();
 
-		// Your code to save "data", usually through Ajax.
-	</script>
+    // Your code to save "data", usually through Ajax.
+</script>
+```
 
 <p class="tip">
 	If you do not save your data with a library that already encodes it by using the JavaScript <code>encodeURIComponent</code> method, but do it manually instead, you will have to remember to use <code>encodeURIComponent</code> to properly encode the data that is being sent.
@@ -35,9 +37,11 @@ This means that when submitting a form containing an editor instance, its data w
 
 For example, for the `<textarea>` element with an ID of `editor1`, as used in our [Quick Start Guide example](#!/guide/dev_installation-section-adding-ckeditor-to-your-page), you could create this PHP code:
 
-	<?php
-		$editor_data = $_POST[ 'editor1' ];
-	?>
+``` php
+<?php
+    $editor_data = $_POST[ 'editor1' ];
+?>
+```
 
 This method works for any CKEditor instance that replaces a `<textarea>` in a `<form>` element, both [classic](#!/guide/dev_framed-section-creating-a-classic-editor-with-a-textarea) and [inline](#!/guide/dev_inline-section-inline-editing-for-textarea).
 
@@ -53,13 +57,15 @@ Whenever a change is made in the editor, CKEditor fires the [change](#!/api/CKED
 
 The following example shows how to listen to the `change` event and print the total number of bytes to the console:
 
-	var editor = CKEDITOR.replace( 'editor1' );
+``` js
+var editor = CKEDITOR.replace( 'editor1' );
 
-	// The "change" event is fired whenever a change is made in the editor.
-	editor.on( 'change', function( evt ) {
-		// getData() returns CKEditor's HTML content.
-		console.log( 'Total bytes: ' + evt.editor.getData().length );
-	});
+// The "change" event is fired whenever a change is made in the editor.
+editor.on( 'change', function( evt ) {
+    // getData() returns CKEditor's HTML content.
+    console.log( 'Total bytes: ' + evt.editor.getData().length );
+});
+```
 
 ## The Save Plugin
 

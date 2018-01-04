@@ -28,16 +28,18 @@ The following are the most relevant files that you can find there:
 
 Edit the `build-config.js` file which contains the build configuration. It includes the following sections:
 
-	var CKBUILDER_CONFIG = {
-		// Skin name.
-		skin: '...',
+``` js
+var CKBUILDER_CONFIG = {
+    // Skin name.
+    skin: '...',
 
-		// Files to be ignored.
-		ignore: [ ... ],
+    // Files to be ignored.
+    ignore: [ ... ],
 
-		// Plugins to be included.
-		plugins: { ... }
-	};
+    // Plugins to be included.
+    plugins: { ... }
+};
+```
 
 The most important parts are the `skin` name and the list of `plugins`. These need to be set properly and include all the things you want to have in your build.
 

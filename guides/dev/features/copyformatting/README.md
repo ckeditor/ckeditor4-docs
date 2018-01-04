@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 The optional [Copy Formatting](https://ckeditor.com/cke4/addon/copyformatting) plugin provides the ability to easily copy text formatting from one place in the document and apply it to another.
 
-When enabled, the plugin adds the **Copy Formatting** (<img src="guides/dev_copyformatting/copyformatting-button.png" alt="Copy Formatting toolbar button" style="vertical-align: bottom;">) toolbar button. To copy styles, place your cursor inside the text (or select a styled document fragment) and press the button or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut. Then place the cursor inside some word or select a part of the text to apply formatting to it. The copied formatting can also be applied by using the <kbd>Ctrl+Shift+V</kbd> keyboard shortcut.
+When enabled, the plugin adds the **Copy Formatting** (<img class="inline" src="guides/dev_copyformatting/copyformatting-button.png" alt="Copy Formatting toolbar button">) toolbar button. To copy styles, place your cursor inside the text (or select a styled document fragment) and press the button or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut. Then place the cursor inside some word or select a part of the text to apply formatting to it. The copied formatting can also be applied by using the <kbd>Ctrl+Shift+V</kbd> keyboard shortcut.
 
 {@img copyformatting_01.png Copied formatting being applied to a text fragment}
 
@@ -28,7 +28,7 @@ When enabled, the plugin adds the **Copy Formatting** (<img src="guides/dev_copy
 
 A special sticky mode allows you to copy formatting once and apply it in more than one place. To enable it, double-click the <img src="guides/dev_copyformatting/copyformatting-button.png" alt="Copy Formatting" style="vertical-align: bottom;"> button or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut.
 
-The sticky mode can be switched off by clicking the <img src="guides/dev_copyformatting/copyformatting-button.png" alt="Copy Formatting" style="vertical-align: bottom;"> button again or by pressing the <kbd>Esc</kbd> key.
+The sticky mode can be switched off by clicking the <img class="inline" src="guides/dev_copyformatting/copyformatting-button.png" alt="Copy Formatting"> button again or by pressing the <kbd>Esc</kbd> key.
 
 ## Copy Formatting Context
 
@@ -38,7 +38,7 @@ By default, Copy Formatting is supported in the following contexts:
 * Lists.
 * Tables.
 
-This means that depending on the value of the CKEDITOR.config.copyFormatting_allowedContexts configuration option Copy Formatting will only support text, list and table styles.
+This means that depending on the value of the {@linkapi CKEDITOR.config.copyFormatting_allowedContexts CKEDITOR.config.copyFormatting_allowedContexts} configuration option Copy Formatting will only support text, list and table styles.
 
     // Default setting: text, lists and tables supported.
     config.copyFormatting_allowedContexts = true;
@@ -52,8 +52,8 @@ Note that if you only allow the `'text'` context, you will still be able to copy
 
 The Copy Formatting filter is configurable &mdash; you can both explicitly whitelist and blacklist the elements from which fetching styles will be allowed:
 
-* CKEDITOR.config.copyFormatting_allowRules &ndash; Sets rules for elements from which the styles can be copied.
-* CKEDITOR.config.copyFormatting_disallowRules &ndash; Sets rules for elements from which the styles cannot be copied.
+* {@linkapi CKEDITOR.config.copyFormatting_allowRules CKEDITOR.config.copyFormatting_allowRules} &ndash; Sets rules for elements from which the styles can be copied.
+* {@linkapi CKEDITOR.config.copyFormatting_disallowRules CKEDITOR.config.copyFormatting_disallowRules} &ndash; Sets rules for elements from which the styles cannot be copied.
 
 Both options are using [Advanced Content Filter](#!/guide/dev_acf) syntax &mdash; refer to the [Allowed Content Rules](#!/guide/dev_allowed_content_rules) article for more information.
 
@@ -80,7 +80,7 @@ By default, you can use the following keyboard shortcuts:
 * <kbd>Ctrl+Shift+V</kbd> &ndash; Applies the previously copied formatting to a text fragment.
 * <kbd>Esc</kbd> &ndash; Disables the sticky mode.
 
-The first two shortcuts can be customized with the CKEDITOR.config.copyFormatting_keystrokeCopy and CKEDITOR.config.copyFormatting_keystrokePaste configuration options, respectively.
+The first two shortcuts can be customized with the {@linkapi CKEDITOR.config.copyFormatting_keystrokeCopy CKEDITOR.config.copyFormatting_keystrokeCopy} and {@linkapi CKEDITOR.config.copyFormatting_keystrokePaste CKEDITOR.config.copyFormatting_keystrokePaste} configuration options, respectively.
 
 You can also completely disable keyboard shortcuts for Copy Formatting by setting these configuration options to `false`. Do note, though, that this is not recommended due to accessibility reasons.
 
@@ -92,9 +92,9 @@ You can also completely disable keyboard shortcuts for Copy Formatting by settin
 
 ## Copy Formatting Cursors
 
-Once activated (i.e. when a style was copied), the Copy Formatting feature causes the cursor inside the editor to change to <img src="guides/dev_copyformatting/copyformatting-cursor.svg" alt="Formatting copied cursor" style="vertical-align: bottom;">. When the cursor is moved outside the editor, it changes to a dedicated "disabled" cursor (<img src="guides/dev_copyformatting/copyformatting-cursor-disabled.svg" alt="Applying copied formatting disabled cursor" style="vertical-align: bottom;">) that indicates you cannot apply the copied formatting there.
+Once activated (i.e. when a style was copied), the Copy Formatting feature causes the cursor inside the editor to change to <img class="inline" src="guides/dev_copyformatting/copyformatting-cursor.svg" alt="Formatting copied cursor">. When the cursor is moved outside the editor, it changes to a dedicated "disabled" cursor (<img class="inline" src="guides/dev_copyformatting/copyformatting-cursor-disabled.svg" alt="Applying copied formatting disabled cursor">) that indicates you cannot apply the copied formatting there.
 
-The special "disabled" cursor can be switched off by setting the CKEDITOR.config.copyFormatting_outerCursor configuration option to `false`.
+The special "disabled" cursor can be switched off by setting the {@linkapi CKEDITOR.config.copyFormatting_outerCursor CKEDITOR.config.copyFormatting_outerCursor} configuration option to `false`.
 
     config.copyFormatting_outerCursor = false;
 

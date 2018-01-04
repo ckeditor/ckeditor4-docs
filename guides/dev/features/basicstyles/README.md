@@ -42,15 +42,17 @@ You will need to remember not to overwrite this file when [upgrading](#!/guide/d
 
 If you want to change the default settings for a particular editor instance, provide the modified `config.removeButtons` value in the [in-page configuration](#!/guide/dev_configuration-section-defining-configuration-in-page) when creating a CKEditor instance, for example:
 
-	// For the Basic preset:
-	CKEDITOR.replace( 'editor1', {
-		removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor'
-	});
+``` js
+// For the Basic preset:
+CKEDITOR.replace( 'editor1', {
+    removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor'
+});
 
-	// For the Standard preset:
-	CKEDITOR.replace( 'editor1', {
-		removeButtons: ''
-	});
+// For the Standard preset:
+CKEDITOR.replace( 'editor1', {
+    removeButtons: ''
+});
+```
 
 **Advantages**
 
@@ -73,24 +75,26 @@ Basic text styles can be output in HTML in different ways. For example, the **Bo
 
 The following example configures CKEditor to output bold with an inline CSS style, italic with the `<i>` element, and subscript and superscript with CSS classes.
 
-	config.coreStyles_bold = {
-		element: 'span',
-		styles: { 'font-weight': 'bold' }
-	};
+``` js
+config.coreStyles_bold = {
+    element: 'span',
+    styles: { 'font-weight': 'bold' }
+};
 
-	config.coreStyles_italic = { element: 'i', overrides: 'em' };
+config.coreStyles_italic = { element: 'i', overrides: 'em' };
 
-	config.coreStyles_subscript = {
-		element: 'span',
-		attributes: { 'class': 'Subscript' },
-		overrides: 'sub'
-	};
+config.coreStyles_subscript = {
+    element: 'span',
+    attributes: { 'class': 'Subscript' },
+    overrides: 'sub'
+};
 
-	config.coreStyles_superscript = {
-		element: 'span',
-		attributes: { 'class': 'Superscript' },
-		overrides: 'sup'
-	};
+config.coreStyles_superscript = {
+    element: 'span',
+    attributes: { 'class': 'Superscript' },
+    overrides: 'sup'
+};
+```
 
 You can use the `overrides` parameter to define an alternative that CKEditor will convert into your desired form.
 
@@ -114,7 +118,7 @@ See the [working "Basic Text Styles: Bold, Italic and More" sample](https://sdk.
 
 Refer to the following resources for more information about text styling and formatting:
 
-* The [Using the Copy Formatting Feature](#!/guide/dev_fcopyformatting) article explains how to copy text formatting between document fragments.
+* The [Using the Copy Formatting Feature](#!/guide/dev_copyformatting) article explains how to copy text formatting between document fragments.
 * The [Removing Text Formatting](#!/guide/dev_removeformat) article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.
 * The [Applying Styles to Editor Content](#!/guide/dev_styles) article discusses creating more semantically correct text styles.
 * The [Applying Block-Level Text Formats](#!/guide/dev_format) article presents how to apply formatting to entire text blocks and not just text selections.

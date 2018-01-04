@@ -165,7 +165,7 @@ See the [working "Applying Styles to Editor Content" sample](https://sdk.ckedito
 Refer to the following resources for more information about text styling and formatting:
 
 * The [Basic Text Styles: Bold, Italic and More](#!/guide/dev_basicstyles) article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting.
-* The [Using the Copy Formatting Feature](#!/guide/dev_fcopyformatting) article explains how to copy text formatting between document fragments.
+* The [Using the Copy Formatting Feature](#!/guide/dev_copyformatting) article explains how to copy text formatting between document fragments.
 * The [Removing Text Formatting](#!/guide/dev_removeformat) article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.
 * The [Applying Block-Level Text Formats](#!/guide/dev_format) article presents how to apply formatting to entire text blocks and not just text selections.
 * The [Setting Text and Background Color](#!/guide/dev_colorbutton) article explains how to use and customize the **Text Color** and **Background Color** features.

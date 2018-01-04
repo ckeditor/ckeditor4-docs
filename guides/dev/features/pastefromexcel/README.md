@@ -11,7 +11,7 @@ For licensing, see LICENSE.md.
 
 The [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin allows you to also paste content from **Microsoft Excel** and maintain original content structure and formatting. As of CKEditor 4.7 some more advanced Excel features are not supported yet and will be added in future CKEditor releases.
 
-When the plugin is enabled, it automatically detects Excel content and transforms its structure and formatting to clean HTML. It also adds the **Paste from Word** toolbar button (<img src="guides/dev_pastefromword/pastefromword-button.png" alt="Paste from Word toolbar button" style="vertical-align: bottom;">) which makes it possible to paste clipboard data this way only on demand.
+When the plugin is enabled, it automatically detects Excel content and transforms its structure and formatting to clean HTML. It also adds the **Paste from Word** toolbar button (<img class="inline" src="guides/dev_pastefromword/pastefromword-button.png" alt="Paste from Word toolbar button">) which makes it possible to paste clipboard data this way only on demand.
 
 ## Supported Features
 

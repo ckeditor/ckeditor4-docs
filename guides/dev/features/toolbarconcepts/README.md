@@ -1,3 +1,8 @@
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md.
+-->
+
 # Understanding CKEditor Toolbar Concepts
 
 CKEditor 4 introduced a new concept for toolbar organization which is based on "grouping" instead of the traditional "item by item positioning" way. The aim of this article is to explain the concepts behind the editor toolbar and to help you choose the most optimal, accessibility-friendly and future-proof method to configure your toolbar.

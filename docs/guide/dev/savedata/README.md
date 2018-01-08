@@ -22,7 +22,7 @@ Some applications need to handle all data on the client side, sending it to the 
 
 To retrieve the editor data, call the {@linkapi CKEDITOR.editor.getData CKEDITOR.editor.getData} method of the editor instance. For an editor instance with an ID of `editor1`, this would look like the following:
 
-``` js
+``` html
 <script>
     var data = CKEDITOR.instances.editor1.getData();
 

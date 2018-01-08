@@ -36,7 +36,9 @@ In classic editing, CKEditor can work just like a `<textarea>` HTML element on y
 
 As a matter of fact, in this scenario CKEditor uses the `<textarea>` element to transfer its data to the server. The `<textarea>` element is invisible to the end user. In order to create an editor instance using this approach, you must first add a `<textarea>` element to the source code of your HTML page:
 
-	<textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
+``` html
+<textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
+```
 
 Note that if you want to load data into the editor, for example from a database, you need to put that data inside the `<textarea>` element, just like the HTML-encoded `<p>` element in the example above. In this case the `<textarea>` element was named `editor1`. This name can be used in the server-side code later, when receiving the submitted data.
 

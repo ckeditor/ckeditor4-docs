@@ -21,7 +21,7 @@ tags and can give different results for each one of them.
 
 The [HTML Output Writer plugin](https://ckeditor.com/cke4/addon/htmlwriter) makes it possible to generate advanced output formatting with CKEditor.
 
-The *writer* is used by the CKEDITOR.htmlDataProcessor class to write output data.
+The *writer* is used by the {@linkapi CKEDITOR.htmlDataProcessor CKEDITOR.htmlDataProcessor} class to write output data.
 The current writer for a specific editor instance can be retrieved with the {@linkapi CKEDITOR.htmlDataProcessor#writer editor.dataProcessor.writer} property.
 
 It is possible to configure several output formatting options by setting
@@ -82,7 +82,7 @@ this approach used when creating an editor instance:
 
 Another solution is to use the {@linkapi CKEDITOR } object which will cause all editor instances to be changed:
 
-	CKEDITOR.on( 'instanceReady', function( ev ) {
+	{@linkapi CKEDITOR.on CKEDITOR.on}( 'instanceReady', function( ev ) {
 		// Ends self-closing tags the HTML4 way, like <br>.
 		ev.editor.dataProcessor.writer.selfClosingEnd = '>';
 	});

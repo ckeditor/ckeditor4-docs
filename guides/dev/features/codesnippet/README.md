@@ -59,7 +59,7 @@ After performing the steps described above, all the code snippets created with C
 
 ## Changing Highlighter Theme
 
-In [classic editor](#!/guide/dev_framed) use the CKEDITOR.config.codeSnippet_theme option. For example:
+In [classic editor](#!/guide/dev_framed) use the {@linkapi CKEDITOR.config.codeSnippet_theme CKEDITOR.config.codeSnippet_theme} option. For example:
 
     config.codeSnippet_theme = 'school_book';
 
@@ -71,7 +71,7 @@ In [inline](#!/guide/dev_inline) or [div-based](https://ckeditor.com/cke4/addon/
 
 ## Changing Supported Languages
 
-You can customize the list of languages with syntax highlighting support by setting the CKEDITOR.config.codeSnippet_languages option.
+You can customize the list of languages with syntax highlighting support by setting the {@linkapi CKEDITOR.config.codeSnippet_languages CKEDITOR.config.codeSnippet_languages} option.
 
 The following example will reduce the languages list to JavaScript and PHP only.
 

@@ -49,7 +49,7 @@ For example, to enable `<iframe>` and `<style>` elements, allow two additional a
 Setting {@linkapi CKEDITOR.config#forcePasteAsPlainText } to `true` will not replace the content filtering features that {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} can provide. It will however make it impossible for users to paste items such as tables or lists, where structure matters most.
 
 ### Use Enter mode P
-Changing the {@linkapi CKEDITOR.config#enterMode Enter Mode} setting to `BR` or `DIV` is not recommended. The default {@linkapi CKEDITOR.ENTER_P} mode is fully supported by all editor features and plugins and is also the most correct one in terms of best practices for creating web content.
+Changing the {@linkapi CKEDITOR.config#enterMode Enter Mode} setting to `BR` or `DIV` is not recommended. The default {@linkapi CKEDITOR.ENTER_P CKEDITOR.ENTER_P} mode is fully supported by all editor features and plugins and is also the most correct one in terms of best practices for creating web content.
 
 If you do it to control paragraph spacing, you should use stylesheets instead. Edit the `contents.css` file and set up a suitable `margin` value for `<p>` elements, for example:
 

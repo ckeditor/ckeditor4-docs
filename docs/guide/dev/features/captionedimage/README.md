@@ -46,7 +46,7 @@ Captioned images can be easily aligned through their Image Properties dialog win
 </figure>
 ```
 
-Thanks to the CKEDITOR.config.image2_alignClasses option introduced in CKEditor 4.4 you can use CSS classes for setting image alignment. Additionally, the CKEDITOR.config.image2_captionedClass option allows you to assign a custom class to the `<figure>` element of a captioned image. Both these options combined give you far better control over the styling process.
+Thanks to the {@linkapi CKEDITOR.config.image2_alignClasses CKEDITOR.config.image2_alignClasses} option introduced in CKEditor 4.4 you can use CSS classes for setting image alignment. Additionally, the {@linkapi CKEDITOR.config.image2_captionedClass CKEDITOR.config.image2_captionedClass} option allows you to assign a custom class to the `<figure>` element of a captioned image. Both these options combined give you far better control over the styling process.
 
 For example, the following configuration:
 
@@ -75,7 +75,7 @@ See the following [showcase](https://sdk.ckeditor.com/samples/styles.html#widget
 
 Since CKEditor 4.6 it is possible to make setting alternative text for captioned images obligatory for the users. This helps increase image {@link guide/dev/a11y/README accessibility} and is required by several accessibility standards.
 
-To make alternative text mandatory, set the CKEDITOR.config.image2_altRequired configuration option:
+To make alternative text mandatory, set the {@linkapi CKEDITOR.config.image2_altRequired CKEDITOR.config.image2_altRequired} configuration option:
 
 ```
 config.image2_altRequired = true;

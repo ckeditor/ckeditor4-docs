@@ -54,7 +54,7 @@ With the following structure ready, it is time to open the `plugin.js` file in a
 		// Simple Box widget code.
 	} );
 
-All CKEditor plugins are created by using the {@linkapi CKEDITOR.plugins#add} function. This function should contain the plugin name (again, the same as the directory name, so `simplebox` in our case) and the plugin logic placed inside the `{@linkapi CKEDITOR.pluginDefinition#init init}` function that is called upon the initialization of the editor instance.
+All CKEditor plugins are created by using the {@linkapi CKEDITOR.plugins#add CKEDITOR.plugins#add} function. This function should contain the plugin name (again, the same as the directory name, so `simplebox` in our case) and the plugin logic placed inside the `{@linkapi CKEDITOR.pluginDefinition#init init}` function that is called upon the initialization of the editor instance.
 
 The `simplebox` plugin is going to define the `simplebox` widget. To do this, the plugin needs to reference the generic [Widget plugin](https://ckeditor.com/cke4/addon/widget) that provides the {@linkapi CKEDITOR.plugins.widget Widget API}. This is done in the `{@linkapi CKEDITOR.pluginDefinition#requires requires}` property.
 
@@ -83,11 +83,11 @@ We now need to use the Widget API to register the widget with the editor instanc
 		} );
 	}
 
-The `editor.widgets.add` method accepts a number of parameters (wrapped as an instance of the {@linkapi CKEDITOR.plugins.widget.definition} class) that let you define the widget properties, including the toolbar button, content required by the widget and allowed in the widget elements, widget building blocks, and its template. Last but not least, we need to define the elements that will be converted into widgets in the editor.
+The `editor.widgets.add` method accepts a number of parameters (wrapped as an instance of the {@linkapi CKEDITOR.plugins.widget.definition CKEDITOR.plugins.widget.definition} class) that let you define the widget properties, including the toolbar button, content required by the widget and allowed in the widget elements, widget building blocks, and its template. Last but not least, we need to define the elements that will be converted into widgets in the editor.
 
 ## Widget Toolbar Button
 
-A toolbar button can be added by defining the `{@linkapi CKEDITOR.plugins.widget.definition#button button}` property. This property accepts the label for the button and if defined, automatically adds the button (with the icon defined in the `icons` property of the {@linkapi CKEDITOR.plugins.add} method, identical to the widget name, and the label defined here) to the editor toolbar.
+A toolbar button can be added by defining the `{@linkapi CKEDITOR.plugins.widget.definition#button button}` property. This property accepts the label for the button and if defined, automatically adds the button (with the icon defined in the `icons` property of the {@linkapi CKEDITOR.plugins.add CKEDITOR.plugins.add} method, identical to the widget name, and the label defined here) to the editor toolbar.
 
 	editor.widgets.add( 'simplebox', {
 		button: 'Create a simple box'
@@ -145,7 +145,7 @@ Note, however, that at the moment Simple Box is of no real use for the user beca
 
 To change this and allow for some user input, we will need to define the `{@linkapi CKEDITOR.plugins.widget.definition#editables editables}` property of the widget definition. This property uses the `{@linkapi CKEDITOR.plugins.widget.nestedEditable.definition#selector selector}` parameter to define a CSS selector to be used for finding the particular editable element inside the widget element. In this case the selectors will use the classes that we assigned to the widget fields in the template definition.
 
-<info-box hint=""> Please note that only elements defined in <code>{@linkapi CKEDITOR.dtd#editable CKEDITOR.dtd.$editable}</code> can be converted into editable widget elements.
+<info-box hint=""> Please note that only elements defined in <code>{@linkapi CKEDITOR.dtd#s-editable CKEDITOR.dtd.$editable}</code> can be converted into editable widget elements.
 </info-box>
 
 <info-box info=""> Please note that editables <strong>have to</strong> be defined in the same order as the corresponding elements are placed in DOM. Otherwise, errors may occur when nesting widgets.
@@ -307,7 +307,7 @@ In our case we will assume that each `<div>` element with the `simplebox` class 
 		}
 	} );
 
-Note that the `element` argument is an instance of {@linkapi CKEDITOR.htmlParser.element}, which means it is not a real DOM element yet. This is caused by the fact that upcasting is performed during data processing which is done on DOM represented by JavaScript objects.
+Note that the `element` argument is an instance of {@linkapi CKEDITOR.htmlParser.element CKEDITOR.htmlParser.element}, which means it is not a real DOM element yet. This is caused by the fact that upcasting is performed during data processing which is done on DOM represented by JavaScript objects.
 
 Anyway, this is it. The widget code is complete now and works as intended!
 

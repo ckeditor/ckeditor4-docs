@@ -13,7 +13,7 @@ The [CKEditor JavaScript API](#!/api) makes it easy to retrieve and control the 
 
 Some applications need to handle all data on the client side, sending it to the server using their specific methods. This is what usually happens in [inline editing](#!/guide/dev_inline) &mdash; with the possibility to [create](#!/api/CKEDITOR-method-inline) and [destroy](#!/api/CKEDITOR.editor-method-destroy) CKEditor instances dynamically, CKEditor is a perfect match for Ajax applications. If this is the case, it is enough to use the JavaScript API methods to easily retrieve the editor instance data.
 
-To retrieve the editor data, call the CKEDITOR.editor.getData method of the editor instance. For an editor instance with an ID of `editor1`, this would look like the following:
+To retrieve the editor data, call the {@linkapi CKEDITOR.editor.getData CKEDITOR.editor.getData} method of the editor instance. For an editor instance with an ID of `editor1`, this would look like the following:
 
 ``` js
 <script>
@@ -58,7 +58,7 @@ Whenever a change is made in the editor, CKEditor fires the [change](#!/api/CKED
 The following example shows how to listen to the `change` event and print the total number of bytes to the console:
 
 ``` js
-var editor = CKEDITOR.replace( 'editor1' );
+var editor = {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1' );
 
 // The "change" event is fired whenever a change is made in the editor.
 editor.on( 'change', function( evt ) {

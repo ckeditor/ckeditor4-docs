@@ -22,7 +22,7 @@ The **elements path** displays information about the HTML elements of the docume
 
 If you want to get rid of it, it is most recommended that you remove the [Elements Path](https://ckeditor.com/cke4/addon/elementspath) plugin in [CKBuilder](https://ckeditor.com/cke4/builder) when creating your custom build.
 
-Alternatively, you can use the CKEDITOR.config.removePlugins setting to remove the plugin:
+Alternatively, you can use the {@linkapi CKEDITOR.config.removePlugins CKEDITOR.config.removePlugins} setting to remove the plugin:
 
 	config.removePlugins = 'elementspath';
 
@@ -53,7 +53,7 @@ CKEditor toolbar can be collapsed and restored by using the **Collapse Toolbar**
 
 {@img assets/img/toolbarcollapse_01.png The Collapse Toolbar button in CKEditor}
 
-If you want to enable this feature, you need to set the CKEDITOR.config#toolbarCanCollapse option to `true`:
+If you want to enable this feature, you need to set the {@linkapi CKEDITOR.config#toolbarCanCollapse CKEDITOR.config#toolbarCanCollapse} option to `true`:
 
 	config.toolbarCanCollapse = true;
 
@@ -82,7 +82,7 @@ In [CKEditor 3.6](https://ckeditor.com/blog/CKEditor_3.6_released) the concept o
 
 Since CKEditor 3.6, <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> navigate between toolbar button groups, while the <kbd>Arrow</kbd> keys are used to cycle between the buttons within a group.
 
-In order to change the default toolbar navigation mode and use the <kbd>Arrow</kbd> keys as an equivalent to <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd>, use the following CKEDITOR.config#toolbarGroupCycling configuration setting:
+In order to change the default toolbar navigation mode and use the <kbd>Arrow</kbd> keys as an equivalent to <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd>, use the following {@linkapi CKEDITOR.config#toolbarGroupCycling CKEDITOR.config#toolbarGroupCycling} configuration setting:
 
 	config.toolbarGroupCycling = false;
 

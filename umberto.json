@@ -4,7 +4,8 @@
   "path": "docs",
   "docsearch": false,
   "github": {
-	"url": "https://github.com/ckeditor/ckeditor-dev"
+	"url": "https://github.com/ckeditor/ckeditor-dev",
+	"docsUrl": "https://github.com/ckeditor/ckeditor-docs"
   },
   "groups": [
 	{

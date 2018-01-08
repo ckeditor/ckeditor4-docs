@@ -39,7 +39,7 @@ The following code shows how to register a sample style definition.
 
 The definition registration like the one above can be placed inline in the page source, or can live in an external file which is loaded "on demand", when needed only (see below).
 
-When the definitions are ready, you must instruct the editor to apply the newly registered styles by using the  CKEDITOR.config.stylesSet setting. This may be set by using {@link guide/dev/configuration/README any of the editor configuration methods available}, for example in the `config.js` file:
+When the definitions are ready, you must instruct the editor to apply the newly registered styles by using the  {@linkapi CKEDITOR.config.stylesSet CKEDITOR.config.stylesSet} setting. This may be set by using {@link guide/dev/configuration/README any of the editor configuration methods available}, for example in the `config.js` file:
 
 	config.stylesSet = 'my_styles';
 
@@ -49,7 +49,7 @@ The style definition registration call can be included in an external JavaScript
 
 Your style definition file can be saved in any place of your website (or somewhere in the Internet). You must, however, know the URL required to reach it. For example, you can save the file in the root of your website, and then call it as `/styles.js`, or place it somewhere else, and refer to it using its full URL, like `http://www.example.com/styles.js`.
 
-At that point, change the CKEDITOR.config.stylesSet setting to point the editor to your file:
+At that point, change the {@linkapi CKEDITOR.config.stylesSet CKEDITOR.config.stylesSet} setting to point the editor to your file:
 
 	config.stylesSet = 'my_styles:/styles.js';
 
@@ -131,15 +131,15 @@ Another method of customizing the styles for the document created in CKEditor an
 <info-box hint=""> Please note that the Stylesheet Parser plugin is incompatible with {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}, so it disables the filter after installing.
 </info-box>
 
-Having the Stylesheet Parser installed, you need to supply the location of the CSS file that contains your style definitions by using the CKEDITOR.config.contentsCss configuration setting:
+Having the Stylesheet Parser installed, you need to supply the location of the CSS file that contains your style definitions by using the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} configuration setting:
 
 	config.contentsCss = 'sample_CSS_file.css';
 
-Finally, if you want to skip loading the styles that are used in CKEditor by default, you may set the CKEDITOR.config.stylesSet option to an empty value:
+Finally, if you want to skip loading the styles that are used in CKEditor by default, you may set the {@linkapi CKEDITOR.config.stylesSet CKEDITOR.config.stylesSet} option to an empty value:
 
 	config.stylesSet = [];
 
-The image below shows the **Styles** drop-down list populated with entries coming from an external stylesheet, without default styles that were disabled in the editor configuration by setting  CKEDITOR.config.stylesSet to `[]`.
+The image below shows the **Styles** drop-down list populated with entries coming from an external stylesheet, without default styles that were disabled in the editor configuration by setting  {@linkapi CKEDITOR.config.stylesSet CKEDITOR.config.stylesSet} to `[]`.
 
 {@img assets/img/styles_02.png}
 
@@ -147,14 +147,14 @@ This solution lets you configure the editor to use existing CSS stylesheet rules
 
 ### Choosing the CSS Selectors
 
-The Stylesheet Parser plugin can be fine-tuned to only take into account the CSS selectors that match the CKEDITOR.config.stylesheetParser_validSelectors configuration value. The default regular expression accepts all CSS rules in a form of `element.class`, but you can modify it to refer to a limited set of elements, like in the example below.
+The Stylesheet Parser plugin can be fine-tuned to only take into account the CSS selectors that match the {@linkapi CKEDITOR.config.stylesheetParser_validSelectors CKEDITOR.config.stylesheetParser_validSelectors} configuration value. The default regular expression accepts all CSS rules in a form of `element.class`, but you can modify it to refer to a limited set of elements, like in the example below.
 
 	// Only add rules for <p> and <span> elements.
 	config.stylesheetParser_validSelectors = /\^(p|span)\.\w+/;
 
 ### Limiting the CSS Selectors
 
-You can also further customize the Stylesheet Parser plugin by setting the CKEDITOR.config.stylesheetParser_skipSelectors configuration value. The plugin will then ignore the CSS rules that match the regular expression and will not display them in the **Styles** drop-down list nor use them to output the document content. The default value excludes all rules for the `<body>` element as well as classes defined for no specific element, but you can modify it to ignore a wider set of elements, like in the example below.
+You can also further customize the Stylesheet Parser plugin by setting the {@linkapi CKEDITOR.config.stylesheetParser_skipSelectors CKEDITOR.config.stylesheetParser_skipSelectors} configuration value. The plugin will then ignore the CSS rules that match the regular expression and will not display them in the **Styles** drop-down list nor use them to output the document content. The default value excludes all rules for the `<body>` element as well as classes defined for no specific element, but you can modify it to ignore a wider set of elements, like in the example below.
 
 	// Ignore rules for <body> and <caption> elements, classes starting with "high",
 	// and any class defined for no specific element.

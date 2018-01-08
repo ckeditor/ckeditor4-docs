@@ -56,7 +56,7 @@ If another plugin generates CKEditor output data format other than HTML, like fo
 
 ## Configuring Source Code Format
 
-At the moment the only aspect of the source code view that you can configure is the `tab-size` CSS property of the source editing area. Use the CKEDITOR.config.sourceAreaTabSize option to set the width of the tab character. Enter an integer
+At the moment the only aspect of the source code view that you can configure is the `tab-size` CSS property of the source editing area. Use the {@linkapi CKEDITOR.config.sourceAreaTabSize CKEDITOR.config.sourceAreaTabSize} option to set the width of the tab character. Enter an integer
 to denote the number of spaces that the tab will contain.
 
 	config.sourceAreaTabSize = 8;

@@ -17,7 +17,7 @@ The editor UI color can be easily adjusted by the developer to match the look an
 <info-box info=""> Please note that this feature can only be used for editor skins that are compatible with the so-called {@link guide/skin_sdk/chameleon/README "chameleon" feature}. The skins created by CKSource, i.e. <a href="https://ckeditor.com/cke4/addon/moono-lisa">Moono-Lisa</a>, <a href="https://ckeditor.com/cke4/addon/moono">Moono</a> and <a href="https://ckeditor.com/cke4/addon/kama">Kama</a>, already support it. If you are using a custom skin, you will need to define the {@linkapi CKEDITOR.skin#chameleon CKEDITOR.skin.chameleon} function in your <code>skin.js</code> file.
 </info-box>
 
-If you want to change the default UI color, you need to define the CKEDITOR.config.uiColor configuration setting which accepts an RGB color code.
+If you want to change the default UI color, you need to define the {@linkapi CKEDITOR.config.uiColor CKEDITOR.config.uiColor} configuration setting which accepts an RGB color code.
 
 For example, to change the CKEditor UI to the joyful green color that would match this article's header, you could set the following {@link guide/dev/configuration/README editor configuration}:
 

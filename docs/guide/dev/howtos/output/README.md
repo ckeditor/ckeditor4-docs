@@ -23,7 +23,7 @@ For some tips on how to achieve this, check the {@link guide/dev/features/output
 
 If, for example, you want CKEditor to output the self-closing tags in the HTML4 way, creating `<br>` elements instead of `<br/>`, configure the `selfClosingEnd` setting in the following way.
 
-	CKEDITOR.on( 'instanceReady', function( ev ) {
+	{@linkapi CKEDITOR.on CKEDITOR.on}( 'instanceReady', function( ev ) {
 		ev.editor.dataProcessor.writer.selfClosingEnd = '>';
 	});
 

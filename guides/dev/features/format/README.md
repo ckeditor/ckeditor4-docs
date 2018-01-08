@@ -17,7 +17,7 @@ If you want to apply inline styles on selected text fragments, read about [basic
 
 ## Enabling All Block-Level Text Formats
 
-By default, some of these formats are not included in the Standard preset due to the CKEDITOR.config.format_tags settings available in the `config.js` file, but you can easily enable them by using one of the following solutions. The same procedure also applies to limiting the number of text format options available in the editor.
+By default, some of these formats are not included in the Standard preset due to the {@linkapi CKEDITOR.config.format_tags CKEDITOR.config.format_tags} settings available in the `config.js` file, but you can easily enable them by using one of the following solutions. The same procedure also applies to limiting the number of text format options available in the editor.
 
 ### Enable All Block-Level Text Format Globally
 
@@ -63,7 +63,7 @@ You will need to provide the in-page configuration for all other CKEditor instan
 
 The text format feature is customizable &mdash; you can easily adjust format definitions, for example by adding a custom class.
 
-Each entry from the CKEDITOR.config.format_tags setting must have a corresponding definition in a configuration option named `config.format_(tagName)`, for example the `<h1>` tag is defined in CKEDITOR.config.format_h1.
+Each entry from the {@linkapi CKEDITOR.config.format_tags CKEDITOR.config.format_tags} setting must have a corresponding definition in a configuration option named `config.format_(tagName)`, for example the `<h1>` tag is defined in {@linkapi CKEDITOR.config.format_h1 CKEDITOR.config.format_h1}
 
 If you want to, for example, add CSS classes to format definitions, you can do it in the following way:
 
@@ -71,7 +71,7 @@ If you want to, for example, add CSS classes to format definitions, you can do i
 	config.format_h2 = { element: 'h2', attributes: { 'class': 'editorTitle2' } };
 	config.format_pre = { element: 'pre', attributes: { 'class': 'editorCode' } };
 
-Remember that depending on your use case, the CSS classes for text formats need to be defined accordingly. For [classic editor](#!/guide/dev_framed) they should be defined in an external CSS file added to the editor configuration with the CKEDITOR.config.contentsCss option. For [inline editor](#!/guide/dev_inline) they need to be added directly to the page stylesheet.
+Remember that depending on your use case, the CSS classes for text formats need to be defined accordingly. For [classic editor](#!/guide/dev_framed) they should be defined in an external CSS file added to the editor configuration with the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option. For [inline editor](#!/guide/dev_inline) they need to be added directly to the page stylesheet.
 
 <p class="tip">
 	The block-level text format feature is automatically integrated with <a href="#!/guide/dev_acf">Advanced Content Filter</a>, so all custom format definitions are treated as allowed by the editor content filtering mechanism.

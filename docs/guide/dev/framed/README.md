@@ -40,13 +40,13 @@ As a matter of fact, in this scenario CKEditor uses the `<textarea>` element to 
 
 Note that if you want to load data into the editor, for example from a database, you need to put that data inside the `<textarea>` element, just like the HTML-encoded `<p>` element in the example above. In this case the `<textarea>` element was named `editor1`. This name can be used in the server-side code later, when receiving the submitted data.
 
-After the `<textarea>` element is inserted, you can use the {@link api/index CKEditor JavaScript API} to replace this HTML element with an editor instance. A simple (and most commonly used) CKEDITOR.replace method call will be enough to achieve that:
+After the `<textarea>` element is inserted, you can use the {@link api/index CKEditor JavaScript API} to replace this HTML element with an editor instance. A simple (and most commonly used) {@linkapi CKEDITOR.replace CKEDITOR.replace} method call will be enough to achieve that:
 
 	<script>
 		CKEDITOR.replace( 'editor1' );
 	</script>
 
-This script block must be included at any point after the `<textarea>` tag in the source code of the page. You can also call the CKEDITOR.replace method inside the `<head>` section, but in this case you will need to listen for the `window.onload` event:
+This script block must be included at any point after the `<textarea>` tag in the source code of the page. You can also call the {@linkapi CKEDITOR.replace CKEDITOR.replace} method inside the `<head>` section, but in this case you will need to listen for the `window.onload` event:
 
 	<script>
 		window.onload = function() {
@@ -56,10 +56,10 @@ This script block must be included at any point after the `<textarea>` tag in th
 
 ### Alternative Methods for Creating a Classic Editor
 
-Apart from the CKEDITOR.replace method you can also use the following options to create a classic editor on your page:
+Apart from the {@linkapi CKEDITOR.replace CKEDITOR.replace} method you can also use the following options to create a classic editor on your page:
 
-* The CKEDITOR.appendTo method &ndash; Creates a new editor instance at the end of a specific DOM element.
-* The CKEDITOR.replaceAll method &ndash; Replaces all `<textarea>` elements available in the document (or just all those that match certain criteria) with editor instances.
+* The {@linkapi CKEDITOR.appendTo CKEDITOR.appendTo} method &ndash; Creates a new editor instance at the end of a specific DOM element.
+* The {@linkapi CKEDITOR.replaceAll CKEDITOR.replaceAll} method &ndash; Replaces all `<textarea>` elements available in the document (or just all those that match certain criteria) with editor instances.
 * The automatic replacement of all `<textarea>` elements of a `ckeditor` class in the document with CKEditor instances.
 
 ## Complete Sample
@@ -80,7 +80,7 @@ To insert a CKEditor instance, you can use the following sample that creates a b
             My Editor:<br>
             <textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
             <script>
-                CKEDITOR.replace( 'editor1' );
+                {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1' );
             </script>
         </br></p>
         <p>

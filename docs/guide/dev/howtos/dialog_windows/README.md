@@ -44,7 +44,7 @@ The code above creates the following UI elements in a sample dialog window tab.
 
 You can also customize existing dialog windows and give them default values. The following code sets the default **URL** field value for the [Link](https://ckeditor.com/cke4/addon/link) dialog window.
 
-	CKEDITOR.on( 'dialogDefinition', function( ev ) {
+	{@linkapi CKEDITOR.on CKEDITOR.on}( 'dialogDefinition', function( ev ) {
 		// Take the dialog name and its definition from the event data.
 		var dialogName = ev.data.name;
 		var dialogDefinition = ev.data.definition;
@@ -78,7 +78,7 @@ Firstly, you will need to know the names of the dialog window and the tab that y
 
 Once you have the names you can add the following code into the page that contains your CKEditor instance. The example below sets the [Image Properties](https://ckeditor.com/cke4/addon/image) dialog window to open the **Link** tab by default.
 
-	CKEDITOR.on('dialogDefinition', function( ev ) {
+	{@linkapi CKEDITOR.on CKEDITOR.on}('dialogDefinition', function( ev ) {
 		// Take the dialog window name and its definition from the event data.
 		var dialogName = ev.data.name;
 		var dialogDefinition = ev.data.definition;
@@ -114,8 +114,8 @@ CKEditor dialog windows can be resized by using the resizing grip located in the
 
 You can disable the resizing feature completely by setting the {@linkapi CKEDITOR.dialog.definition#resizable resizable} parameter to  CKEDITOR#DIALOG_RESIZE_NONE.
 
-	CKEDITOR.on( 'dialogDefinition', function( ev ) {
-		ev.data.definition.resizable = CKEDITOR.DIALOG_RESIZE_NONE;
+	{@linkapi CKEDITOR.on CKEDITOR.on}( 'dialogDefinition', function( ev ) {
+		ev.data.definition.resizable = {@linkapi CKEDITOR.DIALOG_RESIZE_NONE CKEDITOR.DIALOG_RESIZE_NONE};
 	});
 
 Use the CKEDITOR#DIALOG_RESIZE_WIDTH and CKEDITOR#DIALOG_RESIZE_HEIGHT values to enable resizing of a dialog window in one dimension only.
@@ -125,11 +125,11 @@ Use the CKEDITOR#DIALOG_RESIZE_WIDTH and CKEDITOR#DIALOG_RESIZE_HEIGHT values to
 
 If you want to leave the resizing feature for some of the dialog windows and turn it off for others, you may define the value of the {@linkapi CKEDITOR.dialog.definition#resizable resizable} parameter for each dialog window separately, like in the example below.
 
-	CKEDITOR.on( 'dialogDefinition', function( ev ) {
+	{@linkapi CKEDITOR.on CKEDITOR.on}( 'dialogDefinition', function( ev ) {
 		if ( ev.data.name == 'link' )
-			ev.data.definition.resizable = CKEDITOR.DIALOG_RESIZE_NONE;
+			ev.data.definition.resizable = {@linkapi CKEDITOR.DIALOG_RESIZE_NONE CKEDITOR.DIALOG_RESIZE_NONE};
 		else if ( ev.data.name == 'image' )
-			ev.data.definition.resizable = CKEDITOR.DIALOG_RESIZE_HEIGHT;
+			ev.data.definition.resizable = {@linkapi CKEDITOR.DIALOG_RESIZE_HEIGHT CKEDITOR.DIALOG_RESIZE_HEIGHT};
 	});
 
 Use the CKEDITOR#DIALOG_RESIZE_WIDTH and CKEDITOR#DIALOG_RESIZE_HEIGHT values to enable resizing of a dialog window in one dimension only.

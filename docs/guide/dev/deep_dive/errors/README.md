@@ -64,7 +64,7 @@ This article contains the list of CKEditor error codes and their explanation. Th
 ## mathjax-no-config
 
 * Location: `plugins/mathjax/plugin.js`
-* Description: The CKEDITOR.config#mathJaxLib property is not set. Refer to {@linkapi CKEDITOR.config#mathJaxLib API documentation} for more information.
+* Description: The {@linkapi CKEDITOR.config#mathJaxLib CKEDITOR.config#mathJaxLib} property is not set. Refer to {@linkapi CKEDITOR.config#mathJaxLib API documentation} for more information.
 * Additional data: None.
 
 ## range-endcontainer

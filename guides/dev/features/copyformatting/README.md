@@ -85,7 +85,7 @@ The first two shortcuts can be customized with the {@linkapi CKEDITOR.config.cop
 You can also completely disable keyboard shortcuts for Copy Formatting by setting these configuration options to `false`. Do note, though, that this is not recommended due to accessibility reasons.
 
     // Changes the keyboard shortcut for copying the formatting to Ctrl+Shift+B.
-    config.copyFormatting_keystrokeCopy = CKEDITOR.CTRL + CKEDITOR.SHIFT + 66;
+    config.copyFormatting_keystrokeCopy = {@linkapi CKEDITOR.CTRL CKEDITOR.CTRL} + {@linkapi CKEDITOR.SHIFT CKEDITOR.SHIFT} + 66;
 
     // Disables the keyboard shortcut for pasting the formatting.
     config.copyFormatting_keystrokePaste = false;

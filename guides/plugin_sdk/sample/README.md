@@ -11,7 +11,7 @@ The aim of this tutorial is to demonstrate how to create a most basic CKEditor p
 
 Learn by coding! We are going to develop a **timestamp** plugin that inserts current date and time into the editing area of CKEditor at the caret position. The timestamp will be added after the user clicks a dedicated toolbar button.
 
-Since the plugin implementation makes use of the CKEDITOR.editor.insertHtml function, this
+Since the plugin implementation makes use of the {@linkapi CKEDITOR.editor.insertHtml CKEDITOR.editor.insertHtml} function, this
 example can be easily adjusted to insert any other HTML element.
 
 The plugin will be code-named `timestamp` and according to CKEditor naming conventions,
@@ -54,7 +54,7 @@ text editor and to start creating the source code of the plugin.
 		}
 	});
 
-All CKEditor plugins are created by using the CKEDITOR.plugins.add method. This
+All CKEditor plugins are created by using the {@linkapi CKEDITOR.plugins.add CKEDITOR.plugins.add} method. This
 method should contain the plugin name &mdash; `'timestamp'` &mdash; and the plugin logic placed
 inside the {@link CKEDITOR.pluginDefinition#init init} function that is called
 upon the initialization of the editor instance.
@@ -67,7 +67,7 @@ It is customary for CKEditor plugins to define an editor command that performs a
 action associated with them. The command should be defined inside the `init` function
 in order to be created upon the initialization of a CKEditor instance.
 
-In this case we are going to use the CKEDITOR.editor.addCommand
+In this case we are going to use the {@linkapi CKEDITOR.editor.addCommand CKEDITOR.editor.addCommand}
 method to define the `insertTimestamp` command that will insert the current date and time into CKEditor:
 
 	editor.addCommand( 'insertTimestamp', {
@@ -98,7 +98,7 @@ the `insertTimestamp` command:
 		toolbar: 'insert'
 	});
 
-The CKEDITOR.ui.addButton method call above created a button named `'Timestamp'` with the following properties:
+The {@linkapi CKEDITOR.ui.addButton CKEDITOR.ui.addButton} method call above created a button named `'Timestamp'` with the following properties:
 
  * `label` &ndash; the textual part of the button (if visible) and its tooltip.
  * `command` &ndash; the command to be executed once the button is activated. This is the command we created in the previous step.

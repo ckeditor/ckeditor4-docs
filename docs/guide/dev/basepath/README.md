@@ -26,7 +26,7 @@ By default, CKEditor is looking for the `ckeditor.js` file in the `<script>` tag
 
 ## Solution: CKEDITOR_BASEPATH ##
 
-When loading the editor script, CKEditor is looking for the global {@linkapi CKEDITOR_BASEPATH} JavaScript variable that contains the editor installation path. If it is defined, its value is used. Otherwise the automatic detection process described above takes place. In order to solve this uncommon loading issue it is thus enough to define the {@linkapi CKEDITOR_BASEPATH} variable. For example:
+When loading the editor script, CKEditor is looking for the global `CKEDITOR_BASEPATH` JavaScript variable that contains the editor installation path. If it is defined, its value is used. Otherwise the automatic detection process described above takes place. In order to solve this uncommon loading issue it is thus enough to define the `CKEDITOR_BASEPATH` variable. For example:
 ```
 <script>
     var CKEDITOR_BASEPATH = '/ckeditor/';

@@ -35,7 +35,7 @@ When you are satisfied with your choice, you can copy the working UI color confi
 
 ## End-user Application
 
-Although this feature is mainly useful for developers who are working on their CKEditor customizations, it can also be made available to end users. A developer can implement it in the administration panel of a CMS or a similar site builder application where the users are able to adjust the look of a website or application. User's choice can then be read from the editor instance by using the CKEDITOR.editor.getUiColor method and saved (e.g. in the application's database) to be served as {@link guide/dev/configuration/README#defining-configuration-in-page in-page configuration} when creating subsequent editor instances.
+Although this feature is mainly useful for developers who are working on their CKEditor customizations, it can also be made available to end users. A developer can implement it in the administration panel of a CMS or a similar site builder application where the users are able to adjust the look of a website or application. User's choice can then be read from the editor instance by using the {@linkapi CKEDITOR.editor.getUiColor CKEDITOR.editor.getUiColor} method and saved (e.g. in the application's database) to be served as {@link guide/dev/configuration/README#defining-configuration-in-page in-page configuration} when creating subsequent editor instances.
 
 ## UI Color Picker Demo
 

@@ -21,8 +21,8 @@ The optional [Auto Grow](https://ckeditor.com/cke4/addon/autogrow) plugin makes 
 
 It is possible to fine-tune the automatic editor height adjustment by setting the minimum and maximum height that the editor will shrink and expand to, respectively.
 
-* The CKEDITOR.config.autoGrow_minHeight option defines the minimum height that the editor will always assume, no matter how much content it includes.
-* The CKEDITOR.config.autoGrow_maxHeight option can be set in order to prevent the situation where huge amounts of content will cause the editor to expand infinitely.
+* The {@linkapi CKEDITOR.config.autoGrow_minHeight CKEDITOR.config.autoGrow_minHeight} option defines the minimum height that the editor will always assume, no matter how much content it includes.
+* The {@linkapi CKEDITOR.config.autoGrow_maxHeight CKEDITOR.config.autoGrow_maxHeight} option can be set in order to prevent the situation where huge amounts of content will cause the editor to expand infinitely.
 
 In the following example the editor will grow and shrink with the amount of content, but it will always be at least 250 pixels high and will never exceed the height of 600 pixels:
 
@@ -46,7 +46,7 @@ At the same time, when you start deleting the content that you have just entered
 
 ## Height Adjustment on Startup
 
-By default, the editor with the Auto Grow feature enabled will adjust its height once it gets into focus, so the page that includes it will be partly redrawn. You can, however, prevent this behavior by using the CKEDITOR.config.autoGrow_onStartup option to make the editor grow the moment it is created, i.e. on page startup.
+By default, the editor with the Auto Grow feature enabled will adjust its height once it gets into focus, so the page that includes it will be partly redrawn. You can, however, prevent this behavior by using the {@linkapi CKEDITOR.config.autoGrow_onStartup CKEDITOR.config.autoGrow_onStartup} option to make the editor grow the moment it is created, i.e. on page startup.
 
     config.autoGrow_onStartup = true;
 
@@ -54,7 +54,7 @@ This will ensure no page redrawing will be needed &mdash; until you start modify
 
 ## Stylistic Fine-tuning
 
-An additional CKEDITOR.config.autoGrow_bottomSpace option lets you insert some extra space that will always be added between the content and the editor bottom bar. For example, you can set it to 50 pixels in order to prevent the editor from looking too cramped.
+An additional {@linkapi CKEDITOR.config.autoGrow_bottomSpace CKEDITOR.config.autoGrow_bottomSpace} option lets you insert some extra space that will always be added between the content and the editor bottom bar. For example, you can set it to 50 pixels in order to prevent the editor from looking too cramped.
 
     config.autoGrow_bottomSpace = 50;
 

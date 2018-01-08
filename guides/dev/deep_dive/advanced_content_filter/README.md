@@ -38,7 +38,7 @@ Advanced Content Filter works in automatic mode when the {@link CKEDITOR.config#
 
 Please note that this means that **ACF is tightly connected with editor configuration**. Take the official CKEditor presets (Basic, Standard and Full). Each one of them includes a different set of features (toolbar buttons, keyboard shortcuts, content styles) and as a result, the same content pasted into editor instances with these configurations [will look completely different](https://sdk.ckeditor.com/samples/acf.html), as CKEditor will adjust it to what is available in a particular setup.
 
-Whenever you adjust your editor configuration, for example by using the CKEDITOR.config.removePlugins and CKEDITOR.config.removeButtons methods or customizing the **Format** and **Styles** drop-down lists, these changes will affect the filter and the automatic ACF mode will make the editor remove content corresponding to disabled features.
+Whenever you adjust your editor configuration, for example by using the {@linkapi CKEDITOR.config.removePlugins CKEDITOR.config.removePlugins} and {@linkapi CKEDITOR.config.removeButtons CKEDITOR.config.removeButtons} methods or customizing the **Format** and **Styles** drop-down lists, these changes will affect the filter and the automatic ACF mode will make the editor remove content corresponding to disabled features.
 
 ### Automatic Mode Example
 
@@ -59,7 +59,7 @@ See the [Advanced Content Filter &ndash; Automatic Mode](https://sdk.ckeditor.co
 
 ## Custom Mode
 
-Advanced Content Filter works in custom mode when the CKEDITOR.config.allowedContent setting is defined. This configuration option tells the filter which HTML elements, attributes, styles, and classes are allowed. Based on defined rules (called *Allowed Content Rules*) the editor filters input data and decides which features can be activated.
+Advanced Content Filter works in custom mode when the {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} setting is defined. This configuration option tells the filter which HTML elements, attributes, styles, and classes are allowed. Based on defined rules (called *Allowed Content Rules*) the editor filters input data and decides which features can be activated.
 
 Allowed Content Rules may be set in two different formats: the compact **string format** and the more powerful **object format**. Read about Allowed Content Rules in the [Allowed Content Rules article](#!/guide/dev_allowed_content_rules).
 
@@ -67,7 +67,7 @@ In custom mode the content filter configuration affects the availability of edit
 
 ### Custom Mode Example
 
-Suppose that CKEDITOR.config.allowedContent is configured as follows:
+Suppose that {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} is configured as follows:
 
 	config.allowedContent =
 		'h1 h2 h3 p blockquote strong em;' +

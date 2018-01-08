@@ -102,7 +102,7 @@ If you wanted to check for old IEs before IE9, instead of checking for each of t
 You should check in the following simpler way in v4:
 
 ``` js
-if ( CKEDITOR.env.version < 9 )
+if ( {@linkapi CKEDITOR.env.version CKEDITOR.env.version} < 9 )
 ```
 
 ---

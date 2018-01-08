@@ -16,7 +16,7 @@ Starting from CKEditor 4.5 it is possible to enable uploading pasted and dropped
 
 ## Basic Configuration
 
-The CKEDITOR.config.uploadUrl setting contains the location of the script that handles file uploads of pasted and dragged files.
+The {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl} setting contains the location of the script that handles file uploads of pasted and dragged files.
 
 ### Example &mdash; Setting Upload URL for Uploading Pasted and Dragged Content
 
@@ -26,17 +26,17 @@ The sample below shows basic configuration code that can be used to configure pa
 	config.uploadUrl = '/uploader/upload.php';
 
 <p class="tip">
-	As a fallback solution, if CKEDITOR.config.uploadUrl is not set and CKEDITOR.config.filebrowserUploadUrl is provided for the File Browser plugin, the Upload Image plugin will try to use CKEDITOR.config.filebrowserUploadUrl instead and send the dragged and pasted images there.
+	As a fallback solution, if {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl} is not set and {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} is provided for the File Browser plugin, the Upload Image plugin will try to use {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} instead and send the dragged and pasted images there.
 </p>
 
-It is also possible to set a specific URL for a specific upload plugin. For example if you want to use [Upload Image](https://ckeditor.com/cke4/addon/uploadimage), you can set CKEDITOR.config.imageUploadUrl which will be used instead of CKEDITOR.config.uploadUrl.
+It is also possible to set a specific URL for a specific upload plugin. For example if you want to use [Upload Image](https://ckeditor.com/cke4/addon/uploadimage), you can set {@linkapi CKEDITOR.config.imageUploadUrl CKEDITOR.config.imageUploadUrl} which will be used instead of {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl}
 
 ### Example &mdash; Setting Up Image Upload Plugin
 
 	config.extraPlugins = 'uploadimage';
 	config.imageUploadUrl = '/uploader/upload.php?type=Images';
 
-To learn more about upload URL see the CKEDITOR.fileTools.getUploadUrl method.
+To learn more about upload URL see the {@linkapi CKEDITOR.fileTools.getUploadUrl CKEDITOR.fileTools.getUploadUrl} method.
 
 ## Communication between the Editor and the Server
 
@@ -97,11 +97,11 @@ When a file could not be uploaded, a JSON response with the following entries is
 
 ### Editor-Side Configuration
 
-Alternatively to changing the server API you can change the editor API, so overwrite the way the editor builds requests and handles responses. You can do it using the CKEDITOR.editor.fileUploadRequest and CKEDITOR.editor.fileUploadResponse events.
+Alternatively to changing the server API you can change the editor API, so overwrite the way the editor builds requests and handles responses. You can do it using the {@linkapi CKEDITOR.editor.fileUploadRequest CKEDITOR.editor.fileUploadRequest} and {@linkapi CKEDITOR.editor.fileUploadResponse CKEDITOR.editor.fileUploadResponse} events.
 
 #### Request
 
-Using the CKEDITOR.editor.fileUploadRequest event you can change how the editor requests work.  If the event is not {@link CKEDITOR.eventInfo#stop stopped} or {@link CKEDITOR.eventInfo#cancel canceled}, the default request will be sent.
+Using the {@linkapi CKEDITOR.editor.fileUploadRequest CKEDITOR.editor.fileUploadRequest} event you can change how the editor requests work.  If the event is not {@link CKEDITOR.eventInfo#stop stopped} or {@link CKEDITOR.eventInfo#cancel canceled}, the default request will be sent.
 
 If you want to change this behavior you can add a custom listener with the default priority and {@link CKEDITOR.eventInfo#stop stop} the event which will prevent the default behavior. For example to send the data directly (without a form):
 
@@ -127,7 +127,7 @@ You can also add custom request headers or set flags for the default request. Th
 		xhr.withCredentials = true;
 	} );
 
-When you listen to the CKEDITOR.editor.fileUploadRequest event with the default priority you will get an `XHR` object which is opened as a `POST` asynchronous request. This happens in a listener with the priority of `5`, so if you want to also overwrite the open method in a request, you need to listen with a lower priority. For example to send a `PUT` request:
+When you listen to the {@linkapi CKEDITOR.editor.fileUploadRequest CKEDITOR.editor.fileUploadRequest} event with the default priority you will get an `XHR` object which is opened as a `POST` asynchronous request. This happens in a listener with the priority of `5`, so if you want to also overwrite the open method in a request, you need to listen with a lower priority. For example to send a `PUT` request:
 
 	editor.on( 'fileUploadRequest', function( evt ) {
 		var fileLoader = evt.data.fileLoader,
@@ -151,7 +151,7 @@ Finally, you can also tell the {@link CKEDITOR.fileTools.fileLoader file loader}
 		evt.cancel();
 	} );
 
-Starting from CKEditor 4.6, you can also pass additional data to the request using the `requestData` parameter of the CKEDITOR.editor.fileUploadRequest event. The data will be passed to all requests made by the {@link CKEDITOR.fileTools.fileLoader file loader}. If you need to add some data only to requests made by a specific upload widget, you should use CKEDITOR.fileTools.uploadWidgetDefinition.additionalRequestParameters.
+Starting from CKEditor 4.6, you can also pass additional data to the request using the `requestData` parameter of the {@linkapi CKEDITOR.editor.fileUploadRequest CKEDITOR.editor.fileUploadRequest} event. The data will be passed to all requests made by the {@link CKEDITOR.fileTools.fileLoader file loader}. If you need to add some data only to requests made by a specific upload widget, you should use {@linkapi CKEDITOR.fileTools.uploadWidgetDefinition.additionalRequestParameters CKEDITOR.fileTools.uploadWidgetDefinition.additionalRequestParameters}
 
 To pass some data to the request, listen to the {@link CKEDITOR.editor#fileUploadRequest fileUploadRequest} event and add the data as a property of `evt.requestData`:
 
@@ -172,11 +172,11 @@ Example:
 
 Note that the default file to be uploaded is also a property of `evt.requestData` named `upload` and it can be overwritten when neccessary.
 
-If the content of an image editor is pasted, it will be received as Base64 data and the file created from this data will need a name. In such cases the name is based on the MIME type. To change this behavior use the CKEDITOR.config.fileTools_defaultFileName option.
+If the content of an image editor is pasted, it will be received as Base64 data and the file created from this data will need a name. In such cases the name is based on the MIME type. To change this behavior use the {@linkapi CKEDITOR.config.fileTools_defaultFileName CKEDITOR.config.fileTools_defaultFileName} option.
 
 #### Response
 
-If you want to handle the response manually, you need to add a listener to the CKEDITOR.editor.fileUploadResponse event and call the CKEDITOR.eventInfo.stop method to prevent the default behavior. The listener should set the URL to the file on the server and the file name; additionally, it can also set the message from the server. If the response is to the error message, and the upload failed, the event should be {@link CKEDITOR.eventInfo#cancel canceled}, so the file loader will change {@link CKEDITOR.fileTools.fileLoader#status its status} to `error`.
+If you want to handle the response manually, you need to add a listener to the {@linkapi CKEDITOR.editor.fileUploadResponse CKEDITOR.editor.fileUploadResponse} event and call the {@linkapi CKEDITOR.eventInfo.stop CKEDITOR.eventInfo.stop} method to prevent the default behavior. The listener should set the URL to the file on the server and the file name; additionally, it can also set the message from the server. If the response is to the error message, and the upload failed, the event should be {@link CKEDITOR.eventInfo#cancel canceled}, so the file loader will change {@link CKEDITOR.fileTools.fileLoader#status its status} to `error`.
 
 For example if the response is `fileUrl|optionalErrorMessage`:
 
@@ -208,7 +208,7 @@ CKEditor can be easily integrated with [CKFinder](http://cksource.com/ckfinder),
 
 #### Example &mdash; Custom uploadUrl for CKFinder
 
-As mentioned above, if CKEDITOR.config.uploadUrl is not set, CKEDITOR.config.filebrowserUploadUrl is used by the [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin. As a result, for CKFinder there is no need to specify CKEDITOR.config.uploadUrl separately.
+As mentioned above, if {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl} is not set, {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} is used by the [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin. As a result, for CKFinder there is no need to specify {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl} separately.
 
 If for any reason you need to do this, note that the path to the connector must include `responseType=json` in the query string to make CKFinder return a response in the proper JSON format.
 

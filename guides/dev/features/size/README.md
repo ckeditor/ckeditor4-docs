@@ -16,7 +16,7 @@ The width and height of the [classic editor](#!/guide/dev_framed) can be customi
 * You customized the toolbar, removing some buttons, and want to adjust the editor width to the reduced toolbar.
 * You need to adjust the editor UI to your page layout.
 
-The easiest way to achieve that is to use the CKEDITOR.config.width and CKEDITOR.config.height settings to adjust the editor user interface size.
+The easiest way to achieve that is to use the {@linkapi CKEDITOR.config.width CKEDITOR.config.width} and {@linkapi CKEDITOR.config.height CKEDITOR.config.height} settings to adjust the editor user interface size.
 
 The image below presents a really small editor instance with reduced toolbar, bottom bar, and size.
 
@@ -24,7 +24,7 @@ The image below presents a really small editor instance with reduced toolbar, bo
 
 ## Editor Width
 
-The CKEDITOR.config.width option sets the **outer size** of the entire editor interface, including the border. This configuration option accepts an integer (to denote a value in pixels) or any CSS-defined length unit, including percent (`%`).
+The {@linkapi CKEDITOR.config.width CKEDITOR.config.width} option sets the **outer size** of the entire editor interface, including the border. This configuration option accepts an integer (to denote a value in pixels) or any CSS-defined length unit, including percent (`%`).
 
 For example:
 
@@ -33,7 +33,7 @@ For example:
 
 ## Editor Height
 
-The CKEDITOR.config.height option sets the **height of the editing area** with CKEditor content &mdash; it does not include the toolbar or the bottom bar. This configuration option accepts an integer (to denote a value in pixels) or any CSS-defined length unit except percent (`%`) values which are not supported.
+The {@linkapi CKEDITOR.config.height CKEDITOR.config.height} option sets the **height of the editing area** with CKEditor content &mdash; it does not include the toolbar or the bottom bar. This configuration option accepts an integer (to denote a value in pixels) or any CSS-defined length unit except percent (`%`) values which are not supported.
 
 For example:
 

@@ -41,7 +41,7 @@ The action performed by the plugin depends on the element type. For {@link CKEDI
 it is **QuickUpload**, for other elements the default action is **Browse**. In the example above, the file manager will be launched (in
 a popup) when the button is clicked.
 
-The `'info:txtUrl'` value instructs the plugin to update an element with the ID of `txtUrl` inside the `info` tab when CKEDITOR.tools.callFunction is called (see [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)).
+The `'info:txtUrl'` value instructs the plugin to update an element with the ID of `txtUrl` inside the `info` tab when {@linkapi CKEDITOR.tools.callFunction CKEDITOR.tools.callFunction} is called (see [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)).
 
 ### Adding "Quick Upload" Support
 
@@ -77,7 +77,7 @@ In the example above, the ID of the tab is `'Upload'`. The tab is hidden by defa
 
 The `file` element is just an input element that will store the name of the file that will be uploaded.
 
-The `fileButton` element is more interesting. The `'info:txtUrl'` value instructs the File Browser plugin to update an element with the ID of `txtUrl` inside the `info` tab when CKEDITOR.tools.callFunction is called (see [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)).
+The `fileButton` element is more interesting. The `'info:txtUrl'` value instructs the File Browser plugin to update an element with the ID of `txtUrl` inside the `info` tab when {@linkapi CKEDITOR.tools.callFunction CKEDITOR.tools.callFunction} is called (see [File Browser API - Creating a Custom File Manager](#!/guide/dev_file_browser_api)).
 
 The `'for': [ 'Upload', 'upload'   ]` line is used to connect `fileButton` with the `file` element. It is an instruction for CKEditor to upload the file using the `'file'` element with the ID of `'upload'` (second value) inside the `'Upload'` tab (first value).
 

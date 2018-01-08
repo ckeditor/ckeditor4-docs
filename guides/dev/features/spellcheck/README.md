@@ -13,7 +13,7 @@ CKEditor can be configured to use either native spell checking capabilities prov
 
 ## Native Browser Spell Checker
 
-By default, browser native spell check functionality is disabled in the editor. Use the CKEDITOR.config.disableNativeSpellChecker configuration option to enable it:
+By default, browser native spell check functionality is disabled in the editor. Use the {@linkapi CKEDITOR.config.disableNativeSpellChecker CKEDITOR.config.disableNativeSpellChecker} configuration option to enable it:
 
 	config.disableNativeSpellChecker = false;
 
@@ -41,7 +41,7 @@ The [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugin is another spe
 
 Both plugins include numerous configuration options that let you customize the default spell checking
 language, number of SCAYT suggestions available or the content of the spell checker context menu and dialog window.
-You can find them on the CKEDITOR.config page, starting from `scayt_` and `wsc_`.
+You can find them on the {@linkapi CKEDITOR.config CKEDITOR.config} page, starting from `scayt_` and `wsc_`.
 
 <p class="tip">
 	The out-of-the-box spell checking functionality is ad-supported. If you want to remove the

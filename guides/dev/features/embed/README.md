@@ -41,7 +41,7 @@ This difference makes the Media Embed plugin perfect for systems where the embed
   Since CKEditor 4.7 the content provider URL is set to empty by default. The former default URL is still available, although it is recommended to set up an account on the <a href="https://iframely.com/">Iframely</a> service for better control over embedded content.
 </p>
 
-The default CKEditor configuration up till version 4.7 was using an anonymized endpoint provided by Iframely, however, it did not include several features such as Google Maps. It is still possible to use it by setting the CKEDITOR.config.embed_provider in the following way:
+The default CKEditor configuration up till version 4.7 was using an anonymized endpoint provided by Iframely, however, it did not include several features such as Google Maps. It is still possible to use it by setting the {@linkapi CKEDITOR.config.embed_provider CKEDITOR.config.embed_provider} in the following way:
 
 	config.embed_provider = '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}'
 

@@ -62,7 +62,7 @@ The default priorities are as follows:
 
 ## Creating Balloon Toolbar Without Contexts
 
-It is possible to use low level API to control a Balloon Toolbar directly, in such case the balloon should be created using the <code>balloonToolbar</code> constructor directly. See [{@linkapi CKEDITOR.ui.balloonToolbar}](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.ui.balloonToolbar) type docs for more details.
+It is possible to use low level API to control a Balloon Toolbar directly, in such case the balloon should be created using the <code>balloonToolbar</code> constructor directly. See [{@linkapi CKEDITOR.ui.balloonToolbar CKEDITOR.ui.balloonToolbar}](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.ui.balloonToolbar) type docs for more details.
 
 ## Balloon Toolbar Demo
 

@@ -50,7 +50,7 @@ With the following structure ready, it is time to open the `plugin.js` file in a
 
 ## Widget Dialog Window
 
-We will start from registering the widget dialog window by calling the standard {@linkapi CKEDITOR.dialog.add} method inside the `{@linkapi CKEDITOR.plugins.widget.definition#init init}` method of the widget plugin definition.
+We will start from registering the widget dialog window by calling the standard {@linkapi CKEDITOR.dialog.add CKEDITOR.dialog.add} method inside the `{@linkapi CKEDITOR.plugins.widget.definition#init init}` method of the widget plugin definition.
 
 	CKEDITOR.plugins.add( 'simplebox', {
 		init: function( editor ) {
@@ -74,7 +74,7 @@ When you load the sample page (that we created in the previous installment of th
 
 ## Widget Dialog Window Definition
 
-Open the `dialogs/simplebox.js` file in a text editor now. For a start, we will repeat the {@linkapi CKEDITOR.dialog.add} call, but this time we will return the dialog definition to the editor.
+Open the `dialogs/simplebox.js` file in a text editor now. For a start, we will repeat the {@linkapi CKEDITOR.dialog.add CKEDITOR.dialog.add} call, but this time we will return the dialog definition to the editor.
 
 	CKEDITOR.dialog.add( 'simplebox', function( editor ) {
 		return {
@@ -121,7 +121,7 @@ The result of this change can be seen immediately. Open the sample page in the b
 
 ## Dialog Window UI Elements
 
-User interface elements added to a dialog window tab are defined in the `{@linkapi CKEDITOR.dialog.definition.content#elements elements}` parameter, which is an array of {@linkapi CKEDITOR.dialog.definition.uiElement} objects.
+User interface elements added to a dialog window tab are defined in the `{@linkapi CKEDITOR.dialog.definition.content#elements elements}` parameter, which is an array of {@linkapi CKEDITOR.dialog.definition.uiElement CKEDITOR.dialog.definition.uiElement} objects.
 
 Our dialog window will contain two UI elements that will let you define two widget properties: **width** and **alignment**.
 

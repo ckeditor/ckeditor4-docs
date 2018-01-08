@@ -16,7 +16,7 @@ CKEditor 4 introduced a new concept for toolbar organization which is based on "
 
 **Note:** This approach is used in the {@link guide/dev/features/toolbar/README#basic-toolbar-configurator basic mode of the toolbar configurator}, which is the most recommended method to customize the editor toolbar. If you do not want to use the toolbar configurator, this method requires manual crafting of the toolbar configuration code and is recommended to more advanced users only.
 
-Grouping configuration is defined by the CKEDITOR.config.toolbarGroups setting. The following is the configuration used by the Standard distribution of CKEditor:
+Grouping configuration is defined by the {@linkapi CKEDITOR.config.toolbarGroups CKEDITOR.config.toolbarGroups} setting. The following is the configuration used by the Standard distribution of CKEditor:
 
 	config.toolbarGroups = [
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },

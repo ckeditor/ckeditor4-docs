@@ -110,7 +110,7 @@ You can add support for displaying that a dialog window is in a busy state by fo
 
 To test it, open the `samples/index.html` file in your browser, then open some dialog window (e.g. the Link dialog) and execute the following code in the console:
 
-	CKEDITOR.dialog.getCurrent().setState( CKEDITOR.DIALOG_STATE_BUSY );
+	CKEDITOR.dialog.getCurrent().setState( {@linkapi CKEDITOR.DIALOG_STATE_BUSY CKEDITOR.DIALOG_STATE_BUSY} );
 
 You should see a spinner in the dialog's title bar.
 

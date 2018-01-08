@@ -44,7 +44,7 @@ CKEDITOR.editorConfig = function( config ) {
 };
 ```
 
-In order to apply the configuration settings, the CKEDITOR.editorConfig function must always be defined. The `config.js` file will be executed in the scope of your page, so you can also make references to variables defined in-page or even in other JavaScript files.
+In order to apply the configuration settings, the {@linkapi CKEDITOR.editorConfig CKEDITOR.editorConfig} function must always be defined. The `config.js` file will be executed in the scope of your page, so you can also make references to variables defined in-page or even in other JavaScript files.
 
 ## Using a Custom Configuration File
 

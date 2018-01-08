@@ -14,7 +14,7 @@ tags and can give different results for each one of them.
 
 The [HTML Output Writer plugin](https://ckeditor.com/cke4/addon/htmlwriter) makes it possible to generate advanced output formatting with CKEditor.
 
-The *writer* is used by the CKEDITOR.htmlDataProcessor class to write output data.
+The *writer* is used by the {@linkapi CKEDITOR.htmlDataProcessor CKEDITOR.htmlDataProcessor} class to write output data.
 The current writer for a specific editor instance can be retrieved with the {@link CKEDITOR.htmlDataProcessor#writer editor.dataProcessor.writer} property.
 
 It is possible to configure several output formatting options by setting

@@ -59,17 +59,17 @@ This is an example of a class definition. It contains so many tags to show their
 	 * Represents an editor instance. This constructor should be rarely
 	 * used, in favor of the {@link CKEDITOR} editor creation functions.
 	 *
-	 *		var editor = new CKEDITOR.editor();
+	 *		var editor = new {@linkapi CKEDITOR.editor CKEDITOR.editor}();
 	 *		editor.setSomething( name, {
 	 *			value: 1
 	 *		} );
 	 *
 	 * @since 3.0
 	 * @private
-	 * @class CKEDITOR.editor
-	 * @extends CKEDITOR.parent
-	 * @mixins CKEDITOR.event
-	 * @mixins CKEDITOR.whatever
+	 * @class {@linkapi CKEDITOR.editor CKEDITOR.editor}
+	 * @extends {@linkapi CKEDITOR.parent CKEDITOR.parent}
+	 * @mixins {@linkapi CKEDITOR.event CKEDITOR.event}
+	 * @mixins {@linkapi CKEDITOR.whatever CKEDITOR.whatever}
 	 * @constructor Creates an editor class instance.
 	 * @param {Object} [instanceConfig] Configuration values for this specific instance.
 	 * @param {Number} [mode=CKEDITOR.SOURCE_MODE] The element creation mode to be used by this editor.
@@ -100,7 +100,7 @@ A minimal class documentation:
 
 When you want to reopen the class declaration in another file, use this:
 
-	/** @class CKEDITOR.editor */
+	/** @class {@linkapi CKEDITOR.editor CKEDITOR.editor} */
 
 #### Details ####
 
@@ -133,7 +133,7 @@ The following is an example of property documentation.
 	 * @readonly
 	 * @static
 	 * @property {String/Boolean} [complicatedName=default value]
-	 * @member CKEDITOR.editor
+	 * @member {@linkapi CKEDITOR.editor CKEDITOR.editor}
 	 */
 	obj[ 'complicated' + 'Name' ] = this.name || genEditorName();
 
@@ -185,18 +185,18 @@ The following is an example of method documentation.
 	/**
 	 * The {@link CKEDITOR.dom.element} representing an element. If the
 	 * element is a native DOM element, it will be transformed into a valid
-	 * CKEDITOR.dom.element object.
+	 * {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element} object.
 	 *
-	 *		var element = new CKEDITOR.dom.element( 'span' );
-	 *		alert( element == CKEDITOR.dom.element.get( element ) ); // true
+	 *		var element = new {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element}( 'span' );
+	 *		alert( element == {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ) ); // true
 	 *
 	 *		var element = document.getElementById( 'myElement' );
-	 *		alert( CKEDITOR.dom.element.get( element ).getName() ); // (e.g.) 'p'
+	 *		alert( {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ).getName() ); // (e.g.) 'p'
 	 *
 	 * @private
 	 * @static
 	 * @method complicatedName
-	 * @member CKEDITOR.editor
+	 * @member {@linkapi CKEDITOR.editor CKEDITOR.editor}
 	 * @param {String/Object} element Element's ID or name or a native DOM element.
 	 * @param {Function} fn Callback.
 	 * @param {String} fn.firstArg Callback's first argument.

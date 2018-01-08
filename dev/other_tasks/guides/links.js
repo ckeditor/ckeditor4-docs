@@ -22,7 +22,7 @@ module.exports = ( content, guidesConfig ) => {
 	const regexpBt = /\`(CKEDITOR[^\s\`)(}{]*)\`/g;
 
 	newContent = newContent.replace( regexpBt, ( match, href ) => {
-		return `{@linkapi ${ href }}`;
+		return `{@linkapi ${ href } ${ href }}`;
 	} );
 
 	// Fix markdown links.

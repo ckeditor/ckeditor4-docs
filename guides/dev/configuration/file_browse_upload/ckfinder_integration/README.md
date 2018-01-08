@@ -25,7 +25,7 @@ The simplest way to integrate CKFinder 3 with CKEditor is using the [CKFinder.se
 
 This method takes the CKEditor instance which will be set up as a first argument (`editor`). If no argument is passed or the `editor` argument is null, CKFinder will integrate with all CKEditor instances.
 
-	var editor = CKEDITOR.replace( 'editor1' );
+	var editor = {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1' );
 	CKFinder.setupCKEditor( editor );
 	
 Please check the `samples/ckeditor.html` sample distributed with CKFinder 3 to see the full working example of this integration method.
@@ -76,7 +76,7 @@ This method takes the CKEditor instance which will be set up as a first argument
 
 The second parameter of the `CKFinder.setupCKEditor()` method is the file manager configuration which may be just the path to the CKFinder installation.
 
-	var editor = CKEDITOR.replace( 'editor1' );
+	var editor = {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1' );
 	CKFinder.setupCKEditor( editor, '/ckfinder/' );
 
 Please check the `_samples/ckeditor.html` sample distributed with CKFinder 2 to see the full working example of this integration method.

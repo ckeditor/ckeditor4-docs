@@ -67,7 +67,7 @@ command that opens a new dialog window. To do this,  we will need to use the
 `simpleLinkDialog` window that we are going to define in a moment by using the
 {@link CKEDITOR.dialogCommand CKEDITOR.dialogCommand} function.
 
-	editor.addCommand( 'simpleLinkDialog', new CKEDITOR.dialogCommand( 'simpleLinkDialog' ) );
+	editor.addCommand( 'simpleLinkDialog', new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'simpleLinkDialog' ) );
 
 ### Creating a Toolbar Button
 
@@ -506,7 +506,7 @@ The full contents of the `plugin.js` file look as follows:
 
 	CKEDITOR.plugins.add( 'simpleLink', {
 		init: function( editor ) {
-			editor.addCommand( 'simpleLinkDialog', new CKEDITOR.dialogCommand( 'simpleLinkDialog' ) );
+			editor.addCommand( 'simpleLinkDialog', new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'simpleLinkDialog' ) );
 
 			editor.ui.addButton( 'SimpleLink', {
 				label: 'Insert a Link',

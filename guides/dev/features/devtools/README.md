@@ -28,8 +28,8 @@ This feature is aimed at developers who would like to [customize their CKEditor 
 
 The Developer Tools plugin provides two configuration options:
 
-* CKEDITOR.config.devtools_styles &ndash; sets the CSS styles applied to the tooltip.
-* CKEDITOR.config.devtools_textCallback &ndash; contains a function that returns the text displayed in the tooltip.
+* {@linkapi CKEDITOR.config.devtools_styles CKEDITOR.config.devtools_styles} &ndash; sets the CSS styles applied to the tooltip.
+* {@linkapi CKEDITOR.config.devtools_textCallback CKEDITOR.config.devtools_textCallback} &ndash; contains a function that returns the text displayed in the tooltip.
 
 ## Developer Tools Demo
 

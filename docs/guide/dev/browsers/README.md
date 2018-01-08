@@ -66,7 +66,7 @@ When CKEditor detects an unsupported environment, it will simply not load and th
 
 It is possible to skip the compatibility check and {@link guide/dev/deep_dive/unsupported_environments/README enable CKEditor in all environments}, including the unsupported ones, but this is an experimental feature aimed at more advanced developers and is highly unrecommended in production environments.
 
-**Note:** Prior to version 4.5 CKEditor was disabled in all environments which were not recognized as compatible. Since CKEditor 4.5 the whitelist was changed to a blacklist, so currently CKEditor is only disabled in environments which it is known to be incompatible with (for example Internet Explorer 7 and below and Firefox 3.6 and below). Read more in CKEDITOR.env.isCompatible.
+**Note:** Prior to version 4.5 CKEditor was disabled in all environments which were not recognized as compatible. Since CKEditor 4.5 the whitelist was changed to a blacklist, so currently CKEditor is only disabled in environments which it is known to be incompatible with (for example Internet Explorer 7 and below and Firefox 3.6 and below). Read more in {@linkapi CKEDITOR.env.isCompatible CKEDITOR.env.isCompatible}
 
 ## Accessibility Support
 

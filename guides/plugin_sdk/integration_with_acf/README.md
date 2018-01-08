@@ -61,7 +61,7 @@ To add the `<abbr>` tag to the editor contents in a correct and automatic way, y
 extend the `abbrDialog` command definition when calling the
 {@link CKEDITOR.dialogCommand#method-constructor CKEDITOR.dialogCommand} constructor:
 
-	new CKEDITOR.dialogCommand( 'abbrDialog', {
+	new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'abbrDialog', {
 		allowedContent: 'abbr'
 	} );
 
@@ -76,7 +76,7 @@ But where is the `title` attribute? It was removed by the editor. And the same w
 In order to avoid this, you will have to [specify which **attributes** are allowed](#!/guide/dev_allowed_content_rules),
 too. This was not done when setting `allowedContent` above, so will have to be fixed now:
 
-	new CKEDITOR.dialogCommand( 'abbrDialog', {
+	new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'abbrDialog', {
 		allowedContent: 'abbr[title,id]'
 	} );
 
@@ -144,7 +144,7 @@ By specifying the {@link CKEDITOR.feature#property-requiredContent requiredConte
 in the command definition we make sure that the **Abbreviation** button will adaptively
 adjust to filtering rules set by the user:
 
-	new CKEDITOR.dialogCommand( 'abbrDialog', {
+	new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'abbrDialog', {
 		allowedContent: 'abbr[title,id]',
 		requiredContent: 'abbr'
 	} );
@@ -223,7 +223,7 @@ tag into an `<abbr>`. In order to achieve this, we will need to define the
 {@link CKEDITOR.feature#property-contentForms} property that determines which tag
 is correct and accepted by the editor with the highest priority:
 
-	new CKEDITOR.dialogCommand( 'abbrDialog', {
+	new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'abbrDialog', {
 		allowedContent: 'abbr[title,id]',
 		requiredContent: 'abbr',
 		contentForms: [
@@ -269,5 +269,5 @@ Refer to the following resources for more information about content filtering:
 * The [Advanced Content Filer](#!/guide/dev_advanced_content_filter) article contains more in-depth technical details about ACF.
 * The [Allowed Content Rules](#!/guide/dev_allowed_content_rules) article explains the allowed and disallowed content rules format.
 * The [Disallowed Content](#!/guide/dev_disallowed_content) article explains how blacklisting works in ACF.
-* CKEDITOR.filter contains API documentation for the main class responsible for ACF features.
-* CKEDITOR.feature contains API documentation of an interface representing an editor feature used in combination with CKEDITOR.filter.addFeature.
+* {@linkapi CKEDITOR.filter CKEDITOR.filter} contains API documentation for the main class responsible for ACF features.
+* {@linkapi CKEDITOR.feature CKEDITOR.feature} contains API documentation of an interface representing an editor feature used in combination with {@linkapi CKEDITOR.filter.addFeature CKEDITOR.filter.addFeature}

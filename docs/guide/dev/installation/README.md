@@ -63,7 +63,7 @@ See the following example:
             <script>
                 // Replace the <textarea id="editor1"> with a CKEditor
                 // instance, using default configuration.
-                CKEDITOR.replace( 'editor1' );
+                {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1' );
             </textarea></script>
         </form>
     </body>

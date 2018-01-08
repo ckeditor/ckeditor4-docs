@@ -111,7 +111,7 @@ The Allowed Content Rules set may consist of many rules separated by semicolon (
 
 In order to verify if Allowed Content Rules were parsed correctly, you can check the {@link CKEDITOR.filter#allowedContent} property of the {@link CKEDITOR.editor#filter} object.
 
-	var editor = CKEDITOR.replace( 'textarea_id', {
+	var editor = {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'textarea_id', {
 		allowedContent: 'a[!href]; ul; li{text-align}(someclass)'
 	} );
 

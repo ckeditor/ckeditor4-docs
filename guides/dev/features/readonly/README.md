@@ -17,7 +17,7 @@ This is what CKEditor looks like when it is in read-only mode.
 
 ## Read-Only Mode on Startup
 
-CKEditor can be configured to open in the read-only mode on startup by setting the CKEDITOR.config.readOnly configuration option to `true`. For example:
+CKEditor can be configured to open in the read-only mode on startup by setting the {@linkapi CKEDITOR.config.readOnly CKEDITOR.config.readOnly} configuration option to `true`. For example:
 
     config.readOnly = true;
 

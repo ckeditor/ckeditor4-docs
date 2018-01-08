@@ -24,7 +24,7 @@ Basic text styles work on text selections; check the {@link guide/dev/features/f
 
 ## Enabling All Basic Styles
 
-By default, some of these styles are disabled in the Basic and Standard presets through the CKEDITOR.config.removeButtons setting in the `config.js` file, but you can easily enable them by using one of the following solutions.
+By default, some of these styles are disabled in the Basic and Standard presets through the {@linkapi CKEDITOR.config.removeButtons CKEDITOR.config.removeButtons} setting in the `config.js` file, but you can easily enable them by using one of the following solutions.
 
 ### Enable All Basic Styles Globally
 
@@ -72,12 +72,12 @@ You will need to provide the in-page configuration for all other CKEditor instan
 
 Basic text styles can be output in HTML in different ways. For example, the **Bold** feature can be implemented as `<strong>`, `<b>`, `<span style="font-weight: bold;">` or `<span class="Bold">`. These configuration options let you set custom definitons for basic text style output:
 
-* CKEDITOR.config.coreStyles_bold
-* CKEDITOR.config.coreStyles_italic
-* CKEDITOR.config.coreStyles_underline
-* CKEDITOR.config.coreStyles_strike
-* CKEDITOR.config.coreStyles_subscript
-* CKEDITOR.config.coreStyles_superscript
+* {@linkapi CKEDITOR.config.coreStyles_bold CKEDITOR.config.coreStyles_bold}
+* {@linkapi CKEDITOR.config.coreStyles_italic CKEDITOR.config.coreStyles_italic}
+* {@linkapi CKEDITOR.config.coreStyles_underline CKEDITOR.config.coreStyles_underline}
+* {@linkapi CKEDITOR.config.coreStyles_strike CKEDITOR.config.coreStyles_strike}
+* {@linkapi CKEDITOR.config.coreStyles_subscript CKEDITOR.config.coreStyles_subscript}
+* {@linkapi CKEDITOR.config.coreStyles_superscript CKEDITOR.config.coreStyles_superscript}
 
 The following example configures CKEditor to output bold with an inline CSS style, italic with the `<i>` element, and subscript and superscript with CSS classes.
 
@@ -104,7 +104,7 @@ config.coreStyles_superscript = {
 
 You can use the `overrides` parameter to define an alternative that CKEditor will convert into your desired form.
 
-Remember that depending on your use case, the CSS classes for basic text styles need to be defined accordingly. For {@link guide/dev/framed/README classic editor} they should be defined in an external CSS file added to the editor configuration with the CKEDITOR.config.contentsCss option. For {@link guide/dev/inline/README inline editor} they need to be added directly to the page stylesheet.
+Remember that depending on your use case, the CSS classes for basic text styles need to be defined accordingly. For {@link guide/dev/framed/README classic editor} they should be defined in an external CSS file added to the editor configuration with the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option. For {@link guide/dev/inline/README inline editor} they need to be added directly to the page stylesheet.
 
 <info-box hint=""> <p> 	Some conversions are applied automatically thanks to a feature called {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations content transformations} which is a part of Advanced Content Filter. This, however, will only work when ACF is enabled (the deafult option), and applies to a handful of pre-defined transformations. </p> <p> 	Custom basic style definitions are automatically integrated with {@link guide/dev/configuration/acf/README Advanced Content Filter} and are treated as allowed by the editor content filtering mechanism. </p>
 </info-box>

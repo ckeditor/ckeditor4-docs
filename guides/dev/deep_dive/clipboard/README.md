@@ -42,10 +42,10 @@ Note that `dataValue` is a JavaScript string with HTML which means that it may n
 
 	editor.on( 'paste', function( evt ) {
 			// Create a standalone filter passing 'p' and 'b' elements.
-		var filter = new CKEDITOR.filter( 'p b' ),
+		var filter = new {@linkapi CKEDITOR.filter CKEDITOR.filter}( 'p b' ),
 			// Parse the HTML string to pseudo-DOM structure.
-			fragment = CKEDITOR.htmlParser.fragment.fromHtml( evt.data.dataValue ),
-			writer = new CKEDITOR.htmlParser.basicWriter();
+			fragment = {@linkapi CKEDITOR.htmlParser.fragment.fromHtml CKEDITOR.htmlParser.fragment.fromHtml}( evt.data.dataValue ),
+			writer = new {@linkapi CKEDITOR.htmlParser.basicWriter CKEDITOR.htmlParser.basicWriter}();
 
 		filter.applyTo( fragment );
 		fragment.writeHtml( writer );
@@ -181,7 +181,7 @@ Another example can be found in the ["Drag and Drop Integration" sample](https:/
 
 		// Initialization of CKEditor data transfer facade is a necessary step to extend and unify native
 		// browser capabilities. For instance, Internet Explorer does not support any other data type than 'text' and 'URL'.
-		// Note: evt is an instance of CKEDITOR.dom.event, not a native event.
+		// Note: evt is an instance of {@linkapi CKEDITOR.dom.event CKEDITOR.dom.event}, not a native event.
 		CKEDITOR.plugins.clipboard.initDragDataTransfer( evt );
 
 		var dataTransfer = evt.data.dataTransfer;

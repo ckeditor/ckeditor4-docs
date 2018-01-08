@@ -17,7 +17,7 @@ Please note that the UI elements can be shared between classic and inline editor
 
 ## Customization
 
-This feature can be configured separately for each editor instance by setting the CKEDITOR.config.sharedSpaces option.
+This feature can be configured separately for each editor instance by setting the {@linkapi CKEDITOR.config.sharedSpaces CKEDITOR.config.sharedSpaces} option.
 
 This configuration option defines the IDs of the page elements that will store the editor UI elements. For example the following code will place the toolbar (the `top` part) in the element with an ID of `someElementId`, while the bottom bar (the `bottom` part) will be displayed in the element with an ID of `anotherId`.
 

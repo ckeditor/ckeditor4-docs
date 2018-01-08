@@ -13,7 +13,7 @@ CKEditor is translated into over 60 languages and by default, it is displayed in
 
 ## Setting the Default Language
 
-The website developer can set the default language that will be used for CKEditor UI if the user's language is not available. English is the default setting here, but you can adjust this to your needs by modifying the CKEDITOR.config.defaultLanguage configuration option.
+The website developer can set the default language that will be used for CKEditor UI if the user's language is not available. English is the default setting here, but you can adjust this to your needs by modifying the {@linkapi CKEDITOR.config.defaultLanguage CKEDITOR.config.defaultLanguage} configuration option.
 
 For example, if your website is targeted at the German audience, you may want to set the default CKEditor UI language to German, too:
 
@@ -29,7 +29,7 @@ The developer is also able to force CKEditor to always use just one pre-defined 
 
 This feature may come in handy for all homogeneous environments where the entire user base speaks the same language. The developer will then be able to create a [custom build](https://ckeditor.com/cke4/builder) stripped of all redundant language files except for the desired localization.
 
-If you want to define the language that will override all user settings, use the CKEDITOR.config.language configuration setting.
+If you want to define the language that will override all user settings, use the {@linkapi CKEDITOR.config.language CKEDITOR.config.language} configuration setting.
 
 For example, if your website is in German and you want to display the German language version of the CKEditor UI to all your visitors (no matter what their locale settings are), use the following setting:
 

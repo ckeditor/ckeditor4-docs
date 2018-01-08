@@ -17,7 +17,7 @@ The following article contains tips about handling content styles in the editor.
 
 ## How Do I Customize the Styles Drop-Down List?
 
-You need to pass your own style definitions to the CKEDITOR.stylesSet.add function, giving them a unique name, and then configure the editor to use them by setting the CKEDITOR.config#stylesSet value.
+You need to pass your own style definitions to the {@linkapi CKEDITOR.stylesSet.add CKEDITOR.stylesSet.add} function, giving them a unique name, and then configure the editor to use them by setting the {@linkapi CKEDITOR.config#stylesSet CKEDITOR.config#stylesSet} value.
 
 	CKEDITOR.stylesSet.add( 'my_styles', [
 		// Block-level styles.
@@ -29,7 +29,7 @@ You need to pass your own style definitions to the CKEDITOR.stylesSet.add functi
 		{ name: 'Marker: Yellow', element: 'span', styles: { 'background-color': 'Yellow' } }
 	]);
 
-Depending on whether your definitions were placed inline or in an external file, you need to set the CKEDITOR.config#stylesSet configuration setting accordingly.
+Depending on whether your definitions were placed inline or in an external file, you need to set the {@linkapi CKEDITOR.config#stylesSet CKEDITOR.config#stylesSet} configuration setting accordingly.
 
 	// For inline style definition.
 	config.stylesSet = 'my_styles';

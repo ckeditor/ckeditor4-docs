@@ -107,7 +107,7 @@ In a brief summary it involves the following steps:
 <tr><td class="hints-benchmark">Benchmark</td><td class="hints-result">Result</td><td>Comments</td></tr>
 <tr><th>Plugin installation complexity</th><td style="width:60px">High</td>
 <td>Need to manually download all dependencies.</td></tr>
-<tr><th>Toolbar configuration complexity</th><td>Moderate</td><td>Only after CKEDITOR.config.extraPlugins is set the toolbar configurator will render all available buttons.</td></tr>
+<tr><th>Toolbar configuration complexity</th><td>Moderate</td><td>Only after {@linkapi CKEDITOR.config.extraPlugins CKEDITOR.config.extraPlugins} is set the toolbar configurator will render all available buttons.</td></tr>
 <tr><th>Complexity of future upgrades</th><td>High</td><td>Need to manually download all plugins and dependencies again.</td></tr>
 <tr><th>Number of files requested by the browser</th><td>High</td><td>Each plugin results in a couple of additional HTTP requests (plugin, language file, icon).</td></tr>
 <tr><th>Performance</th><td>Low</td><td>Large number of HTTP requests.</td></tr>
@@ -130,7 +130,7 @@ This is the easiest way of using CKEditor if additional third-party plugins are 
 <table border="1" class="hints">
 <tr><td class="hints-benchmark">Benchmark</td><td class="hints-result">Result</td><td>Comments</td></tr>
 <tr><th>Plugin installation complexity</th><td style="width:60px">Moderate - High</td>
-<td>Plugins authored by CKSource are available on CDN and can be easily enabled throogh CKEDITOR.config.extraPlugins. Third-party plugins need to be downloaded locally and <a href="http://cdn.ckeditor.com/#plugins">enabled as external plugins</a>.</td></tr>
+<td>Plugins authored by CKSource are available on CDN and can be easily enabled throogh {@linkapi CKEDITOR.config.extraPlugins CKEDITOR.config.extraPlugins} Third-party plugins need to be downloaded locally and <a href="http://cdn.ckeditor.com/#plugins">enabled as external plugins</a>.</td></tr>
 <tr><th>Toolbar configuration complexity</th><td>High</td><td>The toolbar configurator is not available so understanding what button names to use may be challenging.</td></tr>
 <tr><th>Complexity of future upgrades</th><td>Low - Moderate</td><td>As easy as changing the version number in a single <code>&lt;script&gt;</code> tag. Locally stored third-party plugins must be updated manually.</td></tr>
 <tr><th>Number of files requested by the browser</th><td>High</td><td>Each plugin results in a couple of additional HTTP requests (plugin, language file, icon).</td></tr>

@@ -17,7 +17,7 @@ Depending on the mode in which the editor is used (classic or inline), custom st
 
 For [classic](#!/guide/dev_framed), `iframe`-based editor, the plugin may load the stylesheet automatically.
 
-The most convenient way is to use the the CKEDITOR.editor.addContentsCss method introduced in CKEditor 4.4. This method adds the specified path to the CKEDITOR.config.contentsCss setting and causes the styles to be loaded automatically by the editor. For example:
+The most convenient way is to use the the {@linkapi CKEDITOR.editor.addContentsCss CKEDITOR.editor.addContentsCss} method introduced in CKEditor 4.4. This method adds the specified path to the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} setting and causes the styles to be loaded automatically by the editor. For example:
 
 	CKEDITOR.plugins.add( 'example', {
 		init: function( editor ) {
@@ -45,12 +45,12 @@ The same is true for the final page where the content created by CKEditor is loa
 If you are [sharing a plugin](https://ckeditor.com/cke4/addons/plugins/all/) that needs to use additional styles:
 
 1. Place the styles in an easily recognizable directory inside the plugin directory (for example, the `styles` directory).
-1. Add the path to the plugin stylesheet to the CKEDITOR.config.contentsCss setting in your plugin code.
+1. Add the path to the plugin stylesheet to the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} setting in your plugin code.
 1. Create clear documentation for developers who include your plugin in their builds, urging them to add the plugin stylesheet to the `<head>` section of end-user HTML pages and the pages where inline editor is used.
 
 ## Special Case: Stylesheets Required Only Inside the Editor
 
-It may happen that your plugin requires some styles to be applied only inside the editor. For instance, it may add special information about blocks like the [Show Blocks](https://ckeditor.com/cke4/addon/showblocks) plugin. In such case your plugin can use the CKEDITOR.addCss method which lets you include the stylesheets directly in the plugin JavaScript file, without using separate CSS files.
+It may happen that your plugin requires some styles to be applied only inside the editor. For instance, it may add special information about blocks like the [Show Blocks](https://ckeditor.com/cke4/addon/showblocks) plugin. In such case your plugin can use the {@linkapi CKEDITOR.addCss CKEDITOR.addCss} method which lets you include the stylesheets directly in the plugin JavaScript file, without using separate CSS files.
 
 This method has to be called before the [editable](#!/api/CKEDITOR.editable) is set up and only once for all editors. Therefore, unlike in the previous example, it should be called from the plugin `onLoad` callback:
 

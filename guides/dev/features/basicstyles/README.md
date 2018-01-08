@@ -18,7 +18,7 @@ Basic text styles work on text selections; check the [Text Formats](#!/guide/dev
 
 ## Enabling All Basic Styles
 
-By default, some of these styles are disabled in the Basic and Standard presets through the CKEDITOR.config.removeButtons setting in the `config.js` file, but you can easily enable them by using one of the following solutions.
+By default, some of these styles are disabled in the Basic and Standard presets through the {@linkapi CKEDITOR.config.removeButtons CKEDITOR.config.removeButtons} setting in the `config.js` file, but you can easily enable them by using one of the following solutions.
 
 ### Enable All Basic Styles Globally
 
@@ -66,12 +66,12 @@ You will need to provide the in-page configuration for all other CKEditor instan
 
 Basic text styles can be output in HTML in different ways. For example, the **Bold** feature can be implemented as `<strong>`, `<b>`, `<span style="font-weight: bold;">` or `<span class="Bold">`. These configuration options let you set custom definitons for basic text style output:
 
-* CKEDITOR.config.coreStyles_bold
-* CKEDITOR.config.coreStyles_italic
-* CKEDITOR.config.coreStyles_underline
-* CKEDITOR.config.coreStyles_strike
-* CKEDITOR.config.coreStyles_subscript
-* CKEDITOR.config.coreStyles_superscript
+* {@linkapi CKEDITOR.config.coreStyles_bold CKEDITOR.config.coreStyles_bold}
+* {@linkapi CKEDITOR.config.coreStyles_italic CKEDITOR.config.coreStyles_italic}
+* {@linkapi CKEDITOR.config.coreStyles_underline CKEDITOR.config.coreStyles_underline}
+* {@linkapi CKEDITOR.config.coreStyles_strike CKEDITOR.config.coreStyles_strike}
+* {@linkapi CKEDITOR.config.coreStyles_subscript CKEDITOR.config.coreStyles_subscript}
+* {@linkapi CKEDITOR.config.coreStyles_superscript CKEDITOR.config.coreStyles_superscript}
 
 The following example configures CKEditor to output bold with an inline CSS style, italic with the `<i>` element, and subscript and superscript with CSS classes.
 
@@ -98,7 +98,7 @@ config.coreStyles_superscript = {
 
 You can use the `overrides` parameter to define an alternative that CKEditor will convert into your desired form.
 
-Remember that depending on your use case, the CSS classes for basic text styles need to be defined accordingly. For [classic editor](#!/guide/dev_framed) they should be defined in an external CSS file added to the editor configuration with the CKEDITOR.config.contentsCss option. For [inline editor](#!/guide/dev_inline) they need to be added directly to the page stylesheet.
+Remember that depending on your use case, the CSS classes for basic text styles need to be defined accordingly. For [classic editor](#!/guide/dev_framed) they should be defined in an external CSS file added to the editor configuration with the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option. For [inline editor](#!/guide/dev_inline) they need to be added directly to the page stylesheet.
 
 <div class="tip">
 	<p>

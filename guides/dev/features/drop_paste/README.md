@@ -23,7 +23,7 @@ The most important feature related to clipboard is being able to limit what data
 
 Therefore, all pasted and dropped content is filtered by [Advanced Content Filter](#!/guide/dev_advanced_content_filter) unless it was disabled.
 
-Additionally, since CKEditor 4.5 it is possible to configure a [separate filter (called *paste filter*)](#!/guide/dev_advanced_content_filter-section-filtering-pasted-and-dropped-content) which will handle only pasted and dropped content. By default it is enabled in Chrome, Opera and Safari to clean up the messy HTML they create. The paste filter is configurable using the [allowed content rules](#!/guide/dev_allowed_content_rules) and it also has two presets &mdash; `'plain-text'` and `'semantic-content'`. The first of them replaces the CKEDITOR.config.forcePasteAsPlainText option, but thanks to the flexibility of the paste filter it is now also possible to achieve results like "only text with links":
+Additionally, since CKEditor 4.5 it is possible to configure a [separate filter (called *paste filter*)](#!/guide/dev_advanced_content_filter-section-filtering-pasted-and-dropped-content) which will handle only pasted and dropped content. By default it is enabled in Chrome, Opera and Safari to clean up the messy HTML they create. The paste filter is configurable using the [allowed content rules](#!/guide/dev_allowed_content_rules) and it also has two presets &mdash; `'plain-text'` and `'semantic-content'`. The first of them replaces the {@linkapi CKEDITOR.config.forcePasteAsPlainText CKEDITOR.config.forcePasteAsPlainText} option, but thanks to the flexibility of the paste filter it is now also possible to achieve results like "only text with links":
 
 	config.pasteFilter = 'p; a[!href]';
 

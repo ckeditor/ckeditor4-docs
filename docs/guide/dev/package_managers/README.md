@@ -17,7 +17,7 @@ For licensing, see LICENSE.md.
 
 With the exception of NuGet, by default the package managers will install the `standard-all` CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the `ckeditor.js` file and enabled. [See here](https://ckeditor.com/cke4/presets) for a comparison of editor presets.
 
-Additional plugins included in the `standard-all` preset can be enabled in your configuration by using the CKEDITOR.config#extraPlugins option.
+Additional plugins included in the `standard-all` preset can be enabled in your configuration by using the {@linkapi CKEDITOR.config#extraPlugins CKEDITOR.config#extraPlugins} option.
 
 For example, if you wanted to add the **Text Color** and **Background Color** buttons to your toolbar (the Standard preset does not include them by default), you should add the following to your custom editor configuration:
 

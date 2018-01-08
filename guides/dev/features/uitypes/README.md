@@ -20,7 +20,7 @@ In fixed UI, used by default in classic editor:
 
 The **default behavior of an editor with fixed UI can be customized**, though:
 
-* [Toolbar position](#!/guide/dev_toolbarlocation) can be configured with the CKEDITOR.config.toolbarLocation option.
+* [Toolbar position](#!/guide/dev_toolbarlocation) can be configured with the {@linkapi CKEDITOR.config.toolbarLocation CKEDITOR.config.toolbarLocation} option.
 * The editing area size can be adjusted automatically also when fixed UI is used &mdash; check the [Auto Grow](#!/guide/dev_autogrow) feature.
 * The editor size can be controlled manually by using the resize handle located at the bottom of the interface. This feature is provided through the [Editor Resize](https://ckeditor.com/cke4/addon/resize) plugin and is available in Standard and Full editor distributions.
 
@@ -36,7 +36,7 @@ Although fixed UI is mostly used in conjunction with classic editor, it is also 
 
 * Under the hood, the element replaced by CKEditor is hidden automatically and a `<div>`-based editor is created next to it. This might affect the styles of content inside the editor, e.g. because of the lack of original element ID attribute used by CSS selectors.
 * The `<div>`-based editor is rendered using multiple nested `<div>` elements. This might affect editor content styles, too.
-* Last but not least, the [Auto Grow](#!/guide/dev_autogrow) feature is not fully supported in this scenario &mdash; the value of the CKEDITOR.config.autoGrow_minHeight option is ignored.
+* Last but not least, the [Auto Grow](#!/guide/dev_autogrow) feature is not fully supported in this scenario &mdash; the value of the {@linkapi CKEDITOR.config.autoGrow_minHeight CKEDITOR.config.autoGrow_minHeight} option is ignored.
 
 If you want to achieve a fixed UI experience with inline editor, consider using the [Shared Toolbar and Bottom Bar](#!/guide/dev_sharedspace) feature instead, where these limitations do not exist.
 
@@ -60,7 +60,7 @@ Due to the dynamic nature of floating UI, **some editor features are unavailable
 
 * [Elements Path](https://ckeditor.com/cke4/addon/elementspath) is not available &mdash; to use it in an inline editor you need to implement fixed UI with the [Div Editing Area](https://ckeditor.com/cke4/addon/divarea) plugin or the [shared toolbar and bottom bar](#!/guide/dev_sharedspace) that comes with the [Shared Space](https://ckeditor.com/cke4/addon/sharedspace) plugin.
 * [Source Editing Area](https://ckeditor.com/cke4/addon/sourcearea) is not available &mdash; an alternative solution using a [dialog window for source code editing](https://ckeditor.com/cke4/addon/sourcedialog) should be used. Refer to the [Source Code Editing](#!/guide/dev_sourcearea) documentation.
-* The following configuration options that control the size of the editor are ignored: CKEDITOR.config.height and CKEDITOR.config.width.
+* The following configuration options that control the size of the editor are ignored: {@linkapi CKEDITOR.config.height CKEDITOR.config.height} and {@linkapi CKEDITOR.config.width CKEDITOR.config.width}
 
 ## User Interface Types Demo
 

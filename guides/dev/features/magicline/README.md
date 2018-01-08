@@ -25,9 +25,9 @@ When you click the magic line's handle, a new paragraph will be inserted into th
 
 ## Styling the Magic Line
 
-If the default striking red color does not suit you, you can easily modify it by setting the CKEDITOR.config.magicline_color configuration option, for example:
+If the default striking red color does not suit you, you can easily modify it by setting the {@linkapi CKEDITOR.config.magicline_color CKEDITOR.config.magicline_color} configuration option, for example:
 
-    CKEDITOR.config.magicline_color = '#0000FF';
+    {@linkapi CKEDITOR.config.magicline_color CKEDITOR.config.magicline_color} = '#0000FF';
 
 This will change magic line's color to blue, as presented in the image below.
 
@@ -40,25 +40,25 @@ To further enhance CKEditor's accessibility, the following [keyboard shortcuts](
 * <kbd>Shift+Ctrl+3</kbd> &ndash; Enables enetring content (by adding a new paragraph) **before** a problematic element.
 * <kbd>Shift+Ctrl+4</kbd> &ndash; Enables entering content (by adding a new paragraph) **after** a problematic element.
 
-You can also adjust the keyboard shortcuts by setting the CKEDITOR.config.magicline_keystrokeNext and CKEDITOR.config.magicline_keystrokePrevious configuration options, respectively. For example:
+You can also adjust the keyboard shortcuts by setting the {@linkapi CKEDITOR.config.magicline_keystrokeNext CKEDITOR.config.magicline_keystrokeNext} and {@linkapi CKEDITOR.config.magicline_keystrokePrevious CKEDITOR.config.magicline_keystrokePrevious} configuration options, respectively. For example:
 
     // Changes the keyboard shortcut to Ctrl + ".".
-    CKEDITOR.config.magicline_keystrokeNext = CKEDITOR.CTRL + 190;
+    {@linkapi CKEDITOR.config.magicline_keystrokeNext CKEDITOR.config.magicline_keystrokeNext} = {@linkapi CKEDITOR.CTRL CKEDITOR.CTRL} + 190;
 
     // Changes the keyboard shortcut to Ctrl + ",".
-    CKEDITOR.config.magicline_keystrokePrevious = CKEDITOR.CTRL + 188;
+    {@linkapi CKEDITOR.config.magicline_keystrokePrevious CKEDITOR.config.magicline_keystrokePrevious} = {@linkapi CKEDITOR.CTRL CKEDITOR.CTRL} + 188;
 
 ## Adjusting List of Elements Activating Magic Line
 
 It is also possible to modify the default list of elements that trigger the appearance of magic line.
 
-The CKEDITOR.config.magicline_everywhere option activates the all-encompassing mode which causes magic line to appear for all block-level elements as defined in CKEDITOR.dtd.$block.
+The {@linkapi CKEDITOR.config.magicline_everywhere CKEDITOR.config.magicline_everywhere} option activates the all-encompassing mode which causes magic line to appear for all block-level elements as defined in CKEDITOR.dtd.$block.
 
-    CKEDITOR.config.magicline_everywhere = true;
+    {@linkapi CKEDITOR.config.magicline_everywhere CKEDITOR.config.magicline_everywhere} = true;
 
-The CKEDITOR.config.magicline_tabuList option lets you blacklist certain elements by providing a list of attributes that, if assigned, prevent magic line from appearing for these elements.
+The {@linkapi CKEDITOR.config.magicline_tabuList CKEDITOR.config.magicline_tabuList} option lets you blacklist certain elements by providing a list of attributes that, if assigned, prevent magic line from appearing for these elements.
 
-    CKEDITOR.config.magicline_tabuList = [ 'data-tabu' ];
+    {@linkapi CKEDITOR.config.magicline_tabuList CKEDITOR.config.magicline_tabuList} = [ 'data-tabu' ];
 
 ## Magic Line Demo
 

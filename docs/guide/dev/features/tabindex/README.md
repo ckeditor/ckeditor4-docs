@@ -18,7 +18,7 @@ This is a default behavior that works for both classic and inline editors. For {
 
 ## Influencing Tab Index
 
-You can customize the place that CKEditor will take in the <kbd>Tab</kbd> order of a web page that it is embedded in. Use the CKEDITOR.config.tabIndex option to assign a custom `tabindex` value to a CKEditor instance. For example:
+You can customize the place that CKEditor will take in the <kbd>Tab</kbd> order of a web page that it is embedded in. Use the {@linkapi CKEDITOR.config.tabIndex CKEDITOR.config.tabIndex} option to assign a custom `tabindex` value to a CKEditor instance. For example:
 
     config.tabIndex = 3;
 

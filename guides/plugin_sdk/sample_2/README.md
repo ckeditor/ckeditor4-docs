@@ -73,7 +73,7 @@ need to enable the Abbreviation context menu for each selected `<abbr>` element:
 
 		editor.contextMenu.addListener( function( element ) {
 			if ( element.getAscendant( 'abbr', true ) ) {
-	 			return { abbrItem: CKEDITOR.TRISTATE_OFF };
+	 			return { abbrItem: {@linkapi CKEDITOR.TRISTATE_OFF CKEDITOR.TRISTATE_OFF} };
 	 		}
 		});
 	}
@@ -336,7 +336,7 @@ The complete content of the `plugin.js` file is as follows:
 		icons: 'abbr',
 		init: function( editor ) {
 
-			editor.addCommand( 'abbr', new CKEDITOR.dialogCommand( 'abbrDialog' ) );
+			editor.addCommand( 'abbr', new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'abbrDialog' ) );
 
 			editor.ui.addButton( 'Abbr', {
 				label: 'Insert Abbreviation',
@@ -355,7 +355,7 @@ The complete content of the `plugin.js` file is as follows:
 
 				editor.contextMenu.addListener( function( element ) {
 					if ( element.getAscendant( 'abbr', true ) ) {
-						return { abbrItem: CKEDITOR.TRISTATE_OFF };
+						return { abbrItem: {@linkapi CKEDITOR.TRISTATE_OFF CKEDITOR.TRISTATE_OFF} };
 					}
 				});
 			}

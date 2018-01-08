@@ -5,13 +5,13 @@ For licensing, see LICENSE.md.
 
 # Enter Key Configuration
 
-When CKEditor is integrated in some environments you may want to configure the default behavior of the <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys to generate matching output. This is possible thanks to CKEDITOR.config.enterMode and CKEDITOR.config.shiftEnterMode, respectively.
+When CKEditor is integrated in some environments you may want to configure the default behavior of the <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys to generate matching output. This is possible thanks to {@linkapi CKEDITOR.config.enterMode CKEDITOR.config.enterMode} and {@linkapi CKEDITOR.config.shiftEnterMode CKEDITOR.config.shiftEnterMode}, respectively.
 
 Both configuration settings can use one of the following options:
 
-* CKEDITOR.ENTER_P &ndash; new `<p>` paragraphs are created;
-* CKEDITOR.ENTER_BR &ndash; lines are broken with `<br>` elements;
-* CKEDITOR.ENTER_DIV &ndash; new `<div>` blocks are created.
+* {@linkapi CKEDITOR.ENTER_P CKEDITOR.ENTER_P} &ndash; new `<p>` paragraphs are created;
+* {@linkapi CKEDITOR.ENTER_BR CKEDITOR.ENTER_BR} &ndash; lines are broken with `<br>` elements;
+* {@linkapi CKEDITOR.ENTER_DIV CKEDITOR.ENTER_DIV} &ndash; new `<div>` blocks are created.
 
 <div class="tip">
 	<p>

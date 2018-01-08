@@ -19,15 +19,15 @@ When the Editor Resize plugin is enabled, it adds the resize handle (<span title
 
 {@img resize_01.png The editor resize handle}
 
-The resize feature is highly customizable. It is possible to define the resizing direction or maximum and minimum editor size after the resize. Additionally, this plugin provides the CKEDITOR.editor.resize method which allows for resizing the editor on the fly.
+The resize feature is highly customizable. It is possible to define the resizing direction or maximum and minimum editor size after the resize. Additionally, this plugin provides the {@linkapi CKEDITOR.editor.resize CKEDITOR.editor.resize} method which allows for resizing the editor on the fly.
 
 ## Disabling Editor Resizing
 
-To prevent the editor from being resized you can use the CKEDITOR.config.removePlugins setting to remove the Editor Resize (`resize`) plugin.
+To prevent the editor from being resized you can use the {@linkapi CKEDITOR.config.removePlugins CKEDITOR.config.removePlugins} setting to remove the Editor Resize (`resize`) plugin.
 
 	config.removePlugins = 'resize';
 
-You can also disable this feature by setting the CKEDITOR.config.resize_enabled configuration option to `false`.
+You can also disable this feature by setting the {@linkapi CKEDITOR.config.resize_enabled CKEDITOR.config.resize_enabled} configuration option to `false`.
 
 	config.resize_enabled = false;
 
@@ -51,12 +51,12 @@ While setting the height value, use the `isContentHeight` parameter to decide wh
 
 It is also possible to define the minimum and maximum dimensions after resizing to prevent the editor window from becoming too small or too big to handle.
 
-To define the minimum editor dimensions after resizing, specify the CKEDITOR.config.resize_minWidth and CKEDITOR.config.resize_minHeight values in pixels.
+To define the minimum editor dimensions after resizing, specify the {@linkapi CKEDITOR.config.resize_minWidth CKEDITOR.config.resize_minWidth} and {@linkapi CKEDITOR.config.resize_minHeight CKEDITOR.config.resize_minHeight} values in pixels.
 
 	config.resize_minWidth = 300;
 	config.resize_minHeight = 300;
 
-To define the maximum editor dimensions after resizing, specify the CKEDITOR.config.resize_maxWidth and CKEDITOR.config.resize_maxHeight values in pixels.
+To define the maximum editor dimensions after resizing, specify the {@linkapi CKEDITOR.config.resize_maxWidth CKEDITOR.config.resize_maxWidth} and {@linkapi CKEDITOR.config.resize_maxHeight CKEDITOR.config.resize_maxHeight} values in pixels.
 
 	config.resize_maxWidth = 800;
 	config.resize_maxHeight = 600;
@@ -66,15 +66,15 @@ To define the maximum editor dimensions after resizing, specify the CKEDITOR.con
 
 Additionally, you can define the resizing directions in order to have more control over the resulting editor appearance.
 
-By default CKEditor is allowed to only resize vertically. This is achieved thanks to setting the CKEDITOR.config.resize_dir configuration option to `'vertical'`
+By default CKEditor is allowed to only resize vertically. This is achieved thanks to setting the {@linkapi CKEDITOR.config.resize_dir CKEDITOR.config.resize_dir} configuration option to `'vertical'`
 
 	config.resize_dir = 'vertical';
 
-If you set the CKEDITOR.config.resize_dir configuration option to `'horizontal'`, CKEditor window will only be resizable in horizontal dimension.
+If you set the {@linkapi CKEDITOR.config.resize_dir CKEDITOR.config.resize_dir} configuration option to `'horizontal'`, CKEditor window will only be resizable in horizontal dimension.
 
 	config.resize_dir = 'horizontal';
 
-If you want to allow both vertical and horizontal resizing, you need to set the CKEDITOR.config.resize_dir configuration option to `'both'`.
+If you want to allow both vertical and horizontal resizing, you need to set the {@linkapi CKEDITOR.config.resize_dir CKEDITOR.config.resize_dir} configuration option to `'both'`.
 
 	config.resize_dir = 'both';
 

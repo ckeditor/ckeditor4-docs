@@ -29,13 +29,13 @@ The image below shows an example of a success and a progress notification.
 To show a simple notification you need to {@link CKEDITOR.plugins.notification#constructor create a notification} instance and call the {@link CKEDITOR.plugins.notification#show} method or you can use the {@link CKEDITOR.editor#showNotification} shortcut:
 
 	// The editor needs the "notification" plugin.
-	var editor = CKEDITOR.replace( 'editor1', {
+	var editor = {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1', {
 		extraPlugins: 'notification'
 	} );
 
 	editor.once( 'instanceReady', function() {
 		// Create and show the notification.
-		var notification1 = new CKEDITOR.plugins.notification( editor, {
+		var notification1 = new {@linkapi CKEDITOR.plugins.notification CKEDITOR.plugins.notification}( editor, {
 			message: 'Error occurred',
 			type: 'warning'
 		} );
@@ -115,13 +115,13 @@ If you want to show one notification aggregating many small tasks, you can use t
 {@img notification_aggregator.png Notifications aggregator example}
 
 	// The editor needs the "notificationaggregator" plugin.
-	var editor = CKEDITOR.replace( 'editor1', {
+	var editor = {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1', {
 		extraPlugins: 'notificationaggregator'
 	} );
 
 	editor.once( 'instanceReady', function() {
 		// Create a notification aggregator with the description template.
-		var aggregator = new CKEDITOR.plugins.notificationAggregator( editor, 'Uploading {current} of {max}... {percentage}%' );
+		var aggregator = new {@linkapi CKEDITOR.plugins.notificationAggregator CKEDITOR.plugins.notificationAggregator}( editor, 'Uploading {current} of {max}... {percentage}%' );
 
 		// Create two tasks with different weights and add them to the aggregator.
 		var task1 = aggregator.createTask( { weight: 60 } ),

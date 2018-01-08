@@ -18,7 +18,7 @@ With full page mode and the optional [Document Properties](https://ckeditor.com/
 
 ## Full Page Mode
 
-Full page mode is provided by the [IFrame Editing Area](https://ckeditor.com/cke4/addon/wysiwygarea) (`wysiwygarea`) plugin which means it is only available for classic, `iframe`-based editor with fixed UI. It can be enabled by setting the CKEDITOR.config.fullPage option to `true` in your [editor configuration](#!/guide/dev_configuration):
+Full page mode is provided by the [IFrame Editing Area](https://ckeditor.com/cke4/addon/wysiwygarea) (`wysiwygarea`) plugin which means it is only available for classic, `iframe`-based editor with fixed UI. It can be enabled by setting the {@linkapi CKEDITOR.config.fullPage CKEDITOR.config.fullPage} option to `true` in your [editor configuration](#!/guide/dev_configuration):
 
 	config.fullPage = true;
 

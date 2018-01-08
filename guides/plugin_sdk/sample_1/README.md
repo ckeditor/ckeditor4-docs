@@ -55,9 +55,9 @@ a text editor and to start creating the source code of the plugin.
 		}
 	});
 
-All CKEditor plugins are created by using the CKEDITOR.plugins.add function.
+All CKEditor plugins are created by using the {@linkapi CKEDITOR.plugins.add CKEDITOR.plugins.add} function.
 This function should contain the plugin name &mdash; `'abbr'` &mdash; and the plugin logic
-placed inside the CKEDITOR.pluginDefinition.init function that is
+placed inside the {@linkapi CKEDITOR.pluginDefinition.init CKEDITOR.pluginDefinition.init} function that is
 called upon the initialization of the editor instance.
 
 Additionally, as we are going to define a toolbar button, the `icons` property is set, including the name of the icon file (important: matching the **button name**, in lowercase).
@@ -69,9 +69,9 @@ command that opens a new dialog window. To do this, we will need to use
 the {@link CKEDITOR.editor#addCommand editor.addCommand}  function to register the
 `abbr` command.
 
-	editor.addCommand( 'abbr', new CKEDITOR.dialogCommand( 'abbrDialog' ) );
+	editor.addCommand( 'abbr', new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'abbrDialog' ) );
 
-This command opens the `abbrDialog` dialog that we are going to define in a moment by using the CKEDITOR.dialogCommand class.
+This command opens the `abbrDialog` dialog that we are going to define in a moment by using the {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand} class.
 
 
 ## Creating the Toolbar Button
@@ -86,7 +86,7 @@ dialog window.
 		toolbar: 'insert'
 	});
 
-The above CKEDITOR.ui.addButton function call created a button named `'Abbr'` with the following properties:
+The above {@linkapi CKEDITOR.ui.addButton CKEDITOR.ui.addButton} function call created a button named `'Abbr'` with the following properties:
 
  * `label` &ndash; the textual part of the button (if visible) and its tooltip.
  * `command` &ndash; the command to be executed once the button is activated. This is the command we created in the previous step.
@@ -137,7 +137,7 @@ In the code above we registered the `abbrDialog` dialog name, telling the editor
 
 ### The Dialog Definition
 
-It is time to work on the `dialogs/abbr.js` file itself. First, we will simply repeat the CKEDITOR.dialog.add call, but now we will return the dialog definition to the editor:
+It is time to work on the `dialogs/abbr.js` file itself. First, we will simply repeat the {@linkapi CKEDITOR.dialog.add CKEDITOR.dialog.add} call, but now we will return the dialog definition to the editor:
 
 	CKEDITOR.dialog.add( 'abbrDialog', function ( editor ) {
 		return {
@@ -145,7 +145,7 @@ It is time to work on the `dialogs/abbr.js` file itself. First, we will simply r
 		};
 	});
 
-Check the CKEDITOR.dialog.definition object documentation for a full reference on editor dialog definition.
+Check the {@linkapi CKEDITOR.dialog.definition CKEDITOR.dialog.definition} object documentation for a full reference on editor dialog definition.
 
 In our case we will give the dialog window a name (`'abbrDialog'`) and use the
 {@link CKEDITOR.dialog.definition#title title},
@@ -203,7 +203,7 @@ dialog window containing two (empty) tabs.
 
 User interface elements that can be added to a dialog window tab are defined in
 the {@link CKEDITOR.dialog.definition.content#elements elements} parameter, which is an
-array of CKEDITOR.dialog.definition.uiElement objects.
+array of {@linkapi CKEDITOR.dialog.definition.uiElement CKEDITOR.dialog.definition.uiElement} objects.
 
 The **Basic Settings** tab will contain two mandatory text fields (`type: 'text'`)
 with  the abbreviation and its explanation. Since both fields are obligatory, it is
@@ -313,7 +313,7 @@ The complete content of the `plugin.js` file is as follows:
 	CKEDITOR.plugins.add( 'abbr', {
 		icons: 'abbr',
 		init: function( editor ) {
-			editor.addCommand( 'abbr', new CKEDITOR.dialogCommand( 'abbrDialog' ) );
+			editor.addCommand( 'abbr', new {@linkapi CKEDITOR.dialogCommand CKEDITOR.dialogCommand}( 'abbrDialog' ) );
 			editor.ui.addButton( 'Abbr', {
 			    label: 'Insert Abbreviation',
 			    command: 'abbr',

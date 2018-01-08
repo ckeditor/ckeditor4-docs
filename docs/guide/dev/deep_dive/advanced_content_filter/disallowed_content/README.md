@@ -17,9 +17,9 @@ For licensing, see LICENSE.md.
 
 The Disallowed Content feature complements the existing Allowed Content feature in that it lets you explicitly blacklist elements that you do not want to have in your CKEditor content. You can use it to limit the features that would otherwise be available in the fully automatic Advanced Content Filter mode.
 
-Disallowed content can be defined in the CKEDITOR.config.disallowedContent setting or may be dynamically added with the CKEDITOR.filter.disallow method. It has a higher priority than content allowed automatically or by the CKEDITOR.config.allowedContent setting, hence it is possible to correct automatic settings or achieve more complex results like "allow all attributes except those starting with `on*`".
+Disallowed content can be defined in the {@linkapi CKEDITOR.config.disallowedContent CKEDITOR.config.disallowedContent} setting or may be dynamically added with the {@linkapi CKEDITOR.filter.disallow CKEDITOR.filter.disallow} method. It has a higher priority than content allowed automatically or by the {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} setting, hence it is possible to correct automatic settings or achieve more complex results like "allow all attributes except those starting with `on*`".
 
-<info-box hint=""> It is not possible to disallow content when the Advanced Content Filter is disabled by setting CKEDITOR.config.allowedContent to <code>true</code>. A similar solution can be achieved by allowing all HTML elements.
+<info-box hint=""> It is not possible to disallow content when the Advanced Content Filter is disabled by setting {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} to <code>true</code>. A similar solution can be achieved by allowing all HTML elements.
 </info-box>
 
 ## Disallowed Content Rules
@@ -67,14 +67,14 @@ Best to see it in examples.
 
 ## How to Allow Everything Except...
 
-A popular requirement is to allow all HTML features except a few specific ones. In this case setting CKEDITOR.config.allowedContent to `true` is not a solution, because this completely disables the {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}, so CKEDITOR.config.disallowedContent will not work either.
+A popular requirement is to allow all HTML features except a few specific ones. In this case setting {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} to `true` is not a solution, because this completely disables the {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}, so {@linkapi CKEDITOR.config.disallowedContent CKEDITOR.config.disallowedContent} will not work either.
 
-Therefore the only solution is to write an allowed content rule allowing all elements. Fortunately, this can be done easily by using the {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README#object-format object format of allowed content rules} and the CKEDITOR.dtd object.
+Therefore the only solution is to write an allowed content rule allowing all elements. Fortunately, this can be done easily by using the {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README#object-format object format of allowed content rules} and the {@linkapi CKEDITOR.dtd CKEDITOR.dtd} object.
 
 	config.allowedContent = {
 		$1: {
 			// Use the ability to specify elements as an object.
-			elements: CKEDITOR.dtd,
+			elements: {@linkapi CKEDITOR.dtd CKEDITOR.dtd},
 			attributes: true,
 			styles: true,
 			classes: true

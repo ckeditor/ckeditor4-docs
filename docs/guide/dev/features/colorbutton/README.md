@@ -25,17 +25,17 @@ You can also add the optional [Color Dialog](https://ckeditor.com/cke4/addon/col
 
 {@img assets/img/colordialog_03.png The Select Color dialog window}
 
-You can hide the **More Colors** feature by setting the CKEDITOR.config.colorButton_enableMore configuration option to `false`.
+You can hide the **More Colors** feature by setting the {@linkapi CKEDITOR.config.colorButton_enableMore CKEDITOR.config.colorButton_enableMore} configuration option to `false`.
 
 ## Custom Color List
 
 The list of colors available in the color selectors can be customized, for example to include the colors that are used in your website. You may also want to limit user's choice of colors to just selected few in order to avoid the overuse of colors.
 
-Use the CKEDITOR.config.colorButton_colors configuration option to define a custom list available in the **Text Color** and **Background Color** features. For example:
+Use the {@linkapi CKEDITOR.config.colorButton_colors CKEDITOR.config.colorButton_colors} configuration option to define a custom list available in the **Text Color** and **Background Color** features. For example:
 
 	config.colorButton_colors = 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16';
 
-Additionally, since CKEditor 4.5.8 you can also disable the "Automatic" option by setting the CKEDITOR.config.colorButton_enableAutomatic option to `false`.
+Additionally, since CKEditor 4.5.8 you can also disable the "Automatic" option by setting the {@linkapi CKEDITOR.config.colorButton_enableAutomatic CKEDITOR.config.colorButton_enableAutomatic} option to `false`.
 
 	config.colorButton_enableAutomatic = false;
 
@@ -48,7 +48,7 @@ These settings will cause the color list to only contain the seven colors listed
 
 ## Custom Color Style Definition
 
-You can also decide how the color definition is stored by setting the CKEDITOR.config.colorButton_foreStyle (for text color) and CKEDITOR.config.colorButton_backStyle (for background color) configuration options. By default, the color is added as a `<span>` element with the `style` attribute, but you could also e.g. use the legacy (and not recommended) HTML4 `<font>` element definition:
+You can also decide how the color definition is stored by setting the {@linkapi CKEDITOR.config.colorButton_foreStyle CKEDITOR.config.colorButton_foreStyle} (for text color) and {@linkapi CKEDITOR.config.colorButton_backStyle CKEDITOR.config.colorButton_backStyle} (for background color) configuration options. By default, the color is added as a `<span>` element with the `style` attribute, but you could also e.g. use the legacy (and not recommended) HTML4 `<font>` element definition:
 
 	config.colorButton_foreStyle = {
 		element: 'font',

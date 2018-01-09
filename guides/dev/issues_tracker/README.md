@@ -74,4 +74,5 @@ Every issue may be marked with the following labels:
     * <span style="background-color:#aaaaaa;padding:0 3px 0 3px">support</span> &ndash; An issue reported by a commercially licensed client.
     * <span style="background-color:#34d058;padding:0 3px 0 3px">review:easy</span> &ndash; Pull requests that can be reviewed by a Junior Developer before being reviewed by the Reviewer.
     * <span style="background-color:#fef2c0;color:#000;padding:0 3px 0 3px">accessibility</span> &ndash; Issue related to accessibility.
-    * <span style="background-color:#c5def5;color:#000;padding:0 3px 0 3px">target:NNN</span> &ndash; Denotes the branch that the issue should be merged to.
+    * <span style="background-color:#c5def5;color:#000;padding:0 3px 0 3px">target:major</span> &ndash; An issue with a significant change (e.g. a new feature, a breaking change) that should be merged into a _major_ branch.
+    * <span style="background-color:#c5def5;color:#000;padding:0 3px 0 3px">target:minor</span> &ndash; An issue with a less significant change (e.g. a bug fix) that can be merged either into a _master_ or _major_ branch.

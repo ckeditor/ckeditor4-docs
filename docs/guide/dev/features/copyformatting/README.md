@@ -33,7 +33,7 @@ When enabled, the plugin adds the **Copy Formatting** (<img class="inline" src="
 
 ## Sticky Mode
 
-A special sticky mode allows you to copy formatting once and apply it in more than one place. To enable it, double-click the <img src="%BASE_PATH%/assets/img/copyformatting-button.png" alt="Copy Formatting" style="vertical-align: bottom;"> button or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut.
+A special sticky mode allows you to copy formatting once and apply it in more than one place. To enable it, double-click the <img class="inline" src="%BASE_PATH%/assets/img/copyformatting-button.png" alt="Copy Formatting"> button or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut.
 
 The sticky mode can be switched off by clicking the <img class="inline" src="%BASE_PATH%/assets/img/copyformatting-button.png" alt="Copy Formatting"> button again or by pressing the <kbd>Esc</kbd> key.
 

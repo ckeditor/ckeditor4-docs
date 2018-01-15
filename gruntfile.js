@@ -130,7 +130,7 @@ module.exports = function( grunt ) {
 					port: 9001,
 					base: 'build/docs',
 					keepalive: true,
-					open: 'http://localhost:9001/ckeditor4/1.0.0/guide/dev_installation.html'
+					open: 'http://localhost:9001/ckeditor4/4.8.0/guide/dev_installation.html'
 				}
 			}
 		}

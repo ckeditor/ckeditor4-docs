@@ -39,13 +39,16 @@ Go back to the `ckeditor-docs` repository and install [npm dependencies](package
 
     > npm install
 
-Then finally execute `grunt`:
+Then finally execute `grunt docs`:
 
-	> grunt
+	> grunt docs [--options]
+	
+Available options:
 
-## Developer's Guide
-
-All "Developer's Guide" articles as well as the Plugin, Widget and Skin SDKs are defined in the `guides/` folder, including the `guides.json` file which defines the Table of Contents tree and the meta information.
+* `--dev` - use it to build documentation and view it locally,
+* `--skipApi` - skips rendering API docs,
+* `--skipValidation` - skips link validation,
+* `--clean` - when `--dev` flag is used, `--clean` enables to clear the `build` directory before outputting new documentation
 
 ## API Documentation
 

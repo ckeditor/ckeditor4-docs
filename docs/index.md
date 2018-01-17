@@ -1,3 +1,24 @@
+---
+toc: false
+sitenav: false
+meta-title: CKEditor 4 documentation
+meta-description: Learn how to install, integrate, configure and develop CKEditor 4. Browse through API documentation and online samples.
+---
+
 # CKEditor 4 Documentation
 
-Coming soon...
+<dl>
+<dt>{@link guide/index CKEditor 4 Developer's Guide}</dt><dd>Learn how to install, integrate and configure CKEditor 4. More complex aspects, like creating plugins, widgets and skins are explained here, too.</dd>
+<dt>{@link api/index CKEditor 4 API Reference}</dt><dd>A complete API documentation.</dd>
+<dt><a href="https://sdk.ckeditor.com/">CKEditor 4 SDK with Editor Samples</a></dt><dd>A collection of examples designed to help you get familiar with all editor features.</dd>
+</dl>
+
+## Accessibility Checker for CKEditor 4
+
+<a href="../docs/#!/guide/dev_accessibility_checker" data-skip-validation="true">Accessibility Checker documentation</a>
+
+[Accessibility Checker SDK sample](https://sdk.ckeditor.com/samples/accessibilitychecker.html)
+
+## Contribute
+
+CKEditor is an Open Source project and your contribution is most welcome. Feel free to {@link guide/dev/issues_readme/README report bugs} or improve the code on [GitHub](https://github.com/ckeditor/ckeditor-dev). Since CKEditor is localized, you can also help [to translate it](https://www.transifex.com/ckeditor/ckeditor/). You do not need to be a programmer to contribute to the project!

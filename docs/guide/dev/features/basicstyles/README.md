@@ -6,13 +6,14 @@ menu-title: Basic Text Styles
 meta-title-short: Basic Text Styles
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Basic Text Styles: Bold, Italic and More
 
-<info-box info=""> This feature is provided through a plugin that is included in all official CKEditor distributions (Basic, Standard, Full) available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
+<info-box info="">
+ This feature is provided through a plugin that is included in all official CKEditor distributions (Basic, Standard, Full) available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
 </info-box>
 
 The [Basic Styles](https://ckeditor.com/cke4/addon/basicstyles) plugin provides the ability to add some basic text formatting to your document. When enabled, it adds the **Bold**, **Italic**, **Underline**, **Strikethrough**, **Subscript** and **Superscript** toolbar buttons that apply these styles. If you want to quickly {@link guide/dev/features/removeformat/README remove basic styles} from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
@@ -106,7 +107,14 @@ You can use the `overrides` parameter to define an alternative that CKEditor wil
 
 Remember that depending on your use case, the CSS classes for basic text styles need to be defined accordingly. For {@link guide/dev/framed/README classic editor} they should be defined in an external CSS file added to the editor configuration with the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option. For {@link guide/dev/inline/README inline editor} they need to be added directly to the page stylesheet.
 
-<info-box hint=""> <p> 	Some conversions are applied automatically thanks to a feature called {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations content transformations} which is a part of Advanced Content Filter. This, however, will only work when ACF is enabled (the deafult option), and applies to a handful of pre-defined transformations. </p> <p> 	Custom basic style definitions are automatically integrated with {@link guide/dev/configuration/acf/README Advanced Content Filter} and are treated as allowed by the editor content filtering mechanism. </p>
+<info-box hint="">
+ <p>
+ 	Some conversions are applied automatically thanks to a feature called {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations content transformations} which is a part of Advanced Content Filter. This, however, will only work when ACF
+ is enabled (the deafult option), and applies to a handful of pre-defined transformations.
+ </p>
+ <p>
+ 	Custom basic style definitions are automatically integrated with {@link guide/dev/configuration/acf/README Advanced Content Filter} and are treated as allowed by the editor content filtering mechanism.
+ </p>
 </info-box>
 
 ## Basic Text Styles Demo

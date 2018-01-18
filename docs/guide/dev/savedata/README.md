@@ -6,7 +6,7 @@ menu-title: Getting and Saving Data
 meta-title-short: Getting and Saving Data
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

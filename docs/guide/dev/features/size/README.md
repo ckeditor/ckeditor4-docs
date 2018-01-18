@@ -6,13 +6,14 @@ menu-title: Editor Size
 meta-title-short: Editor Size
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Setting Editor Size
 
-<info-box info=""> Editor size can only be modified in classic editor. The <code>config.width</code> and <code>config.height</code> settings are ignored by inline editor.
+<info-box info="">
+ Editor size can only be modified in classic editor. The <code>config.width</code> and <code>config.height</code> settings are ignored by inline editor.
 </info-box>
 
 The width and height of the {@link guide/dev/framed/README classic editor} can be customized to match its context and predicted usage. By default, the editor width equals the width of its container element in the page, while its height is set to 200 pixels. Here are a few situations where you may consider changing the default values:

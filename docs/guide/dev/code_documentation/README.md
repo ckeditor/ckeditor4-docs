@@ -16,7 +16,7 @@ Starting from version 4 CKEditor uses a customized version of [JSDuck](https://g
 
 JSDuck's comment format differs from JSDoc's and both generators have different feature lists. Thus, with CKEditor 4 release, the entire source code documentation was reformatted in a new, consistent way.
 
-The resulting CKEditor API documentation is always available at <https: docs.ckeditor.com="" ckeditor4="" docs="" #!="" api="">.
+The resulting CKEditor API documentation is always available at <https://docs.ckeditor.com/ckeditor4/latest/api>.
 
 ## Useful Links ##
 
@@ -86,7 +86,7 @@ This is an example of a class definition. It contains so many tags to show their
 	 * * {@linkapi CKEDITOR.SOURCE_MODE CKEDITOR.SOURCE_MODE} - description 1,
 	 * * {@linkapi CKEDITOR.WYSIWYG_MODE CKEDITOR.WYSIWYG_MODE} - description 2 long long long
 	 *      long long long long long,
-	 * * {@linkapi CKEDITOR.ANOTHER_MODE CKEDITOR.ANOTHER_MODE} - description 3.
+	 * * CKEDITOR.ANOTHER_MODE - description 3.
 	 *
 	 * @param {CKEDITOR.dom.element} [element] The DOM element upon which this editor
 	 * will be created.
@@ -190,7 +190,7 @@ To define a configuration variable instead of a property:
 The following is an example of method documentation.
 
 	/**
-	 * The {@linkapi CKEDITOR.dom.element } representing an element. If the
+	 * The {@linkapi CKEDITOR.dom.element} representing an element. If the
 	 * element is a native DOM element, it will be transformed into a valid
 	 * {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element} object.
 	 *

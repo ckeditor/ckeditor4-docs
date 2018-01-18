@@ -52,7 +52,7 @@ Common use case: Any website where users are expected to enter content that matc
 
 ### Automatic mode and allow additional tags/properties
 
-Available through {@linkapi CKEDITOR.config.extraAllowedContent CKEDITOR.config.extraAllowedContent}
+Available through {@linkapi CKEDITOR.config.extraAllowedContent CKEDITOR.config.extraAllowedContent}.
 
 Common use case: Any website where users are expected to enter content that matches CKEditor configuration along with a predefined list of additional tags that the users should be able to enter, but for which no supporting CKEditor feature is available (e.g `<dl>`, `<dt>`, `<dd>`).
 
@@ -63,7 +63,7 @@ config.extraAllowedContent = 'dl dt dd';
 
 ### Automatic mode but disallow certain tags/properties
 
-Available through {@linkapi CKEDITOR.config.disallowedContent CKEDITOR.config.disallowedContent}
+Available through {@linkapi CKEDITOR.config.disallowedContent CKEDITOR.config.disallowedContent}.
 
 Common use case: Any website where users are expected to enter content that matches CKEditor configuration, but the automatic configuration needs minor adjustments.
 

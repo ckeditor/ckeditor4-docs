@@ -6,13 +6,14 @@ menu-title: Captioned Images
 meta-title-short: Captioned Images
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Creating Captioned Images
 
-<info-box info=""> This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info="">
+ This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </info-box>
 
 The optional [Enhanced Image](https://ckeditor.com/cke4/addon/image2) plugin introduces a new widget type &mdash; a captioned image. It replaces the standard [Image](https://ckeditor.com/cke4/addon/image) plugin with a new captioned image that has the following capabilities:

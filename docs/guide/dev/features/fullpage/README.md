@@ -6,13 +6,19 @@ menu-title: Editing Complete HTML Pages
 meta-title-short: Editing Complete HTML Pages
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Full Page Editing with Document Properties Plugin
 
-<info-box info=""> <p> 	Both full page editing and the Documentation Properties plugin are only supported for {@link guide/dev/framed/README classic editor} with {@link guide/dev/features/uitypes/README#fixed-user-interface fixed user interface}. </p> <p> Some aspects of this feature are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>. </p>
+<info-box info="">
+ <p>
+ 	Both full page editing and the Documentation Properties plugin are only supported for {@link guide/dev/framed/README classic editor} with {@link guide/dev/features/uitypes/README#fixed-user-interface fixed user interface}.
+ </p>
+ <p>
+ Some aspects of this feature are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+ </p>
 </info-box>
 
 With full page mode and the optional [Document Properties](https://ckeditor.com/cke4/addon/docprops) plugin you can use CKEditor to edit entire HTML pages (from `<html>` to `</html>`), including the page metadata like `DOCTYPE`, character set encoding, meta tags, text and background color, or margins.
@@ -25,7 +31,10 @@ Full page mode is provided by the [IFrame Editing Area](https://ckeditor.com/cke
 
 With these settings in place, CKEditor will output the entire HTML page, including the elements outside the `<body>` section.
 
-<info-box hint=""> <p> Since in full page mode you usually want to be able to freely enter any HTML content without limitations, default editor {@link guide/dev/configuration/acf/README content filtering} can be disabled to prevent CKEditor from removing disallowed elements. </p>
+<info-box hint="">
+ <p>
+ Since in full page mode you usually want to be able to freely enter any HTML content without limitations, default editor {@link guide/dev/configuration/acf/README content filtering} can be disabled to prevent CKEditor from removing disallowed elements.
+ </p>
 <pre>
 config.allowedContent = true;
 </pre>

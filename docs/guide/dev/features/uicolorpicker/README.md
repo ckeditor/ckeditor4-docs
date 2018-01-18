@@ -6,16 +6,18 @@ menu-title: UI Color Picker
 meta-title-short: UI Color Picker
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Using the UI Color Picker
 
 <info-box info="">
-<p> Features described in this article are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<p>
+ Features described in this article are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </p>
-<p> Please note that this feature can only be used for editor skins that are compatible with the so-called {@link guide/skin_sdk/chameleon/README "chameleon" feature}. The skins created by CKSource, i.e. <a href="https://ckeditor.com/cke4/addon/moono">Moono</a> and <a href="https://ckeditor.com/cke4/addon/kama">Kama</a>, already support it. If you are using a custom skin, you will need to define the {@linkapi CKEDITOR.skin#chameleon CKEDITOR.skin.chameleon} function in your <code>skin.js</code> file.
+<p>
+ Please note that this feature can only be used for editor skins that are compatible with the so-called {@link guide/skin_sdk/chameleon/README "chameleon" feature}. The skins created by CKSource, i.e. <a href="https://ckeditor.com/cke4/addon/moono">Moono</a> and <a href="https://ckeditor.com/cke4/addon/kama">Kama</a>, already support it. If you are using a custom skin, you will need to define the {@linkapi CKEDITOR.skin#chameleon CKEDITOR.skin.chameleon} function in your <code>skin.js</code> file.
 </p>
 </info-box>
 

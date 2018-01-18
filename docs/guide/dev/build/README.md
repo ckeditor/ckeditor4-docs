@@ -36,14 +36,14 @@ Edit the `build-config.js` file which contains the build configuration. It inclu
 
 ``` js
 var CKBUILDER_CONFIG = {
-    // Skin name.
-    skin: '...',
-
-    // Files to be ignored.
-    ignore: [ ... ],
-
-    // Plugins to be included.
-    plugins: { ... }
+	// Skin name.
+	skin: '...',
+	
+	// Files to be ignored.
+	ignore: [ ... ],
+	
+	// Plugins to be included.
+	plugins: { ... }
 };
 ```
 

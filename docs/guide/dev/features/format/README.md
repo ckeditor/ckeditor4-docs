@@ -6,13 +6,14 @@ menu-title: Text Formats
 meta-title-short: Text Formats
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Applying Block-Level Text Formats
 
-<info-box info=""> This feature is provided through a plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text formats are disabled in the Standard preset.
+<info-box info="">
+ This feature is provided through a plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text formats are disabled in the Standard preset.
 </info-box>
 
 The [Format](https://ckeditor.com/cke4/addon/format) plugin provides the ability to add block-level text formatting to your document. When enabled, it introduces the <img class="inline" src="%BASE_PATH%/assets/img/format_01.png" alt="Paragraph Format" title="Paragraph Format"> toolbar button that applies these text formats. The formats work on block level which means that you do not need to select any text in order to apply them and entire blocks will be affected by your choice.
@@ -79,7 +80,8 @@ If you want to, for example, add CSS classes to format definitions, you can do i
 
 Remember that depending on your use case, the CSS classes for text formats need to be defined accordingly. For {@link guide/dev/framed/README classic editor} they should be defined in an external CSS file added to the editor configuration with the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option. For {@link guide/dev/inline/README inline editor} they need to be added directly to the page stylesheet.
 
-<info-box hint=""> The block-level text format feature is automatically integrated with {@link guide/dev/configuration/acf/README Advanced Content Filter}, so all custom format definitions are treated as allowed by the editor content filtering mechanism.
+<info-box hint="">
+ The block-level text format feature is automatically integrated with {@link guide/dev/configuration/acf/README Advanced Content Filter}, so all custom format definitions are treated as allowed by the editor content filtering mechanism.
 </info-box>
 
 ## Block-Level Text Formats Demo

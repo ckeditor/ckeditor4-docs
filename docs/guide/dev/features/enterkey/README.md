@@ -6,7 +6,7 @@ menu-title: Enter Key Configuration
 meta-title-short: Enter Key Configuration
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -20,7 +20,20 @@ Both configuration settings can use one of the following options:
 * {@linkapi CKEDITOR.ENTER_BR CKEDITOR.ENTER_BR} &ndash; lines are broken with `<br>` elements;
 * {@linkapi CKEDITOR.ENTER_DIV CKEDITOR.ENTER_DIV} &ndash; new `<div>` blocks are created.
 
-<info-box hint=""> <p> 	Changing the {@linkapi CKEDITOR.config#enterMode Enter Mode} 	setting to <code>BR</code> or <code>DIV</code> is not recommended. The default 	<code>{@linkapi CKEDITOR#ENTER_P CKEDITOR.ENTER_P}</code> 	mode is fully supported by all editor features and plugins and is also the most correct one 	in terms of best practices for creating web content. </p> <p> 	If you want to change it to control paragraph spacing, you should use stylesheets instead. Edit the 	<code>contents.css</code> file and set up a suitable margin value for <code>&lt;p&gt;</code> 	elements, for example: <pre>p { margin: 0; }</pre> </p>
+<info-box hint="">
+ <p>
+ 	Changing the {@linkapi CKEDITOR.config#enterMode Enter Mode}
+ 	setting to <code>BR</code> or <code>DIV</code> is not recommended. The default
+ 	<code>{@linkapi CKEDITOR#ENTER_P CKEDITOR.ENTER_P}</code>
+ 	mode is fully supported by all editor features and plugins and is also the most correct one
+ 	in terms of best practices for creating web content.
+ </p>
+ <p>
+ 	If you want to change it to control paragraph spacing, you should use stylesheets instead. Edit the
+ 	<code>contents.css</code> file and set up a suitable margin value for <code>&lt;p&gt;</code>
+ 	elements, for example:
+ <pre>p { margin: 0; }</pre>
+ </p>
 </info-box>
 
 ## Enter Key Configuration Demo

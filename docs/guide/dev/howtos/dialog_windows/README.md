@@ -133,4 +133,3 @@ If you want to leave the resizing feature for some of the dialog windows and tur
 	});
 
 Use the CKEDITOR#DIALOG_RESIZE_WIDTH and CKEDITOR#DIALOG_RESIZE_HEIGHT values to enable resizing of a dialog window in one dimension only.
-</img>

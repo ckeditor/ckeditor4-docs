@@ -121,4 +121,3 @@ To test it, open the `samples/index.html` file in your browser, then open some d
 You should see a spinner in the dialog's title bar.
 
 {@img assets/img/link_dialog_busy_state.png Busy state displayed in the Link dialog window}
-</img>

@@ -86,4 +86,3 @@ config.image2_altRequired = true;
 ## Captioned Image Demo
 
 See the [working "Creating Captioned Images" sample](https://sdk.ckeditor.com/samples/captionedimage.html) that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.
-</head></link></style></style></figure>

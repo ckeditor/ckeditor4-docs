@@ -510,4 +510,3 @@ Refer to the following resources for more information about accessibility in CKE
 * The {@link guide/dev/features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
 * The {@link guide/dev/features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/wcag/README CKEditor WCAG 2.0 Compliance} article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.
-</br>

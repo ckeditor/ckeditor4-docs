@@ -57,4 +57,3 @@ Refer to the following resources for more information about CKEditor configurati
 * {@link guide/dev/configuration/README Setting CKEditor Configuration} explains how and where to configure CKEditor to fit your needs.
 * {@link guide/dev/best_practices/README CKEditor Best Practices} presents some important tips about installing, configuring and maintaining your CKEditor installation.
 * [4 Common CKEditor Installation Mistakes And How To Avoid Them](https://ckeditor.com/blog/4-Common-CKEditor-Installation-Mistakes-And-How-To-Avoid-Them) discusses why it makes sense to create a custom editor build and how to do it.
-</img>

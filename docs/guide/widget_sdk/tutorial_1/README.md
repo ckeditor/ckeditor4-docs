@@ -398,4 +398,3 @@ You can now grab the second box and drag it up. If you drop it somewhere in the 
 ## Further Enhancements
 
 In current form the Simple Box widget lets you insert a simple template into the document, but it does not let you customize any properties of the widget structure nor edit it once inserted. Check the {@link guide/widget_sdk/tutorial_2/README second part of the tutorial} for information on **how to add a widget dialog window with widget editing capabilities**!
-</div></p></h2></div></img></div></h2>

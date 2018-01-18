@@ -92,4 +92,3 @@ Go ahead and play a bit more with the sample; try to change your configuration a
 1. Browse the [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) for some additional plugins or skins.
 1. Use [CKBuilder](https://ckeditor.com/cke4/builder) to create your custom CKEditor build.
 1. Browse the {@link guide/index Developer's Guide} for some further ideas on what to do with CKEditor and join the CKEditor community at [Stack Overflow](http://stackoverflow.com/questions/tagged/ckeditors) to discuss all things CKEditor with fellow developers!
-</textarea></script></textarea></img></your>

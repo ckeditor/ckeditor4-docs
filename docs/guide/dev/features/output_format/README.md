@@ -125,4 +125,3 @@ See the [working "HTML Output Formatting" sample](https://sdk.ckeditor.com/sampl
 ## Related Features
 
 See the {@link guide/dev/features/sourcearea/README Source Code Editing} feature that lets the users edit raw HTML source of the editor content directly in CKEditor.
-</br></p>

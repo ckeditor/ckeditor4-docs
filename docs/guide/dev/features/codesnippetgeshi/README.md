@@ -93,4 +93,3 @@ You can find more information about setting configuration in the {@link guide/de
 This tutorial uses the `lib/` directory as an example of organizing the directory structure outside CKEditor. Most likely you will want to adjust it to match your needs, but remember to update the path in the {@linkapi CKEDITOR.config.codeSnippetGeshi_url CKEDITOR.config.codeSnippetGeshi_url} configuration option.
 
 You can now open your page with CKEditor and insert some code into its content by using the **Insert code snippet** feature. As long as the {@link guide/dev/features/codesnippetgeshi/README Code Snippet GeSHi} plugin is enabled, it will send Ajax requests to the GeSHi adapter file set in the {@linkapi CKEDITOR.config.codeSnippetGeshi_url CKEDITOR.config.codeSnippetGeshi_url} configuration option.
-</CKEditor></GeSHi>

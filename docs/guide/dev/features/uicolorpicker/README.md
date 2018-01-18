@@ -44,4 +44,3 @@ See the [working "UI Color Picker" sample](https://sdk.ckeditor.com/samples/uico
 ## Related Features
 
 Read more about setting the default UI color by using a configuration option in the {@link guide/dev/features/uicolor/README Adjusting Editor User Interface Color} article.
-</img>

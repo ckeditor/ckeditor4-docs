@@ -106,4 +106,3 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Location: `plugins/uploadfile/plugin.js`
 * Description: Upload URL for the Upload File feature was not defined. Refer to the {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
 * Additional data: None.
-</iframe>

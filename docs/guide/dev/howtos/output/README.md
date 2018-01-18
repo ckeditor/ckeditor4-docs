@@ -32,4 +32,3 @@ If, for example, you want CKEditor to output the self-closing tags in the HTML4 
 You should try the [BBCode plugin](https://ckeditor.com/cke4/addon/bbcode). See the [BBCode Editing sample](https://sdk.ckeditor.com/samples/bbcode.html) and the {@link guide/dev/features/bbcode/README documentation} for more information.
 
 <img src="%BASE_PATH%/assets/img/bbcode_02.png" alt="CKEditor content created in BBCode">
-</img></br>

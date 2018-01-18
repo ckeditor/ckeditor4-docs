@@ -66,4 +66,3 @@ Your skin will now be available in your CKEditor installation.
 
 <info-box hint=""> To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/skin">submit your skins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </info-box>
-</CKEditor></img></img></img></img>

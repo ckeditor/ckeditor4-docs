@@ -80,4 +80,3 @@ The following samples are available for getting and saving data in CKEditor:
 
 * The [Saving Data in CKEditor Replacing a Textarea](https://sdk.ckeditor.com/samples/savetextarea.html) sample shows how to save data for classic and inline editor replacing a `<textarea>` element.
 * The [CKEditor in Ajax Applications](https://sdk.ckeditor.com/samples/saveajax.html) sample shows how to dynamically create and destroy the editor and how to use the {@linkapi CKEDITOR.editor#change change} event.
-</textarea></form></img></form></textarea></textarea></textarea></textarea></form></textarea></form>

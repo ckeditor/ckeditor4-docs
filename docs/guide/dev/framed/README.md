@@ -103,4 +103,3 @@ Check the following articles to learn more about other editor types and learn ho
 
 * {@link guide/dev/inline/README Inline editing} is a new technology introduced in CKEditor 4 that allows you to select any editable element on the page and edit it in-place.
 * {@link guide/dev/savedata/README Getting and Saving Data in CKEditor} explains how to retrieve data from any editor instance and send it to your server.
-</textarea></textarea></textarea></head></textarea></textarea></textarea></p></textarea></textarea></textarea></textarea></textarea></textarea></img></iframe>

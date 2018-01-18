@@ -55,4 +55,3 @@ Refer to the following resources for more information about related features:
 
 * The {@link guide/dev/features/sourcearea/README Source Code Editing} feature lets the users edit raw HTML source of the editor content directly in CKEditor.
 * The {@link guide/dev/features/output_format/README Output Formatting} feature gives developers full control over what the HTML code produced by the editor will look like.
-</img></body>

@@ -244,4 +244,3 @@ If you need, you can add the entire content of the `<html>` page element, for ex
 ```
 
 To learn more about writing tests, check the [existing tests code](https://github.com/ckeditor/ckeditor-dev/tree/master/tests).
-</head></html></body></body></number></number></number></number></CKEditor></custom></number></number></u></em></strong>

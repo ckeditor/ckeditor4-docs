@@ -230,4 +230,3 @@ editor.on( 'paste', function( evt ) {
         '</span>';
 } );
 ```
-</br>

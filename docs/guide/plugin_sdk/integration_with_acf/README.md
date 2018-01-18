@@ -272,4 +272,3 @@ Refer to the following resources for more information about content filtering:
 * The {@link guide/dev/deep_dive/advanced_content_filter/disallowed_content/README Disallowed Content} article explains how blacklisting works in ACF.
 * {@linkapi CKEDITOR.filter CKEDITOR.filter} contains API documentation for the main class responsible for ACF features.
 * {@linkapi CKEDITOR.feature CKEDITOR.feature} contains API documentation of an interface representing an editor feature used in combination with {@linkapi CKEDITOR.filter.addFeature CKEDITOR.filter.addFeature}
-</abbr></acronym></abbr></acronym></abbr></abbr></abbr></strong></abbr></abbr></abbr></abbr></abbr></abbr>

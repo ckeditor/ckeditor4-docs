@@ -496,4 +496,3 @@ Refer to the following resources for more information about creating CKEditor pl
 * {@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter} &ndash; Learn how to implement Advanced Content Filter support in your plugins.
 * {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
 * {@linkapi CKEDITOR.pluginDefinition Plugin Definition API} &ndash; Detailed description of the plugin definition.
-</abbr></abbr></abbr></abbr></abbr></abbr></abbr></abbr></abbr></abbr></abbr></abbr></abbr></abbr></abbr>

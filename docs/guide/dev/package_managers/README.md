@@ -181,4 +181,3 @@ e.g.
 	nuget install ckeditor-standard
 
 You will find the package installed into a directory like `ckeditor-standard.4.7.3`.
-</packageID></version></preset>

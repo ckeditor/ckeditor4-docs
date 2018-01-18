@@ -21,3 +21,4 @@ However, since CKEditor was a complete rewrite of FCKeditor, with lots of change
 The best option is to [download the latest CKEditor version](https://ckeditor.com/ckeditor-4/download/) and install it, starting anew, as described in our {@link guide/dev/installation/README Quick Start Guide}.
 
 <info-box hint=""> If you would like to try to mimic your FCKeditor configuration in CKEditor, see the <a href="http://docs.cksource.com/CKEditor_3.x/Developers_Guide/FCKeditor_CKEditor_Configuration_Mapping">matrix of the mappings</a> between these two.
+</info-box>

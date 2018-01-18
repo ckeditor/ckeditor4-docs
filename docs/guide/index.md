@@ -42,3 +42,4 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 <dt>{@link guide/skin_sdk/intro/README Introduction}</dt><dd>Creating custom CKEditor skins.</dd>
 <dt>{@link guide/skin_sdk/icons/README Advanced Concepts}</dt><dd>In-depth details about concepts that constitute a skin.</dd>
 <dt>{@link guide/skin_sdk/setup/README Creating a Custom Skin}</dt><dd>The workflow of creating a custom skin.</dd>
+</dl>

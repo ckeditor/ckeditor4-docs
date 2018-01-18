@@ -53,7 +53,7 @@ You can enable Accessibility Checker by clicking the **Check Accessibility** (<i
 
 When Accessibility Checker finds some issues, it will display a panel containing the tools needed for understanding and solving the problem.
 
-{@img assets/img/a11ychecker_01.png CKEditor Accessibility Checker in Checking Mode} 
+{@img assets/img/a11ychecker_01.png CKEditor Accessibility Checker in Checking Mode}
 
 Accessibility problems are presented as one issue at a time, allowing you to iterate over the entire list. Issues can also be ignored (see {@link guide/dev/features/accessibility_checker/README#ignoring-issues Ignoring Issues}). For more information about checking mode please refer to the {@link guide/dev/features/accessibility_checker/README#checking-mode Checking Mode} section.
 
@@ -295,3 +295,4 @@ Refer to the following resources for more information about accessibility in CKE
 * The {@link guide/dev/features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
 * The {@link guide/dev/features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/section508/README CKEditor Section 508 Compliance} article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
+* The {@link guide/dev/wcag/README CKEditor WCAG 2.0 Compliance} article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.

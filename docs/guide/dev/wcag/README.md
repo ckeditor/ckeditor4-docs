@@ -275,7 +275,7 @@ User interface components and navigation must be operable. See [reference](http:
 				<ul>
 					<li>The focus is trapped inside modal dialogs to prevent users from interacting with currently non-active parts of the web page. The focus is restored when the dialog is closed by clicking an appropriate button or pressing <kbd>Esc</kbd>.</li>
 					<li>The focus is trapped inside the editor toolbar after pressing <kbd>Alt+F10</kbd>. The focus is restored into the editor after pressing <kbd>Esc</kbd>.</li>
-					<li>Information about how to restore focus after certain actions is described in the editor "Accessibility Instructions" dialog available after pressing <kbd>Alt+0</kbd>.</li>	
+					<li>Information about how to restore focus after certain actions is described in the editor "Accessibility Instructions" dialog available after pressing <kbd>Alt+0</kbd>.</li>
 				</ul>
 			</td>
 			<td>
@@ -675,3 +675,4 @@ Refer to the following resources for more information about accessibility in CKE
 * The {@link guide/dev/features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
 * The {@link guide/dev/features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
 * The {@link guide/dev/features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
+* The {@link guide/dev/section508/README CKEditor Section 508 Compliance} article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).

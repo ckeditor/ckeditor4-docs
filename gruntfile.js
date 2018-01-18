@@ -12,7 +12,6 @@ module.exports = function( grunt ) {
 
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadTasks( 'dev/tasks' );
-	grunt.registerTask( 'default', [ 'jsduck:docs', 'copy:source' ] );
 	grunt.registerTask( 'api', [ 'jsduck:api' ] );
 	grunt.registerTask( 'umberto', function() {
 		const done = this.async();
@@ -39,57 +38,7 @@ module.exports = function( grunt ) {
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
 
-		copy: {
-			source: {
-				files: [
-					{
-						cwd: 'source',
-						expand: true,
-						src: [
-							'resources/**/*',
-							'favicon.ico',
-							'.htaccess',
-							'images/**/*',
-							'license.html'
-						],
-						dest: 'build/',
-						rename: function( dest, src ) {
-							return dest + ( dest == 'build/' && src == 'license.html' ? src.replace( 'license', 'LICENSE' ) : src );
-						}
-					}
-				]
-			}
-		},
-
 		jsduck: {
-			docs: {
-				src: [
-					'<%= path %>/core',
-					'<%= path %>/plugins',
-					'<%= path %>/adapters',
-					'<%= path %>/ckeditor.js',
-
-					'repos/ckeditor-plugin-scayt',
-					'repos/ckeditor-plugin-wsc'
-				],
-
-				cmd: 'ckeditor-jsduck',
-
-				options: {
-					title: 'CKEditor 4 Documentation',
-					'head-html': 'source/head-html.html',
-					'head-html-common': 'source/head-html-common.html',
-					footer: 'Copyright &copy; 2003-2017, <a href=\"http://cksource.com\" style=\"color:#085585\">CKSource</a> - Frederico Knabben. All rights reserved. | <a href=\"LICENSE.html\" style=\"color:#085585\">License</a> | Generated with <a href=\"https://github.com/senchalabs/jsduck\">JSDuck</a>.',
-					tags: 'source/customs.rb',
-					warnings: [ '-nodoc', '-image_unused' ],
-					welcome: 'source/welcome.html',
-					guides: grunt.option( 'guides' ) || 'guides/guides.json',
-					output: 'build',
-					external: 'Blob,File,FileReader,DocumentFragment',
-					exclude: '<%= path %>/plugins/codesnippet/lib',
-					'ignore-html': 'source'
-				}
-			},
 			api: {
 				src: [
 					'<%= path %>/core',

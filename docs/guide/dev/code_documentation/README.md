@@ -6,7 +6,7 @@ menu-title: Code Documentation
 meta-title-short: Code Documentation
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -47,7 +47,7 @@ The resulting CKEditor API documentation is always available at <https: docs.cke
 The `@license` and `@fileOverview` tags are legacy comments that will not be parsed by JSDuck.
 
 	/**
-	 * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+	 * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 	 * For licensing, see LICENSE.md or http://ckeditor.com/license
 	 */
 

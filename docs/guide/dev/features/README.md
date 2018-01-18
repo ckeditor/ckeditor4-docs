@@ -34,4 +34,3 @@ This part describes features that are targeted at developers who implement CKEdi
 * **API Usage** &ndash; Using rich CKEditor API.
 * **Output Control** &ndash; Adjusting editor output by setting the HTML format or making the editor work on BBCode.
 * **Utilities** &ndash; Additional tools that make configuring and extending CKEditor easier.
-

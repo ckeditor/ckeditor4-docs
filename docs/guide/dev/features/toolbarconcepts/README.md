@@ -9,7 +9,8 @@ meta-title-short: Toolbar Concepts
 
 CKEditor 4 introduced a new concept for toolbar organization which is based on "grouping" instead of the traditional "item by item positioning" way. The aim of this article is to explain the concepts behind the editor toolbar and to help you choose the most optimal, accessibility-friendly and future-proof method to configure your toolbar.
 
-<info-box hint=""> While this article explains how you can configure the editor toolbar manually, this approach is not recommended. It is much easier and quicker to {@link guide/dev/features/toolbar/README use the toolbar configurator}. The configurator was introduced in <strong>CKEditor 4.5</strong> and is available in each official CKEditor installation package. 
+<info-box hint="">
+ While this article explains how you can configure the editor toolbar manually, this approach is not recommended. It is much easier and quicker to {@link guide/dev/features/toolbar/README use the toolbar configurator}. The configurator was introduced in <strong>CKEditor 4.5</strong> and is available in each official CKEditor installation package. 
 </info-box>
 
 ## Toolbar Groups Configuration
@@ -115,4 +116,3 @@ Refer to the following resources for more information about editor toolbar:
  * The {@link guide/dev/features/toolbar/README Toolbar Configuration} article explains how to set up the editor toolbar using the toolbar configurator (CKEditor 4.5+).
  * The {@link guide/dev/features/toolbarlocation/README Toolbar Location} feature lets you change the toolbar position in classic editor.
  * The {@link guide/dev/features/sharedspace/README Shared Toolbar and Bottom Bar} feature lets you place the toolbar in a designated page element and share it among multiple editor instances used on one page.
-

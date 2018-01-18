@@ -57,4 +57,3 @@ Refer to the following resources for more information about pasting content:
 * The {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
 * The {@link guide/dev/configuration/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.
 * The {@link guide/dev/features/styles/README Applying Styles to Editor Content} article discusses creating more semantically correct text styles.
-</img>

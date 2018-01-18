@@ -87,4 +87,3 @@ Refer to the following resources for more information about related features:
 
 * The {@link guide/dev/a11y/README Accessibility Support in CKEditor} article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
 * The {@link guide/dev/deep_dive/unsupported_environments/README Enabling CKEditor in Unsupported Environments (CKEditor &lt;4.4.8)} article shows how to make CKEditor &lt;4.4.8 work in any environment that was not listed as officially supported (warning: experimental feature!).
-</div></textarea>

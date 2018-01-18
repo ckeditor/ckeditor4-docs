@@ -59,4 +59,3 @@ Last but not least, you can {@link guide/dev/plugins/README#manual-installation 
 
 <info-box hint=""> To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/plugin">submit your widget plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </info-box>
-</img></img></img></img>

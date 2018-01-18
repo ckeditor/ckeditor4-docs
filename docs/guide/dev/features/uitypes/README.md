@@ -79,4 +79,3 @@ The following samples are available for two CKEditor user interface types:
 
 * {@link guide/dev/features/sharedspace/README Shared Toolbar and Bottom Bar} &ndash; configuring multiple editor instances (both classic and inline) to share the same toolbar and bottom bar.
 * {@link guide/dev/features/toolbarlocation/README Toolbar Location} &ndash; changing toolbar position for fixed user interface.
-</img></div></div></div></img>

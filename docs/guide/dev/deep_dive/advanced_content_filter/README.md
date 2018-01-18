@@ -127,4 +127,3 @@ Refer to the following resources for more information about content filtering:
 * The {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README Allowed Content Rules} article explains the allowed and disallowed content rules format.
 * The {@link guide/dev/deep_dive/advanced_content_filter/disallowed_content/README Disallowed Content} article explains how blacklisting works in ACF.
 * The {@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter} article explains how to adjust custom plugins to properly implement content filtering.
-</img></strong></b></b></span></strong></b></span></b></strong></img></a></a></sup></sub></s></u></hr></table></img>

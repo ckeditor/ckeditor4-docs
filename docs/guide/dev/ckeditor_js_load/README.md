@@ -42,4 +42,3 @@ Now that the CKEditor JavaScript API is available on the page, you can use it to
 [See the demo here](https://sdk.ckeditor.com/samples/inline.html). Read all about this editor type in the {@link guide/dev/inline/README Inline Editing} article.
 
 {@img assets/img/inline_example.png Inline editor example}
-</iframe></head>

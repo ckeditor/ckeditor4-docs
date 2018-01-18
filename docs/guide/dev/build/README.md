@@ -66,4 +66,3 @@ The building process is handled by the command line version of [CKBuilder](https
 For the first run, `build.sh` will need to [download CKBuilder](http://download.cksource.com/CKBuilder/) and copy it into the `dev/builder/ckbuilder/<ckbuilder version="">` folder, so an Internet connection is required. Once the file is available, no more downloads are necessary (though if possible, the script will try to perform an update on consecutive runs).
 
 The only requirement to run CKBuilder is [Java](http://www.java.com/en/download/).
-</ckbuilder>

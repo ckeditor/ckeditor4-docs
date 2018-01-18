@@ -75,4 +75,3 @@ Both plugins utilize the {@linkapi CKEDITOR.plugins.embedBase#createWidgetBaseDe
 ## Embedding Media Demo
 
 See the [working "Embedding Media Resources with oEmbed" sample](https://sdk.ckeditor.com/samples/mediaembed.html) that showcases the Media Embed and Auto Embed plugins.
-</oembed>

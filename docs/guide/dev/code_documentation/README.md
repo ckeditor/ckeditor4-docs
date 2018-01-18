@@ -254,4 +254,3 @@ To define an event instead of a method:
 * When describing the value returned or alerted in the code sample, wrap only strings in `''`. All other types (Boolean, numbers, objects, etc.) should be left unwrapped.
 * There is no Integer type in JavaScript and constructors' names should be used as types names &mdash; so Boolean, not boolean.
 * In textual comments wrap tokens, names from code, JavaScript values, etc. with <code>\`\`</code> for better visibility. Remember to wrap strings with `''` &mdash; so: <code>This method may return: \`'text text'\`.</code>
-</https:>

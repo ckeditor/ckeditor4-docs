@@ -164,4 +164,3 @@ The editor instance is always passed as the first data argument for the listener
 If you apply an event on a collection, it will be connected with each editor in the collection.
 
 Note that jQuery events bubble up through the DOM tree, so they can be listened to selectively in certain parts of the document.
-</textarea></textarea>

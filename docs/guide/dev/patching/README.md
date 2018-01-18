@@ -301,4 +301,3 @@ The following resources discuss related issues:
 * The {@link guide/dev/source/README Getting the Source Code} article explains where you can get and examine CKEditor source code.
 * The {@link guide/dev/build/README Getting the Source Code} article explains how to build CKEditor from source.
 * The {@link guide/dev/tests/README CKEditor Testing Environment (Bender.js)} article gives an overview of Bender.js.
-</br></br></br></br></br></img></img></img></img></img></cite></img></revision></revision></revision></img>

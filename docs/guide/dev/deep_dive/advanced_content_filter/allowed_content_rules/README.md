@@ -224,4 +224,3 @@ Refer to the following resources for more information about content filtering:
 * The {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filer} article contains more in-depth technical details about ACF.
 * The {@link guide/dev/deep_dive/advanced_content_filter/disallowed_content/README Disallowed Content} article explains how blacklisting works in ACF.
 * The {@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter} article explains how to adjust custom plugins to properly implement content filtering.
-</h3></h2></h1></span></h2></h1></n></a></h1></p></p></p></em></strong></a></h1></p></img></a></h1></p></h1></p></h1></h1></p></h1></p></h1>

@@ -72,4 +72,3 @@ Check the following articles to learn more about other editor types and learn ho
 
 * {@link guide/dev/framed/README Classic editing} is the usage scenario where the editor is most often represented by a toolbar and an editing area placed in a specific position on the page, usually as a part of a form that you use to submit some content to the server.
 * {@link guide/dev/savedata/README Getting and Saving Data in CKEditor} explains how to retrieve data from any editor instance and send it to your server.
-</textarea></div></textarea></textarea></div></div></img></iframe>

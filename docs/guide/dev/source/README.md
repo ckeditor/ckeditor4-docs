@@ -27,7 +27,9 @@ The CKEditor source code is available in the [ckeditor-dev](https://github.com/c
 
 If you have Git installed in your system, use the following command line call to create your local copy:
 
-	git clone https://github.com/ckeditor/ckeditor-dev.git
+``` sh
+git clone https://github.com/ckeditor/ckeditor-dev.git
+```
 
 This will download the full CKEditor development code into the `ckeditor-dev` folder.
 

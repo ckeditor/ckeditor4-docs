@@ -242,9 +242,9 @@ The latest version of Bender.js available on that day was 0.1.7:<br>
 
 1. Clone the `ckeditor-dev` repository.
 
-    ```
-    git clone https://github.com/ckeditor/ckeditor-dev.git
-    ```
+``` sh
+git clone https://github.com/ckeditor/ckeditor-dev.git
+```
 2. Checkout the tag that indicates the version you want to work with.
 
     ```

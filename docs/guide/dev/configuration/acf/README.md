@@ -56,8 +56,10 @@ Available through {@linkapi CKEDITOR.config.extraAllowedContent CKEDITOR.config.
 
 Common use case: Any website where users are expected to enter content that matches CKEditor configuration along with a predefined list of additional tags that the users should be able to enter, but for which no supporting CKEditor feature is available (e.g `<dl>`, `<dt>`, `<dd>`).
 
-    // Allow <dl>, <dt>, <dd>.
-    config.extraAllowedContent = 'dl dt dd';
+``` js
+// Allow <dl>, <dt>, <dd>.
+config.extraAllowedContent = 'dl dt dd';
+```
 
 ### Automatic mode but disallow certain tags/properties
 
@@ -90,9 +92,11 @@ It is possible to manually specify allowed tags or properties through {@linkapi 
 If allowed content is specified manually, CKEditor will hide features that require elements which are not allowed.
 For example, if the `<table>` tag is not included in the manual ACF configuration, the **Table** button will not be available in the toolbar, even if the Table plugin is enabled.
 
-    // Example: Allow <u>, <em>, <strong>, <ul>, <li>, <a>.
-    // For <a> elements, "href" attribute is required and "target" is optional.
-    config.allowedContent = 'u em strong ul li;a[!href,target]';
+``` js
+// Example: Allow <u>, <em>, <strong>, <ul>, <li>, <a>.
+// For <a> elements, "href" attribute is required and "target" is optional.
+config.allowedContent = 'u em strong ul li;a[!href,target]';
+```
 
 Common use case: Suitable for developers that need precise control over what users can enter. If a web application has a server-side security filter implemented, its configuration may be passed to CKEditor to ensure that both tools are using the same set of rules.
 
@@ -118,7 +122,9 @@ If you go to "Chrome Web Store" and copy the header, you will end up with someth
 
 #### Example: Pasted HTML with ACF disabled
 
-	<h1 class="webstore-Xb-Ab-Cb-Db-Wb" style="display: table; font-size: inherit; font-weight: inherit; margin: 0px; padding: 0px;"><a class="webstore-Xb-Ab-Cb-i" href="https://chrome.google.com/webstore/category/apps" style="color: rgb(38, 38, 38); text-decoration: none; font-family: 'Open Sans', arial, sans-serif; font-size: 14px; line-height: normal; background-color: rgb(236, 236, 236);"><span class="webstore-Xb-Ab-Cb-Eb" style="font-size: 16px; position: relative; top: 5px; padding-left: 5px; width: 185px;">Chrome Web Store</span></a></h1>
+``` html
+<h1 class="webstore-Xb-Ab-Cb-Db-Wb" style="display: table; font-size: inherit; font-weight: inherit; margin: 0px; padding: 0px;"><a class="webstore-Xb-Ab-Cb-i" href="https://chrome.google.com/webstore/category/apps" style="color: rgb(38, 38, 38); text-decoration: none; font-family: 'Open Sans', arial, sans-serif; font-size: 14px; line-height: normal; background-color: rgb(236, 236, 236);"><span class="webstore-Xb-Ab-Cb-Eb" style="font-size: 16px; position: relative; top: 5px; padding-left: 5px; width: 185px;">Chrome Web Store</span></a></h1>
+```
 
 Does it make sense to copy `<span class="webstore-Xb-Ab-Cb-Eb">` or to let another website decide which font should be used inside the article?
 
@@ -126,7 +132,9 @@ Additional markup takes space not only in your database but it also takes bandwi
 
 #### Example: Pasted HTML with ACF enabled, standard preset
 
-	<h1><a href="https://chrome.google.com/webstore/category/apps">Chrome Web Store</a></h1>
+``` html
+<h1><a href="https://chrome.google.com/webstore/category/apps">Chrome Web Store</a></h1>
+```
 
 The result of pasting the same content in the Standard preset, with ACF enabled.
 

@@ -136,22 +136,24 @@ Now load a CKEditor sample page. You should be able to see the new plugin button
 
 The complete content of the `plugin.js` file looks as follows:
 
-	CKEDITOR.plugins.add( 'timestamp', {
-		icons: 'timestamp',
-		init: function( editor ) {
-			editor.addCommand( 'insertTimestamp', {
-				exec: function( editor ) {
-					var now = new Date();
-					editor.insertHtml( 'The current date and time is: <em>' + now.toString() + '</em>' );
-				}
-			});
-			editor.ui.addButton( 'Timestamp', {
-				label: 'Insert Timestamp',
-				command: 'insertTimestamp',
-				toolbar: 'insert'
-			});
-		}
-	});
+``` js
+CKEDITOR.plugins.add( 'timestamp', {
+    icons: 'timestamp',
+    init: function( editor ) {
+        editor.addCommand( 'insertTimestamp', {
+            exec: function( editor ) {
+                var now = new Date();
+                editor.insertHtml( 'The current date and time is: <em>' + now.toString() + '</em>' );
+            }
+        });
+        editor.ui.addButton( 'Timestamp', {
+            label: 'Insert Timestamp',
+            command: 'insertTimestamp',
+            toolbar: 'insert'
+        });
+    }
+});
+```
 
 <info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-timestamp">download the entire plugin folder</a> including the icon and the fully commented source code.
 </info-box>

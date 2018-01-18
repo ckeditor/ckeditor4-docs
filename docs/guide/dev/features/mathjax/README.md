@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # Creating Mathematical Formulas
 
-<info-box info=""> This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>. In order to enable the plugin you need to {@link guide/dev/features/mathjax/README#setting-the-path-to-mathjax-library set the path to the MathJax library} first.
+<info-box info="">
+ This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>. In order to enable the plugin you need to {@link guide/dev/features/mathjax/README#setting-the-path-to-mathjax-library set the path to the MathJax library} first.
 </info-box>
 
 The optional [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax) plugin allows you to create and modify mathematical equations written in TeX directly in CKEditor. TeX content will be automatically replaced by a mathematical formulas widget when you put it in a `<span class="math-tex">` element.
@@ -23,7 +24,9 @@ New equations can also be inserted into the editor content by using the **Math**
 
 Do note that the equations will be output in plain TeX format with MathJax delimiters, `\(` and `\)`, like in the example below:
 
-	<span class="math-tex">\( \sqrt{\frac{a}{b}} \)</span>
+``` html
+<span class="math-tex">\( \sqrt{\frac{a}{b}} \)</span>
+```
 
 Equations are inserted as widgets, so they have {@link guide/dev/deep_dive/widgets/README#common-usage-scenarios all advantages of widgets}, i.e. you can **treat the entire equation as one entity** and select, delete, or move it with drag and drop in the editor content area as one unit.
 
@@ -41,7 +44,9 @@ You can also use a different path, either a local resource or a different web re
 
 In order to display mathematical formulas on a target page, i.e. the page where content produced by CKEditor will be visible, the target page needs to [include the MathJax script](http://docs.mathjax.org/en/latest/start.html). It is advisable to use the same MathJax library version as set in the {@linkapi CKEDITOR.config.mathJaxLib CKEDITOR.config.mathJaxLib} configuration option. For example for the default setting this would be:
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"/>
+``` html
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"/>
+```
 
 ## Changing Default Class
 
@@ -51,9 +56,10 @@ You can also modify the default class for `<span>` elements that are automatical
 
 will turn all `<span class="equation">` elements into mathematical formulas widgets, including this one:
 
-	<span class="equation">\( \sqrt{\frac{a}{b}} \)</span>
+``` html
+<span class="equation">\( \sqrt{\frac{a}{b}} \)</span>
+```
 
 ## Mathematical Formulas Demo
 
 See the [working "Creating Mathematical Formulas" sample](https://sdk.ckeditor.com/samples/mathjax.html) that showcases the Mathematical Formulas plugin with its MathJax widget that supports writing equations in TeX.
-</span></span></span>

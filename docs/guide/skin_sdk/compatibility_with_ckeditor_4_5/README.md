@@ -55,60 +55,60 @@ You can add support for displaying that a dialog window is in a busy state by fo
 
 1. In the `dialog.css` file of your skin add the following lines:
 
-	```
-	.cke_dialog_spinner
-	{
-		border-radius: 50%;
+``` css
+.cke_dialog_spinner
+{
+    border-radius: 50%;
 
-		width: 12px;
-		height: 12px;
-		overflow: hidden;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
 
-		text-indent: -9999em;
+    text-indent: -9999em;
 
-		border-top: 2px solid rgba(102, 102, 102, 0.2);
-		border-right: 2px solid rgba(102, 102, 102, 0.2);
-		border-bottom: 2px solid rgba(102, 102, 102, 0.2);
-		border-left: 2px solid rgba(102, 102, 102, 1);
+    border-top: 2px solid rgba(102, 102, 102, 0.2);
+    border-right: 2px solid rgba(102, 102, 102, 0.2);
+    border-bottom: 2px solid rgba(102, 102, 102, 0.2);
+    border-left: 2px solid rgba(102, 102, 102, 1);
 
-		-webkit-animation: dialog_spinner 1s infinite linear;
-		animation: dialog_spinner 1s infinite linear;
-	}
+    -webkit-animation: dialog_spinner 1s infinite linear;
+    animation: dialog_spinner 1s infinite linear;
+}
 
-	/* A GIF fallback for IE8 and IE9 which do not support CSS animations. */
-	.cke_browser_ie8 .cke_dialog_spinner,
-	.cke_browser_ie9 .cke_dialog_spinner
-	{
-		background: url(images/spinner.gif) center top no-repeat;
-		width: 16px;
-		height: 16px;
-		border: 0;
-	}
+/* A GIF fallback for IE8 and IE9 which do not support CSS animations. */
+.cke_browser_ie8 .cke_dialog_spinner,
+.cke_browser_ie9 .cke_dialog_spinner
+{
+    background: url(images/spinner.gif) center top no-repeat;
+    width: 16px;
+    height: 16px;
+    border: 0;
+}
 
-	@-webkit-keyframes dialog_spinner
-	{
-		0% {
-			-webkit-transform: rotate(0deg);
-			transform: rotate(0deg);
-		}
-		100% {
-			-webkit-transform: rotate(360deg);
-			transform: rotate(360deg);
-		}
-	}
+@-webkit-keyframes dialog_spinner
+{
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 
-	@keyframes dialog_spinner
-	{
-		0% {
-			-webkit-transform: rotate(0deg);
-			transform: rotate(0deg);
-		}
-		100% {
-			-webkit-transform: rotate(360deg);
-			transform: rotate(360deg);
-		}
-	}
-	```
+@keyframes dialog_spinner
+{
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+```
 
 2. Add the [spinner image](https://github.com/ckeditor/ckeditor-dev/blob/a513a923aeab1b388efbec2022af1f6d8403376a/skins/moono/images/spinner.gif) to the `images/` directory of your skin. It is used in Internet Explorer 8-9 which do not support CSS animations.
 

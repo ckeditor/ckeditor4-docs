@@ -10,9 +10,9 @@ default-expanded: CKEDITOR
 
 ## Popular API pages
 
-* {@link api/CKEDITOR_editor `CKEDITOR` Object} &ndash; The main namespace. The entry point for the CKEditor integration.
-* {@link api/CKEDITOR~editor Configuration Reference} &ndash; `CKEDITOR.config`, with all configuration settings.
-* {@link api/CKEDITOR/editor `CKEDITOR.editor` Class} &ndash; The entry point for the Inline editor integration.
+* {@linkapi CKEDITOR `CKEDITOR` Object} &ndash; The main namespace. The entry point for the CKEditor integration.
+* {@linkapi CKEDITOR.config Configuration Reference} &ndash; `CKEDITOR.config`, with all configuration settings.
+* {@linkapi CKEDITOR.editor `CKEDITOR.editor` Class} &ndash; The entry point for the Inline editor integration.
 
 ## Contribute
 

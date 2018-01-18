@@ -15,7 +15,7 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 
 ## Accessibility Checker for CKEditor 4
 
-<a href="../docs/#!/guide/dev_accessibility_checker" data-skip-validation="true">Accessibility Checker documentation</a>
+{@link guide/dev/features/accessibility_checker/README Accessibility Checker documentation}
 
 [Accessibility Checker SDK sample](https://sdk.ckeditor.com/samples/accessibilitychecker.html)
 

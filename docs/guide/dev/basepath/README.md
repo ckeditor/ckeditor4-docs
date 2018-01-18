@@ -32,8 +32,7 @@ When loading the editor script, CKEditor is looking for the global `CKEDITOR_BAS
     var CKEDITOR_BASEPATH = '/ckeditor/';
 </script>
 
-<script src="all_my_scripts.js"/>
+<script src="all_my_scripts.js"></script>
 ```
 
 Note that this global JavaScript variable must be set ***before*** you include the CKEditor code. In the example above the variable definition was placed in-page, but it could also be included inside the `all_my_scripts.js` file, at the beginning (or in any case &mdash; before the editor code).
-</script>

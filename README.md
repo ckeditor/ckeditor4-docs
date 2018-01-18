@@ -39,9 +39,9 @@ Go back to the `ckeditor-docs` repository and install [npm dependencies](package
 
     > npm install
 
-Then finally execute `grunt docs`:
+Then finally execute `grunt docs-serve`:
 
-	> grunt docs [--options]
+	> grunt docs-serve [--options]
 	
 Available options:
 
@@ -49,6 +49,8 @@ Available options:
 * `--skipApi` - skips rendering API docs,
 * `--skipValidation` - skips link validation,
 * `--clean` - when `--dev` flag is used, `--clean` enables to clear the `build` directory before outputting new documentation
+
+Use `grunt docs` to build documentation without setting a server.
 
 ## API Documentation
 

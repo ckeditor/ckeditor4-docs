@@ -42,7 +42,9 @@ When Bender.js is installed you need to set up the CKEditor tests project.
 
 First of all, you need to {@link guide/dev/source/README clone the CKEditor development} repository hosted at [GitHub](https://github.com/ckeditor/ckeditor-dev):
 
-	> git clone https://github.com/ckeditor/ckeditor-dev.git
+``` sh
+> git clone https://github.com/ckeditor/ckeditor-dev.git
+```
 
 Go to the main CKEditor directory (it should contain the `bender.js`, `package.json` files, among others, and the `tests/` directory):
 

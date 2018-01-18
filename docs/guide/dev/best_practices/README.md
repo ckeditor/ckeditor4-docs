@@ -6,7 +6,7 @@ menu-title: Best Practices
 meta-title-short: Best Practices
 ---
 <!--
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -94,5 +94,3 @@ Although ACF is not a security filter, leaving it in defult, automatic mode shou
 ### Disable source mode
 
 {@link guide/dev/features/sourcearea/README Source mode} is an advanced feature that lets your users insert HTML code into your website and is not really needed in most use cases (after all, you are installing a WYSIWYG editor to avoid the need to write content in HTML). Disabling it is thus highly recommended.
-
-</meta></script></iframe></meta></meta></meta></p></style></iframe>

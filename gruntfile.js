@@ -29,11 +29,12 @@ module.exports = function( grunt ) {
 		} )
 			.then( done )
 			.catch( err => {
-				grunt.log.error( `Building Documentation failed: ${ err }`);
+				grunt.log.error( `Building Documentation failed: ${ err }` );
 				done();
 			} );
 	} );
-	grunt.registerTask('docs', [ 'api', 'umberto', 'connect' ] );
+	grunt.registerTask( 'docs', [ 'api', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
@@ -65,6 +66,15 @@ module.exports = function( grunt ) {
 		},
 
 		docs: {
+			options: {
+				skipApi: false,
+				skipValidation: false,
+				dev: false,
+				clean: true
+			}
+		},
+
+		'docs-serve': {
 			options: {
 				skipApi: false,
 				skipValidation: false,

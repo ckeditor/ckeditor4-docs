@@ -1,6 +1,5 @@
 ---
 toc: false
-sitenav: false
 category: guide
 meta-title: CKEditor 4 documentation
 meta-description: Learn how to install, integrate, configure and develop CKEditor 4. Browse through API documentation and online samples.

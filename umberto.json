@@ -6,6 +6,42 @@
 	"url": "https://github.com/ckeditor/ckeditor-dev",
 	"docsUrl": "https://github.com/ckeditor/ckeditor-docs"
   },
+  "docsearch": {
+	"customRanking": [
+	  {
+		"url": "api/CKEDITOR_config.html",
+		"rank": 10
+	  },
+	  {
+		"url": "api/CKEDITOR_editor.html",
+		"rank": 10
+	  },
+	  {
+		"url": "api/CKEDITOR_dom_element.html",
+		"rank": 8
+	  },
+	  {
+		"url": "api/CKEDITOR_dom_selection.html",
+		"rank": 8
+	  },
+	  {
+		"url": "api/CKEDITOR_dom_range.html",
+		"rank": 8
+	  },
+	  {
+		"url": "api/CKEDITOR_plugins_widget.html",
+		"rank": 8
+	  },
+	  {
+		"url": "guide/dev_installation.html",
+		"rank": 10
+	  },
+	  {
+		"url": "guide/dev_configuration.html",
+		"rank": 10
+	  }
+	]
+  },
   "groups": [
 	{
 	  "name": "Guides",

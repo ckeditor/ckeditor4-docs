@@ -10,27 +10,27 @@
 	"customRanking": [
 	  {
 		"url": "api/CKEDITOR_config.html",
-		"rank": 10
+		"rank": 2
 	  },
 	  {
 		"url": "api/CKEDITOR_editor.html",
-		"rank": 10
+		"rank": 2
 	  },
 	  {
 		"url": "api/CKEDITOR_dom_element.html",
-		"rank": 8
+		"rank": 1
 	  },
 	  {
 		"url": "api/CKEDITOR_dom_selection.html",
-		"rank": 8
+		"rank": 1
 	  },
 	  {
 		"url": "api/CKEDITOR_dom_range.html",
-		"rank": 8
+		"rank": 1
 	  },
 	  {
 		"url": "api/CKEDITOR_plugins_widget.html",
-		"rank": 8
+		"rank": 1
 	  },
 	  {
 		"url": "guide/dev_installation.html",
@@ -265,7 +265,8 @@
 	  "type": "jsduck",
 	  "middlewares": [
 		"relation-fixer"
-	  ]
+	  ],
+	  "trimLongname": false
 	}
   ]
 }

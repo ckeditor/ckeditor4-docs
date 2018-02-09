@@ -23,6 +23,16 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: Incorrect {@linkapi CKEDITOR.config#autoEmbed_widget } value. No widget definition found.
 * Additional data: None.
 
+## cloudservices-no-url
+* Location: `plugins/cloudeservices/plugin.js`
+* Description: Upload url used by {@linkapi CKEDITOR.config.cloudServices} is not set. An url can be provided by configuration {@linkapi CKEDITOR.config#url} property or passed to [Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) plugin {@linkapi CKEDITOR.plugins.cloudeServices.cloudServicesLoader#upload} method.
+* Additional data: None.
+
+## cloudservices-no-token
+* Location: `plugins/cloudeservices/plugin.js`
+* Description: Auth token used by {@linkapi CKEDITOR.config.cloudServices} is not set. An token can be provided by configuration {@linkapi CKEDITOR.config#cloudServices_token} property or passed to [Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) plugin {@linkapi CKEDITOR.plugins.cloudeServices.cloudServicesLoader#constructor}.
+* Additional data: None.
+
 ## editor-destroy-iframe
 
 * Location: `plugins/wysiwygarea/plugin.js`

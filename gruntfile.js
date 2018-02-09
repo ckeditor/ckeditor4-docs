@@ -1,43 +1,46 @@
 /**
- * @license Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.html or http://ckeditor.com/license
  */
 
 'use strict';
 
+const Umberto = require( 'umberto' );
+
 module.exports = function( grunt ) {
 	require( 'load-grunt-tasks' )( grunt );
 
+	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadTasks( 'dev/tasks' );
-	grunt.registerTask( 'default', [ 'jsduck:docs', 'copy:source' ] );
+	grunt.registerTask( 'api', [ 'jsduck:api' ] );
+	grunt.registerTask( 'umberto', function() {
+		const done = this.async();
+
+		const skipApi = grunt.option( 'skipApi' );
+		const skipValidation = grunt.option( 'skipValidation' );
+		const dev = grunt.option( 'dev' );
+		const clean = grunt.option( 'clean' );
+
+		return Umberto.buildSingleProject( {
+			skipApi,
+			skipValidation,
+			dev,
+			clean
+		} )
+			.then( done )
+			.catch( err => {
+				grunt.log.error( `Building Documentation failed: ${ err }` );
+				done();
+			} );
+	} );
+	grunt.registerTask( 'docs', [ 'api', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
 
-		copy: {
-			source: {
-				files: [
-					{
-						cwd: 'source',
-						expand: true,
-						src: [
-							'resources/**/*',
-							'favicon.ico',
-							'.htaccess',
-							'images/**/*',
-							'license.html'
-						],
-						dest: 'build/',
-						rename: function( dest, src ) {
-							return dest + ( dest == 'build/' && src == 'license.html' ? src.replace( 'license', 'LICENSE' ) : src );
-						}
-					}
-				]
-			}
-		},
-
 		jsduck: {
-			docs: {
+			api: {
 				src: [
 					'<%= path %>/core',
 					'<%= path %>/plugins',
@@ -51,18 +54,42 @@ module.exports = function( grunt ) {
 				cmd: 'ckeditor-jsduck',
 
 				options: {
-					title: 'CKEditor 4 Documentation',
-					'head-html': 'source/head-html.html',
-					'head-html-common': 'source/head-html-common.html',
-					footer: 'Copyright &copy; 2003-2017, <a href=\"http://cksource.com\" style=\"color:#085585\">CKSource</a> - Frederico Knabben. All rights reserved. | <a href=\"LICENSE.html\" style=\"color:#085585\">License</a> | Generated with <a href=\"https://github.com/senchalabs/jsduck\">JSDuck</a>.',
 					tags: 'source/customs.rb',
 					warnings: [ '-nodoc', '-image_unused' ],
-					welcome: 'source/welcome.html',
-					guides: grunt.option( 'guides' ) || 'guides/guides.json',
-					output: 'build',
+					output: 'docs/api/data',
+					export: 'full',
 					external: 'Blob,File,FileReader,DocumentFragment',
 					exclude: '<%= path %>/plugins/codesnippet/lib',
 					'ignore-html': 'source'
+				}
+			}
+		},
+
+		docs: {
+			options: {
+				skipApi: false,
+				skipValidation: false,
+				dev: false,
+				clean: true
+			}
+		},
+
+		'docs-serve': {
+			options: {
+				skipApi: false,
+				skipValidation: false,
+				dev: false,
+				clean: true
+			}
+		},
+
+		connect: {
+			server: {
+				options: {
+					port: 9001,
+					base: 'build/docs',
+					keepalive: true,
+					open: 'http://localhost:9001/ckeditor4/4.8.0/guide/dev_installation.html'
 				}
 			}
 		}

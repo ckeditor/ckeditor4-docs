@@ -66,10 +66,12 @@ This is an example of a class definition. It contains so many tags to show their
 	 * Represents an editor instance. This constructor should be rarely
 	 * used, in favor of the {@linkapi CKEDITOR } editor creation functions.
 	 *
-	 *		var editor = new {@linkapi CKEDITOR.editor CKEDITOR.editor}();
+	 * ```js
+	 *	var editor = new {@linkapi CKEDITOR.editor CKEDITOR.editor}();
 	 *		editor.setSomething( name, {
-	 *			value: 1
-	 *		} );
+	 *		value: 1
+	 *	} );
+	 * ```
 	 *
 	 * @since 3.0
 	 * @private
@@ -194,11 +196,13 @@ The following is an example of method documentation.
 	 * element is a native DOM element, it will be transformed into a valid
 	 * {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element} object.
 	 *
-	 *		var element = new {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element}( 'span' );
-	 *		alert( element == {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ) ); // true
+	 * ```js
+	 *	var element = new {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element}( 'span' );
+	 *	alert( element == {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ) ); // true
 	 *
-	 *		var element = document.getElementById( 'myElement' );
-	 *		alert( {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ).getName() ); // (e.g.) 'p'
+	 *	var element = document.getElementById( 'myElement' );
+	 *	alert( {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ).getName() ); // (e.g.) 'p'
+	 * ```
 	 *
 	 * @private
 	 * @static
@@ -246,7 +250,7 @@ To define an event instead of a method:
 
 * Always leave one blank line between the textual comment and the first tag.
 * Separate all blocks (paragraphs, code samples, etc.) with one blank line.
-* Code samples are indented with at least two tabs after `*` and remember &mdash; **no spaces** are to be used.
+* Code samples are wrapped with triple back-ticks <code>\`\`\`</code>, optionally followed with a language identifier &mdash; **no spaces** are to be used.
 * Always place a dot (`.`) at the end of a sentence. A sentence starts with an upper-case letter.
 * Always use single quotes for JavaScript strings, but double quotes for cites, irony, etc. in textual comments.
 * Cross-reference format for links is: `CKEDITOR.name.space#property`. If there is more than one event/property/configuration/method with the same name, then prepend `cfg-`, `property-`, `method-` or `event-` to the name. The namespace may be omitted if it equals to `@member` or the current class. See the ["Cross-references"](https://github.com/senchalabs/jsduck/wiki/Guide#cross-references) section in the JSDuck's guide.

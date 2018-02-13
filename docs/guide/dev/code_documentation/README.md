@@ -250,7 +250,7 @@ To define an event instead of a method:
 
 * Always leave one blank line between the textual comment and the first tag.
 * Separate all blocks (paragraphs, code samples, etc.) with one blank line.
-* Code samples are wrapped with triple back-ticks <code>\`\`\`</code>, optionally followed with a language identifier &mdash; **no spaces** are to be used.
+* Code samples are wrapped with triple back ticks <code>\`\`\`</code>, optionally followed with a language identifier &mdash; **no spaces** are to be used.
 * Always place a dot (`.`) at the end of a sentence. A sentence starts with an upper-case letter.
 * Always use single quotes for JavaScript strings, but double quotes for cites, irony, etc. in textual comments.
 * Cross-reference format for links is: `CKEDITOR.name.space#property`. If there is more than one event/property/configuration/method with the same name, then prepend `cfg-`, `property-`, `method-` or `event-` to the name. The namespace may be omitted if it equals to `@member` or the current class. See the ["Cross-references"](https://github.com/senchalabs/jsduck/wiki/Guide#cross-references) section in the JSDuck's guide.

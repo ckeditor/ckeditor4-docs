@@ -25,8 +25,7 @@ Most of the issues are reproducible on samples. If you have a different case tho
 ## Avoid Duplicates
 
 Before you file a new issue, make sure your issue has not been reported yet. Use the [search page](https://github.com/ckeditor/ckeditor-dev/issues) to check it.
-If the issue has already been reported, just add a 👍 (+1) reaction to it. During our GitHub transition period you can also check [CKEditor's former bug tracker](https://dev.ckeditor.com). If the issue
-is there but not on GitHub, put a reference link to the original Trac issue.
+If the issue has already been reported, just add a 👍 (+1) reaction to it.
 
 CKEditor is in active development, so there is a chance that we have already fixed your issue in the current code base. You should thus also test it on the latest [Nightly Build](http://nightly.ckeditor.com).
 

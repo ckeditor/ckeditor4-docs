@@ -29,7 +29,7 @@ The resulting CKEditor API documentation is always available at <https://docs.ck
 
 ## JSDuck vs JSDoc &mdash; Important Differences
 
-* **JSDuck supports Markdown**. HTML entities may still be used, but try to avoid them in favor of Markdown. Note that HTML in code samples (indented blocks) and `pre-formatted` will be encoded.
+* **JSDuck supports Markdown**. HTML entities may still be used, but try to avoid them in favor of Markdown. Note that HTML in code samples and `pre-formatted` will be encoded.
 * JSDuck does not accept the following tags: `@namespace`, `@name`, `@constant`, `@augments`, `@field`, `@type` (deprecated), `@default` and more (only those that CKEditor 3 was using are listed).
 * JSDuck accepts some new tags: `@cfg`, `@member`, `@chainable`, `@inherits`, `@method`, `@mixins`, `@readonly`, `@singleton`, and [more](https://github.com/senchalabs/jsduck/wiki/@class).
 * Some common tags have different format in JSDuck (e.g. `@example` creates live examples, standard code samples are just indented).

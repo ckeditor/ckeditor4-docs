@@ -1,16 +1,16 @@
 ---
-category: inserting-content
-order: 20
-url: guide/dev_captionedimage
-menu-title: Captioned Images
-meta-title-short: Captioned Images
+category: inserting-images
+order: 30
+url: guide/dev_image2
+menu-title: Enhanced Image
+meta-title-short: Enhanced Image
 ---
 <!--
 Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Creating Captioned Images
+# Enhanced Image Plugin
 
 <info-box info="">
  This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.

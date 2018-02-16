@@ -113,6 +113,11 @@
 				  "slug": "editor-resizing"
 				},
 				{
+				  "name": "Inserting Images",
+				  "id": "inserting-images",
+				  "slug": "inserting-images"
+				},
+				{
 				  "name": "Inserting Content",
 				  "id": "inserting-content",
 				  "slug": "inserting-content"

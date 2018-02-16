@@ -119,7 +119,7 @@ Sample widget styles:
 	{ name: 'left', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-left' }, group: 'alignment' },
 	{ name: 'thumb', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-thumb' }, group: [ 'size', 'alignment' ] }
 
-To see how this works in practice, refer to the [Widget Styles](https://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the {@link guide/dev/features/captionedimage/README captioned image}, {@link guide/dev/features/embed/README embedded media resources} and {@link guide/dev/features/mathjax/README mathematical formulas} widgets with additional styling.
+To see how this works in practice, refer to the [Widget Styles](https://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the {@link guide/dev/features/image2/README captioned image}, {@link guide/dev/features/embed/README embedded media resources} and {@link guide/dev/features/mathjax/README mathematical formulas} widgets with additional styling.
 
 ## The Stylesheet Parser Plugin
 

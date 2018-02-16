@@ -8,6 +8,8 @@
 const Umberto = require( 'umberto' );
 
 module.exports = function( grunt ) {
+	const packageVersion = grunt.file.readJSON( 'package.json' ).version;
+
 	require( 'load-grunt-tasks' )( grunt );
 
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
@@ -89,7 +91,7 @@ module.exports = function( grunt ) {
 					port: 9001,
 					base: 'build/docs',
 					keepalive: true,
-					open: 'http://localhost:9001/ckeditor4/4.8.0/guide/dev_installation.html'
+					open: 'http://localhost:9001/ckeditor4/' + packageVersion + '/guide/dev_installation.html'
 				}
 			}
 		}
@@ -102,7 +104,7 @@ module.exports = function( grunt ) {
 	}
 
 	function getCKEditorPath() {
-		grunt.log.writeln( 'CKEditor Documentation Builder v' + grunt.file.readJSON( 'package.json' ).version + '.' );
+		grunt.log.writeln( 'CKEditor Documentation Builder v' + packageVersion + '.' );
 
 		var ckeditorPath = 'repos/ckeditor-dev';
 

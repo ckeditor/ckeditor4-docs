@@ -18,7 +18,7 @@ For licensing, see LICENSE.md.
 
 The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin introduces a new type of a captioned image widget that has the following capabilities:
 
-*   It allows for **uploading images** to Cloud Services with customizable upload progress indication.
+*   It allows for **uploading images** to [Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) with customizable upload progress indication.
 *   It allows for adding **image captions** (that will not be separated from the image when its location changes).
 *   It has {@link guide/dev/deep_dive/widgets/README#common-usage-scenarios all advantages of widgets}, i.e. you can **treat the image and its caption as one entity** and select, delete, or move it in the editor content area as a whole.
 *   It supports **drag and drop** for changing the image position.
@@ -51,7 +51,7 @@ See the [working "Creating Easy Image widgets" sample](https://sdk.ckeditor.com/
 
 ### Upload integration
 
-Easy Image uses Cloud Services backend by default, which needs to be configured before usage of Easy Image plugin. To configure Cloud Service provider, please reference to […].
+Easy Image uses [Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) backend by default, which needs to be configured before usage of Easy Image plugin. To configure Cloud Service provider, please refer to official [Cloud Services documentation](https://docs.ckeditor.com/cs/latest/index.html).
 
 ### Responsiveness
 
@@ -132,7 +132,7 @@ config.on = {
 
 ## Cloud Services Integration
 
-Cloud Services plugin allows to integrate CKEditor 4 instances with Cloud Services, e.g. Easy Image upload backend. It exports {@linkapi CKEDITOR.plugins.cloudservices.cloudServicesLoader} – class that could be used as a custom file loader in upload widgets, e.g. one implemented as [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin. It's also a default file loader used in [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin.
+[Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin allows to integrate CKEditor 4 instances with [Cloud Services](https://ckeditor.com/ckeditor-cloud-services/), e.g. Easy Image upload backend. It exports {@linkapi CKEDITOR.plugins.cloudservices.cloudServicesLoader} – class that could be used as a custom file loader in upload widgets, e.g. one implemented as [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin. It's also a default file loader used in [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin.
 
 Cloud Services needs to be configured before use. It can be done by modifying two config options:
 

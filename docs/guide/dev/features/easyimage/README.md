@@ -112,8 +112,9 @@ will modify built-in Full Size Image and add new one, `skipBorder`.
 
 Do remember, though, that you need to define the CSS rules for these classes in your stylesheet. Once this configuration option is set, corresponding style definitions must be supplied to the editor:
 
-*   For {@link guide/dev/framed/README classic editor} it can be done by defining additional styles in the stylesheets loaded by the editor. The same styles must be provided on the target page where the content will be loaded.
+*   For {@link guide/dev/framed/README classic editor} it can be done by defining additional styles in the stylesheets loaded by the editor. The same styles must be provided on the target page where the content will be loaded. Alternatively additional stylesheets could be added using {@linkapi CKEDITOR.config.contentsCss}.
 *   For {@link guide/dev/inline/README inline editor} the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">`, i.e. within the `<head>` section of the page.
+* For both types of editors the styles can be defined using {@linkapi CKEDITOR.addCss}.
 
 You need also to enable these custom styles to the user by adding them to the Easy Image balloon toolbar via {@linkapi CKEDITOR.config.easyimage_toolbar}. This option will also integrate your styles with context menu.
 

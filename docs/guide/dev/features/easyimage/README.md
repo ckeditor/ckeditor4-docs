@@ -41,7 +41,7 @@ However list of enabled styles could be changed by editor's implementor.
 
 ### Changing Alternative Text
 
-By default Easy Image allows also for changing default alternative text for the image. Providing good alternative text for image is one of the fundamental accessibility techniques, even included as one of [success criterions of WCAG 2.0 standard](https://www.w3.org/WAI/WCAG20/quickref/#qr-text-equiv-all).
+Easy Image allows also for changing default alternative text for the image. Providing good alternative text for image is one of the fundamental accessibility techniques, being one of [success criteria of WCAG 2.0 standard](https://www.w3.org/WAI/WCAG20/quickref/#qr-text-equiv-all).
 
 ### Easy Image Demo
 
@@ -55,7 +55,7 @@ Easy Image uses Cloud Services backend by default, which needs to be configured 
 
 ### Responsiveness
 
-Output produced by Cloud Services is converted to include several versions of the uploaded images, which have different widths and are suitable for different types of devices. It's done via `[srcset]` attribute for `img` tag and looks similar to the markup presented below:
+Output produced by Cloud Services is converted to include several versions of the uploaded images, which have different widths and are suitable for different types of devices. It's handled by `[srcset]` attribute for `img` tag and looks similar to the markup presented below:
 
 ```html
 <figure class="easyimage easyimage-full">
@@ -70,12 +70,6 @@ Easy Images's appearance can be easily altered by using custom styles. These sty
 
 *   Full Size Image – it stretches the widget to 100% of editor's width
 *   Side Image – it changes Easy Image width to 25% of editor's width and put it aside, on the right
-
-There are three more, additional styles, that are responsible for aligning image and could be additionally enabled:
-
-*   Left Align
-*   Center
-*   Right Align
 
 By default all styles are applied via CSS classes and produces markup similar to the on on the following snippet :
 
@@ -103,7 +97,9 @@ config.easyimage_styles = {
 			'class': 'skip-border'
 		},
 		group: 'borders',
-		label: 'Skip border'
+		label: 'Skip border',
+		icon: 'icons/skip-border.png',
+		iconHiDpi: 'icons/skip-border.hidpi.png'
 	}
 };
 ```
@@ -120,9 +116,9 @@ You need also to enable these custom styles to the user by adding them to the Ea
 
 ### Custom Reporters
 
-It also possible to customize upload progress reporters via widget's definition `progressReporterType` property. By default there is only one type of upload progress reporter, progress bar.
+It also possible to customize upload progress reporters via widget's definition {@linkapi CKEDITOR.plugins.imagebase.featuresDefinitions.upload#progressReporterType} property. By default there is only one type of upload progress reporter, progress bar.
 
-You are able to add your own types of upload progress reporters by subclassing {@linkapi CKEDITOR.plugins.imagebase.ProgressReporter} and then using your subclass to modify Easy Image widget definition:
+You are able to add your own types of upload progress reporters by subclassing {@linkapi CKEDITOR.plugins.imagebase.progressReporter} and then using your subclass to modify Easy Image widget definition:
 
 ```javascript
 config.on = {

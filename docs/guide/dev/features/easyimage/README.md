@@ -18,13 +18,13 @@ For licensing, see LICENSE.md.
 
 The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin introduces a new type of a captioned image widget that has the following capabilities:
 
--   It allows for **uploading images** to Cloud Services with customizable upload progress indication.
--   It allows for adding **image captions** (that will not be separated from the image when its location changes).
--   It has {@link guide/dev/deep_dive/widgets/README#common-usage-scenarios all advantages of widgets}, i.e. you can **treat the image and its caption as one entity** and select, delete, or move it in the editor content area as a whole.
--   It supports **drag and drop** for changing the image position.
--   It provides **image alignment** via balloon toolbar attached to the widget and via context menu.
--   It allows for applying **custom styles** to the image by customizing balloon toolbar and context menu items.
--   It allows for changing **alternative text** for the image.
+*   It allows for **uploading images** to Cloud Services with customizable upload progress indication.
+*   It allows for adding **image captions** (that will not be separated from the image when its location changes).
+*   It has {@link guide/dev/deep_dive/widgets/README#common-usage-scenarios all advantages of widgets}, i.e. you can **treat the image and its caption as one entity** and select, delete, or move it in the editor content area as a whole.
+*   It supports **drag and drop** for changing the image position.
+*   It provides **image alignment** via balloon toolbar attached to the widget and via context menu.
+*   It allows for applying **custom styles** to the image by customizing balloon toolbar and context menu items.
+*   It allows for changing **alternative text** for the image.
 
 Below you can see an easu image inserted into the editor content. When you hover it with your mouse, the editable areas (the image and its caption) become outlined.
 
@@ -34,8 +34,8 @@ Below you can see an easu image inserted into the editor content. When you hover
 
 Easy Images's appearance can be easily altered by using custom styles. These styles could be applied via a balloon toolbar connected with every Easy Image widget or via context menu. By default there are two styles available:
 
--   Full Size Image – it stretches the widget to 100% of editor's width
--   Side Image – it changes Easy Image width to 25% of editor's width and put it aside, on the right
+*   Full Size Image – it stretches the widget to 100% of editor's width
+*   Side Image – it changes Easy Image width to 25% of editor's width and put it aside, on the right
 
 However list of enabled styles could be changed by editor's implementor.
 
@@ -68,14 +68,14 @@ Output produced by Cloud Services is converted to include several versions of th
 
 Easy Images's appearance can be easily altered by using custom styles. These styles could be applied via a balloon toolbar connected with every Easy Image widget or via context menu. By default there are two styles available:
 
--   Full Size Image – it stretches the widget to 100% of editor's width
--   Side Image – it changes Easy Image width to 25% of editor's width and put it aside, on the right
+*   Full Size Image – it stretches the widget to 100% of editor's width
+*   Side Image – it changes Easy Image width to 25% of editor's width and put it aside, on the right
 
 There are three more, additional styles, that are responsible for aligning image and could be additionally enabled:
 
--   Left Align
--   Center
--   Right Align
+*   Left Align
+*   Center
+*   Right Align
 
 By default all styles are applied via CSS classes and produces markup similar to the on on the following snippet :
 
@@ -112,8 +112,8 @@ will modify built-in Full Size Image and add new one, `skipBorder`.
 
 Do remember, though, that you need to define the CSS rules for these classes in your stylesheet. Once this configuration option is set, corresponding style definitions must be supplied to the editor:
 
--   For {@link guide/dev/framed/README classic editor} it can be done by defining additional styles in the stylesheets loaded by the editor. The same styles must be provided on the target page where the content will be loaded.
--   For {@link guide/dev/inline/README inline editor} the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">`, i.e. within the `<head>` section of the page.
+*   For {@link guide/dev/framed/README classic editor} it can be done by defining additional styles in the stylesheets loaded by the editor. The same styles must be provided on the target page where the content will be loaded.
+*   For {@link guide/dev/inline/README inline editor} the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">`, i.e. within the `<head>` section of the page.
 
 You need also to enable these custom styles to the user by adding them to the Easy Image balloon toolbar via {@linkapi CKEDITOR.config.easyimage_toolbar}. This option will also integrate your styles with context menu.
 
@@ -139,7 +139,7 @@ Cloud Services plugin allows to integrate CKEditor 4 instances with Cloud Servic
 
 Cloud Services needs to be configured before use. It can be done by modifying two config options:
 
--   `cloudServices_url` – URL to Cloud Services upload endpoint; please refer to [official Cloud Services documentation about endpoints](https://docs.ckeditor.com/cs/latest/guides/token-endpoints/tokenendpoint.html).
--   `cloudServices_token` – authorization token needed to use upload endpoint.
+*   `cloudServices_url` – URL to Cloud Services upload endpoint; please refer to [official Cloud Services documentation about endpoints](https://docs.ckeditor.com/cs/latest/guides/token-endpoints/tokenendpoint.html).
+*   `cloudServices_token` – authorization token needed to use upload endpoint.
 
 For further information about Cloud Services integration, please refer to official Cloud Services documentation.

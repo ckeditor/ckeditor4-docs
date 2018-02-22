@@ -28,7 +28,7 @@ The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin intr
 
 Below you can see an Easy Image inserted into the editor content. When you hover it with your mouse, the editable areas (the image and its caption) become outlined.
 
-{@img assets/img/easyimage_01.png Captioned image}
+{@img assets/img/easyimage.png Easy Image}
 
 ### Custom styles with Classes
 

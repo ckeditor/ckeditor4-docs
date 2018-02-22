@@ -26,7 +26,7 @@ The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin intr
 *   It allows for applying **custom styles** to the image by customizing balloon toolbar and context menu items.
 *   It allows for changing **alternative text** for the image.
 
-Below you can see an easu image inserted into the editor content. When you hover it with your mouse, the editable areas (the image and its caption) become outlined.
+Below you can see an Easy Image inserted into the editor content. When you hover it with your mouse, the editable areas (the image and its caption) become outlined.
 
 {@img assets/img/easyimage_01.png Captioned image}
 

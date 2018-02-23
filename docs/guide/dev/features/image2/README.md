@@ -24,21 +24,21 @@ The optional [Enhanced Image](https://ckeditor.com/cke4/addon/image2) plugin int
 * It provides **image alignment**, including centering, with inline styles or CSS classes.
 * It includes hassle-free dynamic **"click and drag" resizing**.
 
-Below you can see a captioned image inserted into the editor content. When you hover it with your mouse, the editable areas (the image and its caption) become outlined. The resizing and positioning handles along with their tooltips will appear, too.
+Below you can see a captioned image inserted into the editor content with the Enhanced Image plugin. When you hover the image widget with your mouse, the editable areas (the image and its caption) become outlined. The resizing and positioning handles along with their tooltips will appear, too.
 
-{@img assets/img/captionedimage_01.png Captioned image}
+{@img assets/img/image2_01.png Enhanced image with a caption inserted into the editor content}
 
-## File Browser Integration
+## File Manager Integration
 
-The Enhanced Image plugin can be {@link guide/dev/configuration/file_browse_upload/README integrated with a file browser} like [CKFinder](http://cksource.com/ckfinder) just like the standard Image plugin. Thanks to this you will be able to upload your images to the server or browse the server for images to be inserted into the editor content.
+The Enhanced Image plugin can be {@link guide/dev/configuration/file_browse_upload/README integrated with a file browser} like [CKFinder](https://ckeditor.com/ckeditor-4/ckfinder/) just like the standard Image plugin. Thanks to this you will be able to upload your images to the server or browse the server for images to be inserted into the editor content.
 
 Below you can see the plugin's Image Properties dialog window with the file browser integrated. The Browse Server button as well as the Upload tab will appear.
 
-{@img assets/img/captionedimage_02.png File manager integrated with Enhanced Image dialog}
+{@img assets/img/captionedimage_02.png File manager integrated with the Enhanced Image dialog}
 
 ## Image Alignment and Classes
 
-Captioned images can be easily aligned through their Image Properties dialog windows, including centering them in the editor content. By default the alignment is added through inline styles, producing the code like the following example:
+Images inserted with the Enhanced Image plugin can be easily aligned through their Image Properties dialog windows, including centering them in the editor content. By default the alignment is added through inline styles, producing the code like the following example:
 
 ``` html
 <figure class="image" style="float:right">
@@ -84,6 +84,14 @@ config.image2_altRequired = true;
 
 {@img assets/img/captionedimage_03.png Alternative text required by the Enhanced Image dialog}
 
-## Captioned Image Demo
+## Enhanced Image Plugin Demo
 
-See the [working "Creating Captioned Images" sample](https://sdk.ckeditor.com/samples/captionedimage.html) that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.
+See the [working "Enhanced Image Plugin" sample](https://sdk.ckeditor.com/samples/image2.html) that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.
+
+## Related Features
+
+Refer to the following resources for more information about image support:
+
+* {@link guide/dev/features/image/README Default Image Plugin} offers pixel-perfect image alignment with vertical and horizotal whitespace, configurable image border and file manager integration.
+* {@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN.
+* {@link guide/dev/configuration/file_browse_upload/README File Manager Integration} article explains how to enable image upload.

@@ -48,6 +48,6 @@ See the [working "Default Image Plugin" sample](https://sdk.ckeditor.com/samples
 
 Refer to the following resources for more information about image support and upload:
 
-* {@link guide/dev/features/image2/README Enhanced Image} offers clean UI with image captions, drag and drop positioning, click and drag resizing with file manager integration.
+* {@link guide/dev/features/image2/README Enhanced Image} offers a clean UI with image captions, drag and drop positioning, click and drag resizing and file manager integration.
 * {@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN.
 * {@link guide/dev/configuration/file_browse_upload/README File Manager Integration} article explains how to enable image upload.

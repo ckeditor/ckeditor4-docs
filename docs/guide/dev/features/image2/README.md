@@ -30,7 +30,7 @@ Below you can see a captioned image inserted into the editor content with the En
 
 ## File Manager Integration
 
-The Enhanced Image plugin can be {@link guide/dev/configuration/file_browse_upload/README integrated with a file browser} like [CKFinder](https://ckeditor.com/ckeditor-4/ckfinder/) just like the standard Image plugin. Thanks to this you will be able to upload your images to the server or browse the server for images to be inserted into the editor content.
+The Enhanced Image plugin can be {@link guide/dev/integration/file_browse_upload/README integrated with a file browser} like [CKFinder](https://ckeditor.com/ckeditor-4/ckfinder/) just like the standard Image plugin. Thanks to this you will be able to upload your images to the server or browse the server for images to be inserted into the editor content.
 
 Below you can see the plugin's Image Properties dialog window with the file browser integrated. The Browse Server button as well as the Upload tab will appear.
 
@@ -94,4 +94,4 @@ Refer to the following resources for more information about image support:
 
 * {@link guide/dev/features/image/README Default Image Plugin} offers pixel-perfect image alignment with vertical and horizotal whitespace, configurable image border and file manager integration.
 * {@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN.
-* {@link guide/dev/configuration/file_browse_upload/README File Manager Integration} article explains how to enable image upload.
+* {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article explains how to enable image upload.

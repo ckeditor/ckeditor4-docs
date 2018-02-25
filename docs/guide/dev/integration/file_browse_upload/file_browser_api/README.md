@@ -15,8 +15,8 @@ For licensing, see LICENSE.md.
 <info-box info=""> CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </info-box>
 
-To connect a file browser/uploader that is already compatible with CKEditor, refer to the {@link guide/dev/configuration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
-check the {@link guide/dev/configuration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
+To connect a file browser/uploader that is already compatible with CKEditor, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
+check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
 
 ## Interaction Between CKEditor and File Manager
 
@@ -185,8 +185,8 @@ echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($
 
 For more information on integrating CKEditor with a file manager refer to the following articles:
 
-* {@link guide/dev/configuration/file_browse_upload/README File Manager Integration}
-* {@link guide/dev/configuration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}
-* {@link guide/dev/configuration/file_browse_upload/ckfinder_integration/README CKFinder Integration}
-* {@link guide/dev/configuration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
-* {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Pasted and Dropped Images}
+* {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
+* {@link guide/dev/integration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}
+* {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration}
+* {@link guide/dev/integration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
+* {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Pasted and Dropped Images}

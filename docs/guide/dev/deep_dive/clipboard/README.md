@@ -21,7 +21,7 @@ This feature is provided by the Clipboard plugin and, because of incomplete, bro
 
 ## Why Is Custom Clipboard Integration Needed?
 
-The main problem is that the developers want to have control over what can be pasted or dropped into the editor. Browser implementations of these mechanisms are highly inconsistent and in many cases are unacceptable (e.g. WebKit and Blink based browsers put a very messy HTML soup into the clipboard). Furthermore, a user can copy content from various sources like other websites, email clients, word processors, etc. This content is full of inline styles, unwanted styling elements or simply is not semantic and therefore it could break the editing experience in CKEditor (read more in the {@link guide/dev/configuration/acf/README Content Filtering} guide).
+The main problem is that the developers want to have control over what can be pasted or dropped into the editor. Browser implementations of these mechanisms are highly inconsistent and in many cases are unacceptable (e.g. WebKit and Blink based browsers put a very messy HTML soup into the clipboard). Furthermore, a user can copy content from various sources like other websites, email clients, word processors, etc. This content is full of inline styles, unwanted styling elements or simply is not semantic and therefore it could break the editing experience in CKEditor (read more in the {@link guide/dev/acf/README Content Filtering} guide).
 
 Therefore, filters must be implemented. But in order to do so, the content must be intercepted before it is inserted into the editor.
 

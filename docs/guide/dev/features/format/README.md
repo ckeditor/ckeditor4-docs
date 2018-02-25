@@ -81,7 +81,7 @@ If you want to, for example, add CSS classes to format definitions, you can do i
 Remember that depending on your use case, the CSS classes for text formats need to be defined accordingly. For {@link guide/dev/framed/README classic editor} they should be defined in an external CSS file added to the editor configuration with the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option. For {@link guide/dev/inline/README inline editor} they need to be added directly to the page stylesheet.
 
 <info-box hint="">
- The block-level text format feature is automatically integrated with {@link guide/dev/configuration/acf/README Advanced Content Filter}, so all custom format definitions are treated as allowed by the editor content filtering mechanism.
+ The block-level text format feature is automatically integrated with {@link guide/dev/acf/README Advanced Content Filter}, so all custom format definitions are treated as allowed by the editor content filtering mechanism.
 </info-box>
 
 ## Block-Level Text Formats Demo

@@ -16,7 +16,7 @@ For licensing, see LICENSE.md.
  CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </info-box>
 
-As mentioned in the introductory {@link guide/dev/configuration/file_browse_upload/README File Manager Integration} article, CKEditor can not only be integrated with an external application providing file browser and uploader capabilities, but the extent of this integration can be fine-tuned to your needs.
+As mentioned in the introductory {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article, CKEditor can not only be integrated with an external application providing file browser and uploader capabilities, but the extent of this integration can be fine-tuned to your needs.
 
 This article describes a few options available to adjust the file manager integration to your usage scenario.
 
@@ -61,8 +61,8 @@ The sample below shows some basic configuration code that can be used to insert 
 
 For more information on integrating CKEditor with a file manager refer to the following articles:
 
-* {@link guide/dev/configuration/file_browse_upload/README File Manager Integration}
-* {@link guide/dev/configuration/file_browse_upload/ckfinder_integration/README CKFinder Integration}
-* {@link guide/dev/configuration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
-* {@link guide/dev/configuration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
-* {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Pasted and Dropped Files}
+* {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
+* {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration}
+* {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
+* {@link guide/dev/integration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
+* {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Pasted and Dropped Files}

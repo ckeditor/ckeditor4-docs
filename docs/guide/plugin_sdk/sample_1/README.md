@@ -113,7 +113,7 @@ CKEDITOR.config.extraPlugins configuration option:
 
 	config.extraPlugins = 'abbr';
 
-<info-box info=""> Please note that <strong>since CKEditor 4.1 all editor plugins that create content should be integrated with {@link guide/dev/configuration/acf/README Advanced Content Filter} (ACF)</strong>. <br>
+<info-box info=""> Please note that <strong>since CKEditor 4.1 all editor plugins that create content should be integrated with {@link guide/dev/acf/README Advanced Content Filter} (ACF)</strong>. <br>
  To follow this guide and at the same time comply with the new CKEditor 4.1 requirements you need to either set <code>config.allowedContent = true;</code> in order to disable {@link guide/dev/deep_dive/advanced_content_filter/README content filtering} or {@link guide/plugin_sdk/integration_with_acf/README integrate your plugin with ACF}. For more information, please refer to the official {@link guide/plugin_sdk/integration_with_acf/README Advanced Content Filter integration guide}.
 </br></info-box>
 

@@ -111,4 +111,4 @@ config.on = {
 Refer to the following resources for more information about Easy Image:
 
 * {@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN.
-* {@link guide/dev/integration/cloudservices/README Cloud Services Integration} explains how to integrate Easy Image with CKEditor Cloud Services. 
+* {@link guide/dev/integration/cloudservices/README Cloud Services Integration} explains how to integrate Easy Image with CKEditor Cloud Services.

@@ -57,4 +57,4 @@ Refer to the following resources for more information about image support:
 
 * {@link guide/dev/features/image/README Default Image Plugin} offers pixel-perfect image alignment with vertical and horizotal whitespace, configurable image border and file manager integration.
 * {@link guide/dev/features/image2/README Enhanced Image} offers a clean UI with image captions, drag and drop positioning, click and drag resizing and file manager integration.
-* {@link guide/dev/integration/easyimage/README Easy Image Integration} explains how to enable the cloud services provider for Easy Image as well as how to customize some of its features.
+* {@link guide/dev/integration/easyimage_integration/README Easy Image Integration} explains how to enable the cloud services provider for Easy Image as well as how to customize some of its features.

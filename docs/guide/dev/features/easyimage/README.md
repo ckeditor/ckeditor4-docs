@@ -19,7 +19,7 @@ For licensing, see LICENSE.md.
 The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin introduces a new type of a captioned image widget that has the following capabilities:
 
 *  It allows for **uploading images** to [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) with a customizable upload progress indication.
-*  It allows for adding **image captions** (that will not be separated from the image when its location changes).
+*  It allows for adding **image captions** (that will not be separated from the image when its position changes).
 *  It has {@link guide/dev/deep_dive/widgets/README#common-usage-scenarios all advantages of widgets}, i.e. you can **treat the image and its caption as one entity** and select, delete, or move it in the editor content area as a whole.
 *  It supports **drag and drop** for changing the image position.
 *  It provides **image alignment** options through the balloon toolbar attached to the widget as well as the context menu.
@@ -57,3 +57,4 @@ Refer to the following resources for more information about image support:
 
 * {@link guide/dev/features/image/README Default Image Plugin} offers pixel-perfect image alignment with vertical and horizotal whitespace, configurable image border and file manager integration.
 * {@link guide/dev/features/image2/README Enhanced Image} offers a clean UI with image captions, drag and drop positioning, click and drag resizing and file manager integration.
+* {@link guide/dev/integration/easyimage/README Easy Image Integration} explains how to enable the cloud services provider for Easy Image as well as how to customize some of its features.

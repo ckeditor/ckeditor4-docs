@@ -12,13 +12,23 @@ For licensing, see LICENSE.md.
 
 # Easy Image Integration
 
-## Upload integration
+<info-box info="">
+    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder).
+</info-box>
 
-Easy Image uses [Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) backend by default, which needs to be configured before usage of Easy Image plugin. To configure Cloud Service provider, please refer to official [Cloud Services documentation](https://docs.ckeditor.com/cs/latest/index.html).
+{@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN. It needs to be integrated with a cloud services provider and offers some configuration options to customize aspects such as:
 
-## Responsiveness
+* Balloon toolbar buttons and context menu entries.
+* Available image styles.
+* Progress reporter.
 
-Output produced by Cloud Services is converted to include several versions of the uploaded images, which have different widths and are suitable for different types of devices. It's handled by `[srcset]` attribute for `img` tag and looks similar to the markup presented below:
+## Upload Integration
+
+In order to upload images by default the {@link guide/dev/features/easyimage/README Easy Image} feature uses the [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) backend. It needs to be configured before the first usage of the Easy Image plugin. To set up the cloud services provider, refer to the official [CKEditor Cloud Services documentation](https://docs.ckeditor.com/cs/latest/index.html).
+
+## Responsive Images
+
+Output produced by CKEditor Cloud Services is automatically converted to include several versions of the uploaded images, which have different widths and are suitable for different types of devices. It is handled by the `[srcset]` attribute for the `<img>` element and looks similar to the markup presented below:
 
 ```html
 <figure class="easyimage easyimage-full">
@@ -27,14 +37,19 @@ Output produced by Cloud Services is converted to include several versions of th
 </figure>
 ```
 
-## Custom styles with Classes
+## Custom Styles with Classes
 
-Easy Images's appearance can be easily altered by using custom styles. These styles could be applied via a balloon toolbar connected with every Easy Image widget or via context menu. By default there are two styles available:
+The appearance of images inserted with Easy Image can be easily altered by using custom styles defined by the editor implementer. These styles can then be applied by the user through the balloon toolbar connected with every Easy Image widget or with the context menu.
 
-*   Full Size Image – it stretches the widget to 100% of editor's width
-*   Side Image – it changes Easy Image width to 25% of editor's width and put it aside, on the right
+The following styles are available out-of-the-box, with the first two enabled by default:
 
-By default all styles are applied via CSS classes and produces markup similar to the on on the following snippet :
+*  Full Size Image &ndash; It stretches the image to 100% of the editor width.
+*  Side Image &ndash; It changes the image width to 25% of the editor width and puts it aside, on the right.
+*  Align Left &ndash; Aligns the image to the left.
+*  Align Center &ndash; Centers the image.
+*  Align Right &ndash; Aligns the image to the right.
+
+By default all styles are applied via CSS classes and produce a markup similar to the one below:
 
 ```html
 <figure class="easyimage easyimage-full">
@@ -43,14 +58,14 @@ By default all styles are applied via CSS classes and produces markup similar to
 </figure>
 ```
 
-All styles are customised by the {@linkapi CKEDITOR.config.easyimage_styles} option, which takes takes object with styles definitions.
+The image styles can be defined with the {@linkapi CKEDITOR.config.easyimage_styles} option that accepts an object with style definitions.
 
-For example, the following configuration:
+For example, the following configuration will modify the built-in Full Size Image (`full`) style and add a new one, Skip Border (`skipBorder`):
 
 ```javascript
 config.easyimage_styles = {
 	full: {
-		// Changes just the class name, label icon remains unchanged.
+		// Changes just the class name, the label icon remains unchanged.
 		attributes: {
 			'class': 'my-custom-full-class'
 		}
@@ -67,21 +82,19 @@ config.easyimage_styles = {
 };
 ```
 
-will modify built-in Full Size Image and add new one, `skipBorder`.
-
 Do remember, though, that you need to define the CSS rules for these classes in your stylesheet. Once this configuration option is set, corresponding style definitions must be supplied to the editor:
 
-*   For {@link guide/dev/framed/README classic editor} it can be done by defining additional styles in the stylesheets loaded by the editor. The same styles must be provided on the target page where the content will be loaded. Alternatively additional stylesheets could be added using {@linkapi CKEDITOR.config.contentsCss}.
-*   For {@link guide/dev/inline/README inline editor} the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">`, i.e. within the `<head>` section of the page.
+*   For {@link guide/dev/framed/README classic editor} it can be done by defining additional styles in the stylesheets loaded by the editor. The same styles must be provided on the target page where the content will be loaded. Alternatively additional stylesheets can be added using {@linkapi CKEDITOR.config.contentsCss}.
+*   For {@link guide/dev/inline/README inline editor} the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">` elements, within the `<head>` section of the page.
 * For both types of editors the styles can be defined using {@linkapi CKEDITOR.addCss}.
 
-You need also to enable these custom styles to the user by adding them to the Easy Image balloon toolbar via {@linkapi CKEDITOR.config.easyimage_toolbar}. This option will also integrate your styles with context menu.
+You also need to enable these custom styles to the user by adding them to the Easy Image balloon toolbar with the {@linkapi CKEDITOR.config.easyimage_toolbar} configuration option. This option will also integrate your styles with the context menu.
 
-## Custom Reporters
+## Custom Progress Reporters
 
-It also possible to customize upload progress reporters via widget's definition {@linkapi CKEDITOR.plugins.imagebase.featuresDefinitions.upload#progressReporterType} property. By default there is only one type of upload progress reporter, progress bar.
+It also possible to customize the upload progress reporters through the widget's definition {@linkapi CKEDITOR.plugins.imagebase.featuresDefinitions.upload#progressReporterType} property. By default there is only one type of upload progress reporter available, the progress bar.
 
-You are able to add your own types of upload progress reporters by subclassing {@linkapi CKEDITOR.plugins.imagebase.progressReporter} and then using your subclass to modify Easy Image widget definition:
+You can add your own types of upload progress reporters by subclassing {@linkapi CKEDITOR.plugins.imagebase.progressReporter} and then using your subclass to modify the Easy Image widget definition:
 
 ```javascript
 config.on = {
@@ -92,3 +105,10 @@ config.on = {
 	}
 };
 ```
+
+## Related Features
+
+Refer to the following resources for more information about Easy Image:
+
+* {@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN.
+* {@link guide/dev/integration/cloudservices/README Cloud Services Integration} explains how to integrate Easy Image with CKEditor Cloud Services. 

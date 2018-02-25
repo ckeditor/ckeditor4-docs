@@ -18,7 +18,7 @@ For licensing, see LICENSE.md.
 
 The optional [Enhanced Image](https://ckeditor.com/cke4/addon/image2) plugin introduces a new widget type &mdash; a captioned image. It replaces the standard [Image](https://ckeditor.com/cke4/addon/image) plugin with a new captioned image that has the following capabilities:
 
-* It allows for adding **image captions** (that will not be separated from the image when its location changes).
+* It allows for adding **image captions** (that will not be separated from the image when its position changes).
 * It has {@link guide/dev/deep_dive/widgets/README#common-usage-scenarios all advantages of widgets}, i.e. you can **treat the image and its caption as one entity** and select, delete, or move it in the editor content area as a whole.
 * It supports **drag and drop** for changing the image position.
 * It provides **image alignment**, including centering, with inline styles or CSS classes.

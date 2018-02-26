@@ -16,7 +16,11 @@ For licensing, see LICENSE.md.
     This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder).
 </info-box>
 
-{@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN. It needs to be integrated with a cloud services provider and offers some configuration options to customize aspects such as:
+{@link guide/dev/features/easyimage/README Easy Image} guarantees that all images inserted into your content are responsive. With a single image upload, several optimized versions of the image are created after upload by [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/), for different sizes of displays. All this is transparent to the end user who uploaded the image. Rescaled and optimized images are delivered through a blazing-fast CDN.
+
+<img src="https://docs.ckeditor.com/ckeditor5/latest/assets/img/easy-image.png" width="1440" alt="Responsive images with Easy Image.">
+
+The [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin needs to be integrated with a cloud services provider and offers some configuration options to customize aspects such as:
 
 * Balloon toolbar buttons and context menu entries.
 * Available image styles.
@@ -24,7 +28,11 @@ For licensing, see LICENSE.md.
 
 ## Upload Integration
 
-In order to upload images by default the {@link guide/dev/features/easyimage/README Easy Image} feature uses the [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) backend. It needs to be configured before the first usage of the Easy Image plugin. To set up the cloud services provider, refer to the official [CKEditor Cloud Services documentation](https://docs.ckeditor.com/cs/latest/index.html).
+In order to upload images by default the {@link guide/dev/features/easyimage/README Easy Image} feature uses the [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) backend. It needs to be configured before the first usage of the Easy Image plugin.
+
+To set up the cloud services provider, refer to the official [CKEditor Cloud Services documentation](https://docs.ckeditor.com/cs/latest/index.html).
+
+When your CKEditor Cloud Services account is up and running, you need to configure CKEditor to use it as explained in the {@link guide/dev/integration/cloudservices/README CKEditor Cloud Services Integration} article. 
 
 ## Responsive Images
 
@@ -111,4 +119,4 @@ config.on = {
 Refer to the following resources for more information about Easy Image:
 
 * {@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN.
-* {@link guide/dev/integration/cloudservices/README Cloud Services Integration} explains how to integrate Easy Image with CKEditor Cloud Services.
+* {@link guide/dev/integration/cloudservices/README CKEditor Cloud Services Integration} explains how to integrate Easy Image with CKEditor Cloud Services.

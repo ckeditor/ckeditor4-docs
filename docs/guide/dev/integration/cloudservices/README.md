@@ -2,15 +2,15 @@
 category: integration
 order: 40
 url: guide/dev_cloudservices
-menu-title: Cloud Services
-meta-title-short: Cloud Services
+menu-title: CKEditor Cloud Services
+meta-title-short: CKEditor Cloud Services
 ---
 <!--
 Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Cloud Services Integration
+# CKEditor Cloud Services Integration
 
 <info-box info="">
     This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/plugins/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder).
@@ -20,10 +20,10 @@ The optional [Cloud Services plugin](https://ckeditor.com/cke4/addon/cloudservic
 
 The plugin exports {@linkapi CKEDITOR.plugins.cloudservices.cloudServicesLoader} &mdash; a class that can be used as a custom upload handler, for example replacing the one implemented in the [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin. It is also the default file loader used in the [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin.
 
-CKEditor Cloud Services requires two config options to be set:
+CKEditor Cloud Services requires two configuration options to be set:
 
-*   {@linkapi CKEDITOR.config.cloudServices_url} &ndash; The URL to the cloud services upload endpoint. Please refer to the [official CKEditor Cloud Services documentation about endpoints](https://docs.ckeditor.com/cs/latest/guides/token-endpoints/tokenendpoint.html) for more information.
-*   {@linkapi CKEDITOR.config.cloudServices_token} &ndash; The authorization token needed to use the upload endpoint, unique to your CKEditor Cloud Services account.
+* {@linkapi CKEDITOR.config.cloudServices_url} &ndash; The URL to the cloud services upload endpoint. Please refer to the [official CKEditor Cloud Services documentation about endpoints](https://docs.ckeditor.com/cs/latest/guides/token-endpoints/tokenendpoint.html) for more information.
+* {@linkapi CKEDITOR.config.cloudServices_token} &ndash; The authorization token needed to use the upload endpoint, unique to your CKEditor Cloud Services account.
 
 For further information about CKEditor Cloud Services integration, please refer to the official [CKEditor Cloud Services documentation](https://docs.ckeditor.com/cs/latest/index.html).
 

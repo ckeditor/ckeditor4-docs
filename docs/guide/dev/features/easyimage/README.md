@@ -16,7 +16,8 @@ For licensing, see LICENSE.md.
     This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder).
 </info-box>
 
-The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin introduces a new type of a captioned image widget that has the following capabilities:
+The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin 
+lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN. It introduces a new type of a captioned image widget that has the following capabilities:
 
 *  It allows for **uploading images** to [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) with a customizable upload progress indication.
 *  It allows for adding **image captions** (that will not be separated from the image when its position changes).

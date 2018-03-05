@@ -182,7 +182,7 @@ Element and property names can also be specified in more variants &mdash; as obj
 
 	allowedContent: {
 		img: {
-			attributes: [ '!src', 'alt', width', 'height' ],
+			attributes: [ '!src', 'alt', 'width', 'height' ],
 			classes: { tip: true }
 		},
 		// $<n> is a rule name - it does not match element names.

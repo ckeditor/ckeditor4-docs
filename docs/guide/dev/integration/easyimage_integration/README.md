@@ -32,16 +32,16 @@ In order to upload images by default the {@link guide/dev/features/easyimage/REA
 
 To set up the cloud services provider, refer to the official [CKEditor Cloud Services documentation](https://docs.ckeditor.com/cs/latest/index.html).
 
-When your CKEditor Cloud Services account is up and running, you need to configure CKEditor to use it as explained in the {@link guide/dev/integration/cloudservices/README CKEditor Cloud Services Integration} article. 
+When your CKEditor Cloud Services account is up and running, you need to configure CKEditor to use it as explained in the {@link guide/dev/integration/cloudservices/README CKEditor Cloud Services Integration} article.
 
 ## Responsive Images
 
 Output produced by CKEditor Cloud Services is automatically converted to include several versions of the uploaded images, which have different widths and are suitable for different types of devices. It is handled by the `[srcset]` attribute for the `<img>` element and looks similar to the markup presented below:
 
 ```html
-<figure class="easyimage easyimage-full">
-	<img alt="Developer resting under a palm tree" width="1026" srcset="https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_110 110w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_220 220w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_330 330w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_440 440w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_550 550w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_660 660w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_770 770w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_880 880w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_990 990w, https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png/w_1026 1026w" sizes="100vw" src="https://cdn.cke-cs.com/f0pqzdtf0yRhaX1FymZU/images/b21777b6cdb9359c2ad629a79878c2a643a958964d0096de_photo.png" />
-	<figcaption>The best rest is under a palm tree</figcaption>
+<figure class="easyimage">
+	<img alt="Three Monks walking on ancient temple." width="820" srcset="https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_90 90w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_180 180w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_270 270w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_360 360w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_450 450w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_540 540w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_630 630w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_720 720w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_810 810w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg/w_820 820w" sizes="100vw" src="https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg" />
+	<figcaption>Leaving your comfort zone might lead you to such beautiful sceneries like this one.</figcaption>
 </figure>
 ```
 
@@ -61,7 +61,7 @@ By default all styles are applied via CSS classes and produce a markup similar t
 
 ```html
 <figure class="easyimage easyimage-full">
-  <img alt="MyImage" src="%BASE_PATH%/assets/img/myimage.png"/>
+  <img alt="Three Monks walking on ancient temple." width="820" srcset="[…]" sizes="100vw" src="https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/80b10f36950c55c6bb4c515f10546d5a6b413699c520b7d7_umbrellas.jpg" />
   <figcaption></figcaption>
 </figure>
 ```

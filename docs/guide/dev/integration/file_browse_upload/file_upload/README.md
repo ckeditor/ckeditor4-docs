@@ -15,7 +15,7 @@ For licensing, see LICENSE.md.
 <info-box info=""> Uploading pasted and dragged images was introduced in <strong>CKEditor 4.5</strong>. It is provided through an optional <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
 </info-box>
 
-Starting from CKEditor 4.5 it is possible to enable uploading pasted and dropped images. This article is about the editor-server configuration for pasted and dropped files since it uses a different API than the {@link guide/dev/configuration/file_browse_upload/file_browser_api/README File Browser} plugin. To get an overview about this feature, refer to the {@link guide/dev/features/drop_paste/README Dropping and Pasting into Editor Content} article.
+Starting from CKEditor 4.5 it is possible to enable uploading pasted and dropped images. This article is about the editor-server configuration for pasted and dropped files since it uses a different API than the {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser} plugin. To get an overview about this feature, refer to the {@link guide/dev/features/drop_paste/README Dropping and Pasting into Editor Content} article.
 
 ## Basic Configuration
 
@@ -46,7 +46,7 @@ To make uploading on drop or paste work you need a server-side application that 
 
 ### Server-Side Configuration
 
-The [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin uses a different API than the {@link guide/dev/configuration/file_browse_upload/file_browser_api/README File Browser} plugin and expects JSON responses.
+The [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) plugin uses a different API than the {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser} plugin and expects JSON responses.
 
 #### Request
 
@@ -202,7 +202,7 @@ For example if the response is `fileUrl|optionalErrorMessage`:
 
 ### Integration with CKFinder
 
-CKEditor can be easily integrated with [CKFinder](http://cksource.com/ckfinder), an advanced Ajax file manager. See {@link guide/dev/configuration/file_browse_upload/README#using-ckfinder CKFinder Integration} for more information.
+CKEditor can be easily integrated with [CKFinder](http://cksource.com/ckfinder), an advanced Ajax file manager. See {@link guide/dev/integration/file_browse_upload/README#using-ckfinder CKFinder Integration} for more information.
 
 <info-box info=""> Uploading dropped or pasted files will work for CKFinder 2.5+ and CKFinder 3.x.
 </info-box>
@@ -224,10 +224,10 @@ See the [working "Uploading Dropped and Pasted Images" sample](https://sdk.ckedi
 
 For more information on pasting, dropping and uploading files with CKEditor refer to the following articles:
 
-* {@link guide/dev/configuration/file_browse_upload/README File Manager Integration}
-* {@link guide/dev/configuration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}
-* {@link guide/dev/configuration/file_browse_upload/ckfinder_integration/README CKFinder Integration}
-* {@link guide/dev/configuration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
-* {@link guide/dev/configuration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
+* {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
+* {@link guide/dev/integration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}
+* {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration}
+* {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
+* {@link guide/dev/integration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
 * {@link guide/dev/features/drop_paste/README Dropping and Pasting into Editor Content}
 * {@link guide/dev/deep_dive/clipboard/README Clipboard Integration}

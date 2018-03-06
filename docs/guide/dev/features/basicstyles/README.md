@@ -113,7 +113,7 @@ Remember that depending on your use case, the CSS classes for basic text styles 
  is enabled (the deafult option), and applies to a handful of pre-defined transformations.
  </p>
  <p>
- 	Custom basic style definitions are automatically integrated with {@link guide/dev/configuration/acf/README Advanced Content Filter} and are treated as allowed by the editor content filtering mechanism.
+ 	Custom basic style definitions are automatically integrated with {@link guide/dev/acf/README Advanced Content Filter} and are treated as allowed by the editor content filtering mechanism.
  </p>
 </info-box>
 

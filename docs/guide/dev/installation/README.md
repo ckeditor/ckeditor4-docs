@@ -85,7 +85,7 @@ Instead of downloading CKEditor to your server and hosting it you can also use t
 Go ahead and play a bit more with the sample; try to change your configuration as suggested to customize it. And when you are ready to dive a bit deeper into CKEditor, you can try the following:
 
 1. Check the {@link guide/dev/configuration/README Setting Configuration} article to see how to adjust the editor to your needs.
-1. Get familiar with {@link guide/dev/configuration/acf/README Advanced Content Filter}. This is a useful tool that adjusts the content inserted into CKEditor to the features that are enabled and filters out disallowed content.
+1. Get familiar with {@link guide/dev/acf/README Advanced Content Filter}. This is a useful tool that adjusts the content inserted into CKEditor to the features that are enabled and filters out disallowed content.
 1. {@link guide/dev/features/toolbar/README Modify your toolbar} to only include the features that you need. You can find the useful visual toolbar configurator directly in your editor sample.
 1. Learn about CKEditor features in the {@link guide/dev/features/README Functionality Overview} section.
 1. Visit the [CKEditor SDK](http://sdk.ckeditor.com) to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.

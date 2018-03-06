@@ -55,7 +55,7 @@ Paste from Word maintains most of Microsoft Word text formatting features with s
 
 Pasting from Word is, in general, as tricky as it can get. With plenty of possible combinations of Microsoft Word, operating system and browser versions Word output that comes through clipboard to CKEditor can significantly differ. This makes it extremely hard to support some of the more complicated content formatting cases that include text, images, lists, tables, nested objects, plenty of colors, styles and so on.
 
-CKEditor has always been a market leader in parsing Word content and transforming it to valid HTML, but handling some of the more complex cases and working around vendor bugs takes a lot of time, effort and experience. With some new tools available, such as {@link guide/dev/configuration/acf/README Advanced Content Filter} or {@link guide/dev/features/drop_paste/README Clipboard API}, we have decided to rewrite the Paste from Word feature from scratch.
+CKEditor has always been a market leader in parsing Word content and transforming it to valid HTML, but handling some of the more complex cases and working around vendor bugs takes a lot of time, effort and experience. With some new tools available, such as {@link guide/dev/acf/README Advanced Content Filter} or {@link guide/dev/features/drop_paste/README Clipboard API}, we have decided to rewrite the Paste from Word feature from scratch.
 
 Here are some areas where the new, Advanced Paste from Word really shines:
 
@@ -117,6 +117,6 @@ Refer to the following resources for more information about pasting content:
 
 * The {@link guide/dev/features/pastefromexcel/README Pasting content from Microsoft Excel} article contains more information about the Paste from Excel feature.
 * The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.
-* The {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
-* The {@link guide/dev/configuration/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.
+* The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
+* The {@link guide/dev/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.
 * The {@link guide/dev/features/styles/README Applying Styles to Editor Content} article discusses creating more semantically correct text styles.

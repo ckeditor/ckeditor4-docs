@@ -110,11 +110,11 @@ This article contains the list of CKEditor error codes and their explanation. Th
 ## uploadimage-config
 
 * Location: `plugins/uploadimage/plugin.js`
-* Description: Upload URL for the Upload Image feature was not defined. Refer to the {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
+* Description: Upload URL for the Upload Image feature was not defined. Refer to the {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
 * Additional data: None.
 
 ## uploadfile-config
 
 * Location: `plugins/uploadfile/plugin.js`
-* Description: Upload URL for the Upload File feature was not defined. Refer to the {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
+* Description: Upload URL for the Upload File feature was not defined. Refer to the {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
 * Additional data: None.

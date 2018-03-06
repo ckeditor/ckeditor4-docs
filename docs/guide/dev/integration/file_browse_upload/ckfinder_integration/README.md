@@ -123,8 +123,8 @@ If you are using CKFinder for ASP, ASP.NET, Java, or ColdFusion, remember to cha
 
 For more information on integrating CKEditor with a file manager refer to the following articles:
 
-* {@link guide/dev/configuration/file_browse_upload/README File Manager Integration}
-* {@link guide/dev/configuration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}
-* {@link guide/dev/configuration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
-* {@link guide/dev/configuration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
-* {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Pasted and Dropped Files}
+* {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
+* {@link guide/dev/integration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}
+* {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
+* {@link guide/dev/integration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
+* {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Pasted and Dropped Files}

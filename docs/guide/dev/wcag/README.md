@@ -29,7 +29,7 @@ Information and user interface components must be presentable to users in ways t
 			<th scope="col" colspan="4">1.1 Text Alternatives: Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols or simpler language.</th>
 		</tr>
 		<tr>
-			<td><b>1.1.1 Non-text Content:</b> All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.
+			<td id="text-alternative"><b>1.1.1 Non-text Content:</b> All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.
 				<ul>
 					<li><b>Controls, Input:</b> If non-text content is a control or accepts user input, then it has a name that describes its purpose.</li>
 					<li><b>Time-Based Media:</b> If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content.</li>

@@ -18,7 +18,7 @@ For licensing, see LICENSE.md.
 CKEditor consists of a number of {@linkapi CKEDITOR.feature editor features} like
 commands, buttons, drop-down lists, or dialog windows. The role of plugins is
 to extend the set of available features. However, **since the introduction of
-{@link guide/dev/configuration/acf/README Advanced Content Filter},
+{@link guide/dev/acf/README Advanced Content Filter},
 features, and the content they generate, are subject to filtering**.
 
 The introduction of Advanced Content Filter (ACF) have impacted the plugin
@@ -266,7 +266,7 @@ Refer to the following resources for more information about creating CKEditor pl
 
 Refer to the following resources for more information about content filtering:
 
-* The {@link guide/dev/configuration/acf/README Content Filtering (ACF)} article explains some ACF use cases and the rationale behind this feature.
+* The {@link guide/dev/acf/README Content Filtering (ACF)} article explains some ACF use cases and the rationale behind this feature.
 * The {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filer} article contains more in-depth technical details about ACF.
 * The {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README Allowed Content Rules} article explains the allowed and disallowed content rules format.
 * The {@link guide/dev/deep_dive/advanced_content_filter/disallowed_content/README Disallowed Content} article explains how blacklisting works in ACF.

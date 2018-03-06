@@ -21,14 +21,14 @@ The default [Image](https://ckeditor.com/cke4/addon/image) plugin supports inser
 * It allows for **pixel-perfect alignment** of images inside the editor content by setting horizontal and vertical whitespace.
 * It supports **left and right image alignment** as well as setting **image border**.
 * It provides **image preview**.
-* It supports **adding links to images** through the dedicated Link tab directly in the Image Properties dialog. 
+* It supports **adding links to images** through the dedicated Link tab directly in the Image Properties dialog.
 * It can be integrated with a **file manager** of your choice such as [CKFinder](https://ckeditor.com/ckeditor-4/ckfinder/) for image upload and storage support.
 
 <info-box info="">
     If you are looking for more modern image support with a clean UI and features such as image captions, drag and drop positioning, click and drag resizing, image alignment (including centering) with inline styles or CSS classes, custom image styles or cloud storage support with optimized images and responsive markup, try {@link guide/dev/features/image2/README Enhanced Image} and {@link guide/dev/features/easyimage/README Easy Image} plugins.
 </info-box>
 
-Below you can see a document with images inserted into the editor content with the default Image plugin.
+Below you can see a document with image inserted into the editor content with the default Image plugin.
 
 {@img assets/img/image_01.png Images inserted into CKEditor content with the Image plugin}
 

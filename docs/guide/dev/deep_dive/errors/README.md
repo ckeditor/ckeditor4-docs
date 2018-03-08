@@ -26,19 +26,19 @@ This article contains the list of CKEditor error codes and their explanation. Th
 ## cloudservices-no-upload-url
 
 * Location: `plugins/cloudservices/plugin.js`
-* Description: Upload URL for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not defined.
+* Description: {@linkapi CKEDITOR.config.cloudServices_uploadUrl} for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
 * Additional data: None.
 
 ## cloudservices-no-token-url
 
 * Location: `plugins/cloudservices/plugin.js`
-* Description: The {@link CKEDITOR.config.cloudServices_tokenUrl} config was not specified.
+* Description: The {@linkapi CKEDITOR.config.cloudServices_tokenUrl} config was not specified.
 * Additional data: None.
 
 ## cloudservices-no-token
 
 * Location: `plugins/cloudservices/plugin.js`
-* Description: Authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not defined.
+* Description: Authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.cloudServices_tokenUrl token URL} returned an empty response.
 * Additional data: None.
 
 ## editor-destroy-iframe

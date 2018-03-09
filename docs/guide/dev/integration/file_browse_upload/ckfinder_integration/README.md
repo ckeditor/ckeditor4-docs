@@ -15,7 +15,7 @@ CKFinder is a <a href="http://cksource.com/ckfinder">commercial application</a> 
 
 ## CKFinder 3
 
-[CKFinder 3](https://cksource.com/ckfinder/demo) for PHP was released in June 2015. ASP.NET and Java versions are now under development. The ASP and ColdFusion distributions of CKFinder will not be upgraded to version 3, however, they will still receive patches (including security fixes) until 2019.
+[CKFinder 3](https://cksource.com/ckfinder/demo) is available for PHP and ASP.NET.
 
 The integration with CKFinder 3 can be conducted in two ways:
 

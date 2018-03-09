@@ -22,8 +22,8 @@ The plugin exports {@linkapi CKEDITOR.plugins.cloudservices.cloudServicesLoader}
 
 CKEditor Cloud Services requires two configuration options to be set:
 
-* {@linkapi CKEDITOR.config.cloudServices_url} &ndash; The URL to the cloud services upload endpoint. Please refer to the [official CKEditor Cloud Services documentation about endpoints](https://docs.ckeditor.com/cs/latest/guides/token-endpoints/tokenendpoint.html) for more information.
-* {@linkapi CKEDITOR.config.cloudServices_token} &ndash; The authorization token needed to use the upload endpoint, unique to your CKEditor Cloud Services account.
+* {@linkapi CKEDITOR.config.cloudServices_uploadUrl} &ndash; The URL to the Cloud Services upload endpoint. Please refer to the [official CKEditor Cloud Services documentation about endpoints](https://docs.ckeditor.com/cs/latest/guides/token-endpoints/tokenendpoint.html) for more information.
+* {@linkapi CKEDITOR.config.cloudServices_tokenUrl} &ndash; The URL to the Cloud Services token generation endpoint, unique to your CKEditor Cloud Services account.
 
 For further information about CKEditor Cloud Services integration, please refer to the official [CKEditor Cloud Services documentation](https://docs.ckeditor.com/cs/latest/index.html).
 

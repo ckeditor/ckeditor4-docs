@@ -78,7 +78,7 @@ Firstly, you will need to know the names of the dialog window and the tab that y
 
 Once you have the names you can add the following code into the page that contains your CKEditor instance. The example below sets the [Image Properties](https://ckeditor.com/cke4/addon/image) dialog window to open the **Link** tab by default.
 
-	{@linkapi CKEDITOR.on CKEDITOR.on}('dialogDefinition', function( ev ) {
+	{@linkapi CKEDITOR.on CKEDITOR.on}( 'dialogDefinition', function( ev ) {
 		// Take the dialog window name and its definition from the event data.
 		var dialogName = ev.data.name;
 		var dialogDefinition = ev.data.definition;

@@ -115,7 +115,7 @@ When you want to reopen the class declaration in another file, use this:
 
 The order of tags may look strange, but you can remember it thanks to the following description:
 
-> Since 3.0 there is a private class {@linkapi CKEDITOR.editor CKEDITOR.editor} which extends {@linkapi CKEDITOR.parent CKEDITOR.parent} and mixins {@linkapi CKEDITOR.event CKEDITOR.event} and {@linkapi CKEDITOR.whatever CKEDITOR.whatever}.
+> Since 3.0 there is a private class `{@linkapi CKEDITOR.editor CKEDITOR.editor}` which extends `{@linkapi CKEDITOR.parent CKEDITOR.parent}` and mixins `{@linkapi CKEDITOR.event CKEDITOR.event}` and `{@linkapi CKEDITOR.whatever CKEDITOR.whatever}`.
 >
 > It has a private constructor (switched order &mdash; explained later in the tags list) which accepts the following parameters: ...
 

@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Easy Image Plugin
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder).
+    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder). Additionally, you need to remove the default [Image](https://ckeditor.com/cke4/addon/image) plugin from your editor, either with CKBuilder or through the {@linkapi CKEDITOR.config.removePlugins configuration}.
 </info-box>
 
 The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin lets you insert images which are **automatically rescaled**, **optimized**, **responsive** and delivered through a **blazing-fast CDN**. It introduces a new type of a captioned image widget that has the following capabilities:

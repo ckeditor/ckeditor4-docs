@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Easy Image Integration
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder).
+    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder). Additionally, you need to remove the default [Image](https://ckeditor.com/cke4/addon/image) plugin from your editor, either with CKBuilder or through the {@linkapi CKEDITOR.config.removePlugins configuration}.
 </info-box>
 
 {@link guide/dev/features/easyimage/README Easy Image} guarantees that all images inserted into your content are responsive. With a single image upload, several optimized versions of the image are created after upload by [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/), for different sizes of displays. All this is transparent to the end user who uploaded the image. Rescaled and optimized images are delivered through a blazing-fast CDN.

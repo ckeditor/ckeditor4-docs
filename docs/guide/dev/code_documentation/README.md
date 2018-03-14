@@ -52,7 +52,7 @@ The `@license` and `@fileOverview` tags are legacy comments that will not be par
 	 */
 
 	/**
-	 * @fileOverview Defines the {@linkapi CKEDITOR.editor } class that represents an
+	 * @fileOverview Defines the \{@linkapi CKEDITOR.editor\} class that represents an
 	 * editor instance.
 	 */
 
@@ -64,10 +64,10 @@ This is an example of a class definition. It contains so many tags to show their
 
 	/**
 	 * Represents an editor instance. This constructor should be rarely
-	 * used, in favor of the {@linkapi CKEDITOR } editor creation functions.
+	 * used, in favor of the \{@linkapi CKEDITOR\} editor creation functions.
 	 *
 	 * ```js
-	 *	var editor = new {@linkapi CKEDITOR.editor CKEDITOR.editor}();
+	 *	var editor = new \{@linkapi CKEDITOR.editor CKEDITOR.editor\}();
 	 *		editor.setSomething( name, {
 	 *		value: 1
 	 *	} );
@@ -75,18 +75,18 @@ This is an example of a class definition. It contains so many tags to show their
 	 *
 	 * @since 3.0
 	 * @private
-	 * @class {@linkapi CKEDITOR.editor CKEDITOR.editor}
-	 * @extends {@linkapi CKEDITOR.parent CKEDITOR.parent}
-	 * @mixins {@linkapi CKEDITOR.event CKEDITOR.event}
-	 * @mixins {@linkapi CKEDITOR.whatever CKEDITOR.whatever}
+	 * @class \{@linkapi CKEDITOR.editor CKEDITOR.editor\}
+	 * @extends \{@linkapi CKEDITOR.parent CKEDITOR.parent\}
+	 * @mixins \{@linkapi CKEDITOR.event CKEDITOR.event\}
+	 * @mixins \{@linkapi CKEDITOR.whatever CKEDITOR.whatever\}
 	 * @constructor Creates an editor class instance.
 	 * @param {Object} [instanceConfig] Configuration values for this specific instance.
-	 * @param {Number} [mode={@linkapi CKEDITOR.SOURCE_MODE CKEDITOR.SOURCE_MODE}] The element creation mode to be used by this editor.
+	 * @param {Number} [mode=\{@linkapi CKEDITOR.SOURCE_MODE CKEDITOR.SOURCE_MODE\}] The element creation mode to be used by this editor.
 	 *
 	 * Possible values are:
 	 *
-	 * * {@linkapi CKEDITOR.SOURCE_MODE CKEDITOR.SOURCE_MODE} - description 1,
-	 * * {@linkapi CKEDITOR.WYSIWYG_MODE CKEDITOR.WYSIWYG_MODE} - description 2 long long long
+	 * * \{@linkapi CKEDITOR.SOURCE_MODE CKEDITOR.SOURCE_MODE\} - description 1,
+	 * * \{@linkapi CKEDITOR.WYSIWYG_MODE CKEDITOR.WYSIWYG_MODE\} - description 2 long long long
 	 *      long long long long long,
 	 * * CKEDITOR.ANOTHER_MODE - description 3.
 	 *
@@ -100,7 +100,7 @@ A minimal class documentation:
 
 	/**
 	 * Represents an editor instance. This constructor should be rarely
-	 * used, in favor of the {@linkapi CKEDITOR } editor creation functions.
+	 * used, in favor of the \{@linkapi CKEDITOR\} editor creation functions.
 	 *
 	 * @class
 	 */
@@ -109,20 +109,20 @@ A minimal class documentation:
 
 When you want to reopen the class declaration in another file, use this:
 
-	/** @class {@linkapi CKEDITOR.editor CKEDITOR.editor} */
+	/** @class \{@linkapi CKEDITOR.editor CKEDITOR.editor\} */
 
 #### Details
 
 The order of tags may look strange, but you can remember it thanks to the following description:
 
-> Since 3.0 there is a private class `{@linkapi CKEDITOR.editor}` which extends `{@linkapi CKEDITOR.parent}` and mixins `{@linkapi CKEDITOR.event}` and `{@linkapi CKEDITOR.whatever}`.
+> Since 3.0 there is a private class `CKEDITOR.editor` which extends `CKEDITOR.parent` and mixins `CKEDITOR.event` and `CKEDITOR.whatever`.
 >
 > It has a private constructor (switched order &mdash; explained later in the tags list) which accepts the following parameters: ...
 
 Important tag details:
 
 * By default private classes will not be visible in the packages tree.
-* A good example of the difference between "mixins" and "extends" is that {@linkapi CKEDITOR.event CKEDITOR.event} is mixed in various other classes and the `CKEDITOR.dom.*` structure is based on extending parent classes.
+* A good example of the difference between "mixins" and "extends" is that {@linkapi CKEDITOR.event `CKEDITOR.event`} is mixed in various other classes and the `CKEDITOR.dom.*` structure is based on extending parent classes.
 * A constructor is in fact a separate documentation "instance", because it will be listed with methods. Thus, it may have its own `@private`, but it has to be placed below it, because everything before will be a part of the class description. However, two `@private` tags in one comment will not be accepted by JSLinter, so in this case the documentation should be split into two comments.
 
 	A constructor can also be declared completely independently from the class, which is useful when {@linkapi CKEDITOR.tools.createClass CKEDITOR.tools.createClass} has been used.
@@ -142,7 +142,7 @@ The following is an example of property documentation.
 	 * @readonly
 	 * @static
 	 * @property {String/Boolean} [complicatedName=default value]
-	 * @member {@linkapi CKEDITOR.editor CKEDITOR.editor}
+	 * @member \{@linkapi CKEDITOR.editor CKEDITOR.editor\}
 	 */
 	obj[ 'complicated' + 'Name' ] = this.name || genEditorName();
 
@@ -192,22 +192,22 @@ To define a configuration variable instead of a property:
 The following is an example of method documentation.
 
 	/**
-	 * The {@linkapi CKEDITOR.dom.element} representing an element. If the
+	 * The \{@linkapi CKEDITOR.dom.element\} representing an element. If the
 	 * element is a native DOM element, it will be transformed into a valid
-	 * {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element} object.
+	 * \{@linkapi CKEDITOR.dom.element CKEDITOR.dom.element\} object.
 	 *
 	 * ```js
-	 *	var element = new {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element}( 'span' );
-	 *	alert( element == {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ) ); // true
+	 *	var element = new \{@linkapi CKEDITOR.dom.element CKEDITOR.dom.element\}( 'span' );
+	 *	alert( element == \{@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get\}( element ) ); // true
 	 *
 	 *	var element = document.getElementById( 'myElement' );
-	 *	alert( {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ).getName() ); // (e.g.) 'p'
+	 *	alert( \{@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get\}( element ).getName() ); // (e.g.) 'p'
 	 * ```
 	 *
 	 * @private
 	 * @static
 	 * @method complicatedName
-	 * @member {@linkapi CKEDITOR.editor CKEDITOR.editor}
+	 * @member \{@linkapi CKEDITOR.editor CKEDITOR.editor\}
 	 * @param {String/Object} element Element's ID or name or a native DOM element.
 	 * @param {Function} fn Callback.
 	 * @param {String} fn.firstArg Callback's first argument.

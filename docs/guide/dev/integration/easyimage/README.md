@@ -28,8 +28,13 @@ config.removePlugins = 'image';
 
 To help you in getting started, below you can find direct links to the online builder with Easy Image already included (and the default Image plugin removed):
 
- * [CKBuilder &ndash; Standard preset with Easy Image](https://ckeditor.com/cke4/builder)
- * [CKBuilder &ndash; Full preset with Easy Image](https://ckeditor.com/cke4/builder)
+* [CKBuilder &ndash; Standard preset with Easy Image](https://ckeditor.com/builder/39259278af0fe338c48adfab9e43b84d)
+ * [CKBuilder &ndash; Full preset with Easy Image](https://ckeditor.com/builder/4d501d9b39bd719f769d353e9d313693)
+
+If you prefer to simply download a zip package:
+
+ * [Standard preset with Easy Image](https://ckeditor.com/builder/download/39259278af0fe338c48adfab9e43b84d)
+ * [Full preset with Easy Image](https://ckeditor.com/builder/download/4d501d9b39bd719f769d353e9d313693)
 
 ### Sign up to CKEditor Cloud Services (Easy Image)
 

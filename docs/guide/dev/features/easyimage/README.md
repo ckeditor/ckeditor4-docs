@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Easy Image Plugin
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with [CKBuilder](https://ckeditor.com/cke4/builder). Additionally, you need to remove the default [Image](https://ckeditor.com/cke4/addon/image) plugin from your editor, either with CKBuilder or through the {@linkapi CKEDITOR.config.removePlugins configuration}.
+    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Follow the {@link guide/dev/integration/easyimage/README Easy Image Integration} guide to enable it.
 </info-box>
 
 The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin lets you insert images which are **automatically rescaled**, **optimized**, **responsive** and delivered through a **blazing-fast CDN**. It introduces a new type of a captioned image widget that has the following capabilities:
@@ -29,6 +29,8 @@ The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin lets
 Below you can see an image inserted into the editor content with Easy Image. When you hover it with your mouse, the editable areas (the image and its caption) become outlined.
 
 {@img assets/img/easyimage_01.png Easy Image in the editor content}
+
+You can find some additional information about the Easy Image service in the [Cloud Services - Easy Image Overview](https://docs.ckeditor.com/cs/latest/guides/overview.html#easy-image) guide.
 
 ## Custom Styles with Classes
 
@@ -57,4 +59,4 @@ Refer to the following resources for more information about image support:
 
 * {@link guide/dev/features/image/README Default Image Plugin} offers pixel-perfect image alignment with vertical and horizotal whitespace, configurable image border and file manager integration.
 * {@link guide/dev/features/image2/README Enhanced Image} offers a clean UI with image captions, drag and drop positioning, click and drag resizing and file manager integration.
-* {@link guide/dev/integration/easyimage_integration/README Easy Image Integration} explains how to enable the cloud services provider for Easy Image as well as how to customize some of its features.
+* {@link guide/dev/integration/easyimage/README Easy Image Integration} explains how to enable the cloud services provider for Easy Image as well as how to customize some of its features.

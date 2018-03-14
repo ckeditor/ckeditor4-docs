@@ -1,6 +1,6 @@
 ---
 category: integration
-order: 20
+order: 40
 url: guide/dev_jquery
 menu-title: jQuery Adapter
 meta-title-short: jQuery Adapter

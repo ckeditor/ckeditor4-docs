@@ -12,33 +12,37 @@ For licensing, see LICENSE.md.
 
 # Easy Image Integration
 
+<info-box info="">
+    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Read below how to to enable it.
+</info-box>
+
 ## Quick start
 
-### Download CKEditor with Easy Image plugin
+### Download CKEditor with the Easy Image Plugin
 
-Currently the Easy Image plugin is **not** included in the CKEditor 4 presets. You {@link guide/dev/widget_installation/README need to add it to your custom CKEditor build} with [CKBuilder](https://ckeditor.com/cke4/builder). Additionally, you need to remove the default [Image](https://ckeditor.com/cke4/addon/image) plugin from your editor, either with CKBuilder or through the {@linkapi CKEDITOR.config.removePlugins configuration}:
+Currently the [Easy Image plugin](https://ckeditor.com/cke4/addon/easyimage) is **not** included in the CKEditor 4 presets. You {@link guide/dev/widget_installation/README need to add it to your custom CKEditor build} with [CKBuilder](https://ckeditor.com/cke4/builder). Additionally, you need to remove the default [Image](https://ckeditor.com/cke4/addon/image) plugin from your editor, either with CKBuilder or through the {@linkapi CKEDITOR.config.removePlugins configuration}:
 
-```
+```js
 config.removePlugins = 'image';
 ```
 
-To help you in getting started, you can find below direct links to the online builder with Easy Image already included (and the default Image plugin removed):
+To help you in getting started, below you can find direct links to the online builder with Easy Image already included (and the default Image plugin removed):
 
- * [CKBuilder – Standard preset with Easy Image](https://ckeditor.com/cke4/builder)
- * [CKBuilder – Full preset with Easy Image](https://ckeditor.com/cke4/builder)
+ * [CKBuilder &ndash; Standard preset with Easy Image](https://ckeditor.com/cke4/builder)
+ * [CKBuilder &ndash; Full preset with Easy Image](https://ckeditor.com/cke4/builder)
 
 ### Sign up to CKEditor Cloud Services (Easy Image)
 
-Follow the [Cloud Services - Quick start](https://docs.ckeditor.com/cs/latest/guides/quick-start.html) guide to setup an account.
+Follow the [Cloud Services - Quick start](https://docs.ckeditor.com/cs/latest/guides/quick-start.html) guide to set up an account.
 
 ### Configure CKEditor
 
-After setting an account and following the previous instruction, you should be ready to configure the editor and set two required configuration options:
+After setting up an account and following the previous instructions, you should be ready to configure the editor and set two required configuration options:
 
 * {@linkapi CKEDITOR.config.cloudServices_uploadUrl}
 * {@linkapi CKEDITOR.config.cloudServices_tokenUrl}
 
-```
+```js
 CKEDITOR.replace( 'editor', {
     extraPlugins: 'easyimage',
     removePlugins: 'image',
@@ -49,9 +53,11 @@ CKEDITOR.replace( 'editor', {
 
 The values of `cloudServices_uploadUrl` and `cloudServices_tokenUrl` are unique for each website and can be found in the [CKEditor Ecosystem dashboard](https://dashboard.ckeditor.com) (go to *Website management* and press the *CKEditor configuration* button).
 
-This is all. If you're having troubles in setting up Easy Image, please [contact us](https://ckeditor.com/contact/).
+This is all. If you are having trouble in setting up Easy Image, please [contact us](https://ckeditor.com/contact/).
 
 ## Customizing Easy Image
+
+Easy Image offers a few customization options, including configuring custom image styles with classes and creating your own progress reporters.
 
 ### Custom Styles with Classes
 
@@ -60,7 +66,7 @@ The appearance of images inserted with Easy Image can be easily altered by using
 The following styles are available out-of-the-box, with the first two enabled by default:
 
 *  Full Size Image &ndash; It stretches the image to 100% of the editor width.
-*  Side Image &ndash; It changes the image width to 25% of the editor width and puts it aside, on the right.
+*  Side Image &ndash; It changes the image width to 50% of the editor width and puts it aside, on the right.
 *  Align Left &ndash; Aligns the image to the left.
 *  Align Center &ndash; Centers the image.
 *  Align Right &ndash; Aligns the image to the right.
@@ -104,11 +110,11 @@ Do remember, though, that you need to define the CSS rules for these classes in 
 *   For {@link guide/dev/inline/README inline editor} the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">` elements, within the `<head>` section of the page.
 * For both types of editors the styles can be defined using {@linkapi CKEDITOR.addCss}.
 
-You also need to enable these custom styles to the user by adding them to the Easy Image balloon toolbar with the {@linkapi CKEDITOR.config.easyimage_toolbar} configuration option. This option will also integrate your styles with the context menu.
+You also need to enable these custom styles to the user by adding them to the Easy Image balloon toolbar with the {@linkapi CKEDITOR.config.easyimage_toolbar} configuration option. This option will  integrate your styles with the context menu, too.
 
 ### Custom Progress Reporters
 
-It also possible to customize the upload progress reporters through the widget's definition {@linkapi CKEDITOR.plugins.imagebase.featuresDefinitions.upload#progressReporterType} property. By default there is only one type of upload progress reporter available, the progress bar.
+It is possible to customize the upload progress reporters through the widget's definition {@linkapi CKEDITOR.plugins.imagebase.featuresDefinitions.upload#progressReporterType} property. By default there is only one type of upload progress reporter available, the progress bar.
 
 You can add your own types of upload progress reporters by subclassing {@linkapi CKEDITOR.plugins.imagebase.progressReporter} and then using your subclass to modify the Easy Image widget definition:
 
@@ -124,4 +130,4 @@ config.on = {
 
 ## About Easy Image
 
-For more information about Easy Image check {@link guide/dev/features/easyimage/README Functionality Overview – Easy Image}.
+For more information about Easy Image refer to {@link guide/dev/features/easyimage/README Functionality Overview – Easy Image}.

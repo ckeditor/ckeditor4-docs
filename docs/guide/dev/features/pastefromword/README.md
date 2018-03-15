@@ -87,9 +87,7 @@ It will look like this after pasting into CKEditor:
 {@img assets/img/pastefromword_04.png}
 
 In the example above you can see that after pasting into CKEditor, the first list has different list item markers than in the Word document.
-As far as pasting lists with different markers is supported (check the second and third list in the example above) this is a specific case. Such list
-style is not natively supported by the browser. However, it can be adjusted by using extra
-CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
+As far as pasting lists with different markers is supported (check the second and third list in the example above) this is a specific case. Such list style is not natively supported by the browser. However, it can be adjusted by using extra CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
 
 ## Filters
 

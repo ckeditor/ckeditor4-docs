@@ -16,7 +16,8 @@ While CKEditor is a full-featured WYSIWYG editor, not all of its options
 may be needed in all cases. Because of this, toolbar customization is
 one of the most common requirements.
 
-<info-box hint=""> The <strong>most recommended approach to adjusting the editor</strong> to your needs is to start from creating a <a href="https://ckeditor.com/cke4/builder">custom build</a>, removing unwanted features before they even make it to your toolbar. It is a bad practice to download the Full package and then {@linkapi CKEDITOR.config#removePlugins remove plugins} or {@linkapi CKEDITOR.config#removeButtons buttons} in your configuration. You will only be loading unnecessary stuff without any good reason.
+<info-box hint="">
+    The <strong>most recommended approach to adjusting the editor</strong> to your needs is to start from creating a <a href="https://ckeditor.com/cke4/builder">custom build</a>, removing unwanted features before they even make it to your toolbar. It is a bad practice to download the Full package and then {@linkapi CKEDITOR.config#removePlugins remove plugins} or {@linkapi CKEDITOR.config#removeButtons buttons} in your configuration. You will only be loading unnecessary stuff without any good reason.
 </info-box>
 
 There are several approaches to CKEditor toolbar configuration to choose from:
@@ -27,7 +28,8 @@ There are several approaches to CKEditor toolbar configuration to choose from:
 
 ## Toolbar Configurator
 
-<info-box info=""> Toolbar configurator was introduced in <strong>CKEditor 4.5</strong> and is available in each official CKEditor installation package.
+<info-box info="">
+    Toolbar configurator was introduced in <strong>CKEditor 4.5</strong> and is available in each official CKEditor installation package.
 </info-box>
 
 The new toolbar utility, which you can find in your CKEditor distribution package, makes configuring an accessible toolbar a breeze.
@@ -39,7 +41,7 @@ To open the toolbar configurator, go to the `/samples/` folder of your CKEditor 
 
 Click the **Toolbar Configurator** button in the top right-hand corner of the sample page to proceed to editing your toolbar.
 
-{@img assets/img/ckeditor-4.5-sample.png New CKEditor 4.5 sample with Toolbar Configurator button}
+{@img assets/img/ckeditor-4.9-sample.png New CKEditor 4.9 sample with Toolbar Configurator button}
 
 There are two types of toolbar configurator available: the **basic**, more visual one and the **advanced** one. The editor shown in the toolbar configurator contains all the features and buttons available in a particular CKEditor build.
 

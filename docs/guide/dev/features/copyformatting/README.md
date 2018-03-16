@@ -62,7 +62,7 @@ The Copy Formatting filter is configurable &mdash; you can both explicitly white
 * {@linkapi CKEDITOR.config.copyFormatting_allowRules CKEDITOR.config.copyFormatting_allowRules} &ndash; Sets rules for elements from which the styles can be copied.
 * {@linkapi CKEDITOR.config.copyFormatting_disallowRules CKEDITOR.config.copyFormatting_disallowRules} &ndash; Sets rules for elements from which the styles cannot be copied.
 
-Both options are using {@link guide/dev/configuration/acf/README Advanced Content Filter} syntax &mdash; refer to the {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README Allowed Content Rules} article for more information.
+Both options are using {@link guide/dev/acf/README Advanced Content Filter} syntax &mdash; refer to the {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README Allowed Content Rules} article for more information.
 
 Formatting cannot be copied from certain types of elements. By default these elements include:
 

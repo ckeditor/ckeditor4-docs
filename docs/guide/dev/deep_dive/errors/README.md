@@ -23,6 +23,24 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: Incorrect {@linkapi CKEDITOR.config#autoEmbed_widget } value. No widget definition found.
 * Additional data: None.
 
+## cloudservices-no-upload-url
+
+* Location: `plugins/cloudservices/plugin.js`
+* Description: {@linkapi CKEDITOR.config.cloudServices_uploadUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
+* Additional data: None.
+
+## cloudservices-no-token-url
+
+* Location: `plugins/cloudservices/plugin.js`
+* Description: {@linkapi CKEDITOR.config.cloudServices_tokenUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
+* Additional data: None.
+
+## cloudservices-no-token
+
+* Location: `plugins/cloudservices/plugin.js`
+* Description: Authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.cloudServices_tokenUrl token URL} returned an empty response.
+* Additional data: None.
+
 ## editor-destroy-iframe
 
 * Location: `plugins/wysiwygarea/plugin.js`
@@ -98,11 +116,11 @@ This article contains the list of CKEditor error codes and their explanation. Th
 ## uploadimage-config
 
 * Location: `plugins/uploadimage/plugin.js`
-* Description: Upload URL for the Upload Image feature was not defined. Refer to the {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
+* Description: Upload URL for the Upload Image feature was not defined. Refer to the {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
 * Additional data: None.
 
 ## uploadfile-config
 
 * Location: `plugins/uploadfile/plugin.js`
-* Description: Upload URL for the Upload File feature was not defined. Refer to the {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
+* Description: Upload URL for the Upload File feature was not defined. Refer to the {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
 * Additional data: None.

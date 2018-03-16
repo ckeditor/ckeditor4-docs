@@ -33,11 +33,11 @@ Additionally, since CKEditor 4.5 it is possible to configure a {@link guide/dev/
 
 	config.pasteFilter = 'p; a[!href]';
 
-You can also read more about {@link guide/dev/configuration/acf/README content filtering} in general and see the [working "Content Filtering" sample](https://sdk.ckeditor.com/samples/acf.html).
+You can also read more about {@link guide/dev/acf/README content filtering} in general and see the [working "Content Filtering" sample](https://sdk.ckeditor.com/samples/acf.html).
 
 ## File Upload
 
-Another feature related to the clipboard is uploading dropped or pasted files or images. It lets you not only drop or paste files into the document, but also paste a part of the image copied from the image editor. The [Upload Widget](https://ckeditor.com/cke4/addon/uploadwidget), [File Tools](https://ckeditor.com/cke4/addon/filetools) and [Notification](https://ckeditor.com/cke4/addon/notification) plugins create a flexible API which lets the developers handle files the way they need. To learn more about these APIs check the {@link guide/dev/features/notifications/README Notifications}, {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} and {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} articles.
+Another feature related to the clipboard is uploading dropped or pasted files or images. It lets you not only drop or paste files into the document, but also paste a part of the image copied from the image editor. The [Upload Widget](https://ckeditor.com/cke4/addon/uploadwidget), [File Tools](https://ckeditor.com/cke4/addon/filetools) and [Notification](https://ckeditor.com/cke4/addon/notification) plugins create a flexible API which lets the developers handle files the way they need. To learn more about these APIs check the {@link guide/dev/features/notifications/README Notifications}, {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} and {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} articles.
 
 Note that this feature is limited because of browsers and operating systems limitations. File API is not supported in Internet Explorer 9 and below so dropped files cannot be handled. Support for pasting whole files and fragments of files (e.g. images) varies between browsers and operating systems.
 
@@ -58,7 +58,7 @@ See the following samples for examples of pasting and dropping into editor conte
 For more information on pasting, dropping and uploading files with CKEditor refer to the following articles:
 
 * {@link guide/dev/deep_dive/clipboard/README Clipboard Integration}
-* {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files}
+* {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files}
 * {@link guide/dev/features/pastefromword/README Paste from Word}
-* {@link guide/dev/configuration/acf/README Content Filtering (ACF)}
+* {@link guide/dev/acf/README Content Filtering (ACF)}
 * {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}

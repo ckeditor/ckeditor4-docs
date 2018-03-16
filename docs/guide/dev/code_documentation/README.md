@@ -18,7 +18,7 @@ JSDuck's comment format differs from JSDoc's and both generators have different 
 
 The resulting CKEditor API documentation is always available at <https://docs.ckeditor.com/ckeditor4/latest/api>.
 
-## Useful Links ##
+## Useful Links
 
 * [CKEditor JSDuck customization](https://github.com/ckeditor/jsduck)
 * [JSDuck GitHub page](https://github.com/senchalabs/jsduck)
@@ -27,9 +27,9 @@ The resulting CKEditor API documentation is always available at <https://docs.ck
 * [Markdown format - basics](http://daringfireball.net/projects/markdown/basics)
 * {@link api/index CKEditor API documentation}
 
-## JSDuck vs JSDoc &mdash; Important Differences ##
+## JSDuck vs JSDoc &mdash; Important Differences
 
-* **JSDuck supports Markdown**. HTML entities may still be used, but try to avoid them in favor of Markdown. Note that HTML in code samples (indented blocks) and `pre-formatted` will be encoded.
+* **JSDuck supports Markdown**. HTML entities may still be used, but try to avoid them in favor of Markdown. Note that HTML in code samples and `pre-formatted` will be encoded.
 * JSDuck does not accept the following tags: `@namespace`, `@name`, `@constant`, `@augments`, `@field`, `@type` (deprecated), `@default` and more (only those that CKEditor 3 was using are listed).
 * JSDuck accepts some new tags: `@cfg`, `@member`, `@chainable`, `@inherits`, `@method`, `@mixins`, `@readonly`, `@singleton`, and [more](https://github.com/senchalabs/jsduck/wiki/@class).
 * Some common tags have different format in JSDuck (e.g. `@example` creates live examples, standard code samples are just indented).
@@ -40,9 +40,9 @@ The resulting CKEditor API documentation is always available at <https://docs.ck
 * There are no namespaces in JSDuck, so the packages tree is auto-generated based on the classes tree and `@member` tags.
 * All properties, events, etc. defined under the class definition will be assigned to this class, so there is no need to specify `@member`.
 
-## Documentation Formats ##
+## Documentation Formats
 
-### File Header ###
+### File Header
 
 The `@license` and `@fileOverview` tags are legacy comments that will not be parsed by JSDuck.
 
@@ -58,7 +58,7 @@ The `@license` and `@fileOverview` tags are legacy comments that will not be par
 
 **Note:** Since `@fileOverview` comments are ignored, they have not been reformatted, so they may still contain the old JSDoc format.
 
-### Class ###
+### Class
 
 This is an example of a class definition. It contains so many tags to show their correct order.
 
@@ -66,10 +66,12 @@ This is an example of a class definition. It contains so many tags to show their
 	 * Represents an editor instance. This constructor should be rarely
 	 * used, in favor of the {@linkapi CKEDITOR } editor creation functions.
 	 *
-	 *		var editor = new {@linkapi CKEDITOR.editor CKEDITOR.editor}();
+	 * ```js
+	 *	var editor = new {@linkapi CKEDITOR.editor CKEDITOR.editor}();
 	 *		editor.setSomething( name, {
-	 *			value: 1
-	 *		} );
+	 *		value: 1
+	 *	} );
+	 * ```
 	 *
 	 * @since 3.0
 	 * @private
@@ -109,7 +111,7 @@ When you want to reopen the class declaration in another file, use this:
 
 	/** @class {@linkapi CKEDITOR.editor CKEDITOR.editor} */
 
-#### Details ####
+#### Details
 
 The order of tags may look strange, but you can remember it thanks to the following description:
 
@@ -125,7 +127,7 @@ Important tag details:
 
 	A constructor can also be declared completely independently from the class, which is useful when {@linkapi CKEDITOR.tools.createClass CKEDITOR.tools.createClass} has been used.
 
-### Property and Configuration Variable ###
+### Property and Configuration Variable
 
 The following is an example of property documentation.
 
@@ -171,21 +173,21 @@ Basic:
 	 */
 	this.propertyName = this.config.something;
 
-#### Details ####
+#### Details
 
 * JSDuck type definitions are awesome &mdash; [read more about them](https://github.com/senchalabs/jsduck/wiki/Type-Definitions).
 * Property names, types, and default values may be recognized automatically.
 * The default value does not have to be JavaScript code, so in the "Partial" example JSDuck will print: "Defaults to: config.something (value taken from configuration)".
 * If a property is not defined below a class definition or if it belongs to a different class, then `@member` has to be used. Specifying a namespace in `@property` is not possible.
 
-#### Configuration Variables ####
+#### Configuration Variables
 
 To define a configuration variable instead of a property:
 
 * Use `@cfg` instead of `@property`. The format is the same.
 * `@private`, `@readonly`, `@static` may not work (have not been tested).
 
-### Method and Event ###
+### Method and Event
 
 The following is an example of method documentation.
 
@@ -194,11 +196,13 @@ The following is an example of method documentation.
 	 * element is a native DOM element, it will be transformed into a valid
 	 * {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element} object.
 	 *
-	 *		var element = new {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element}( 'span' );
-	 *		alert( element == {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ) ); // true
+	 * ```js
+	 *	var element = new {@linkapi CKEDITOR.dom.element CKEDITOR.dom.element}( 'span' );
+	 *	alert( element == {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ) ); // true
 	 *
-	 *		var element = document.getElementById( 'myElement' );
-	 *		alert( {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ).getName() ); // (e.g.) 'p'
+	 *	var element = document.getElementById( 'myElement' );
+	 *	alert( {@linkapi CKEDITOR.dom.element.get CKEDITOR.dom.element.get}( element ).getName() ); // (e.g.) 'p'
+	 * ```
 	 *
 	 * @private
 	 * @static
@@ -229,24 +233,24 @@ Typical:
 		// ...
 	};
 
-#### Details ####
+#### Details
 
 * The `@method` tag has to be used when it is not clear that a piece of code is a method (e.g. a closure returning a function was used or a reference to a function defined elsewhere) or when the method's name is not obvious.
 * Callback arguments may be defined. Also, if a method returns an object, its properties may be defined too &mdash; [read more](https://github.com/senchalabs/jsduck/wiki/@return).
 * Both `@return` and `@returns` are accepted, but use the latter one.
 
-#### Events ####
+#### Events
 
 To define an event instead of a method:
 
 * Use `@event` instead of `@method` &mdash; usually you will have to provide a name.
 * `@returns` is not accepted.
 
-## Miscellaneous Rules ##
+## Miscellaneous Rules
 
 * Always leave one blank line between the textual comment and the first tag.
 * Separate all blocks (paragraphs, code samples, etc.) with one blank line.
-* Code samples are indented with at least two tabs after `*` and remember &mdash; **no spaces** are to be used.
+* Code samples are wrapped with triple back ticks <code>\`\`\`</code>, optionally followed with a language identifier &mdash; **no spaces** are to be used.
 * Always place a dot (`.`) at the end of a sentence. A sentence starts with an upper-case letter.
 * Always use single quotes for JavaScript strings, but double quotes for cites, irony, etc. in textual comments.
 * Cross-reference format for links is: `CKEDITOR.name.space#property`. If there is more than one event/property/configuration/method with the same name, then prepend `cfg-`, `property-`, `method-` or `event-` to the name. The namespace may be omitted if it equals to `@member` or the current class. See the ["Cross-references"](https://github.com/senchalabs/jsduck/wiki/Guide#cross-references) section in the JSDuck's guide.

@@ -25,7 +25,7 @@ The Article Editor is based on the [Standard package](https://ckeditor.com/ckedi
 
  * Added five additional plugins:
    * [Auto Embed](https://ckeditor.com/cke4/addon/autoembed) and [Semantic Media Embed](https://ckeditor.com/cke4/addon/embedsemantic) for inserting {@link guide/dev/features/embed/README embedded media resources} like videos (e.g. from YouTube, Vimeo), tweets or slideshows.
-   * [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to provide {@link guide/dev/features/captionedimage/README captioned images}.
+   * [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to provide {@link guide/dev/features/image2/README captioned images}.
    * [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) and [Upload File](https://ckeditor.com/cke4/addon/uploadfile) to support {@link guide/dev/features/drop_paste/README file uploads via drag&drop and pasting} images from clipboard.
  * Adjusted the {@link guide/dev/features/toolbar/README toolbar configuration} to display buttons in a single row.
  * Adjusted {@link guide/dev/features/styles/README content CSS styles}, including usage of [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) font from [Google Fonts](https://developers.google.com/fonts/docs/getting_started).

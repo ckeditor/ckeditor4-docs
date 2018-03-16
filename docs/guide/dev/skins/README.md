@@ -14,7 +14,7 @@ For licensing, see LICENSE.md.
 
 The look and feel of the CKEditor user interface can be adjusted to your taste and customized through skins. Elements like the toolbar, dialog windows, buttons, and even their icons, can be changed to match the style of your website or application.
 
-The default installation of CKEditor comes with the [Moono skin](https://ckeditor.com/cke4/addon/moono).
+The default installation of CKEditor comes with the [Moono-Lisa skin](https://ckeditor.com/cke4/addon/moono-lisa).
 
 ## Where to Look for Skins?
 
@@ -28,23 +28,23 @@ If you found an interesting skin in the Add-ons Repository, you can easily add i
 
 The easiest method is to visit the [CKBuilder](https://ckeditor.com/cke4/builder) page and select the skin that you wish to use in the **Available Skins** section.
 
-<img src="%BASE_PATH%/assets/img/add_skin_ckbuilder_3.png" alt="Available Skins lists in CKBuilder" width="779" height="133">
+{@img assets/img/add_skin_ckbuilder_3.png Available Skins lists in CKBuilder}
 
 When you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with the selected skin included.
 
 When you install your custom build, you will see it uses the skin that you added (in this example: [Kama](https://ckeditor.com/cke4/addon/kama)).
 
-<img src="%BASE_PATH%/assets/img/add_skin_ckbuilder_4.png" alt="A custom CKEditor build using the Kama skin" width="466" height="200">
+{@img assets/img/add_skin_ckbuilder_4.png A custom CKEditor build using the Kama skin}
 
 ### Through Add-on Repository
 
 Visit the skin page in the [Add-ons Repository](https://ckeditor.com/cke4/addons/skins/all) and click the "**Add to my editor**" button.
 
-<img src="%BASE_PATH%/assets/img/add_skin_ckbuilder_1.png" alt="Adding a skin to the editor build" width="416" height="151">
+{@img assets/img/add_plugin_ckbuilder_1.png Adding a skin to the editor build}
 
 When you are ready, click the "**Build my editor**" button on the right to go to CKBuilder. The skin that you have just added will be listed as a part of your custom build.
 
-<img src="%BASE_PATH%/assets/img/add_skin_ckbuilder_2.png" alt="Building a custom CKEditor version" width="158" height="231">
+{@img assets/img/add_skin_ckbuilder_2.png Building a custom CKEditor version}
 
 You can fine-tune your build in CKBuilder and when you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with the selected skin included.
 
@@ -64,5 +64,6 @@ Using CKBuilder is a recommended solution, however, if you have skins developed 
 
 Your skin will now be available in your CKEditor installation.
 
-<info-box hint=""> To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/skin">submit your skins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
+<info-box hint="">
+    To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/skin">submit your skins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.
 </info-box>

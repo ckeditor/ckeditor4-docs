@@ -15,7 +15,7 @@ CKFinder is a <a href="http://cksource.com/ckfinder">commercial application</a> 
 
 ## CKFinder 3
 
-[CKFinder 3](https://cksource.com/ckfinder/demo) for PHP was released in June 2015. ASP.NET and Java versions are now under development. The ASP and ColdFusion distributions of CKFinder will not be upgraded to version 3, however, they will still receive patches (including security fixes) until 2019.
+[CKFinder 3](https://cksource.com/ckfinder/demo) is available for PHP and ASP.NET.
 
 The integration with CKFinder 3 can be conducted in two ways:
 
@@ -123,8 +123,8 @@ If you are using CKFinder for ASP, ASP.NET, Java, or ColdFusion, remember to cha
 
 For more information on integrating CKEditor with a file manager refer to the following articles:
 
-* {@link guide/dev/configuration/file_browse_upload/README File Manager Integration}
-* {@link guide/dev/configuration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}
-* {@link guide/dev/configuration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
-* {@link guide/dev/configuration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
-* {@link guide/dev/configuration/file_browse_upload/file_upload/README Uploading Pasted and Dropped Files}
+* {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
+* {@link guide/dev/integration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}
+* {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
+* {@link guide/dev/integration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
+* {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Pasted and Dropped Files}

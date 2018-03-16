@@ -34,14 +34,14 @@ You can find some additional information about the Easy Image service in the [Cl
 
 ## Custom Styles with Classes
 
-The appearance of images inserted with Easy Image can be easily altered by using custom styles. These styles can be applied through the balloon toolbar connected with every Easy Image widget or with the context menu. By default there are two styles available:
+The appearance of images inserted with Easy Image can be easily altered by using custom styles. These styles can be applied through the {@link guide/dev/features/balloontoolbar/README balloon toolbar} connected with every Easy Image widget or with the context menu. By default there are two styles available:
 
 *  Full Size Image &ndash; It stretches the image to 100% of the editor width.
-*  Side Image &ndash; It changes the image width to 25% of the editor width and puts it aside, on the right.
+*  Side Image &ndash; It changes the image width to 50% of the editor width and puts it aside, on the right.
 
 The list of enabled styles can be changed by the editor's implementer.
 
-{@img assets/img/easyimage_02.png Easy Image styles in balloon toolbar and context menu}
+{@img assets/img/easyimage_02.png Easy Image styles in the balloon toolbar and context menu}
 
 ## Changing Alternative Text
 

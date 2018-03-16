@@ -28,7 +28,7 @@ The default [Image](https://ckeditor.com/cke4/addon/image) plugin supports inser
     If you are looking for more modern image support with a clean UI and features such as image captions, drag and drop positioning, click and drag resizing, image alignment (including centering) with inline styles or CSS classes, custom image styles or cloud storage support with optimized images and responsive markup, try {@link guide/dev/features/image2/README Enhanced Image} and {@link guide/dev/features/easyimage/README Easy Image} plugins.
 </info-box>
 
-Below you can see a document with image inserted into the editor content with the default Image plugin.
+Below you can see a document with an image inserted into the editor content with the default Image plugin.
 
 {@img assets/img/image_01.png Images inserted into CKEditor content with the Image plugin}
 
@@ -50,4 +50,4 @@ Refer to the following resources for more information about image support and up
 
 * {@link guide/dev/features/image2/README Enhanced Image} offers a clean UI with image captions, drag and drop positioning, click and drag resizing and file manager integration.
 * {@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN.
-* {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article explains how to enable image upload.
+* {@link guide/dev/integration/file_browse_upload/README File Manager Integration} explains how to enable image upload.

@@ -94,4 +94,4 @@ Refer to the following resources for more information about image support:
 
 * {@link guide/dev/features/image/README Default Image Plugin} offers pixel-perfect image alignment with vertical and horizotal whitespace, configurable image border and file manager integration.
 * {@link guide/dev/features/easyimage/README Easy Image} lets you insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN.
-* {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article explains how to enable image upload.
+* {@link guide/dev/integration/file_browse_upload/README File Manager Integration} explains how to enable image upload.

@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # Source Code Editing
 
-<info-box info=""> Features described in this article are provided through plugins that may not be included in the CKEditor preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site that you are using and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info="">
+ Features described in this article are provided through plugins that may not be included in the CKEditor preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site that you are using and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 CKEditor is a WYSIWYG editor, so it makes it easy for end users to work on HTML content without any knowledge of HTML whatsoever. More advanced users, however, sometimes want to access raw HTML source code for their content and CKEditor makes it possible by providing two dedicated plugins: [Source Editing Area](https://ckeditor.com/cke4/addon/sourcearea) and [Source Dialog](https://ckeditor.com/cke4/addon/sourcedialog).

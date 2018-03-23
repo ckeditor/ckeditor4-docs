@@ -30,7 +30,7 @@ Please note that not all configuration setting are available for each CKEditor b
 
 CKEditor is a truly flexible tool with a modular structure — most editor functionality is based on plugins. Some core plugins are necessary for the editor to work or depend on one another, however, there are lots of optional plugins that you can skip when you do not need the functionality that they provide.
 
-Remember that one of the most important {@link guide/dev/best_practices/README CKEditor best practices} is to customize your editor build with CKBuilder and remove unneeded functionality before it makes it to your package. It is a bad practice to download the Full package and then remove plugins or buttons in your configuration. You will only be loading unnecessary stuff without any good reason. Check out the [4 Common CKEditor Installation Mistakes And How To Avoid Them](https://ckeditor.com/blog/4-Common-CKEditor-Installation-Mistakes-And-How-To-Avoid-Them) for a more thorough explanation of this practice.
+Remember that one of the most important {@link guide/dev/best_practices/README CKEditor best practices} is to customize your editor build with online builder and remove unneeded functionality before it makes it to your package. It is a bad practice to download the Full package and then remove plugins or buttons in your configuration. You will only be loading unnecessary stuff without any good reason. Check out the [4 Common CKEditor Installation Mistakes And How To Avoid Them](https://ckeditor.com/blog/4-Common-CKEditor-Installation-Mistakes-And-How-To-Avoid-Them) for a more thorough explanation of this practice.
 
 If you, however, want to disable some functionality that comes from a CKEditor plugin and is still in your build, you can use the {@linkapi CKEDITOR.config#removePlugins } setting to prevent the plugin from loading.
 
@@ -40,7 +40,7 @@ If you, however, want to disable some functionality that comes from a CKEditor p
 	// Remove multiple plugins.
 	config.removePlugins = 'elementspath,save,font';
 
-Do remember to use the [CKBuilder online service](https://ckeditor.com/cke4/builder) to download a truly customized version of CKEditor!
+Do remember to use the [online builder](https://ckeditor.com/cke4/builder) to download a truly customized version of CKEditor!
 
 ## How Do I Find Code Examples Showing CKEditor Customization?
 

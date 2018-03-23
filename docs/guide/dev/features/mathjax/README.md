@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Creating Mathematical Formulas
 
 <info-box info="">
- This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>. In order to enable the plugin you need to {@link guide/dev/features/mathjax/README#setting-the-path-to-mathjax-library set the path to the MathJax library} first.
+ This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>. In order to enable the plugin you need to {@link guide/dev/features/mathjax/README#setting-the-path-to-mathjax-library set the path to the MathJax library} first.
 </info-box>
 
 The optional [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax) plugin allows you to create and modify mathematical equations written in TeX directly in CKEditor. TeX content will be automatically replaced by a mathematical formulas widget when you put it in a `<span class="math-tex">` element.

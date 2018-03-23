@@ -24,7 +24,7 @@ If you want to turn on the {@link guide/dev/features/spellcheck/README#spell-che
 
 ## How Do I Disable SCAYT in CKEditor?
 
-If you want to completely disable the {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-%28scayt%29 Spell Check As You Type (SCAYT)} feature in CKEditor, remove the [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) from your CKEditor build with CKBuilder or alternatively, disable the `scayt` plugin using the {@linkapi CKEDITOR.config#removePlugins CKEDITOR.config#removePlugins} configuration setting.
+If you want to completely disable the {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-%28scayt%29 Spell Check As You Type (SCAYT)} feature in CKEditor, remove the [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) from your CKEditor build with online builder or alternatively, disable the `scayt` plugin using the {@linkapi CKEDITOR.config#removePlugins CKEDITOR.config#removePlugins} configuration setting.
 
 	config.removePlugins = 'scayt';
 

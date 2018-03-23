@@ -27,12 +27,12 @@ You should always use minified CKEditor versions ([official releases](https://ck
 Additionally, it is good to enable `gzip` compression in your server settings.
 
 ### Do not be afraid of custom builds
-If you want to skip some editor features, [customize your build with CKBuilder](https://ckeditor.com/cke4/builder) and remove unneeded functionality.
+If you want to skip some editor features, [customize your build with online builder](https://ckeditor.com/cke4/builder) and remove unneeded functionality.
 
 It is a bad practice to download the Full package and then {@linkapi CKEDITOR.config#removePlugins remove plugins} or {@linkapi CKEDITOR.config#removeButtons buttons} in your configuration. You will only be loading unnecessary stuff without any good reason.
 
-### Use CKBuilder to add plugins
-If you want to install additional plugins, {@link guide/dev/plugins/README use CKBuilder instead of adding them manually}.
+### Use online builder to add plugins
+If you want to install additional plugins, {@link guide/dev/plugins/README use online builder instead of adding them manually}.
 
 This will reduce the risk of omitting plugin dependencies and in the created optimized build all plugins will be merged into one file, which will reduce time needed to load them.
 

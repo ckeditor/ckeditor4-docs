@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # Inserting Code Snippets
 
-<info-box info=""> This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info="">
+    This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The optional [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin allows you to insert rich code fragments and see a live preview with highlighted syntax. Its original implementation uses the [highlight.js](http://highlightjs.org) library, but the plugin exposes a convenient {@linkapi CKEDITOR.plugins.codesnippet.highlighter interface} for hooking any other library, even a server-side one.

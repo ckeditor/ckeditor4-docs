@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Inserting Code Snippets Using GeSHi
 
-<info-box info=""> This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info=""> This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The [Code Snippet GeSHi](https://ckeditor.com/cke4/addon/codesnippetgeshi) plugin is an extension of the {@link guide/dev/features/codesnippet/README Code Snippet} plugin, which uses the [GeSHi](http://qbnz.com/highlighter/) PHP server-side syntax highlighting engine instead of the default, client-side [highlight.js](http://highlightjs.org) library.
@@ -24,7 +24,7 @@ The [Code Snippet GeSHi](https://ckeditor.com/cke4/addon/codesnippetgeshi) plugi
 * CKEditor 4.4+,
 * PHP 4.4+,
 * A modern web browser or **IE9+**,
-* CKEditor plugin dependencies &mdash; these will be resolved automatically if you follow the recommended CKBuilder installation process.
+* CKEditor plugin dependencies &mdash; these will be resolved automatically if you follow the recommended online builder installation process.
 
 ## Installation
 
@@ -32,7 +32,7 @@ The [Code Snippet GeSHi](https://ckeditor.com/cke4/addon/codesnippetgeshi) plugi
 
 First of all you need to add both the Code Snippet GeSHi plugin and its dependencies to your CKEditor build and also install the GeSHi library itself.
 
-1. Add the [Code Snippet GeSHi](https://ckeditor.com/cke4/addon/codesnippetgeshi) plugin to your build (as explained in the {@link guide/dev/widget_installation/README Installing Widgets} article). Mind the dependencies &mdash; these will be resolved automatically by [CKBuilder](https://ckeditor.com/cke4/builder).
+1. Add the [Code Snippet GeSHi](https://ckeditor.com/cke4/addon/codesnippetgeshi) plugin to your build (as explained in the {@link guide/dev/widget_installation/README Installing Widgets} article). Mind the dependencies &mdash; these will be resolved automatically by [online builder](https://ckeditor.com/cke4/builder).
 1. Download the GeSHi library from the Download page at the [GeSHi website](http://qbnz.com/highlighter).
 1. Create a `lib` directory next to your `ckeditor` directory.
 1. Extract GeSHi files to the chosen location &mdash; for example into the `lib/geshi/` directory.

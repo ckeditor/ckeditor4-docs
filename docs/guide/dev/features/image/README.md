@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Default Image Plugin
 
 <info-box info="">
-    By default the image feature is provided through the <a href="https://ckeditor.com/cke4/addon/image">Image</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+    By default the image feature is provided through the <a href="https://ckeditor.com/cke4/addon/image">Image</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The default [Image](https://ckeditor.com/cke4/addon/image) plugin supports inserting images into the editor content. It provides the following features when compared to two alternative image plugins, {@link guide/dev/features/image2/README Enhanced Image} and {@link guide/dev/features/easyimage/README Easy Image}:

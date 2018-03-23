@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Spell Checking
 
-<info-box info=""> The out-of-the-box spell checking functionality is provided through plugins that are included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info=""> The out-of-the-box spell checking functionality is provided through plugins that are included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 CKEditor can be configured to use either native spell checking capabilities provided by the browser or to use an external spell checking web service.

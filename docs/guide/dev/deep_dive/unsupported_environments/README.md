@@ -16,7 +16,8 @@ By default, CKEditor **4.0 - 4.4.8** is disabled in all unsupported environments
 
 ## Why Is CKEditor Disabled in Some Environments?
 
-<info-box hint="">Since version 4.5 CKEditor is only disabled in environments that are known to be incompatible. Therefore, <strong>this guide applies mostly to versions &lt;4.4.8</strong> where CKEditor was disabled in environments which were not explicitly whitelisted.</info-box>
+<info-box hint="">
+	Since version 4.5 CKEditor is only disabled in environments that are known to be incompatible. Therefore, <strong>this guide applies mostly to versions &lt;4.4.8</strong> where CKEditor was disabled in environments which were not explicitly whitelisted.</info-box>
 
 There are usually two main reasons for that:
 
@@ -31,7 +32,8 @@ We strongly advise against enabling CKEditor in older and unsupported browser ve
 
 If you, however, would like to check how CKEditor works in some untested environments, the CKEditor API contains a solution that makes it possible.
 
-<info-box hint=""> Enabling CKEditor in unsupported environments can only be done at your own risk. It is not recommended to attempt it on production environments without a prior testing phase.
+<info-box hint="">
+	Enabling CKEditor in unsupported environments can only be done at your own risk. It is not recommended to attempt it on production environments without a prior testing phase.
 </info-box>
 
 ## Changing the `env.isCompatible` Flag
@@ -73,12 +75,13 @@ Last but not least, to make sure that this code does not throw errors if the CKE
 
 ## Editing the env.isCompatible Flag in Source
 
-Although this is not a recommended approach, it is also possible to edit the {@linkapi CKEDITOR.env.isCompatible CKEDITOR.env.isCompatible} flag directly in CKEditor source. Depending on whether you use a development version of CKEditor or a production-ready compressed build (an official distribution or a custom build created with CKBuilder), you can find the flag in:
+Although this is not a recommended approach, it is also possible to edit the {@linkapi CKEDITOR.env.isCompatible CKEDITOR.env.isCompatible} flag directly in CKEditor source. Depending on whether you use a development version of CKEditor or a production-ready compressed build (an official distribution or a custom build created with online builder), you can find the flag in:
 
 * The `ckeditor.js` file in a compressed build.
 * The `core/env.js` file in a development build.
 
-<info-box hint=""> Editing the {@linkapi CKEDITOR.env.isCompatible CKEDITOR.env.isCompatible} flag per page is a better approach that gives you more control over when and where you use it.
+<info-box hint="">
+	Editing the {@linkapi CKEDITOR.env.isCompatible CKEDITOR.env.isCompatible} flag per page is a better approach that gives you more control over when and where you use it.
 </info-box>
 
 ## Help Us by Reporting Issues!

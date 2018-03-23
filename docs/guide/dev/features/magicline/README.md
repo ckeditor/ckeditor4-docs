@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Magic Line
 
 <info-box info="">
- This feature is provided through the <a href="https://ckeditor.com/cke4/addon/magicline">Magic Line</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+ This feature is provided through the <a href="https://ckeditor.com/cke4/addon/magicline">Magic Line</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 Depending on your environment (OS, browser) it might be difficult to place the cursor and add content near some document elements. This pertains to, for example, images, tables or `<div>` elements that start or end a document, lists, or even adjacent horizontal lines.

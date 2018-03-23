@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # Shared Toolbar and Bottom Bar
 
-<info-box info=""> This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info="">
+ This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 An optional CKEditor plugin called [Shared Space](https://ckeditor.com/cke4/addon/sharedspace) lets you put the editor toolbar and bottom bar in selected page elements detached from the editing areas and then share these UI elements among numerous editor instances.

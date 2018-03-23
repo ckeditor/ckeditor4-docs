@@ -17,7 +17,7 @@ For licensing, see LICENSE.md.
  	Both full page editing and the Documentation Properties plugin are only supported for {@link guide/dev/framed/README classic editor} with {@link guide/dev/features/uitypes/README#fixed-user-interface fixed user interface}.
  </p>
  <p>
- Some aspects of this feature are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+ Some aspects of this feature are provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
  </p>
 </info-box>
 

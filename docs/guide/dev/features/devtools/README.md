@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Using Developer Tools Plugin to Customize Dialog Windows
 
 <info-box info="">
- This feature is provided through an optional plugin that is not included in the CKEditor distribution packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+ This feature is provided through an optional plugin that is not included in the CKEditor distribution packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 An optional CKEditor plugin called [Developer Tools](https://ckeditor.com/cke4/addon/devtools) displays tooltips with information about editor dialog windows, such as:

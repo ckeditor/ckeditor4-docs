@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Dropping and Pasting into Editor Content
 
-<info-box info=""> Some of these features were introduced in <strong>CKEditor 4.5</strong>. They are provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a>, <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> and <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugins. Part of them are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info=""> Some of these features were introduced in <strong>CKEditor 4.5</strong>. They are provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a>, <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> and <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugins. Part of them are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 One of the CKEditor features is that it takes care over the input data you paste or drop into the editor. The [Clipboard](https://ckeditor.com/cke4/addon/clipboard) plugin which is included in every preset implements custom input content handling, which means that the editor will handle pasted and &mdash; since version 4.5 &mdash; dropped content.

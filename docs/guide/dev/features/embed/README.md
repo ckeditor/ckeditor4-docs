@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Embedding Media Resources with oEmbed
 
 <info-box info="">
- This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>. In order to enable the plugin you need to {@link guide/dev/features/embed/README#configuring-the-content-provider configure the content provider} first.
+ This feature was introduced in <strong>CKEditor 4.5</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>. In order to enable the plugin you need to {@link guide/dev/features/embed/README#configuring-the-content-provider configure the content provider} first.
 </info-box>
 
 The optional [Media Embed](https://ckeditor.com/cke4/addon/embed) and [Semantic Media Embed](https://ckeditor.com/cke4/addon/embedsemantic) plugins introduce two new {@link guide/dev/deep_dive/widgets/README widget} types &mdash; an embedded media resource and an embedded media resource with a semantic output.

@@ -24,13 +24,13 @@ The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) 
 
 If you found an interesting skin in the Add-ons Repository, you can easily add it to your custom build.
 
-### Through CKBuilder
+### Through Online Builder
 
-The easiest method is to visit the [CKBuilder](https://ckeditor.com/cke4/builder) page and select the skin that you wish to use in the **Available Skins** section.
+The easiest method is to visit the [online builder](https://ckeditor.com/cke4/builder) page and select the skin that you wish to use in the **Available Skins** section.
 
-{@img assets/img/add_skin_ckbuilder_3.png Available Skins lists in CKBuilder}
+{@img assets/img/add_skin_ckbuilder_3.png Available Skins lists in online builder}
 
-When you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with the selected skin included.
+When you are happy with your configuration, click the **Download** button at the bottom of the online builder page to download your custom build with the selected skin included.
 
 When you install your custom build, you will see it uses the skin that you added (in this example: [Kama](https://ckeditor.com/cke4/addon/kama)).
 
@@ -42,15 +42,15 @@ Visit the skin page in the [Add-ons Repository](https://ckeditor.com/cke4/addons
 
 {@img assets/img/add_plugin_ckbuilder_1.png Adding a skin to the editor build}
 
-When you are ready, click the "**Build my editor**" button on the right to go to CKBuilder. The skin that you have just added will be listed as a part of your custom build.
+When you are ready, click the "**Build my editor**" button on the right to go to online builder. The skin that you have just added will be listed as a part of your custom build.
 
 {@img assets/img/add_skin_ckbuilder_2.png Building a custom CKEditor version}
 
-You can fine-tune your build in CKBuilder and when you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with the selected skin included.
+You can fine-tune your build in online builder and when you are happy with your configuration, click the **Download** button at the bottom of the online builder page to download your custom build with the selected skin included.
 
 ## Installing Skins Manually
 
-Using CKBuilder is a recommended solution, however, if you have skins developed by yourself or by third parties, you can add skins to your local installation manually by following the steps described below:
+Using online builder is a recommended solution, however, if you have skins developed by yourself or by third parties, you can add skins to your local installation manually by following the steps described below:
 
 1. **Extract** the skin `.zip` archive.
 

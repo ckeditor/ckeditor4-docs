@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # Table Support with Column Resizing
 
-<info-box info=""> Features described in this article are provided through several plugins that may not be included in the CKEditor preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site which you are using and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info="">
+ Features described in this article are provided through several plugins that may not be included in the CKEditor preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site which you are using and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 CKEditor support for creating and editing tables is provided by four separate table-related plugins as well as two helper plugins.

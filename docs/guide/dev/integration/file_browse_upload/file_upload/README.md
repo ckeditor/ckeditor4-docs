@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Uploading Dropped or Pasted Files
 
 <info-box info="">
-	Uploading pasted and dragged images was introduced in <strong>CKEditor 4.5</strong>. It is provided through the <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugin that is included in the Standard and Full presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+	Uploading pasted and dragged images was introduced in <strong>CKEditor 4.5</strong>. It is provided through the <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugin that is included in the Standard and Full presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 Starting from CKEditor 4.5 it is possible to enable uploading pasted and dropped images. This article is about the editor-server configuration for pasted and dropped files since it uses a different API than the {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser} plugin. To get an overview about this feature, refer to the {@link guide/dev/features/drop_paste/README Dropping and Pasting into Editor Content} article.

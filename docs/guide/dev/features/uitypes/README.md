@@ -35,7 +35,8 @@ The **default behavior of an editor with fixed UI can be customized**, though:
 
 ### Fixed UI for Inline Editor
 
-<info-box info=""> This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+<info-box info="">
+ This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 Although fixed UI is mostly used in conjunction with classic editor, it is also possible to implement it with inline editor. This is done through the optional [Div Editing Area](https://ckeditor.com/cke4/addon/divarea) plugin. **Using this plugin has a few of drawbacks**, though:

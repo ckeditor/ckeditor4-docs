@@ -20,7 +20,13 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 * Through the {@link guide/dev/a11y/README#accessibility-instructions-dialog-window Accessibility Instructions} dialog window.
 * Through toolbar button tooltips and context menu entries (CKEditor 4.6 or later).
 
-<info-box info=""> <p> 	The <strong>Accessibility Instructions</strong> dialog window is provided through the <a href="https://ckeditor.com/cke4/addon/a11yhelp">Accessibility Help</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>. </p> <p> 	Note that some shortcuts only work if the functionality behind them is included in your editor build. </p>
+<info-box info="">
+ <p>
+ 	The <strong>Accessibility Instructions</strong> dialog window is provided through the <a href="https://ckeditor.com/cke4/addon/a11yhelp">Accessibility Help</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ </p>
+ <p>
+ 	Note that some shortcuts only work if the functionality behind them is included in your editor build.
+ </p>
 </info-box>
 
 ## Working with a Document

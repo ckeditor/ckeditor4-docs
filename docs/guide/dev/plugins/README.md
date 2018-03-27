@@ -24,13 +24,13 @@ The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) 
 
 If you found some interesting plugins in the Add-ons Repository, you can easily add them to your custom build.
 
-### Through CKBuilder
+### Through Online Builder
 
-The easiest method is to visit the [CKBuilder](https://ckeditor.com/cke4/builder) page and find the plugins that you wish to have in the **Available Plugins** list on the right.
+The easiest method is to visit the [online builder](https://ckeditor.com/cke4/builder) page and find the plugins that you wish to have in the **Available Plugins** list on the right.
 
-{@img assets/img/add_plugin_ckbuilder_3.png Selected Plugins and Available Plugins lists in CKBuilder}
+{@img assets/img/add_plugin_ckbuilder_3.png Selected Plugins and Available Plugins lists in online builder}
 
-Drag the plugins that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with all selected plugins included.
+Drag the plugins that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are happy with your configuration, click the **Download** button at the bottom of the online builder page to download your custom build with all selected plugins included.
 
 When you install your custom build, you will see that the additional plugins (in this example: [Language](https://ckeditor.com/cke4/addon/language)) are available in your CKEditor.
 
@@ -42,15 +42,15 @@ Visit the plugin page in the [Add-ons Repository](https://ckeditor.com/cke4/addo
 
 {@img assets/img/add_plugin_ckbuilder_1.png Adding a plugin to the editor build}
 
-When you are ready, click the "**Build my editor**" button on the right to go to CKBuilder. The plugin that you have just added will be counted as "selected".
+When you are ready, click the "**Build my editor**" button on the right to go to online builder. The plugin that you have just added will be counted as "selected".
 
 {@img assets/img/add_plugin_ckbuilder_2.png Building a custom CKEditor version}
 
-Please note that in CKBuilder all plugin dependencies will be resolved automatically for you. You can fine-tune your build and when you are happy with your configuration, click the **Download** button at the bottom of the CKBuilder page to download your custom build with selected plugins included.
+Please note that in online builder all plugin dependencies will be resolved automatically for you. You can fine-tune your build and when you are happy with your configuration, click the **Download** button at the bottom of the online builder page to download your custom build with selected plugins included.
 
 ## Manual Installation
 
-Using CKBuilder is a recommended solution, however, if you have plugins developed by yourself or by third parties, you can add plugins to your local installation manually by following the steps described below:
+Using online builder is a recommended solution, however, if you have plugins developed by yourself or by third parties, you can add plugins to your local installation manually by following the steps described below:
 
 1. **Extract** the plugin `.zip` archive.
 

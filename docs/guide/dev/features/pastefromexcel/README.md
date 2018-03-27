@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Pasting Content from Microsoft Excel
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.7</strong>. It is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">CKBuilder</a>.
+    This feature was introduced in <strong>CKEditor 4.7</strong>. It is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin allows you to also paste content from **Microsoft Excel** and maintain original content structure and formatting. As of CKEditor 4.7 some more advanced Excel features are not supported yet and will be added in future CKEditor releases.

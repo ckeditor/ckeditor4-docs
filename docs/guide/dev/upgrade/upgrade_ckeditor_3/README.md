@@ -14,7 +14,8 @@ For licensing, see LICENSE.md.
 
 CKEditor 3 and 4 are mostly compatible, so an upgrade to the latest CKEditor 4 line is mostly hassle-free.
 
-<info-box hint=""> Please note that the CKEditor 3 line is no longer updated. New features, bug fixes, and support for latest browser versions are not backported from CKEditor 4 and are only available by upgrading to the current editor version.
+<info-box hint="">
+    Please note that the CKEditor 3 line is no longer updated. New features, bug fixes, and support for latest browser versions are not backported from CKEditor 4 and are only available by upgrading to the current editor version.
 </info-box>
 
 ## Changes Between CKEditor 3 and 4
@@ -22,7 +23,7 @@ CKEditor 3 and 4 are mostly compatible, so an upgrade to the latest CKEditor 4 l
 Here is a list of the most notable changes between CKEditor 3 and 4.
 
 1. The new default [Moono skin](https://ckeditor.com/cke4/addon/moono) was introduced.
-2. The installation package no longer includes all possible CKEditor plugins. You can now either choose one of the pre-defined packages (Basic, Standard, Full) or create a custom build by using the [CKBuilder](https://ckeditor.com/cke4/builder) service.
+2. The installation package no longer includes all possible CKEditor plugins. You can now either choose one of the pre-defined packages (Basic, Standard, Full) or create a custom build by using the [online builder](https://ckeditor.com/cke4/builder) service.
 3. All CKEditor plugins, both created by the CKEditor team and by the community, are available in the new [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all), where you can browse them and easily add to your custom build.
 4. The new {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} adjusts your content to your editor configuration and strips disallowed content.
 5. Some changes in the CKEditor 4 JavaScript API break backward compatibility. See the list of changes between CKEditor 3.x and CKEditor 4.0 {@link guide/dev/api_changes/README here}. Please note that with time the number of differences may grow as CKEditor 4 is in active development, so it is recommended to test whether your custom plugins work as expected after the upgrade.
@@ -38,7 +39,7 @@ To upgrade CKEditor 3 to CKEditor 4, proceed as follows:
 1. **Rename** your existing editor folder to a backup folder, for example `ckeditor_old`.
 2. **Download** the latest version from the official [CKEditor Download](https://ckeditor.com/ckeditor-4/download/) site.
 	* The easiest way is to choose one of the pre-defined presets like Standard or Full.
-	* If you want to include any additional plugins, use the [CKBuilder](https://ckeditor.com/cke4/builder) service to create a custom build.
+	* If you want to include any additional plugins, use the [online builder](https://ckeditor.com/cke4/builder) service to create a custom build.
 3. **Extract** (decompress) the downloaded archive to the original editor directory, for example `ckeditor`.
 4. **Review** all configuration files that you have changed in CKEditor 3 (see the backup folder) and **apply** your changes to new CKEditor 4 files. These could include (but are not limited to) the following files:
 	* `config.js`

@@ -20,7 +20,7 @@ For licensing, see LICENSE.md.
 
 ### Download CKEditor with the Easy Image Plugin
 
-Currently the [Easy Image plugin](https://ckeditor.com/cke4/addon/easyimage) is **not** included in the CKEditor 4 presets. You {@link guide/dev/widget_installation/README need to add it to your custom CKEditor build} with [CKBuilder](https://ckeditor.com/cke4/builder). Additionally, you need to remove the default [Image](https://ckeditor.com/cke4/addon/image) plugin from your editor, either with CKBuilder or through the {@linkapi CKEDITOR.config.removePlugins configuration}:
+Currently the [Easy Image plugin](https://ckeditor.com/cke4/addon/easyimage) is **not** included in the CKEditor 4 presets. You {@link guide/dev/widget_installation/README need to add it to your custom CKEditor build} with [online builder](https://ckeditor.com/cke4/builder). Additionally, you need to remove the default [Image](https://ckeditor.com/cke4/addon/image) plugin from your editor, either with online builder or through the {@linkapi CKEDITOR.config.removePlugins configuration}:
 
 ```js
 config.removePlugins = 'image';
@@ -28,8 +28,8 @@ config.removePlugins = 'image';
 
 To help you in getting started, below you can find direct links to the online builder with Easy Image already included (and the default Image plugin removed):
 
-* [CKBuilder &ndash; Standard preset with Easy Image](https://ckeditor.com/builder/39259278af0fe338c48adfab9e43b84d)
- * [CKBuilder &ndash; Full preset with Easy Image](https://ckeditor.com/builder/4d501d9b39bd719f769d353e9d313693)
+* [Online builder &ndash; Standard preset with Easy Image](https://ckeditor.com/builder/39259278af0fe338c48adfab9e43b84d)
+ * [Online builder &ndash; Full preset with Easy Image](https://ckeditor.com/builder/4d501d9b39bd719f769d353e9d313693)
 
 If you prefer to simply download a zip package:
 

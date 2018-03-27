@@ -14,7 +14,8 @@ For licensing, see LICENSE.md.
 
 This article describes the steps you need to take when you want to upgrade your CKEditor 4.x installation to the latest version.
 
-<info-box hint=""> <strong>The latest CKEditor is always the greatest CKEditor.</strong> New releases add cool new features, support for the latest browser versions, and bug fixes. The changelog is published <a href="https://ckeditor.com/cke4/release-notes">here</a> and you can also learn about new releases by following our <a href="https://ckeditor.com/blog/">blog</a>, <a href="http://www.facebook.com/ckeditor">Facebook</a>, <a href="https://plus.google.com/+ckeditor/posts">Google+</a>, or <a href="http://twitter.com/ckeditor">Twitter</a> pages.
+<info-box hint="">
+    <strong>The latest CKEditor is always the greatest CKEditor.</strong> New releases add cool new features, support for the latest browser versions, and bug fixes. The changelog is published <a href="https://ckeditor.com/cke4/release-notes">here</a> and you can also learn about new releases by following our <a href="https://ckeditor.com/blog/">blog</a>, <a href="http://www.facebook.com/ckeditor">Facebook</a>, <a href="https://plus.google.com/+ckeditor/posts">Google+</a>, or <a href="http://twitter.com/ckeditor">Twitter</a> pages.
 </info-box>
 
 To upgrade CKEditor, proceed as follows:
@@ -24,8 +25,8 @@ To upgrade CKEditor, proceed as follows:
 	* If you are using one of the pre-defined presets like Standard or Full, download the same one.
 	* If you created a custom CKEditor build, you have a few options, as described in your backed-up `build-config.js` file.
 		* You can use the unique link to download the updated version of your custom build using the latest editor release.
-		* You can use the unique link to CKBuilder pre-loaded with your custom build configuration and using the latest editor release.
-		* You can go to the [CKBuilder site](https://ckeditor.com/cke4/builder) and click the **Upload build-config.js** button. Select your backed-up custom build configuration file and download the updated build containing the latest versions of all selected plugins.
+		* You can use the unique link to online builder pre-loaded with your custom build configuration and using the latest editor release.
+		* You can go to the [online builder site](https://ckeditor.com/cke4/builder) and click the **Upload build-config.js** button. Select your backed-up custom build configuration file and download the updated build containing the latest versions of all selected plugins.
 3. **Extract** (decompress) the downloaded archive to the original editor directory, for example `ckeditor`.
 4. **Copy** all configuration files that you have changed from the backup directory to their corresponding positions in the new directory. These could include (but are not limited to) the following files:
 	* `config.js`

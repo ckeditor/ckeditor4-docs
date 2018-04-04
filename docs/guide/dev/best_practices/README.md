@@ -93,7 +93,7 @@ Configuring ACF to accept additional tags and attributes that are unsupported by
 
 For example, if you decide to allow all attributes in HTML elements, you will allow users to enter `onclick`, `onload`, `onerror` handlers. If you decide to allow all HMTL elements, users will be able to insert all elements which are easy to use for XSS attacks, e.g. `<iframe>`s, `<script>` tags or `<meta>` tags.
 
-Although ACF is not a security filter, leaving it in defult, automatic mode should minimise the risk of XSS issues.
+Although ACF is not a security filter, leaving it in default, automatic mode should minimise the risk of XSS issues.
 
 ### Disable source mode
 

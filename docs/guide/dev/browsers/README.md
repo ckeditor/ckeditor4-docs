@@ -27,8 +27,7 @@ The list of officially supported browsers contains those which the CKEditor core
     * Latest stable release &ndash; full support.
 * **Mobile environments**:
   * **Safari** (iOS 6+) &ndash; close to full support,
-  * **Chrome** (Android) &ndash; close to full support,
-  * **Internet Explorer Mobile** (Windows Phone 8.1+) &ndash; support under evaluation.
+  * **Chrome** (Android) &ndash; close to full support.
 
 **Note:** All browsers are to be supported for web pages that work in Standards Mode (i.e. with a valid Document Type Declaration, for example of HTML5 (`<!DOCTYPE html>`)) except for IE 9 Quirks that will support unknown doctypes.
 

@@ -47,7 +47,7 @@ Fix the markup to make your content free from accessibility issues. Thanks to th
 
 ## Running Accessibility Checker
 
-You can enable Accessibility Checker by clicking the **Check Accessibility** (<img src="%BASE_PATH%/assets/img/a11ychecker.png" alt="Check Accessibility" title="Check Accessibility" style="vertical-align: bottom;">) toolbar button. Once the button is clicked, Accessibility Checker will perform the content checking process. Typically it takes a fraction of a second. Depending on the result, Accessibility Checker will switch to **checking mode** or inform you that the document contains no accessibility issues.
+You can enable Accessibility Checker by clicking the **Check Accessibility** (<img class="inline" src="%BASE_PATH%/assets/img/a11ychecker.png" alt="Check Accessibility" title="Check Accessibility">) toolbar button. Once the button is clicked, Accessibility Checker will perform the content checking process. Typically it takes a fraction of a second. Depending on the result, Accessibility Checker will switch to **checking mode** or inform you that the document contains no accessibility issues.
 
 ### Issues Found &mdash; Checking Mode
 
@@ -74,6 +74,8 @@ An issue represents a single accessibility problem in your content, as defined b
 * **Notice** &ndash; The checking engine has no way to detect this issue, so it points an issue only as a notice and the user can verify if the content satisfies the given rule.
 
 In checking mode the highlight color will slightly differ (ranging from red for an error through yellow for a warning to gray for a notice) in order to hint the issue type.
+
+Refer to the {@link guide/dev/integration/a11ychecker/custom_issue_types/README Custom Issue Types in Accessibility Checker} tutorial for information about adding your own issue types.
 
 ## Checking Mode
 
@@ -153,6 +155,8 @@ For example, it is recommended that an alternative text for an image should be s
 #### Adding Quick Fixes
 
 Quick Fix feature was created with extensibility in mind, so it is very easy for a developer to add new, custom Quick Fixes to Accessibility Checker.
+
+Refer to the {@link guide/dev/integration/a11ychecker/custom_quick_fixes/README Custom Quick Fixes in Accessibility Checker} tutorial for information about adding your own Quick Fixes.
 
 ### Ignoring Issues
 

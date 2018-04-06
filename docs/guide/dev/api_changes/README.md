@@ -31,7 +31,7 @@ The listener function sent to {@linkapi CKEDITOR.event#on CKEDITOR.event#on} can
 
 ---
 
-{@linkapi CKEDITOR.config.corePlugins CKEDITOR.config.corePlugins} is not needed anymore. The "core plugins" are now really part of the core, although their API signatures are left untouched:
+`CKEDITOR.config.corePlugins` is not needed anymore. The "core plugins" are now really part of the core, although their API signatures are left untouched:
 
  * `plugins/selection/plugin.js` => `core/selection.js`.
 	The "Select All" feature originally provided by the `selection` plugin is now a standalone [Select All](https://ckeditor.com/cke4/addon/selectall) plugin.
@@ -46,7 +46,7 @@ The editor will now support **only one single skin per page** (all editors will 
 
 Because of the above, the following skin-related properties were moved global or deleted:
 
- * {@linkapi CKEDITOR.skins CKEDITOR.skins} => {@linkapi CKEDITOR.skin CKEDITOR.skin}
+ * `CKEDITOR.skins` => {@linkapi CKEDITOR.skin}
  * `CKEDITOR.skins.add` => **removed**
  * `CKEDITOR.skins.load( editor, partName, callback )` => `CKEDITOR.skin.loadPart( partName, callback )`
  * `CKEDITOR.editor#skinName` => `CKEDITOR.skin.name`
@@ -60,16 +60,16 @@ The skin definition file (`skin.js`) was simplified as follows:
 
 ---
 
-The "theme" concept is removed, the DOM structure of the editor is now defined by creators or plugins individually, thus the {@linkapi CKEDITOR.themes CKEDITOR.themes} namespace is removed.
+The "theme" concept is removed, the DOM structure of the editor is now defined by creators or plugins individually, thus the `CKEDITOR.themes` namespace is removed.
 
 ---
 
-{@linkapi CKEDITOR.editor#setMode CKEDITOR.editor#setMode} and {@linkapi CKEDITOR.editor#getMode CKEDITOR.editor#getMode} are features provided by the themedui creator only,
+`CKEDITOR.editor#setMode` and `CKEDITOR.editor#getMode` are features provided by the themedui creator only,
 which is not available in an instance created by the inline creator, where {@linkapi CKEDITOR.editor#mode CKEDITOR.editor#mode} property will be always `'wysiwyg'`.
 
 ---
 
-{@linkapi CKEDITOR.config.editingBlock CKEDITOR.config.editingBlock} was removed, with the `editingBlock` being renewed as `editable`.
+`CKEDITOR.config.editingBlock` was removed, with the `editingBlock` being renewed as `editable`.
 
 ---
 
@@ -79,15 +79,15 @@ that receive DOM focus will turn {@linkapi CKEDITOR.focusManager#hasFocus CKEDIT
 
 Because of the above, {@linkapi CKEDITOR.editable#hasFocus CKEDITOR.editable#hasFocus} should now be used instead for {@linkapi CKEDITOR.focusManager#hasFocus CKEDITOR.focusManager#hasFocus} to check the focus state of the editing block.
 
-The {@linkapi CKEDITOR.focusManager#forceBlur CKEDITOR.focusManager#forceBlur} method was removed.
+The `CKEDITOR.focusManager#forceBlur` method was removed.
 
 ---
 
-{@linkapi CKEDITOR.config.toolbar_Basic CKEDITOR.config.toolbar_Basic} and {@linkapi CKEDITOR.config.toolbar_Full CKEDITOR.config.toolbar_Full} were removed. Custom toolbar layout can be easily managed with {@linkapi CKEDITOR.config.toolbarGroups CKEDITOR.config.toolbarGroups}.
+`CKEDITOR.config.toolbar_Basic` and `CKEDITOR.config.toolbar_Full` were removed. Custom toolbar layout can be easily managed with {@linkapi CKEDITOR.config.toolbarGroups}.
 
 ---
 
-The "additional CSS" feature provided by {@linkapi CKEDITOR.editor#addCss CKEDITOR.editor#addCss} is now moved to the global {@linkapi CKEDITOR.addCss CKEDITOR.addCss}, with specified style rules applied **document wide**.
+The "additional CSS" feature provided by `CKEDITOR.editor#addCss` is now moved to the global {@linkapi CKEDITOR.addCss CKEDITOR.addCss}, with specified style rules applied **document wide**.
 
 Thus the proper way for a plugin to style its editable content is to call {@linkapi CKEDITOR.addCss CKEDITOR.addCss}
 inside of the plugin's `onLoad` function, rather than its `init` function in v3.
@@ -139,7 +139,7 @@ In this way the entry will be available under `editor.lang.myplugin.title`.
 
 ---
 
-The {@linkapi CKEDITOR.editor CKEDITOR.editor} constructor now receives two additional optional parameters (besides the configuration object)
+The {@linkapi CKEDITOR.editor} constructor now receives two additional optional parameters (besides the configuration object)
 to simplify creator implementation:
 
 ``` js
@@ -172,9 +172,9 @@ the HTML5 doctype.
 
 ---
 
-The {@linkapi CKEDITOR.editor#getThemeSpace CKEDITOR.editor#getThemeSpace} method was moved to {@linkapi CKEDITOR.editor#space CKEDITOR.editor#space}.
+The `CKEDITOR.editor#getThemeSpace` method was moved to {@linkapi CKEDITOR.ui#space}.
 
-The {@linkapi CKEDITOR.editor#themeSpace CKEDITOR.editor#themeSpace} event was replaced with {@linkapi CKEDITOR.editor#uiSpace CKEDITOR.editor#uiSpace}.
+The `CKEDITOR.editor#themeSpace` event was replaced with {@linkapi CKEDITOR.editor#uiSpace}.
 
 ---
 
@@ -187,11 +187,11 @@ They were replaced with `evt.data.dataValue` and `evt.data.type` to help identif
 
 ---
 
-The {@linkapi CKEDITOR.replaceByClassEnabled CKEDITOR.replaceByClassEnabled} option is not available anymore. It is now enough to set {@linkapi CKEDITOR.replaceClass CKEDITOR.replaceClass} to empty/null to disable the auto-replace.
+The `CKEDITOR.replaceByClassEnabled` option is not available anymore. It is now enough to set {@linkapi CKEDITOR.replaceClass} to empty/null to disable the auto-replace.
 
 ---
 
-{@linkapi CKEDITOR.dtd.s-captionBlock CKEDITOR.dtd.$captionBlock} was removed. In order to check if one element can appear inside a table caption, use the DTD check instead:
+`CKEDITOR.dtd.$captionBlock` was removed. In order to check if one element can appear inside a table caption, use the DTD check instead:
 
 ``` js
 assert.isTrue( !!CKEDITOR.dtd.caption[ element.getName() ] );

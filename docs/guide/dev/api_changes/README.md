@@ -46,7 +46,7 @@ The editor will now support **only one single skin per page** (all editors will 
 
 Because of the above, the following skin-related properties were moved global or deleted:
 
- * `CKEDITOR.skins` => {@linkapi CKEDITOR.skin CKEDITOR.skin}
+ * `CKEDITOR.skins` => {@linkapi CKEDITOR.skin}
  * `CKEDITOR.skins.add` => **removed**
  * `CKEDITOR.skins.load( editor, partName, callback )` => `CKEDITOR.skin.loadPart( partName, callback )`
  * `CKEDITOR.editor#skinName` => `CKEDITOR.skin.name`
@@ -83,7 +83,7 @@ The `CKEDITOR.focusManager#forceBlur` method was removed.
 
 ---
 
-`CKEDITOR.config.toolbar_Basic` and `CKEDITOR.config.toolbar_Full` were removed. Custom toolbar layout can be easily managed with {@linkapi CKEDITOR.config.toolbarGroups CKEDITOR.config.toolbarGroups}.
+`CKEDITOR.config.toolbar_Basic` and `CKEDITOR.config.toolbar_Full` were removed. Custom toolbar layout can be easily managed with {@linkapi CKEDITOR.config.toolbarGroups}.
 
 ---
 
@@ -139,7 +139,7 @@ In this way the entry will be available under `editor.lang.myplugin.title`.
 
 ---
 
-The {@linkapi CKEDITOR.editor CKEDITOR.editor} constructor now receives two additional optional parameters (besides the configuration object)
+The {@linkapi CKEDITOR.editor} constructor now receives two additional optional parameters (besides the configuration object)
 to simplify creator implementation:
 
 ``` js
@@ -172,9 +172,9 @@ the HTML5 doctype.
 
 ---
 
-The `CKEDITOR.editor#getThemeSpace` method was moved to {@linkapi CKEDITOR.ui#space CKEDITOR.ui#space}.
+The `CKEDITOR.editor#getThemeSpace` method was moved to {@linkapi CKEDITOR.ui#space}.
 
-The `CKEDITOR.editor#themeSpace` event was replaced with {@linkapi CKEDITOR.editor#uiSpace CKEDITOR.editor#uiSpace}.
+The `CKEDITOR.editor#themeSpace` event was replaced with {@linkapi CKEDITOR.editor#uiSpace}.
 
 ---
 
@@ -187,7 +187,7 @@ They were replaced with `evt.data.dataValue` and `evt.data.type` to help identif
 
 ---
 
-The `CKEDITOR.replaceByClassEnabled` option is not available anymore. It is now enough to set {@linkapi CKEDITOR.replaceClass CKEDITOR.replaceClass} to empty/null to disable the auto-replace.
+The `CKEDITOR.replaceByClassEnabled` option is not available anymore. It is now enough to set {@linkapi CKEDITOR.replaceClass} to empty/null to disable the auto-replace.
 
 ---
 

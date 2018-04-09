@@ -86,7 +86,7 @@ var config = {
                          * Returns the name of the tag that `issue.element` should be converted to.
                          *
                          * @member CKEDITOR.plugins.a11ychecker.ElementReplace.StrongReplace
-                         * @param {Object} formAttributes Form attributes from {@link #fix}.
+                         * @param {Object} formAttributes Form attributes from `fix` method.
                          * @returns {String}
                          */
                         StrongReplace.prototype.getTargetName = function( formAttributes ) {

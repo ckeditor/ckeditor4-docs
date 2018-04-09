@@ -28,7 +28,7 @@ In order to hook into the process of issue gathering there are a few things to b
 * Registering the {@link guide/dev/features/accessibility_checker/README#what-exactly-are-issues issue type}.
 * Hooking to the `process` event of `editor._.a11ychecker.engine`.
 
-In this guide whenever we refer to the `editor` variable, it is an instance of {@linkapi CKEDITOR.editor}, and when referring to the `a11ychecker` variable, it is a `editor._.a11ychecker` member.
+In this guide whenever we refer to the `editor` variable, it is an instance of {@linkapi CKEDITOR.editor CKEDITOR.editor} type, and when referring to the `a11ychecker` variable, it is a `editor._.a11ychecker` member.
 
 ## Complete Code Snippet
 

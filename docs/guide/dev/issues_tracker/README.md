@@ -67,6 +67,7 @@ Every issue may be marked with the following labels:
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:cantreproduce</span> &ndash; A valid bug report that is not reproducible.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:upstream</span> &ndash; Issue in the third-party software.
     * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:wontfix</span> &ndash; The issue is valid, however, CKSource does not plan to fix it.
+    * <span style="background-color:#444444;color:#FFF;padding:0 3px 0 3px">resolution:unsupported-environment</span> &ndash; This issue can be reproduced on an unsupported environment.
     * If an issue is closed and there is no resolution label, it means that the issue was fixed and merged to the `master` or `major` branch.
 * Browser labels &mdash; for browser-specific bugs:
     * <span style="background-color:#5319e7;color:#FFF;padding:0 3px 0 3px">browser:NNN</span> &ndash; The issue can only be reproduced in a particular browser.

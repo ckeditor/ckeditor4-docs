@@ -50,4 +50,4 @@ Once you log in, you will be ready to [report a CKEditor issue](https://github.c
 
 ### Labels
 
-Description for each label is available at [GitHub label list](https://github.com/ckeditor/ckeditor-dev/labels).
+Each issue is categorised with labels. Refer to the [GitHub label list](https://github.com/ckeditor/ckeditor-dev/labels) for the label descriptions.

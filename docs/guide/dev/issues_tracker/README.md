@@ -46,7 +46,7 @@ Before clicking the following link, make sure you have read the instructions abo
 
 Only registered GitHub users may create issues. If you are not registered, take a minute to [create a GitHub account](https://github.com/join).
 
-Once you log in, you will be ready to [report a CKEditor issue](https://github.com/ckeditor/ckeditor-dev/issues/new).
+Once you log in, you will be ready to [report a CKEditor issue](https://github.com/ckeditor/ckeditor-dev/issues/new/choose).
 
 ### Labels
 

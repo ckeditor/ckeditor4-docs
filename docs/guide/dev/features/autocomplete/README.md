@@ -26,8 +26,6 @@ The autocomplete plugin shows dropdown with available options every time when us
 
 When you press <kbd>enter</kbd>, <kbd>tab</kbd> or any other customized [`commitKeystroke`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config#cfg-autocomplete_commitKeystrokes) suggested value will be inserted into editor. 
 
-{@img assets/img/autocomplete_02.png Inserted autocomplete hint.}
-
 ## Configuration
 
 Autocomplete plugin utilizes two important callbacks which allows you to customize matching function and data source:
@@ -35,9 +33,7 @@ Autocomplete plugin utilizes two important callbacks which allows you to customi
 * A text test callback.
 * A data callback. 
 
-They are required to setup autocomplete instance which will be immediately attached into editor after its creation.
-
-Lets configure autocomplete plugin for simple list of GitHub tickets. Autocomplete can be configured by [`configDefinition`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition) object passed into autocomplete constructor.
+They are required to setup autocomplete instance which will be immediately attached into editor after its creation. Autocomplete can be configured by [`configDefinition`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition) object passed into autocomplete constructor.
 
 ```javascript
 // We will update this object during this guide.

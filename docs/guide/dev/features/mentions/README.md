@@ -103,7 +103,7 @@ config.mentions = [ {
 
 ### Data items structure
 
-When using asynchronous method i.e. backend URL string or a callback function, you should provide correct object structure. See [autocomplete data callback guide](https://docs.ckeditor.com/ckeditor4/!#/guide/dev_autocomplete#templating) for more information about required item properties.
+When using asynchronous method i.e. backend URL string or a callback function, you should provide correct object structure. See {@link guide/dev/features/autocomplete/README#data-callback autocomplete data callback guide} for more information about required item properties.
 
 ## Customizing text matching
 
@@ -139,7 +139,7 @@ See {@link guide/dev/features/autocomplete/README#templating autocomplete templa
 
 ## Throttling
 
-Throttling is configurable by [`config.throttle`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-throttle) option. See [autocomplete throttling guide](https://docs.ckeditor.com/ckeditor4/!#/guide/dev_autocomplete#templating) for more details.
+Throttling is configurable by [`config.throttle`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-throttle) option. See {@link guide/dev/features/autocomplete/README#throttling autocomplete throttling guide} for more details.
 
 ## Mentions Demo
 

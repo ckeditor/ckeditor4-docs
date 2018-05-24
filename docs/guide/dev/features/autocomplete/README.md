@@ -24,7 +24,7 @@ The autocomplete plugin shows dropdown with available options every time when us
 
 {@img assets/img/autocomplete_01.png Using autocomplete to get ticket hints.}
 
-When you press <kbd>enter</kbd>, <kbd>tab</kbd> or any other customized [`commitKeystroke`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config#autocomplete_commitKeystrokes) suggested value will be inserted into editor. 
+When you press <kbd>enter</kbd>, <kbd>tab</kbd> or any other customized [`commitKeystroke`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config#cfg-autocomplete_commitKeystrokes) suggested value will be inserted into editor. 
 
 {@img assets/img/autocomplete_02.png Inserted autocomplete hint.}
 
@@ -37,7 +37,7 @@ Autocomplete plugin utilizes two important callbacks which allows you to customi
 
 They are required to setup autocomplete instance which will be immediately attached into editor after its creation.
 
-Lets configure autocomplete plugin for simple list of GitHub tickets. Autocomplete can be configured by [`configDefinition`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition.html) object passed into autocomplete constructor.
+Lets configure autocomplete plugin for simple list of GitHub tickets. Autocomplete can be configured by [`configDefinition`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition) object passed into autocomplete constructor.
 
 ```javascript
 // We will update this object during this guide.
@@ -46,7 +46,7 @@ var config = {};
 
 ## Text test callback
 
-A function which should return a fragment of text (typed in the editor) that should be autocompleted. This function works best with [`textmatch`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_textwatcher.html) feature which was published alongside with `autocomplete` plugin. Lets say you would like to create autocompletion feature for GitHub tickets. Depending on you use case, you could create autocomplete instance using this code:
+A function which should return a fragment of text (typed in the editor) that should be autocompleted. This function works best with [`textmatch`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_textwatcher) feature which was published alongside with `autocomplete` plugin. Lets say you would like to create autocompletion feature for GitHub tickets. Depending on you use case, you could create autocomplete instance using this code:
 
 ```javascript
 // Called when the user types in the editor or moves the caret.
@@ -142,7 +142,7 @@ For performance reasons autocomplete plugin features throttling mitigating text 
 config.throttle = 200;
 ```
 
-Throttling implementation is based on [`CKEDITOR.tools.throttle`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition.html) feature. If you need more information how it works, refer to our docs.
+Throttling implementation is based on [`CKEDITOR.tools.throttle`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition) feature. If you need more information how it works, refer to our docs.
 
 ## Final step
 

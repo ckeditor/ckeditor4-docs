@@ -114,7 +114,7 @@ function dataCallback( query, range, callback ) {
 config.dataCallback = dataCallback;
 ```
 
-Pay attention to the data passed into `callback` argument - `id` and `name` properties are required. `ticket` property is optional and we will use it later.
+Pay attention to the data passed into `callback` argument - `id` and `name` properties are required. `ticket` property is optional and we will use it later. You should always provide correct object structure containing unique item ID. Although the `name` property is required when using `autocomplete` plugin with default view and output templates, it can be changed by custom templating.
 
 ## Templating
 

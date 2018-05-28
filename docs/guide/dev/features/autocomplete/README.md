@@ -31,7 +31,7 @@ When you press <kbd>enter</kbd>, <kbd>tab</kbd> or any other customized [`commit
 Autocomplete plugin utilizes two important callbacks which allows you to customize matching function and data source:
 
 * A text test callback.
-* A data callback. 
+* A data callback.
 
 They are required to setup autocomplete instance which will be immediately attached into editor after its creation. Autocomplete can be configured by [`configDefinition`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition) object passed into autocomplete constructor.
 
@@ -79,7 +79,7 @@ config.textTestCallback = textTestCallback;
 
 ## Data callback
 
-A function which should return (through its callback) a suggestion data for the current query string. This function will be only called if the previous `textTestCallback` returned matching text. 
+A function which should return (through its callback) a suggestion data for the current query string. This function will be only called if the previous `textTestCallback` returned matching text.
 
 ```javascript
 // The itemsArray variable is our example "database".
@@ -110,7 +110,7 @@ function dataCallback( query, range, callback ) {
 config.dataCallback = dataCallback;
 ```
 
-Pay attention to the data passed into `callback` argument - `id` and `name` properties are required. `ticket` property is optional and we will use it later. You should always provide correct object structure containing unique item ID. Although the `name` property is required when using `autocomplete` plugin with default view and output templates, it can be changed by custom templating.
+Pay attention to the data passed into `callback` argument - `id` and `name` properties are required. `ticket` property is optional and we will use it later. You should always provide correct object structure containing unique item ID. Although the `name` property is required when using `autocomplete` plugin with default item and output templates, it can be changed by custom templating.
 
 ## Templating
 
@@ -119,7 +119,7 @@ Autocomplete has very customizable templating feature. You can change dropdown t
 Lets utilise our optional `ticket` property to get more interesting dropdown:
 
 ```javascript
-config.viewTemplate = '<li data-id="{id}"><strong>{ticket}</strong> <i>{name}</i></li>';
+config.itemTemplate = '<li data-id="{id}"><strong>{ticket}</strong> <i>{name}</i></li>';
 ```
 
 And create some custom output:
@@ -128,7 +128,7 @@ And create some custom output:
 config.outputTemplate = '<a href="https://github.com/ckeditor/ckeditor-dev/issues/{ticket}">#{ticket}</a>';
 ```
 
-Note that when creating custom `viewTemplate` you should use `li` element with `data-id="{id}"`. 
+Note that when creating custom `itemTemplate` you should use `li` element with `data-id="{id}"`. 
 
 ## Throttling
 

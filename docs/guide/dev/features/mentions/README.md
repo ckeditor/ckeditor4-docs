@@ -24,9 +24,7 @@ The mentions plugin shows dropdown with available options every time when user t
 
 {@img assets/img/mentions_01.png Using mentions to get user hints.}
 
-When you press <kbd>enter</kbd> or <kbd>tab</kbd> key suggested value will be inserted into an editor. 
-
-{@img assets/img/mentions_02.png Inserted mentions hint.}
+When you press <kbd>enter</kbd> or <kbd>tab</kbd> key suggested value will be inserted into an editor.
 
 ## Configuration
 
@@ -62,7 +60,7 @@ By default query matching for an array feed is case insensitive. You can change 
 
 ## Setting up asynchronous data feed
 
-### Backend URL 
+### Backend URL
 
 You can provide a backend URL string which will be used to fetch text matches from custom endpoint service. Each time when a user types matching text into an editor your backend service will be queried for text matches. Ajax URL request should response with an array of matches in JSON format.
 
@@ -121,19 +119,11 @@ config.mentions = [ {
 
 With the above configuration you will get completion hints after 3 characters started with `#`.
 
-
-{@img assets/img/mentions_03.png Using mentions with custom text matching.}
-
 ## Templating
 
-Templating is configurable by [`config.viewTemplate`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-viewTemplate) and [`config.outputTemplate`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-outputTemplate) options. Templating allows you to create customized dropdown view:
+Templating is configurable by [`config.itemTemplate`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-itemTemplate) and [`config.outputTemplate`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-outputTemplate) options. Templating allows you to create customized dropdown view and a format of accepted item.
 
-{@img assets/img/mentions_04.png Using mentions with custom view template.}
-
-
-and a format of accepted item:
-
-{@img assets/img/mentions_05.png Using mentions with custom output template.}
+{@img assets/img/mentions_02.png Using mentions with custom item template.}
 
 See {@link guide/dev/features/autocomplete/README#templating autocomplete templating guide} for more details.
 

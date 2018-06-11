@@ -90,33 +90,22 @@ Another solution is to use the {@linkapi CKEDITOR } object which will cause all 
 ## Adjusting Output Formatting Through Configuration
 
 Numerous {@link guide/dev/configuration/README configuration options} let you tweak CKEditor behavior without touching the writer, including:
-<ul style="margin-bottom:40px">
-	<li>Entities support:
-		<ul>
-			<li style="float: left;">{@linkapi CKEDITOR.config#basicEntities config.basicEntities}</li>
-			<li style="float: left;margin-left:30px">{@linkapi CKEDITOR.config#entities config.entities}</li>
-			<li style="float: left;margin-left:30px">{@linkapi CKEDITOR.config#entities_greek config.entities_greek}</li>
-			<li style="float: left;margin-left:30px">{@linkapi CKEDITOR.config#entities_latin config.entities_latin}</li>
-			<li style="float: left;margin-left:30px">{@linkapi CKEDITOR.config#entities_processNumerical config.entities_processNumerical}</li>
-		</ul>
-	</li>
-	<li style="clear:both">White space usage:
-		<ul>
-			<li style="float: left;">{@linkapi CKEDITOR.config#dataIndentationChars config.dataIndentationChars}</li>
-			<li style="float: left;margin-left:30px">{@linkapi CKEDITOR.config#sourceAreaTabSize config.sourceAreaTabSize}</li>
-		</ul></li>
-	<li style="clear:both">Handling block elements:
-		<ul>
-			<li style="float: left;">{@linkapi CKEDITOR.config#autoParagraph config.autoParagraph} (<strong>deprecated</strong>)</li>
-			<li style="float: left;margin-left:30px">{@linkapi CKEDITOR.config#fillEmptyBlocks config.fillEmptyBlocks}</li>
-			<li style="float: left;margin-left:30px">{@linkapi CKEDITOR.config#ignoreEmptyParagraph config.ignoreEmptyParagraph}</li>
-		</ul></li>
-	<li style="clear:both">HTML encoding:
-		<ul>
-			<li style="float: left;">{@linkapi CKEDITOR.config#htmlEncodeOutput config.htmlEncodeOutput}</li>
-		</ul>
-	</li>
-</ul>
+
+* Entities support:
+  * {@linkapi CKEDITOR.config#basicEntities config.basicEntities}
+  * {@linkapi CKEDITOR.config#entities config.entities}
+  * {@linkapi CKEDITOR.config#entities_greek config.entities_greek}
+  * {@linkapi CKEDITOR.config#entities_latin config.entities_latin}
+  * {@linkapi CKEDITOR.config#entities_processNumerical config.entities_processNumerical}
+* White space usage:
+  * {@linkapi CKEDITOR.config#dataIndentationChars config.dataIndentationChars}
+  * {@linkapi CKEDITOR.config#sourceAreaTabSize config.sourceAreaTabSize}
+* Handling block elements:
+  * {@linkapi CKEDITOR.config#autoParagraph config.autoParagraph} (**deprecated**)
+  * {@linkapi CKEDITOR.config#fillEmptyBlocks config.fillEmptyBlocks}
+  * {@linkapi CKEDITOR.config#ignoreEmptyParagraph config.ignoreEmptyParagraph}
+* HTML encoding:
+  * {@linkapi CKEDITOR.config#htmlEncodeOutput config.htmlEncodeOutput}
 
 ## HTML Output Formatting Demo
 

@@ -53,7 +53,7 @@ Example:
 
 Properties `command` and `click` are optional, but one of them should be preset.
 
-It works in the same way as {@link CKEDITOR.ui.button} definition.
+It works in the same way as {@linkapi CKEDITOR.ui.button button} definition.
 
 ### Dynamic face
 
@@ -78,16 +78,36 @@ When the `face` definition is absent Splitbuttons face will dynamically change. 
 Properties `command` and `onClick` are optional, but one of them should be present.
 Property `default` will set one of the items as default which means it will be also the `face` whenever none of items is active.
 
-Items definition works in same way as {@link CKEDITOR.ui.menubutton}.
+Items definition works in same way as {@linkapi CKEDITOR.ui.menubutton menubutton}.
 
 ## Adding to UI
 
 The Splitbutton can be added to editors toolbar, you can do it in two ways.
 
-1. Push it to an existing toolgroup by `toolbar` property in the Splitbuttons definition, see {@link CKEDITOR.ui#addButton}
-2. Define the toolbar in editors config, see {@link CKEDITOR.config#toolbar}.
+1. Push it to an existing toolgroup by `toolbar` property in the Splitbuttons definition, see {@link CKEDITOR.ui#addButton addButton}, for example:
 
-It can be also added to the Balloon toolbar, see {@link CKEDITOR.ui.balloonToolbar#addItems}.
+```javascript
+    editor.ui.add( 'JustifySplit', CKEDITOR.UI_SPLITBUTTON, {
+        items: [...],
+        label: '...',
+        toolbar: 'align, 10'
+        // Split Button will be added to toolbar named 'align' at position 10.
+    }
+```
+
+2. Define the toolbar in editors config, see {@linkapi CKEDITOR.config#toolbar toolbar}. for example:
+```javascript
+    // Once we defined Split Button via editor.ui.add
+    var config = {
+        toolbar: [
+            [ 'Source', 'Undo', 'Redo' ],
+            [ 'Bold', 'Italic', 'Underline', 'JustifySplit' ]
+            // Split Button will be added to secont toolbar at the last position.
+        ]
+    }
+```
+
+It can be also added to the Balloon toolbar, see {@linkapi CKEDITOR.ui.balloonToolbar#addItems addItems}.
 
 ## Splitbutton sample
 

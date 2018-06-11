@@ -92,20 +92,20 @@ Another solution is to use the {@linkapi CKEDITOR } object which will cause all 
 Numerous {@link guide/dev/configuration/README configuration options} let you tweak CKEditor behavior without touching the writer, including:
 
 * Entities support:
-  * {@linkapi CKEDITOR.config#basicEntities config.basicEntities}
-  * {@linkapi CKEDITOR.config#entities config.entities}
-  * {@linkapi CKEDITOR.config#entities_greek config.entities_greek}
-  * {@linkapi CKEDITOR.config#entities_latin config.entities_latin}
-  * {@linkapi CKEDITOR.config#entities_processNumerical config.entities_processNumerical}
+  * {@linkapi CKEDITOR.config#basicEntities}
+  * {@linkapi CKEDITOR.config#entities}
+  * {@linkapi CKEDITOR.config#entities_greek}
+  * {@linkapi CKEDITOR.config#entities_latin}
+  * {@linkapi CKEDITOR.config#entities_processNumerical}
 * White space usage:
-  * {@linkapi CKEDITOR.config#dataIndentationChars config.dataIndentationChars}
-  * {@linkapi CKEDITOR.config#sourceAreaTabSize config.sourceAreaTabSize}
+  * {@linkapi CKEDITOR.config#dataIndentationChars}
+  * {@linkapi CKEDITOR.config#sourceAreaTabSize}
 * Handling block elements:
-  * {@linkapi CKEDITOR.config#autoParagraph config.autoParagraph} (**deprecated**)
-  * {@linkapi CKEDITOR.config#fillEmptyBlocks config.fillEmptyBlocks}
-  * {@linkapi CKEDITOR.config#ignoreEmptyParagraph config.ignoreEmptyParagraph}
+  * {@linkapi CKEDITOR.config#autoParagraph} (**deprecated**)
+  * {@linkapi CKEDITOR.config#fillEmptyBlocks}
+  * {@linkapi CKEDITOR.config#ignoreEmptyParagraph}
 * HTML encoding:
-  * {@linkapi CKEDITOR.config#htmlEncodeOutput config.htmlEncodeOutput}
+  * {@linkapi CKEDITOR.config#htmlEncodeOutput}
 
 ## HTML Output Formatting Demo
 

@@ -20,7 +20,7 @@ This plugin provides smart completion feature for custom text matches based on u
 
 ## Usage
 
-The mentions plugin shows dropdown with available options every time when user types matching text preceded by a marker sign.
+The mentions plugin shows dropdown with available options every time when user types matching text preceded by a **marker** sign.
 
 {@img assets/img/mentions_01.png Using mentions to get user hints.}
 
@@ -28,7 +28,7 @@ When you press <kbd>enter</kbd> or <kbd>tab</kbd> key suggested value will be in
 
 ## Configuration
 
-Mentions plugin is configurable by [global configuration property](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_config#cfg-mentions) or directly when instantiating an editor. Refer to {@link guide/dev/configuration/README Setting CKEditor Configuration} guide for more information about CKEditor configuration.
+Mentions plugin is configurable by {@linkapi CKEDITOR.config.mentions global configuration property} or directly when instantiating an editor. Refer to {@link guide/dev/configuration/README Setting CKEditor Configuration} guide for more information about CKEditor configuration.
 
 ```javascript
 // Simple usage with CKEDITOR.config.mentions property.
@@ -56,7 +56,7 @@ The easiest way to configure data feed is to provide an array of text matches. M
 config.mentions = [ { feed: ['Anna', 'Thomas', 'John'] } ];
 ```
 
-By default query matching for an array feed is case insensitive. You can change this behavior by setting [`caseSensitive`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_mentions_configDefinition#property-caseSensitive) configuration option.
+By default query matching for an array feed is case insensitive. You can change this behavior by setting {@linkapi CKEDITOR.plugins.mentions.configDefinition.caseSensitive caseSensitive} configuration option.
 
 ## Setting up asynchronous data feed
 
@@ -70,7 +70,7 @@ A backend URL string features `encodedQuery` special variable replaced with a me
 config.mentions = [ { feed: '/users?query={encodedQuery}' } ];
 ```
 
-To avoid multiple HTTP requests to your endpoint service each HTTP response is cached by default and shared globally. To disable caching use [`cache configuration option`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_mentions_configDefinition#property-cache).
+To avoid multiple HTTP requests to your endpoint service each HTTP response is cached by default and shared globally. To disable caching use {@linkapi CKEDITOR.plugins.mentions.configDefinition.cache cache} configuration option.
 
 ### Asynchronous callback
 
@@ -107,7 +107,7 @@ When using asynchronous method i.e. backend URL string or a callback function, y
 
 You are not forced to stick to default mentions text matching. It could be customized by special marker character and a number of minimal characters required to start data querying.
 
-You can easily configure this options by setting [config.minChars](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-minChars) and [config.marker](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-marker) options.
+You can easily configure this options by setting {@linkapi CKEDITOR.plugins.mentions.configDefinition.minChars minChars} and {@linkapi CKEDITOR.plugins.mentions.configDefinition.marker marker} options.
 
 ```javascript
 config.mentions = [ {
@@ -121,7 +121,7 @@ With the above configuration you will get completion hints after 3 characters st
 
 ## Templating
 
-Templating is configurable by [`config.itemTemplate`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-itemTemplate) and [`config.outputTemplate`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-outputTemplate) options. Templating allows you to create customized dropdown view and a format of accepted item.
+Templating is configurable by {@linkapi CKEDITOR.plugins.mentions.configDefinition.itemTemplate itemTemplate} and {@linkapi CKEDITOR.plugins.mentions.configDefinition.outputTemplate outputTemplate} options. Templating allows you to create customized dropdown view and a format of accepted item.
 
 {@img assets/img/mentions_02.png Using mentions with custom item template.}
 
@@ -129,7 +129,7 @@ See {@link guide/dev/features/autocomplete/README#templating autocomplete templa
 
 ## Throttling
 
-Throttling is configurable by [`config.throttle`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_mentions_configDefinition#property-throttle) option. See {@link guide/dev/features/autocomplete/README#throttling autocomplete throttling guide} for more details.
+Throttling is configurable by {@linkapi CKEDITOR.plugins.mentions.configDefinition.throttle} option. See {@link guide/dev/features/autocomplete/README#throttling autocomplete throttling guide} for more details.
 
 ## Mentions Demo
 

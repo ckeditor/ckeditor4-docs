@@ -24,7 +24,7 @@ The autocomplete plugin shows dropdown with available options every time when us
 
 {@img assets/img/autocomplete_01.png Using autocomplete to get ticket hints.}
 
-When you press <kbd>enter</kbd>, <kbd>tab</kbd> or any other customized [`commitKeystroke`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config#cfg-autocomplete_commitKeystrokes) suggested value will be inserted into editor. 
+When you press <kbd>enter</kbd>, <kbd>tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes `commitKeystrokes`} suggested value will be inserted into editor.
 
 ## Configuration
 
@@ -33,16 +33,16 @@ Autocomplete plugin utilizes two important callbacks which allows you to customi
 * A text test callback.
 * A data callback.
 
-They are required to setup autocomplete instance which will be immediately attached into editor after its creation. Autocomplete can be configured by [`configDefinition`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition) object passed into autocomplete constructor.
+They are required to setup autocomplete instance which will be immediately attached into editor after its creation. Autocomplete can be configured by {@linkapi CKEDITOR.plugins.autocomplete.configDefinition configDefinition} object passed into autocomplete constructor.
 
 ```javascript
 // We will update this object during this guide.
 var config = {};
 ```
 
-## Text test callback
+### Text test callback
 
-A function which should return a fragment of text (typed in the editor) that should be autocompleted. This function works best with [`textmatch`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_textwatcher) feature which was published alongside with `autocomplete` plugin. Lets say you would like to create autocompletion feature for GitHub tickets. Depending on you use case, you could create autocomplete instance using this code:
+A function which should return a fragment of text (typed in the editor) that should be autocompleted. This function works best with {@linkapi CKEDITOR.plugins.textMatch textMatch} feature which was published alongside with `autocomplete` plugin. Lets say you would like to create autocompletion feature for GitHub tickets. Depending on you use case, you could create autocomplete instance using this code:
 
 ```javascript
 // Called when the user types in the editor or moves the caret.
@@ -77,29 +77,29 @@ function matchCallback( text, offset ) {
 config.textTestCallback = textTestCallback;
 ```
 
-## Data callback
+### Data callback
 
 A function which should return (through its callback) a suggestion data for the current query string. This function will be only called if the previous `textTestCallback` returned matching text.
 
 ```javascript
 // The itemsArray variable is our example "database".
 var itemsArray = [
-	{ id: 1, name: 'Introduce autocomplete feature', ticket: '134' },
-	{ id: 2, name: 'Fix bug causing race condition', ticket: '156' },
-	{ id: 3, name: 'First dropdown item should be preselected', ticket: '167' },
-	{ id: 4, name: 'Write autocomplete dev guide', ticket: '233' }
+	{ id: 134, name: 'Introduce autocomplete feature' },
+	{ id: 156, name: 'Fix bug causing race condition' },
+	{ id: 167, name: 'First dropdown item should be preselected' },
+	{ id: 244, name: 'Write autocomplete dev guide' }
 ];
 
 // Returns (through its callback) the suggestions for the current query.
 function dataCallback( query, range, callback ) {
 	// Remove '#' tag.
-	query = query.substrint( 1 );
+	query = query.substring( 1 );
 
 	// Simple search.
 	// Filter the entire items array so only the items that start
 	// with the query remain.
 	var suggestions = itemsArray.filter( function( item ) {
-		return item.ticket.indexOf( query ) === 0;
+		return String( item.id ).indexOf( query ) == 0;
 	} );
 
 	// Note - the callback function can also be executed asynchronously
@@ -110,27 +110,27 @@ function dataCallback( query, range, callback ) {
 config.dataCallback = dataCallback;
 ```
 
-Pay attention to the data passed into `callback` argument - `id` and `name` properties are required. `ticket` property is optional and we will use it later. You should always provide correct object structure containing unique item ID. Although the `name` property is required when using `autocomplete` plugin with default item and output templates, it can be changed by custom templating.
+Pay attention to the data passed into `callback` argument - `id` and `name` properties are required. You should always provide correct object structure containing unique item ID. Although the `name` property is required when using `autocomplete` plugin with default item and output templates, it can be changed by custom templating.
 
-## Templating
+### Templating
 
 Autocomplete has very customizable templating feature. You can change dropdown template and accepted hint to get very different results.
 
-Lets utilise our optional `ticket` property to get more interesting dropdown:
+Lets utilise item properties to get more interesting dropdown:
 
 ```javascript
-config.itemTemplate = '<li data-id="{id}"><strong>{ticket}</strong> <i>{name}</i></li>';
+config.itemTemplate = '<li data-id="{id}"><strong>{id}</strong> <i>{name}</i></li>';
 ```
 
 And create some custom output:
 
 ```javascript
-config.outputTemplate = '<a href="https://github.com/ckeditor/ckeditor-dev/issues/{ticket}">#{ticket}</a>';
+config.outputTemplate = '<a href="https://github.com/ckeditor/ckeditor-dev/issues/{id}">#{id}</a>';
 ```
 
-Note that when creating custom `itemTemplate` you should use `li` element with `data-id="{id}"`. 
+Note that when creating custom `itemTemplate` you should use `li` element with `data-id="{id}"`.
 
-## Throttling
+### Throttling
 
 For performance reasons autocomplete plugin features throttling mitigating text checks. If you care about number of requests made into your endpoint service, you can set higher level of throttling. Note that it could cause visible delay for dropdown.
 
@@ -138,7 +138,7 @@ For performance reasons autocomplete plugin features throttling mitigating text 
 config.throttle = 200;
 ```
 
-Throttling implementation is based on [`CKEDITOR.tools.throttle`](https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR_plugins_autocomplete.configDefition) feature. If you need more information how it works, refer to our docs.
+Throttling implementation is based on {@linkapi CKEDITOR.tools.throttle throttle} feature. If you need more information how it works, refer to our docs.
 
 ## Final step
 

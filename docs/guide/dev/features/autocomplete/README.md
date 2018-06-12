@@ -28,7 +28,7 @@ When you press <kbd>enter</kbd>, <kbd>tab</kbd> or any other customized {@linkap
 
 ## Configuration
 
-Autocomplete plugin utilizes two important callbacks which allows you to customize matching function and data source:
+Autocomplete plugin utilizes two callbacks to customize matching and data feed:
 
 * A text test callback.
 * A data callback.

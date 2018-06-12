@@ -20,7 +20,7 @@ This plugin provides smart completion feature for custom text matches based on u
 
 ## Usage
 
-The mentions plugin shows dropdown with available options every time when user types matching text preceded by a _marker_ sign.
+The mentions plugin shows a dropdown with available options every time when user types matching text preceded by a _marker_ sign.
 
 {@img assets/img/mentions_01.png Using mentions to get user hints.}
 
@@ -28,7 +28,7 @@ When you press <kbd>enter</kbd> or <kbd>tab</kbd> key suggested value will be in
 
 ## Configuration
 
-Mentions plugin is configurable by {@linkapi CKEDITOR.config.mentions global configuration property} or directly when instantiating an editor. Refer to {@link guide/dev/configuration/README Setting CKEditor Configuration} guide for more information about CKEditor configuration.
+Mentions plugin is configurable by {@linkapi CKEDITOR.config.mentions a global configuration property} or directly when instantiating an editor. Refer to {@link guide/dev/configuration/README Setting CKEditor Configuration} guide for more information about CKEditor configuration.
 
 ```javascript
 // Simple usage with CKEDITOR.config.mentions property.

@@ -24,7 +24,7 @@ By default, ACF works in **automatic mode**. It means that out-of-the-box CKEdit
         <strong>ACF does not replace a security filter for your website content.</strong> If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
     </p>
     <p>
-        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities. For example, if you decide to allow all attributes in HTML elements, you will allow users to enter <code>onclick</code>, <code>onload</code>, <code>onerror</code> handlers. Although ACF is not a security filter, leaving it in defult, automatic mode should minimise the risk of XSS issues.
+        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities. For example, if you decide to allow all attributes in HTML elements, you will allow users to enter <code>onclick</code>, <code>onload</code>, <code>onerror</code> handlers. Although ACF is not a security filter, leaving it in default, automatic mode should minimise the risk of XSS issues.
     </p>
 </info-box>
 

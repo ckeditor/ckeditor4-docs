@@ -9,13 +9,13 @@ meta-title-short: Accessibility Checker
 
 <info-box info="">
 <p>
- This feature is provided through optional plugins (<a href="https://ckeditor.com/cke4/addon/a11ychecker">Accessibility Checker</a> and <a href="https://ckeditor.com/cke4/addon/balloonpanel">Balloon Panel</a>) that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+	This feature is provided through optional plugins (<a href="https://ckeditor.com/cke4/addon/a11ychecker">Accessibility Checker</a> and <a href="https://ckeditor.com/cke4/addon/balloonpanel">Balloon Panel</a>) that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </p>
 <p>
- Accessibility Checker is available under a <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> or commercial license. <a href="https://cksource.com/contact">Contact</a> us for more details.
+	Accessibility Checker is available under a <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> or commercial license. <a href="https://cksource.com/contact">Contact</a> us for more details.
 </p>
 <p>
- Quail, the default accessibility tests library, requires <strong>jQuery 1.x or later</strong> to run. You thus need to add jQuery 1.x (or later) to any site that is going to use Accessibility Checker.
+	Quail, the default accessibility tests library, requires <strong>jQuery 1.x or later</strong> to run. You thus need to add jQuery 1.x (or later) to any site that is going to use Accessibility Checker.
 </p>
 </info-box>
 
@@ -47,7 +47,7 @@ Fix the markup to make your content free from accessibility issues. Thanks to th
 
 ## Running Accessibility Checker
 
-You can enable Accessibility Checker by clicking the **Check Accessibility** (<img src="%BASE_PATH%/assets/img/a11ychecker.png" alt="Check Accessibility" title="Check Accessibility" style="vertical-align: bottom;">) toolbar button. Once the button is clicked, Accessibility Checker will perform the content checking process. Typically it takes a fraction of a second. Depending on the result, Accessibility Checker will switch to **checking mode** or inform you that the document contains no accessibility issues.
+You can enable Accessibility Checker by clicking the **Check Accessibility** (<img class="inline" src="%BASE_PATH%/assets/img/a11ychecker.png" alt="Check Accessibility" title="Check Accessibility">) toolbar button. Once the button is clicked, Accessibility Checker will perform the content checking process. Typically it takes a fraction of a second. Depending on the result, Accessibility Checker will switch to **checking mode** or inform you that the document contains no accessibility issues.
 
 ### Issues Found &mdash; Checking Mode
 
@@ -74,6 +74,8 @@ An issue represents a single accessibility problem in your content, as defined b
 * **Notice** &ndash; The checking engine has no way to detect this issue, so it points an issue only as a notice and the user can verify if the content satisfies the given rule.
 
 In checking mode the highlight color will slightly differ (ranging from red for an error through yellow for a warning to gray for a notice) in order to hint the issue type.
+
+Refer to the {@link guide/dev/integration/a11ychecker/custom_issue_types/README Custom Issue Types in Accessibility Checker} tutorial for information about adding your own issue types.
 
 ## Checking Mode
 
@@ -153,6 +155,8 @@ For example, it is recommended that an alternative text for an image should be s
 #### Adding Quick Fixes
 
 Quick Fix feature was created with extensibility in mind, so it is very easy for a developer to add new, custom Quick Fixes to Accessibility Checker.
+
+Refer to the {@link guide/dev/integration/a11ychecker/custom_quick_fixes/README Custom Quick Fixes in Accessibility Checker} tutorial for information about adding your own Quick Fixes.
 
 ### Ignoring Issues
 
@@ -296,3 +300,5 @@ Refer to the following resources for more information about accessibility in CKE
 * The {@link guide/dev/features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/section508/README CKEditor Section 508 Compliance} article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
 * The {@link guide/dev/wcag/README CKEditor WCAG 2.0 Compliance} article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.
+* The {@link guide/dev/integration/a11ychecker/custom_issue_types/README Custom Issue Types in Accessibility Checker} article shows how to add custom issue types.
+* The {@link guide/dev/integration/a11ychecker/custom_quick_fixes/README Custom Quick Fixes in Accessibility Checker} article shows how to add custom Quick Fixes.

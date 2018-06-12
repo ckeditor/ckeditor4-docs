@@ -38,7 +38,7 @@ If you prefer to simply download a zip package:
 
 ### Sign up to CKEditor Cloud Services (Easy Image)
 
-Follow the [Cloud Services - Quick start](https://docs.ckeditor.com/cs/latest/guides/quick-start.html) guide to set up an account.
+Follow the [Easy Image - Quick start](https://docs.ckeditor.com/cs/latest/guides/easy-image/quick-start.html) guide to set up an account.
 
 ### Configure CKEditor
 

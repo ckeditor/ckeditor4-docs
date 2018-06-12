@@ -183,6 +183,11 @@
 			  "name": "File Manager",
 			  "id": "file-manager",
 			  "slug": "file-manager"
+			},
+			{
+			  "name": "Accessibility Checker",
+			  "id": "accessibility-checker",
+			  "slug": "accessibility-checker"
 			}
 		  ]
 		},

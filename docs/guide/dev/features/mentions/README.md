@@ -20,7 +20,7 @@ This plugin provides smart completion feature for custom text matches based on u
 
 ## Usage
 
-The mentions plugin shows dropdown with available options every time when user types matching text preceded by a **marker** sign.
+The mentions plugin shows dropdown with available options every time when user types matching text preceded by a _marker_ sign.
 
 {@img assets/img/mentions_01.png Using mentions to get user hints.}
 

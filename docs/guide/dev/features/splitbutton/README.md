@@ -17,7 +17,9 @@ For licensing, see LICENSE.md.
     This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-The Splitbutton is an UI component which is composed from two elements. One of them is regular button which is called a `face`. Second is button with only arrow which will be referred as an `arrow`, which opens a dropdown menu.
+Menu Button is a button which clicked opens a drop down menu with list of items. The Spit Button is more complex than Menu Button because it have actions of two distinct buttons at once. It has default action followed by an arrow. Both parts are visually divided. When the `arrow` is clicked it exposes a drop down list with related actions.
+
+First part with default action will be referred as `face`. In CKEditor implementation of Split Button it is possible to configure split button with `face` which will have different action depending on context.
 
 ## Configuration
 

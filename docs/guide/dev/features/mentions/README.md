@@ -78,7 +78,7 @@ Depending on your use case, you can use this code as an example boilerplate to c
 
 ```javascript
 config.mentions = [ {
-	feed: function( opts, callback ) {
+	feed: function( options, callback ) {
 		var xhr = new XMLHttpRequest();
 
 		xhr.onreadystatechange = function() {
@@ -91,7 +91,7 @@ config.mentions = [ {
 			}
 		}
 
-		xhr.open( 'GET', '/users?name=' + opts.query );
+		xhr.open( 'GET', '/users?name=' + encodeURIComponent( options.query ) );
 		xhr.send();
 	}
 } ];

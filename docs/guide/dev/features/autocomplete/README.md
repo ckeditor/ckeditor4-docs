@@ -84,16 +84,16 @@ A function which should return (through its callback) a suggestion data for the 
 ```javascript
 // The itemsArray variable is our example "database".
 var itemsArray = [
-	{ id: 134, name: 'Introduce autocomplete feature' },
-	{ id: 156, name: 'Fix bug causing race condition' },
-	{ id: 167, name: 'First dropdown item should be preselected' },
-	{ id: 244, name: 'Write autocomplete dev guide' }
+	{ id: 1703, name: 'Mentions plugin' },
+	{ id: 1751, name: 'Autocomplete plugin' },
+	{ id: 1746, name: 'Emoji plugin' },
+	{ id: 2062, name: 'Emoji list button' }
 ];
 
 // Returns (through its callback) the suggestions for the current query.
-function dataCallback( query, range, callback ) {
+function dataCallback( matchInfo, callback ) {
 	// Remove '#' tag.
-	query = query.substring( 1 );
+	var query = matchInfo.query.substring( 1 );
 
 	// Simple search.
 	// Filter the entire items array so only the items that start

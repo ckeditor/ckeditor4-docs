@@ -20,7 +20,7 @@ This plugin provides smart completion feature for custom text matches based on u
 
 ## Usage
 
-The mentions plugin shows a dropdown with available options every time when user types matching text preceded by a _marker_ sign.
+The mentions plugin shows a dropdown with available options every time when user types matching text preceded by a _marker_ character.
 
 {@img assets/img/mentions_01.png Using mentions to get user hints.}
 
@@ -28,27 +28,27 @@ When you press <kbd>enter</kbd> or <kbd>tab</kbd> key suggested value will be in
 
 ## Configuration
 
-Mentions plugin is configurable by {@linkapi CKEDITOR.config.mentions a global configuration property} or directly when instantiating an editor. Refer to {@link guide/dev/configuration/README Setting CKEditor Configuration} guide for more information about CKEditor configuration.
+Mentions plugin is configurable using {@linkapi CKEDITOR.config.mentions editor config}. Refer to {@link guide/dev/configuration/README Setting CKEditor Configuration} guide for more information about CKEditor configuration.
 
 ```javascript
-// Simple usage with CKEDITOR.config.mentions property.
-CKEDITOR.config.mentions = [ { feed: ['Anna', 'Thomas', 'John'], minChars: 0 } ];
-
 // Passing mentions configuration when creating editor.
 CKEDITOR.replace( 'editor', {
 		mentions: [ { feed: ['Anna', 'Thomas', 'John'], minChars: 0 } ]
 } );
+
+// You could also set it up globally.
+CKEDITOR.config.mentions = [ { feed: ['Anna', 'Thomas', 'John'], minChars: 0 } ];
 ```
 
 To get mentions to work you should configure data feed of items to be displayed in mentions dropdown. There are three different ways to create data feed:
 
 * A simple array of text matches.
-* A backend URL string responding with a list of items in JSON format.
+* An URL string of backend that will respond with a list of items in JSON format.
 * A function allowing to use asynchronous callback to customize data source.
 
 You can create multiple mention instances attached to an editor with different markers.
 
-## Setting up synchronous data feed
+### Setting up synchronous data feed
 
 The easiest way to configure data feed is to provide an array of text matches. Mentions plugin will use synchronous data feed and create item IDs by itself.
 
@@ -56,11 +56,9 @@ The easiest way to configure data feed is to provide an array of text matches. M
 config.mentions = [ { feed: ['Anna', 'Thomas', 'John'] } ];
 ```
 
-By default query matching for an array feed is case insensitive. You can change this behavior by setting {@linkapi CKEDITOR.plugins.mentions.configDefinition.caseSensitive caseSensitive} configuration option.
+By default query matching for an array feed is case insensitive. You can change this behavior by changing {@linkapi CKEDITOR.plugins.mentions.configDefinition.caseSensitive caseSensitive} configuration option.
 
-## Setting up asynchronous data feed
-
-### Backend URL
+### Asynchronous backend URL
 
 You can provide a backend URL string which will be used to fetch text matches from custom endpoint service. Each time when a user types matching text into an editor your backend service will be queried for text matches. Ajax URL request should response with an array of matches in JSON format.
 
@@ -99,7 +97,7 @@ config.mentions = [ {
 } ];
 ```
 
-### Data items structure
+## Data items structure
 
 When using asynchronous method i.e. backend URL string or a callback function, you should provide correct object structure. See {@link guide/dev/features/autocomplete/README#data-callback autocomplete data callback guide} for more information about required item properties.
 

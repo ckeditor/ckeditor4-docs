@@ -18,7 +18,7 @@ For licensing, see LICENSE.md.
 
 @todo: "based on" what are they based on?
 
-Emoji plugin allows for easy inserting emoji characters in a unified, platform independent way. Emojis are inserted by typing codes based on @todo in the editor editable. Emoji also features autocomplete component that will list available emojis. Each identifier should be wrapped in colon `:` characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
+Emoji plugin allows for easy inserting emoji characters in a unified, platform independent way. Emojis are inserted by typing codes based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) in the editor editable. Emoji also features autocomplete component that will list available emojis. Each identifier should be wrapped in colon `:` characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
 
 ## Configuration
 
@@ -29,6 +29,10 @@ By default CKEditor comes with a list of around 1500 emojis, which is just a sub
 ### Characters Needed For Auto Completion
 
 You can adjust the number of character needed to show the emoji list while typing. Reducing this number will improve the performance. See {@linkapi CKEDITOR.config.emoji_minChars `config.emoji_minChars`} for more details.
+
+## Emoji Demo
+
+See the ["Mentions" sample](https://sdk.ckeditor.com/samples/mentions.html) that shows an example of Emoji together with Mentions plugin.
 
 ## Related Features
 

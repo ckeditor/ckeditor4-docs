@@ -76,7 +76,7 @@ function matchCallback( text, offset ) {
 	// Get the text before the caret.
 	var left = text.slice( 0, offset ),
 		// Will look for a '#' character followed by word characters.
-		match = left.match( /#\w$/ );
+		match = left.match( /#\d+$/ );
 
 	if ( !match ) {
 		return null;

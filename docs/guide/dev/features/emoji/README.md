@@ -16,9 +16,9 @@ For licensing, see LICENSE.md.
     This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-@todo: "based on" what are they based on?
+Emoji plugin allows for easy inserting emoji characters in a unified, platform independent, way. Emojis are inserted by typing codes based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) in the editor editable. Emoji also features autocomplete component that will list available emojis. Each identifier should be wrapped in colon `:` characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
 
-Emoji plugin allows for easy inserting emoji characters in a unified, platform independent way. Emojis are inserted by typing codes based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) in the editor editable. Emoji also features autocomplete component that will list available emojis. Each identifier should be wrapped in colon `:` characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
+<img src="../assets/img/emoji.png" alt="Emoji plugin showing two emoji suggestions" style="width: 420px; height: 288.5px;">
 
 ## Configuration
 

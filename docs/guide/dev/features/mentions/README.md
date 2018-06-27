@@ -132,3 +132,10 @@ Throttling is configurable by {@linkapi CKEDITOR.plugins.mentions.configDefiniti
 ## Mentions Demo
 
 See the [working "Mentions" sample](https://sdk.ckeditor.com/samples/mentions.html) how mentions helps to create useful completion system saving your time and making mistakes.
+
+## Related Features
+
+Refer to the following resources for more information about autocomplete features:
+
+* The {@link guide/dev/features/autocomplete/README Autocomplete} article explains how to implement smart completion for custom text matches based on user input.
+* The {@link guide/dev/features/emoji/README Emoji} article explains how to provide support for autocompleting emoji ideograms.

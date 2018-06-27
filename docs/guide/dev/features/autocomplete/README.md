@@ -34,9 +34,15 @@ The Autocomplete plugin shows a dropdown with available options every time the u
 
 When you press <kbd>Enter</kbd>, <kbd>Tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes `commitKeystrokes`}, the suggested value will be inserted into the editor.
 
-## Configuration
+## Implementing Custom Autocomplete
 
-Autocomplete plugin uses two callbacks to customize matching and data feed:
+In this tutorial you will create a simple autocomplete implementation in the form of an `autotag` plugin.
+
+<info-box hint="">
+	You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-autotag/autotag">download the entire `autotag` plugin folder</a> with the fully commented source code.
+</info-box>
+
+Autocomplete feature uses two callbacks to customize matching and data feed:
 
 * A text test callback.
 * A data callback.
@@ -157,6 +163,8 @@ There is only one thing left to do &mdash; attach autocomplete to the editor alo
 ```javascript
 new CKEDITOR.plugins.autocomplete( editor, config );
 ```
+
+You can check the complete solution in the [documentation code samples repository](https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-autotag/autotag).
 
 ## Autocomplete Demo
 

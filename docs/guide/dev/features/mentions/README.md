@@ -16,7 +16,7 @@ For licensing, see LICENSE.md.
     This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-The Mentions and tags features provide smart completion functionality for custom text matches based on user input. Every time the user types the selected marker, such as `@` or `#`, they get information about available, pre-configured autocomplete options.
+The mentions and tags features provide smart completion functionality for custom text matches based on user input. Every time the user types the selected marker, such as `@` or `#`, they get information about available, pre-configured autocomplete options.
 
 The [Mentions](https://ckeditor.com/cke4/addon/mentions) plugin that provides this functionality is an implementation of the {@link guide/dev/features/autocomplete/README Autocomplete} feature. The differences between the two plugins are as follows:
 

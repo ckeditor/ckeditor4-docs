@@ -16,23 +16,36 @@ For licensing, see LICENSE.md.
     This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-Emoji plugin allows for easy inserting emoji characters in a unified, platform independent, way. Emojis are inserted by typing codes based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) in the editor editable. Emoji also features autocomplete component that will list available emojis. Each identifier should be wrapped in colon `:` characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
+The emoji feature introduces support for easy inserting of emoji characters in a unified, platform-independent way. Emojis are inserted by typing codes based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) in the editor.
+
+The [Emoji](https://ckeditor.com/cke4/addon/emoji) plugin that provides this functionality is an implementation of the {@link guide/dev/features/autocomplete/README Autocomplete} feature.  
+
+It includes an autocomplete component that will list available emojis. Each identifier should be wrapped in colon (`:`) characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
 
 <img src="../assets/img/emoji.png" alt="Emoji plugin showing two emoji suggestions" style="width: 420px; height: 288.5px;">
 
 ## Configuration
 
+The emoji feature is ready-to-use out of the box, but you can customize it by modifying the default emoji list or changing the number of characters that trigger the autocompletion mechanism.
+
 ### Custom Emoji List
 
-By default CKEditor comes with a list of around 1500 emojis, which is just a subset of entire Unicode Standard. You are free to reduce or increase the number of loaded emojis using {@linkapi CKEDITOR.config.emoji_emojiListUrl `config.emoji_emojiListUrl`} property.
+By default CKEditor comes with a list of around 1500 emojis, which is just a subset of the entire Unicode Standard. You are free to reduce or increase the number of loaded emojis using the {@linkapi CKEDITOR.config.emoji_emojiListUrl `config.emoji_emojiListUrl`} setting.
 
-### Characters Needed For Auto Completion
+### Characters Needed for Autocompletion
 
-You can adjust the number of character needed to show the emoji list while typing. Reducing this number will improve the performance. See {@linkapi CKEDITOR.config.emoji_minChars `config.emoji_minChars`} for more details.
+You can adjust the number of characters needed to show the emoji list when typing. Reducing this number will improve the performance. Refer to the {@linkapi CKEDITOR.config.emoji_minChars `config.emoji_minChars`} option for more details.
+
+## Roadmap
+
+The first implementation of emoji support was introduced in CKEditor 4.10, and the following features are planned to be added soon:
+
+* [Emoji list button with a search feature](https://github.com/ckeditor/ckeditor-dev/issues/2062#issuecomment-395386515)
+* [Improved emoji matching with support for keywords](https://github.com/ckeditor/ckeditor-dev/issues/2181)
 
 ## Emoji Demo
 
-See the ["Mentions" sample](https://sdk.ckeditor.com/samples/mentions.html) that shows an example of Emoji together with Mentions plugin.
+See the ["Mentions and emoji" sample](https://sdk.ckeditor.com/samples/mentions.html) that shows an example of emoji used together with the mentions feature.
 
 ## Related Features
 

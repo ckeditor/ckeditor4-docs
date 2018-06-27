@@ -16,56 +16,66 @@ For licensing, see LICENSE.md.
     This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-This plugins provides contextual completion feature for custom text matches based on user input. Every time when user type character he will get information about available, existing options.
-
-## Usage
-
-The autocomplete plugin shows dropdown with available options every time when user types matching text.
+The Autocomplete feature provides contextual completion functionality for custom text matches based on user input. Every time the user types a pre-configured special character, such as `@` or `#`, they get information about available autocomplete options.
 
 {@img assets/img/autocomplete_01.png Using autocomplete to get ticket hints.}
 
-When you press <kbd>enter</kbd>, <kbd>tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes `commitKeystrokes`} suggested value will be inserted into editor.
+This feature is implemented using the following plugins:
+
+* [Autocomplete](https://ckeditor.com/cke4/addon/autocomplete) &ndash; Provides contextual completion feature for custom text matches based on user input.
+* [Text Watcher](https://ckeditor.com/cke4/addon/textWatcher) &ndash; Checks whether an editor's text change matches the chosen criteria.
+* [Text Match](https://ckeditor.com/cke4/addon/textMatch) &ndash; Allows to search [`CKEDITOR.dom.range`](https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_dom_range.html) for matching text.
+
+This feature is a base for implementing specialized autocomplete features, such as {@link guide/dev/features/mentions/README mentions}, {@link guide/dev/features/emoji/README emoji} or custom implementations.
+
+## Usage
+
+The Autocomplete plugin shows a dropdown with available options every time the user types a matching text.
+
+When you press <kbd>Enter</kbd>, <kbd>Tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes `commitKeystrokes`}, the suggested value will be inserted into the editor.
 
 ## Configuration
 
-Autocomplete plugin utilizes two callbacks to customize matching and data feed:
+Autocomplete plugin uses two callbacks to customize matching and data feed:
 
 * A text test callback.
 * A data callback.
 
-They are required to setup autocomplete instance which will be immediately attached into editor after its creation. Autocomplete can be configured by {@linkapi CKEDITOR.plugins.autocomplete.configDefinition configDefinition} object passed into autocomplete constructor.
+They are required to set up an autocomplete instance which will be immediately attached to the editor after its creation. Autocomplete can be configured by a {@linkapi CKEDITOR.plugins.autocomplete.configDefinition `configDefinition`} object passed to the autocomplete constructor.
 
 ```javascript
-// We will update this object during this guide.
+// You will update this object in the course of this tutorial.
 var config = {};
 ```
 
-### Text test callback
+### Text Test Callback
 
-A function which should return a fragment of text (typed in the editor) that should be autocompleted. This function works best with {@linkapi CKEDITOR.plugins.textMatch textMatch} feature which was published alongside with `autocomplete` plugin. Lets say you would like to create autocompletion feature for GitHub tickets. Depending on you use case, you could create autocomplete instance using this code:
+This is a function which should return a fragment of text (typed in the editor) that should be autocompleted. This function works best with the {@linkapi CKEDITOR.plugins.textMatch text match} feature which was introduced with the Autocomplete plugin.
+
+In this example you will create the autocomplete feature for GitHub tickets. Depending on your use case, you could create an autocomplete instance using the following code:
 
 ```javascript
 // Called when the user types in the editor or moves the caret.
 // The range represents the caret position.
 function textTestCallback( range ) {
-	// We don't want to autocomplete a non-empty selection.
+	// You do not want to autocomplete a non-empty selection.
 	if ( !range.collapsed ) {
 		return null;
 	}
 
-	// Use the textmatch plugin which does the tricky job of doing
+	// Use the text match plugin which does the tricky job of performing
 	// a text search in the DOM. The matchCallback function should return
 	// a matching fragment of the text.
 	return CKEDITOR.plugins.textMatch.match( range, matchCallback );
 }
 
-// Returns a position of the matching text.
-// It matches with text starting from the '#' character
-// followed by spaces, up to the caret position.
+// Returns the position of the matching text.
+// It matches a word starting from the '#' character
+// up to the caret position.
 function matchCallback( text, offset ) {
 	// Get the text before the caret.
 	var left = text.slice( 0, offset ),
-		// Will look for an '#' character followed by word characters.
+		// Will look for a '#' character followed by word characters.
 		match = left.match( /#\w$/ );
 
 	if ( !match ) {
@@ -77,12 +87,12 @@ function matchCallback( text, offset ) {
 config.textTestCallback = textTestCallback;
 ```
 
-### Data callback
+### Data Callback
 
-A function which should return (through its callback) a suggestion data for the current query string. This function will be only called if the previous `textTestCallback` returned matching text.
+This is a function which should return (through its callback) suggestion data for the current query string. This function will only be called if the previous `textTestCallback` returned the matching text.
 
 ```javascript
-// The itemsArray variable is our example "database".
+// The itemsArray variable is the example "database".
 var itemsArray = [
 	{ id: 1703, name: 'Mentions plugin' },
 	{ id: 1751, name: 'Autocomplete plugin' },
@@ -92,7 +102,7 @@ var itemsArray = [
 
 // Returns (through its callback) the suggestions for the current query.
 function dataCallback( matchInfo, callback ) {
-	// Remove '#' tag.
+	// Remove the '#' tag.
 	var query = matchInfo.query.substring( 1 );
 
 	// Simple search.
@@ -102,47 +112,47 @@ function dataCallback( matchInfo, callback ) {
 		return String( item.id ).indexOf( query ) == 0;
 	} );
 
-	// Note - the callback function can also be executed asynchronously
-	// so dataCallback can do an XHR requests or use any other asynchronous API.
+	// Note: The callback function can also be executed asynchronously
+	// so dataCallback can do an XHR request or use any other asynchronous API.
 	callback( suggestions );
 }
 
 config.dataCallback = dataCallback;
 ```
 
-Pay attention to the data passed into `callback` argument - `id` and `name` properties are required. You should always provide correct object structure containing unique item ID. Although the `name` property is required when using `autocomplete` plugin with default item and output templates, it can be changed by custom templating.
+Pay attention to the data passed into the `callback` argument &mdash; the `id` and `name` properties are required. You should always provide a correct object structure containing a unique item ID. Although the `name` property is required when using the Autocomplete plugin with the default item and output templates, it can be changed by custom templating.
 
 ### Templating
 
-Autocomplete has very customizable templating feature. You can change dropdown template and accepted hint to get very different results.
+Autocomplete comes with a highly customizable templating feature. You can change the dropdown template and the accepted hint to get very different results.
 
-Lets utilise item properties to get more interesting dropdown:
+For example, you can use the {@linkapi CKEDITOR.plugins.autocomplete.configDefinition#itemTemplate item template} configuration option to get a more interesting dropdown shown in the example above:
 
 ```javascript
 config.itemTemplate = '<li data-id="{id}"><strong>{id}</strong> <i>{name}</i></li>';
 ```
 
-And create some custom output:
+And create some custom {@linkapi CKEDITOR.plugins.autocomplete.configDefinition#outputTemplate output template}:
 
 ```javascript
 config.outputTemplate = '<a href="https://github.com/ckeditor/ckeditor-dev/issues/{id}">#{id}</a>';
 ```
 
-Note that when creating custom `itemTemplate` you should use `li` element with `data-id="{id}"`.
+Note that when creating a custom item template you should use a `<li>` element with the `data-id="{id}"` attribute.
 
 ### Throttling
 
-For performance reasons autocomplete plugin features throttling mitigating text checks. If you care about number of requests made into your endpoint service, you can set higher level of throttling. Note that it could cause visible delay for dropdown.
+For performance reasons the Autocomplete plugin implements throttling that mitigates text checks. If you care about the number of requests made to your endpoint service, you can {@linkapi CKEDITOR.plugins.autocomplete.configDefinition#throttle set a higher level of throttling}. Note that this could cause a visible delay for the autocomplete dropdown.
 
 ```javascript
 config.throttle = 200;
 ```
 
-Throttling implementation is based on {@linkapi CKEDITOR.tools.throttle throttle} feature. If you need more information how it works, refer to our docs.
+Throttling implementation is based on the {@linkapi CKEDITOR.tools.throttle `throttle`} feature. Refer to its documentation if you need more information about how it works.
 
-## Final step
+## Final Step
 
-There is only one thing left to do - attach autocomplete into editor with our configuration. Fortunately it's very easy and can be done by creating new autocomplete instance.
+There is only one thing left to do &mdash; attach autocomplete to the editor along with its custom configuration. It can be done by simply creating a new autocomplete instance.
 
 ```javascript
 new CKEDITOR.plugins.autocomplete( editor, config );
@@ -150,4 +160,11 @@ new CKEDITOR.plugins.autocomplete( editor, config );
 
 ## Autocomplete Demo
 
-See the [working "Autocomplete" sample](https://sdk.ckeditor.com/samples/autocomplete.html) how autocomplete helps to create useful templating system saving your time and making mistakes.
+See the [working "Autocomplete" sample](https://sdk.ckeditor.com/samples/autocomplete.html) to check how autocomplete helps create a useful templating system, saving your time and limiting the opportunity to make mistakes.
+
+## Related Features
+
+Refer to the following resources for more information about autocomplete implementations:
+
+* The {@link guide/dev/features/mentions/README Mentions and Tags} article explains how to implement smart completion for user input based on a chosen marker character.
+* The {@link guide/dev/features/emoji/README Emoji} article explains how to provide support for autocompleting emoji ideograms.

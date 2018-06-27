@@ -30,7 +30,7 @@ This feature is a base for implementing specialized autocomplete features, such 
 
 ## Usage
 
-The autocomplete plugin shows a dropdown with available options every time the user types a matching text.
+The Autocomplete plugin shows a dropdown with available options every time the user types a matching text.
 
 When you press <kbd>Enter</kbd>, <kbd>Tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes `commitKeystrokes`}, the suggested value will be inserted into the editor.
 

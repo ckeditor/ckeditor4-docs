@@ -1,0 +1,10 @@
+{
+    "BRANDING_BASE_SUPPORT_URL": "http://www.webspellchecker.net/support",
+    "BRANDING_SUPPORT_MAIL": "support@webspellchecker.net",
+    "BRANDING_MIGRATION_MANUAL_URL": "http://wiki.webspellchecker.net/doku.php?id=migration:hosredfreetolicensedck",
+    "BRANDING_USER_DICT_MANUAL_URL": "http://wiki.webspellchecker.net/doku.php?id=installationandconfiguration:userdictionaries",
+    "BRANDING_CUSTOM_DICT_MANUAL_URL": "http://wiki.webspellchecker.net/doku.php?id=installationandconfiguration:customdictionaries:licensed",
+    "BRANDING_MORE_LANG_URL": "http://www.webspellchecker.net/additional-languages-support.html",
+    "BRANDING_EC_USER_MANUAL": "https://webspellchecker.net/user_manuals/webspellchecker_proofreader_for_editable_controls_user_manual.pdf",
+    "BRANDING_CK_USER_MANUAL": "http://scayt.com/user_manual/scayt_plugin_for_ckeditor4_user_manual.pdf"
+}

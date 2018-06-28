@@ -35,8 +35,23 @@ module.exports = function( grunt ) {
 				done();
 			} );
 	} );
-	grunt.registerTask( 'docs', [ 'api', 'umberto' ] );
-	grunt.registerTask( 'docs-serve', [ 'api', 'umberto', 'connect' ] );
+
+	grunt.registerTask( 'fix-scayt-docs', function() {
+		const done = this.async();
+		let file = grunt.file.read( 'docs/api/data/CKEDITOR.config.json' );
+		const scaytMap = grunt.file.readJSON( 'scayt-urls.json' );
+
+		for ( const key in scaytMap ) {
+			file = file.replace( new RegExp( '@@' + key , 'g' ), scaytMap[ key ] );
+		}
+
+		grunt.file.write( 'docs/api/data/CKEDITOR.config.json', file );
+
+		done();
+	} );
+
+	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),

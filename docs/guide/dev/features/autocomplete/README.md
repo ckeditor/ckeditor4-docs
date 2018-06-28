@@ -16,13 +16,13 @@ For licensing, see LICENSE.md.
     This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-The Autocomplete feature provides contextual completion functionality for custom text matches based on user input. Every time the user types a pre-configured special character, such as `@` or `#`, they get information about available autocomplete options.
+The Autocomplete feature provides contextual completion functionality for custom text matches based on user input. Every time the user types a pre-configured marker, such as `@` or `#`, they get information about available autocomplete options displayed in a dedicated dropdown. The provided suggestion can be quickly selected and inserted into content.
 
 {@img assets/img/autocomplete_01.png Using autocomplete to get ticket hints.}
 
 This feature is implemented using the following plugins:
 
-* [Autocomplete](https://ckeditor.com/cke4/addon/autocomplete) &ndash; Provides contextual completion feature for custom text matches based on user input.
+* [Autocomplete](https://ckeditor.com/cke4/addon/autocomplete) &ndash; Provides smart, context-aware completion feature for custom text matches based on user input.
 * [Text Watcher](https://ckeditor.com/cke4/addon/textWatcher) &ndash; Checks whether an editor's text change matches the chosen criteria.
 * [Text Match](https://ckeditor.com/cke4/addon/textMatch) &ndash; Allows to search [`CKEDITOR.dom.range`](https://docs.ckeditor.com/ckeditor4/latest/api/CKEDITOR_dom_range.html) for matching text.
 
@@ -32,7 +32,7 @@ This feature is a base for implementing specialized autocomplete features, such 
 
 The Autocomplete plugin shows a dropdown with available options every time the user types a matching text.
 
-When you press <kbd>Enter</kbd>, <kbd>Tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes `commitKeystrokes`}, the suggested value will be inserted into the editor.
+When you press <kbd>Enter</kbd>, <kbd>Tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes}, the suggested value will be inserted into the editor.
 
 ## Implementing Custom Autocomplete
 

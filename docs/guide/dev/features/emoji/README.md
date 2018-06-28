@@ -16,13 +16,15 @@ For licensing, see LICENSE.md.
     This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-The emoji feature introduces support for easy inserting of emoji characters in a unified, platform-independent way. Emojis are inserted by typing codes based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) in the editor.
+The emoji feature introduces support for easy inserting of emoji characters in a unified, platform-independent way. Emojis are inserted by typing identifiers based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) preceded by a colon (`:`) in the editor and selecting the suggestion from the provided dropdown.
 
 The [Emoji](https://ckeditor.com/cke4/addon/emoji) plugin that provides this functionality is an implementation of the {@link guide/dev/features/autocomplete/README Autocomplete} feature.  
 
 It includes an autocomplete component that will list available emojis. Each identifier should be wrapped in colon (`:`) characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
 
-<img src="../assets/img/emoji.png" alt="Emoji plugin showing two emoji suggestions" style="width: 420px; height: 288.5px;">
+<img src="../assets/img/emoji.png" alt="Emoji plugin showing two emoji suggestions." style="width: 420px; height: 288.5px;">
+
+When you press the <kbd>Enter</kbd> or <kbd>Tab</kbd> key, the suggested value will be inserted into the editor.
 
 ## Configuration
 
@@ -45,7 +47,7 @@ The first implementation of emoji support was introduced in CKEditor 4.10, and t
 
 ## Emoji Demo
 
-See the ["Mentions and emoji" sample](https://sdk.ckeditor.com/samples/mentions.html) that shows an example of emoji used together with the mentions feature.
+See the ["Mentions, Tags and Emoji" sample](https://sdk.ckeditor.com/samples/mentions.html) that shows an example of emoji used together with the mentions feature.
 
 ## Related Features
 

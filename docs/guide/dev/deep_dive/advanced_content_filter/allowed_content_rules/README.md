@@ -74,45 +74,48 @@ Special characters:
 
 Examples:
 
-	// A rule accepting <p> and <h1> elements, but without any property.
-	p h1
+```js
+// A rule accepting <p> and <h1> elements, but without any property.
+p h1
 
-	// A rule accepting <p> and <h1> elements with optional "left" and "right" classes.
-	// Note: Both elements may contain these classes, not only <h1>.
-	p h1(left,right)
+// A rule accepting <p> and <h1> elements with optional "left" and "right" classes.
+// Note: Both elements may contain these classes, not only <h1>.
+p h1(left,right)
 
-	// A rule accepting <p> and <h1> elements with all their attributes.
-	p h1[*]
+// A rule accepting <p> and <h1> elements with all their attributes.
+p h1[*]
 
-	// A rule accepting <p> and <h1> elements with all their attributes
-	// starting from 'data-'.
-	p h1[data-*]
+// A rule accepting <p> and <h1> elements with all their attributes
+// starting from 'data-'.
+p h1[data-*]
 
-	// A rule accepting <a> only if it contains the "href" attribute.
-	a[!href]
+// A rule accepting <a> only if it contains the "href" attribute.
+a[!href]
 
-	// A rule accepting <img> with a required "src" attribute and an optional
-	// "alt" attribute plus optional "width" and "height" styles.
-	img[alt,!src]{width,height}
+// A rule accepting <img> with a required "src" attribute and an optional
+// "alt" attribute plus optional "width" and "height" styles.
+img[alt,!src]{width,height}
 
-	// The same as above, because the order of properties and their lists is irrelevant and white-spaces are ignored.
-	img { height, width } [ !src, alt ]
+// The same as above, because the order of properties and their lists is irrelevant and white-spaces are ignored.
+img { height, width } [ !src, alt ]
+```
 
 The Allowed Content Rules set may consist of many rules separated by semicolon (`;`) characters. Examples:
 
-	// Rules allowing:
-	// * <p> and <h1> elements with an optional "text-align" style,
-	// * <a> with a required "href" attribute,
-	// * <strong> and <em> elements,
-	// * <p> with an optional "tip" class (so <p> element may contain
-	//	a "text-align" style and a "tip" class at the same time).
-	p h1{text-align}; a[!href]; strong em; p(tip)
+```js
+// Rules allowing:
+// * <p> and <h1> elements with an optional "text-align" style,
+// * <a> with a required "href" attribute,
+// * <strong> and <em> elements,
+// * <p> with an optional "tip" class (so <p> element may contain
+//	a "text-align" style and a "tip" class at the same time).
+p h1{text-align}; a[!href]; strong em; p(tip)
 
-	// Rules allowing:
-	// * <p> and <h1> elements with an optional "id" attribute,
-	// * <a> with a required "href" attribute and an optional "id" attribute.
-	p h1; a[!href]; *[id]
-
+// Rules allowing:
+// * <p> and <h1> elements with an optional "id" attribute,
+// * <a> with a required "href" attribute and an optional "id" attribute.
+p h1; a[!href]; *[id]
+```
 
 ### Debugging
 

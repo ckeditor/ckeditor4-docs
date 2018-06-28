@@ -32,14 +32,16 @@ The [File Browser](https://ckeditor.com/cke4/addon/filebrowser) plugin is built-
 
 To assign the File Browser plugin to an element inside a dialog window, set the `filebrowser` property. For example in the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/image/dialogs/image.js) you can find the following code:
 
-	{
-		type: 'button',
-		id: 'browse',
-		// ...
-		label: editor.lang.common.browseServer,
-		hidden: true,
-		filebrowser: 'info:txtUrl'
-	},
+```js
+{
+	type: 'button',
+	id: 'browse',
+	// ...
+	label: editor.lang.common.browseServer,
+	hidden: true,
+	filebrowser: 'info:txtUrl'
+},
+```
 
 This button will be hidden by default (`hidden:true`). The File Browser plugin looks for all elements with the `filebrowser` attribute and unveils them if an appropriate configuration setting is available ({@link guide/dev/integration/file_browse_upload/README#basic-configuration `filebrowserBrowseUrl`/`filebrowserUploadUrl`}).
 
@@ -53,26 +55,28 @@ The `'info:txtUrl'` value instructs the plugin to update an element with the ID 
 
 Again, to see how file uploads can be handled in a dialog window, the following working example from CKEditor will be used. In the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/image/dialogs/image.js) you can find the following definition of the `Upload` tab:
 
-	{
-		id: 'Upload',
-		hidden: true,
-		filebrowser: 'uploadButton',
-		label: editor.lang.image.upload,
-		elements: [ {
-			type: 'file',
-			id: 'upload',
-			label: editor.lang.image.btnUpload,
-			style: 'height:40px',
-			size: 38
-		},
-		{
-			type: 'fileButton',
-			id: 'uploadButton',
-			filebrowser: 'info:txtUrl',
-			label: editor.lang.image.btnUpload,
-			'for': [ 'Upload', 'upload' ]
-		} ]
+```js
+{
+	id: 'Upload',
+	hidden: true,
+	filebrowser: 'uploadButton',
+	label: editor.lang.image.upload,
+	elements: [ {
+		type: 'file',
+		id: 'upload',
+		label: editor.lang.image.btnUpload,
+		style: 'height:40px',
+		size: 38
 	},
+	{
+		type: 'fileButton',
+		id: 'uploadButton',
+		filebrowser: 'info:txtUrl',
+		label: editor.lang.image.btnUpload,
+		'for': [ 'Upload', 'upload' ]
+	} ]
+},
+```
 
 This example is slightly more complicated than the previous one, because:
 
@@ -91,28 +95,30 @@ The `'for': [ 'Upload', 'upload'   ]` line is used to connect `fileButton` with 
 
 It is possible to define your own function that will be called when a file is selected/uploaded.
 
-	{
-		type: 'button',
-		hidden: true,
-		id: 'id0',
-		label: editor.lang.common.browseServer,
-		filebrowser: {
-			action: 'Browse',
-			// target: 'tab1:id1',
-			onSelect: function( fileUrl, data ) {
-				alert( 'The selected file URL is "' + fileUrl + '"' );
+```js
+{
+	type: 'button',
+	hidden: true,
+	id: 'id0',
+	label: editor.lang.common.browseServer,
+	filebrowser: {
+		action: 'Browse',
+		// target: 'tab1:id1',
+		onSelect: function( fileUrl, data ) {
+			alert( 'The selected file URL is "' + fileUrl + '"' );
 
-				for ( var _info in data )
-					alert( 'data[ "' + _info + '" ]' + ' = ' + data[ _info ] );
+			for ( var _info in data )
+				alert( 'data[ "' + _info + '" ]' + ' = ' + data[ _info ] );
 
-				var dialog = this.getDialog();
-				dialog.getContentElement( 'tab1', 'id1' ).setValue( data[ 'fileUrl' ] );
+			var dialog = this.getDialog();
+			dialog.getContentElement( 'tab1', 'id1' ).setValue( data[ 'fileUrl' ] );
 
-				// Do not call the built-in onSelect command.
-				return false;
-			}
+			// Do not call the built-in onSelect command.
+			return false;
 		}
 	}
+}
+```
 
 In this example the action is set to `'Browse'` in order to call the file manager when the button is clicked. Setting `'target'` is not required, because the target element will be updated in the custom `onSelect` function.
 
@@ -122,28 +128,30 @@ As explained in the {@link guide/dev/integration/file_browse_upload/file_browser
 
 In a similar way that a button can be configured to open the file manager, you can also configure the file button.
 
-	{
-		type: 'file',
-		label: editor.lang.common.upload,
-		labelLayout: 'vertical',
-		id: 'id2'
+```js
+{
+	type: 'file',
+	label: editor.lang.common.upload,
+	labelLayout: 'vertical',
+	id: 'id2'
+},
+{
+	type: 'fileButton',
+	label: editor.lang.common.uploadSubmit,
+	id: 'id3',
+	filebrowser: {
+		action: 'QuickUpload',
+		params: { type: 'Files', currentFolder: '/folder/' },
+		target: 'tab1:id1',
+		onSelect: function( fileUrl, errorMessage ) {
+			alert( 'The url of uploaded file is: ' + fileUrl + '\nerrorMessage: ' + errorMessage );
+			// Do not call the built-in onSelect command.
+			// return false;
+		}
 	},
-	{
-		type: 'fileButton',
-		label: editor.lang.common.uploadSubmit,
-		id: 'id3',
-		filebrowser: {
-			action: 'QuickUpload',
-			params: { type: 'Files', currentFolder: '/folder/' },
-			target: 'tab1:id1',
-			onSelect: function( fileUrl, errorMessage ) {
-				alert( 'The url of uploaded file is: ' + fileUrl + '\nerrorMessage: ' + errorMessage );
-				// Do not call the built-in onSelect command.
-				// return false;
-			}
-		},
-		'for': [ 'tab1', 'id2' ]
-	}
+	'for': [ 'tab1', 'id2' ]
+}
+```
 
 Additional arguments to be passed in the query string to the external file manager can be added in the `filebrowser.params` attribute.
 

@@ -32,31 +32,39 @@ Best to see it in examples.
 
 1. Disallowing entire elements.
 
-		config.allowedContent = 'h1 h2 h3 p';
-		config.disallowedContent = 'h2 h3';
-		// Input:		<h1>Foo</h1><h2>Bar</h2><h3>Bom</h3>
-		// Filtered:	<h1>Foo</h1><p>Bar</p><p>Bom</p>
+```js
+config.allowedContent = 'h1 h2 h3 p';
+config.disallowedContent = 'h2 h3';
+// Input:		<h1>Foo</h1><h2>Bar</h2><h3>Bom</h3>
+// Filtered:	<h1>Foo</h1><p>Bar</p><p>Bom</p>
+```
 
 1. Disallowing attributes, classes, and styles.
 
-		config.allowedContent = 'p[*]{*}(foo,bar)';
-		config.disallowedContent = 'p[on*](foo)';
-		// Input:		<p>Foo</p><p onclick="..." data-foo="1" class="foo bar">Bar</p>
-		// Filtered:	<p>Foo</p><p data-foo="1" class="bar">Bar</p>
+```js
+config.allowedContent = 'p[*]{*}(foo,bar)';
+config.disallowedContent = 'p[on*](foo)';
+// Input:		<p>Foo</p><p onclick="..." data-foo="1" class="foo bar">Bar</p>
+// Filtered:	<p>Foo</p><p data-foo="1" class="bar">Bar</p>
+```
 
 1. Disallowing a required property.
 
-		config.allowedContent = 'p; img[!src,alt]';
-		config.disallowedContent = 'img[src]';
-		// Input:		<p><img src="%BASE_PATH%/assets/img/..." alt="..."/></p>
-		// Filtered:	<p/>
+```js
+config.allowedContent = 'p; img[!src,alt]';
+config.disallowedContent = 'img[src]';
+// Input:		<p><img src="%BASE_PATH%/assets/img/..." alt="..."/></p>
+// Filtered:	<p/>
+```
 
 1. Disallowing properties on all elements.
 
-		config.allowedContent = 'p em{*}';
-		config.disallowedContent = '*{font*}';
-		// Input:		<p style="color: red; font-size: 12px"><em style="font: 'Arial'">Foo</em></p>
-		// Filtered:	<p style="color: red"><em>Foo</em></p>
+```js
+config.allowedContent = 'p em{*}';
+config.disallowedContent = '*{font*}';
+// Input:		<p style="color: red; font-size: 12px"><em style="font: 'Arial'">Foo</em></p>
+// Filtered:	<p style="color: red"><em>Foo</em></p>
+```
 
 1. Tweaking automatically allowed content.
 

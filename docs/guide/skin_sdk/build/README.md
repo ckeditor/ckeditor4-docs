@@ -20,7 +20,9 @@ To do so you'll need CKBuilder a Java application that makes this magic happen. 
 
 [Java](http://java.com/en/download/) must be available on your command line. To run the builder, simply copy `ckbuilder.jar` into the `skins` folder of CKEditor (where your skin custom folder is available) and execute this command:
 
-	 > java -jar ckbuilder.jar --build-skin myskin myskin-release
+```sh
+> java -jar ckbuilder.jar --build-skin myskin myskin-release
+```
 
 The `myskin` and `myskin-release` parts are your skin folder name and the destination folder name. Just use the names you prefer.
 

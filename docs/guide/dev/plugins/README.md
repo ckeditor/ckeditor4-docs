@@ -56,7 +56,7 @@ Using online builder is a recommended solution, however, if you have plugins dev
 
 2. **Copy** the plugin files to the `plugins` folder of your CKEditor installation. Each plugin must be placed in a sub-folder that matches its "technical" name.
 
-	For example, the [Language plugin](https://ckeditor.com/cke4/addon/language) would be installed into this folder: `<CKEditor folder="">/plugins/language`.
+	For example, the [Language plugin](https://ckeditor.com/cke4/addon/language) would be installed into this folder: `<CKEditor folder>/plugins/language`.
 
 3. **Check and resolve plugin dependencies.** If a plugin needs others to work, you will need to add these manually as well.
 

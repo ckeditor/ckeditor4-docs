@@ -24,13 +24,17 @@ To run CKEditor tests you will need [Bender.js](https://github.com/benderjs/bend
 
 First, you need to install globally the [Bender.js command line interface](https://github.com/benderjs/benderjs-cli). To do so, open the console and use `npm install`:
 
-	> npm install -g benderjs-cli
+```sh
+> npm install -g benderjs-cli
+```
 
 **Note:** You may need administrative rights to do this (e.g. `sudo`).
 
 Now you can check whether Bender.js has installed properly. If you run Bender.js in the console:
 
-	> bender
+```sh
+> bender
+```
 
 you should see the following message:
 
@@ -48,15 +52,21 @@ First of all, you need to {@link guide/dev/source/README clone the CKEditor deve
 
 Go to the main CKEditor directory (it should contain the `bender.js`, `package.json` files, among others, and the `tests/` directory):
 
-	> cd ckeditor-dev
+```sh
+> cd ckeditor-dev
+```
 
 You will now need to install the Bender.js engine (`benderjs-cli` installed globally uses a local `benderjs` module) and all required modules, like the [Sinon.JS plugin for Bender.js](https://github.com/benderjs/benderjs-sinon). To do so use:
 
-	> npm install
+```sh
+> npm install
+```
 
 Then you need to initialize the Bender project:
 
-	> bender init
+```sh
+> bender init
+```
 
 This command will create the `.bender/` directory which contains Bender.js's cache, databases, and a local configuration file.
 
@@ -66,7 +76,9 @@ You do not need to perform any additional configuration steps as `bender.js` is 
 
 In order to run the tests, open the console and type:
 
-	> bender server run
+```sh
+> bender server run
+```
 
 This will start the server in the verbose mode.
 
@@ -75,11 +87,15 @@ This will start the server in the verbose mode.
 
 Now open a web browser. Bender.js dashboard is available under:
 
-	http://localhost:1030
+```sh
+http://localhost:1030
+```
 
 **Note:** You can also run the server as a daemon:
 
-	> bender server start
+```sh
+> bender server start
+```
 
 At the moment, starting a daemon is supported **on Unix systems only**.
 
@@ -97,26 +113,28 @@ Please note that at the moment some random tests may fail in Internet Explorer. 
 
 In the Bender.js dashboard you can run all (or part) of the tests located in the CKEditor `tests/` directory. These tests are organized into subdirectories based on what they are testing:
 
-	tests/
-		adapters/
-			(design tests for editor adapters, located in the adapters/ folder)
-			jquery/
-		core/
-			(design tests for editor core features, located in the core/ folder)
-			dom/
-			htmlparser/
-			...
-		plugins/
-			(design tests for editor plugins, located in the plugins/ folder)
-			about/
-			button/
-			...
-		tickets/
-			(functional tests for specific tickets (http://dev.ckeditor.com/report) which are not
-				related to any specific features or are related to multiple features and plugins)
-			10146/
-			10212/
-			...
+```html
+tests/
+	adapters/
+		(design tests for editor adapters, located in the adapters/ folder)
+		jquery/
+	core/
+		(design tests for editor core features, located in the core/ folder)
+		dom/
+		htmlparser/
+		...
+	plugins/
+		(design tests for editor plugins, located in the plugins/ folder)
+		about/
+		button/
+		...
+	tickets/
+		(functional tests for specific tickets (http://dev.ckeditor.com/report) which are not
+			related to any specific features or are related to multiple features and plugins)
+		10146/
+		10212/
+		...
+```
 
 <info-box hint=""> As long as a test is related to a particular feature or a plugin, it should be put into the <code>adapters/</code>, <code>core/</code>, or <code>plugins/</code> directory. Ticket tests are most difficult to manage so the <code>tickets/</code> directory should only contain the tests that do not match any of these primary locations.
 </info-box>
@@ -166,7 +184,7 @@ In case of unit tests the `bender-tags` meta comment should be placed in the `*.
 #### For Manual Tests Only
 
 * `bug/feature` &ndash; A test covers a bug fix or a new feature.
-* `<CKEditor version="">`, e.g. `4.6.2`, `4.7.0` &ndash; A targeted version of CKEditor by this given patch (usually means an upcoming minor or major release).
+* `<CKEditor version>`, e.g. `4.6.2`, `4.7.0` &ndash; A targeted version of CKEditor by this given patch (usually means an upcoming minor or major release).
 
 There might be a situation where a single `*.js` file contains many tests and referencing a specific issue in `bender-tags` might be misleading. In such cases, the issue should be referenced right before the specific test which covers the issue:
 
@@ -182,7 +200,7 @@ If there is a need to reference a Trac issue instead of the GitHub one, full URL
 
     // (http://dev.ckeditor.com/ticket/<number>)
     'test some Trac issue scenario 1...'
-        
+
     // Additional comment (http://dev.ckeditor.com/ticket/<number>).
     'test some Trac issue scenario 2...'
 
@@ -236,7 +254,7 @@ If you need, you can add the entire content of the `<html>` page element, for ex
 
 ``` html
 <head>
-    <script src="_helpers/tools.js"/>
+    <script src="_helpers/tools.js"></script>
 </head>
 <body>
     <textarea id="editor">Lorem ipsum</textarea>

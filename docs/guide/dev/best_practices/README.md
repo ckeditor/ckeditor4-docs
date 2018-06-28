@@ -53,7 +53,9 @@ Changing the {@linkapi CKEDITOR.config#enterMode Enter Mode} setting to `BR` or 
 
 If you do it to control paragraph spacing, you should use stylesheets instead. Edit the `contents.css` file and set up a suitable `margin` value for `<p>` elements, for example:
 
-	p { margin: 0; }
+```css
+p { margin: 0; }
+```
 
 ### Configure Styles drop-down
 If you are using a CKEditor build which includes the Styles drop-down (like Standard or Full), take a few minutes to {@link guide/dev/features/styles/README configure it} after you install the editor.
@@ -85,7 +87,7 @@ Last but not least, {@link guide/dev/basics/README#what-ckeditor-is use CKEditor
 
 ### Filter content server-side
 
-**No editor features (such as {@link guide/dev/acf/README Advanced Content Filter (ACF)} or paste filter) should be treated as security filters.** If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website. The same applies to publishing content on your website. Before displaying content on your website coming from untrusted users, regardless whether CKEditor is enabled or not, you should filter the content against XSS. The reason is that malicious users can disable CKEditor in a browser or use software to alter the POST request and send anything. 
+**No editor features (such as {@link guide/dev/acf/README Advanced Content Filter (ACF)} or paste filter) should be treated as security filters.** If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website. The same applies to publishing content on your website. Before displaying content on your website coming from untrusted users, regardless whether CKEditor is enabled or not, you should filter the content against XSS. The reason is that malicious users can disable CKEditor in a browser or use software to alter the POST request and send anything.
 
 ### Use ACF in default, automatic mode
 

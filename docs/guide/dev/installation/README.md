@@ -46,7 +46,7 @@ To start, create a simple HTML page with a `<textarea>` element in it. You will 
 
 See the following example:
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>

@@ -103,7 +103,7 @@ To register the widget plugin with CKEditor, we have to add it to the `{@linkapi
 
 Open the page that will contain CKEditor in a text editor and insert a CKEditor instance using the following configuration.
 
-	<textarea cols="80" id="editor1" name="editor1" rows="10"/>
+	<textarea cols="80" id="editor1" name="editor1" rows="10"></textarea>
 	<script>
 		CKEDITOR.replace( 'editor1', {
 			// Load the Simple Box plugin.
@@ -182,27 +182,29 @@ Each CKEditor plugin, included widgets, can add its own styles for editor conten
 
 To simplify the tutorial, let us assume you are using the {@link guide/dev/framed/README classic editor}. The styling of classic editor content is done by using the `contents.css` file. Add the styles below to your default `contents.css` file:
 
-	.simplebox {
-		padding: 8px;
-		margin: 10px;
-		background: #eee;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		box-shadow: 0 1px 1px #fff inset, 0 -1px 0px #ccc inset;
-	}
-	.simplebox-title, .simplebox-content {
-		box-shadow: 0 1px 1px #ddd inset;
-		border: 1px solid #cccccc;
-		border-radius: 5px;
-		background: #fff;
-	}
-	.simplebox-title {
-		margin: 0 0 8px;
-		padding: 5px 8px;
-	}
-	.simplebox-content {
-		padding: 0 8px;
-	}
+```css
+.simplebox {
+	padding: 8px;
+	margin: 10px;
+	background: #eee;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 1px #fff inset, 0 -1px 0px #ccc inset;
+}
+.simplebox-title, .simplebox-content {
+	box-shadow: 0 1px 1px #ddd inset;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	background: #fff;
+}
+.simplebox-title {
+	margin: 0 0 8px;
+	padding: 5px 8px;
+}
+.simplebox-content {
+	padding: 0 8px;
+}
+```
 
 Please note that if you are working with the {@link guide/dev/inline/README inline editor}, you need to add these styles to your page that displays the editor. And if you want to share your plugin with others, refer to the {@link guide/plugin_sdk/styles/README Plugin CSS Styles} article that explains the recommended way to control plugin styling.
 
@@ -315,68 +317,72 @@ Anyway, this is it. The widget code is complete now and works as intended!
 
 The full contents of the `simplebox/plugin.js` file is as follows:
 
-	CKEDITOR.plugins.add( 'simplebox', {
-		requires: 'widget',
+```js
+CKEDITOR.plugins.add( 'simplebox', {
+	requires: 'widget',
 
-		icons: 'simplebox',
+	icons: 'simplebox',
 
-		init: function( editor ) {
-			editor.widgets.add( 'simplebox', {
+	init: function( editor ) {
+		editor.widgets.add( 'simplebox', {
 
-				button: 'Create a simple box',
+			button: 'Create a simple box',
 
-				template:
-					'<div class="simplebox">' +
-						'<h2 class="simplebox-title">Title</h2>' +
-						'<div class="simplebox-content"><p>Content...</p></div>' +
-					'</div>',
+			template:
+				'<div class="simplebox">' +
+					'<h2 class="simplebox-title">Title</h2>' +
+					'<div class="simplebox-content"><p>Content...</p></div>' +
+				'</div>',
 
-				editables: {
-					title: {
-						selector: '.simplebox-title',
-						allowedContent: 'br strong em'
-					},
-					content: {
-						selector: '.simplebox-content',
-						allowedContent: 'p br ul ol li strong em'
-					}
+			editables: {
+				title: {
+					selector: '.simplebox-title',
+					allowedContent: 'br strong em'
 				},
-
-				allowedContent:
-					'div(!simplebox); div(!simplebox-content); h2(!simplebox-title)',
-
-				requiredContent: 'div(simplebox)',
-
-				upcast: function( element ) {
-					return element.name == 'div' && element.hasClass( 'simplebox' );
+				content: {
+					selector: '.simplebox-content',
+					allowedContent: 'p br ul ol li strong em'
 				}
-			} );
-		}
-	} );
+			},
+
+			allowedContent:
+				'div(!simplebox); div(!simplebox-content); h2(!simplebox-title)',
+
+			requiredContent: 'div(simplebox)',
+
+			upcast: function( element ) {
+				return element.name == 'div' && element.hasClass( 'simplebox' );
+			}
+		} );
+	}
+} );
+```
 
 This should be added to your `contents.css` file:
 
-	.simplebox {
-		padding: 8px;
-		margin: 10px;
-		background: #eee;
-		border-radius: 8px;
-		border: 1px solid #ddd;
-		box-shadow: 0 1px 1px #fff inset, 0 -1px 0px #ccc inset;
-	}
-	.simplebox-title, .simplebox-content {
-		box-shadow: 0 1px 1px #ddd inset;
-		border: 1px solid #cccccc;
-		border-radius: 5px;
-		background: #fff;
-	}
-	.simplebox-title {
-		margin: 0 0 8px;
-		padding: 5px 8px;
-	}
-	.simplebox-content {
-		padding: 0 8px;
-	}
+```css
+.simplebox {
+	padding: 8px;
+	margin: 10px;
+	background: #eee;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 1px #fff inset, 0 -1px 0px #ccc inset;
+}
+.simplebox-title, .simplebox-content {
+	box-shadow: 0 1px 1px #ddd inset;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	background: #fff;
+}
+.simplebox-title {
+	margin: 0 0 8px;
+	padding: 5px 8px;
+}
+.simplebox-content {
+	padding: 0 8px;
+}
+```
 
 <info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-1">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor-docs-samples/blob/master/README.md">instructions</a>.
 </info-box>

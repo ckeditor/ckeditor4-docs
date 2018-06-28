@@ -25,32 +25,32 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(a) When software is designed to run on a system that has a keyboard, product functions shall be executable from a keyboard where the function itself or the result of performing a function can be discerned textually.</td>
 <td align="left">All CKEditor features can be reached with keyboard. {@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(b) Applications shall not disrupt or disable activated features of other products that are identified as accessibility features, where those features are developed and documented according to industry standards. Applications also shall not disrupt or disable activated features of any operating system that are identified as accessibility features where the application programming interface for those accessibility features has been documented by the manufacturer of the operating system and is available to the product developer.</td>
 <td align="left">CKEditor is an application intended to be run inside a web browser, therefore it does not communicate directly with Assistive Technology. It is, however, developed in a way that ensures its full cooperation with browser accessibility features.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(c) A well-defined on-screen indication of the current focus shall be provided that moves among interactive interface elements as the input focus changes. The focus shall be programmatically exposed so that Assistive Technology can track focus and focus changes.</td>
 <td align="left">CKEditor ensures that every focused element of its UI has a visual sign of that fact, e.g. an outline for buttons. Moreover, the editor exposes the currently focused element to Assistive Technology.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(d) Sufficient information about a user interface element including the identity, operation and state of the element shall be available to Assistive Technology. When an image represents a program element, the information conveyed by the image must also be available in text.</td>
 <td align="left"><ul> <li>Every UI element that has a changeable state exposes its current state to Assistive Technology via WAI-ARIA bindings.</li> <li>Every UI element that contains an image provides its content as a text via an <code>alt</code> attribute or in another textual representation.</li></ul></td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(e) When bitmap images are used to identify controls, status indicators, or other programmatic elements, the meaning assigned to those images shall be consistent throughout an application's performance.</td>
 <td align="left">CKEditor uses distinctive icons for all of its features. Icon meanings are also consistent with commonly used icon meanings throughout the software industry.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(f) Textual information shall be provided through operating system functions for displaying text. The minimum information that shall be made available is text content, text input caret location, and text attributes.</td>
 <td align="left">CKEditor is built on top of operating system functions for displaying text that are provided by a web browser. All neccessary information is provided to end-user.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(g) Applications shall not override user selected contrast and color selections and other individual display attributes.</td>
@@ -69,7 +69,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(i) Color coding shall not be used as the only means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.</td>
 <td align="left">All information conveyed with color, including the color selector, is also available without color through textual labels or exposing its current value to Assistive Technology.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(j) When a product permits a user to adjust color and contrast settings, a variety of color selections capable of producing a range of contrast levels shall be provided.</td>
@@ -88,7 +88,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(l) When electronic forms are used, the form shall allow people using Assistive Technology to access the information, field elements, and functionality required for completion and submission of the form, including all directions and cues.</td>
 <td align="left"><ul><li>When CKEditor is embedded inside a form, <kbd>Tab</kbd> order works with the editor like any other regular form input.</li> <li>The editor is designed to let screen readers read out its name.</li> <li>All form elements inside the editor dialogs have proper labels exposed to Assistive Technology. Additionally, all form elements can be reached with keyboard.</li></ul></td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 </tbody></table>
 
@@ -104,7 +104,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(a) A text equivalent for every non-text element shall be provided (e.g., via <code>alt</code>, <code>longdesc</code>, or in element content).</td>
 <td align="left">All images conveying information, such as toolbar icons, are readable in screen readers via a text label or <code>alt</code>.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(b) Equivalent alternatives for any multimedia presentation shall be synchronized with the presentation.</td>
@@ -118,7 +118,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <li>Toolbar buttons will appear as textual buttons in operating system High Contrast mode.</li>
 <li>Selection of text and background colors is still possible with textual labels in the color selection panels.</li>
 </ul></td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(d) Documents shall be organized so they are readable without requiring an associated style sheet.</td>
@@ -152,7 +152,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(i) Frames shall be titled with text that facilitates frame identification and navigation.</td>
 <td align="left">Iframe elements in CKEditor (such as the WYSIWYG editing area and drop-down lists) are given screen reader accessible labels.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(j) Pages shall be designed to avoid causing the screen to flicker with a frequency greater than 2 Hz and lower than 55 Hz.</td>
@@ -162,12 +162,12 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(k) A text-only page, with equivalent information or functionality, shall be provided to make a web site comply with the provisions of this part, when compliance cannot be accomplished in any other way. The content of the text-only page shall be updated whenever the primary page changes.</td>
 <td align="left">CKEditor is designed to progressively enhance an existing <code>textarea</code> or another element with content, so the text-only alternative is available if JavaScript execution is disabled or an error is encountered.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(l) When pages utilize scripting languages to display content, or to create interface elements, the information provided by the script shall be identified with functional text that can be read by Assistive Technology.</td>
 <td align="left">All UI elements (e.g. toolbar buttons, dialog tabs) in CKEditor come with screen reader accessible labels.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(m) When a web page requires that an applet, plug-in or other application be present on the client system to interpret page content, the page must provide a link to a plug-in or applet that complies with §1194.21(a) through (l).</td>
@@ -181,7 +181,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <li>When CKEditor is embedded inside a form, <kbd>Tab</kbd> order works with the editor like with any other regular form input.</li> <li>CKEditor is designed to let screen readers read out its name.</li>
 <li>All form elements inside the editor dialogs have proper labels exposed to Assistive Technology. Additionally, all form elements can be reached with keyboard.</li>
 </ul></td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(o) A method shall be provided that permits users to skip repetitive navigation links.</td>
@@ -191,7 +191,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <li>The toolbar can be accessed with <kbd>Alt+F10</kbd> and it is divided into groups that can be navigated with the <kbd>Tab</kbd> key. The navigation inside those groups is possible with <kbd>Arrow</kbd> keys.</li>
 <li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 </ul></td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(p) When a timed response is required, the user shall be alerted and given sufficient time to indicate more time is required.</td>
@@ -308,12 +308,12 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(d) All training and informational video and multimedia productions which support the agency's mission, regardless of format, that contain visual information necessary for the comprehension of the content, shall be audio described.</td>
 <td align="left"><a href="https://www.youtube.com/user/CKEditor/videos">Screencasts showcasing CKEditor</a> are additional promotional materials connected with articles containing very detailed instructions about doing specified tasks. They are thus not standalone productions, but a supplement to textual content which can be read aloud by Assistive Technology.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(e) Display or presentation of alternate text presentation or audio descriptions shall be user-selectable unless permanent.</td>
 <td align="left">Information contained in <a href="https://www.youtube.com/user/CKEditor/videos">screencasts showcasing CKEditor</a> is also available in the text form on the blog as they are just supplements to textual content. Therefore text presentation is completely user-selectable as it is the primary source of content.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 </tbody></table>
 
@@ -461,7 +461,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 <li>The use of user speech is not required for operating the editor.</li>
 </ul></td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(f) At least one mode of operation and information retrieval that does not require fine motor control or simultaneous actions and that is operable with limited reach and strength shall be provided.</td>
@@ -471,7 +471,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 <li>A mouse is thus not required for using the editor.</li>
 </ul></td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 </tbody></table>
 
@@ -487,17 +487,17 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <tr>
 <td align="left">(a) Product support documentation provided to end-users shall be made available in alternate formats upon request, at no additional charge.</td>
 <td align="left">Documentation is available in alternate formats and is delivered to end-users upon request, at no additional charge.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(b) End-users shall have access to a description of the accessibility and compatibility features of products in alternate formats or alternate methods upon request, at no additional charge.</td>
 <td align="left">Description of the accessibility and compatibility features of CKEditor is available in alternate formats and methods upon request, at no additional charge.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 <tr>
 <td align="left">(c) Support services for products shall accommodate the communication needs of end-users with disabilities.</td>
 <td align="left">The main way of providing support to end-users is via e-mail; it enables users to use their Assistive Technology with it. Additionaly, there is also an option to get support via a phone call.</td>
-<td align="left"/>
+<td align="left"></td>
 </tr>
 </tbody></table>
 

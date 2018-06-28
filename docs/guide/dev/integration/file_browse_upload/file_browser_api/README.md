@@ -90,7 +90,7 @@ The following example shows how to send the URL from a file manager using JavaSc
             window.close();
         }
     </script>
-</meta></head>
+</head>
 <body>
     <button onclick="returnFileUrl()">Select File</button>
 </body>
@@ -140,7 +140,7 @@ Suppose that apart from passing the `fileUrl` value that is assigned to an appro
             window.close();
         }
     </script>
-</meta></head>
+</head>
 <body>
     <button onclick="returnFileUrl()">Select File</button>
 </body>
@@ -151,13 +151,13 @@ Suppose that apart from passing the `fileUrl` value that is assigned to an appro
 
 The following code shows how to send back the URL of an uploaded file from the PHP connector (save it as `upload.php`):
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Example: File Upload</title>
-</meta></head>
+</head>
 <body>
 <?php
 // Required: anonymous function reference number as explained above.
@@ -175,7 +175,7 @@ $url = '/path/to/uploaded/file.ext';
 // Usually you will only assign something here if the file could not be uploaded.
 $message = 'The uploaded file has been renamed';
 
-echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');";
+echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($funcNum, '$url', '$message');</script>";
 ?>
 </body>
 </html>

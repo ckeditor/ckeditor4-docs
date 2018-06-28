@@ -177,17 +177,19 @@ enabled and which are not, depending on filtering rules set in the configuration
 be done by modifying the Explanation field in the dialog window definition
 (`plugins/abbr/dialogs/abbr.js`):
 
-	elements: [
+```js
+elements: [
+	...
+	{
+		type: 'text',
+		id: 'title',
+		label: 'Explanation',
+		requiredContent: 'abbr[title]',	// Title must be allowed to enable this field.
 		...
-		{
-			type: 'text',
-			id: 'title',
-			label: 'Explanation',
-			requiredContent: 'abbr[title]',	// Title must be allowed to enable this field.
-			...
-		}
-		...
-	]
+	}
+	...
+]
+```
 
 The dialog window also contains the **Advanced Settings** tab that
 can be used for setting the `id` attribute. However, our current configuration
@@ -195,18 +197,20 @@ can be used for setting the `id` attribute. However, our current configuration
 attributes". The **Abbreviation** plugin should take this fact into account and disable
 the **Advanced Settings** tab unless the `id` attribute is allowed:
 
-	contents: [
-		...
-		{
-			id: 'tab-adv',
-			label: 'Advanced Settings',
-			requiredContent: 'abbr[id]',	// ID must be allowed to enable this field.
-			elements: [
-				...
-			]
-		}
-		...
-	]
+```js
+contents: [
+	...
+	{
+		id: 'tab-adv',
+		label: 'Advanced Settings',
+		requiredContent: 'abbr[id]',	// ID must be allowed to enable this field.
+		elements: [
+			...
+		]
+	}
+	...
+]
+```
 
 To sum it up, let us see how the **Abbreviation** dialog window changes with different
 `config.allowedContent` settings:

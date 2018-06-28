@@ -60,14 +60,17 @@ It is also possible to define the minimum and maximum dimensions after resizing 
 
 To define the minimum editor dimensions after resizing, specify the {@linkapi CKEDITOR.config.resize_minWidth CKEDITOR.config.resize_minWidth} and {@linkapi CKEDITOR.config.resize_minHeight CKEDITOR.config.resize_minHeight} values in pixels.
 
-	config.resize_minWidth = 300;
-	config.resize_minHeight = 300;
+```js
+config.resize_minWidth = 300;
+config.resize_minHeight = 300;
+```
 
 To define the maximum editor dimensions after resizing, specify the {@linkapi CKEDITOR.config.resize_maxWidth CKEDITOR.config.resize_maxWidth} and {@linkapi CKEDITOR.config.resize_maxHeight CKEDITOR.config.resize_maxHeight} values in pixels.
 
-	config.resize_maxWidth = 800;
-	config.resize_maxHeight = 600;
-
+```js
+config.resize_maxWidth = 800;
+config.resize_maxHeight = 600;
+```
 
 ## Limiting the Resizing Directions
 

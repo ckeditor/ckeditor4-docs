@@ -17,7 +17,7 @@ CKEditor is a JavaScript application. To load it, you need to include a single f
 ``` html
 <head>
     ...
-    <script src="/ckeditor/ckeditor.js"/>
+    <script src="/ckeditor/ckeditor.js"></script>
 </head>
 ```
 

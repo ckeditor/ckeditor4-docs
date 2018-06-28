@@ -38,8 +38,8 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'fix-scayt-docs', function() {
 		const done = this.async();
-		let file = grunt.file.read( 'docs/api/data/CKEDITOR.config.json' );
-		const scaytMap = grunt.file.readJSON( 'scayt-urls.json' );
+		const scaytMap = grunt.file.readJSON( 'scayturls.json' );
+		var file = grunt.file.read( 'docs/api/data/CKEDITOR.config.json' );
 
 		for ( const key in scaytMap ) {
 			file = file.replace( new RegExp( '@@' + key , 'g' ), scaytMap[ key ] );

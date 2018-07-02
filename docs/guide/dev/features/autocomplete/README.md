@@ -102,10 +102,12 @@ This is a function which should return (through its callback) suggestion data fo
 ```javascript
 // The itemsArray variable is the example "database".
 var itemsArray = [
-	{ id: 1703, name: 'Mentions plugin' },
-	{ id: 1751, name: 'Autocomplete plugin' },
-	{ id: 1746, name: 'Emoji plugin' },
-	{ id: 2062, name: 'Emoji list button' }
+	// (...)
+	{ id: 1703, name: 'Mentions plugin', type: 'feature' },
+	{ id: 1751, name: 'Autocomplete plugin', type: 'feature' },
+	{ id: 1746, name: 'Emoji plugin', type: 'feature' },
+	{ id: 2062, name: 'Emoji list button', type: 'feature' }
+	// (...)
 ];
 
 // Returns (through its callback) the suggestions for the current query.
@@ -137,13 +139,13 @@ Autocomplete comes with a highly customizable templating feature. You can change
 For example, you can use the {@linkapi CKEDITOR.plugins.autocomplete.configDefinition#itemTemplate item template} configuration option to get a more interesting dropdown shown in the example above:
 
 ```javascript
-config.itemTemplate = '<li data-id="{id}"><strong>{id}</strong> <i>{name}</i></li>';
+config.itemTemplate = '<li data-id="{id}" class="issue-{type}">#{id}: {name}</li>';
 ```
 
 And create some custom {@linkapi CKEDITOR.plugins.autocomplete.configDefinition#outputTemplate output template}:
 
 ```javascript
-config.outputTemplate = '<a href="https://github.com/ckeditor/ckeditor-dev/issues/{id}">#{id}</a>';
+config.outputTemplate = '<a href="https://github.com/ckeditor/ckeditor-dev/issues/{id}">{name} (#{id})</a> ';
 ```
 
 Note that when creating a custom item template you should use a `<li>` element with the `data-id="{id}"` attribute.

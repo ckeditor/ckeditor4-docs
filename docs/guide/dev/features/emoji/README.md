@@ -18,13 +18,15 @@ For licensing, see LICENSE.md.
 
 The emoji feature introduces support for easy inserting of emoji characters in a unified, platform-independent way. Emojis are inserted by typing identifiers based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) preceded by a colon (`:`) in the editor and selecting the suggestion from the provided dropdown.
 
+{@img assets/img/emoji_01.png Emoji plugin showing two emoji suggestions.}
+
 The [Emoji](https://ckeditor.com/cke4/addon/emoji) plugin that provides this functionality is an implementation of the {@link guide/dev/features/autocomplete/README Autocomplete} feature.  
 
 It includes an autocomplete component that will list available emojis. Each identifier should be wrapped in colon (`:`) characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
 
-<img src="../assets/img/emoji.png" alt="Emoji plugin showing two emoji suggestions." style="width: 420px; height: 288.5px;">
-
 When you press the <kbd>Enter</kbd> or <kbd>Tab</kbd> key, the suggested value will be inserted into the editor.
+
+{@img assets/img/emoji_03.png The editor content with emoji inserted.}
 
 ## Configuration
 

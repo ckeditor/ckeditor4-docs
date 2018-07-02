@@ -18,7 +18,7 @@ For licensing, see LICENSE.md.
 
 The Autocomplete feature provides contextual completion functionality for custom text matches based on user input. Every time the user types a pre-configured marker, such as `@` or `#`, they get information about available autocomplete options displayed in a dedicated dropdown. The provided suggestion can be quickly selected and inserted into content.
 
-{@img assets/img/autocomplete_01.png Using autocomplete to get ticket hints.}
+{@img assets/img/autocomplete_01.png Using autocomplete to insert placeholders.}
 
 This feature is implemented using the following plugins:
 
@@ -33,6 +33,8 @@ This feature is a base for implementing specialized autocomplete features, such 
 The Autocomplete plugin shows a dropdown with available options every time the user types a matching text.
 
 When you press <kbd>Enter</kbd>, <kbd>Tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes}, the suggested value will be inserted into the editor.
+
+{@img assets/img/autocomplete_02.png Placeholders inserted into the editor with autocomplete.}
 
 ## Implementing Custom Autocomplete
 
@@ -164,11 +166,15 @@ There is only one thing left to do &mdash; attach autocomplete to the editor alo
 new CKEDITOR.plugins.autocomplete( editor, config );
 ```
 
-You can check the complete solution in the [documentation code samples repository](https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-autotag/autotag).
+You can review and download the complete solution in the [documentation code samples repository](https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-autotag/autotag).
 
-## Autocomplete Demo
+{@img assets/img/autocomplete_03.png Custom autocomplete implementation with GitHub tickets.}
+
+## Autocomplete Demos
 
 See the [working "Autocomplete" sample](https://sdk.ckeditor.com/samples/autocomplete.html) to check how autocomplete helps create a useful templating system, saving your time and limiting the opportunity to make mistakes.
+
+Check the ["Autotag Plugin (Creating a Custom Autocomplete Plugin)"](https://sdk.ckeditor.com/samples/autotag.html) sample to see the working Autotag plugin created in this tutorial.
 
 ## Related Features
 

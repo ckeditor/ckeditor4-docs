@@ -84,7 +84,7 @@ function matchCallback( text, offset ) {
 	// Get the text before the caret.
 	var left = text.slice( 0, offset ),
 		// Will look for a '#' character followed by a ticket number.
-		match = left.match( /#\d+$/ );
+		match = left.match( /#\d*$/ );
 
 	if ( !match ) {
 		return null;

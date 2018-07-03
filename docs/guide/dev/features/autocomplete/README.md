@@ -18,7 +18,7 @@ For licensing, see LICENSE.md.
 
 The Autocomplete feature provides contextual completion functionality for custom text matches based on user input. Every time the user types a pre-configured marker, such as `@` or `#`, they get information about available autocomplete options displayed in a dedicated dropdown. The provided suggestion can be quickly selected and inserted into content.
 
-{@img assets/img/autocomplete_01.png Using autocomplete to insert placeholders.}
+{@img assets/img/autocomplete_01.png 616 Using autocomplete to insert placeholders.}
 
 This feature is implemented using the following plugins:
 
@@ -34,7 +34,7 @@ The Autocomplete plugin shows a dropdown with available options every time the u
 
 When you press <kbd>Enter</kbd>, <kbd>Tab</kbd> or any other customized {@linkapi CKEDITOR.config.autocomplete_commitKeystrokes}, the suggested value will be inserted into the editor.
 
-{@img assets/img/autocomplete_02.png Placeholders inserted into the editor with autocomplete.}
+{@img assets/img/autocomplete_02.png 616 Placeholders inserted into the editor with autocomplete.}
 
 ## Implementing Custom Autocomplete
 

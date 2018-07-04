@@ -106,37 +106,44 @@
 				{
 					"name": "User Interface",
 					"id": "user-interface",
-					"slug": "user-interface"
+					"slug": "user-interface",
+					"order": 20
 				},
 				{
 					"name": "Editor Resizing",
 					"id": "editor-resizing",
-					"slug": "editor-resizing"
+					"slug": "editor-resizing",
+					"order": 40
 				},
 				{
 					"name": "Inserting Images",
 					"id": "inserting-images",
-					"slug": "inserting-images"
+					"slug": "inserting-images",
+					"order": 60
 				},
 				{
 					"name": "Inserting Content",
 					"id": "inserting-content",
-					"slug": "inserting-content"
+					"slug": "inserting-content",
+					"order": 80
 				},
 				{
 					"name": "Authoring Content",
 					"id": "authoring-content",
-					"slug": "authoring-content"
+					"slug": "authoring-content",
+					"order": 100
 				},
 				{
 					"name": "Working with Document",
 					"id": "working-with-document",
-					"slug": "working-with-document"
+					"slug": "working-with-document",
+					"order": 120
 				},
 				{
 					"name": "Accessibility Support",
 					"id": "accessibility-support",
-					"slug": "accessibility-support"
+					"slug": "accessibility-support",
+					"order": 140
 				}
 				]
 			},
@@ -144,32 +151,37 @@
 				"name": "Integration Features",
 				"id": "integration-features",
 				"slug": "integration-features",
-				"order": 30,
+				"order": 40,
 				"categories": [
 				{
 					"name": "Editor UI",
 					"id": "editor-ui",
-					"slug": "editor-ui"
+					"slug": "editor-ui",
+					"order": 20
 				},
 				{
 					"name": "Toolbar",
 					"id": "toolbar",
-					"slug": "toolbar"
+					"slug": "toolbar",
+					"order": 40
 				},
 				{
 					"name": "API Usage",
 					"id": "api-usage",
-					"slug": "api-usage"
+					"slug": "api-usage",
+					"order": 60
 				},
 				{
 					"name": "Output Control",
 					"id": "output-control",
-					"slug": "output-control"
+					"slug": "output-control",
+					"order": 80
 				},
 				{
 					"name": "Utilities",
 					"id": "utilities",
-					"slug": "utilities"
+					"slug": "utilities",
+					"order": 100
 				}
 				]
 			}

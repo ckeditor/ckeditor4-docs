@@ -100,7 +100,8 @@
 			{
 			  "name": "End-user Features",
 			  "id": "end-user-features",
-			  "slug": "end-user-features",
+				"slug": "end-user-features",
+				"order": 30,
 			  "categories": [
 				{
 				  "name": "User Interface",
@@ -142,7 +143,8 @@
 			{
 			  "name": "Integration Features",
 			  "id": "integration-features",
-			  "slug": "integration-features",
+				"slug": "integration-features",
+				"order": 30,
 			  "categories": [
 				{
 				  "name": "Editor UI",
@@ -182,12 +184,14 @@
 			{
 			  "name": "File Manager",
 			  "id": "file-manager",
-			  "slug": "file-manager"
+				"slug": "file-manager",
+				"order": 50
 			},
 			{
 			  "name": "Accessibility Checker",
 			  "id": "accessibility-checker",
-			  "slug": "accessibility-checker"
+				"slug": "accessibility-checker",
+				"order": 50
 			}
 		  ]
 		},
@@ -246,7 +250,8 @@
 			{
 			  "name": "Widget Tutorial",
 			  "id": "widget-tutorial",
-			  "slug": "widget-tutorial"
+				"slug": "widget-tutorial",
+				"order": 30
 			}
 		  ]
 		},
@@ -259,12 +264,14 @@
 			{
 			  "name": "Advanced Concepts",
 			  "id": "advanced-concepts",
-			  "slug": "advanced-concepts"
+				"slug": "advanced-concepts",
+				"order": 30
 			},
 			{
 			  "name": "Creating a Custom Skin",
 			  "id": "creating-a-custom-skin",
-			  "slug": "creating-a-custom-skin"
+				"slug": "creating-a-custom-skin",
+				"order": 30
 			}
 		  ]
 		}

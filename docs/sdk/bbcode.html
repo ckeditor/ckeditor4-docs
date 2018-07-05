@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Configuring CKEditor to output BBCode">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, bbcode, output, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="BBCode editing">
+	<title>BBCode Editing</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>BBCode Editing <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_bbcode">Documentation</a></h1>
+
+			<p>
+				An optional CKEditor <a href="https://ckeditor.com/cke4/addon/bbcode">BBCode Output Format</a> plugin makes it possible to configure the editor to output BBCode instead of HTML. Additionally, the plugin also modifies the editor configuration to provide a better match for the BBCode environment.
+			</p>
+
+			<p>
+				In the example below the editor settings were further customized to just include a minimum set of features used in BBCode. Smiley images, for example, were stripped to the emoticons that are commonly used in some BBCode dialects. If you go to source view, you will notice that CKEditor works on BBCode here and not HTML code &mdash; any changes that you introduce to editor content will use BBCode tags, too.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1">
+				[color=#008000][size=200]Apollo 11[/size][/color]
+				[b]Apollo 11[/b] was the spaceflight that landed the first humans, Americans [url=http://en.wikipedia.org/wiki/Neil_Armstrong]Neil Armstrong[/url] and [url=http://en.wikipedia.org/wiki/Buzz_Aldrin]Buzz Aldrin[/url], on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC. Armstrong spent about [u]two and a half hours[/u] outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5 kg) of lunar material for return to Earth. A third member of the mission, [url=http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)]Michael Collins[/url], piloted the [url=http://en.wikipedia.org/wiki/Apollo_Command/Service_Module]command[/url] spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.
+				[color=#008000][size=200]Broadcasting and [/size][i][size=200]quotes[/size][/i][/color]
+				Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:
+				[quote]One small step for [a] man, one giant leap for mankind.[/quote]
+				[color=#008000][size=200]Technical details[/size][/color]
+				Launched by a [b]Saturn V[/b] rocket from [url=http://en.wikipedia.org/wiki/Kennedy_Space_Center]Kennedy Space Center[/url] in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of [url=http://en.wikipedia.org/wiki/NASA]NASA[/url]'s Apollo program. The Apollo spacecraft had three parts:
+				[list=1]
+				[*][b]Command Module[/b] with a cabin for the three astronauts which was the only part which landed back on Earth
+				[*][b]Service Module[/b] which supported the Command Module with propulsion, electrical power, oxygen and water
+				[*][b]Lunar Module[/b] for landing on the Moon.
+				[/list]
+			</textarea>
+
+			<div class="tip">
+				<p>
+					Please note that currently there is no standard for the <a href="http://en.wikipedia.org/wiki/BBCode">BBCode markup language</a>, so its implementation for different platforms (message boards, blogs etc.) can vary. This means that before using CKEditor to output BBCode you may need to adjust the implementation to your own environment. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_bbcode">BBCode Editing</a> article to learn more about this feature.
+				</p>
+
+			</div>
+
+			<script data-sample="1">
+				// Replace the <textarea id="editor1"> with an CKEditor
+				// instance, using the "bbcode" plugin, customizing some of the
+				// editor configuration options to fit BBCode environment.
+				CKEDITOR.replace( 'editor1', {
+					height: 280,
+					// Add plugins providing functionality popular in BBCode environment.
+					extraPlugins: 'bbcode,smiley,font,colorbutton',
+					// Remove unused plugins.
+					removePlugins: 'filebrowser,format,horizontalrule,pastetext,pastefromword,scayt,showborders,stylescombo,table,tabletools,tableselection,wsc',
+					// Remove unused buttons.
+					removeButtons: 'Anchor,BGColor,Font,Strike,Subscript,Superscript',
+					// Width and height are not supported in the BBCode format, so object resizing is disabled.
+					disableObjectResizing: true,
+					// Define font sizes in percent values.
+					fontSize_sizes: "30/30%;50/50%;100/100%;120/120%;150/150%;200/200%;300/300%",
+					// Strip CKEditor smileys to those commonly used in BBCode.
+					smiley_images: [
+						'regular_smile.png', 'sad_smile.png', 'wink_smile.png', 'teeth_smile.png', 'tongue_smile.png',
+						'embarrassed_smile.png', 'omg_smile.png', 'whatchutalkingabout_smile.png', 'angel_smile.png',
+						'shades_smile.png', 'cry_smile.png', 'kiss.png'
+					],
+					smiley_descriptions: [
+						'smiley', 'sad', 'wink', 'laugh', 'cheeky', 'blush', 'surprise',
+						'indecision', 'angel', 'cool', 'crying', 'kiss'
+					]
+				});
+			</script>
+
+			<h2>Related Features</h2>
+
+			<ul>
+				<li><a href="./htmlformatting.html">Output Control &ndash; HTML Output Formatting</a></li>
+				<li><a href="./sourcearea.html">Working with Document &ndash; Source Code Editing</a></li>
+			</ul>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

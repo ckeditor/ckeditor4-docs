@@ -1,0 +1,33 @@
+/*
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+*/
+
+body
+{
+	font-family: Georgia, Times, "Times New Roman", serif;
+	color: #333;
+}
+
+.cke_editable
+{
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h1, h2, h3, h4
+{
+	color: #000;
+}
+
+a
+{
+	color: #cf5d4e;
+	text-decoration: none;
+	border-bottom: 1px dashed #cf5d4e;
+}
+
+s
+{
+	color: #aaa;
+}

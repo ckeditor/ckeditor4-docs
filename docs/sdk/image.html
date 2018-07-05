@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Default Image Plugin">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, image, default, upload, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Default Image Plugin">
+	<title>Default Image Plugin</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script src="assets/sample.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Default Image Plugin <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_image">Documentation</a></h1>
+
+			<p>
+				The classic <a href="https://ckeditor.com/cke4/addon/image">Image</a> plugin supports inserting images into the editor content. By default it is available in the Standard and Full distributions. It provides the following features when compared to two alternative image plugins, <a href="./image2.html">Enhanced Image</a> and <a href="./easyimage.html">Easy Image</a>:
+			</p>
+			<ul>
+				<li>
+					It allows for <strong>pixel-perfect alignment</strong> of images inside the editor content by setting horizontal and vertical whitespace.
+				</li>
+				<li>
+					It supports <strong>left and right image alignment</strong> as well as setting <strong>image border</strong>.
+				</li>
+				<li>
+					It provides <strong>image preview</strong>.
+				</li>
+				<li>
+					It supports <strong>adding links to images</strong> through the dedicated Link tab directly in the Image Properties dialog.
+				</li>
+				<li>
+					It can be integrated with a <strong>file manager</strong> of your choice such as <a href="https://ckeditor.com/ckeditor-4/ckfinder/">CKFinder</a> for image upload and storage support.
+				</li>
+			</ul>
+			<p>
+				When the Image plugin is enabled, the <span class="button_icon" data-icon="image" title="Image">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Image Properties</strong> dialog window that lets you add and configure the inserted image.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h2 style="text-align:center;line-height: 75px;"&gt;&lt;img alt="Bilancino Hotel logo" src="assets/image/bilancino-logo.png" style="float:right; height:75px; width: 75px;" /&gt;The Flavorful Tuscany Meetup&lt;/h2&gt;
+
+				&lt;h3 style="text-align:center;clear: both;margin-top: -2em;margin-left: -2em"&gt;&lt;span style="color:#007ac9"&gt;&lt;strong&gt;Welcome letter&lt;/strong&gt;&lt;/span&gt;&lt;/h3&gt;
+
+				&lt;p&gt;&nbsp;&lt;/p&gt;
+
+				&lt;p&gt;Dear Guest,&lt;/p&gt;
+
+				&lt;p&gt;We are delighted to welcome you to the annual &lt;em&gt;Flavorful Tuscany Meetup&lt;/em&gt; and hope you will enjoy the programme as well as your stay at the Bilancino Hotel.&lt;/p&gt;
+
+				&lt;p&gt;Please find below the full schedule of the event.&lt;/p&gt;
+
+				&lt;table cellpadding="15" cellspacing="0" style="width:100%"&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th colspan="2" scope="col" style="background-color:#f2f9ff; text-align:center"&gt;Saturday, July 14&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td style="white-space:nowrap"&gt;9:30 AM - 11:30 AM&lt;/td&gt;
+							&lt;td&gt;Americano vs. Brewed - &ldquo;know your coffee&rdquo; session with &lt;strong&gt;Stefano Garau&lt;/strong&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style="white-space:nowrap"&gt;1:00 PM - 3:00 PM&lt;/td&gt;
+							&lt;td&gt;Pappardelle al pomodoro - live cooking session with &lt;strong&gt;Rita Fresco&lt;/strong&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style="white-space:nowrap"&gt;5:00 PM - 8:00 PM&lt;/td&gt;
+							&lt;td&gt;Tuscan vineyards at a glance - wine-tasting session with &lt;strong&gt;Frederico Riscoli&lt;/strong&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;blockquote&gt;
+				&lt;p&gt;The annual Flavorful Tuscany meetups are always a culinary discovery. You get the best of Tuscan flavors during an intense one-day stay at one of the top hotels of the region. All the sessions are lead by top chefs passionate about their profession. I would certainly recommend to save the date in your calendar for this one!&lt;/p&gt;
+
+				&lt;p&gt;Angelina Calvino, food journalist&lt;/p&gt;
+				&lt;/blockquote&gt;
+
+				&lt;p&gt;Please arrive at the Bilancino Hotel reception desk at least &lt;strong&gt;half an hour earlier&lt;/strong&gt; to make sure that the registration process goes as smoothly as possible.&lt;/p&gt;
+
+				&lt;p&gt;We look forward to welcoming you to the event.&lt;/p&gt;
+
+				&lt;p&gt;&lt;img alt="Victoria Valc signature" src="assets/image/signature.png" style="height:101px;width:180px" /&gt;&lt;/p&gt;
+
+				&lt;p&gt;Victoria Valc&lt;/p&gt;
+
+				&lt;p&gt;Bilancino Hotel Event Manager&lt;/p&gt;
+			</textarea>
+
+			<p class="tip">
+				If you are looking for more modern image support with a clean UI and features such as image captions, drag and drop positioning, click and drag resizing, image alignment (including centering) with inline styles or CSS classes, custom image styles or cloud storage support with optimized images and responsive markup, try <a href="./image2.html">Enhanced Image</a> and <a href="./easyimage.html">Easy Image</a> plugins.
+			</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./image2.html">Inserting Images &ndash; Enhanced Image Plugin</a></li>
+				<li><a href="./easyimage.html">Inserting Images &ndash; Easy Image Plugin</a></li>
+				<li><a href="./fileupload.html">Inserting Content &ndash; File Upload through Dialogs and Drag&amp;Drop</a></li>
+			</ul>
+
+			<script data-sample="1" >
+				CKEDITOR.addCss( '.cke_editable { font-size: 15px; padding: 2em; }' );
+
+				CKEDITOR.replace( 'editor1', {
+					toolbar: [
+						{ name: 'document', items: [ 'Print' ] },
+						{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+						{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+						{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+						{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+						'/',
+						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'CopyFormatting' ] },
+						{ name: 'links', items: [ 'Link', 'Unlink' ] },
+						{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
+						{ name: 'insert', items: [ 'Image', 'Table' ] },
+						{ name: 'tools', items: [ 'Maximize' ] },
+						{ name: 'editing', items: [ 'Scayt' ] }
+					],
+
+					extraAllowedContent: 'h3{clear};h2{line-height};h2 h3{margin-left,margin-top}',
+
+					// Adding drag and drop image upload.
+					extraPlugins: 'print,format,font,colorbutton,justify,uploadimage',
+					uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+
+					// Configure your file manager integration. This example uses CKFinder 3 for PHP.
+					filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+					filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
+					filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+					filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+
+					height: 560,
+
+					removeDialogTabs: 'image:advanced;link:advanced'
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

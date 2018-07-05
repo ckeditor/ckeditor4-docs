@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Drag and Drop Integration">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, drag and drop, drag, drop, paste, d&d, dropping into editor">
+	<meta name="sdk-samples" content="Drag and Drop Integration">
+	<title>Drag and Drop Integration</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+	<style data-sample="1">
+		.columns {
+			background: #fff;
+			padding: 20px;
+			border: 1px solid #E7E7E7;
+		}
+		.columns:after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+		.columns > .editor {
+			float: left;
+			width: 65%;
+			position: relative;
+			z-index: 1;
+		}
+		.columns > .contacts {
+			float: right;
+			width: 35%;
+			box-sizing: border-box;
+			padding: 0 0 0 20px;
+		}
+		#contactList {
+			list-style-type: none;
+			margin: 0 !important;
+			padding: 0;
+		}
+		#contactList li {
+			background: #FAFAFA;
+			margin-bottom: 1px;
+			height: 56px;
+			line-height: 56px;
+			cursor: pointer;
+		}
+		#contactList li:nth-child(2n) {
+			background: #F3F3F3;
+		}
+		#contactList li:hover {
+			background: #FFFDE3;
+			border-left: 5px solid #DCDAC1;
+			margin-left: -5px;
+		}
+		.contact {
+			padding: 0 10px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		.contact .u-photo {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+		#editor1 .h-card {
+			background: #FFFDE3;
+			padding: 3px 6px;
+			border-bottom: 1px dashed #ccc;
+		}
+		#editor1 {
+			border: 1px solid #E7E7E7;
+			padding: 0 20px;
+			background: #fff;
+			position: relative;
+		}
+		#editor1 .h-card .p-tel {
+			font-style: italic;
+		}
+		#editor1 .h-card .p-tel::before,
+		#editor1 .h-card .p-tel::after {
+			font-style: normal;
+		}
+		#editor1 .h-card .p-tel::before {
+			content: "(☎ ";
+		}
+		#editor1 .h-card .p-tel::after {
+			content: ")";
+		}
+		#editor1 h1 {
+			text-align: center;
+		}
+		#editor1 hr {
+			border-style: dotted;
+			border-color: #DCDCDC;
+			border-width: 1px 0 0;
+		}
+	</style>
+	<!--[if lte IE 9]>
+		<style>
+			/* Because only the image is draggable: */
+			#contactList li {
+				cursor: default;
+			}
+			#contactList li img {
+				cursor: pointer
+			}
+		</style>
+	<![endif]-->
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Drag and Drop Integration <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_clipboard">Documentation</a></h1>
+
+			<p>The <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a> plugin (included in all CKEditor distributions) offers, among <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_drop_paste">many other features</a>, an interface to integrate drag and drop operations with your editor. It also augments and unifies incomplete native browser support for clipboard operations, which allows to achieve better and more faithful paste results.</p>
+
+			<p>The sample below allows you to drag contacts from the list on the right-hand side to the inline editor on the left-hand side. They are inserted into the editor as custom <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_widgets">widgets</a> representing the <a href="http://microformats.org/wiki/h-card">h-card microformat</a>.</p>
+
+			<p class="tip">
+				Note that in Internet Explorer 8-9 only the photos are draggable and none of Internet Explorer versions support <a href="https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer#setDragImage.28.29">setting drag image</a>.
+			</p>
+
+			<div class="columns" data-sample="1">
+				<div class="editor">
+					<div cols="10" id="editor1" name="editor1" rows="10" data-sample-short="" contenteditable="true">
+						<h1>The Annual Meeting of Fictional Characters</h1>
+						<h3>Technical Announcement</h3>
+						<p>We hereby have the pleasure to announce that the theme of this year&#39;s meeting is &quot;<strong>E&ndash;ink Technology and Classical Fairy Tales</strong>&quot;. As every year, the event will be hosted in <em>The Wonderland</em> by <span class="h-card"><a class="p-name u-email" href="mailto:alice@example.com">Alice</a> <span class="p-tel">+20 4345 234 235</span></span> and starts tomorrow at 8:00 GMT.</p>
+						<h3>Speakers and Agenda</h3>
+						<p>TBA.</p>
+						<h3>Venue</h3>
+						<p>For detailed information, please contact <span class="h-card"><a class="p-name u-email" href="mailto:h.finn@example.com">Huckleberry Finn</a> <span class="p-tel">+48 1345 234 235</span></span>.</p>
+						<h3>Accommodation</h3>
+						<p>Many thanks to <span class="h-card"><a class="p-name u-email" href="mailto:r.crusoe@example.com">Robinson Crusoe</a> <span class="p-tel">+45 2345 234 235</span></span> who kindly offered his island to the guests of the annual meeting.</p>
+						<hr />
+						<p style="text-align: right;"><span class="h-card"><a class="p-name u-email" href="mailto:lrrh@example.com">Little Red Riding Hood</a> <span class="p-tel">+45 2345 234 235</span></span></p>
+					</div>
+				</div>
+				<div class="contacts">
+					<h3>List of Droppable Contacts</h3>
+					<ul id="contactList"></ul>
+				</div>
+			</div>
+
+			<p>Photos: <a href="http://en.wikipedia.org">Wikipedia.org</a>.</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./fileupload.html">Inserting Content &ndash; File Upload through Dialogs and Drag&amp;Drop</a></li>
+			</ul>
+
+			<script data-sample="1">
+				'use strict';
+
+				var CONTACTS = [
+					{ name: 'Huckleberry Finn',			tel: '+48 1345 234 235', email: 'h.finn@example.com', avatar: 'hfin' },
+					{ name: 'D\'Artagnan',				tel: '+45 2345 234 235', email: 'dartagnan@example.com', avatar: 'dartagnan' },
+					{ name: 'Phileas Fogg',				tel: '+44 3345 234 235', email: 'p.fogg@example.com', avatar: 'pfog' },
+					{ name: 'Alice',					tel: '+20 4345 234 235', email: 'alice@example.com', avatar: 'alice' },
+					{ name: 'Little Red Riding Hood',	tel: '+45 2345 234 235', email: 'lrrh@example.com', avatar: 'lrrh' },
+					{ name: 'Winnetou',					tel: '+44 3345 234 235', email: 'winnetou@example.com', avatar: 'winetou' },
+					{ name: 'Edmond Dantès',			tel: '+20 4345 234 235', email: 'count@example.com', avatar: 'edantes' },
+					{ name: 'Robinson Crusoe',			tel: '+45 2345 234 235', email: 'r.crusoe@example.com', avatar: 'rcrusoe' }
+				];
+
+				CKEDITOR.disableAutoInline = true;
+
+				// Implements a simple widget that represents contact details (see http://microformats.org/wiki/h-card).
+				CKEDITOR.plugins.add( 'hcard', {
+					requires: 'widget',
+
+					init: function( editor ) {
+						editor.widgets.add( 'hcard', {
+							allowedContent: 'span(!h-card); a[href](!u-email,!p-name); span(!p-tel)',
+							requiredContent: 'span(h-card)',
+							pathName: 'hcard',
+
+							upcast: function( el ) {
+								return el.name == 'span' && el.hasClass( 'h-card' );
+							}
+						} );
+
+						// This feature does not have a button, so it needs to be registered manually.
+						editor.addFeature( editor.widgets.registered.hcard );
+
+						// Handle dropping a contact by transforming the contact object into HTML.
+						// Note: All pasted and dropped content is handled in one event - editor#paste.
+						editor.on( 'paste', function( evt ) {
+							var contact = evt.data.dataTransfer.getData( 'contact' );
+							if ( !contact ) {
+								return;
+							}
+
+							evt.data.dataValue =
+								'<span class="h-card">' +
+									'<a href="mailto:' + contact.email + '" class="p-name u-email">' + contact.name + '</a>' +
+									' ' +
+									'<span class="p-tel">' + contact.tel + '</span>' +
+								'</span>';
+						} );
+					}
+				} );
+
+				CKEDITOR.on( 'instanceReady', function() {
+					// When an item in the contact list is dragged, copy its data into the drag and drop data transfer.
+					// This data is later read by the editor#paste listener in the hcard plugin defined above.
+					CKEDITOR.document.getById( 'contactList' ).on( 'dragstart', function( evt ) {
+						// The target may be some element inside the draggable div (e.g. the image), so get the div.h-card.
+						var target = evt.data.getTarget().getAscendant( 'div', true );
+
+						// Initialization of the CKEditor data transfer facade is a necessary step to extend and unify native
+						// browser capabilities. For instance, Internet Explorer does not support any other data type than 'text' and 'URL'.
+						// Note: evt is an instance of CKEDITOR.dom.event, not a native event.
+						CKEDITOR.plugins.clipboard.initDragDataTransfer( evt );
+
+						var dataTransfer = evt.data.dataTransfer;
+
+						// Pass an object with contact details. Based on it, the editor#paste listener in the hcard plugin
+						// will create the HTML code to be inserted into the editor. You could set 'text/html' here as well, but:
+						// * It is a more elegant and logical solution that this logic is kept in the hcard plugin.
+						// * You do not know now where the content will be dropped and the HTML to be inserted
+						// might vary depending on the drop target.
+						dataTransfer.setData( 'contact', CONTACTS[ target.data( 'contact' ) ] );
+
+						// You need to set some normal data types to backup values for two reasons:
+						// * In some browsers this is necessary to enable drag and drop into text in the editor.
+						// * The content may be dropped in another place than the editor.
+						dataTransfer.setData( 'text/html', target.getText() );
+
+						// You can still access and use the native dataTransfer - e.g. to set the drag image.
+						// Note: IEs do not support this method... :(.
+						if ( dataTransfer.$.setDragImage ) {
+							dataTransfer.$.setDragImage( target.findOne( 'img' ).$, 0, 0 );
+						}
+					} );
+				} );
+
+				// Initialize the editor with the hcard plugin.
+				CKEDITOR.inline( 'editor1', {
+					extraPlugins: 'hcard,sourcedialog,justify'
+				} );
+			</script>
+
+			<!--
+				Used a separate script, so this code does not get into the sample source code to download.
+				It is not needed there because that mechanism gets content by reading innerHTML, hence everything is in place.
+			-->
+			<script>
+				'use strict';
+
+				addItems(
+					CKEDITOR.document.getById( 'contactList' ),
+					new CKEDITOR.template(
+						'<div class="contact h-card" data-contact="{id}">' +
+							'<img src="assets/draganddrop/img/{avatar}.png" alt="avatar" class="u-photo" /> {name}' +
+						'</div>'
+					),
+					CONTACTS
+				);
+
+				function addItems( listElement, template, items ) {
+					for ( var i = 0, draggable, item; i < items.length; i++ ) {
+						item = new CKEDITOR.dom.element( 'li' );
+						draggable = CKEDITOR.dom.element.createFromHtml(
+							template.output( {
+								id: i,
+								name: items[ i ].name,
+								avatar: items[ i ].avatar
+							} )
+						);
+						draggable.setAttributes( {
+							draggable: 'true',
+							tabindex: '0'
+						} );
+
+						item.append( draggable );
+						listElement.append( item );
+					}
+				}
+			</script>
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

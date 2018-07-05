@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Using magic line for placing cursor in otherwise inaccessible places of the document.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, magicline, magic line, focus, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Magic line">
+	<title>Magic Line</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Magic Line <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_magicline">Documentation</a></h1>
+
+			<p>
+				Some document elements make placing the cursor in their vicinity problematic. This pertains to, for example, images, tables or <code>&lt;div&gt;</code> elements that start or end a
+				document, lists, or even adjacent horizontal lines.
+			</p>
+
+			<p>
+				CKEditor 4 introduced the <a href="https://ckeditor.com/cke4/addon/magicline">Magic Line</a> plugin that helps overcome these limitations. By default, this plugin is included in the Standard and Full
+				editor distributions. It causes a red line with a handle (<img src="assets/magicline/magicline_01.png" alt="Magic Line handle">) to appear when you hover your mouse over any such
+				otherwise inaccessible place in an active editor. When you click the magic line's handle (or use the default <kbd>Shift+Ctrl+3</kbd> and <kbd>Shift+Ctrl+4</kbd> keyboard shortcut), a
+				new paragraph will be inserted into the document.
+			</p>
+
+			<p>
+				A few configuration options are available to fine-tune this feature, including adjusting the magic line color, setting custom keyboard shortcuts, or adjusting which elements should
+				trigger the appearance of the magic line. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_magicline">Magic Line</a> article to learn more about this feature.
+			</p>
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1">
+				&lt;table border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width: 100%; &quot;&gt;
+				&lt;tbody&gt;
+				&lt;tr&gt;
+				&lt;td&gt;This table&lt;/td&gt;
+				&lt;td&gt;is the&lt;/td&gt;
+				&lt;td&gt;very first&lt;/td&gt;
+				&lt;td&gt;element of the document.&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt;You are still&lt;/td&gt;
+				&lt;td&gt;able to place&lt;/td&gt;
+				&lt;td&gt;the cursor before it.&lt;/td&gt;
+				&lt;td&gt;
+				&lt;table border=&quot;1&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width: 100%; &quot;&gt;
+				&lt;tbody&gt;
+				&lt;tr&gt;
+				&lt;td&gt;This table is inside a cell of another table.&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;td&gt;You can type&amp;nbsp;either before or after it, though.&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/tbody&gt;
+				&lt;/table&gt;
+				&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;p&gt;The following are two successive horizontal lines (&lt;code&gt;hr&lt;/code&gt; elements). Thanks to Magic Line you can easily place the cursor in between them:&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;hr /&gt;
+				&lt;ol&gt;
+				&lt;li&gt;This numbered list...&lt;/li&gt;
+				&lt;li&gt;...is a neighbor of the horizontal line above...&lt;/li&gt;
+				&lt;li&gt;...and also of another list.&lt;/li&gt;
+				&lt;/ol&gt;
+
+				&lt;ul&gt;
+				&lt;li&gt;Nevertheless, you can type between the lists...&lt;/li&gt;
+				&lt;li&gt;...thanks to &lt;strong&gt;Magic Line&lt;/strong&gt;!&lt;/li&gt;
+				&lt;/ul&gt;
+
+				&lt;p&gt;Lorem ipsum dolor sit amet dui. Morbi vel turpis. Nullam et leo. Etiam rutrum, urna tellus dui vel tincidunt mattis egestas, justo fringilla vel, massa.&lt;/p&gt;
+
+				&lt;p&gt;Ut pretium. Vestibulum rutrum in, adipiscing elit. Sed in quam in purus sem vitae pede. Pellentesque bibendum, urna sem vel risus. Vivamus posuere metus. Aliquam gravida
+				iaculis nisl. Nam enim. Aliquam erat ac lacus tellus ac felis.&lt;/p&gt;
+
+				&lt;div style=&quot;border: 2px dashed green; background: #ddd; text-align: center;&quot;&gt;
+				&lt;p&gt;This text is wrapped in a&amp;nbsp;&lt;code&gt;div&lt;/code&gt;&amp;nbsp;element. Thanks to Magic Line you can type after this element, too.&lt;/p&gt;
+				&lt;/div&gt;
+			</textarea>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: '500',
+					// Ensure that the Magic Line plugin, which is required for this sample, is loaded.
+					extraPlugins: 'magicline',
+					// Magic Line does not require any additional ACF settings.
+					// We set config.extraAllowedContent because HTML code in this sample contains
+					// a <div> element with custom styles that we would like to allow.
+					extraAllowedContent: 'div{border,background,text-align}'
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

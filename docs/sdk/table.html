@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Table Support with Column Resizing">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, table, tables, column, columns, resize, resizing, drag, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Table support with column resizing">
+	<title>Tables with Column Resizing</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Table Support with Column Resizing <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_table">Documentation</a></h1>
+
+			<p>
+				CKEditor supports creating and editing tables, including more advanced table manipulation features such as inserting or deleting cells, rows and columns, merging and splitting cells,
+				or adjusting various table properties such as text and background color, vertical and horizontal alignment, border colors and widths, cell spacing and padding and so on. These are all
+				available from the table context menu.
+			</p>
+
+			<p>
+				These features are provided by the <a href="https://ckeditor.com/cke4/addon/table">Table</a>, <a href="https://ckeditor.com/cke4/addon/tabletools">Table Tools</a> and <a href="https://ckeditor.com/cke4/addon/tableselection">Table Selection</a> (CKEditor 4.7+) plugins which by default are available in the Standard and Full installation packages.
+			</p>
+
+			<div class="tip">
+				<p>Starting from CKEditor 4.7 you can now use the unique custom selection system for tables to, for example:</p>
+				<ul>
+					<li>Select an arbitrary rectangular table fragment &mdash; a few cells from different rows, a column (or a few of them) or a row (or multiple rows).</li>
+					<li>Apply formatting or add a link to all selected cells at once.</li>
+					<li>Cut, copy and paste entire rows or columns.</li>
+				</ul>
+			</div>
+
+			<p>
+				Additionally, you can also add an optional <a href="https://ckeditor.com/cke4/addon/colordialog">Color Dialog</a>
+				plugin which provides a user-friendly way to select the cell background and border color through
+				a dedicated dialog window.
+			</p>
+
+			<p>
+				An optional <a href="https://ckeditor.com/cke4/addon/tableresize">Table Resize</a> plugin adds support for column resizing with your mouse. Hover your mouse over the column border to see the
+				cursor change to <img src="assets/table/col_resize_cursor.png"> to indicate that the column can be resized. Click and drag your mouse to set the desired column width.
+			</p>
+
+			<p>
+				Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_table">Table Support with Column Resizing</a> article to learn more about this feature.
+			</p>
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h2&gt;Balance Sheet &amp;amp; Cash Flow Statement Information&lt;/h2&gt;
+
+				&lt;p&gt;(In millions, except DSO)&lt;/p&gt;
+
+				&lt;table border=&quot;2&quot; summary=&quot;Balance Sheet &amp;amp; Cash Flow Statement Information&quot;&gt;
+				&lt;thead&gt;
+				&lt;tr&gt;
+				&lt;th colspan=&quot;1&quot; scope=&quot;row&quot; style=&quot;width:317px&quot;&gt;&amp;nbsp;&lt;/th&gt;
+				&lt;th colspan=&quot;3&quot; scope=&quot;col&quot; style=&quot;background-color:rgb(29, 115, 115); width:224px&quot;&gt;Full Year
+				(unaudited)&lt;/th&gt;
+				&lt;th colspan=&quot;4&quot; scope=&quot;col&quot; style=&quot;background-color:rgb(29, 115, 115); width:360px&quot;&gt;2013
+				(unaudited)&lt;/th&gt;
+				&lt;/tr&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+				&lt;tr&gt;
+				&lt;th scope=&quot;row&quot; style=&quot;width:317px&quot;&gt;&amp;nbsp;&lt;/th&gt;
+				&lt;td style=&quot;width: 78px; background-color: rgb(92, 204, 204);&quot;&gt;2011&lt;/td&gt;
+				&lt;td style=&quot;width: 73px; background-color: rgb(92, 204, 204);&quot;&gt;2012&lt;/td&gt;
+				&lt;td style=&quot;background-color:rgb(92, 204, 204); width:72px&quot;&gt;2013&lt;/td&gt;
+				&lt;td style=&quot;background-color:rgb(92, 204, 204); width:72px&quot;&gt;Q1&lt;/td&gt;
+				&lt;td style=&quot;background-color:rgb(92, 204, 204); width:72px&quot;&gt;Q2&lt;/td&gt;
+				&lt;td style=&quot;background-color:rgb(92, 204, 204); width:72px&quot;&gt;Q3&lt;/td&gt;
+				&lt;td style=&quot;background-color:rgb(92, 204, 204); width:72px&quot;&gt;Q4&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;th scope=&quot;row&quot; style=&quot;width: 317px; background-color: rgb(255, 213, 178);&quot;&gt;&lt;strong&gt;Cash, Cash Equivalents &amp;amp; Marketable Securities&lt;/strong&gt;&lt;/th&gt;
+				&lt;td style=&quot;width: 78px;&quot;&gt;$44,626&lt;/td&gt;
+				&lt;td style=&quot;width: 73px;&quot;&gt;$48,088&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$58,717&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$50,098&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$54,432&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$56,523&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$58,717&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;th scope=&quot;row&quot; style=&quot;width: 317px; background-color: rgb(255, 213, 178);&quot;&gt;&lt;strong&gt;Accounts Receivable, Net of Allowance (Google stand-alone)&lt;/strong&gt;&lt;/th&gt;
+				&lt;td style=&quot;width: 78px;&quot;&gt;$5,427&lt;/td&gt;
+				&lt;td style=&quot;width: 73px;&quot;&gt;$6,769&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$8,098&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$6,526&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$6,792&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$7,083&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$8,098&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;th scope=&quot;row&quot; style=&quot;width: 317px; background-color: rgb(255, 213, 178);&quot;&gt;&lt;em&gt;DSO for Company stand-alone&lt;br /&gt;
+				(in days, using ending AR)&lt;/em&gt;&lt;/th&gt;
+				&lt;td style=&quot;width: 78px;&quot;&gt;52&lt;/td&gt;
+				&lt;td style=&quot;width: 73px;&quot;&gt;54&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;53&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;45&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;47&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;47&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;47&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;th scope=&quot;row&quot; style=&quot;width: 317px; background-color: rgb(255, 213, 178);&quot;&gt;&lt;strong&gt;Property and Equipment, Net&lt;/strong&gt;&lt;/th&gt;
+				&lt;td style=&quot;width: 78px;&quot;&gt;$9,603&lt;/td&gt;
+				&lt;td style=&quot;width: 73px;&quot;&gt;$11,854&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$16,524&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$12,300&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$12,912&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$14,867&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$16,524&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;th scope=&quot;row&quot; style=&quot;width: 317px; background-color: rgb(255, 213, 178);&quot;&gt;&lt;strong&gt;Total Assets&lt;/strong&gt;&lt;/th&gt;
+				&lt;td style=&quot;width: 78px;&quot;&gt;$72,574&lt;/td&gt;
+				&lt;td style=&quot;width: 73px;&quot;&gt;$93,798&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$110,920&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$96,692&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$101,182&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$105,068&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$110,920&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;th scope=&quot;row&quot; style=&quot;width: 317px; background-color: rgb(255, 213, 178);&quot;&gt;&lt;strong&gt;Cash Flow from Operations&lt;/strong&gt;&lt;/th&gt;
+				&lt;td style=&quot;width: 78px;&quot;&gt;$14,565&lt;/td&gt;
+				&lt;td style=&quot;width: 73px;&quot;&gt;$16,619&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$18,659&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$3,633&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$4,705&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$5,083&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$5,238&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+				&lt;th scope=&quot;row&quot; style=&quot;width: 317px; background-color: rgb(255, 213, 178);&quot;&gt;&lt;strong&gt;Capital Expenditures&lt;/strong&gt;&lt;/th&gt;
+				&lt;td style=&quot;width: 78px;&quot;&gt;$3,438&lt;/td&gt;
+				&lt;td style=&quot;width: 73px;&quot;&gt;$3,273&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$7,358&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$1,203&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$1,611&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$2,289&lt;/td&gt;
+				&lt;td style=&quot;width:72px&quot;&gt;$2,255&lt;br /&gt;
+				&amp;nbsp;&lt;/td&gt;
+				&lt;/tr&gt;
+				&lt;/tbody&gt;
+				&lt;/table&gt;
+
+			</textarea>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'colordialog,tableresize',
+					height: 470
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

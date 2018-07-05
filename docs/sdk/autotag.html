@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Autotag Plugin">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, autotag, sdk, custom, development, tutorial, example, sample">
+	<meta name="sdk-samples" content="Autotag plugin">
+	<title>Autotag Plugin</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Autotag plugin <small>(Creating a Most Basic Autocomplete Plugin)</small><a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_autocomplete.html">Documentation</a></h1>
+
+			<p>
+			This sample demonstrates the <strong>Autotag</strong> plugin that was built in the
+			<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_autocomplete.html">Autocomplete</a> tutorial.
+			</p>
+
+			<p>
+			The custom Autotag plugin created in the tutorial provides the users with the autocompletion functionality for GitHub issues. Every time the user types the <strong>#</strong> character, available autocomplete suggestions are displayed in the dropdown and can be inserted into the content with <kbd>Enter</kbd> or <kbd>Tab</kbd> keys.
+			</p>
+
+			<textarea id="editor1" cols="10" rows="10">
+				<p>
+				Start typing, for instance "#1": Mentions plugin (#1703) #1
+				</p>
+			</textarea>
+
+			<div class="tip">
+				Autotag is a proof-of-concept plugin that can be
+				<a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-autotag">downloaded</a>
+				from the repository or created by following the step-by-step tutorial.
+			</div>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./autocomplete.html">Working with Document &ndash; Autocomplete</a></li>
+				<li><a href="./mentions.html">Working with Document &ndash; Mentions, Tags and Emoji</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.plugins.addExternal( 'autotag', '../../../samples/assets/plugins/autotag/', 'plugin.js' );
+
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'autotag'
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

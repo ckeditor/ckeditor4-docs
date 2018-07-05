@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Custom Widget">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, timestamp, sdk, custom, development, tutorial, example, sample">
+	<meta name="sdk-samples" content="Simple box widget">
+	<title>Custom Widget</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>SimpleBox <small>(Creating a Custom Widget)</small> <a class="documentation"
+				href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/widget_sdk_tutorial_1">Documentation</a></h1>
+
+			<p>
+				This sample demonstrates the <strong>Simple Box widget</strong> plugin that was created in the
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/widget_sdk_tutorial_1">Creating a Simple CKEditor Widget tutorial series</a>
+				from the Widget SDK section of the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide">CKEditor Developer's Guide</a>.
+			</p>
+
+			<p>
+				The custom <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_widgets">widget</a> created in the tutorials
+				lets the users insert a simple box with a title and comment fields
+				into their documents. The widget creates a predefined content structure that is added to the document when the
+				user clicks the dedicated <span class="button_icon" data-icon="simplebox" title="Create a simple box">&nbsp;</span>
+				toolbar button available in the editor instance below. The included dialog window lets users both insert
+				a new widget into the editor and modify an existing one and set some basic properties (width, alignment) for it.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;Simple Box Sample&lt;/h1&gt;
+
+		&lt;div class=&quot;simplebox align-right&quot; style=&quot;width: 50%&quot;&gt;
+			&lt;h2 class=&quot;simplebox-title&quot;&gt;Title&lt;/h2&gt;
+			&lt;div class=&quot;simplebox-content&quot;&gt;
+				&lt;p&gt;Foo &lt;strong&gt;bar&lt;/strong&gt;.&lt;/p&gt;
+				&lt;ul&gt;
+					&lt;li&gt;Foo!&lt;/li&gt;
+					&lt;li&gt;Bar!&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet orci ut nisi adipiscing ultrices. Sed pellentesque iaculis malesuada. Pellentesque scelerisque, purus non porta dictum, neque urna bibendum dolor, eget tristique ipsum metus fringilla dolor. Nullam sed accumsan sapien. Vestibulum in placerat magna. Sed justo lacus, volutpat rhoncus odio luctus, ornare adipiscing mauris. Vivamus erat sem, egestas et lectus eget, varius cursus odio. Duis posuere lacus sit amet urna bibendum, id iaculis eros ultrices. Vestibulum a ultrices ante.&lt;/p&gt;
+
+		&lt;p&gt;Pellentesque vitae eleifend nisl, non accumsan tellus. Maecenas nec libero non tellus tincidunt mollis porttitor sed arcu. Donec ultricies nulla vitae eros lacinia, vel congue sem auctor. Vivamus convallis, urna ac tincidunt malesuada, lectus erat convallis metus, a hendrerit massa augue accumsan magna. Nulla mattis tellus elit, nec congue magna scelerisque eget. Aliquam posuere nisi augue, posuere sodales nisi iaculis eu. Donec fermentum urna id nibh sagittis fermentum sit amet sed enim. Aliquam neque elit, pretium elementum nunc a, faucibus accumsan lorem. Etiam pulvinar odio et hendrerit tincidunt. Suspendisse tempus eros lacus, in convallis velit mollis ut. Aenean congue, justo eleifend ultricies malesuada, nunc nunc molestie mauris, eget placerat libero eros vel nisi. Quisque diam arcu, mollis ac laoreet vitae, varius et sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis in vehicula sapien. Nunc feugiat porta elit nec volutpat.&lt;/p&gt;
+
+		&lt;div class=&quot;simplebox align-center&quot; style=&quot;width: 750px&quot;&gt;
+			&lt;h2 class=&quot;simplebox-title&quot;&gt;Title&lt;/h2&gt;
+			&lt;div class=&quot;simplebox-content&quot;&gt;
+				&lt;p&gt;Foo &lt;strong&gt;bar&lt;/strong&gt;.&lt;/p&gt;
+				&lt;ul&gt;
+					&lt;li&gt;Foo!&lt;/li&gt;
+					&lt;li&gt;Bar!&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+
+		&lt;p&gt;Ut eget ipsum a sapien porta ultrices. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus mi lacus, pharetra eu bibendum blandit, tristique sit amet leo. Integer eu nulla nec magna vulputate blandit. Praesent mattis quis ante eget adipiscing. Nulla vel tempus risus, in placerat velit. Mauris sed nibh at elit posuere laoreet. Morbi non sapien sed nunc fringilla imperdiet.&lt;/p&gt;
+			</textarea>
+
+			<div class="tip">
+				Simple Box is a proof-of-concept plugin that can be
+				<a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-2">downloaded</a>
+				from the repository or created by following the step-by-step tutorial.
+			</div>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./timestamp.html">Tutorials &ndash; Timestamp (Creating a Most Basic CKEditor Plugin)</a></li>
+				<li><a href="./abbr.html">Tutorials &ndash; Abbreviation (Custom Plugin with Dialog, Context Menu and ACF)</a></li>
+				<li><a href="./api.html">API Usage &ndash; Using CKEditor API</a></li>
+				<li><a href="./styles.html#widget-styles">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.plugins.addExternal( 'simplebox', '../../../samples/assets/plugins/simplebox/', 'plugin.js' );
+
+				CKEDITOR.replace( 'editor1', {
+
+					// Add the Simple Box plugin.
+					extraPlugins: 'simplebox',
+
+					// Besides editor's main stylesheet load also simplebox styles.
+					// In the usual case they can be added to the main stylesheet.
+					contentsCss: [
+						'assets/plugins/simplebox/styles/contents.css',
+						'../../ckeditor-dev/contents.css'
+					],
+
+					// Set height to make more content visible.
+					height: 500
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

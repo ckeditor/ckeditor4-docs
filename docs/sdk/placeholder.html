@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Using Placeholders">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, placeholder, widget, template, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Using placeholders">
+	<title>Placeholders</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Using Placeholders <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_placeholder">Documentation</a></h1>
+
+			<p>
+				The optional <a href="https://ckeditor.com/cke4/addon/placeholder">Placeholder</a> plugin makes it possible to <strong>insert read-only elements</strong> into the editor content. It was reworked in CKEditor 4.3 and is now available as an inline <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_widgets">widget</a>.
+			</p>
+			<p>
+				When the Placeholder plugin is enabled, the <span class="button_icon" data-icon="placeholder" title="Placeholder">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Placeholder Properties</strong> dialog window that lets you add the placeholder text. After the placeholder is inserted into the document, the user will only be able to edit its text through the plugin dialog window. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_placeholder">Using Placeholders</a> article to learn more about this feature.
+			</p>
+			<textarea cols="10" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;p&gt;Dear&amp;nbsp;[[Customer Name]],&lt;/p&gt;
+
+				&lt;p&gt;thank you for contacting us.&amp;nbsp;Your case was logged as&amp;nbsp;[[Case ID]]&amp;nbsp;and is assigned to&amp;nbsp;[[Technician Name]]. We will attempt to resolve your issue within the next&amp;nbsp;[[Time]]&amp;nbsp;hours.&lt;/p&gt;
+
+				&lt;p&gt;Should you need any further assistance, do not hesitate to contact our Customer Support Hotline at [[Hotline Number]].&lt;/p&gt;
+
+				&lt;p&gt;Yours sincerely,&lt;br /&gt;
+				[[Name]]&lt;br /&gt;
+				Customer Support Team&lt;/p&gt;
+			</textarea>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./styles.html#widget-styles">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'placeholder',
+					height: 220
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="CKEditor with Fixed User Interface. Common solution for static administration backends.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, classic, ui, interface, fixed, static, toolbar">
+	<meta name="sdk-samples" content="Classic editor with fixed UI|Inline editor with fixed UI">
+	<title>Fixed User Interface</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script type="template" data-sample="2">
+		&lt;link href="../template/theme/css/sdk-inline.css" rel="stylesheet" /&gt;
+	</script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Fixed User Interface <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_uitypes">Documentation</a></h1>
+
+			<p>
+				<strong>Fixed user interface</strong> is the default UI for <a href="./classic.html">classic editor</a>. It is characterized by the following features:
+			</p>
+
+			<ul>
+				<li>The editor toolbar is always visible.</li>
+				<li>The toolbar and bottom bar location is static and does not change.</li>
+				<li>The editing area takes a predefined amount of space, regardless of the size of the content inside.</li>
+			</ul>
+
+			<h2 class="editor-title">Classic Editor with Fixed UI</h2>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours
+				later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar
+				material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to
+				Earth.&lt;/p&gt;
+			</textarea>
+
+			<h2 class="editor-title">Inline Editor with Fixed UI</h2>
+
+			<p>
+				By default, <a href="./inline.html">inline editor</a> comes with <a href="./floatingui.html">floating UI</a>. The following sample presents an inline editor instance with fixed UI instead.
+			</p>
+			<div id="editor2" data-sample="2">
+				<h1><img alt="Saturn V carrying Apollo 11" style="float:right" src="assets/sample.jpg"/> Apollo 11</h1>
+
+				<p><strong>Apollo 11</strong> was the spaceflight that landed the first humans, Americans <a href="http://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a> and
+					<a href="http://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a>, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours
+					later on July 21 at 02:56 UTC.</p>
+
+				<p>Armstrong spent about <s>three and a half</s> two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&nbsp;kg) of lunar
+					material for return to Earth. A third member of the mission, <a href="http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)">Michael Collins</a>, piloted the
+					<a href="http://en.wikipedia.org/wiki/Apollo_Command/Service_Module">command</a> spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to
+					Earth.</p>
+			</div>
+
+			<div class="tip">
+				<p>
+					<strong>Note:</strong> Fixed UI for inline editor is provided by a dedicated, optional plugin called <a href="https://ckeditor.com/cke4/addon/divarea">Div Editing Area</a>.<br>
+					Please be aware that using this plugin has a few of drawbacks:</p>
+				<ul>
+					<li>Under the hood, the element replaced by CKEditor is hidden automatically and a <code>&lt;div&gt;</code>-based editor is created next to it. This might affect the styles of content inside the editor,
+						e.g. because of the lack of original element ID attribute used by CSS selectors.
+					</li>
+					<li>The <code>&lt;div&gt;</code>-based editor is rendered using multiple nested <code>&lt;div&gt;</code> elements. This might affect editor content styles, too.</li>
+					<li>Last but not least, the <a href="./autogrow.html">Auto Grow</a> feature is not fully supported &mdash;
+						the value of the <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-autoGrow_minHeight">config.autoGrow_minHeight</a></code> option is ignored.
+					</li>
+				</ul>
+				<p>
+					If you want to achieve a fixed UI experience with inline editor, consider using the <a href="./sharedspace.html">Shared Toolbar and Bottom Bar</a> feature instead, where these limitations do not exist.
+				</p>
+			</div>
+
+			<h2>Related Features</h2>
+
+			<ul>
+				<li><a href="./classic.html">Editor Types &ndash; Classic Editor</a></li>
+				<li><a href="./inline.html">Editor Types &ndash; Inline Editor</a></li>
+				<li><a href="./floatingui.html">Editor UI &ndash; Floating User Interface</a></li>
+				<li><a href="./sharedspace.html">Editor UI &ndash; Shared Toolbar and Bottom Bar</a></li>
+				<li><a href="./toolbarlocation.html">Editor UI &ndash; Toolbar Location</a></li>
+			</ul>
+
+			<script data-sample="1" >
+				CKEDITOR.replace( 'editor1', {
+					height: 250
+				} );
+
+			</script>
+
+			<script data-sample="2" >
+				CKEDITOR.replace( 'editor2', {
+					height: 250,
+					extraPlugins: 'divarea'
+				} );
+			</script>
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

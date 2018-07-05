@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Applying Block-Level Text Formats">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, text, format, paragraph, heading, header, formatting">
+	<meta name="sdk-samples" content="Default text formats|Custom text format definitions">
+	<title>Text Formats</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Applying Block-Level Text Formats <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_format">Documentation</a></h1>
+
+			<p>
+				Block-level text formats are provided through the
+				<a href="https://ckeditor.com/cke4/addon/format">Format</a> plugin which by default is available in the Standard and Full
+				distributions.
+			</p>
+
+			<p>
+				When the plugin is enabled, the <img src="assets/format/format_01.png" title="Format"> button is automatically added
+				to the toolbar. Once clicked, it opens the drop-down list with text formats that can be applied to your document. The formats
+				work on block level which means that you do not need to select any text in order to apply them and entire
+				blocks will be affected by your choice. Read about <a href="./basicstyles.html">basic text styles</a> and the
+				<a href="./styles.html">Styles</a> drop-down list if you want to apply inline styles on selected
+				text fragments.
+			</p>
+
+			<h2>Default Text Formats</h2>
+
+			<p>
+				Some basic text formats like paragraph or headings are pre-defined in CKEditor, as visible in the editor instance below.
+				The default collection is set in the
+				<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-format_tags">config.format_tags</a></code> option, although
+				normally in the Standard distribution a few of these formats are disabled. Refer to the
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_format-section-enabling-all-block-level-text-formats">Applying Block-Level Text Formats</a>
+				documentation for more information on how to enable them like in the instance below.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;Trabb Pardo&amp;ndash;Knuth Algorithm&lt;/h1&gt;
+				&lt;p&gt;The &lt;strong&gt;Trabb Pardo&amp;ndash;Knuth algorithm&lt;/strong&gt; is a &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Computer_program&quot;&gt;program&lt;/a&gt; introduced by &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Donald_Knuth&quot;&gt;Donald Knuth&lt;/a&gt; and &lt;a
+				href=&quot;http://en.wikipedia.org/w/index.php?title=Luis_Trabb_Pardo&quot;&gt;Luis Trabb Pardo&lt;/a&gt; to illustrate
+				the evolution of computer programming languages. In their 1977 work &amp;quot;The Early Development of Programming
+				Languages&amp;quot;, Trabb Pardo and Knuth introduced a trivial program which involved arrays, indexing, mathematical
+				functions, subroutines, I/O, conditionals and iteration. They then wrote implementations of the algorithm in several early
+				programming languages to show how such concepts were expressed. The simpler &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Hello_world_program&quot;&gt;Hello world program&lt;/a&gt; has been used for much
+				the same purpose.&lt;/p&gt;
+
+				&lt;h2&gt;The Algorithm&lt;/h2&gt;
+&lt;pre&gt;
+ask for 11 numbers to be read into a sequence S
+reverse sequence S
+for each item in sequence S
+    call a function to do an operation
+    if result overflows
+        alert user
+    else
+        print result&lt;/pre&gt;
+				&lt;p&gt;The algorithm reads eleven numbers from an input device, stores them in an array, and then processes them in reverse order, applying a user-defined function to each value and reporting either the value of the function or a message to the effect that the value has exceeded some threshold.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Trabb_Pardo%E2%80%93Knuth_algorithm&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Custom Text Format Definition</h2>
+
+			<p>
+				CKEditor allows you to both decide which of the default text formats will be available in the
+				<strong>Format</strong> drop-down list and adjust existing format definitions, for example by adding a custom class.
+				Refer to the
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_format-section-custom-block-level-text-formats-definition">Applying Block-Level Text Formats</a>
+				documentation for more information on how to customize this feature.
+			</p>
+
+			<p>
+				The editor instance below contains a reduced list of available text formats when compared to the first example.
+				Additionally, <strong>Heading 1</strong>, <strong>Heading 2</strong> and <strong>Formatted</strong> text format definitions
+				now include custom classes applying the colors and in case of headings, also a different font.
+			</p>
+
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
+				&lt;h1 class=&quot;contentHeader1&quot;&gt;Trabb Pardo&amp;ndash;Knuth Algorithm&lt;/h1&gt;
+				&lt;p&gt;The &lt;strong&gt;Trabb Pardo&amp;ndash;Knuth algorithm&lt;/strong&gt; is a &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Computer_program&quot;&gt;program&lt;/a&gt; introduced by &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Donald_Knuth&quot;&gt;Donald Knuth&lt;/a&gt; and &lt;a
+				href=&quot;http://en.wikipedia.org/w/index.php?title=Luis_Trabb_Pardo&quot;&gt;Luis Trabb Pardo&lt;/a&gt; to illustrate
+				the evolution of computer programming languages. In their 1977 work &amp;quot;The Early Development of Programming
+				Languages&amp;quot;, Trabb Pardo and Knuth introduced a trivial program which involved arrays, indexing, mathematical
+				functions, subroutines, I/O, conditionals and iteration. They then wrote implementations of the algorithm in several early
+				programming languages to show how such concepts were expressed. The simpler &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Hello_world_program&quot;&gt;Hello world program&lt;/a&gt; has been used for much
+				the same purpose.&lt;/p&gt;
+
+				&lt;h2 class=&quot;contentHeader2&quot;&gt;The Algorithm&lt;/h2&gt;
+&lt;pre class=&quot;formattedCode&quot;&gt;
+ask for 11 numbers to be read into a sequence S
+reverse sequence S
+for each item in sequence S
+    call a function to do an operation
+    if result overflows
+        alert user
+    else
+        print result&lt;/pre&gt;
+				&lt;p&gt;The algorithm reads eleven numbers from an input device, stores them in an array, and then processes them in reverse order, applying a user-defined function to each value and reporting either the value of the function or a message to the effect that the value has exceeded some threshold.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Trabb_Pardo%E2%80%93Knuth_algorithm&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<p class="tip">
+				The text format feature is automatically integrated with <a href="./acf.html">Advanced Content Filter</a>,
+				so all custom format definitions are treated as allowed by the editor content filtering mechanism.
+			</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./basicstyles.html">Authoring Content &ndash; Basic Text Styles: Bold, Italic and More</a></li>
+				<li><a href="./copyformatting.html">Authoring Content &ndash; Copying Text Formatting</a></li>
+				<li><a href="./styles.html">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+				<li><a href="./colorbutton.html">Authoring Content &ndash; Setting Text and Background Color</a></li>
+				<li><a href="./acf.html">Content Filtering &ndash; Advanced Content Filter &ndash; Automatic Mode</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: 280,
+					// List of text formats available for this editor instance.
+					format_tags: 'p;h1;h2;h3;h4;h5;h6;pre;address;div'
+				} );
+			</script>
+
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					height: 280,
+					// Adding a custom stylesheet with some additional styles for text formats.
+					// Default CKEditor styles are included as well to avoid copying default styles.
+					contentsCss: [ '../../ckeditor-dev/contents.css', 'assets/css/format.css' ],
+					// List of text formats available for this editor instance.
+					format_tags: 'p;h1;h2;h3;pre;div',
+					// Custom Heading 1 and Formatted format definitions.
+					format_h1: { element: 'h1', attributes: { 'class': 'contentHeader1' } },
+					format_h2: { element: 'h2', attributes: { 'class': 'contentHeader2' } },
+					format_pre: { element: 'pre', attributes: { 'class': 'formattedCode' } }
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Classic editing with CKEditor. Easy integration with administration backends.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, wysiwym, classic, framed, iframe, frame, ui, interface, styles">
+	<meta name="sdk-samples" content="Classic editor with default styles|Classic editor with custom styles">
+	<title>Classic Editor</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Classic Editor <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_framed">Documentation</a></h1>
+
+			<p>
+				<strong>Classic editor</strong> is what most users traditionally learnt to associate with a rich text editor &mdash; a toolbar with an editing area placed in a specific position on the page, usually as a part of a form that you use to submit some content to the server. Sometimes it is also called "framed editing", because in this scenario the editor creates a temporary <code>&lt;iframe&gt;</code> element for itself.
+			</p>
+			<p>
+				In this editing solution <strong>the styles of the editor content are separated from the styles of the surrounding page</strong>. It is particularly useful when:
+			</p>
+			<ul>
+				<li>
+					Admininistration and frontend themes in a CMS are different &mdash; as inheriting styles from the backend theme would make no sense here.
+				</li>
+				<li>
+					Edited content is rendered in different locations of a website that may have different styling &mdash; as in such case it is more efficient to just focus on creating semantically correct syntax.
+				</li>
+				<li>
+					The editor works in a changeable environment (e.g. a themable CMS) &mdash; where it is hard to predict how user themes will be constructed.
+				</li>
+			</ul>
+			<p>
+				Due to focus on semantic markup and possible differences between the styles of content within the editor and the styles used when the content is rendered on a page, such editors are sometimes called <abbr title="What You See Is What You Mean">WYSIWYM</abbr> editors ("What You See Is What You Mean").
+			</p>
+
+			<p>
+				Classic editor is usually implemented with <a href="./fixedui.html">fixed user interface</a> to replace a standard <code>&lt;textarea&gt;</code> element in an HTML form on the web page.
+			</p>
+
+			<h2 class="editor-title">Classic Editor with Default Styles</h2>
+
+			<p>
+				Classic editor uses its own set of default styles for edited content. In the editor instance below you can see that the font style, size, and colors on this page and inside the CKEditor editing area are different (e.g. the "Apollo 11" header is black, not green).
+			</p>
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours
+				later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar
+				material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to
+				Earth.&lt;/p&gt;
+			</textarea>
+
+			<h2 class="editor-title">Classic Editor with Custom Styles</h2>
+
+			<p>
+				It is possible to specify custom styles for edited content with the <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-contentsCss">config.contentsCss</a></code> option. In the editor instance below font size was increased and the colors of links, headers, and struck-through content were changed.
+			</p>
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
+				&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours
+				later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar
+				material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to
+				Earth.&lt;/p&gt;
+			</textarea>
+
+			<p>
+				By fine-tuning a stylesheet for CKEditor you can make your content look exactly the same both on
+				the page and inside the editor.
+			</p>
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: 260,
+					width: 700,
+				} );
+			</script>
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					height: 260,
+					/* Default CKEditor styles are included as well to avoid copying default styles. */
+					contentsCss: [ '../../ckeditor-dev/contents.css', 'assets/css/classic.css' ]
+				} );
+			</script>
+
+			<h2>Related Features</h2>
+
+			<ul>
+				<li><a href="./inline.html">Editor Types &ndash; Inline Editor</a></li>
+				<li><a href="./fixedui.html">Editor UI &ndash; Fixed User Interface</a></li>
+				<li><a href="./savetextarea.html">Saving Data &ndash; Saving Data in CKEditor Replacing a Textarea</a></li>
+			</ul>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Basic Text Styles: Bold, Italic, Underline, Strikethrough, Subscript, Superscript">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, text, font, style, bold, italic, underline, strikethrough, subscript, superscript">
+	<meta name="sdk-samples" content="Default basic text styles|Custom basic text styles definition">
+	<title>Basic Text Styles</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Basic Text Styles: Bold, Italic and More <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_basicstyles">Documentation</a></h1>
+
+			<p>
+				Basic text styles are provided through the
+				<a href="https://ckeditor.com/cke4/addon/basicstyles">Basic Styles</a> plugin which is available in all
+				official CKEditor distributions (Basic, Standard, Full), although some text style buttons are disabled
+				in the Basic and Standard preset.
+			</p>
+
+			<p>
+				When the plugin is enabled, the <span class="button_icon" data-icon="bold" title="Bold">&nbsp;</span>,
+				<span class="button_icon" data-icon="italic" title="Italic">&nbsp;</span>,
+				<span class="button_icon" data-icon="underline" title="Underline">&nbsp;</span>,
+				<span class="button_icon" data-icon="strike" title="Strikethrough">&nbsp;</span>,
+				<span class="button_icon" data-icon="subscript" title="Subscript">&nbsp;</span> and
+				<span class="button_icon" data-icon="superscript" title="Superscript">&nbsp;</span>
+				buttons are automatically added to the toolbar. You can use them to add some basic inline text formatting
+				to your document. If you want to quickly remove basic styles from your document,
+				use the <span class="button_icon" data-icon="removeformat" title="Remove Format">&nbsp;</span> button provided
+				by the <a href="./removeformat.html">Remove Format</a> plugin.
+			</p>
+
+			<p>
+				Basic text styles work on text selections; check the <a href="./format.html">text formats</a>
+				feature for block-level text formatting.
+			</p>
+
+			<h2>Default Basic Text Styles</h2>
+
+			<p>
+				The Basic Styles plugin adds the bold, italic, underline, strikethrough, subscript and superscript features, as visible
+				in the editor instance below. In some editor distributions (Basic, Standard) a few of these features are disabled, though;
+				refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_basicstyles-section-enabling-all-basic-styles">Basic Styles: Bold,
+				Italic and More</a> documentation for more information on how to enable them.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;sup&gt;1&lt;/sup&gt;&lt;/strong&gt;&amp;nbsp;was the spaceflight that landed the first
+				humans, Americans &lt;em&gt;&lt;strong&gt;Neil Armstrong&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Buzz
+				Aldrin&lt;/strong&gt;&lt;/em&gt;, on the Moon on &lt;u&gt;July 20, 1969, at 20:18 UTC&lt;/u&gt;. Armstrong became the first
+				to step onto the lunar surface 6 hours later on &lt;u&gt;July 21 at 02:56 UTC&lt;/u&gt;.&lt;/p&gt;
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; &lt;u&gt;two and a half hours&lt;/u&gt; outside the
+				spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return
+				to Earth. A third member of the mission, &lt;em&gt;&lt;strong&gt;Michael Collins&lt;/strong&gt;&lt;/em&gt;, piloted the
+				command spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+				&lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the
+				event as:&lt;/p&gt;
+				&lt;blockquote&gt;
+				&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;p&gt;Apollo 11 effectively ended the &lt;em&gt;Space Race&lt;/em&gt; and fulfilled a national goal proposed in 1961
+				by the late U.S. President John F. Kennedy in a speech before the United States Congress:&lt;/p&gt;
+				&lt;blockquote&gt;
+				&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&amp;nbsp;&lt;/sup&gt;Source:
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Custom Basic Text Styles Definition</h2>
+
+			<p>
+				Basic text styles can be output in HTML in different ways. For example, the <strong>Bold</strong> feature can be
+				implemented as <code>&lt;strong&gt;</code>, <code>&lt;b&gt;</code>,
+				<code>&lt;span style=&quot;font-weight: bold;&quot;&gt;</code> or
+				<code>&lt;span class=&quot;Bold&quot;&gt;</code>. Refer to the
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_basicstyles-section-custom-basic-text-styles-definition">Basic Text Styles: Bold, Italic and More</a>
+				article for more information on how to customize the output of this feature.
+			</p>
+
+			<p>
+				The editor instance below, for example, outputs bold with the <code>&lt;b&gt;</code> and italic with the
+				<code>&lt;i&gt;</code> element. Click the
+				<span class="button_icon" data-icon="source" title="Source">&nbsp;</span> <strong>Source</strong>
+				buttons of both editor instances available on this page to compare the source code and see how the same text formatting
+				can be achieved with different style definitions.
+			</p>
+
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+				&lt;p&gt;&lt;b&gt;Apollo 11&lt;sup&gt;1&lt;/sup&gt;&lt;/b&gt; was the spaceflight that landed the first humans, Americans
+				&lt;i&gt;&lt;b&gt;Neil Armstrong&lt;/b&gt;&lt;/i&gt; and &lt;i&gt;&lt;b&gt;Buzz Aldrin&lt;/b&gt;&lt;/i&gt;, on the Moon on
+				&lt;u&gt;July 20, 1969, at 20:18 UTC&lt;/u&gt;. Armstrong became the first to step onto the lunar surface 6 hours later on
+				&lt;u&gt;July 21 at 02:56 UTC&lt;/u&gt;.&lt;/p&gt;
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; &lt;u&gt;two and a half hours&lt;/u&gt; outside the
+				spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to
+				Earth. A third member of the mission, &lt;i&gt;&lt;b&gt;Michael Collins&lt;/b&gt;&lt;/i&gt;, piloted the command spacecraft
+				alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;h2&gt;Broadcasting and &lt;i&gt;quotes&lt;/i&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+				&lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event
+				as:&lt;/p&gt;
+				&lt;blockquote&gt;
+				&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;p&gt;Apollo 11 effectively ended the &lt;i&gt;Space Race&lt;/i&gt; and fulfilled a national goal proposed in 1961 by
+				the late U.S. President John F. Kennedy in a speech before the United States Congress:&lt;/p&gt;
+				&lt;blockquote&gt;
+				&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&amp;nbsp;&lt;/sup&gt;Source:
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<p class="tip">
+				Custom basic style definitions are automatically integrated with <a href="./acf.html">Advanced Content Filter</a>
+				and are treated as allowed by the editor content filtering mechanism.
+			</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./copyformatting.html">Authoring Content &ndash; Copying Text Formatting</a></li>
+				<li><a href="./removeformat.html">Authoring Content &ndash; Removing Text Formatting</a></li>
+				<li><a href="./styles.html">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+				<li><a href="./format.html">Authoring Content &ndash; Applying Block-Level Text Formats</a></li>
+				<li><a href="./colorbutton.html">Authoring Content &ndash; Setting Text and Background Color</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: 200,
+					// By default, some basic text styles buttons are removed in the Standard preset.
+					// The code below resets the default config.removeButtons setting.
+					removeButtons: ''
+				} );
+			</script>
+
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					height: 200,
+					// By default, some basic text styles buttons are removed in the Standard preset.
+					// The code below resets the default config.removeButtons setting.
+					removeButtons: '',
+					// Custom style definition for the Bold feature.
+					coreStyles_bold: { element: 'b', overrides: 'strong' },
+					// Custom style definition for the Italic feature.
+					coreStyles_italic: { element: 'i', overrides: 'em' }
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

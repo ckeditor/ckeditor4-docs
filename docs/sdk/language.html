@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Multilingual Content. Text direction and language.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, accessibility, language, multilingual, internationalization, i18n, bidi, direction">
+	<meta name="sdk-samples" content="Setting text direction|Setting text part language">
+	<title>Multilingual Content</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Creating Multilingual Content</h1>
+
+			<p>
+				CKEditor is well-suited for multilingual environment. <a href="./uilanguages.html">Its UI is translated
+				into over 60 languages</a> and by default it is displayed in user's language. Additionally, it makes working
+				with multilingual content very convenient by providing the ability to set the text direction as well as mark the
+				language of selected text fragments.
+			</p>
+
+			<h2>Setting Text Direction</h2>
+
+			<p>
+				The optional <a href="https://ckeditor.com/cke4/addon/bidi">BiDi (Text Direction)</a> plugin (which by default is
+				only available in the Full distribution package) makes it possible to assign the text direction to any
+				block-level content (like a paragraph, header, table or list) by using the dedicated
+				<span class="button_icon" data-icon="bidiltr" title="Text direction from left to right">&nbsp;</span> and
+				<span class="button_icon" data-icon="bidirtl" title="Text direction from right to left">&nbsp;</span> buttons.
+				Some editor features such as indenting will adapt to the text direction setting.
+			</p>
+
+			<p>
+				The default text direction in the editor is the same as the editor UI direction (in
+				<a href="./classic.html">classic editor</a>) or the editable element direction (in
+				<a href="./inline.html">inline editor</a>), but you can also explicitely set it to left-to-right or right-to-left with the
+				<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-contentsLangDirection">config.contentsLangDirection</a></code>
+				option. The editor instance below, for example, has the default content direction set to RTL to accomodate
+				its Hebrew and Arabic content.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1">
+				&lt;h3&gt;&lt;strong&gt;שפה&lt;/strong&gt;&lt;/h3&gt;
+
+				&lt;p&gt;שפה היא דרך תקשורת המבוססת על מערכת סמלים מורכבת בעלת חוקיות, המאפשרת לקודד ולארגן מידע בעל משמעויות רבות ומגוונות. נהוג להבדיל בין הסמל השפתי המסמן לבין המושג או התוכן המסומן בו, אשר יכול להיות מציאותי או מופשט.&lt;/p&gt;
+
+				&lt;p&gt;הבלשנות עוסקת בחקר השפה והשימוש בה. סמנטיקה&amp;lrm; היא ענף הלשון המתמקד בחקר המשמעות של השפה&amp;rlm;. מכלול אוצר המילים של שפה מסוימת מכונה לקסיקון. כלי לאיסוף וביאור של פרטים בלקסיקון מכונה מילון.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;h3&gt;&lt;strong&gt;لغة&lt;/strong&gt;&lt;/h3&gt;
+
+				&lt;p&gt;اللغة نسق من الإشارات والرموز، يشكل أداة من أدوات المعرفة، وتعتبر اللغة أهم وسائل التفاهم والاحتكاك بين أفراد المجتمع في جميع ميادين الحياة. وبدون اللغة يتعذر نشاط الناس المعرفي. وترتبط اللغة بالتفكير ارتباطًا وثيقًا؛ فأفكار الإنسان تصاغ دومًا في قالب لغوي، حتى في حال تفكيره الباطني. ومن خلال اللغة فقط تحصل الفكرة على وجودها الواقعي. كما ترمز اللغة إلى الأشياء المنعكسة فيها.&lt;/p&gt;
+
+			</textarea>
+
+			<h2>Setting Text Part Language</h2>
+
+			<p>
+				The optional <a href="https://ckeditor.com/cke4/addon/language">Language</a> plugin, introduced in CKEditor 4.3, implements
+				the <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html">WCAG 3.1.2 Language of Parts</a>
+				specification.
+			</p>
+
+			<p>
+				When it is enabled, the <span class="button_icon" data-icon="language" title="Set language">&nbsp;</span>
+				button is automatically added to the toolbar. Once clicked, it opens the dedicated drop-down list that lets you assign
+				one of the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-language_list">pre-configured</a> languages to
+				a text selection.
+			</p>
+
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2">
+				&lt;p&gt;&lt;strong&gt;Language&lt;/strong&gt;&amp;nbsp;is the&amp;nbsp;&lt;a href=&quot;http://en.wikipedia.org/wiki/Human&quot;&gt;human&lt;/a&gt;&amp;nbsp;ability to acquire and use complex systems of&amp;nbsp;&lt;a href=&quot;http://en.wikipedia.org/wiki/Communication&quot;&gt;communication&lt;/a&gt;, and&amp;nbsp;&lt;strong&gt;a language&lt;/strong&gt;&amp;nbsp;is any specific example of such a system. The scientific study of language is called&amp;nbsp;&lt;a href=&quot;http://en.wikipedia.org/wiki/Linguistics&quot;&gt;linguistics&lt;/a&gt;.&lt;/p&gt;
+
+				&lt;p&gt;&lt;span dir=&quot;rtl&quot; lang=&quot;he&quot;&gt;&lt;strong&gt;שפה&lt;/strong&gt;&amp;nbsp;היא דרך&amp;nbsp;&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%AA%D7%A7%D7%A9%D7%95%D7%A8%D7%AA&quot;&gt;תקשורת&lt;/a&gt;&amp;nbsp;המבוססת על&amp;nbsp;&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%9E%D7%A2%D7%A8%D7%9B%D7%AA&quot;&gt;מערכת&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%A1%D7%9E%D7%9C&quot;&gt;סמלים&lt;/a&gt;&amp;nbsp;מורכבת בעלת חוקיות, המאפשרת לקודד&amp;nbsp;&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%90%D7%A8%D7%92%D7%95%D7%9F_(%D7%A4%D7%A2%D7%95%D7%9C%D7%94)&quot;&gt;ולארגן&lt;/a&gt;&amp;nbsp;&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%9E%D7%99%D7%93%D7%A2&quot;&gt;מידע&lt;/a&gt;&amp;nbsp;בעל&amp;nbsp;&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%9E%D7%A9%D7%9E%D7%A2%D7%95%D7%AA&quot;&gt;משמעויות&lt;/a&gt;&amp;nbsp;רבות ומגוונות. נהוג להבדיל בין הסמל השפתי ה&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%9E%D7%9F&quot;&gt;מסמן&lt;/a&gt;&amp;nbsp;לבין המושג או התוכן ה&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%9E%D7%A1%D7%95%D7%9E%D7%9F&quot;&gt;מסומן&lt;/a&gt;&amp;nbsp;בו, אשר יכול להיות&amp;nbsp;&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%9E%D7%A6%D7%99%D7%90%D7%95%D7%AA&quot;&gt;מציאותי&lt;/a&gt;&amp;nbsp;או&amp;nbsp;&lt;a href=&quot;http://he.wikipedia.org/wiki/%D7%94%D7%A4%D7%A9%D7%98%D7%94&quot;&gt;מופשט&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+
+				&lt;p&gt;&lt;span dir=&quot;ltr&quot; lang=&quot;es&quot;&gt;Un&amp;nbsp;&lt;strong&gt;lenguaje&lt;/strong&gt;&amp;nbsp;(del&amp;nbsp;&lt;a href=&quot;http://es.wikipedia.org/wiki/Idioma_occitano&quot;&gt;provenzal&lt;/a&gt;&amp;nbsp;&lt;em&gt;lenguatge&lt;/em&gt;&amp;nbsp;y este del&amp;nbsp;&lt;a href=&quot;http://es.wikipedia.org/wiki/Lat%C3%ADn&quot;&gt;lat&amp;iacute;n&lt;/a&gt;&amp;nbsp;&lt;em&gt;lingua&lt;/em&gt;) es un sistema de&amp;nbsp;&lt;a href=&quot;http://es.wikipedia.org/wiki/Comunicaci%C3%B3n&quot;&gt;comunicaci&amp;oacute;n&lt;/a&gt;&amp;nbsp;estructurado para el que existe un&amp;nbsp;&lt;a href=&quot;http://es.wikipedia.org/wiki/Significado&quot;&gt;contexto&lt;/a&gt;&amp;nbsp;de uso y ciertos principios combinatorios formales. Existen contextos tanto naturales como artificiales.&lt;/span&gt;&lt;/p&gt;
+
+				&lt;p&gt;&lt;span dir=&quot;rtl&quot; lang=&quot;ar&quot;&gt;&lt;strong&gt;اللغة&lt;/strong&gt;&amp;nbsp;نسق من الإشارات والرموز، يشكل أداة من أدوات&amp;nbsp;&lt;a href=&quot;http://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%85%D8%B9%D8%B1%D9%81%D8%A9&quot;&gt;المعرفة&lt;/a&gt;، وتعتبر اللغة أهم وسائل التفاهم والاحتكاك بين أفراد المجتمع في جميع ميادين الحياة. وبدون اللغة يتعذر نشاط الناس المعرفي.&lt;/span&gt;&lt;/p&gt;
+
+			</textarea>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./uilanguages.html">User Interface &ndash; Setting Editor UI Language</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'bidi',
+					// Setting default language direction to right-to-left.
+					contentsLangDirection: 'rtl',
+					height: 270
+				} );
+			</script>
+
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					extraPlugins: 'language',
+					// Customizing list of languages available in the Language drop-down.
+					language_list: [ 'ar:Arabic:rtl', 'fr:French',  'he:Hebrew:rtl', 'es:Spanish' ],
+					height: 270
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

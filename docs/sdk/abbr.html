@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Abbreviation Plugin">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, plugin, plugins, addon, add-on, timestamp, sdk, custom, development, tutorial, example, sample">
+	<meta name="sdk-samples" content="Abbreviation plugin">
+	<title>Abbreviation Plugin</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Abbreviation <small >(Custom Plugin with Dialog, Context Menu and ACF)</small> <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/plugin_sdk_sample_1">Documentation</a></h1>
+
+			<p>
+				This sample demonstrates the <strong>Abbreviation</strong> plugin that was created in the
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/plugin_sdk_sample_1">Simple Plugin tutorial series</a>
+				from the Plugin SDK section of the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide">CKEditor Developer's Guide</a>.
+			</p>
+
+			<p>
+				The custom Abbreviation plugin created in the tutorials lets the users insert abbreviations into their
+				documents. The abbreviations use the <code>&lt;abbr&gt;</code> HTML element and are added and edited
+				through a dialog window that is opened after clicking the dedicated
+				<span class="button_icon" data-icon="abbr" title="Insert Abbreviation">&nbsp;</span> toolbar button
+				available in the editor instance below.
+			</p>
+
+			<p>
+				Additionally, this sample plugin demonstrates the integration of
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_acf">Advanced Content Filter (ACF)</a> with a custom plugin,
+				as explained in the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/plugin_sdk_integration_with_acf">Integrating Plugins
+				with Advanced Content Filter</a> article.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1">
+				&lt;p&gt;This is some sample text. You are using &lt;a href=&quot;https://ckeditor.com/&quot;&gt;CKEditor&lt;/a&gt;, an online
+				&lt;abbr title=&quot;What You See Is What You Get&quot;&gt;WYSIWYG&lt;/abbr&gt;&amp;nbsp;editor.&lt;/p&gt;
+			</textarea>
+
+			<div class="tip">
+				Abbreviation is a proof-of-concept plugin that can be
+				<a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-acf">downloaded</a>
+				from the repository or created by following the step-by-step tutorial.
+			</div>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./timestamp.html">Tutorials &ndash; Timestamp (Creating a Most Basic CKEditor Plugin)</a></li>
+				<li><a href="./simplebox.html">Tutorials &ndash; Simple Box (Creating a Custom Widget)</a></li>
+				<li><a href="./acf.html">Content Filtering &ndash; Advanced Content Filter &ndash; Automatic Mode</a></li>
+				<li><a href="./api.html">API Usage &ndash; Using CKEditor API</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.plugins.addExternal( 'abbr', '../../../samples/assets/plugins/abbr/', 'plugin.js' );
+
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'abbr'
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

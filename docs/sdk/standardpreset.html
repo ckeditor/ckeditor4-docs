@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="CKEditor Standard Preset. Pre-configured installation packages.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, wysiwym, installation, package, preset, standard, ui, interface, plugins">
+	<meta name="sdk-samples" content="Standard Preset">
+	<title>Standard Preset</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+<header class="sdk-header">
+</header>
+<section class="sdk-container">
+	<nav class="sdk-sidebar">
+	</nav>
+	<section class="sdk-contents">
+		<h1>CKEditor Installation Packages: Standard <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_installation">
+			Documentation</a></h1>
+
+		<p>
+			CKEditor is built from plugins which makes it easy to create a custom build tailored to your needs. Nevertheless, to make the initial trial and installation process easier, we have created three pre-configured <a href="https://ckeditor.com/ckeditor-4/download/">installation packages</a> (Basic, Standard and Full) that are a good base for learning about the available features and setups.
+		</p>
+
+		<p class="tip">
+			The installation packages are just predefined setups that aim to satisfy some common use cases. It is always recommended to <a href="https://ckeditor.com/cke4/builder">build a custom CKEditor package</a> adjusted to your needs.
+		</p>
+
+		<p>
+			The packages differ in the number of plugins that they include by default. Do note that not all plugins created by CKSource are included in these presets &mdash; plenty of features such as <a href="./image2.html">captioned images</a>, <a href="./codesnippet.html">code snippets</a>, <a href="./mediaembed.html">embedded media resources</a>, <a href="./mathjax.html">mathematical formulas</a>, <a href="./fileupload.html#uploading-dropped-and-pasted-images">drag&amp;drop uploads</a> can be added to any CKEditor build with the <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+		</p>
+
+		<h2 class="editor-title" id="standard">Standard Package</h2>
+
+		<p>
+			This package contains plugins that can be used for creating standards-compliant content. It covers most editing needs for
+			semantic-driven websites, with features such as <a href="./basicstyles.html">basic text styles</a> with <a href="./removeformat.html">remove format</a>, <a href="./styles.html">content styles</a>, <a href="./format.html">text formats</a>, copy and paste, <a href="./spellchecker.html">spell checker</a>, links, lists, images, <a href="./table.html">tables</a>, special characters and blockquotes. Two additional tools help you examine the created content more thoroughly: maximize shows the full-page document in the browser window and <a href="./sourcearea.html">source</a> lets you check the HTML source code behind your document.
+		</p>
+
+		<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+			&lt;h1&gt;&lt;img alt="Saturn V carrying Apollo 11" class="right" src="assets/sample.jpg" /&gt; Apollo 11&lt;/h1&gt;
+
+			&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href="http://en.wikipedia.org/wiki/Neil_Armstrong"&gt;Neil Armstrong&lt;/a&gt; and &lt;a href="http://en.wikipedia.org/wiki/Buzz_Aldrin"&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20th, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21st at 02:56 UTC.&lt;/p&gt;
+
+			&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href="http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)"&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href="http://en.wikipedia.org/wiki/Apollo_Command/Service_Module"&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+			&lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id="quotes" name="quotes"&gt;&lt;/a&gt;&lt;/h2&gt;
+
+			&lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt;
+
+			&lt;blockquote&gt;
+			&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;
+			&lt;/blockquote&gt;
+
+			&lt;p&gt;Apollo 11 effectively ended the &lt;a href="http://en.wikipedia.org/wiki/Space_Race"&gt;Space Race&lt;/a&gt; and fulfilled a national goal proposed in 1961 by the late U.S. President &lt;a href="http://en.wikipedia.org/wiki/John_F._Kennedy"&gt;John F. Kennedy&lt;/a&gt; in a speech before the United States Congress:&lt;/p&gt;
+
+			&lt;blockquote&gt;
+			&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;
+			&lt;/blockquote&gt;
+
+			&lt;h2&gt;Technical details &lt;a id="tech-details" name="tech-details"&gt;&lt;/a&gt;&lt;/h2&gt;
+
+			&lt;table align="right" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse"&gt;
+				&lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt;
+				&lt;thead&gt;
+					&lt;tr&gt;
+						&lt;th scope="col"&gt;Position&lt;/th&gt;
+						&lt;th scope="col"&gt;Astronaut&lt;/th&gt;
+					&lt;/tr&gt;
+				&lt;/thead&gt;
+				&lt;tbody&gt;
+					&lt;tr&gt;
+						&lt;td&gt;Commander&lt;/td&gt;
+						&lt;td&gt;Neil A. Armstrong&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;Command Module Pilot&lt;/td&gt;
+						&lt;td&gt;Michael Collins&lt;/td&gt;
+					&lt;/tr&gt;
+					&lt;tr&gt;
+						&lt;td&gt;Lunar Module Pilot&lt;/td&gt;
+						&lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt;
+					&lt;/tr&gt;
+				&lt;/tbody&gt;
+			&lt;/table&gt;
+
+			&lt;p&gt;Launched by a &lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href="http://en.wikipedia.org/wiki/Kennedy_Space_Center"&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16th, Apollo 11 was the fifth manned mission of &lt;a href="http://en.wikipedia.org/wiki/NASA"&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt;
+
+			&lt;ol&gt;
+				&lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the only part which landed back on Earth.&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and water.&lt;/li&gt;
+				&lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt;
+			&lt;/ol&gt;
+
+			&lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the &lt;a href="http://en.wikipedia.org/wiki/Mare_Tranquillitatis"&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the &lt;a href="http://en.wikipedia.org/wiki/Pacific_Ocean"&gt;Pacific Ocean&lt;/a&gt; on July 24th.&lt;/p&gt;
+
+			&lt;hr /&gt;
+			&lt;p&gt;&lt;small&gt;Source: &lt;a href="http://en.wikipedia.org/wiki/Apollo_11"&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+		</textarea>
+
+		<script data-sample="1">
+			CKEDITOR.replace( 'editor1', {
+				height: 400
+			} );
+		</script>
+
+		<h2>Related Features</h2>
+		<ul>
+			<li><a href="./basicpreset.html">Editor Presets &ndash; Basic Preset</a></li>
+			<li><a href="./fullpreset.html">Editor Presets &ndash; Full Preset</a></li>
+			<li><a href="./toolbar.html">Toolbar &ndash; Custom Toolbar</a></li>
+		</ul>
+
+	</section>
+</section>
+
+<footer class="sdk-footer">
+</footer>
+</body>
+</html>

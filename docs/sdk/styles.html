@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Styles and Stylesheet Parser">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, placeholder, widget, template, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Default Styles Combo plugin implementation|Widget styles|Stylesheet Parser plugin">
+	<title>Styles and Stylesheet Parser</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Applying Styles to Editor Content <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles">Documentation</a></h1>
+
+			<p>
+				The <strong>Styles</strong> drop-down list contains styles that you can <strong>apply to editor content in order to assign semantic value</strong> to the text you are creating in CKEditor. It is provided by the <a href="https://ckeditor.com/cke4/addon/stylescombo">Styles Combo</a> plugin which by default is available in the Standard and Full distributions.
+			</p>
+			<p>
+				When the Styles Combo plugin is enabled, the <img src="assets/stylesheetparser/stylesheetparser_01.png" title="Styles"> button is automatically added to the toolbar. Once clicked, it opens a drop-down list with styles that can be applied to your content. The styles are <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles-section-style-types">categorized into groups</a>, depending on their target, so you can use block, inline, object and widget styles for the content that you are creating. If you want to quickly remove inline and object styles from your document, use the <span class="button_icon" data-icon="removeformat" title="Remove Format">&nbsp;</span> button provided by the <a href="./removeformat.html">Remove Format</a> plugin.
+			</p>
+
+			<h2>Default Styles Combo Plugin Implementation</h2>
+			<p>
+				Please note that the default styles available in the drop-down list are defined in the <code>styles.js</code> file and are just examples which will not work without the matching <code>contents.css</code> file. They will also not work in the inline editor which uses page stylesheets instead of the <code>contents.css</code> file. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles">Applying Styles to Editor Content</a> article to learn more about this feature.
+			</p>
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt; &lt;p&gt;&lt;b&gt;Apollo 11&lt;/b&gt;
+				was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot; title=&quot;Neil Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt;
+				and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot; title=&quot;Buzz Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became
+				the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt; &lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours
+				outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot; title=&quot;Michael Collins (astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;
+				title=&quot;Apollo Command/Service Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;p&gt;Broadcast on live TV to a world-wide
+				audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;&lt;/blockquote&gt;
+				&lt;p&gt;Apollo 11 effectively ended the &lt;a href=&quot;http://en.wikipedia.org/wiki/Space_Race&quot; title=&quot;Space Race&quot;&gt;Space Race&lt;/a&gt; and fulfilled a national
+				goal proposed in 1961 by the late U.S. President &lt;a href=&quot;http://en.wikipedia.org/wiki/John_F._Kennedy&quot; title=&quot;John F. Kennedy&quot;&gt;John F. Kennedy&lt;/a&gt; in a
+				speech before the United States Congress:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;&lt;/blockquote&gt;
+				&lt;h2&gt;Technical details &lt;a id=&quot;tech-details&quot; name=&quot;tech-details&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;table align=&quot;right&quot; border=&quot;1&quot; bordercolor=&quot;#ccc&quot;
+				cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse;margin:10px 0 10px 15px;&quot;&gt; &lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt;
+				&lt;thead&gt; &lt;tr&gt; &lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt; &lt;th scope=&quot;col&quot;&gt;Astronaut&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;
+				&lt;td&gt;Commander&lt;/td&gt; &lt;td&gt;Neil A. Armstrong&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Command Module Pilot&lt;/td&gt; &lt;td&gt;Michael Collins&lt;/td&gt; &lt;/tr&gt;
+				&lt;tr&gt; &lt;td&gt;Lunar Module Pilot&lt;/td&gt; &lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;p&gt;Launched by a
+				&lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href=&quot;http://en.wikipedia.org/wiki/Kennedy_Space_Center&quot; title=&quot;Kennedy Space Center&quot;&gt;Kennedy Space
+				Center&lt;/a&gt; in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of &lt;a href=&quot;http://en.wikipedia.org/wiki/NASA&quot; title=&quot;NASA&quot;&gt;NASA&lt;/a&gt;&amp;#39;s
+				Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the
+				only part which landed back on Earth&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and
+				water&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s
+				upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and
+				landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Mare_Tranquillitatis&quot; title=&quot;Mare Tranquillitatis&quot;&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of
+				about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed
+				in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Pacific_Ocean&quot; title=&quot;Pacific Ocean&quot;&gt;Pacific Ocean&lt;/a&gt; on July 24.&lt;/p&gt; &lt;hr/&gt; &lt;p style=&quot;text-align:
+				right;&quot;&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2 id="widget-styles">Widget Styles</h2>
+			<p>
+				Widgets are special rich content units and therefore standard styles (like block or object ones) cannot be applied to them. Only styles of a special type (<code>'widget'</code>) work with widgets. The styles are defined for particular widget types and more than one style can be applied to a widget instance. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles-section-widget-styles">Widget Styles</a> section for more information.
+			</p>
+
+			<p>
+				The editor below presents widget styles for the <a href="./image2.html">enhanced image</a>, <a href="./mediaembed.html">embedded media</a> and <a href="./mathjax.html">mathematical formulas</a>.
+			</p>
+
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
+				&lt;h1&gt;Rosetta&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;&lt;em&gt;Rosetta&lt;/em&gt;&lt;/strong&gt; was a &lt;a href="https://en.wikipedia.org/wiki/Space_probe" title="Space probe"&gt;space probe&lt;/a&gt; built by the &lt;a href="https://en.wikipedia.org/wiki/European_Space_Agency" title="European Space Agency"&gt;European Space Agency&lt;/a&gt; launched on 2 March 2004. Along with &lt;a href="https://en.wikipedia.org/wiki/Philae_(spacecraft)" title="Philae (spacecraft)"&gt;Philae&lt;/a&gt;, its lander module, Rosetta performed a detailed study of &lt;a href="https://en.wikipedia.org/wiki/Comet" title="Comet"&gt;comet&lt;/a&gt; &lt;a href="https://en.wikipedia.org/wiki/67P/Churyumov%E2%80%93Gerasimenko" title="67P/Churyumov–Gerasimenko"&gt;67P/Churyumov&amp;ndash;Gerasimenko&lt;/a&gt; (67P). During its journey to the comet, the spacecraft &lt;a href="https://en.wikipedia.org/wiki/Planetary_flyby" title="Planetary flyby"&gt;flew by&lt;/a&gt; &lt;a href="https://en.wikipedia.org/wiki/Mars" title="Mars"&gt;Mars&lt;/a&gt; and the &lt;a href="https://en.wikipedia.org/wiki/Asteroid" title="Asteroid"&gt;asteroids&lt;/a&gt; &lt;a href="https://en.wikipedia.org/wiki/21_Lutetia" title="21 Lutetia"&gt;21 Lutetia&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/2867_%C5%A0teins" title="2867 Šteins"&gt;2867 &amp;Scaron;teins&lt;/a&gt;.&lt;/p&gt;
+
+				&lt;h2&gt;Mission overview&lt;/h2&gt;
+
+				&lt;oembed class="embed-360p"&gt;https://www.youtube.com/watch?v=cArihDTnOZg&lt;/oembed&gt;
+
+				&lt;p&gt;&lt;em&gt;Rosetta&lt;/em&gt; was launched on 2 March 2004 from the &lt;a href="https://en.wikipedia.org/wiki/Guiana_Space_Centre" title="Guiana Space Centre"&gt;Guiana Space Centre&lt;/a&gt; in &lt;a href="https://en.wikipedia.org/wiki/French_Guiana" title="French Guiana"&gt;French Guiana&lt;/a&gt; on an &lt;a href="https://en.wikipedia.org/wiki/Ariane_5" title="Ariane 5"&gt;Ariane 5&lt;/a&gt; rocket and reached Comet Churyumov&amp;ndash;Gerasimenko on 6 August 2014, becoming the first spacecraft to orbit a comet. (&lt;a href="https://en.wikipedia.org/wiki/List_of_missions_to_comets" title="List of missions to comets"&gt;Previous missions&lt;/a&gt; had conducted successful flybys of seven other comets.) It was one of ESA&amp;#39;s &lt;a href="https://en.wikipedia.org/wiki/List_of_projects_of_the_European_Space_Agency#Horizon_2000_.281985.29" title="List of projects of the European Space Agency"&gt;Horizon 2000 cornerstone missions&lt;/a&gt;. The spacecraft consisted of the Rosetta orbiter, which featured 12 instruments, and the Philae lander, with nine additional instruments. The Rosetta mission orbited Comet Churyumov&amp;ndash;Gerasimenko for 17 months and was designed to complete the most detailed study of a comet ever attempted. The spacecraft was controlled from the &lt;a href="https://en.wikipedia.org/wiki/European_Space_Operations_Centre" title="European Space Operations Centre"&gt;European Space Operations Centre&lt;/a&gt; (ESOC), in &lt;a href="https://en.wikipedia.org/wiki/Darmstadt" title="Darmstadt"&gt;Darmstadt&lt;/a&gt;, Germany. The planning for the operation of the scientific payload, together with the data retrieval, calibration, archiving and distribution, was performed from the &lt;a href="https://en.wikipedia.org/wiki/European_Space_Astronomy_Centre" title="European Space Astronomy Centre"&gt;European Space Astronomy Centre&lt;/a&gt; (ESAC), in &lt;a href="https://en.wikipedia.org/wiki/Villanueva_de_la_Ca%C3%B1ada" title="Villanueva de la Cañada"&gt;Villanueva de la Ca&amp;ntilde;ada&lt;/a&gt;, near &lt;a href="https://en.wikipedia.org/wiki/Madrid" title="Madrid"&gt;Madrid&lt;/a&gt;, Spain. It has been estimated that in the decade preceding 2014, some 2,000 people assisted in the mission in some capacity.&lt;/p&gt;
+
+				&lt;figure class="image image-clean" style="float:right"&gt;&lt;img alt="Comet 67P" height="239" src="assets/comet-67p.jpg" width="300" /&gt;
+				&lt;figcaption&gt;&lt;a href="http://en.wikipedia.org/wiki/File:Comet_67P_on_19_September_2014_NavCam_mosaic.jpg"&gt;Comet 67P&lt;/a&gt; in September 2014&lt;/figcaption&gt;
+				&lt;/figure&gt;
+
+				&lt;p&gt;The probe is named after the &lt;a href="http://en.wikipedia.org/wiki/Rosetta_Stone"&gt;Rosetta Stone&lt;/a&gt;, a stele of Egyptian origin featuring a decree in three scripts. The lander is named after the Philae obelisk, which bears a bilingual Greek and Egyptian hieroglyphic inscription. A comparison of its hieroglyphs with those on the Rosetta Stone catalysed the deciphering of the Egyptian writing system. Similarly, it is hoped that these spacecraft will result in better understanding of comets and the early Solar System. In a more direct analogy to its namesake, the Rosetta spacecraft also carries a micro-etched nickel alloy Rosetta disc donated by the Long Now Foundation inscribed with 13,000 pages of text in 1200 languages.&lt;/p&gt;
+
+				&lt;p&gt;The spacecraft performed two asteroid flyby missions on its way to the comet. In 2007, Rosetta also performed a Mars swing-by (flyby). The craft completed its flyby of asteroid 2867 &amp;Scaron;teins in September 2008 and of 21 Lutetia in July 2010. On 20 January 2014, Rosetta was taken out of a 31-month hibernation mode as it approached the comet.&lt;/p&gt;
+
+				&lt;h2&gt;Flyby anomaly&lt;/h2&gt;
+
+				&lt;p&gt;The flyby anomaly is an unexpected energy increase during Earth &lt;a href="https://en.wikipedia.org/wiki/Gravity_assist" title="Gravity assist"&gt;flybys&lt;/a&gt; of spacecraft. This anomaly has been observed as shifts in the &lt;a href="https://en.wikipedia.org/wiki/S_band" title="S band"&gt;S-band&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/X_band" title="X band"&gt;X-band&lt;/a&gt; &lt;a href="https://en.wikipedia.org/wiki/Doppler_effect" title="Doppler effect"&gt;Doppler&lt;/a&gt; and ranging &lt;a href="https://en.wikipedia.org/wiki/Telemetry" title="Telemetry"&gt;telemetry&lt;/a&gt;. Taken together, it causes a significant unaccounted velocity increase of up to 13 mm/s during flybys. Numerically larger discrepancies (400&amp;ndash;1000 m) have been observed at least in one flyby (&lt;a href="https://en.wikipedia.org/wiki/NEAR_Shoemaker" title="NEAR Shoemaker"&gt;NEAR&lt;/a&gt;) against &lt;a href="https://en.wikipedia.org/wiki/Space_Surveillance_Network" title="Space Surveillance Network"&gt;Space Surveillance Network&lt;/a&gt; (SSN) radars.&lt;/p&gt;
+
+				&lt;p&gt;In November 2009, ESA&amp;#39;s Rosetta spacecraft was tracked closely during flyby in order to precisely measure its velocity, in an effort to gather further data about the anomaly, but no significant anomaly was found.&lt;/p&gt;
+
+				&lt;h3&gt;Proposed equation&lt;/h3&gt;
+
+				&lt;p&gt;An empirical equation for the anomalous flyby velocity change was proposed by J. D. Anderson et al.:&lt;/p&gt;
+
+				&lt;p&gt;&lt;span style="font-size:22px"&gt;&lt;span class="math-featured math-tex"&gt;\( \frac{dV}{V} = \frac{2 \omega_\text{E} R_\text{E} (\cos \varphi_\text{i} - \cos \varphi_\text{o})}{c}\)&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+				&lt;p&gt;where &lt;em&gt;&amp;omega;&lt;/em&gt;&lt;sub&gt;E&lt;/sub&gt; is the &lt;a href="https://en.wikipedia.org/wiki/Angular_frequency" title="Angular frequency"&gt;angular frequency&lt;/a&gt; of the Earth, &lt;em&gt;R&lt;/em&gt;&lt;sub&gt;E&lt;/sub&gt; is the Earth radius, and &lt;em&gt;&amp;phi;&lt;/em&gt;&lt;sub&gt;i&lt;/sub&gt; and &lt;em&gt;&amp;phi;&lt;/em&gt;&lt;sub&gt;o&lt;/sub&gt; are the inbound and outbound equatorial angles of the spacecraft.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;Source: &lt;a href="http://en.wikipedia.org/wiki/Rosetta_(spacecraft)"&gt;Wikipedia.org&lt;/a&gt;, &lt;a href="https://en.wikipedia.org/wiki/Flyby_anomaly"&gt;Wikipedia.org&lt;/a&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Stylesheet Parser Plugin</h2>
+			<p>
+				The optional <a href="https://ckeditor.com/cke4/addon/stylesheetparser">Stylesheet Parser</a> plugin fills the <strong>Styles</strong> drop-down list based on the CSS rules available in the stylesheet defined in the <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-contentsCss">config.contentsCss</a></code> option.
+			</p>
+			<p>
+				A few configuration options are available to fine-tune this feature, including using regular expressions to <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-stylesheetParser_validSelectors">choose</a> or <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-stylesheetParser_skipSelectors">limit CSS selectors</a> that will be available for editor content. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles-section-the-stylesheet-parser-plugin">Stylesheet Parser</a> documentation to learn more about this feature.
+			</p>
+			<p>
+				<strong>Note:</strong> The default styles configuration was cleared in the editor instance below. The default styles are thus not applied to editor content and the only styles available in the <strong>Styles</strong> drop-down are those coming from the document stylesheet provided in the editor configuration.
+			</p>
+
+			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3" data-sample-short>
+				&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt; &lt;p&gt;&lt;b&gt;Apollo 11&lt;/b&gt;
+				was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot; title=&quot;Neil Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt;
+				and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot; title=&quot;Buzz Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became
+				the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt; &lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours
+				outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot; title=&quot;Michael Collins (astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;
+				title=&quot;Apollo Command/Service Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;p&gt;Broadcast on live TV to a world-wide
+				audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;&lt;/blockquote&gt;
+				&lt;p&gt;Apollo 11 effectively ended the &lt;a href=&quot;http://en.wikipedia.org/wiki/Space_Race&quot; title=&quot;Space Race&quot;&gt;Space Race&lt;/a&gt; and fulfilled a national
+				goal proposed in 1961 by the late U.S. President &lt;a href=&quot;http://en.wikipedia.org/wiki/John_F._Kennedy&quot; title=&quot;John F. Kennedy&quot;&gt;John F. Kennedy&lt;/a&gt; in a
+				speech before the United States Congress:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;&lt;/blockquote&gt;
+				&lt;h2&gt;Technical details &lt;a id=&quot;tech-details&quot; name=&quot;tech-details&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;table align=&quot;right&quot; border=&quot;1&quot; bordercolor=&quot;#ccc&quot;
+				cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse;margin:10px 0 10px 15px;&quot;&gt; &lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt;
+				&lt;thead&gt; &lt;tr&gt; &lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt; &lt;th scope=&quot;col&quot;&gt;Astronaut&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt;
+				&lt;td&gt;Commander&lt;/td&gt; &lt;td&gt;Neil A. Armstrong&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Command Module Pilot&lt;/td&gt; &lt;td&gt;Michael Collins&lt;/td&gt; &lt;/tr&gt;
+				&lt;tr&gt; &lt;td&gt;Lunar Module Pilot&lt;/td&gt; &lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;p&gt;Launched by a
+				&lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href=&quot;http://en.wikipedia.org/wiki/Kennedy_Space_Center&quot; title=&quot;Kennedy Space Center&quot;&gt;Kennedy Space
+				Center&lt;/a&gt; in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of &lt;a href=&quot;http://en.wikipedia.org/wiki/NASA&quot; title=&quot;NASA&quot;&gt;NASA&lt;/a&gt;&amp;#39;s
+				Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the
+				only part which landed back on Earth&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and
+				water&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s
+				upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and
+				landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Mare_Tranquillitatis&quot; title=&quot;Mare Tranquillitatis&quot;&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of
+				about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed
+				in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Pacific_Ocean&quot; title=&quot;Pacific Ocean&quot;&gt;Pacific Ocean&lt;/a&gt; on July 24.&lt;/p&gt; &lt;hr/&gt; &lt;p style=&quot;text-align:
+				right;&quot;&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./basicstyles.html">Authoring Content &ndash; Basic Text Styles: Bold, Italic and More</a></li>
+				<li><a href="./copyformatting.html">Authoring Content &ndash; Copying Text Formatting</a></li>
+				<li><a href="./removeformat.html">Authoring Content &ndash; Removing Text Formatting</a></li>
+				<li><a href="./format.html">Authoring Content &ndash; Applying Block-Level Text Formats</a></li>
+				<li><a href="./colorbutton.html">Authoring Content &ndash; Setting Text and Background Color</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'widget',
+					height: 300
+				} );
+			</script>
+
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					extraPlugins: 'autoembed,embedsemantic,image2,mathjax,codesnippet,font',
+					removeButtons: 'Font',
+					height: 300,
+					mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML'
+				} );
+			</script>
+
+			<script data-sample="3">
+				CKEDITOR.replace( 'editor3', {
+					extraPlugins: 'stylesheetparser',
+					height: 300,
+
+					// Custom stylesheet for editor content.
+					contentsCss: [ 'assets/stylesheetparser/stylesheetparser.css' ],
+
+					// Do not load the default Styles configuration.
+					stylesSet: []
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

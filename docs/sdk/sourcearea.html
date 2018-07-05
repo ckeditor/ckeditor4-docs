@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Source Code Editing. Working directly with HTML source code in CKEditor.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, source, code, HTML, raw, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Classic editor with default source editing area|Inline editor with source dialog|Classic editor with source dialog">
+	<title>Source Code Editing</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script type="template" data-sample="2">
+		&lt;link href="../template/theme/css/sdk-inline.css" rel="stylesheet" /&gt;
+	</script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Source Code Editing <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_sourcearea">Documentation</a></h1>
+
+			<p>
+				Although CKEditor strength lies in WYSIWYG editing, the underlying format of the editor content is usually HTML. However, working directly with HTML code is also possible thanks to the source
+				code editing feature provided by the <a href="https://ckeditor.com/cke4/addon/sourcearea">Source Editing Area</a> and <a href="https://ckeditor.com/cke4/addon/sourcedialog">Source Dialog</a>
+				plugins.
+			</p>
+
+			<p>
+				Both plugins introduce the <span class="button_icon" data-icon="source" title="Source">&nbsp;</span> <strong>Source</strong> toolbar button. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_sourcearea">Source Code
+				Editing</a> article to learn more about this feature as well as the functional differences between the plugins.
+			</p>
+
+			<p>
+				The following editor instances show how both plugins can be combined with classic and inline editor.
+			</p>
+
+			<h2 class="editor-title">Classic Editor with Default Source Editing Area</h2>
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;p&gt;This is the &lt;strong&gt;default &lt;/strong&gt;CKEditor installation. Source editing is provided by the &lt;a href=&quot;https://ckeditor.com/cke4/addon/sourcearea&quot;&gt;Source
+				Editing Area&lt;/a&gt;&amp;nbsp;plugin.&lt;/p&gt;
+
+				&lt;p&gt;Follow the steps below to try it out:&lt;/p&gt;
+
+				&lt;ul&gt;
+				&lt;li&gt;Click the &lt;strong&gt;Source &lt;/strong&gt;button to display the HTML source of this text in the source editing area.&lt;/li&gt;
+				&lt;li&gt;Click the &lt;strong&gt;Source &lt;/strong&gt;button again to return to the WYSIWYG view.&lt;/li&gt;
+				&lt;/ul&gt;
+
+			</textarea>
+
+			<h2 class="editor-title">Inline Editor with Source Dialog</h2>
+			<div id="editor2" contenteditable="true" class="inline-editor" data-sample="2">
+				<p>
+					This <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_inline">inline editor</a> instance is using the&nbsp;<a href="https://ckeditor.com/cke4/addon/sourcedialog">Source Dialog</a>&nbsp;plugin
+					for source editing.
+				</p>
+
+				<p>
+					Follow the steps below to try it out:
+				</p>
+
+				<ul>
+					<li>
+						Click the&nbsp;<strong>Source&nbsp;</strong>button to display the HTML source of this text in the Source dialog window.
+					</li>
+					<li>
+						Close the Source dialog window&nbsp;to return to the WYSIWYG view.
+					</li>
+				</ul>
+				<p>
+					The following configuration option was used:
+				</p>
+<pre>
+config.extraPlugins = &#39;sourcedialog&#39;;
+</pre>
+
+			</div>
+			<h2 class="editor-title">Classic Editor with Source Dialog</h2>
+			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3" data-sample-short>
+				&lt;p&gt;This &lt;a href=&quot;https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_framed&quot;&gt;classic editor&lt;/a&gt; is using the &lt;a href=&quot;https://ckeditor.com/cke4/addon/sourcedialog&quot;&gt;Source
+				Dialog&lt;/a&gt; plugin for source editing.&amp;nbsp;Follow the steps below to try it out:&lt;/p&gt;
+
+				&lt;ul&gt;
+				&lt;li&gt;Click the&amp;nbsp;&lt;strong&gt;Source&amp;nbsp;&lt;/strong&gt;button to display the HTML source of this text in the Source dialog window.&lt;/li&gt;
+				&lt;li&gt;Close the Source dialog window&amp;nbsp;to return to the WYSIWYG view.&lt;/li&gt;
+				&lt;/ul&gt;
+
+				&lt;p&gt;The following configuration options were used:&lt;/p&gt;
+
+				&lt;pre&gt;
+config.extraPlugins = &amp;#39;sourcedialog&amp;#39;;
+config.removePlugins = &amp;#39;sourcearea&amp;#39;;&lt;/pre&gt;
+			</textarea>
+
+			<script data-sample="1">
+				// We need to turn off the automatic editor creation first.
+				CKEDITOR.disableAutoInline = true;
+
+				CKEDITOR.replace( 'editor1' );
+			</script>
+
+			<script data-sample="2">
+				// We need to turn off the automatic editor creation first.
+				CKEDITOR.disableAutoInline = true;
+
+				CKEDITOR.inline( 'editor2', {
+					extraPlugins: 'sourcedialog',
+					removePlugins: 'sourcearea'
+				} );
+			</script>
+
+			<script data-sample="3">
+				// We need to turn off the automatic editor creation first.
+				CKEDITOR.disableAutoInline = true;
+
+				CKEDITOR.replace( 'editor3', {
+					extraPlugins: 'sourcedialog',
+					removePlugins: 'sourcearea'
+				} );
+			</script>
+
+			<h2>Related Features</h2>
+
+			<ul>
+				<li><a href="./htmlformatting.html">Output Control &ndash; HTML Output Formatting</a></li>
+				<li><a href="./bbcode.html">Output Control &ndash; BBCode Editing</a></li>
+				<li><a href="./fullpage.html">Output Control &ndash; Editing Complete HTML Pages</a></li>
+			</ul>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

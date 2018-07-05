@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Code Snippets. Syntax highlighting for code snippets inserted into CKEditor content.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, code, snippet, snippets, pre, syntax, highlighting, highlighter, coloring, source, raw, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Using syntax highlighting">
+	<title>Code Snippets</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script src="assets/sample.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Inserting Code Snippets <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_codesnippet">Documentation</a></h1>
+
+			<p>
+				The optional <a href="https://ckeditor.com/cke4/addon/codesnippet">Code Snippet</a> plugin, introduced in CKEditor 4.4, supports inserting beautiful code snippets into the editor content. By default the plugin depends on the
+				built-in client-side syntax highlighting library <a href="http://highlightjs.org">highlight.js</a>.
+			</p>
+			<p>
+				When the Code Snippet plugin is enabled, the <span class="button_icon" data-icon="codesnippet" title="Insert code snippet">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Code snippet</strong> dialog window that lets you add a piece of code and set the programming language it is written in.
+			</p>
+
+			<h2>Using Syntax Highlighting</h2>
+
+			<p>
+				A few configuration options are available to fine-tune this feature, including setting a <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-codeSnippet_theme">custom highlighter theme</a> (see <a href="http://highlightjs.org/static/test.html">available themes</a>), adjusting support for <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-codeSnippet_languages">programming languages</a>, or even implementing a <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.plugins.codesnippet.highlighter">different highlighter library</a>. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_codesnippet">Inserting Code Snippets</a> article to learn more about this feature.
+			</p>
+
+			<p>
+				You can select a theme for the editor instance below here: <select id="select"></select>
+			</p>
+			<textarea id="editor1" name="editor1" data-sample="1" data-sample-preserveWhitespace>
+&lt;p&gt;JavaScript code:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code class="language-javascript"&gt;var cow = new Mammal( "moo", {
+	legs: 4
+} );&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Unknown markup:&lt;/p&gt;
+
+&lt;pre&gt;
+&lt;code&gt; ________________
+/                \
+| How about moo? |  ^__^
+\________________/  (oo)\_______
+                  \ (__)\       )\/\
+                        ||----w |
+                        ||     ||
+&lt;/code&gt;&lt;/pre&gt;
+			</textarea>
+
+			<p id="ie8-warning">
+				Please note that this plugin is not compatible with Internet Explorer 8.
+			</p>
+
+			<h2>GeSHi &mdash; Custom Highlighting Engine Example</h2>
+
+			<p>
+				The <a href="https://ckeditor.com/cke4/addon/codesnippetgeshi">Code Snippet GeSHi</a> plugin is an
+				extension of the Code Snippet plugin. It implements the well-known <a href="http://qbnz.com/highlighter/">GeSHi</a> library with a server-side highlighter. See the
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_codesnippetgeshi">Inserting Code Snippets Using GeSHi</a> article for implementation details.
+			</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./styles.html#widget-styles">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+			</ul>
+
+			<script data-sample="1">
+				var config = {
+					extraPlugins: 'codesnippet',
+					codeSnippet_theme: 'monokai_sublime',
+					height: 356
+				};
+
+				CKEDITOR.replace( 'editor1', config );
+			</script>
+
+			<script>
+				( function() {
+					initThemeChange();
+
+					function initThemeChange() {
+						var templates = [
+									'monokai_sublime', 'default', 'arta', 'ascetic', 'atelier-dune.dark', 'atelier-dune.light', 'atelier-forest.dark', 'atelier-forest.light', 'atelier-heath.dark', 'atelier-heath.light', 'atelier-lakeside.dark', 'atelier-lakeside.light', 'atelier-seaside.dark', 'atelier-seaside.light', 'brown_paper', 'dark', 'docco', 'far', 'foundation', 'github', 'googlecode', 'idea', 'ir_black', 'magula', 'mono-blue', 'monokai', 'obsidian', 'paraiso.dark', 'paraiso.light', 'pojoaque', 'railscasts', 'rainbow', 'school_book', 'solarized_dark', 'solarized_light', 'sunburst', 'tomorrow-night-blue', 'tomorrow-night-bright', 'tomorrow-night-eighties', 'tomorrow-night', 'tomorrow', 'vs', 'xcode', 'zenburn'
+								],
+								pre = CKEDITOR.document.getById( 'sampleConfig' ),
+								select = CKEDITOR.document.getById( 'select' ),
+								codeTemplate = '<strong>config.extraPlugins = \'codesnippet\';</strong>\n' +
+										'config.codeSnippet_theme = \'{tpl}\';\n',
+								name, option;
+
+						while ( ( name = templates.shift() ) ) {
+							option = CKEDITOR.document.createElement( 'option', {
+								attributes: {
+									value: name
+								}
+							} );
+
+							option.setText( name );
+							select.append( option );
+						}
+
+						select.$.onchange = function() {
+							if ( CKEDITOR.instances.editor1 )
+								CKEDITOR.instances.editor1.destroy();
+
+							CKEDITOR.replace( 'editor1', CKEDITOR.tools.extend( {}, config, {
+								codeSnippet_theme: this.value
+							}, true ) );
+						};
+					}
+
+					if ( CKEDITOR.env.ie && CKEDITOR.env.version == 8 )
+						CKEDITOR.document.getById( 'ie8-warning' ).addClass( 'tip alert' );
+				}() );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

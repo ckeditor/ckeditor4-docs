@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Advanced Content Filter. Configuring allowed and disallowed tags.">
+	<meta name="keywords" content="ACF, advanced content filter, content filtering, removing tags, deleting tags, html lost, elements removed">
+	<meta name="sdk-samples" content="Automatic ACF mode|Custom ACF mode">
+	<title>ACF &ndash; Custom Mode</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Advanced Content Filter &ndash; Custom Mode<a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_advanced_content_filter-section-custom-mode">Documentation</a></h1>
+			<p>
+				Advanced Content Filter (ACF) can work in <a href="acf.html">automatic mode</a>, can be disabled, and can work in <strong><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_advanced_content_filter-section-custom-mode">custom mode</a></strong>.
+			</p>
+			<p>
+				Custom mode requires the developer to provide all tags, attributes, classes and styles through the <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-allowedContent">config.allowedContent</a></code> setting. The provided configuration affects not only the HTML content that CKEditor will accept, but also influences the features (plugins, buttons, dialog window fields) that will be available to the end user.
+			</p>
+			<h2>Automatic ACF Mode</h2>
+			<p>
+				In the sample below CKEditor works in automatic ACF mode (default behavior, requires no configuration).
+			</p>
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1">
+				<ul>
+					<li>This is an <strong>unordered list</strong></li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+				<hr />
+				<table border="2">
+					<tr><td>A simple table </td><td>with two rows</td></tr>
+					<tr><td style="background-color:#ffdddd;">with background color</td><td style="background-color:#ffdddd;">for bottom cells</td></tr>
+				</table>
+			</textarea>
+			<script data-sample="1,2">
+				CKEDITOR.config.height = 180;
+				// Auto Grow has nothing to do with ACF.
+				// However, to make users comfortable while pasting content into a tiny editing area, we would let it grow.
+				CKEDITOR.config.extraPlugins = 'autogrow';
+				CKEDITOR.config.autoGrow_maxHeight = 500;
+				CKEDITOR.config.autoGrow_minHeight = 150;
+			</script>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1' );
+			</script>
+
+			<h2>Custom ACF Mode</h2>
+			<p>
+				In the sample below, the same editor is used, but <code>config.allowedContent</code> is manually set to:
+			</p>
+<pre>
+h1 h2 h3 p blockquote strong em del ins table tr th td caption;
+a[!href];
+img(left,right)[!src,alt,width,height];
+span{!font-family};span{!color};span(!marker);
+</pre>
+			<p>
+				Note how the lack of <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>,
+				<code>&lt;li&gt;</code>, <code>&lt;hr&gt;</code> elements on the list affected
+				the editor configuration: Numbered List, Bulleted List and Horizontal Rule buttons
+				are missing. Another change is that the Table, Link or Image dialog windows have a
+				smaller number of options, as the custom configuration did not allow as many attributes
+				or styles as CKEditor does by default.
+			</p>
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2">
+			<ul>
+				<li>This is an <strong>unordered list</strong></li>
+				<li>List item 2</li>
+				<li>List item 3</li>
+			</ul>
+				<hr />
+				<table border="2">
+					<tr><td>A simple table </td><td>with two rows</td></tr>
+					<tr><td style="background-color:#ffdddd;">with background color</td><td style="background-color:#ffdddd;">for bottom cells</td></tr>
+				</table>
+			</textarea>
+			<p>
+				The meaning of each rule is explained below:
+			</p>
+			<ul class="spacious">
+				<li>
+					<code>h1 h2 h3 p blockquote strong em del ins table tr th td caption</code> &ndash; These tags
+					are accepted by the editor.
+				</li>
+				<li>
+					<code>a[!href]</code> &ndash; The <code>&lt;a&gt;</code> tag is accepted, the <code>href</code>
+					attribute is obligatory. Any <code>&lt;a&gt;</code> tags without this attribute are discarded.
+				</li>
+				<li>
+					<code>img(left,right)[!src,alt,width,height]</code> &ndash; The <code>src</code>
+					attribute is obligatory for the <code>&lt;img&gt;</code> tag.
+					The <code>alt</code>, <code>width</code>, <code>height</code>
+					and <code>class</code> attributes are accepted, but
+					<code>class</code> must be either <code>class="left"</code>
+					or <code>class="right"</code>.
+				</li>
+				<li>
+					<code>span{!font-family}</code>, <code>span{!color}</code>,
+					<code>span(!marker)</code> &ndash; The <code>&lt;span&gt;</code> tags
+					will be accepted if either the <code>font-family</code> or
+					<code>color</code> style is set or <code>class="marker"</code>
+					is present.
+				</li>
+			</ul>
+			<p>
+				Any tags not present on this list will be discarded (like the list items which were
+				removed in the sample above). By default, attributes, styles and classes are rejected
+				for each specified tag and must be enabled manually (<code>background-color</code> was
+				not set as allowed for <code>&lt;td&gt;</code> tag so it was removed).
+			</p>
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					allowedContent:
+							'h1 h2 h3 p blockquote strong em;' +
+							'a[!href];' +
+							'img(left,right)[!src,alt,width,height];' +
+							'table tr th td caption;' +
+							'span{!font-family};' +
+							'span{!color};' +
+							'span(!marker);' +
+							'del ins'
+				} );
+			</script>
+
+			<h2>Related Features</h2>
+
+			<ul>
+				<li><a href="./acf.html">Content Filtering &ndash; Advanced Content Filter &ndash; Automatic Mode</a></li>
+				<li><a href="./toolbar.html">Toolbar &ndash; Custom Editor Toolbar</a></li>
+				<li><a href="./abbr.html">Tutorials &ndash; Abbreviation (Custom Plugin with Dialog, Context Menu and ACF)</a></li>
+			</ul>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

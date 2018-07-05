@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Spell Checker and SCAYT. Using Native Browser Spell Checker.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, spell, checker, spellchecker, spellchecking, check, scayt, wsc">
+	<meta name="sdk-samples" content="Spell Check As You Type (SCAYT)|Spell checker in a dialog window|Native browser spell checker">
+	<title>Spell Checking</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Spell Checker and Spell Check As You Type <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_spellcheck">Documentation</a></h1>
+
+			<p>
+				The Standard and Full CKEditor packages include the integrated spell checking functionality.
+				It is an out-of-the-box solution provided by third-party plugins, <a href="https://ckeditor.com/cke4/addon/wsc">WebSpellChecker</a>
+				and <a href="https://ckeditor.com/cke4/addon/scayt">SpellCheckAsYouType (SCAYT)</a>, that use the
+				<a href="http://webspellchecker.net/">WebSpellChecker.net</a> web service.
+			</p>
+
+			<p>
+				When either of the plugins is enabled, the <span class="button_icon" data-icon="scayt" title="Spell Checker">&nbsp;</span>
+				button is automatically added to the toolbar. Depending on which plugin you use, it may contain numerous SCAYT options
+				and open the Spell Check dialog window.
+			</p>
+
+			<div class="tip">
+				The out-of-the-box spell checking functionality is ad-supported. If you want to remove the
+				ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
+			</div>
+
+			<h2>Spell Check As You Type (SCAYT)</h2>
+
+			<p>
+				The <a href="https://ckeditor.com/cke4/addon/scayt">SpellCheckAsYouType (SCAYT)</a> plugin checks the spelling
+				of the text in the editing area immediately as you type it and marks all errors with a red wavy line. By default it
+				needs to be enabled by choosing <strong>Enable SCAYT</strong> from the
+				<span class="button_icon" data-icon="scayt" title="Spell Checker">&nbsp;</span> toolbar button, but you can also
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-scayt_autoStartup">configure SCAYT to start automatically</a>
+				on editor loading, like in the editor instance below.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1">
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spacflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on july 20, 1969, at 20:18 UTC. Armstrong became the firrst to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a halfhours outside the spacecraft, Aldrin slightely less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, pilloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Spell Checking in a Dialog Window</h2>
+
+			<p>
+				The <a href="https://ckeditor.com/cke4/addon/wsc">WebSpellChecker</a> plugin provides the <strong>Spell Check</strong>
+				dialog window that lets you check the spelling of the document word by word. Additionally, for some languages a
+				Grammar Checker and Thesaurus feature is also available.
+			</p>
+
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2">
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spacflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on july 20, 1969, at 20:18 UTC. Armstrong became the firrst to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a halfhours outside the spacecraft, Aldrin slightely less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, pilloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Using Native Browser Spell Checker</h2>
+
+			<p>
+				By default, browser spell check functionality is disabled. Set the
+				<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-disableNativeSpellChecker">config.disableNativeSpellChecker</a></code>
+				configuration option to <code>false</code> to enable it. If the
+				<a href="https://ckeditor.com/cke4/addon/contextmenu">Context Menu</a> plugin is enabled, it is necessary to hold the
+				<kbd>Ctrl</kbd> key when right-clicking misspelled words to see the suggested corrections.
+			</p>
+
+			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3">
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spacflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on july 20, 1969, at 20:18 UTC. Armstrong became the firrst to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a halfhours outside the spacecraft, Aldrin slightely less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, pilloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: 250,
+					// Remove the WebSpellChecker plugin.
+					removePlugins: 'wsc',
+					// Configure SCAYT to load on editor startup.
+					scayt_autoStartup: true,
+					// Limit the number of suggestions available in the context menu.
+					scayt_maxSuggestions: 3
+				} );
+			</script>
+
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					height: 250,
+					// Remove the SpellCheckAsYouType (SCAYT) plugin.
+					removePlugins: 'scayt'
+				} );
+			</script>
+
+			<script data-sample="3">
+				CKEDITOR.replace( 'editor3', {
+					height: 250,
+					// Remove the WebSpellChecker and SpellCheckAsYouType (SCAYT) plugins.
+					removePlugins: 'scayt,wsc',
+					disableNativeSpellChecker: false
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

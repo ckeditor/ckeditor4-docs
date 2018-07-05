@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<!--
+	Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+	For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Mentions plugin">
+		<meta name="keywords" content="ckeditor, editor, wysiwyg, mentions, tags, emoji, complete, autocomplete, autocompletion, default, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+		<meta name="sdk-samples" content="Mentions, Tags and Emoji">
+		<title>Mentions, Tags and Emoji</title>
+		<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+		<link href="../template/theme/css/sdk.css" rel="stylesheet">
+		<script src="../../ckeditor-dev/ckeditor.js"></script>
+		<script src="assets/picoModal-2.0.1.min.js"></script>
+		<script src="assets/contentloaded.js"></script>
+		<script src="assets/simplesample.js"></script>
+		<script src="assets/beautify-html.js"></script>
+		<script src="assets/sample.js"></script>
+		<!--[if lt IE 9]>
+			<script src="assets/html5shiv.min.js"></script>
+		<![endif]-->
+		<link rel="icon" href="../template/theme/img/favicon.ico">
+		<style>
+		.chat {
+			width: 600px;
+		}
+
+		.chat > .posts {
+			list-style-type: none;
+			padding: 15px;
+			margin: 0;
+			border: 1px solid #d1d1d1;
+			border-bottom: none;
+		}
+
+		.chat > .posts li:first-child {
+			margin-bottom: 15px;
+		}
+
+		.chat > .posts .message {
+			display: inline-block;
+			margin-left: 20px;
+			width: 80%;
+		}
+
+		.chat > .posts .time {
+			color: #b7b7b7;
+			font-size: .9em;
+		}
+
+		.chat > .posts .photo {
+			height: 40px;
+			vertical-align: top;
+			border-radius: 15%;
+		}
+
+		ul.cke_autocomplete_panel {
+			width: 250px;
+		}
+
+		ul.cke_autocomplete_panel .photo {
+			display: inline-block;
+			vertical-align: middle;
+			height: 30px;
+			border-radius: 50%;
+		}
+
+		.bullet {
+			padding-left: 5px;
+			padding-right: 5px;
+			color: #b7b7b7;
+		}
+
+		.cke_autocomplete_panel .username {
+			padding-left: 5px;
+		}
+
+		.cke_autocomplete_panel .fullname {
+			padding-left: 5px;
+			color: #b7b7b7;
+		}
+
+		.sdk-contents .cke {
+			margin: 0;
+		}
+
+		.sdk-contents button.send {
+			width: 100px;
+			height: 35px;
+			border: none;
+			border-radius: 5px;
+			background-color: #0287D0;
+			color: #fafafa;
+			margin-top: 8px;
+			margin-bottom: 16px;
+			float: right;
+			cursor: pointer;
+		}
+
+		.sdk-contents button.send:hover {
+			background-color: #027abc
+		}
+
+		.sdk-contents a.mailto-user {
+			color: #b7b7b7;
+			text-decoration: underline;
+		}
+
+		.sdk-contents a.mailto-user:hover {
+			color: #a0a0a0;
+		}
+
+		.sdk-contents p.post-content {
+			margin: 0;
+			line-height: 19px;;
+		}
+		</style>
+	</head>
+	<body>
+		<header class="sdk-header">
+		</header>
+		<section class="sdk-container">
+			<nav class="sdk-sidebar">
+			</nav>
+			<section class="sdk-contents">
+				<h1>Mentions, Tags and Emoji <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_mentions.html">Documentation</a></h1>
+
+				<p>
+					The optional <a href="https://ckeditor.com/cke4/addon/mentions">Mentions</a> and <a href="https://ckeditor.com/cke4/addon/emoji">Emoji</a> plugins, introduced in CKEditor 4.10, support inserting mentions, tags and emojis into the editor content. Both features were built on top of the <a href="./autocomplete.html">Autocomplete</a> plugin that provides a base for smart autocompletion functionality for custom text matches based on user input.
+				</p>
+
+				<p>
+					 Every time the user types the selected, pre-configured marker into the editor, available autocomplete suggestions are displayed in the dedicated dropdown and can be inserted into the content with <kbd>Enter</kbd> or <kbd>Tab</kbd> keys. Use the sample below to try out some autocomplete suggestions:
+				</p>
+
+				<ul>
+					<li>Start with <code>@</code> to mention a user.</li>
+					<li>Start with <code>#</code> to insert a food-related tag. Type at least 1 character e.g. <code>#f</code></li>
+					<li>Start with <code>:</code> to insert a Unicode emoji character. Type at least 2 characters e.g. <code>:fa</code></li>
+				</ul>
+
+				<div class="chat">
+					<ul class="posts">
+						<li>
+							<img src="assets/mentions/img/m_1.jpg" alt="avatar" class="photo" />
+							<div class="message">
+								<strong>Charles Flores</strong>
+								<span class="bullet">•</span>
+								<a class="mailto-user" href="mailto:cflores@example.com">@cflores</a>
+								<span class="bullet">•</span>
+								<span class="time">2 hours ago</span>
+								<p class="post-content">
+								Thanks for another <a href="#yummy">#yummy</a> recipe, <a href="mailto: dwilliams@example.com">@dwilliams</a>! Makes me <a href="#hungry">#hungry</a> just looking at the photos 😋. Definitely adding it to my TODO list for our next <a href="#mediterranean">#mediterranean</a> potluck.
+								</p>
+							</div>
+						</li>
+						<li>
+							<img src="assets/mentions/img/w_1.jpg" alt="avatar" class="photo" />
+							<div class="message">
+								<strong>Mildred Wilson</strong>
+								<span class="bullet">•</span>
+								<a class="mailto-user" href="mailto:mwilson@example.com">@mwilson</a>
+								<span class="bullet">•</span>
+								<span class="time">4 hours ago</span>
+								<p class="post-content">
+								Really appreciate the <a href="#vegetarian">#vegetarian</a> and <a href="#vegan">#vegan</a> variations of your recipes. So thoughtful of you! 🌱
+								</p>
+							</div>
+						</li>
+					</ul>
+					<div class="editor">
+						<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+							<p>I agree with <a href="mailto: mildred@example.com">@mwilson</a> 👍. It’s so nice of you to always be providing a few options to try! I love <a href="#greek">#greek</a> cuisine with a modern twist, this one will be perfect to try.</p>
+						</textarea>
+					</div>
+					<button id="send" class="send">Send</button>
+				</div>
+
+				<p style="clear: both;">
+					Check the documentation for the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_mentions.html">Mentions</a> and <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_emoji.html">Emoji</a> plugins for some customization options. Read more about the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_autocomplete.html">Autocomplete</a> feature if you want to implement a custom smart completion mechanism.
+				</p>
+
+				<h2>Related Features</h2>
+				<ul>
+					<li><a href="./autocomplete.html">Working with Document &ndash; Autocomplete</a></li>
+				</ul>
+
+			</section>
+		</section>
+
+		<footer class="sdk-footer">
+		</footer>
+
+		<script data-sample="1" >
+			var users = [
+				{ id: 1, avatar: 'm_1', fullname: 'Charles Flores', username: 'cflores' },
+				{ id: 2, avatar: 'm_2', fullname: 'Gerald Jackson', username: 'gjackson' },
+				{ id: 3, avatar: 'm_3', fullname: 'Wayne Reed', username: 'wreed' },
+				{ id: 4, avatar: 'm_4', fullname: 'Louis Garcia', username: 'lgarcia' },
+				{ id: 5, avatar: 'm_5', fullname: 'Roy Wilson', username: 'rwilson' },
+				{ id: 6, avatar: 'm_6', fullname: 'Matthew Nelson', username: 'mnelson' },
+				{ id: 7, avatar: 'm_7', fullname: 'Randy Williams', username: 'rwilliams' },
+				{ id: 8, avatar: 'm_8', fullname: 'Albert Johnson', username: 'ajohnson' },
+				{ id: 9, avatar: 'm_9', fullname: 'Steve Roberts', username: 'sroberts' },
+				{ id: 10, avatar: 'm_10', fullname: 'Kevin Evans', username: 'kevans' },
+
+				{ id: 11, avatar: 'w_1', fullname: 'Mildred Wilson', username: 'mwilson' },
+				{ id: 12, avatar: 'w_2', fullname: 'Melissa Nelson', username: 'mnelson' },
+				{ id: 13, avatar: 'w_3', fullname: 'Kathleen Allen', username: 'kallen' },
+				{ id: 14, avatar: 'w_4', fullname: 'Mary Young', username: 'myoung' },
+				{ id: 15, avatar: 'w_5', fullname: 'Ashley Rogers', username: 'arogers' },
+				{ id: 16, avatar: 'w_6', fullname: 'Debra Griffin', username: 'dgriffin' },
+				{ id: 17, avatar: 'w_7', fullname: 'Denise Williams', username: 'dwilliams' },
+				{ id: 18, avatar: 'w_8', fullname: 'Amy James', username: 'ajames' },
+				{ id: 19, avatar: 'w_9', fullname: 'Ruby Anderson', username: 'randerson' },
+				{ id: 20, avatar: 'w_10', fullname: 'Wanda Lee', username: 'wlee' }
+			],
+			tags = [
+				'american',
+				'asian',
+				'baking',
+				'breakfast',
+				'cake',
+				'caribbean',
+				'chinese',
+				'chocolate',
+				'cooking',
+				'dairy',
+				'delicious',
+				'delish',
+				'dessert',
+				'desserts',
+				'dinner',
+				'eat',
+				'eating',
+				'eggs',
+				'fish',
+				'food',
+				'foodgasm',
+				'foodie',
+				'foodporn',
+				'foods',
+				'french',
+				'fresh',
+				'fusion',
+				'glutenfree',
+				'greek',
+				'grilling',
+				'halal',
+				'homemade',
+				'hot',
+				'hungry',
+				'icecream',
+				'indian',
+				'italian',
+				'japanese',
+				'keto',
+				'korean',
+				'lactosefree',
+				'lunch',
+				'meat',
+				'mediterranean',
+				'mexican',
+				'moroccan',
+				'nom',
+				'nomnom',
+				'paleo',
+				'poultry',
+				'snack',
+				'spanish',
+				'sugarfree',
+				'sweet',
+				'sweettooth',
+				'tasty',
+				'thai',
+				'vegan',
+				'vegetarian',
+				'vietnamese',
+				'yum',
+				'yummy'
+			];
+
+		CKEDITOR.replace( 'editor1', {
+			plugins: 'mentions,emoji,basicstyles,undo,link,wysiwygarea,toolbar',
+			contentsCss: [
+				'../../ckeditor-dev/contents.css',
+				'assets/mentions/contents.css'
+			],
+			height: 150,
+			toolbar: [
+				{ name: 'document', items: [ 'Undo', 'Redo' ] },
+				{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Strike' ] },
+				{ name: 'links', items: [ 'Link', 'Unlink' ] }
+			],
+			mentions: [
+				{
+					feed: dataFeed,
+					itemTemplate: '<li data-id="{id}">' +
+							'<img class="photo" src="assets/mentions/img/{avatar}.jpg" />' +
+							'<strong class="username">{username}</strong>' +
+							'<span class="fullname">{fullname}</span>' +
+						'</li>',
+					outputTemplate: '<a href="mailto:{username}@example.com">@{username}</a><span>&nbsp;</span>',
+					minChars: 0
+				},
+				{
+					feed: tags,
+					marker: '#',
+					itemTemplate: '<li data-id="{id}"><strong>{name}</strong></li>',
+					outputTemplate: '<a href="https://example.com/social?tag={name}">{name}</a><span>&nbsp;</span>',
+					minChars: 1
+				}
+			]
+		} );
+
+		function dataFeed( opts, callback ) {
+			var matchProperty = 'username',
+				data = users.filter( function( item ) {
+					return item[ matchProperty ].indexOf( opts.query.toLowerCase() ) == 0;
+				} );
+
+			data = data.sort( function( a, b ) {
+				return a[ matchProperty ].localeCompare( b[ matchProperty ], undefined, { sensitivity: 'accent' } );
+			} );
+
+			callback( data );
+		}
+		</script>
+
+		<script>
+			CKEDITOR.instances.editor1.once( 'instanceReady', function( evt ) {
+				document.getElementById( 'send' ).addEventListener( 'click', function() {
+					evt.editor.showNotification( 'Your message was sent! ' +
+						'However, this is only a sample chat and we cannot make your post public.',
+						'success', 8000 );
+				} );
+			} );
+		</script>
+	</body>
+</html>

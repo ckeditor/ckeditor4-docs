@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="CKEditor Basic Preset. Pre-configured installation packages.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, wysiwym, installation, package, preset, basic, ui, interface, plugins">
+	<meta name="sdk-samples" content="Basic Preset">
+	<title>Basic Preset</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script data-sample="1" src="//cdn.ckeditor.com/4.6.0/basic/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+<header class="sdk-header">
+</header>
+<section class="sdk-container">
+	<nav class="sdk-sidebar">
+	</nav>
+	<section class="sdk-contents">
+		<h1>CKEditor Installation Packages: Basic <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_installation">
+			Documentation</a></h1>
+
+		<p>
+			CKEditor is built from plugins which makes it easy to create a custom build tailored to your needs. Nevertheless, to make the initial trial and installation process easier, we have created three pre-configured <a href="https://ckeditor.com/ckeditor-4/download/">installation packages</a> (Basic, Standard and Full) that are a good base for learning about the available features and setups.
+		</p>
+
+		<p class="tip">
+			The installation packages are just predefined setups that aim to satisfy some common use cases. It is always recommended to <a href="https://ckeditor.com/cke4/builder">build a custom CKEditor package</a> adjusted to your needs.
+		</p>
+
+		<p>
+			The packages differ in the number of plugins that they include by default. Do note that not all plugins created by CKSource are included in these presets &mdash; plenty of features such as <a href="./image2.html">captioned images</a>, <a href="./codesnippet.html">code snippets</a>, <a href="./mediaembed.html">embedded media resources</a>, <a href="./mathjax.html">mathematical formulas</a>, <a href="./fileupload.html#uploading-dropped-and-pasted-images">drag&amp;drop uploads</a> can be added to any CKEditor build with the <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+		</p>
+
+		<h2 class="editor-title" id="basic">Basic Package</h2>
+
+		<p>
+			This package contains plugins suitable for quick input fields. It has a minimal toolbar with <a
+				href="./basicstyles.html">basic text styles</a> (bold, italic), lists and links.
+		</p>
+		<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+			&lt;p&gt;The &lt;strong&gt;Basic&lt;/strong&gt; package is perfect for short text fields that require little formatting, such as:&lt;/p&gt;
+
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="https://ckeditor.com/blog/"&gt;Blog&lt;/a&gt; comments.&lt;/li&gt;
+				&lt;li&gt;Contact forms.&lt;/li&gt;
+				&lt;li&gt;Short text snippets.&lt;/li&gt;
+			&lt;/ul&gt;
+		</textarea>
+
+		<script data-sample="1">
+			CKEDITOR.replace( 'editor1', {
+				height: 150
+			} );
+		</script>
+
+		<h2>Related Features</h2>
+		<ul>
+			<li><a href="./standardpreset.html">Editor Presets &ndash; Standard Preset</a></li>
+			<li><a href="./fullpreset.html">Editor Presets &ndash; Full Preset</a></li>
+			<li><a href="./toolbar.html">Toolbar &ndash; Custom Toolbar</a></li>
+		</ul>
+
+	</section>
+</section>
+
+<footer class="sdk-footer">
+
+</footer>
+</body>
+</html>

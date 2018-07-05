@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Floating User Interface. Dynamic toolbar that is always there where you need it.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, inline, contenteditable, ui, interface, floating, dynamic, toolbar">
+	<meta name="sdk-samples" content="Inline editor with floating UI">
+	<title>Floating User Interface</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script type="template" data-sample="1">
+		&lt;link href="../template/theme/css/sdk-inline.css" rel="stylesheet" /&gt;
+	</script>
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<style type="text/css">
+		#editor1 {
+			background-color: #f9f9f9;
+			padding: 10px;
+		}
+	</style>
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Floating User Interface <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_uitypes">Documentation</a></h1>
+
+			<p>
+				<strong>Floating user interface</strong> is the default UI for <a href="./inline.html">inline editor</a>. It is characterized by the following features:
+			</p>
+			<ul>
+				<li>The editor toolbar is only shown when the editor is focused.</li>
+				<li>The toolbar location changes dynamically to ensure that the toolbar is always available.</li>
+				<li>The size of the editing area is determined by the size of the content inside.</li>
+			</ul>
+
+			<p>
+				Floating UI is not available for <a href="./classic.html">classic editor</a>, which uses <a href="./fixedui.html">fixed UI</a> instead.
+			</p>
+
+			<h2 class="editor-title">Inline Editor with Floating UI</h2>
+
+			<p>
+				Click below to start using inline editor with floating UI. Scroll down the page to see the toolbar move.
+			</p>
+			<div id="editor1" contenteditable="true" data-sample="1">
+				<h1><img alt="Saturn V carrying Apollo 11" src="assets/sample.jpg" style="float:right"/> Apollo 11</h1>
+
+				<p><strong>Apollo 11</strong> was the spaceflight that landed the first humans, Americans <a href="http://en.wikipedia.org/wiki/Neil_Armstrong">Neil Armstrong</a> and
+					<a href="http://en.wikipedia.org/wiki/Buzz_Aldrin">Buzz Aldrin</a>, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours
+					later on July 21 at 02:56 UTC.</p>
+
+				<p>Armstrong spent about <s>three and a half</s> two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&nbsp;kg) of lunar
+					material for return to Earth. A third member of the mission, <a href="http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)">Michael Collins</a>, piloted the
+					<a href="http://en.wikipedia.org/wiki/Apollo_Command/Service_Module">command</a> spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to
+					Earth.</p>
+
+				<h2>Broadcasting and <em>quotes</em> <a href="#" id="quotes" name="quotes"></a></h2>
+
+				<p>Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:</p>
+
+				<blockquote>
+					<p>One small step for [a] man, one giant leap for mankind.</p>
+				</blockquote>
+
+				<p>Apollo 11 effectively ended the <a href="http://en.wikipedia.org/wiki/Space_Race">Space Race</a> and fulfilled a national goal proposed in 1961 by the late U.S. President
+					<a href="http://en.wikipedia.org/wiki/John_F._Kennedy">John F. Kennedy</a> in a speech before the United States Congress:</p>
+
+				<blockquote>
+					<p>[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.</p>
+				</blockquote>
+
+				<h2>Technical details <a href="#" id="tech-details" name="tech-details"></a></h2>
+
+				<table align="right" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse">
+					<caption><strong>Mission crew</strong></caption>
+					<thead>
+					<tr>
+						<th scope="col">Position</th>
+						<th scope="col">Astronaut</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Commander</td>
+						<td>Neil A. Armstrong</td>
+					</tr>
+					<tr>
+						<td>Command Module Pilot</td>
+						<td>Michael Collins</td>
+					</tr>
+					<tr>
+						<td>Lunar Module Pilot</td>
+						<td>Edwin &quot;Buzz&quot; E. Aldrin, Jr.</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<p>Launched by a <strong>Saturn V</strong> rocket from <a href="http://en.wikipedia.org/wiki/Kennedy_Space_Center">Kennedy Space Center</a> in Merritt Island, Florida on July 16,
+					Apollo 11 was the fifth manned mission of <a href="http://en.wikipedia.org/wiki/NASA">NASA</a>&#39;s Apollo program. The Apollo spacecraft had three parts:</p>
+
+				<ol>
+					<li><strong>Command Module</strong> with a cabin for the three astronauts which was the only part which landed back on Earth</li>
+					<li><strong>Service Module</strong> which supported the Command Module with propulsion, electrical power, oxygen and water</li>
+					<li><strong>Lunar Module</strong> for landing on the Moon.</li>
+				</ol>
+
+				<p>After being sent to the Moon by the Saturn V&#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit.
+					Armstrong and Aldrin then moved into the Lunar Module and landed in the <a href="http://en.wikipedia.org/wiki/Mare_Tranquillitatis">Sea of Tranquility</a>. They stayed a total of
+					about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and
+					landed in the <a href="http://en.wikipedia.org/wiki/Pacific_Ocean">Pacific Ocean</a> on July 24.</p>
+
+				<hr/>
+				<p>
+					<small>Source: <a href="http://en.wikipedia.org/wiki/Apollo_11">Wikipedia.org</a></small>
+				</p>
+
+			</div>
+
+			<div class="tip">
+				<p>
+					Due to the dynamic nature of floating UI, some editor features are unavailable:
+				</p>
+				<ul>
+					<li><a href="https://ckeditor.com/cke4/addon/elementspath">Elements Path</a> is not available &mdash; to use it in an inline editor refer to the <a href="./fixedui.html">Fixed UI</a> and <a href="./sharedspace.html">Shared Toolbar and Bottom Bar</a> samples.
+					</li>
+					<li><a href="https://ckeditor.com/cke4/addon/sourcearea">Source Editing Area</a> is not available &mdash; an alternative solution using a <a href="https://ckeditor.com/cke4/addon/sourcedialog">dialog window for source code editing</a> should be used. Refer to the <a href="./sourcearea.html">Source Code Editing</a> sample.
+					</li>
+					<li>The following configuration options that control the size of the editor are ignored: <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-height">config.height</a></code> and
+						<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-width">config.width</a></code>.</li>
+				</ul>
+			</div>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./fixedui.html">Editor UI &ndash; Fixed User Interface</a></li>
+				<li><a href="./inline.html">Editor Types &ndash; Inline Editor</a></li>
+				<li><a href="./sharedspace.html">Editor UI &ndash; Shared Toolbar and Bottom Bar</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.disableAutoInline = true;
+				CKEDITOR.inline( 'editor1', {
+					extraPlugins: 'sourcedialog'
+				} );
+			</script>
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

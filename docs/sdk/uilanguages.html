@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Setting Editor UI Language">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, language, localization, localisation, translation, internationalization, locale, colour, ui, interface, skin, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Setting editor UI language">
+	<title>UI Language</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/uilanguages/languages.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Setting Editor UI Language <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_uilanguage">Documentation</a></h1>
+
+			<p>
+				CKEditor is translated into over 60 languages and by default, it is displayed in the user's language (as set in the browser or operating system settings). Additionally, the developer
+				can also influence the choice of the editor UI language by using one of the following configuration options:
+			</p>
+
+			<ul>
+				<li>
+					<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-defaultLanguage">config.defaultLanguage</a></code> &ndash; determines the UI language version that CKEditor will use if the user language is not available.
+				</li>
+				<li>
+					<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-language">config.language</a></code> &ndash; lets the developer define the default localization used for the editor instance that will override
+				all user settings. If it is set, the editor UI will be displayed in this language disregarding any user preferences.
+				</li>
+			</ul>
+
+			<p>
+				The editor example below is combined with an additional script that pulls the language list from the <code>languages.js</code> file (which includes a list of all supported editor
+				localizations) and creates a drop-down list that can be used to change the UI language. Please note that this script is not necessary to add localizations to your CKEditor
+				instance &mdash; in its default configuration CKEditor will always adjust the UI language to user's preferences. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_uilanguage">Setting Editor User Interface Language</a> article to learn more about this feature.
+			</p>
+
+			<div class="tip">
+				Check the <a href="./language.html">Creating Multilingual Content</a> sample to learn about setting text
+				direction (LTR or RTL) and text part language for your content.
+			</div>
+
+			<h2>Available Localizations</h2>
+			<p>
+				The following <strong><span id="count"> </span> language versions</strong> are available in CKEditor:<br>
+				<script>
+
+					document.write( '<select disabled="disabled" id="languages" onchange="createEditor( this.value );">' );
+
+					// Get the language list from the languages.js file.
+					for ( var i = 0; i < window.CKEDITOR_LANGS.length; i++ ) {
+						document.write(
+								'<option value="' + window.CKEDITOR_LANGS[i].code + '">' +
+										window.CKEDITOR_LANGS[i].name +
+										'</option>' );
+					}
+
+					document.write( '</select>' );
+
+				</script>
+				<br>
+				<span style="color: #888888">
+					(You may see strange characters if your system does not support the selected language.)
+				</span>
+			</p>
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt; &lt;p&gt;&lt;b&gt;Apollo 11&lt;/b&gt;
+				was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot; title=&quot;Neil Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt;
+				and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot; title=&quot;Buzz Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became
+				the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt; &lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours
+				outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot; title=&quot;Michael Collins (astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;
+				title=&quot;Apollo Command/Service Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;p&gt;Broadcast on live TV to a world-wide
+				audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;&lt;/blockquote&gt;
+				&lt;p&gt;Apollo 11 effectively ended the &lt;a href=&quot;http://en.wikipedia.org/wiki/Space_Race&quot; title=&quot;Space Race&quot;&gt;Space Race&lt;/a&gt; and fulfilled a national
+				goal proposed in 1961 by the late U.S. President &lt;a href=&quot;http://en.wikipedia.org/wiki/John_F._Kennedy&quot; title=&quot;John F. Kennedy&quot;&gt;John F. Kennedy&lt;/a&gt; in a
+				speech before the United States Congress:&lt;/p&gt; &lt;blockquote&gt;&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;&lt;/blockquote&gt;
+				&lt;hr/&gt; &lt;p style=&quot;text-align:
+				right;&quot;&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./language.html">Authoring Content &ndash; Creating Multilingual Content</a></li>
+			</ul>
+
+			<script>
+
+				// Set the number of languages.
+				var count = document.getElementById( 'count' );
+				if (count) {
+					count.innerHTML = window.CKEDITOR_LANGS.length;
+				}
+
+				var editor;
+
+				function createEditor( languageCode ) {
+					if ( editor )
+						editor.destroy();
+
+					// Replace the <textarea id="editor1"> with an CKEditor
+					// instance, using default configurations.
+					editor = CKEDITOR.replace( 'editor1', {
+						language: languageCode,
+
+						on: {
+							instanceReady: function () {
+								// Wait for the editor to be ready to set
+								// the language drop-down list.
+								var languages = document.getElementById( 'languages' );
+								languages.value = this.langCode;
+								languages.disabled = false;
+							}
+						}
+					} );
+				}
+
+				// At page startup, load the default language:
+				createEditor( '' );
+
+			</script>
+
+			<script type="template" data-sample="1">
+			&lt;script&gt;
+				CKEDITOR.replace( 'editor1', {
+					language: 'es'
+				} );
+			&lt;/script&gt;
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

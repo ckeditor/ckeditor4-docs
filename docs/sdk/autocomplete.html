@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--
+	Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+	For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Autocomplete plugin">
+		<meta name="keywords" content="ckeditor, editor, wysiwyg, autocomplete, complete, default, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+		<meta name="sdk-samples" content="Autocomplete">
+		<title>Autocomplete</title>
+		<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+		<link href="../template/theme/css/sdk.css" rel="stylesheet">
+		<script src="../../ckeditor-dev/ckeditor.js"></script>
+		<script src="assets/picoModal-2.0.1.min.js"></script>
+		<script src="assets/contentloaded.js"></script>
+		<script src="assets/simplesample.js"></script>
+		<script src="assets/beautify-html.js"></script>
+		<script src="assets/sample.js"></script>
+		<!--[if lt IE 9]>
+			<script src="assets/html5shiv.min.js"></script>
+		<![endif]-->
+		<link rel="icon" href="../template/theme/img/favicon.ico">
+		<style>
+			ul.cke_autocomplete_panel {
+				width: 300px;
+			}
+			ul.cke_autocomplete_panel li {
+				padding: 5px;
+			}
+			ul.cke_autocomplete_panel .content {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				color: #676767;
+				padding-top: 5px;
+			}
+			.columns {
+				overflow: hidden;
+			}
+			.columns > .editor {
+				float: left;
+				width: 65%;
+				position: relative;
+			}
+			.columns > .templates {
+				float: right;
+				width: 35%;
+			}
+			.columns > .templates > ul {
+				margin: 15px 0 0 10px;
+			}
+			.item-title {
+				background-color: #ffeec2
+			}
+		</style>
+	</head>
+	<body>
+		<header class="sdk-header">
+		</header>
+		<section class="sdk-container">
+			<nav class="sdk-sidebar">
+			</nav>
+			<section class="sdk-contents">
+				<h1>Autocomplete <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_autocomplete.html">Documentation</a></h1>
+
+				<p>
+					The optional <a href="https://ckeditor.com/cke4/addon/autocomplete">Autocomplete</a> plugin, introduced in CKEditor 4.10, provides contextual completion functionality for custom text matches based on user input. Every time the user types a pre-configured special character, such as <code>@</code> or <code>#</code>, they get information about available autocomplete suggestions displayed in a dedicated dropdown.
+				</p>
+
+				<p>
+					This feature is a base for implementing specialized autocomplete features, such as <a href="./mentions.html">mentions, tags, emoji</a> or custom implementations.
+				</p>
+
+				<p>
+				The following sample implements a few smart placeholders for <b>Customer Care Service</b> email responses. Start typing the name of one of the placeholders visible on the right side of the editor. Type <code>[[</code> and accept the selected placeholder from the dropdown using the <kbd>Enter</kbd> or <kbd>Tab</kbd> key.
+				</p>
+
+				<div class="columns">
+					<div class="templates"></div>
+
+					<div class="editor">
+						<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+							<p>Dear [[Customer Name]],</p>
+							<p>thank you for contacting us.</p>
+							<p>Your case was logged as [[Case ID]] and is assigned to [[Technician Name]]. We will attempt to resolve your issue within the next [[Deadline Time]] hours.</p>
+							<p>If you need any assistance, do not hesitate to contact our Customer Support Hotline at [[Hotline Number]].</p>
+							<p>Your sincerely,</p>
+							<p>[[Assignee]]</p>
+							<p><b>Customer Support Team</b></p>
+						</textarea>
+					</div>
+				</div>
+
+				<h2>Related Features</h2>
+				<ul>
+					<li><a href="./mentions.html">Working with Document &ndash; Mentions, Tags and Emoji</a></li>
+				</ul>
+
+			</section>
+		</section>
+
+		<footer class="sdk-footer">
+		</footer>
+
+		<script data-sample="1" >
+			var PLACEHOLDERS = [
+				{
+					id: 1,
+					name: 'address',
+					title: 'Address',
+					description: 'Customer Support correspondence address.'
+				},
+				{
+					id: 2,
+					name: 'assignee',
+					title: 'Assignee Name',
+					description: 'Ticket assignee name.'
+				},
+				{
+					id: 3,
+					name: 'deadline',
+					title: 'Deadline Time',
+					description: 'Utmost time to which technician should handle the issue.'
+				},
+				{
+					id: 4,
+					name: 'department',
+					title: 'Department Name',
+					description: 'Department name responsible for servicing this ticket.'
+				},
+				{
+					id: 5,
+					name: 'caseid',
+					title: 'Case ID',
+					description: 'Unique case number used to distinguish tickets.'
+				},
+				{
+					id: 6,
+					name: 'casename',
+					title: 'Case Name',
+					description: 'Name of the ticket provided by the user.'
+				},
+				{
+					id: 7,
+					name: 'contact',
+					title: 'Contact E-mail',
+					description: 'Customer Support contact e-mail address.'
+				},
+				{
+					id: 8,
+					name: 'customer',
+					title: 'Customer Name',
+					description: 'Receipent of your response.'
+				},
+				{
+					id: 9,
+					name: 'hotline',
+					title: 'Hotline Number',
+					description: 'Customer Support Hotline number.'
+				},
+				{
+					id: 10,
+					name: 'technician',
+					title: 'Technician Name',
+					description: 'Technician which will handle this ticket.'
+				}
+			];
+
+			CKEDITOR.addCss( 'span > .cke_placeholder { background-color: #ffeec2; }' );
+
+			CKEDITOR.replace( 'editor1', {
+				plugins: 'autocomplete,textmatch,toolbar,wysiwygarea,basicstyles,link,undo,placeholder',
+				toolbar: [
+					{ name: 'document', items: [ 'Undo', 'Redo' ] },
+					{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] },
+					{ name: 'links', items: [ 'Link', 'Unlink' ] }
+				],
+				on: {
+					instanceReady: function( evt ) {
+						var itemTemplate = '<li data-id="{id}">' +
+								'<div><strong class="item-title">{title}</strong></div>' +
+								'<div><i>{description}</i></div>' +
+							'</li>',
+							outputTemplate = '[[{title}]]<span>&nbsp;</span>';
+
+						var autocomplete = new CKEDITOR.plugins.autocomplete( evt.editor, {
+							textTestCallback: textTestCallback,
+							dataCallback: dataCallback,
+							itemTemplate: itemTemplate,
+							outputTemplate: outputTemplate
+						} );
+
+						// Override default getHtmlToInsert to enable rich content output.
+						autocomplete.getHtmlToInsert = function( item ) {
+							return this.outputTemplate.output( item );
+						}
+					}
+				}
+			} );
+
+			function textTestCallback( range ) {
+				if ( !range.collapsed ) {
+					return null;
+				}
+
+				return CKEDITOR.plugins.textMatch.match( range, matchCallback );
+			}
+
+			function matchCallback( text, offset ) {
+				var pattern = /\[{2}([A-z]|\])*$/,
+					match = text.slice( 0, offset )
+					.match( pattern );
+
+				if ( !match ) {
+					return null;
+				}
+
+				return {
+					start: match.index,
+					end: offset
+				};
+			}
+
+			function dataCallback( matchInfo, callback ) {
+				var data = PLACEHOLDERS.filter( function( item ) {
+					var itemName = '[[' + item.name + ']]';
+					return itemName.indexOf( matchInfo.query.toLowerCase() ) == 0;
+				} );
+
+				callback( data );
+			}
+		</script>
+
+		<script>
+			var templates = CKEDITOR.document.findOne( '.templates' ),
+				list = new CKEDITOR.dom.element( 'ul' );
+
+			CKEDITOR.tools.array.forEach( PLACEHOLDERS, function( placeholder ) {
+				var item = new CKEDITOR.dom.element( 'li' );
+				item.setHtml( '<code>' + placeholder.name + '</code>' );
+				list.append( item );
+			} );
+
+			templates.append( list );
+		</script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+h2 {
+	padding-bottom: 0.3em;
+	font-size: 1.5em;
+	line-height: 1.225;
+	border-bottom: 1px solid #eee;
+}
+
+h3, h4 {
+	font-weight: bolder;
+}

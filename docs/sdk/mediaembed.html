@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Embedding Media">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, media, content, iframely, embedding, oembed, embed, video, youtube, vimeo, twitter, facebook">
+	<meta name="sdk-samples" content="Using Media Embed with Auto Embed">
+	<title>Embedding Media Resources</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+	<style>
+		.exampleResources input {
+			margin-bottom: 1px;
+			width: 500px;
+		}
+	</style>
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Embedding Media Resources with oEmbed <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_media_embed">Documentation</a></h1>
+
+			<p>
+				The optional <a href="https://ckeditor.com/cke4/addon/embed">Media Embed</a> and <a href="https://ckeditor.com/cke4/addon/embedsemantic">Semantic Media Embed</a> plugins, introduced in CKEditor 4.5, allow to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in the editor.
+			</p>
+
+			<p>
+				When either Media Embed or Semantic Media Embed plugin is enabled and the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_media_embed-section-configuring-the-content-provider">content provider</a> is configured, the <span class="button_icon" data-icon="embed" title="Media Embed">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Media Embed</strong> dialog window that lets you add the URL of the resource to be embedded. You can also <strong>paste</strong> that resource's URL into the editor content and it will be automatically embedded if the optional <a href="https://ckeditor.com/cke4/addon/autoembed">Auto Embed</a> plugin is enabled.
+			</p>
+
+			<p>
+				We recommend to use the <a href="https://iframely.com/">Iframely</a> proxy service which supports over <a href="https://iframely.com/domains">1800 content providers</a> such as YouTube, Vimeo, Twitter, Instagram, Imgur, SlideShare, or Google Maps, but you can <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-embed_provider">configure</a> the widgets to use another proxy service of your choice.
+			</p>
+
+			<h2>Using Media Embed with Auto Embed</h2>
+
+			<p>The sample below uses the <a href="https://ckeditor.com/cke4/addon/embed">Media Embed</a> plugin together with the <a href="https://ckeditor.com/cke4/addon/autoembed">Auto Embed</a> and <a href="https://ckeditor.com/cke4/addon/image2">Enhanced Image</a> plugins. Additional <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles-section-widget-styles">widget styles</a> are defined to control widget size and alignment.</p>
+
+			<p>Try embedding more resources like the following. You can either paste these URLs into the editor or use the Media Embed dialog.</p>
+
+			<ul class="exampleResources">
+				<li><input type="text" value="https://www.youtube.com/watch?v=H08tGjXNHO4" /></li>
+				<li><input type="text" value="http://www.slideshare.net/esaops/rosetta-comet-landing-press-kit-12-nov-2014" /></li>
+				<li><input type="text" value="https://twitter.com/Philae2014/status/610047412036595712" /></li>
+			</ul>
+
+			<textarea cols="10" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+
+<h1>Rosetta</h1>
+
+<p>Rosetta is a robotic space probe built and launched by the <a href="http://en.wikipedia.org/wiki/European_Space_Agency">European Space Agency</a>. Along with <a href="http://en.wikipedia.org/wiki/Philae_(spacecraft)">Philae</a>, its lander module, Rosetta is performing a detailed study of <a href="http://en.wikipedia.org/wiki/67P/Churyumov%E2%80%93Gerasimenko">comet 67P/Churyumov–Gerasimenko (67P)</a>. On 12 November 2014 the mission performed the first soft landing on a comet and returned data from the surface.</p>
+
+<h2>Mission overview</h2>
+
+<div data-oembed-url="https://www.youtube.com/watch?v=cArihDTnOZg" class="embed-360p">
+<div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 56.2493%;"><iframe allowfullscreen="true" frameborder="0" mozallowfullscreen="true" src="https://www.youtube.com/embed/cArihDTnOZg?wmode=transparent&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;enablejsapi=1" style="top: 0px; left: 0px; width: 100%; height: 100%; position: absolute;" webkitallowfullscreen="true"></iframe></div>
+</div>
+
+<p>Rosetta was launched on 2 March 2004 on an <a href="http://en.wikipedia.org/wiki/Ariane_5">Ariane 5</a> rocket and reached the comet on 6 August 2014, becoming the first spacecraft to orbit a comet. (Previous missions had conducted successful flybys of seven other comets.) It is one of ESA's Horizon 2000 cornerstone missions. The spacecraft consists of the Rosetta orbiter, which features 12 instruments, and the Philae lander, with nine additional instruments. The Rosetta mission will orbit 67P for 17 months and is designed to complete the most detailed study of a comet ever attempted. The spacecraft is controlled from the <a href="http://en.wikipedia.org/wiki/European_Space_Operations_Centre">European Space Operations Centre</a> (ESOC), in Darmstadt, Germany. The planning for the operation of the scientific payload, together with the data retrieval, calibration, archiving and distribution, is performed from the <a href="http://en.wikipedia.org/wiki/European_Space_Astronomy_Centre">European Space Astronomy Centre</a> (ESAC), in Villanueva de la Cañada, near Madrid, Spain. It has been estimated that in the decade preceding 2014, some 2,000 people assisted in the mission in some capacity.</p>
+
+<figure class="image image-narrow image-align-right">
+	<a href="http://en.wikipedia.org/wiki/File:Comet_67P_on_19_September_2014_NavCam_mosaic.jpg"><img src="assets/comet-67p.jpg" alt="Comet 67P" width="1131" height="900" /></a>
+	<figcaption>Comet 67P in September 2014</figcaption>
+</figure>
+
+<p>The probe is named after the <a href="http://en.wikipedia.org/wiki/Rosetta_Stone">Rosetta Stone</a>, a stele of Egyptian origin featuring a decree in three scripts. The lander is named after the Philae obelisk, which bears a bilingual Greek and Egyptian hieroglyphic inscription. A comparison of its hieroglyphs with those on the Rosetta Stone catalysed the deciphering of the Egyptian writing system. Similarly, it is hoped that these spacecraft will result in better understanding of comets and the early Solar System. In a more direct analogy to its namesake, the Rosetta spacecraft also carries a micro-etched nickel alloy Rosetta disc donated by the Long Now Foundation inscribed with 13,000 pages of text in 1200 languages.</p>
+
+<p>The spacecraft performed two asteroid flyby missions on its way to the comet. In 2007, Rosetta also performed a Mars swing-by (flyby). The craft completed its flyby of asteroid 2867 Šteins in September 2008 and of 21 Lutetia in July 2010. On 20 January 2014, Rosetta was taken out of a 31-month hibernation mode as it approached the comet.</p>
+
+<p>Rosetta's Philae lander successfully made the first soft landing on a comet nucleus when it touched down on 67P on 12 November 2014. Astrophysicist Elizabeth Pearson said that although the future of the lander Philae is uncertain, Rosetta is the workhorse of the mission and its work will carry on.</p>
+
+<h2>Media coverage</h2>
+
+<p>The entire mission was featured heavily in social media, with a <a href="http://en.wikipedia.org/wiki/Facebook">Facebook</a> account for the mission and both the satellite and the lander having an official <a href="http://en.wikipedia.org/wiki/Twitter">Twitter</a> account portraying a <a href="http://en.wikipedia.org/wiki/Anthropomorphism">personification</a> of both spacecraft. The <a href="http://en.wikipedia.org/wiki/Hashtag">hashtag</a> "#CometLanding" gained widespread traction. A <a href="http://en.wikipedia.org/wiki/Livestream">Livestream</a> of the control centres was set up, as were multiple official and unofficial events around the world to follow Philae's landing on 67P.</p>
+
+<p>The landing was reported live on <a href="https://twitter.com/Philae2014">Philae's</a> Twitter account:</p>
+
+<div data-oembed-url="https://twitter.com/Philae2014/status/532494857710075905">
+<blockquote align="center" class="twitter-tweet">
+<p>Finally! I&rsquo;m stretching my legs after more than 10 years. Landing gear deployed! <a href="https://twitter.com/hashtag/CometLanding?src=hash">#CometLanding</a></p>
+&mdash; Philae Lander (@Philae2014) <a href="https://twitter.com/Philae2014/status/532494857710075905">November 12, 2014</a></blockquote>
+<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+</div>
+
+<div data-oembed-url="https://twitter.com/Philae2014/status/532547743206875136">
+<blockquote align="center" class="twitter-tweet">
+<p>It&rsquo;s me&hellip; landing on a comet &amp; feeling good! MT <a href="https://twitter.com/ESA_Rosetta">@ESA_Rosetta</a>: I see you too! <a href="https://twitter.com/hashtag/CometLanding?src=hash">#CometLanding</a> <a href="http://t.co/DjU0J1Ey4H">pic.twitter.com/DjU0J1Ey4H</a></p>
+&mdash; Philae Lander (@Philae2014) <a href="https://twitter.com/Philae2014/status/532547743206875136">November 12, 2014</a></blockquote>
+<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+</div>
+
+<div data-oembed-url="https://twitter.com/Philae2014/status/532564514051735552">
+<blockquote align="center" class="twitter-tweet">
+<p>Touchdown! My new address: 67P! <a href="https://twitter.com/hashtag/CometLanding?src=hash">#CometLanding</a></p>
+&mdash; Philae Lander (@Philae2014) <a href="https://twitter.com/Philae2014/status/532564514051735552">November 12, 2014</a></blockquote>
+<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+</div>
+
+<hr />
+
+<p>Source: <a href="http://en.wikipedia.org/wiki/Rosetta_(spacecraft)">Wikipedia.org</a></p>
+
+			</textarea>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./styles.html#widget-styles">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'embed,autoembed,image2',
+					height: 500,
+
+					// Load the default contents.css file plus customizations for this sample.
+					contentsCss: [ CKEDITOR.basePath + 'contents.css', 'assets/css/widgetstyles.css' ],
+					// Setup content provider. See https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_media_embed
+					embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}',
+
+					// Configure the Enhanced Image plugin to use classes instead of styles and to disable the
+					// resizer (because image size is controlled by widget styles or the image takes maximum
+					// 100% of the editor width).
+					image2_alignClasses: [ 'image-align-left', 'image-align-center', 'image-align-right' ],
+					image2_disableResizer: true
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

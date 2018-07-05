@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Page Navigation Using the &quot;Tab&quot; Key">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, tab, navigation, accessibility, keyboard, keystrokes, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<title>&quot;Tab&quot; Key Navigation</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Page Navigation Using the "Tab" Key <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_tabindex">Documentation</a></h1>
+
+			<p>
+				If keyboard navigation on a page is your thing, you will be happy to learn that CKEditor can be easily reached by using the <kbd>Tab</kbd> key, just like any other field element on the
+				web page. This is the default behavior that does not require any configuration on your part.
+			</p>
+
+			<p>
+				Use the following keyboard shortcuts to navigate through the sample form below:
+			</p>
+			<ul>
+				<li>
+					<kbd>Tab</kbd> &ndash; Move to the next page element.
+				</li>
+				<li>
+					<kbd>Shift+Tab</kbd> &ndash; Move to the previous page element.
+				</li>
+			</ul>
+
+			<p>
+				<input> <input type="button" value="Sample button">
+			</p>
+			<textarea cols="80" id="editor1" name="editor1" rows="10">
+				&lt;p&gt;Use the &lt;em&gt;Tab&lt;/em&gt; and &lt;em&gt;Shift+Tab&lt;/em&gt; keyboard shortcuts to enter the editing area.&lt;/p&gt;
+			</textarea>
+
+			<p>
+				<input type="checkbox" checked>Sample checkbox
+			</p>
+
+			<script>
+				CKEDITOR.replace( 'editor1', {
+					height: 150
+				} );
+			</script>
+
+			<p>
+				Additionally, you can influence the place that CKEditor will assume in the web page <kbd>Tab</kbd> order. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_tabindex">Page Navigation Using the
+				"Tab" Key</a> article to learn more about this feature.
+			</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./accessibility.html">Accessibility Support &ndash; Accessibility Support and Keyboard Shortcuts</a></li>
+				<li><a href="./accessibilitychecker.html">Accessibility Support &ndash; Managing Content Accessibility with Accessibility Checker</a></li>
+			</ul>
+
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

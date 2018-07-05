@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Removing text formatting">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, text, remove, cleanup, font, style, bold, italic, underline, strikethrough, subscript, superscript, styling, inline, styles, color, colors, family, typeface, size, sizes">
+	<meta name="sdk-samples" content="Removing text formatting">
+	<title>Removing Text Formatting</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Removing Text Formatting <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_removeformat">Documentation</a></h1>
+
+			<p>
+				The text formatting cleanup functionality is provided through the
+				<a href="https://ckeditor.com/cke4/addon/removeformat">Remove Format</a> plugin which by default is available in the Standard
+				and Full distributions.
+			</p>
+
+			<p>
+				When the plugin is enabled, the <span class="button_icon" data-icon="removeformat" title="Remove Format">&nbsp;</span>
+				button is automatically added to the toolbar. You can use it to remove any text formatting that is applied through inline
+				HTML elements and CSS styles, like <a href="./basicstyles.html">basic text styles</a> (bold, italic, etc.), font family and
+				size, <a href="./colorbutton.html">text and background colors</a> or styles applied through the
+				<a href="./styles.html">Styles</a> drop-down. Note that it does not change text formats
+				<a href="./format.html">applied at block level</a>.
+			</p>
+
+			<p>
+				Since this feature applies to inline styles, you need to select the text fragment whose formatting is to be removed.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;&lt;big&gt;Apollo &lt;span style=&quot;font-family:georgia,serif&quot;&gt;11&lt;/span&gt;&lt;/big&gt;&lt;/h1&gt;
+				&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;font-size:18px&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif&quot;&gt;Apollo 11&lt;/span&gt;&lt;/span&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/strong&gt;&amp;nbsp;was the
+				&lt;span class=&quot;marker&quot;&gt;spaceflight that landed the first humans&lt;/span&gt;, Americans
+				&lt;em&gt;&lt;strong&gt;Neil Armstrong&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Buzz
+				Aldrin&lt;/strong&gt;&lt;/em&gt;, on the Moon on &lt;u&gt;July 20, 1969, at 20:18 UTC&lt;/u&gt;. &lt;span style=&quot;
+				font-family:georgia,serif&quot;&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Armstrong became the first to step onto
+				the lunar surface&lt;/span&gt;&lt;/span&gt; 6 hours later on &lt;u&gt;July 21 at 02:56 UTC&lt;/u&gt;.&lt;/p&gt;
+				&lt;p&gt;Armstrong spent about &lt;span style=&quot;font-size:11px&quot;&gt;&lt;span
+				style=&quot;color:#FF0000&quot;&gt;&lt;del&gt;three and a half &lt;/del&gt;&lt;/span&gt;&lt;/span&gt;&lt;span
+				style=&quot;font-size:14px&quot;&gt;&lt;span style=&quot;color:#008000&quot;&gt;&lt;ins&gt;two and a half
+				hours&lt;/ins&gt;&lt;/span&gt;&lt;/span&gt; outside the &lt;em&gt;&lt;span style=&quot;font-size:12px&quot;&gt;&lt;span
+				style=&quot;font-family:comic sans ms,cursive&quot;&gt;spacecraft&lt;/span&gt;&lt;/span&gt;&lt;/em&gt;, Aldrin slightly
+				less; and together they &lt;span class=&quot;marker&quot;&gt;collected &lt;em&gt;&lt;span
+				style=&quot;color:#B22222&quot;&gt;&lt;span style=&quot;font-size:14px&quot;&gt;&lt;strong&gt;47.5
+				pounds&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/em&gt; (21.5&amp;nbsp;kg) of lunar material&lt;/span&gt; for return to
+				Earth. A third member of the mission, &lt;em&gt;&lt;strong&gt;Michael Collins&lt;/strong&gt;&lt;/em&gt;, piloted the
+				command spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;h2&gt;&lt;span style=&quot;font-family:courier new,courier,monospace&quot;&gt;Broadcasting and quotes &lt;a
+				id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;
+				&lt;p&gt;&lt;span style=&quot;font-size:14px&quot;&gt;Broadcast on &lt;strong&gt;live &lt;/strong&gt;TV&lt;/span&gt; to a
+				world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt;
+				&lt;blockquote&gt;
+				&lt;p&gt;One &lt;span style=&quot;font-size:10px&quot;&gt;small &lt;/span&gt;step for [a] man, one &lt;span style=&quot;
+				font-size:18px&quot;&gt;giant &lt;/span&gt;leap for mankind.&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;p&gt;Apollo 11 &lt;span class=&quot;marker&quot;&gt;effectively ended the &lt;span style=&quot;
+				font-size:16px&quot;&gt;&lt;em&gt;Space Race&lt;/em&gt;&lt;/span&gt;&lt;/span&gt; and fulfilled a national goal proposed
+				in 1961 by the late &lt;span style=&quot;font-size:20px&quot;&gt;&lt;span style=&quot;font-family:times new roman,times,serif&quot;&gt;U.S. President John F. Kennedy&lt;/span&gt;&lt;/span&gt; in a speech before the United States
+				Congress:&lt;/p&gt;
+				&lt;blockquote&gt;
+				&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&amp;nbsp;&lt;/sup&gt;Source: &lt;a
+				href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./basicstyles.html">Authoring Content &ndash; Basic Text Styles: Bold, Italic and More</a></li>
+				<li><a href="./copyformatting.html">Authoring Content &ndash; Copying Text Formatting</a></li>
+				<li><a href="./styles.html">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+				<li><a href="./colorbutton.html">Authoring Content &ndash; Setting Text and Background Color</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: 250,
+					// Adding Text and Background Color, Font Family and Size buttons to make sample
+					// text styling more spectacular.
+					extraPlugins: 'colorbutton,font',
+					// By default, some basic text styles buttons are removed in the Standard preset.
+					// The code below resets the default config.removeButtons setting.
+					removeButtons: '',
+					// Rearrange the toolbar slightly.
+					toolbarGroups: [
+						{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
+						{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
+						{ name: 'links' },
+						{ name: 'insert' },
+						{ name: 'forms' },
+						{ name: 'tools' },
+						{ name: 'document',	   groups: [ 'mode', 'document', 'doctools' ] },
+						{ name: 'colors' },
+						{ name: 'others' },
+						{ name: 'about' },
+						'/',
+						{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+						{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
+						{ name: 'styles' }
+					]
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

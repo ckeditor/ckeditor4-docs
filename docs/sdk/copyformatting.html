@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Document Formatting Using Copy Formatting Feature">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, copy formatting, formatting, styling">
+	<meta name="sdk-samples" content="Basic document formatting using Copy Formatting|Formatting lists and tables|Customization of the Copy Formatting filter">
+	<title>Copying Text Formatting</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Using the Copy Formatting Feature <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_copyformatting">Documentation</a></h1>
+
+			<p>
+				The Copy Formatting feature is provided through the optional <a href="https://ckeditor.com/cke4/addon/copyformatting">Copy Formatting</a> plugin. It was introduced in CKEditor 4.6 and by default is available in the Full distribution only.
+			</p>
+
+			<p>
+				When the plugin is enabled, the <span class="button_icon" data-icon="copyformatting" title="Copy Formatting">&nbsp;</span>
+				button is automatically added to the editor toolbar. You can use it to copy text formatting from one place in the document and apply it to another. This helps easily preserve stylistic consistency of the document.
+			</p>
+
+			<p>
+				To copy styles, place your cursor inside the text (or select a styled document fragment) and press the
+				<span class="button_icon" data-icon="copyformatting" title="Copy Formatting">&nbsp;</span> button or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut. Then place the cursor inside some word or select a part of the text to apply formatting to it. The copied formatting can also be applied by using the <kbd>Ctrl+Shift+V</kbd> keyboard shortcut.
+			</p>
+
+			<div class="tip">
+				<p>
+					Note that not all styles can be copied or removed. For example, Copy Formatting will not copy styles from links
+				and will not remove links when you apply formatting to them. The default filter can be adjusted, though &mdash;
+				see the example with filter customization below.
+				</p>
+				<p>
+					Copy Formatting only works with inline styles, so it will not copy or apply block-level styles (e.g. headers) to text.
+				</p>
+			</div>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first
+				humans, Americans &lt;em&gt;&lt;strong&gt;Neil Armstrong&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Buzz
+				Aldrin&lt;/strong&gt;&lt;/em&gt;, on the Moon on &lt;u&gt;July 20, 1969, at 20:18 UTC&lt;/u&gt;. Armstrong became the first
+				to step onto the lunar surface 6 hours later on &lt;u&gt;July 21 at 02:56 UTC&lt;/u&gt;.&lt;/p&gt;
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; &lt;u&gt;two and a half hours&lt;/u&gt; outside the
+				spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return
+				to Earth. A third member of the mission, &lt;em&gt;&lt;strong&gt;Michael Collins&lt;/strong&gt;&lt;/em&gt;, piloted the
+				command spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&amp;nbsp;&lt;/sup&gt;Source:
+				&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<p>
+				A special <em>sticky mode</em> allows you to copy formatting once and apply it in more than one place.
+				To enable it, double-click the <span class="button_icon" data-icon="copyformatting" title="Copy Formatting">&nbsp;</span> button
+				or use the <kbd>Ctrl+Shift+C</kbd> keyboard shortcut. The sticky mode can be switched off by clicking
+				the <span class="button_icon" data-icon="copyformatting" title="Copy Formatting">&nbsp;</span> button again or by pressing the <kbd>Esc</kbd> key.
+			</p>
+
+			<h2>Lists and Tables</h2>
+
+			<p>
+				It is also possible to copy formatting in tables and lists, including in some complex scenarios like nested lists or tables. In case of lists, it is even able to change the list type or start value, so applying formatting from a bulleted list to a numbered one will effectively change the list type from numbered to bulleted.
+			</p>
+
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
+				&lt;h2&gt;Copy Formatting in Lists and Tables&lt;/h2&gt;
+
+				&lt;table align="right" border="1" cellpadding="5"&gt;
+					&lt;caption&gt;&lt;strong&gt;Table 1&lt;/strong&gt;&lt;/caption&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#d3d3d3"&gt;Cell 1&lt;/td&gt;
+							&lt;td&gt;&lt;em&gt;Cell 2&lt;/em&gt;&lt;/td&gt;
+							&lt;td&gt;&lt;em&gt;Cell 3&lt;/em&gt;&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;p&gt;The Copy Formatting feature is prepared to handle complicated scenarios of list and table formatting.&lt;/p&gt;
+
+				&lt;p&gt;An example of multiple numbered lists, with the nested list not starting from &amp;quot;1&amp;quot;:&lt;/p&gt;
+
+				&lt;table align="right" border="4" cellpadding="3"&gt;
+					&lt;caption&gt;Table 2&lt;/caption&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th style="background-color:#888888"&gt;&amp;nbsp;Heading 1&lt;/th&gt;
+							&lt;th style="background-color:#888888"&gt;He&lt;strong&gt;adi&lt;/strong&gt;ng 2&lt;/th&gt;
+							&lt;th style="background-color:#888888"&gt;Heading 3&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;strong&gt;&lt;u&gt;Cell 1&lt;/u&gt;&lt;/strong&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Cell 2&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Cell 3&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;strong&gt;&lt;u&gt;Cell 1&lt;/u&gt;&lt;/strong&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Cell 2&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Cell 3&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;ol start="1"&gt;
+					&lt;li&gt;&lt;s&gt;Item 1&lt;/s&gt;&lt;/li&gt;
+					&lt;li&gt;Item 2
+					&lt;ol start="1" style="list-style-type:lower-alpha"&gt;
+						&lt;li&gt;Subitem 1&lt;/li&gt;
+						&lt;li&gt;Subitem 2
+						&lt;ol start="3" style="list-style-type:lower-roman"&gt;
+							&lt;li&gt;&lt;em&gt;Subitem 1&lt;/em&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;em&gt;Subitem 2&lt;/em&gt;&lt;/li&gt;
+						&lt;/ol&gt;
+						&lt;/li&gt;
+						&lt;li&gt;Subitem 3&lt;/li&gt;
+					&lt;/ol&gt;
+					&lt;/li&gt;
+					&lt;li&gt;Item 3&lt;/li&gt;
+				&lt;/ol&gt;
+
+				&lt;p&gt;An example of a&amp;nbsp;mix between numbered and bulleted lists:&lt;/p&gt;
+
+				&lt;ul&gt;
+					&lt;li&gt;Item 1&lt;/li&gt;
+					&lt;li&gt;&lt;s&gt;Item 2&lt;/s&gt;&lt;/li&gt;
+					&lt;li&gt;Item 3
+					&lt;ul&gt;
+						&lt;li&gt;Subitem 1&lt;/li&gt;
+						&lt;li&gt;Subitem 2
+						&lt;ol start="1" style="list-style-type:lower-roman"&gt;
+							&lt;li&gt;&lt;u&gt;&lt;em&gt;Subitem 1&lt;/em&gt;&lt;/u&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;u&gt;&lt;em&gt;Subitem 2&lt;/em&gt;&lt;/u&gt;
+							&lt;ul&gt;
+								&lt;li&gt;Subitem 1&lt;/li&gt;
+								&lt;li&gt;Subitem 2&lt;/li&gt;
+							&lt;/ul&gt;
+							&lt;/li&gt;
+							&lt;li&gt;&lt;u&gt;&lt;em&gt;Subitem 3&lt;/em&gt;&lt;/u&gt;&lt;/li&gt;
+							&lt;li&gt;&lt;u&gt;&lt;em&gt;Subitem 4&lt;/em&gt;&lt;/u&gt;&lt;/li&gt;
+						&lt;/ol&gt;
+						&lt;/li&gt;
+						&lt;li&gt;Subitem 3&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;/li&gt;
+					&lt;li&gt;Item 4&lt;/li&gt;
+				&lt;/ul&gt;
+
+			</textarea>
+
+			<h2>Copy Formatting Filter Customization</h2>
+
+			<p>
+				Formatting from certain type of elements cannot be copied. By default these elements include links, headings, images, iframes, widgets and media embeds.
+			</p>
+
+			<p>
+				This can be changed through two configuration options available:
+				<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-copyFormatting_allowRules">config.copyFormatting_allowRules</a></code> and
+				<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-copyFormatting_disallowRules">config.copyFormatting_disallowRules</a></code>.
+				As an example, you are only allowed to copy bold formatting in the editor below.
+			</p>
+
+			<p>
+				Additionally, you can also limit the contexts (style types) that are enabled for the Copy Formatting feature from the default plain text, list and table styles. The example below uses the <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-copyFormatting_allowedContexts">config.copyFormatting_allowedContexts</a></code> configuration option set to <code>'text'</code> to only enable copying of text styles (specifically, as set above, just bold), so e.g. table styles will not work.
+			</p>
+
+			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3" data-sample-short>
+				&lt;table align="right" border="1" bordercolor="#ccc" cellpadding="5" cellspacing="0" style="border-collapse:collapse; margin:10px 0 10px 15px"&gt;
+					&lt;caption&gt;&lt;strong&gt;Mission Crew&lt;/strong&gt;&lt;/caption&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th scope="col" style="background-color:#cccccc"&gt;Position&lt;/th&gt;
+							&lt;th scope="col" style="background-color:#cccccc"&gt;Astronaut&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;em&gt;Commander&lt;/em&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Neil A. Armstrong&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;em&gt;Command Module Pilot&lt;/em&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Michael Collins&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td style="background-color:#eeeeee"&gt;&lt;em&gt;Lunar Module Pilot&lt;/em&gt;&lt;/td&gt;
+							&lt;td style="text-align:center"&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;h1&gt;Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;sup&gt;1&lt;/sup&gt;&lt;/strong&gt;&amp;nbsp;was the spaceflight that landed the first humans, Americans &lt;em&gt;&lt;strong&gt;Neil Armstrong&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Buzz Aldrin&lt;/strong&gt;&lt;/em&gt;, on the Moon on &lt;u&gt;July 20, 1969, at 20:18 UTC&lt;/u&gt;. Armstrong became the first to step onto the lunar surface 6 hours later on &lt;u&gt;July 21 at 02:56 UTC&lt;/u&gt;.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; &lt;u&gt;two and a half hours&lt;/u&gt; outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;em&gt;&lt;strong&gt;Michael Collins&lt;/strong&gt;&lt;/em&gt;, piloted the command spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;&lt;sup&gt;1&amp;nbsp;&lt;/sup&gt;Source: &lt;a href="http://en.wikipedia.org/wiki/Apollo_11"&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
+			<p>
+				A few configuration options are available to fine-tune the Copy Formatting feature, including <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_copyformatting-section-keyboard-shortcuts">adjusting the default keyboard shortcuts</a> or turning off the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_copyformatting-section-copy-formatting-cursors">special "disabled" cursor</a> that indicates you cannot apply the formatting copied from the editor content outside the editor.
+			</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./basicstyles.html">Authoring Content &ndash; Basic Text Styles: Bold, Italic and More</a></li>
+				<li><a href="./removeformat.html">Authoring Content &ndash; Removing Text Formatting</a></li>
+				<li><a href="./styles.html">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+				<li><a href="./format.html">Authoring Content &ndash; Applying Block-Level Text Formats</a></li>
+				<li><a href="./colorbutton.html">Authoring Content &ndash; Setting Text and Background Color</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: 255,
+					// Add Copy Formatting and Color Button (Text and Background Color features) plugins.
+					// Color Button is only added just to show that text and background colors can be copied, too.
+					extraPlugins: 'copyformatting,colorbutton'
+				} );
+			</script>
+
+			<script data-sample="2">
+				CKEDITOR.replace( 'editor2', {
+					height: 450,
+					// Add Copy Formatting and Color Button (Text and Background Color features) plugins.
+					// Color Button is only added just to show that text and background colors can be copied, too.
+					extraPlugins: 'copyformatting,colorbutton'
+				} );
+			</script>
+
+			<script data-sample="3">
+				CKEDITOR.replace( 'editor3', {
+					height: 295,
+					extraPlugins: 'copyformatting,colorbutton',
+					// Only allow Copy Formatting in plain text context.
+					copyFormatting_allowedContexts: [ 'text' ],
+					// Only allow Copy Formatting for bold.
+					copyFormatting_allowRules: 'strong;'
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

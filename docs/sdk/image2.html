@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Enhanced Image Plugin">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, image, caption, widget, drag, drop, image2, enhanced, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Enhanced Image Plugin">
+	<title>Enhanced Image Plugin</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script src="assets/sample.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Enhanced Image Plugin <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_image2">Documentation</a></h1>
+
+			<p>
+				The optional <a href="https://ckeditor.com/cke4/addon/image2">Enhanced Image</a> plugin, introduced in CKEditor 4.3, supports inserting images into the editor content. It provides the following features when compared to the classic <a href="./image.html">Image</a> plugin that is available by default in CKEditor distributions:
+			</p>
+			<ul>
+				<li>
+					It allows for adding <strong>image captions</strong> (that will not be separated from the image when its location changes).
+				</li>
+				<li>
+					It has <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_widgets-section-common-usage-scenarios">all advantages of widgets</a>, i.e. you can <strong>treat the image and its caption as one entity</strong> and select, delete, or move it in the editor content area as a whole.
+				</li>
+				<li>
+					It supports <strong>drag and drop</strong> for changing the image position.
+				</li>
+				<li>
+					It provides <strong>image alignment</strong>, including centering, with inline styles or CSS classes.
+				</li>
+				<li>
+					It includes hassle-free <strong>"click and drag" resizing</strong>.
+				</li>
+				<li>
+					It can be integrated with a <strong>file manager</strong> of your choice such as <a href="https://ckeditor.com/ckeditor-4/ckfinder/">CKFinder</a> for image upload and storage support. 
+				</li>
+			</ul>
+			<p>
+				When the Enhanced Image plugin is enabled, the <span class="button_icon" data-icon="image" title="Image">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Image Properties</strong> dialog window that replaces the one available in the default Image plugin and lets you configure the captioned image.
+			</p>
+
+			<p>
+				A few configuration options are available to fine-tune this feature, including <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-image2_altRequired">making the alternative text mandatory</a>, adjusting the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-image2_alignClasses">alignment style</a> to use classes instead of inline styles or setting a <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-image2_captionedClass">custom CSS class</a> for the captioned image. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_image2">Enhanced Image Plugin</a> article to learn more about this feature.
+			</p>
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;Essential things to think about before starting a blog&lt;/h1&gt;
+				&lt;figure class=&quot;image&quot; style=&quot;float:right;&quot;&gt;&lt;img alt=&quot;A picture of wooden spoons with spices and herbs in them.&quot; src=&quot;assets/image2/spoons.jpg&quot; width=&quot;400px&quot;/&gt;
+					&lt;figcaption&gt;It takes several ingredients to create a delicious blog.&lt;/figcaption&gt;
+				&lt;/figure&gt;
+				&lt;p&gt;It has been exactly 3 years since I wrote my first blog series entitled “Flavorful Tuscany”, but starting it was definitely not easy. Back then, I didn’t know much about blogging, let alone think that one day it could become &lt;strong&gt;my full-time job&lt;/strong&gt;. Even though I had many recipes and food-related stories to tell, it never crossed my mind that I could be sharing them with the whole world&lt;/p&gt;
+				&lt;p&gt;I am now a &lt;strong&gt;full-time blogger&lt;/strong&gt; and the curator of the &lt;a href="https://ckeditor.com/ckeditor-4/#"&gt;Simply delicious newsletter&lt;/a&gt;, sharing stories about traveling and cooking, as well as tips on how to run a successful blog.&lt;/p&gt;
+				&lt;p&gt;If you are tempted by the idea of creating your own blog, please think about the following:&lt;/p&gt;
+				&lt;ul&gt;
+					&lt;li&gt;Your story (what do you want to tell your audience)&lt;/li&gt;
+					&lt;li&gt;Your audience (who do you write for)&lt;/li&gt;
+					&lt;li&gt;Your blog name and design&lt;/li&gt;
+				&lt;/ul&gt;
+				&lt;p&gt;After you get your head around these 3 essentials, all you have to do is grab your keyboard and the rest will follow.&lt;/p&gt;
+			</textarea>
+
+			<p class="tip">
+				If you are looking for pixel-perfect image alignment with vertical and horizotal whitespace, configurable image border and file manager integration, try the default <a href="./image.html">Image</a> plugin. If you need to insert images which are automatically rescaled, optimized, responsive and delivered through a blazing-fast CDN, try <a href="./easyimage.html">Easy Image</a>.
+			</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./image.html">Inserting Images &ndash; Default Image Plugin</a></li>
+				<li><a href="./easyimage.html">Inserting Images &ndash; Easy Image Plugin</a></li>
+				<li><a href="./styles.html#widget-styles">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+				<li><a href="./fileupload.html">Inserting Content &ndash; File Upload through Dialogs and Drag&amp;Drop</a></li>
+			</ul>
+
+			<script data-sample="1" >
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'image2,uploadimage',
+
+					toolbar: [
+						{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+						{ name: 'styles', items: [ 'Styles', 'Format' ] },
+						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Strike', '-', 'RemoveFormat' ] },
+						{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
+						{ name: 'links', items: [ 'Link', 'Unlink' ] },
+						{ name: 'insert', items: [ 'Image', 'Table' ] },
+						{ name: 'tools', items: [ 'Maximize' ] },
+						{ name: 'editing', items: [ 'Scayt' ] }
+					],
+
+					// Configure your file manager integration. This example uses CKFinder 3 for PHP.
+					filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+					filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
+					filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+					filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+
+					// Upload dropped or pasted images to the CKFinder connector (note that the response type is set to JSON).
+					uploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+
+					// Reduce the list of block elements listed in the Format drop-down to the most commonly used.
+					format_tags: 'p;h1;h2;h3;pre',
+					// Simplify the Image and Link dialog windows. The "Advanced" tab is not needed in most cases.
+					removeDialogTabs: 'image:advanced;link:advanced',
+
+					height: 450
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

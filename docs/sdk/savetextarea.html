@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Saving data in CKEditor replacing a textarea element.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, save, saving, submitting, submit, data, textarea, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Classic editor replacing a textarea|Inline editor replacing a textarea">
+	<title>Saving Textarea Data</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script type="template" data-sample="2">
+		&lt;link href="../template/theme/css/sdk-inline.css" rel="stylesheet" /&gt;
+	</script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<style data-sample="2" type="text/css">
+		.cke_textarea_inline {
+			border: 1px solid #ccc;
+			padding: 10px;
+			min-height: 300px;
+		}
+	</style>
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Saving Data in CKEditor Replacing a Textarea <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_savedata">Documentation</a></h1>
+
+			<p>
+				When CKEditor is set to replace a <code>&lt;textarea&gt;</code> element, the integration with the parent <code>&lt;form&gt;</code> element is automatic. CKEditor automatically updates the replaced <code>&lt;textarea&gt;</code> when
+				the form is submitted, so there is no need to change any server-side code handling form submission after enabling CKEditor on an exisiting form element.
+			</p>
+
+			<p><strong>Note:</strong> The examples below will submit content to a remote server.</p>
+
+			<h2 class="editor-title">Classic Editor Replacing a Textarea</h2>
+
+			<p>A <code>&lt;textarea&gt;</code> element is replaced with <a href="./classic.html">classic editor</a> using the <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR-method-replace">CKEDITOR.replace()</a></code> method.</p>
+
+			<form data-sample="1" action="./savetextarea.php" method="post" data-sample-short>
+				<textarea cols="80" id="editor1" name="editor1" rows="10">
+					&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt;
+
+					&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil
+					Armstrong&lt;/a&gt; and
+					&lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the
+					lunar surface 6 hours
+					later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+					&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg)
+					of lunar
+					material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted
+					the
+					&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for
+					the trip back to
+					Earth.&lt;/p&gt;
+				</textarea>
+
+				<p><input type="submit" value="Submit"></p>
+			</form>
+
+
+			<h2 class="editor-title">Inline Editor Replacing a Textarea</h2>
+
+			<p>A <code>&lt;textarea&gt;</code> element is replaced with <a href="./inline.html">inline editor</a> using the <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR-method-inline">CKEDITOR.inline()</a></code> method.</p>
+
+			<form data-sample="2" action="./savetextarea.php" method="post">
+				<textarea cols="80" id="editor2" name="editor2" rows="10">
+					&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; style=&quot;float:right;margin:10px&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt;
+
+					&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil
+					Armstrong&lt;/a&gt; and
+					&lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the
+					lunar surface 6 hours
+					later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+					&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg)
+					of lunar
+					material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted
+					the
+					&lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for
+					the trip back to
+					Earth.&lt;/p&gt;
+				</textarea>
+
+				<p><input type="submit" value="Submit"></p>
+			</form>
+
+			<h2>Related Features</h2>
+
+			<ul>
+				<li><a href="./classic.html">Editor Types &ndash; Classic Editor</a></li>
+				<li><a href="./inline.html">Editor Types &ndash; Inline Editor</a></li>
+				<li><a href="./saveajax.html">Saving Data &ndash; CKEditor in Ajax Applications</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1' );
+			</script>
+			<script data-sample="2">
+				CKEDITOR.inline( 'editor2' );
+			</script>
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

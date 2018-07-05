@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Easy Image Plugin">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, image, caption, widget, drag, drop, easyimage, cdn, responsive, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Easy Image Plugin">
+	<title>Easy Image Plugin</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/easyimage/styles.css">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/easyimage/optimizations.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Easy Image Plugin <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_easyimage">Documentation</a></h1>
+
+			<p>
+				The optional <a href="https://ckeditor.com/cke4/addon/easyimage">Easy Image</a> plugin, introduced in CKEditor 4.9, supports uploading and inserting images into the editor content. It provides the following features when compared to two alternative image plugins, the default <a href="./image.html">Image</a> plugin and the optional <a href="./image2.html">Enhanced Image</a> plugin:
+			</p>
+			<ul>
+				<li>
+					It allows for adding <strong>image captions</strong> (that will not be separated from the image when its location changes).
+				</li>
+				<li>
+					It allows for uploading images to <a href="https://ckeditor.com/ckeditor-cloud-services/">CKEditor Cloud Services</a> that <strong>optimizes images</strong> by rescaling them and compressing, resulting in smaller sizes and faster download times.
+				</li>
+				<li>
+					It produces <strong>responsive markup</strong>, so inserted images are suitable for a wide range of devices (including mobile ones).
+				</li>
+				<li>
+					It allows for adding <strong>custom styles</strong> for inserted images.
+				</li>
+				<li>
+					It uses a <strong>customizable balloon toolbar</strong> for every image.
+				</li>
+				<li>
+					It does not produce any content reflow, resulting in smoother and better user experience.
+				</li>
+				<li>
+					Images uploaded to CKEditor Cloud Services are <strong>stored in the cloud</strong> and delivered through a <strong>blazing-fast CDN</strong>.
+				</li>
+			</ul>
+
+			<p>
+				A few configuration options are available to fine-tune this feature, including <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-easyimage_styles">adding custom styles</a>, <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-easyimage_toolbar">customizing the image widget's toolbar</a> or setting a <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-easyimage_class">custom CSS class</a> for the widget. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_easyimage">Easy Image Plugin</a> article to learn more about this feature.
+			</p>
+
+			<p>Note: The example below uses some configuration options mentioned above to add additional image styles (pink and blue gradient) with respective balloon toolbar buttons and context menu entries.</p>
+
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;Walking the capitals of Europe: Warsaw&lt;/h1&gt;
+
+				&lt;figure class="easyimage"&gt;
+					&lt;img alt="Picture of the Warsaw Old Town." width="4288" srcset="https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_430 430w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_860 860w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_1290 1290w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_1720 1720w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_2150 2150w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_2580 2580w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_3010 3010w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_3440 3440w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_3870 3870w, https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg/w_4288 4288w" sizes="100vw" src="https://33333.cdn.cke-cs.com/0fNqCUeBSal4ENvGfd7K/images/c12cb88e596270d8d963b7c87bef1767880f42d94fb2ec43_warsaw01.jpg"&gt;
+					&lt;figcaption&gt;Medieval Old Town square, destroyed in 1944 &amp;amp; rebuilt after WWII.&lt;/figcaption&gt;
+				&lt;/figure&gt;
+
+				&lt;p&gt;If you enjoyed my previous articles in which we discussed wandering around &lt;a href="https://en.wikipedia.org/wiki/Copenhagen"&gt;Copenhagen&lt;/a&gt; and &lt;a href="https://en.wikipedia.org/wiki/Vilnius"&gt;Vilnius&lt;/a&gt;, you’ll definitely love exploring &lt;a href="https://en.wikipedia.org/wiki/Warsaw"&gt;Warsaw&lt;/a&gt;.&lt;/p&gt;
+
+				&lt;h2&gt;Time to put comfy sandals on!&lt;/h2&gt;
+
+				&lt;p&gt;Best time to visit the city is July and August, when it’s cool enough to not break a sweat and hot enough to enjoy summer. The city which has quite a combination of both old and modern textures is located by the river of Vistula.&lt;/p&gt;
+
+				&lt;p&gt;The historic &lt;strong&gt;Old Town&lt;/strong&gt;, which was reconstructed after the World War II, with its late 18th century characteristics, is a must-see. You can start your walk from the &lt;strong&gt;Nowy Świat Street&lt;/strong&gt; which will take you straight to the Old Town.&lt;/p&gt;
+
+				&lt;p&gt;Then you can go to the &lt;strong&gt;Powiśle&lt;/strong&gt; area and take a walk on the newly renovated promenade on the riverfront. There are also lots of cafes, bars and restaurants where you can shake off the exhaustion of the day. On Sundays, there are many parks where you can enjoy nature or listen to pianists from around the world playing Chopin.&lt;/p&gt;
+
+				&lt;p&gt;For museum lovers, you can add these to your list:&lt;/p&gt;
+
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="http://www.polin.pl/en"&gt;POLIN&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="http://www.1944.pl/en"&gt;Warsaw Uprising Museum&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="http://chopin.museum/en"&gt;Fryderyk Chopin Museum&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+
+				&lt;h2&gt;Next destination&lt;/h2&gt;
+
+				&lt;p&gt;We will go to Berlin and have a night's walk in the city that never sleeps! Make sure you subscribe to our newsletter!&lt;/p&gt;
+			</textarea>
+			<h2>Image Optimization</h2>
+			<p>
+				Easy Image guarantees that all images inserted into your content are responsive. With a single image upload, several optimized versions of the image are created after upload by <a href="https://ckeditor.com/ckeditor-cloud-services/">CKEditor Cloud Services</a>, for different sizes of displays. All this is transparent to the end user who uploaded the image. Rescaled and optimized images are delivered through a CDN.
+			</p>
+			<div id="optimizations">
+				<p>
+					<strong>Please upload some image to the editor above to see the level of optimization for a number of popular device types.</strong>
+				</p>
+			</div>
+
+			<p class="tip">
+				If you are looking for pixel-perfect image alignment with vertical and horizotal whitespace, configurable image border and file manager integration, try the default <a href="./image.html">Image</a> plugin. If you need more modern image support with features such as image captions, drag and drop positioning, click and drag resizing, image alignment (including centering) with inline styles or CSS classes and custom image styles, but without cloud storage support with optimized images and responsive markup, try <a href="./image2.html">Enhanced Image</a>.
+			</p>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./image.html">Inserting Images &ndash; Default Image Plugin</a></li>
+				<li><a href="./image.html">Inserting Images &ndash; Enhanced Image Plugin</a></li>
+				<li><a href="./styles.html#widget-styles">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
+			</ul>
+
+			<script data-sample="1" >
+				// Don't forget to add CSS for your custom styles.
+				CKEDITOR.addCss( 'figure[class*=easyimage-gradient]::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }' +
+					'figure[class*=easyimage-gradient] figcaption { position: relative; z-index: 2; }' +
+					'.easyimage-gradient-1::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 66, 174, 234, .72 ) 100% ); }' +
+					'.easyimage-gradient-2::before { background-image: linear-gradient( 135deg, rgba( 115, 110, 254, 0 ) 0%, rgba( 228, 66, 234, .72 ) 100% ); }' );
+
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'easyimage',
+					removePlugins: 'image',
+					removeDialogTabs: 'link:advanced',
+					toolbar: [
+						{ name: 'document', items: [ 'Undo', 'Redo' ] },
+						{ name: 'styles', items: [ 'Format' ] },
+						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Strike', '-', 'RemoveFormat' ] },
+						{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList' ] },
+						{ name: 'links', items: [ 'Link', 'Unlink' ] },
+						{ name: 'insert', items: [ 'EasyImageUpload' ] }
+					],
+					height: 630,
+					cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',
+					// Note: this is a token endpoint to be used for CKEditor 4 samples only. Images uploaded using this token may be deleted automatically at any moment.
+					// To create your own token URL please visit https://ckeditor.com/ckeditor-cloud-services/.
+					cloudServices_tokenUrl: 'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt',
+					easyimage_styles: {
+						gradient1: {
+							group: 'easyimage-gradients',
+							attributes: {
+								'class': 'easyimage-gradient-1'
+							},
+							label: 'Blue Gradient',
+							icon: '../../../samples/assets/easyimage/icons/gradient1.png',
+							iconHiDpi: '../../../samples/assets/easyimage/icons/hidpi/gradient1.png'
+						},
+						gradient2: {
+							group: 'easyimage-gradients',
+							attributes: {
+								'class': 'easyimage-gradient-2'
+							},
+							label: 'Pink Gradient',
+							icon: '../../../samples/assets/easyimage/icons/gradient2.png',
+							iconHiDpi: '../../../samples/assets/easyimage/icons/hidpi/gradient2.png'
+						},
+						noGradient: {
+							group: 'easyimage-gradients',
+							attributes: {
+								'class': 'easyimage-no-gradient'
+							},
+							label: 'No Gradient',
+							icon: '../../../samples/assets/easyimage/icons/nogradient.png',
+							iconHiDpi: '../../../samples/assets/easyimage/icons/hidpi/nogradient.png'
+						}
+					},
+					easyimage_toolbar: [
+						'EasyImageFull',
+						'EasyImageSide',
+						'EasyImageGradient1',
+						'EasyImageGradient2',
+						'EasyImageNoGradient',
+						'EasyImageAlt'
+					]
+				} );
+			</script>
+
+			<script>
+				CKEDITOR.once( 'instanceReady', function( evt ) {
+					setupOptimizationsCalculator( evt.editor, '#optimizations' );
+				} );
+			</script>
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

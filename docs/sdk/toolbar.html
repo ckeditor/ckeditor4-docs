@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Custom Toolbar">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, toolbar, button, ui, interface">
+	<meta name="sdk-samples" content="Custom toolbar">
+	<title>Custom Toolbar</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Custom Editor Toolbar <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_toolbar">Documentation</a></h1>
+
+			<p>
+				CKEditor toolbar is highly flexible and can be easily adjusted to your needs. You can influence such toolbar aspects as:
+			</p>
+
+			<ul>
+				<li>The number of buttons available to your users.</li>
+				<li>How the available buttons are grouped.</li>
+				<li>The sequence of groups in the toolbar.</li>
+				<li>The sequence of buttons within a group.</li>
+				<li>The number of toolbar rows.</li>
+			</ul>
+
+			<div class="tip">
+				The <strong>most recommended approach to adjusting the editor</strong> to your needs is to start from creating a
+				<a href="https://ckeditor.com/cke4/builder">custom build</a>, removing unwanted features before they even
+				make it to your toolbar. It is a bad practice to download the Full package and then
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-removePlugins">remove plugins</a> or
+				<a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-removeButtons">buttons</a> in your configuration.
+				You will only be loading unnecessary stuff without any good reason.
+			</div>
+
+			<h2>Toolbar Configuration</h2>
+			<p>
+				The simplest way to configure the toolbar is to use the dedicated <strong>toolbar configurator</strong>
+				that is available in each editor installation package starting from <strong>CKEditor 4.5</strong>.
+				The editor instance below was configured by using the accessible "toolbar groups" approach, with some
+				unwanted buttons removed by setting the
+				<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-removeButtons">config.removeButtons</a></code>
+				configuration option.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; src=&quot;assets/sample.jpg&quot; style=&quot;float:right&quot; /&gt; Apollo 11&lt;/h1&gt;
+
+				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
+
+				&lt;p&gt;Armstrong spent about three and a half two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+
+				&lt;h2&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt;&lt;/h2&gt;
+
+				&lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt;
+
+				&lt;blockquote&gt;
+				&lt;p&gt;One small step for [a] man, one giant leap for mankind.&lt;/p&gt;
+				&lt;/blockquote&gt;
+
+				&lt;p&gt;Apollo 11 effectively ended the &lt;a href=&quot;http://en.wikipedia.org/wiki/Space_Race&quot;&gt;Space Race&lt;/a&gt; and fulfilled a national goal proposed in 1961 by the late U.S. President &lt;a href=&quot;http://en.wikipedia.org/wiki/John_F._Kennedy&quot;&gt;John F. Kennedy&lt;/a&gt; in a speech before the United States Congress:&lt;/p&gt;
+
+				&lt;blockquote&gt;
+				&lt;p&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/p&gt;
+				&lt;/blockquote&gt;
+
+				&lt;h2&gt;Technical details&lt;/h2&gt;
+
+				&lt;table align=&quot;right&quot; border=&quot;1&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot;&gt;
+					&lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt;
+							&lt;th scope=&quot;col&quot;&gt;Astronaut&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Commander&lt;/td&gt;
+							&lt;td&gt;Neil A. Armstrong&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Command Module Pilot&lt;/td&gt;
+							&lt;td&gt;Michael Collins&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Lunar Module Pilot&lt;/td&gt;
+							&lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt;
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+
+				&lt;p&gt;Launched by a &lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href=&quot;http://en.wikipedia.org/wiki/Kennedy_Space_Center&quot;&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of &lt;a href=&quot;http://en.wikipedia.org/wiki/NASA&quot;&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt;
+
+				&lt;ol&gt;
+					&lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the only part which landed back on Earth&lt;/li&gt;
+					&lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and water&lt;/li&gt;
+					&lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt;
+				&lt;/ol&gt;
+
+				&lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Mare_Tranquillitatis&quot;&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Pacific_Ocean&quot;&gt;Pacific Ocean&lt;/a&gt; on July 24.&lt;/p&gt;
+
+				&lt;hr /&gt;
+				&lt;p&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/p&gt;
+
+			</textarea>
+
+			<div class="tip">
+				When <a href="./acf.html">content filtering is working in automatic mode</a>, toolbar configuration affects
+				what is allowed in the editor. In other words, CKEditor will only allow the type of content that
+				can be created using the available toolbar buttons and will remove disallowed elements.
+			</div>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./toolbarlocation.html">Toolbar &ndash; Toolbar Location Adjustment</a></li>
+				<li><a href="./acf.html">Content Filtering &ndash; Advanced Content Filter &ndash; Automatic Mode</a></li>
+				<li><a href="./sharedspace.html">Editor UI &ndash; Shared Toolbar and Bottom Bar</a></li>
+				<li><a href="./basicpreset.html">Editor Presets &ndash; Basic Preset</a></li>
+				<li><a href="./standardpreset.html">Editor Presets &ndash; Standard Preset</a></li>
+				<li><a href="./fullpreset.html">Editor Presets &ndash; Full Preset</a></li>
+			</ul>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					// Define the toolbar groups as it is a more accessible solution.
+					toolbarGroups: [
+						{"name":"basicstyles","groups":["basicstyles"]},
+						{"name":"links","groups":["links"]},
+						{"name":"paragraph","groups":["list","blocks"]},
+						{"name":"document","groups":["mode"]},
+						{"name":"insert","groups":["insert"]},
+						{"name":"styles","groups":["styles"]},
+						{"name":"about","groups":["about"]}
+					],
+					// Remove the redundant buttons from toolbar groups defined above.
+					removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar'
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

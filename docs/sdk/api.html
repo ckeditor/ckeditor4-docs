@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Using CKEditor API">
+	<meta name="keywords" content="API, ckeditor API, ckeditor functions, ckeditor events, ckeditor methods, editor, wysiwyg, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Using CKEditor API">
+	<title>Using CKEditor API</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Using CKEditor API <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/api">Documentation</a></h1>
+			<p>CKEditor comes with a rich API that allows developers to interact with the editor as well as provide new features for it (see for example <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/plugin_sdk_intro">Plugin SDK</a> and <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/widget_sdk_intro">Widget SDK</a>). The examples presented below show just a tiny subset of all available features that <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api">CKEditor API</a> offers.</p>
+
+			<textarea cols="100" id="editor1" name="editor1" rows="10" data-sample="1">
+				&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;.
+				You are using &lt;a href="https://ckeditor.com/"&gt;CKEditor&lt;/a&gt;.&lt;/p&gt;
+			</textarea>
+
+			<script data-sample="1">
+				// Helper function to display messages below CKEditor.
+				function ShowMessage( msg ) {
+					document.getElementById( 'eMessage' ).innerHTML = msg;
+				}
+
+				function InsertHTML() {
+					// Get the editor instance that you want to interact with.
+					var editor = CKEDITOR.instances.editor1;
+					var value = document.getElementById( 'htmlArea' ).value;
+
+					// Check the active editing mode.
+					if ( editor.mode == 'wysiwyg' )
+					{
+						// Insert HTML code.
+						// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-insertHtml
+						editor.insertHtml( value );
+					}
+					else
+						alert( 'You must be in WYSIWYG mode!' );
+				}
+
+				function InsertText() {
+					// Get the editor instance that you want to interact with.
+					var editor = CKEDITOR.instances.editor1;
+					var value = document.getElementById( 'txtArea' ).value;
+
+					// Check the active editing mode.
+					if ( editor.mode == 'wysiwyg' )
+					{
+						// Insert as plain text.
+						// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-insertText
+						editor.insertText( value );
+					}
+					else
+						alert( 'You must be in WYSIWYG mode!' );
+				}
+
+				function SetContents() {
+					// Get the editor instance that you want to interact with.
+					var editor = CKEDITOR.instances.editor1;
+					var value = document.getElementById( 'htmlArea' ).value;
+
+					// Set editor content (replace current content).
+					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-setData
+					editor.setData( value );
+				}
+
+				function GetContents() {
+					// Get the editor instance that you want to interact with.
+					var editor = CKEDITOR.instances.editor1;
+
+					// Get editor content.
+					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-getData
+					alert( editor.getData() );
+				}
+
+				function ExecuteCommand( commandName ) {
+					// Get the editor instance that you want to interact with.
+					var editor = CKEDITOR.instances.editor1;
+
+					// Check the active editing mode.
+					if ( editor.mode == 'wysiwyg' )
+					{
+						// Execute the command.
+						// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-execCommand
+						editor.execCommand( commandName );
+					}
+					else
+						alert( 'You must be in WYSIWYG mode!' );
+				}
+
+				function CheckDirty() {
+					// Get the editor instance that you want to interact with.
+					var editor = CKEDITOR.instances.editor1;
+					// Checks whether the current editor content contains changes when compared
+					// to the content loaded into the editor at startup.
+					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-checkDirty
+					alert( editor.checkDirty() );
+				}
+
+				function ResetDirty() {
+					// Get the editor instance that you want to interact with.
+					var editor = CKEDITOR.instances.editor1;
+					// Resets the "dirty state" of the editor.
+					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-resetDirty
+					editor.resetDirty();
+					alert( 'The "IsDirty" status was reset.' );
+				}
+
+				function Focus() {
+					// Get the editor instance that you want to interact with.
+					var editor = CKEDITOR.instances.editor1;
+					// Focuses the editor.
+					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-focus
+					editor.focus();
+				}
+			</script>
+
+			<script data-sample="1">
+				// Attaching event listeners to the global CKEDITOR object.
+				// The instanceReady event is fired when an instance of CKEditor has finished its initialization.
+				CKEDITOR.on( 'instanceReady', function( ev ) {
+					ShowMessage( 'Editor instance <em>' + ev.editor.name + '</em> was loaded.' );
+
+					// The editor is ready, so sample buttons can be displayed.
+					document.getElementById( 'eButtons' ).style.display = 'block';
+				});
+
+				// Replace the <textarea id="editor1"> with a CKEditor instance.
+				// A reference to the editor object is returned by CKEDITOR.replace() allowing you to work with editor instances.
+				var editor = CKEDITOR.replace( 'editor1', {
+					height: 150
+				} );
+
+				// Attaching event listeners to CKEditor instances.
+				// Refer to https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor for a list of all available events.
+				editor.on( 'focus', function( evt ) {
+					ShowMessage( 'Editor instance <em>' + this.name + '</em> <b>is focused</b>.' );
+				});
+				editor.on( 'blur', function( evt ) {
+					ShowMessage( 'Editor instance <em>' + this.name + '</em> <b>lost focus</b>.' );
+				});
+				// Helper variable to count the number of detected changes in CKEditor.
+				var changesNum = 0;
+				editor.on( 'change', function( evt ) {
+					ShowMessage( 'The number of changes in <em>' + this.name + '</em>: <b>' + ++changesNum + '</b>.' );
+				});
+			</script>
+
+			<p id="eMessage" data-sample="1"></p>
+
+			<div id="eButtons" style="display: none" data-sample="1">
+				<p>
+					<input onclick="InsertHTML();" type="button" value="Insert HTML">
+					<input onclick="SetContents();" type="button" value="Set Editor content">
+					<input onclick="GetContents();" type="button" value="Get Editor Content (HTML)">
+				</p>
+
+				<textarea cols="100" id="htmlArea" rows="3">&lt;h2&gt;Test&lt;/h2&gt;&lt;p&gt;This is some &lt;a href="/Test1.html"&gt;sample&lt;/a&gt; HTML code.&lt;/p&gt;</textarea>
+				<p>
+					<input onclick="InsertText();" type="button" value="Insert Text">
+				</p>
+				<textarea cols="100" id="txtArea" rows="3">   First line with some leading whitespaces.
+
+Second line of text preceded by two line breaks.</textarea>
+				<p>
+					<input id="exec-bold" onclick="ExecuteCommand('bold');" type="button" value="Execute the &quot;Bold&quot; Command">
+					<input id="exec-link" onclick="ExecuteCommand('link');" type="button" value="Execute the &quot;Link&quot; Command">
+					<input onclick="Focus();" type="button" value="Focus">
+					<input onclick="CheckDirty();" type="button" value="checkDirty()">
+					<input onclick="ResetDirty();" type="button" value="resetDirty()">
+				</p>
+			</div>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./saveajax.html">Saving Data &ndash; CKEditor in Ajax Applications</a></li>
+				<li><a href="./timestamp.html">Tutorials &ndash; Timestamp (Creating a Most Basic CKEditor Plugin)</a></li>
+				<li><a href="./abbr.html">Tutorials &ndash; Abbreviation (Custom Plugin with Dialog, Context Menu and ACF Support)</a></li>
+				<li><a href="./simplebox.html">Tutorials &ndash; Simple Box (Creating a Custom Widget)</a></li>
+			</ul>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Configuring the behavior of &lt;kbd&gt;Enter&lt;/kbd&gt; and &lt;kbd&gt;Shift+Enter&lt;/kbd&gt; keys.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, enter, shift, key, keystroke, break, paragraph, output, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Enter key configuration">
+	<title>Enter Key Configuration</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<script>
+		var editor;
+
+		function changeEnter() {
+			// If an editor instance exists, destroy it first.
+			if ( editor )
+				editor.destroy( true );
+
+			// Create an editor instance again, with appropriate settings.
+			editor = CKEDITOR.replace( 'editor1', {
+				height: 120,
+				enterMode: Number( document.getElementById( 'xEnter' ).value ),
+				shiftEnterMode: Number( document.getElementById( 'xShiftEnter' ).value )
+			});
+		}
+
+		window.onload = changeEnter;
+	</script>
+
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Enter Key Configuration <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_enterkey">Documentation</a></h1>
+
+			<p>
+				This sample shows how to configure the <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys
+				to perform actions specified in the
+				<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-enterMode">config.enterMode</a></code>
+				and <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-shiftEnterMode">config.shiftEnterMode</a></code>
+				settings, respectively.
+			</p>
+
+			<p>
+				You can play with different settings for the <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd>
+				keys below and then add some text in the editor. See what effect these settings have
+				by clicking the <span class="button_icon" data-icon="source" title="Source">&nbsp;</span>
+				<strong>Source</strong> toolbar button and examining the source code.
+			</p>
+
+			<div style="float: left; margin-right: 20px">
+				When <kbd>Enter</kbd> is pressed:<br>
+				<select id="xEnter" onchange="changeEnter();">
+					<option selected="selected" value="1">Create a new &lt;p&gt; (recommended)</option>
+					<option value="3">Create a new &lt;div&gt;</option>
+					<option value="2">Break the line with a &lt;br&gt;</option>
+				</select>
+			</div>
+			<div style="float: left">
+				When <kbd>Shift+Enter</kbd> is pressed:<br>
+				<select id="xShiftEnter" onchange="changeEnter();">
+					<option value="1">Create a new <code>&lt;p&gt;</code></option>
+					<option value="3">Create a new &lt;div&gt;</option>
+					<option selected="selected" value="2">Break the line with a &lt;br&gt; (recommended)</option>
+				</select>
+			</div>
+
+			<br style="clear: both">
+
+			<p>
+				<br>
+				<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1">
+					This is some sample text.
+				</textarea>
+			</p>
+
+			<div class="tip">
+
+				<p>
+					Changing the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-enterMode">Enter Mode</a>
+					setting to <code>BR</code> or <code>DIV</code> is not recommended. The default
+					<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR-property-ENTER_P">CKEDITOR.ENTER_P</a></code>
+					mode is fully supported by all editor features and plugins and is also the most correct one
+					in terms of best practices for creating web content.
+				</p>
+				<p>
+					If you want to change it to control paragraph spacing, you should use stylesheets instead. Edit the
+					<code>contents.css</code> file and set up a suitable margin value for <code>&lt;p&gt;</code>
+					elements, for example:
+<pre>p { margin: 0; }</pre>
+				</p>
+
+			</div>
+
+			<script type="template" data-sample="1">
+			&lt;script&gt;
+				CKEDITOR.replace( 'editor1', {
+					// Pressing Enter will create a new &lt;div&gt; element.
+					enterMode: CKEDITOR.ENTER_DIV,
+					// Pressing Shift+Enter will create a new &lt;p&gt; element.
+					shiftEnterMode: CKEDITOR.ENTER_P
+				} );
+			&lt;/script&gt;
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

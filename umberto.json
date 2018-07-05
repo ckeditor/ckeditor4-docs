@@ -1,285 +1,304 @@
 {
-  "name": "CKEditor 4",
-  "slug": "ckeditor4",
-  "path": "docs",
-  "github": {
+	"name": "CKEditor 4",
+	"slug": "ckeditor4",
+	"path": "docs",
+	"github": {
 	"url": "https://github.com/ckeditor/ckeditor-dev",
 	"docsUrl": "https://github.com/ckeditor/ckeditor-docs"
-  },
-  "docsearch": {
+	},
+	"docsearch": {
 	"customRanking": [
-	  {
+		{
 		"url": "api/CKEDITOR_config.html",
 		"rank": 2
-	  },
-	  {
+		},
+		{
 		"url": "api/CKEDITOR_editor.html",
 		"rank": 2
-	  },
-	  {
+		},
+		{
 		"url": "api/CKEDITOR_dom_element.html",
 		"rank": 1
-	  },
-	  {
+		},
+		{
 		"url": "api/CKEDITOR_dom_selection.html",
 		"rank": 1
-	  },
-	  {
+		},
+		{
 		"url": "api/CKEDITOR_dom_range.html",
 		"rank": 1
-	  },
-	  {
+		},
+		{
 		"url": "api/CKEDITOR_plugins_widget.html",
 		"rank": 1
-	  },
-	  {
+		},
+		{
 		"url": "guide/dev_installation.html",
 		"rank": 10
-	  },
-	  {
+		},
+		{
 		"url": "guide/dev_configuration.html",
 		"rank": 10
-	  }
-	]
-  },
-  "og": {
-	"description": "Learn how to install, integrate and configure CKEditor 4. More complex aspects, like creating plugins, widgets and skins are explained here, too. API reference and examples included."
-  },
-  "groups": [
-	{
-	  "name": "Guides",
-	  "id": "guide",
-	  "slug": "guide",
-	  "categories": [
-		{
-		  "name": "Getting Started",
-		  "id": "getting-started",
-		  "slug": "getting-started",
-		  "order": 10,
-		  "categories": [
-			{
-			  "name": "Inserting CKEditor",
-			  "id": "inserting-ckeditor",
-			  "slug": "inserting-ckeditor",
-			  "order": 70
-			}
-		  ]
-		},
-		{
-		  "name": "Advanced Installation Tasks",
-		  "id": "advanced-installation-tasks",
-		  "slug": "advanced-installation-tasks",
-		  "order": 20,
-		  "categories": [
-			{
-			  "name": "Installing Components",
-			  "id": "installing-components",
-			  "slug": "installing-components",
-			  "order": 28
-			},
-			{
-			  "name": "Upgrading",
-			  "id": "upgrading",
-			  "slug": "upgrading",
-			  "order": 32
-			},
-			{
-			  "name": "Building CKEditor",
-			  "id": "building-ckeditor",
-			  "slug": "building-ckeditor",
-			  "order": 36
-			}
-		  ]
-		},
-		{
-		  "name": "Functionality Overview",
-		  "id": "functionality-overview",
-		  "slug": "functionality-overview",
-		  "order": 30,
-		  "categories": [
-			{
-			  "name": "End-user Features",
-			  "id": "end-user-features",
-			  "slug": "end-user-features",
-			  "categories": [
-				{
-				  "name": "User Interface",
-				  "id": "user-interface",
-				  "slug": "user-interface"
-				},
-				{
-				  "name": "Editor Resizing",
-				  "id": "editor-resizing",
-				  "slug": "editor-resizing"
-				},
-				{
-				  "name": "Inserting Images",
-				  "id": "inserting-images",
-				  "slug": "inserting-images"
-				},
-				{
-				  "name": "Inserting Content",
-				  "id": "inserting-content",
-				  "slug": "inserting-content"
-				},
-				{
-				  "name": "Authoring Content",
-				  "id": "authoring-content",
-				  "slug": "authoring-content"
-				},
-				{
-				  "name": "Working with Document",
-				  "id": "working-with-document",
-				  "slug": "working-with-document"
-				},
-				{
-				  "name": "Accessibility Support",
-				  "id": "accessibility-support",
-				  "slug": "accessibility-support"
-				}
-			  ]
-			},
-			{
-			  "name": "Integration Features",
-			  "id": "integration-features",
-			  "slug": "integration-features",
-			  "categories": [
-				{
-				  "name": "Editor UI",
-				  "id": "editor-ui",
-				  "slug": "editor-ui"
-				},
-				{
-				  "name": "Toolbar",
-				  "id": "toolbar",
-				  "slug": "toolbar"
-				},
-				{
-				  "name": "API Usage",
-				  "id": "api-usage",
-				  "slug": "api-usage"
-				},
-				{
-				  "name": "Output Control",
-				  "id": "output-control",
-				  "slug": "output-control"
-				},
-				{
-				  "name": "Utilities",
-				  "id": "utilities",
-				  "slug": "utilities"
-				}
-			  ]
-			}
-		  ]
-		},
-		{
-		  "name": "Integration",
-		  "id": "integration",
-		  "slug": "integration",
-		  "order": 40,
-		  "categories": [
-			{
-			  "name": "File Manager",
-			  "id": "file-manager",
-			  "slug": "file-manager"
-			},
-			{
-			  "name": "Accessibility Checker",
-			  "id": "accessibility-checker",
-			  "slug": "accessibility-checker"
-			}
-		  ]
-		},
-		{
-		  "name": "CKEditor Deep Dive",
-		  "id": "ckeditor-deep-dive",
-		  "slug": "ckeditor-deep-dive",
-		  "order": 50,
-		  "categories": [
-			{
-			  "name": "Advanced Content Filter",
-			  "id": "advanced-content-filter",
-			  "slug": "advanced-content-filter",
-			  "order": 30
-			}
-		  ]
-		},
-		{
-		  "name": "Contributing",
-		  "id": "contributing",
-		  "slug": "contributing",
-		  "order": 60
-		},
-		{
-		  "name": "Compatibility, Compliance, License",
-		  "id": "compatibility-compliance-license",
-		  "slug": "compatibility-compliance-license",
-		  "order": 70
-		},
-		{
-		  "name": "HOWTOs",
-		  "id": "howtos",
-		  "slug": "howtos",
-		  "order": 80
-		},
-		{
-		  "name": "CKEditor 4 Plugin SDK",
-		  "id": "ckeditor-4-plugin-sdk",
-		  "slug": "ckeditor-4-plugin-sdk",
-		  "order": 90,
-		  "categories": [
-			{
-			  "name": "Simple Plugin Tutorial",
-			  "id": "simple-plugin-tutorial",
-			  "slug": "simple-plugin-tutorial",
-			  "order": 50
-			}
-		  ]
-		},
-		{
-		  "name": "CKEditor 4 Widget SDK",
-		  "id": "ckeditor-4-widget-sdk",
-		  "slug": "cke4-widget-sdk",
-		  "order": 100,
-		  "categories": [
-			{
-			  "name": "Widget Tutorial",
-			  "id": "widget-tutorial",
-			  "slug": "widget-tutorial"
-			}
-		  ]
-		},
-		{
-		  "name": "CKEditor 4 Skin SDK",
-		  "id": "ckeditor-4-skin-sdk",
-		  "slug": "ckeditor-4-skin-sdk",
-		  "order": 110,
-		  "categories": [
-			{
-			  "name": "Advanced Concepts",
-			  "id": "advanced-concepts",
-			  "slug": "advanced-concepts"
-			},
-			{
-			  "name": "Creating a Custom Skin",
-			  "id": "creating-a-custom-skin",
-			  "slug": "creating-a-custom-skin"
-			}
-		  ]
 		}
-	  ]
+	]
+	},
+	"og": {
+	"description": "Learn how to install, integrate and configure CKEditor 4. More complex aspects, like creating plugins, widgets and skins are explained here, too. API reference and examples included."
+	},
+	"groups": [
+	{
+		"name": "Guides",
+		"id": "guide",
+		"slug": "guide",
+		"categories": [
+		{
+			"name": "Getting Started",
+			"id": "getting-started",
+			"slug": "getting-started",
+			"order": 10,
+			"categories": [
+			{
+				"name": "Inserting CKEditor",
+				"id": "inserting-ckeditor",
+				"slug": "inserting-ckeditor",
+				"order": 70
+			}
+			]
+		},
+		{
+			"name": "Advanced Installation Tasks",
+			"id": "advanced-installation-tasks",
+			"slug": "advanced-installation-tasks",
+			"order": 20,
+			"categories": [
+			{
+				"name": "Installing Components",
+				"id": "installing-components",
+				"slug": "installing-components",
+				"order": 28
+			},
+			{
+				"name": "Upgrading",
+				"id": "upgrading",
+				"slug": "upgrading",
+				"order": 32
+			},
+			{
+				"name": "Building CKEditor",
+				"id": "building-ckeditor",
+				"slug": "building-ckeditor",
+				"order": 36
+			}
+			]
+		},
+		{
+			"name": "Functionality Overview",
+			"id": "functionality-overview",
+			"slug": "functionality-overview",
+			"order": 30,
+			"categories": [
+			{
+				"name": "End-user Features",
+				"id": "end-user-features",
+				"slug": "end-user-features",
+				"order": 30,
+				"categories": [
+				{
+					"name": "User Interface",
+					"id": "user-interface",
+					"slug": "user-interface",
+					"order": 20
+				},
+				{
+					"name": "Editor Resizing",
+					"id": "editor-resizing",
+					"slug": "editor-resizing",
+					"order": 40
+				},
+				{
+					"name": "Inserting Images",
+					"id": "inserting-images",
+					"slug": "inserting-images",
+					"order": 60
+				},
+				{
+					"name": "Inserting Content",
+					"id": "inserting-content",
+					"slug": "inserting-content",
+					"order": 80
+				},
+				{
+					"name": "Authoring Content",
+					"id": "authoring-content",
+					"slug": "authoring-content",
+					"order": 100
+				},
+				{
+					"name": "Working with Document",
+					"id": "working-with-document",
+					"slug": "working-with-document",
+					"order": 120
+				},
+				{
+					"name": "Accessibility Support",
+					"id": "accessibility-support",
+					"slug": "accessibility-support",
+					"order": 140
+				}
+				]
+			},
+			{
+				"name": "Integration Features",
+				"id": "integration-features",
+				"slug": "integration-features",
+				"order": 40,
+				"categories": [
+				{
+					"name": "Editor UI",
+					"id": "editor-ui",
+					"slug": "editor-ui",
+					"order": 20
+				},
+				{
+					"name": "Toolbar",
+					"id": "toolbar",
+					"slug": "toolbar",
+					"order": 40
+				},
+				{
+					"name": "API Usage",
+					"id": "api-usage",
+					"slug": "api-usage",
+					"order": 60
+				},
+				{
+					"name": "Output Control",
+					"id": "output-control",
+					"slug": "output-control",
+					"order": 80
+				},
+				{
+					"name": "Utilities",
+					"id": "utilities",
+					"slug": "utilities",
+					"order": 100
+				}
+				]
+			}
+			]
+		},
+		{
+			"name": "Integration",
+			"id": "integration",
+			"slug": "integration",
+			"order": 40,
+			"categories": [
+			{
+				"name": "File Manager",
+				"id": "file-manager",
+				"slug": "file-manager",
+				"order": 50
+			},
+			{
+				"name": "Accessibility Checker",
+				"id": "accessibility-checker",
+				"slug": "accessibility-checker",
+				"order": 50
+			}
+			]
+		},
+		{
+			"name": "CKEditor Deep Dive",
+			"id": "ckeditor-deep-dive",
+			"slug": "ckeditor-deep-dive",
+			"order": 50,
+			"categories": [
+			{
+				"name": "Advanced Content Filter",
+				"id": "advanced-content-filter",
+				"slug": "advanced-content-filter",
+				"order": 30
+			}
+			]
+		},
+		{
+			"name": "Contributing",
+			"id": "contributing",
+			"slug": "contributing",
+			"order": 60
+		},
+		{
+			"name": "Compatibility, Compliance, License",
+			"id": "compatibility-compliance-license",
+			"slug": "compatibility-compliance-license",
+			"order": 70
+		},
+		{
+			"name": "HOWTOs",
+			"id": "howtos",
+			"slug": "howtos",
+			"order": 80
+		},
+		{
+			"name": "CKEditor 4 Plugin SDK",
+			"id": "ckeditor-4-plugin-sdk",
+			"slug": "ckeditor-4-plugin-sdk",
+			"order": 90,
+			"categories": [
+			{
+				"name": "Simple Plugin Tutorial",
+				"id": "simple-plugin-tutorial",
+				"slug": "simple-plugin-tutorial",
+				"order": 50
+			}
+			]
+		},
+		{
+			"name": "CKEditor 4 Widget SDK",
+			"id": "ckeditor-4-widget-sdk",
+			"slug": "cke4-widget-sdk",
+			"order": 100,
+			"categories": [
+			{
+				"name": "Widget Tutorial",
+				"id": "widget-tutorial",
+				"slug": "widget-tutorial",
+				"order": 30
+			}
+			]
+		},
+		{
+			"name": "CKEditor 4 Skin SDK",
+			"id": "ckeditor-4-skin-sdk",
+			"slug": "ckeditor-4-skin-sdk",
+			"order": 110,
+			"categories": [
+			{
+				"name": "Advanced Concepts",
+				"id": "advanced-concepts",
+				"slug": "advanced-concepts",
+				"order": 30
+			},
+			{
+				"name": "Creating a Custom Skin",
+				"id": "creating-a-custom-skin",
+				"slug": "creating-a-custom-skin",
+				"order": 30
+			}
+			]
+		}
+		]
 	},
 	{
-	  "name": "API",
-	  "id": "api-reference",
-	  "sourceDir": "api/data",
-	  "slug": "api",
-	  "type": "jsduck",
-	  "middlewares": [
+		"name": "API",
+		"id": "api-reference",
+		"sourceDir": "api/data",
+		"slug": "api",
+		"type": "jsduck",
+		"middlewares": [
 		"relation-fixer"
-	  ],
-	  "trimLongname": false
+		],
+		"trimLongname": false
 	}
-  ]
+	]
 }

@@ -60,11 +60,13 @@ Add a style definition as described in the {@link guide/dev/howtos/styles/README
 
 The following example adds the `myClass` class to an `<img>` element. The image element will now be styled as defined in this CSS class.
 
-	{
-		name: 'Custom Image',
-		element: 'img',
-		attributes: { 'class': 'myClass' }
-	}
+```js
+{
+	name: 'Custom Image',
+	element: 'img',
+	attributes: { 'class': 'myClass' }
+}
+```
 
 For more details on the definition format and best practices on how to customize the styles please refer to the {@link guide/dev/features/styles/README Applying Styles to Editor Content} article.
 

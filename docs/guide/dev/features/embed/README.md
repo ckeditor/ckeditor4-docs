@@ -33,7 +33,7 @@ Media Embed:
 			<p>Coding session with <a href="https://twitter.com/fredck">@fredck</a>, <a href="https://twitter.com/anowodzinski">@anowodzinski</a> and Mr Carrot. <a href="http://t.co/FLV5UXpfaT">pic.twitter.com/FLV5UXpfaT</a></p>
 			&mdash; Piotrek Koszuliński (@reinmarpl) <a href="https://twitter.com/reinmarpl/status/573118615274315776">March 4, 2015</a>
 		</blockquote>
-		<script async charset="utf-8" src="//platform.twitter.com/widgets.js"/>
+		<script async charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
 	</div>
 
 Semantic Media Embed:

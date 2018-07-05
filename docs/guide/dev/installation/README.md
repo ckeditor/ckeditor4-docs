@@ -46,15 +46,15 @@ To start, create a simple HTML page with a `<textarea>` element in it. You will 
 
 See the following example:
 
-``` html
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>A Simple Page with CKEditor</title>
         <!-- Make sure the path to CKEditor is correct. -->
-        <script src="../ckeditor.js"/>
-    </meta></head>
+        <script src="../ckeditor.js"></script>
+    </head>
     <body>
         <form>
             <textarea name="editor1" id="editor1" rows="10" cols="80">

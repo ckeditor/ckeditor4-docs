@@ -56,7 +56,7 @@ Using online builder is a recommended solution, however, if you have skins devel
 
 2. **Copy** the skin files to the `skins` folder of your CKEditor installation. Each skin must be placed in a sub-folder that matches its "technical" name.
 
-	For example, the [Kama skin](https://ckeditor.com/cke4/addon/kama) would be installed into this folder: `<CKEditor folder="">/skins/kama`.
+	For example, the [Kama skin](https://ckeditor.com/cke4/addon/kama) would be installed into this folder: `<CKEditor folder>/skins/kama`.
 
 3. **Enable the skin.** Use the {@linkapi CKEDITOR.config#skin skin} setting to add the skin to your confiuration:
 

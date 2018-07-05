@@ -115,7 +115,7 @@ CKEDITOR.config.extraPlugins configuration option:
 
 <info-box info=""> Please note that <strong>since CKEditor 4.1 all editor plugins that create content should be integrated with {@link guide/dev/acf/README Advanced Content Filter} (ACF)</strong>. <br>
  To follow this guide and at the same time comply with the new CKEditor 4.1 requirements you need to either set <code>config.allowedContent = true;</code> in order to disable {@link guide/dev/deep_dive/advanced_content_filter/README content filtering} or {@link guide/plugin_sdk/integration_with_acf/README integrate your plugin with ACF}. For more information, please refer to the official {@link guide/plugin_sdk/integration_with_acf/README Advanced Content Filter integration guide}.
-</br></info-box>
+</info-box>
 
 Now load a CKEditor sample page. You should be able to see the new plugin toolbar button in the toolbar. For example:
 
@@ -208,37 +208,39 @@ the user to assign an ID to the abbreviation element.
 The code snippet presented below shows a full definition of the contents of both
 plugin tabs.
 
-	contents: [
-		{
-			id: 'tab-basic',
-			label: 'Basic Settings',
-			elements: [
-				{
-					type: 'text',
-					id: 'abbr',
-					label: 'Abbreviation',
-					validate: CKEDITOR.dialog.validate.notEmpty( "Abbreviation field cannot be empty." )
-				},
-				{
-					type: 'text',
-					id: 'title',
-					label: 'Explanation',
-					validate: CKEDITOR.dialog.validate.notEmpty( "Explanation field cannot be empty." )
-				}
-			]
-		},
-		{
-			id: 'tab-adv',
-			label: 'Advanced Settings',
-			elements: [
-				{
-					type: 'text',
-					id: 'id',
-					label: 'Id'
-				}
-			]
-		}
-	]
+```js
+contents: [
+	{
+		id: 'tab-basic',
+		label: 'Basic Settings',
+		elements: [
+			{
+				type: 'text',
+				id: 'abbr',
+				label: 'Abbreviation',
+				validate: CKEDITOR.dialog.validate.notEmpty( "Abbreviation field cannot be empty." )
+			},
+			{
+				type: 'text',
+				id: 'title',
+				label: 'Explanation',
+				validate: CKEDITOR.dialog.validate.notEmpty( "Explanation field cannot be empty." )
+			}
+		]
+	},
+	{
+		id: 'tab-adv',
+		label: 'Advanced Settings',
+		elements: [
+			{
+				type: 'text',
+				id: 'id',
+				label: 'Id'
+			}
+		]
+	}
+]
+```
 
 When you reload the editor instance and open the **Abbreviation Properties** dialog
 window, the **Basic Settings** tab will now contain two mandatory text fields.
@@ -278,19 +280,21 @@ document at the location of the cursor by using the
 Add the following `onOk` function code to your dialog window definition, below
 the code that creates the content of the dialog.
 
-	onOk: function() {
-		var dialog = this;
-		var abbr = editor.document.createElement( 'abbr' );
+```js
+onOk: function() {
+	var dialog = this;
+	var abbr = editor.document.createElement( 'abbr' );
 
-		abbr.setAttribute( 'title', dialog.getValueOf( 'tab-basic', 'title' ) );
-		abbr.setText( dialog.getValueOf( 'tab-basic', 'abbr' ) );
+	abbr.setAttribute( 'title', dialog.getValueOf( 'tab-basic', 'title' ) );
+	abbr.setText( dialog.getValueOf( 'tab-basic', 'abbr' ) );
 
-		var id = dialog.getValueOf( 'tab-adv', 'id' );
-		if ( id )
-			abbr.setAttribute( 'id', id );
+	var id = dialog.getValueOf( 'tab-adv', 'id' );
+	if ( id )
+		abbr.setAttribute( 'id', id );
 
-		editor.insertElement( abbr );
-	}
+	editor.insertElement( abbr );
+}
+```
 
 <info-box hint=""> Please note that another way to insert HTML code into CKEditor is by using the {@linkapi CKEDITOR.editor#insertHtml insertHtml} function that adds HTML code at the location of the cursor in the document: <code>editor.insertHtml( '&lt;h2>This is a sample header&lt;/h2>&lt;p>This is a sample paragraph.&lt;/p>' );</code>
 </info-box>

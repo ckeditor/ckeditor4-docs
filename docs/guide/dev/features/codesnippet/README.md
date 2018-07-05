@@ -31,7 +31,7 @@ If you use the {@link guide/dev/inline/README inline} or [div-based](https://cke
 ``` html
 <head>
     ...
-    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet"/>
+    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
 </head>
 ```
 
@@ -48,8 +48,8 @@ Attach it to the `<head>` section of your page. The following code will load the
 ``` html
 <head>
     ...
-    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet"/>
-    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"/>
+    <link href="ckeditor/plugins/codesnippet/lib/highlight/styles/default.css" rel="stylesheet">
+    <script src="ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
 </head>
 ```
 
@@ -82,7 +82,7 @@ You can customize the list of languages with syntax highlighting support by sett
 
 The following example will reduce the languages list to JavaScript and PHP only.
 
-```
+```js
 config.codeSnippet_languages = {
     javascript: 'JavaScript',
     php: 'PHP'

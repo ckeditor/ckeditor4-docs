@@ -63,24 +63,28 @@ When the file is uploaded successfully, a JSON response with the following entri
 
 **Example**
 
-	{
-		"uploaded": 1,
-		"fileName": "foo.jpg",
-		"url": "/files/foo.jpg"
-	}
+```js
+{
+	"uploaded": 1,
+	"fileName": "foo.jpg",
+	"url": "/files/foo.jpg"
+}
+```
 
 It is also possible to set an error message to indicate that the file upload was completed but some non-standard situation occurred.
 
 **Example**
 
-	{
-		"uploaded": 1,
-		"fileName": "foo(2).jpg",
-		"url": "/files/foo(2).jpg",
-		"error": {
-			"message": "A file with the same name already exists. The uploaded file was renamed to \"foo(2).jpg\"."
-		}
+```js
+{
+	"uploaded": 1,
+	"fileName": "foo(2).jpg",
+	"url": "/files/foo(2).jpg",
+	"error": {
+		"message": "A file with the same name already exists. The uploaded file was renamed to \"foo(2).jpg\"."
 	}
+}
+```
 
 #### Response: File Could Not Be Uploaded
 
@@ -89,7 +93,7 @@ When a file could not be uploaded, a JSON response with the following entries is
  * `uploaded` &ndash; Set to `0`.
  * `error.message` &ndash; The error message to display to the user.
 
-```
+```js
 {
 	"uploaded": 0,
 	"error": {

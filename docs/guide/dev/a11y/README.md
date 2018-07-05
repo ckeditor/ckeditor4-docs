@@ -86,7 +86,9 @@ The following features support using CKEditor with assistive technologies such a
 
 When the user reaches an editor instance, the screen reader announces it with the following text:
 
-	Rich text editor, editor1, press Alt+0 for help.
+```html
+Rich text editor, editor1, press Alt+0 for help.
+```
 
 The `editor1` part of the text is simply the {@linkapi CKEDITOR.config#title name that has been assigned to the editor instance} by the developer. This is even more useful when you have more than one editor instance on the same page. The website creator should make sure that editor instance names are meaningful, though, to make it really useful for the users.
 

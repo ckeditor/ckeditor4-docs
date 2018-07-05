@@ -58,9 +58,9 @@ The Shared Space feature affects a crucial editor element &mdash; its user inter
 * The [Editor Resize](https://ckeditor.com/cke4/addon/resize) plugin should be disabled as it would not work in this context.
 * Since CKEditor 4.5.5 the [Maximize](https://ckeditor.com/cke4/addon/maximize) plugin is disabled automatically in the shared space context.
 
-<pre>
+```js
 config.removePlugins = 'resize';
-</pre>
+```
 
 ## Shared Toolbar and Bottom Bar Demo
 

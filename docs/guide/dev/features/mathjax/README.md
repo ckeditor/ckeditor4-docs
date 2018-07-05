@@ -45,7 +45,7 @@ You can also use a different path, either a local resource or a different web re
 In order to display mathematical formulas on a target page, i.e. the page where content produced by CKEditor will be visible, the target page needs to [include the MathJax script](http://docs.mathjax.org/en/latest/start.html). It is advisable to use the same MathJax library version as set in the {@linkapi CKEDITOR.config.mathJaxLib CKEDITOR.config.mathJaxLib} configuration option. For example for the default setting this would be:
 
 ``` html
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"></script>
 ```
 
 ## Changing Default Class

@@ -54,7 +54,7 @@ You may add CKEditor to the dependencies list by using the `--save` flag:
 
 or by manually editing your `package.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
 
-```
+```js
 {
     "name": "my-project",
     "dependencies": {
@@ -87,7 +87,7 @@ By default CKEditor will be placed in the `bower_components/ckeditor` directory.
 
 You may add CKEditor to the dependencies list inside your `bower.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
 
-```
+```js
 {
     "name": "my-project",
     "dependencies": {
@@ -116,7 +116,7 @@ This article assumes that you have **Composer** already up and running. If this 
 
 In order to fetch the most recent CKEditor 4 build, create a `composer.json` file in the directory where you want to install CKEditor. This file should include the  following contents:
 
-```
+```js
 {
     "require": {
         "ckeditor/ckeditor": "4.*"
@@ -146,7 +146,7 @@ stable | `dev-stable` | `dev-basic/stable` | `dev-standard/stable` | `dev-full/s
 
 For example, let us consider that we want to include the `full` preset of the most up-to-date `4.3.x` release. In this case the `composer.json` file should contain the following code:
 
-```
+```js
 {
     "require": {
         "ckeditor/ckeditor": "dev-full/4.3.x"

@@ -55,9 +55,9 @@ In floating UI, used by default in inline editor:
 * The toolbar location changes dynamically to ensure that the toolbar is always available.
 * The size of the editing area is determined by the size of the content inside.
 
-<p class="note">
+<info-box info="">
 	Floating UI is not available for classic editor.
-</p>
+</info-box>
 
 If you open a page that contains an inline editor instance you will see that the toolbar is shown on demand and it moves dynamically on the page adjusting itself to the viewport and a page element that is focused.
 

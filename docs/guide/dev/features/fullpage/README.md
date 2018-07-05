@@ -35,9 +35,11 @@ With these settings in place, CKEditor will output the entire HTML page, includi
  <p>
  Since in full page mode you usually want to be able to freely enter any HTML content without limitations, default editor {@link guide/dev/acf/README content filtering} can be disabled to prevent CKEditor from removing disallowed elements.
  </p>
-<pre>
+
+```js
 config.allowedContent = true;
-</pre>
+```
+
 </info-box>
 
 The following image shows the source of a complete HTML page edited in CKEditor.

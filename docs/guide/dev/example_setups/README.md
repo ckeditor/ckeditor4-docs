@@ -152,4 +152,3 @@ Refer to the {@link guide/dev/plugins/README#through-ckbuilder Installing Plugin
 <tr><th>Number of files requested by the browser</th><td>Low</td><td>Plugins are bundled into a single <code>ckeditor.js</code> file. Icons are merged into a sprite. Language files are merged.</td></tr>
 <tr><th>Performance</th><td>High</td><td>The only problem might be in slow networks where CKEditor is hosted and/or in a misconfigured server without file compression enabled. Such setup would influence not only CKEditor but would also slow down the whole web application.</td></tr>
 </table>
-</iframe>

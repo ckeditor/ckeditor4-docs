@@ -70,11 +70,11 @@ To insert a CKEditor instance, you can use the following sample that creates a b
 
 ``` html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>CKEditor Classic Editing Sample</title>
     <!-- Make sure the path to CKEditor is correct. -->
-    <script src="/ckeditor/ckeditor.js"/>
+    <script src="/ckeditor/ckeditor.js"></script>
 </head>
 <body>
     <form method="post">
@@ -84,10 +84,10 @@ To insert a CKEditor instance, you can use the following sample that creates a b
             <script>
                 {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1' );
             </script>
-        </br></p>
+        </p>
         <p>
             <input type="submit">
-        </input></p>
+		</p>
     </form>
 </body>
 </html>

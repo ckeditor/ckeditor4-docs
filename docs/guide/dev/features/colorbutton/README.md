@@ -1,5 +1,5 @@
 ---
-category: authoring-content
+category: styling-formatting
 order: 120
 url: guide/dev_colorbutton
 menu-title: Text and Background Color

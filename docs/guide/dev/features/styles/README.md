@@ -1,5 +1,5 @@
 ---
-category: authoring-content
+category: styling-formatting
 order: 80
 url: guide/dev_styles
 menu-title: Styles Drop-down

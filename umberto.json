@@ -128,9 +128,9 @@
 					"order": 80
 				},
 				{
-					"name": "Authoring Content",
-					"id": "authoring-content",
-					"slug": "authoring-content",
+					"name": "Styling and Formatting",
+					"id": "styling-formatting",
+					"slug": "styling-formatting",
 					"order": 100
 				},
 				{

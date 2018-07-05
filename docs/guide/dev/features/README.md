@@ -23,7 +23,7 @@ This part describes features that are targeted at end users and affect their ove
 * **Editor Resizing** &ndash; Changing editor dimensions and making it automatically adjust its size to content.
 * **Inserting Images** &ndash; Adding images using three official image plugins available.
 * **Inserting Content** &ndash; Adding rich text elements such as code snippets, tables, mathematical formulas, embedded media resources etc. and pasting content from Microsoft Word and Excel.
-* **Authoring Content** &ndash; Working with text styling.
+* **Styling and Formatting** &ndash; Working with text styling.
 * **Working with Document** &ndash; Editing content source code or using document-related features such as magic line or spell checker.
 * **Accessibility Support** &ndash; Utilities that make working with CKEditor accessible for people with disabilities.
 

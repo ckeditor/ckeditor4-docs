@@ -35,8 +35,8 @@ Best to see it in examples.
 	```js
 	config.allowedContent = 'h1 h2 h3 p';
 	config.disallowedContent = 'h2 h3';
-	// Input:		<h1>Foo</h1><h2>Bar</h2><h3>Bom</h3>
-	// Filtered:	<h1>Foo</h1><p>Bar</p><p>Bom</p>
+	// Input:    <h1>Foo</h1><h2>Bar</h2><h3>Bom</h3>
+	// Filtered: <h1>Foo</h1><p>Bar</p><p>Bom</p>
 	```
 
 2. Disallowing attributes, classes, and styles.
@@ -44,8 +44,8 @@ Best to see it in examples.
 	```js
 	config.allowedContent = 'p[*]{*}(foo,bar)';
 	config.disallowedContent = 'p[on*](foo)';
-	// Input:		<p>Foo</p><p onclick="..." data-foo="1" class="foo bar">Bar</p>
-	// Filtered:	<p>Foo</p><p data-foo="1" class="bar">Bar</p>
+	// Input:    <p>Foo</p><p onclick="..." data-foo="1" class="foo bar">Bar</p>
+	// Filtered: <p>Foo</p><p data-foo="1" class="bar">Bar</p>
 	```
 
 3. Disallowing a required property.
@@ -53,8 +53,8 @@ Best to see it in examples.
 	```js
 	config.allowedContent = 'p; img[!src,alt]';
 	config.disallowedContent = 'img[src]';
-	// Input:		<p><img src="%BASE_PATH%/assets/img/..." alt="..."/></p>
-	// Filtered:	<p/>
+	// Input:    <p><img src="%BASE_PATH%/assets/img/..." alt="..."/></p>
+	// Filtered: <p/>
 	```
 
 4. Disallowing properties on all elements.
@@ -62,8 +62,8 @@ Best to see it in examples.
 	```js
 	config.allowedContent = 'p em{*}';
 	config.disallowedContent = '*{font*}';
-	// Input:		<p style="color: red; font-size: 12px"><em style="font: 'Arial'">Foo</em></p>
-	// Filtered:	<p style="color: red"><em>Foo</em></p>
+	// Input:    <p style="color: red; font-size: 12px"><em style="font: 'Arial'">Foo</em></p>
+	// Filtered: <p style="color: red"><em>Foo</em></p>
 	```
 
 5. Tweaking automatically allowed content.

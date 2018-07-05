@@ -1,5 +1,5 @@
 ---
-category: authoring-content
+category: styling-formatting
 order: 60
 url: guide/dev_removeformat
 menu-title: Removing Text Formatting

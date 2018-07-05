@@ -1,5 +1,5 @@
 ---
-category: authoring-content
+category: styling-formatting
 order: 40
 url: guide/dev_copyformatting
 menu-title: Copying Text Formatting

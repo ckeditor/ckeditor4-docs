@@ -1,5 +1,5 @@
 ---
-category: authoring-content
+category: styling-formatting
 order: 20
 url: guide/dev_basicstyles
 menu-title: Basic Text Styles

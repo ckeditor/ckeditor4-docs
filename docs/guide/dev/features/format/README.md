@@ -1,5 +1,5 @@
 ---
-category: authoring-content
+category: styling-formatting
 order: 100
 url: guide/dev_format
 menu-title: Text Formats

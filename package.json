@@ -1,6 +1,6 @@
 {
   "name": "ckeditor-docs",
-  "version": "4.10.0",
+  "version": "4.11.0",
   "description": "The official documentation of CKEditor 4. http://docs.ckeditor.com",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",

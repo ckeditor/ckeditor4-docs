@@ -6,6 +6,7 @@
 'use strict';
 
 const Umberto = require( 'umberto' );
+const buildSdk = require( './scripts/build-sdk' );
 
 module.exports = function( grunt ) {
 	const packageVersion = grunt.file.readJSON( 'package.json' ).version;
@@ -32,6 +33,14 @@ module.exports = function( grunt ) {
 			.then( done )
 			.catch( err => {
 				grunt.log.error( `Building Documentation failed: ${ err }` );
+				done();
+			} );
+	} );
+
+	grunt.registerTask( 'prepare-sdk', function() {
+		const done = this.async();
+		return buildSdk
+			.then( () => {
 				done();
 			} );
 	} );

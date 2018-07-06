@@ -40,4 +40,4 @@ By default {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-%
 	// Sets SCAYT to French.
 	config.scayt_sLang = 'fr_FR';
 
-The following language codes are currently supported by SCAYT: `en_US, en_GB, pt_BR, da_DK, nl_NL, en_CA, fi_FI, fr_FR, fr_CA, de_DE, el_GR, it_IT, nb_NO, pt_PT, es_ES, and sv_SE`. If you enter a language code that is not supported, SCAYT will fall back to the default American English setting.
+The following language codes are currently supported by SCAYT: `en_US`, `en_GB`, `pt_BR`, `da_DK`, `nl_NL`, `en_CA`, `fi_FI`, `fr_FR`, `fr_CA`, `de_DE`, `el_GR`, `it_IT`, `nb_NO`, `pt_PT`, `es_ES`, and `sv_SE`. If you enter a language code that is not supported, SCAYT will fall back to the default American English setting.

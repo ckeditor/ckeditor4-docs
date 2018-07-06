@@ -27,34 +27,36 @@ The current writer for a specific editor instance can be retrieved with the {@li
 It is possible to configure several output formatting options by setting
 the writer properties. The following example summarizes the most common properties and gives their default values:
 
-	var writer = editor.dataProcessor.writer;
+```js
+var writer = editor.dataProcessor.writer;
 
-	// The character sequence to use for every indentation step.
-	writer.indentationChars = '\t';
+// The character sequence to use for every indentation step.
+writer.indentationChars = '\t';
 
-	// The way to close self-closing tags, like <br/>.
-	writer.selfClosingEnd = ' />';
+// The way to close self-closing tags, like <br/>.
+writer.selfClosingEnd = ' />';
 
-	// The character sequence to be used for line breaks.
-	writer.lineBreakChars = '\n';
+// The character sequence to be used for line breaks.
+writer.lineBreakChars = '\n';
 
-	// The writing rules for the <p> tag.
-	writer.setRules( 'p', {
-		// Indicates that this tag causes indentation on line breaks inside of it.
-		indent: true,
+// The writing rules for the <p> tag.
+writer.setRules( 'p', {
+	// Indicates that this tag causes indentation on line breaks inside of it.
+	indent: true,
 
-		// Inserts a line break before the <p> opening tag.
-		breakBeforeOpen: true,
+	// Inserts a line break before the <p> opening tag.
+	breakBeforeOpen: true,
 
-		// Inserts a line break after the <p> opening tag.
-		breakAfterOpen: true,
+	// Inserts a line break after the <p> opening tag.
+	breakAfterOpen: true,
 
-		// Inserts a line break before the </p> closing tag.
-		breakBeforeClose: false,
+	// Inserts a line break before the </p> closing tag.
+	breakBeforeClose: false,
 
-		// Inserts a line break after the </p> closing tag.
-		breakAfterClose: true
-	});
+	// Inserts a line break after the </p> closing tag.
+	breakAfterClose: true
+} );
+```
 
 ## Setting Writer Rules
 
@@ -65,20 +67,22 @@ event, so it is safe to assume that the {@linkapi CKEDITOR.editor#dataProcessor 
 loaded and ready for changes. The following code shows an example of
 this approach used when creating an editor instance:
 
-	CKEDITOR.replace( 'editor1', {
-		on: {
-			instanceReady: function( ev ) {
-				// Output paragraphs as <p>Text</p>.
-				this.dataProcessor.writer.setRules( 'p', {
-					indent: false,
-					breakBeforeOpen: true,
-					breakAfterOpen: false,
-					breakBeforeClose: false,
-					breakAfterClose: true
-				});
-			}
+```js
+CKEDITOR.replace( 'editor1', {
+	on: {
+		instanceReady: function( ev ) {
+			// Output paragraphs as <p>Text</p>.
+			this.dataProcessor.writer.setRules( 'p', {
+				indent: false,
+				breakBeforeOpen: true,
+				breakAfterOpen: false,
+				breakBeforeClose: false,
+				breakAfterClose: true
+			});
 		}
-	});
+	}
+} );
+```
 
 Another solution is to use the {@linkapi CKEDITOR } object which will cause all editor instances to be changed:
 

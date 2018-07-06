@@ -28,7 +28,7 @@ If you have any doubts about the content of the plugin and its configuration, re
 
 <info-box info=""> Please note that <strong>since CKEditor 4.1 all editor plugins that create content should be integrated with {@link guide/dev/acf/README Advanced Content Filter} (ACF)</strong>. <br>
  To follow this guide and at the same time comply with the new CKEditor 4.1 requirements you need to either set <code>config.allowedContent = true;</code> in order to disable {@link guide/dev/deep_dive/advanced_content_filter/README content filtering} or {@link guide/plugin_sdk/integration_with_acf/README integrate your plugin with ACF}. For more information, please refer to the official {@link guide/plugin_sdk/integration_with_acf/README Advanced Content Filter integration guide}.
-</br></info-box>
+</info-box>
 
 ## Context Menu Support
 
@@ -168,41 +168,45 @@ case we will need to get the content of the `title` attribute of the `<abbr>`
 element by using the {@linkapi CKEDITOR.dom.element#getAttribute getAttribute}
 method in order to populate the field with its value by using the `setValue` method again.
 
-	elements: [
-		{
-			type: 'text',
-			id: 'abbr',
-			label: 'Abbreviation',
-			validate: CKEDITOR.dialog.validate.notEmpty( "Abbreviation cannot be empty." ),
-			setup: function( element ) {
-				this.setValue( element.getText() );
-			}
-		},
-		{
-			type: 'text',
-			id: 'title',
-			label: 'Explanation',
-			validate: CKEDITOR.dialog.validate.notEmpty( "Title cannot be empty." ),
-			setup: function( element ) {
-				this.setValue( element.getAttribute( "title" ) );
-			}
+```js
+elements: [
+	{
+		type: 'text',
+		id: 'abbr',
+		label: 'Abbreviation',
+		validate: CKEDITOR.dialog.validate.notEmpty( "Abbreviation cannot be empty." ),
+		setup: function( element ) {
+			this.setValue( element.getText() );
 		}
-	]
+	},
+	{
+		type: 'text',
+		id: 'title',
+		label: 'Explanation',
+		validate: CKEDITOR.dialog.validate.notEmpty( "Title cannot be empty." ),
+		setup: function( element ) {
+			this.setValue( element.getAttribute( "title" ) );
+		}
+	}
+]
+```
 
 Since the **Advanced Settings** tab contains a single **Id** text field that reflects
 the content of the `id` attribute, we will use the same combination of the
 `getAttribute` and `setValue` methods as in case of the **Explanation** text field.
 
-	elements: [
-		{
-			type: 'text',
-			id: 'id',
-			label: 'Id',
-			setup: function( element ) {
-				this.setValue( element.getAttribute( "id" ) );
-			}
+```js
+elements: [
+	{
+		type: 'text',
+		id: 'id',
+		label: 'Id',
+		setup: function( element ) {
+			this.setValue( element.getAttribute( "id" ) );
 		}
-	]
+	}
+]
+```
 
 When you reload the page, add an abbreviation, and then attempt to modify it by
 opening the context menu and selecting **Edit Abbreviation**, the **Abbreviation
@@ -243,15 +247,17 @@ We then use the {@linkapi CKEDITOR.dialog#commitContent commitContent} method to
 populate the element with values entered by the user. Every parameter that is
 passed to the `commitContent` method will also be passed on to the commit functions.
 
-	onOk: function() {
-		var dialog = this,
-			abbr = dialog.element;
+```js
+onOk: function() {
+	var dialog = this,
+		abbr = dialog.element;
 
-		dialog.commitContent( abbr );
+	dialog.commitContent( abbr );
 
-		if ( dialog.insertMode )
-			editor.insertElement( abbr );
-	}
+	if ( dialog.insertMode )
+		editor.insertElement( abbr );
+}
+```
 
 To make the `commitContent` method work we will however first need to define
 the {@linkapi CKEDITOR.dialog.definition.uiElement#commit commit} functions themselves.
@@ -267,32 +273,34 @@ content, although in this case we will need to set the content of the
 `title` attribute of the `<abbr>` element by using the
 {@linkapi CKEDITOR.dom.element#setAttribute setAttribute} method.
 
-	elements: [
-		{
-			type: 'text',
-			id: 'abbr',
-			label: 'Abbreviation',
-			validate: CKEDITOR.dialog.validate.notEmpty( "Abbreviation cannot be empty." ),
-			setup: function( element ) {
-				this.setValue( element.getText() );
-			},
-			commit: function( element ) {
-				element.setText( this.getValue() );
-			}
+```js
+elements: [
+	{
+		type: 'text',
+		id: 'abbr',
+		label: 'Abbreviation',
+		validate: CKEDITOR.dialog.validate.notEmpty( "Abbreviation cannot be empty." ),
+		setup: function( element ) {
+			this.setValue( element.getText() );
 		},
-		{
-			type: 'text',
-			id: 'title',
-			label: 'Explanation',
-			validate: CKEDITOR.dialog.validate.notEmpty( "Title cannot be empty." ),
-			setup: function( element ) {
-				this.setValue( element.getAttribute( "title" ) );
-			},
-			commit: function( element ) {
-				element.setAttribute( "title", this.getValue() );
-			}
+		commit: function( element ) {
+			element.setText( this.getValue() );
 		}
-	]
+	},
+	{
+		type: 'text',
+		id: 'title',
+		label: 'Explanation',
+		validate: CKEDITOR.dialog.validate.notEmpty( "Title cannot be empty." ),
+		setup: function( element ) {
+			this.setValue( element.getAttribute( "title" ) );
+		},
+		commit: function( element ) {
+			element.setAttribute( "title", this.getValue() );
+		}
+	}
+]
+```
 
 Similarly, since the **Advanced Settings** tab contains an `Id` text field that
 reflects the content of the `id` attribute, we will use the same combination
@@ -304,23 +312,25 @@ means we are editing an existing element) and the `Id` field is empty, we
 will use the {@linkapi CKEDITOR.dom.element#removeAttribute removeAttribute} method to
 delete the `id` element of an existing abbreviation.
 
-	elements: [
-		{
-			type: 'text',
-			id: 'id',
-			label: 'Id',
-			setup: function( element ) {
-				this.setValue( element.getAttribute( "id" ) );
-			},
-			commit: function ( element ) {
-				var id = this.getValue();
-				if ( id )
-					element.setAttribute( 'id', id );
-				else if ( !this.insertMode )
-					element.removeAttribute( 'id' );
-			}
+```js
+elements: [
+	{
+		type: 'text',
+		id: 'id',
+		label: 'Id',
+		setup: function( element ) {
+			this.setValue( element.getAttribute( "id" ) );
+		},
+		commit: function ( element ) {
+			var id = this.getValue();
+			if ( id )
+				element.setAttribute( 'id', id );
+			else if ( !this.insertMode )
+				element.removeAttribute( 'id' );
 		}
-	]
+	}
+]
+```
 
 ## Full Source Code
 

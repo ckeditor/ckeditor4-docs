@@ -38,10 +38,10 @@ Edit the `build-config.js` file which contains the build configuration. It inclu
 var CKBUILDER_CONFIG = {
 	// Skin name.
 	skin: '...',
-	
+
 	// Files to be ignored.
 	ignore: [ ... ],
-	
+
 	// Plugins to be included.
 	plugins: { ... }
 };
@@ -55,7 +55,9 @@ Some plugins might need others to work, but you do not have to resolve these dep
 
 Go to the command line and call the build script:
 
-	./build.sh
+``` sh
+./build.sh
+```
 
 The builder will be executed and the resulting build will be created in the `dev/builder/build` folder.
 
@@ -63,6 +65,6 @@ The builder will be executed and the resulting build will be created in the `dev
 
 The building process is handled by the command line version of [CKBuilder](https://ckeditor.com/cke4/builder). It is a powerful application that makes several enhancements to the source code: it loads the configuration file, resolves plugin dependencies, merges and minifies files, creates icon strips, and performs many other build-related tasks.
 
-For the first run, `build.sh` will need to [download CKBuilder](http://download.cksource.com/CKBuilder/) and copy it into the `dev/builder/ckbuilder/<ckbuilder version="">` folder, so an Internet connection is required. Once the file is available, no more downloads are necessary (though if possible, the script will try to perform an update on consecutive runs).
+For the first run, `build.sh` will need to [download CKBuilder](http://download.cksource.com/CKBuilder/) and copy it into the `dev/builder/ckbuilder/<ckbuilder version>` folder, so an Internet connection is required. Once the file is available, no more downloads are necessary (though if possible, the script will try to perform an update on consecutive runs).
 
 The only requirement to run CKBuilder is [Java](http://www.java.com/en/download/).

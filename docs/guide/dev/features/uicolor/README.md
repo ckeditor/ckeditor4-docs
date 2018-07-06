@@ -21,7 +21,9 @@ If you want to change the default UI color, you need to define the {@linkapi CKE
 
 For example, to change the CKEditor UI to the joyful green color that would match this article's header, you could set the following {@link guide/dev/configuration/README editor configuration}:
 
-	config.uiColor = #66AB16;
+```js
+config.uiColor = '#66AB16';
+```
 
 This will cause the editor UI to assume the provided color, as visible below.
 

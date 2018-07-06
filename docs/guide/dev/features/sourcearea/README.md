@@ -60,7 +60,9 @@ If another plugin generates CKEditor output data format other than HTML, like fo
 At the moment the only aspect of the source code view that you can configure is the `tab-size` CSS property of the source editing area. Use the {@linkapi CKEDITOR.config.sourceAreaTabSize CKEDITOR.config.sourceAreaTabSize} option to set the width of the tab character. Enter an integer
 to denote the number of spaces that the tab will contain.
 
-	config.sourceAreaTabSize = 8;
+```js
+config.sourceAreaTabSize = 8;
+```
 
 Please note this is an experimental CSS property which may not be supported in all web browsers.
 

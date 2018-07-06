@@ -72,7 +72,7 @@ The entries inside a style definition are called *the style rules*. Each rule de
 			'css-style1': 'desired value',
 			'css-style2': 'desired value',
 			...
-		}
+		},
 		attributes: {
 			'attribute-name1': 'desired value',
 			'attribute-name2': 'desired value',
@@ -106,18 +106,20 @@ Since widgets are a lot more complex structures than standard content, only clas
 
 Sample widget styles:
 
-	// Enhanced Image (https://ckeditor.com/cke4/addon/image2) style.
-	{ name: 'Banner', type: 'widget', widget: 'image', attributes: { 'class': 'bigBanner' } }
+```js
+// Enhanced Image (https://ckeditor.com/cke4/addon/image2) style.
+{ name: 'Banner', type: 'widget', widget: 'image', attributes: { 'class': 'bigBanner' } }
 
-	// Code Snippet (https://ckeditor.com/cke4/addon/codesnippet) style.
-	{ name: 'Narrow Code', type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
+// Code Snippet (https://ckeditor.com/cke4/addon/codesnippet) style.
+{ name: 'Narrow Code', type: 'widget', widget: 'codeSnippet', attributes: { 'class': 'pulledSnippet narrow' } }
 
-	// Media Embed (https://ckeditor.com/cke4/addon/embed) styles.
-	{ name: '240p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-240p' }, group: 'size' },
-	{ name: '360p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-360p' }, group: 'size' },
-	{ name: '480p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-480p' }, group: 'size' },
-	{ name: 'left', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-left' }, group: 'alignment' },
-	{ name: 'thumb', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-thumb' }, group: [ 'size', 'alignment' ] }
+// Media Embed (https://ckeditor.com/cke4/addon/embed) styles.
+{ name: '240p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-240p' }, group: 'size' },
+{ name: '360p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-360p' }, group: 'size' },
+{ name: '480p', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-480p' }, group: 'size' },
+{ name: 'left', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-left' }, group: 'alignment' },
+{ name: 'thumb', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-thumb' }, group: [ 'size', 'alignment' ] }
+```
 
 To see how this works in practice, refer to the [Widget Styles](https://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the {@link guide/dev/features/image2/README enhanced image}, {@link guide/dev/features/embed/README embedded media resources} and {@link guide/dev/features/mathjax/README mathematical formulas} widgets with additional styling.
 
@@ -149,16 +151,20 @@ This solution lets you configure the editor to use existing CSS stylesheet rules
 
 The Stylesheet Parser plugin can be fine-tuned to only take into account the CSS selectors that match the {@linkapi CKEDITOR.config.stylesheetParser_validSelectors CKEDITOR.config.stylesheetParser_validSelectors} configuration value. The default regular expression accepts all CSS rules in a form of `element.class`, but you can modify it to refer to a limited set of elements, like in the example below.
 
-	// Only add rules for <p> and <span> elements.
-	config.stylesheetParser_validSelectors = /\^(p|span)\.\w+/;
+```js
+// Only add rules for <p> and <span> elements.
+config.stylesheetParser_validSelectors = /\^(p|span)\.\w+/;
+```
 
 ### Limiting the CSS Selectors
 
 You can also further customize the Stylesheet Parser plugin by setting the {@linkapi CKEDITOR.config.stylesheetParser_skipSelectors CKEDITOR.config.stylesheetParser_skipSelectors} configuration value. The plugin will then ignore the CSS rules that match the regular expression and will not display them in the **Styles** drop-down list nor use them to output the document content. The default value excludes all rules for the `<body>` element as well as classes defined for no specific element, but you can modify it to ignore a wider set of elements, like in the example below.
 
-	// Ignore rules for <body> and <caption> elements, classes starting with "high",
-	// and any class defined for no specific element.
-	config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;
+```js
+// Ignore rules for <body> and <caption> elements, classes starting with "high",
+// and any class defined for no specific element.
+config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;
+```
 
 ## Editor Styles Demo
 

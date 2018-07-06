@@ -24,9 +24,9 @@ Thanks to the jQuery Adapter every `textarea` element can be converted into a {@
 
 In order to create editor instances, load the jQuery script file, the CKEditor core script file as well as the jQuery Adapter file, in the following order:
 
-	<script src="jquery.js"/>
-	<script src="ckeditor.js"/>
-	<script src="adapters/jquery.js"/>
+	<script src="jquery.js"></script>
+	<script src="ckeditor.js"></script>
+	<script src="adapters/jquery.js"></script>
 
 At this point you can transform elements into a rich text editor by using the {@linkapi CKEDITOR_Adapters.jQuery#ckeditor ckeditor()} method.
 
@@ -127,7 +127,7 @@ For example you can write the following HTML code:
 	<form>
 		<textarea>Lorem ipsum</textarea>
 		<input type="submit" value="Save">
-	</input></form>
+	</form>
 
 And some JavaScript code:
 

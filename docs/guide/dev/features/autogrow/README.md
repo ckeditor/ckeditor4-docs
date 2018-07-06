@@ -57,7 +57,9 @@ This will ensure no page redrawing will be needed &mdash; until you start modify
 
 An additional {@linkapi CKEDITOR.config.autoGrow_bottomSpace CKEDITOR.config.autoGrow_bottomSpace} option lets you insert some extra space that will always be added between the content and the editor bottom bar. For example, you can set it to 50 pixels in order to prevent the editor from looking too cramped.
 
-    config.autoGrow_bottomSpace = 50;
+```js
+config.autoGrow_bottomSpace = 50;
+```
 
 With this setting in place, the 50-pixel-high space below the content will always be preserved. This is visible in the sample as well as the second image above.
 

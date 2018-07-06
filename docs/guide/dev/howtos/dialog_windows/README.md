@@ -23,20 +23,22 @@ CKEditor allows you to customize dialog windows without changing the original ed
 
 In order to assign a default value to a dialog window field, use the `'default'` parameter in the dialog window {@linkapi CKEDITOR.dialog.definition.uiElement UI element definition}.
 
-	elements: [
-		{
-			type: 'text',
-			id: 'myCustomField',
-			label: 'My Custom Field',
-			'default': 'Default custom field value.'
-		},
-		{
-			type: 'checkbox',
-			id: 'myCheckbox',
-			label: 'This checkbox is selected by default.',
-			'default': true
-		}
-	]
+```js
+elements: [
+	{
+		type: 'text',
+		id: 'myCustomField',
+		label: 'My Custom Field',
+		'default': 'Default custom field value.'
+	},
+	{
+		type: 'checkbox',
+		id: 'myCheckbox',
+		label: 'This checkbox is selected by default.',
+		'default': true
+	}
+]
+```
 
 The code above creates the following UI elements in a sample dialog window tab.
 
@@ -112,13 +114,13 @@ CKEditor dialog windows can be resized by using the resizing grip located in the
 
 {@img assets/img/howtos_captionedimage_03.png The resizing grip of a CKEditor dialog window}
 
-You can disable the resizing feature completely by setting the {@linkapi CKEDITOR.dialog.definition#resizable resizable} parameter to  CKEDITOR#DIALOG_RESIZE_NONE.
+You can disable the resizing feature completely by setting the {@linkapi CKEDITOR.dialog.definition#resizable resizable} parameter to  {@linkapi CKEDITOR#DIALOG_RESIZE_NONE}.
 
 	{@linkapi CKEDITOR.on CKEDITOR.on}( 'dialogDefinition', function( ev ) {
 		ev.data.definition.resizable = {@linkapi CKEDITOR.DIALOG_RESIZE_NONE CKEDITOR.DIALOG_RESIZE_NONE};
 	});
 
-Use the CKEDITOR#DIALOG_RESIZE_WIDTH and CKEDITOR#DIALOG_RESIZE_HEIGHT values to enable resizing of a dialog window in one dimension only.
+Use the {@linkapi CKEDITOR#DIALOG_RESIZE_WIDTH} and {@linkapi CKEDITOR#DIALOG_RESIZE_HEIGHT} values to enable resizing of a dialog window in one dimension only.
 
 
 ## How Do I Remove the Ability to Resize Specific CKEditor Dialog Windows?
@@ -132,4 +134,4 @@ If you want to leave the resizing feature for some of the dialog windows and tur
 			ev.data.definition.resizable = {@linkapi CKEDITOR.DIALOG_RESIZE_HEIGHT CKEDITOR.DIALOG_RESIZE_HEIGHT};
 	});
 
-Use the CKEDITOR#DIALOG_RESIZE_WIDTH and CKEDITOR#DIALOG_RESIZE_HEIGHT values to enable resizing of a dialog window in one dimension only.
+Use the {@linkapi CKEDITOR#DIALOG_RESIZE_WIDTH} and {@linkapi CKEDITOR#DIALOG_RESIZE_HEIGHT} values to enable resizing of a dialog window in one dimension only.

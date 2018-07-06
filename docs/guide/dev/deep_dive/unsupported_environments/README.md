@@ -44,7 +44,7 @@ In CKEditor 4.5 and beyond, the {@linkapi CKEDITOR.env.isCompatible CKEDITOR.env
 
 This flag is checked only in functions creating an editor instance, like {@linkapi CKEDITOR.replace CKEDITOR.replace}, {@linkapi CKEDITOR.inline CKEDITOR.inline}, or {@linkapi CKEDITOR.appendTo CKEDITOR.appendTo} This means that the flag can be modified before creating an editor instance, but after the `<script>` tag that adds the CKEditor script to the page. For example:
 
-	<script src="ckeditor/ckeditor.js"/>
+	<script src="ckeditor/ckeditor.js"></script>
 	<script>
 		CKEDITOR.env.isCompatible = true;
 	</script>
@@ -52,7 +52,7 @@ This flag is checked only in functions creating an editor instance, like {@linka
 
 Or even later, when creating an instance:
 
-	<textarea id="editor1" ...=""/>
+	<textarea id="editor1" ...></textarea>
 	<script>
 		CKEDITOR.env.isCompatible = true;
 		CKEDITOR.replace( 'editor1' );

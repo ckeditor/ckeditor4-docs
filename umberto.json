@@ -303,9 +303,8 @@
 	{
 		"name": "SDK",
 		"id": "sdk",
-		"sourceDir": "sdk",
-		"slug": "sdk",
-		"type": "ckeditor4-sdk"
+		"sourceDir": "sdk/examples",
+		"slug": "sdk"
 	}
 	]
 }

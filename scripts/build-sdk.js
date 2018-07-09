@@ -8,9 +8,11 @@ const fs = require( 'fs' );
 const buildCkeditor = require( './tools/build-ckeditor' );
 const promisify = require( './tools/promisify' );
 
-module.exports = new Promise( () => makeFolder( path.join( process.cwd(), 'docs', 'sdk', 'vendors' ) )
+const destinationPath = path.join( process.cwd(), 'docs', 'sdk', 'examples', 'vendors' );
+
+module.exports = new Promise( () => makeFolder( destinationPath )
     .then( () => buildCkeditor( {
-        destinationPath: path.join( process.cwd(), 'docs', 'sdk', 'vendors' ),
+        destinationPath,
         dev: false
         } )
     )

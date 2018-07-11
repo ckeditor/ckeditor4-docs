@@ -301,7 +301,7 @@
 		"trimLongname": false
 	},
 	{
-		"name": "SDK",
+		"name": "Examples",
 		"id": "sdk",
 		"sourceDir": "sdk/examples",
 		"slug": "sdk"

@@ -20,12 +20,14 @@ module.exports = function( grunt ) {
 		const done = this.async();
 
 		const skipApi = grunt.option( 'skipApi' );
+		const skipSdk = grunt.option( 'skipSdk' );
 		const skipValidation = grunt.option( 'skipValidation' );
 		const dev = grunt.option( 'dev' );
 		const clean = grunt.option( 'clean' );
 
 		return Umberto.buildSingleProject( {
 			skipApi,
+			skipSdk,
 			skipValidation,
 			dev,
 			clean
@@ -38,11 +40,12 @@ module.exports = function( grunt ) {
 	} );
 
 	grunt.registerTask( 'prepare-sdk', function() {
+		if ( grunt.option( 'skipSdk' ) ) {
+			return;
+		}
 		const done = this.async();
 		return buildSdk
-			.then( () => {
-				done();
-			} );
+			.then( done );
 	} );
 
 	grunt.registerTask( 'fix-scayt-docs', function() {
@@ -59,8 +62,8 @@ module.exports = function( grunt ) {
 		done();
 	} );
 
-	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'umberto' ] );
-	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'umberto', 'connect' ] );
+	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-sdk', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-sdk', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
@@ -94,6 +97,7 @@ module.exports = function( grunt ) {
 		docs: {
 			options: {
 				skipApi: false,
+				skipSdk: false,
 				skipValidation: false,
 				dev: false,
 				clean: true
@@ -103,6 +107,7 @@ module.exports = function( grunt ) {
 		'docs-serve': {
 			options: {
 				skipApi: false,
+				skipSdk: false,
 				skipValidation: false,
 				dev: false,
 				clean: true

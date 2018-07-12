@@ -19,8 +19,9 @@ module.exports = ( { destinationPath, dev = false } ) => new Promise( ( resolve,
         return removeCkeditorFolder( path.join( destinationPath, 'ckeditor' ) )
             .then( () => linkCkeditor( destinationPath ) );
     } else {
-        return removeCkeditorFolder( path.join( destinationPath, 'ckeditor' ) ).
-            then( () => buildAndCopyCkeditor( destinationPath ) );
+        return removeCkeditorFolder( path.join( destinationPath, 'ckeditor' ) )
+            .then( () => buildAndCopyCkeditor( destinationPath ) )
+            .then( resolve );
     }
 } );
 
@@ -32,7 +33,7 @@ function linkCkeditor( destinationPath ) {
             .then( stat => {
                 if ( !stat.isDirectory() ) {
                     console.log( chalk.red( 'CKEditor folder not found. I\'m using local one.' ) );
-                    return buildAndCopyCkeditor( destinationPath );
+                    return buildAndCopyCkeditor( destinationPath )
                 } else {
                     return promisify( fs.lstat, fs )( path.join( destinationPath, 'ckeditor' ) )
                         .catch( () => {
@@ -51,14 +52,13 @@ function removeCkeditorFolder( vendorFolderPath ) {
 
 function buildAndCopyCkeditor( destinationPath ) {
     console.log( 'Building CKEditor...' );
-    buildCkeditor()
-        .then( () => copyCkeditor( destinationPath ) );
+    return buildCkeditor()
+        .then( () => copyCkeditor( destinationPath ) )
 }
 
 function buildCkeditor() {
-    // @todo check if need to switch to presets.
     return new Promise( ( resolve, reject ) => {
-        const build = spawn( path.join( process.cwd(), 'repos', 'ckeditor-dev', 'dev', 'builder', 'build.sh' ) );
+        const build = spawn( path.join( process.cwd(), 'repos', 'ckeditor-presets', 'build.sh' ), [ 'standard', 'all' ] );
         build.stdout.on( 'data', data => { console.log( data.toString().trim() ) } );
         build.on( 'close', resolve );
         build.on( 'error', reject );
@@ -66,7 +66,23 @@ function buildCkeditor() {
 }
 
 function copyCkeditor( destinationPath ) {
-    // @todo Filter `.github` folder -> make black or white list of files.
-    console.log( 'Copy build editor to destination folder.' );
-    return promisify( ncp, this )( path.join( process.cwd(), 'repos', 'ckeditor-dev', 'dev', 'builder', 'release', 'ckeditor' ), path.join( destinationPath, 'ckeditor' ) );
+    return getCkeditorVersion( process.cwd() )
+        .then( ckeditorVersion => promisify( ncp, this )( 
+            path.join( process.cwd(), 'repos', 'ckeditor-presets', 'build', ckeditorVersion, 'standard-all', 'ckeditor' ),
+            path.join( destinationPath, 'ckeditor' ) )
+        );
+}
+
+function getCkeditorVersion( basePath ) {
+    const ckeditorPath = path.join( basePath, 'repos', 'ckeditor-presets', 'ckeditor' );
+        return promisify( fs.stat, fs )( path.join( ckeditorPath, 'package.json' ) )
+            .then( status => {
+                if ( status.isFile() ) {
+                    return promisify( fs.readFile, fs)( path.join( ckeditorPath, 'package.json' ) );
+                } else {
+                    return Promise.reject();
+                }
+            } )
+            .then( data => data.toString() )
+            .then( data => JSON.parse( data ).version );
 }

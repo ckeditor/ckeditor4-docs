@@ -21,44 +21,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<!--[if lt IE 9]>
 	<script src="assets/html5shiv.min.js"></script>
 	<![endif]-->
-	<script data-sample="1">
-		var editor1, html = '';
 
-		function createEditor() {
-			if ( editor1 )
-				return;
-
-			// Create a new editor instance inside the <div id="editor"> element,
-			// setting its value to html.
-			var config = {};
-			editor1 = CKEDITOR.appendTo( 'editor1', config, html );
-
-			// Update button states.
-			document.getElementById( 'remove' ).style.display = '';
-			document.getElementById( 'create' ).style.display = 'none';
-		}
-
-		function removeEditor() {
-			if ( !editor1 )
-				return;
-
-			// Retrieve the editor content. In an Ajax application this data would be
-			// sent to the server or used in any other way.
-			html = editor1.getData();
-
-			// Update <div> with "Edited Content".
-			document.getElementById( 'editorcontent1' ).innerHTML = html;
-			// Show <div> with "Edited Content".
-			document.getElementById( 'content1' ).style.display = '';
-			// Update button states.
-			document.getElementById( 'remove' ).style.display = 'none';
-			document.getElementById( 'create' ).style.display = '';
-
-			// Destroy the editor.
-			editor1.destroy();
-			editor1 = null;
-		}
-	</script>
 	<link rel="icon" href="../template/theme/img/favicon.ico">
 </head>
 <body>
@@ -68,6 +31,44 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
+			<script data-sample="1">
+				var editor1, html = '';
+		
+				function createEditor() {
+					if ( editor1 )
+						return;
+		
+					// Create a new editor instance inside the <div id="editor"> element,
+					// setting its value to html.
+					var config = {};
+					editor1 = CKEDITOR.appendTo( 'editor1', config, html );
+		
+					// Update button states.
+					document.getElementById( 'remove' ).style.display = '';
+					document.getElementById( 'create' ).style.display = 'none';
+				}
+		
+				function removeEditor() {
+					if ( !editor1 )
+						return;
+		
+					// Retrieve the editor content. In an Ajax application this data would be
+					// sent to the server or used in any other way.
+					html = editor1.getData();
+		
+					// Update <div> with "Edited Content".
+					document.getElementById( 'editorcontent1' ).innerHTML = html;
+					// Show <div> with "Edited Content".
+					document.getElementById( 'content1' ).style.display = '';
+					// Update button states.
+					document.getElementById( 'remove' ).style.display = 'none';
+					document.getElementById( 'create' ).style.display = '';
+		
+					// Destroy the editor.
+					editor1.destroy();
+					editor1 = null;
+				}
+			</script>
 			<h1>CKEditor in Ajax Applications <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_savedata">Documentation</a></h1>
 
 			<div class="description">

@@ -17,30 +17,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<script src="assets/simplesample.js"></script>
 	<script src="assets/beautify-html.js"></script>
 	<script src="../../ckeditor-dev/ckeditor.js"></script>
-	<script data-sample="1">
-		var editor;
 
-		// The instanceReady event is fired when an instance of CKEditor has finished
-		// its initialization.
-		CKEDITOR.on( 'instanceReady', function ( ev ) {
-			editor = ev.editor;
-
-			// Show this "on" button.
-			document.getElementById( 'readOnlyOn' ).style.display = '';
-
-			// Event fired when the readOnly property changes.
-			editor.on( 'readOnly', function () {
-				document.getElementById( 'readOnlyOn' ).style.display = this.readOnly ? 'none' : '';
-				document.getElementById( 'readOnlyOff' ).style.display = this.readOnly ? '' : 'none';
-			} );
-		} );
-
-		function toggleReadOnly( isReadOnly ) {
-			// Change the read-only state of the editor.
-			// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-setReadOnly
-			editor.setReadOnly( isReadOnly );
-		}
-	</script>
 	<!--[if lt IE 9]>
 	<script src="assets/html5shiv.min.js"></script>
 	<![endif]-->
@@ -53,6 +30,30 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
+			<script data-sample="1">
+				var editor;
+		
+				// The instanceReady event is fired when an instance of CKEditor has finished
+				// its initialization.
+				CKEDITOR.on( 'instanceReady', function ( ev ) {
+					editor = ev.editor;
+		
+					// Show this "on" button.
+					document.getElementById( 'readOnlyOn' ).style.display = '';
+		
+					// Event fired when the readOnly property changes.
+					editor.on( 'readOnly', function () {
+						document.getElementById( 'readOnlyOn' ).style.display = this.readOnly ? 'none' : '';
+						document.getElementById( 'readOnlyOff' ).style.display = this.readOnly ? '' : 'none';
+					} );
+				} );
+		
+				function toggleReadOnly( isReadOnly ) {
+					// Change the read-only state of the editor.
+					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-setReadOnly
+					editor.setReadOnly( isReadOnly );
+				}
+			</script>
 			<h1>Read-Only Mode <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_readonly">Documentation</a></h1>
 
 			<p>

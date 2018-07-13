@@ -31,6 +31,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
+			<script data-sample="1" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 			<h1>Managing Content Accessibility with Accessibility Checker <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_accessibility_checker">Documentation</a></h1>
 
 			<p>
@@ -140,7 +141,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 			</ul>
 
 			<script data-sample="1">
-				CKEDITOR.plugins.addExternal( 'a11ychecker', '../../../samples/assets/plugins/a11ychecker/', 'plugin.js' );
+				CKEDITOR.plugins.addExternal( 'a11ychecker', '../../assets/plugins/a11ychecker/', 'plugin.js' );
 
 				// Performance optimization:
 				// Send a request for tests JSON file ASAP, so it's likely to be ready when the user runs Acessibility Checker.
@@ -178,10 +179,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 							'imgWithEmptyAlt'
 						]
 					},
-					contentsCss: [
-						'assets/accessibilitychecker/contents.css',
-						'../../ckeditor-dev/contents.css'
-					]
+					contentsCss: 'assets/accessibilitychecker/contents.css'
 				} );
 			</script>
 

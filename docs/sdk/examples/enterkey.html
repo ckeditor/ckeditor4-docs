@@ -21,24 +21,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<!--[if lt IE 9]>
 	<script src="assets/html5shiv.min.js"></script>
 	<![endif]-->
-	<script>
-		var editor;
 
-		function changeEnter() {
-			// If an editor instance exists, destroy it first.
-			if ( editor )
-				editor.destroy( true );
-
-			// Create an editor instance again, with appropriate settings.
-			editor = CKEDITOR.replace( 'editor1', {
-				height: 120,
-				enterMode: Number( document.getElementById( 'xEnter' ).value ),
-				shiftEnterMode: Number( document.getElementById( 'xShiftEnter' ).value )
-			});
-		}
-
-		window.onload = changeEnter;
-	</script>
 
 	<link rel="icon" href="../template/theme/img/favicon.ico">
 </head>
@@ -49,6 +32,24 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
+			<script>
+				var editor;
+		
+				function changeEnter() {
+					// If an editor instance exists, destroy it first.
+					if ( editor )
+						editor.destroy( true );
+		
+					// Create an editor instance again, with appropriate settings.
+					editor = CKEDITOR.replace( 'editor1', {
+						height: 120,
+						enterMode: Number( document.getElementById( 'xEnter' ).value ),
+						shiftEnterMode: Number( document.getElementById( 'xShiftEnter' ).value )
+					});
+				}
+		
+				window.onload = changeEnter;
+			</script>
 			<h1>Enter Key Configuration <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_enterkey">Documentation</a></h1>
 
 			<p>

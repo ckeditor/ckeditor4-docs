@@ -63,7 +63,7 @@ This article contains the list of CKEditor error codes and their explanation. Th
 
 ## editor-plugin-conflict
 
-* Location: `core/editor.js`
+* Location: `core/tools.js`
 * Description: A plugin cannot be initialized because is in conflict with another plugin.
 * Additional data:
 	* `plugin`: The name of the plugin that cannot be initialized.

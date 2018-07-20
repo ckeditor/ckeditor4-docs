@@ -61,6 +61,14 @@ This article contains the list of CKEditor error codes and their explanation. Th
 	* `plugin`: The name of the plugin that cannot be removed.
 	* `requiredBy`: The name of the plugin whose requirements block the removal.
 
+## editor-plugin-conflict
+
+* Location: `core/editor.js`
+* Description: A plugin cannot be initialized because is in conflict with another plugin.
+* Additional data:
+	* `plugin`: The name of the plugin that cannot be initialized.
+	* `replacedWith`: The name of the plugin which has been initialized instead of conflicting one.
+
 ## embed-no-provider-url
 * Location: `plugins/embed/plugin.js`
 * Description: No {@linkapi CKEDITOR.config#embed_provider embed provider URL} configured. Since CKEditor 4.7.0 this value is empty by default.

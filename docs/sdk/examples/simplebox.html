@@ -104,7 +104,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 					// Besides editor's main stylesheet load also simplebox styles.
 					// In the usual case they can be added to the main stylesheet.
-					contentsCss: 'assets/plugins/simplebox/styles/contents.css',
+					contentsCss: [ CKEDITOR.basePath + 'contents.css', 'assets/plugins/simplebox/styles/contents.css' ],
 
 					// Set height to make more content visible.
 					height: 500

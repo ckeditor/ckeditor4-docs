@@ -158,7 +158,7 @@ for each item in sequence S
 					height: 280,
 					// Adding a custom stylesheet with some additional styles for text formats.
 					// Default CKEditor styles are included as well to avoid copying default styles.
-					contentsCss: 'assets/css/format.css',
+					contentsCss: [ CKEDITOR.basePath + 'contents.css', 'assets/css/format.css' ],
 					// List of text formats available for this editor instance.
 					format_tags: 'p;h1;h2;h3;pre;div',
 					// Custom Heading 1 and Formatted format definitions.

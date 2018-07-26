@@ -12,7 +12,7 @@
 		var doc = new CKEDITOR.dom.document( document ),
 			icons = doc.find( '.button_icon' );
 
-		for ( i = 0; i < icons.count(); i++ ) {
+		for ( var i = 0; i < icons.count(); i++ ) {
 			var icon = icons.getItem( i ),
 				name = icon.getAttribute( 'data-icon' ),
 				style = CKEDITOR.skin.getIconStyle( name, ( CKEDITOR.lang.dir == 'rtl' ) );

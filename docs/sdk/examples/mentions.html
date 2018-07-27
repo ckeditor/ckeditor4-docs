@@ -32,100 +32,101 @@
 			</nav>
 			<section class="sdk-contents">
 				<style>
-						.chat {
-							width: 600px;
-						}
+					.chat {
+						width: 600px;
+					}
+			
+					.chat > .posts {
+						list-style-type: none;
+						padding: 15px;
+						margin: 0;
+						border: 1px solid #d1d1d1;
+						border-bottom: none;
+					}
+			
+					.chat > .posts li:first-child {
+						margin-bottom: 15px;
+					}
+			
+					.chat > .posts .message {
+						display: inline-block;
+						margin-left: 20px;
+						width: 80%;
+					}
+			
+					.chat > .posts .time {
+						color: #b7b7b7;
+						font-size: .9em;
+					}
+			
+					.chat > .posts .photo {
+						height: 40px;
+						vertical-align: top;
+						border-radius: 15%;
+					}
+			
+					ul.cke_autocomplete_panel {
+						width: 250px;
+					}
+			
+					ul.cke_autocomplete_panel .photo {
+						display: inline-block;
+						vertical-align: middle;
+						height: 30px;
+						border-radius: 50%;
+					}
+			
+					.bullet {
+						padding-left: 5px;
+						padding-right: 5px;
+						color: #b7b7b7;
+					}
+			
+					.cke_autocomplete_panel .username {
+						padding-left: 5px;
+					}
+			
+					.cke_autocomplete_panel .fullname {
+						padding-left: 5px;
+						color: #b7b7b7;
+					}
+			
+					.sdk-contents .cke {
+						margin: 0;
+					}
+			
+					.sdk-contents button.send {
+						width: 100px;
+						height: 35px;
+						border: none;
+						border-radius: 5px;
+						background-color: #0287D0;
+						color: #fafafa;
+						margin-top: 8px;
+						margin-bottom: 16px;
+						float: right;
+						cursor: pointer;
+					}
+			
+					.sdk-contents button.send:hover {
+						background-color: #027abc
+					}
+			
+					.sdk-contents a.mailto-user {
+						color: #b7b7b7;
+						text-decoration: underline;
+					}
+			
+					.sdk-contents a.mailto-user:hover {
+						color: #a0a0a0;
+					}
+			
+					.sdk-contents p.post-content {
+						margin: 0;
+						line-height: 19px;;
+					}
+				</style>
 				
-						.chat > .posts {
-							list-style-type: none;
-							padding: 15px;
-							margin: 0;
-							border: 1px solid #d1d1d1;
-							border-bottom: none;
-						}
-				
-						.chat > .posts li:first-child {
-							margin-bottom: 15px;
-						}
-				
-						.chat > .posts .message {
-							display: inline-block;
-							margin-left: 20px;
-							width: 80%;
-						}
-				
-						.chat > .posts .time {
-							color: #b7b7b7;
-							font-size: .9em;
-						}
-				
-						.chat > .posts .photo {
-							height: 40px;
-							vertical-align: top;
-							border-radius: 15%;
-						}
-				
-						ul.cke_autocomplete_panel {
-							width: 250px;
-						}
-				
-						ul.cke_autocomplete_panel .photo {
-							display: inline-block;
-							vertical-align: middle;
-							height: 30px;
-							border-radius: 50%;
-						}
-				
-						.bullet {
-							padding-left: 5px;
-							padding-right: 5px;
-							color: #b7b7b7;
-						}
-				
-						.cke_autocomplete_panel .username {
-							padding-left: 5px;
-						}
-				
-						.cke_autocomplete_panel .fullname {
-							padding-left: 5px;
-							color: #b7b7b7;
-						}
-				
-						.sdk-contents .cke {
-							margin: 0;
-						}
-				
-						.sdk-contents button.send {
-							width: 100px;
-							height: 35px;
-							border: none;
-							border-radius: 5px;
-							background-color: #0287D0;
-							color: #fafafa;
-							margin-top: 8px;
-							margin-bottom: 16px;
-							float: right;
-							cursor: pointer;
-						}
-				
-						.sdk-contents button.send:hover {
-							background-color: #027abc
-						}
-				
-						.sdk-contents a.mailto-user {
-							color: #b7b7b7;
-							text-decoration: underline;
-						}
-				
-						.sdk-contents a.mailto-user:hover {
-							color: #a0a0a0;
-						}
-				
-						.sdk-contents p.post-content {
-							margin: 0;
-							line-height: 19px;;
-						}
-						</style>
 				<h1>Mentions, Tags and Emoji <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_mentions.html">Documentation</a></h1>
 
 				<p>

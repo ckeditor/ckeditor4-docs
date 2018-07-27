@@ -22,104 +22,6 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<script src="assets/html5shiv.min.js"></script>
 	<![endif]-->
 	<link rel="icon" href="../template/theme/img/favicon.ico">
-	<style data-sample="1">
-		.columns {
-			background: #fff;
-			padding: 20px;
-			border: 1px solid #E7E7E7;
-		}
-		.columns:after {
-			content: "";
-			clear: both;
-			display: block;
-		}
-		.columns > .editor {
-			float: left;
-			width: 65%;
-			position: relative;
-			z-index: 1;
-		}
-		.columns > .contacts {
-			float: right;
-			width: 35%;
-			box-sizing: border-box;
-			padding: 0 0 0 20px;
-		}
-		#contactList {
-			list-style-type: none;
-			margin: 0 !important;
-			padding: 0;
-		}
-		#contactList li {
-			background: #FAFAFA;
-			margin-bottom: 1px;
-			height: 56px;
-			line-height: 56px;
-			cursor: pointer;
-		}
-		#contactList li:nth-child(2n) {
-			background: #F3F3F3;
-		}
-		#contactList li:hover {
-			background: #FFFDE3;
-			border-left: 5px solid #DCDAC1;
-			margin-left: -5px;
-		}
-		.contact {
-			padding: 0 10px;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
-		}
-		.contact .u-photo {
-			display: inline-block;
-			vertical-align: middle;
-			margin-right: 10px;
-		}
-		#editor1 .h-card {
-			background: #FFFDE3;
-			padding: 3px 6px;
-			border-bottom: 1px dashed #ccc;
-		}
-		#editor1 {
-			border: 1px solid #E7E7E7;
-			padding: 0 20px;
-			background: #fff;
-			position: relative;
-		}
-		#editor1 .h-card .p-tel {
-			font-style: italic;
-		}
-		#editor1 .h-card .p-tel::before,
-		#editor1 .h-card .p-tel::after {
-			font-style: normal;
-		}
-		#editor1 .h-card .p-tel::before {
-			content: "(☎ ";
-		}
-		#editor1 .h-card .p-tel::after {
-			content: ")";
-		}
-		#editor1 h1 {
-			text-align: center;
-		}
-		#editor1 hr {
-			border-style: dotted;
-			border-color: #DCDCDC;
-			border-width: 1px 0 0;
-		}
-	</style>
-	<!--[if lte IE 9]>
-		<style>
-			/* Because only the image is draggable: */
-			#contactList li {
-				cursor: default;
-			}
-			#contactList li img {
-				cursor: pointer
-			}
-		</style>
-	<![endif]-->
 </head>
 <body>
 	<header class="sdk-header">
@@ -128,6 +30,105 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
+			<style data-sample="1">
+				.columns {
+					background: #fff;
+					padding: 20px;
+					border: 1px solid #E7E7E7;
+				}
+				.columns:after {
+					content: "";
+					clear: both;
+					display: block;
+				}
+				.columns > .editor {
+					float: left;
+					width: 65%;
+					position: relative;
+					z-index: 1;
+				}
+				.columns > .contacts {
+					float: right;
+					width: 35%;
+					box-sizing: border-box;
+					padding: 0 0 0 20px;
+				}
+				#contactList {
+					list-style-type: none;
+					margin: 0 !important;
+					padding: 0;
+				}
+				#contactList li {
+					background: #FAFAFA;
+					margin-bottom: 1px;
+					height: 56px;
+					line-height: 56px;
+					cursor: pointer;
+				}
+				#contactList li:nth-child(2n) {
+					background: #F3F3F3;
+				}
+				#contactList li:hover {
+					background: #FFFDE3;
+					border-left: 5px solid #DCDAC1;
+					margin-left: -5px;
+				}
+				.contact {
+					padding: 0 10px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+				.contact .u-photo {
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 10px;
+				}
+				#editor1 .h-card {
+					background: #FFFDE3;
+					padding: 3px 6px;
+					border-bottom: 1px dashed #ccc;
+				}
+				#editor1 {
+					border: 1px solid #E7E7E7;
+					padding: 0 20px;
+					background: #fff;
+					position: relative;
+				}
+				#editor1 .h-card .p-tel {
+					font-style: italic;
+				}
+				#editor1 .h-card .p-tel::before,
+				#editor1 .h-card .p-tel::after {
+					font-style: normal;
+				}
+				#editor1 .h-card .p-tel::before {
+					content: "(☎ ";
+				}
+				#editor1 .h-card .p-tel::after {
+					content: ")";
+				}
+				#editor1 h1 {
+					text-align: center;
+				}
+				#editor1 hr {
+					border-style: dotted;
+					border-color: #DCDCDC;
+					border-width: 1px 0 0;
+				}
+			</style>
+			<!--[if lte IE 9]>
+				<style>
+					/* Because only the image is draggable: */
+					#contactList li {
+						cursor: default;
+					}
+					#contactList li img {
+						cursor: pointer
+					}
+				</style>
+			<![endif]-->
+			
 			<h1>Drag and Drop Integration <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_clipboard">Documentation</a></h1>
 
 			<p>The <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a> plugin (included in all CKEditor distributions) offers, among <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_drop_paste">many other features</a>, an interface to integrate drag and drop operations with your editor. It also augments and unifies incomplete native browser support for clipboard operations, which allows to achieve better and more faithful paste results.</p>

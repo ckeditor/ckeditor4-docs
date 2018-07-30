@@ -304,7 +304,113 @@
 		"name": "Examples",
 		"id": "sdk",
 		"sourceDir": "sdk/examples",
-		"slug": "sdk"
+		"slug": "sdk",
+		"categories": [
+			{
+				"name": "End-user Features",
+				"id": "sdk-end-user-features",
+				"slug": "end-user-features",
+				"categories": [
+				{
+					"name": "User Interface",
+					"id": "sdk-user-interface",
+					"slug": "user-interface"
+				},
+				{
+					"name": "Editor Resizing",
+					"id": "sdk-editor-resizing",
+					"slug": "editor-resizing"
+				},
+				{
+					"name": "Inserting Images",
+					"id": "sdk-inserting-images",
+					"slug": "inserting-images"
+				},
+				{
+					"name": "Inserting Content",
+					"id": "sdk-inserting-content",
+					"slug": "inserting-content"
+				},
+				{
+					"name": "Styling and Formatting",
+					"id": "sdk-styling-and-formatting",
+					"slug": "styling-and-formatting"
+				},
+				{
+					"name": "Authoring Content",
+					"id": "sdk-authoring-content",
+					"slug": "authoring-content"
+				},
+				{
+					"name": "Working with Document",
+					"id": "sdk-working-with-document",
+					"slug": "working-with-document"
+				},
+				{
+					"name": "Accessibility Support",
+					"id": "sdk-accessibility-support",
+					"slug": "accessibility-support"
+				}
+				]
+			},
+			{
+				"name": "Integration Features",
+				"id": "sdk-integration-features",
+				"slug": "integration-features",
+				"categories": [
+				{
+					"name": "Editor Types",
+					"id": "sdk-editor-types",
+					"slug": "editor-types"
+				},
+				{
+					"name": "Editor UI",
+					"id": "sdk-editor-ui",
+					"slug": "editor-ui"
+				},
+				{
+					"name": "Editor Presets",
+					"id": "sdk-editor-presets",
+					"slug": "editor-presets"
+				},
+				{
+					"name": "Toolbar",
+					"id": "sdk-toolbar",
+					"slug": "toolbar"
+				},
+				{
+					"name": "Content Filtering",
+					"id": "sdk-content-filtering",
+					"slug": "content-filtering"
+				},
+				{
+					"name": "Saving Data",
+					"id": "sdk-saving-data",
+					"slug": "saving-data"
+				},
+				{
+					"name": "Output Control",
+					"id": "sdk-output-control",
+					"slug": "output-control"
+				},
+				{
+					"name": "API Usage",
+					"id": "sdk-api-usage",
+					"slug": "api-usage"
+				},
+				{
+					"name": "Utilities",
+					"id": "sdk-utilities",
+					"slug": "utilities"
+				},
+				{
+					"name": "Tutorials",
+					"id": "sdk-tutorials",
+					"slug": "tutorials"
+				}
+				]
+			}
+		]
 	}
 	]
 }

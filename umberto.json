@@ -337,11 +337,6 @@
 					"slug": "styling-and-formatting"
 				},
 				{
-					"name": "Authoring Content",
-					"id": "sdk-authoring-content",
-					"slug": "authoring-content"
-				},
-				{
 					"name": "Working with Document",
 					"id": "sdk-working-with-document",
 					"slug": "working-with-document"

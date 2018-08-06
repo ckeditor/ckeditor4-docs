@@ -70,20 +70,20 @@ For licensing, see license.html or http://ckeditor.com/license.
 					editor1 = null;
 				}
 			</script>
-			<h1>CKEditor in Ajax Applications <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_savedata">Documentation</a></h1>
+			<h1>CKEditor in Ajax Applications <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_savedata.html">Documentation</a></h1>
 
 			<div class="description">
 				<p>
 					With <a href="./inline.html">inline editing</a> and possibility to create and destroy CKEditor instances dynamically, CKEditor is a perfect match for Ajax applications. Getting updated data from
 					CKEditor is easy thanks to rich JavaScript API. It is also possible to detect whenever a change is made in the editor thanks to the
-					<code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-event-change">change</a></code> event, which makes additional features like auto-saving really easy to develop.
+					<code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-change">change</a></code> event, which makes additional features like auto-saving really easy to develop.
 				</p>
 
 			</div>
 			<h2 class="editor-title">Creating and Destroying CKEditor on the Fly</h2>
 
 			<p>In this example CKEditor is created dynamically after pressing the "Create Editor" button. After pressing the "Remove Editor" button the editor content is passed to a dedicated <code>&lt;div&gt;</code> element and CKEditor is removed.</p>
-			<p>This functionality is achieved using just three simple methods: <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR-method-appendTo">CKEDITOR.appendTo()</a></code>, <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-getData">editor.getData()</a></code> and <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-destroy">editor.destroy()</a></code>.</p>
+			<p>This functionality is achieved using just three simple methods: <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-appendTo>CKEDITOR.appendTo()</a></code>, <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-getData">editor.getData()</a></code> and <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-destroy">editor.destroy()</a></code>.</p>
 			<p data-sample="1">
 				<input onclick="createEditor();" type="button" value="Create Editor" id="create">
 				<input onclick="removeEditor();" type="button" value="Remove Editor" id="remove" style="display:none">
@@ -101,7 +101,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 
 			<h2 class="editor-title">The <code>change</code> Event</h2>
 
-			<p>Whenever a change is made in the editor, CKEditor fires a <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-event-change">change</a></code> event, which makes it possible to auto-save data on the fly. In the example below the <code>change</code> event is used to mirror entered content below the editor. To see it in action, start typing in the editing area.</p>
+			<p>Whenever a change is made in the editor, CKEditor fires a <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-change">change</a></code> event, which makes it possible to auto-save data on the fly. In the example below the <code>change</code> event is used to mirror entered content below the editor. To see it in action, start typing in the editing area.</p>
 			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2">
 			</textarea>
 
@@ -118,7 +118,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					Saving data is a server-side operation and you are free to implement the save functionality on your own, in any way you like. CKEditor is a pure JavaScript component and it does not offer anything more than JavaScript methods and events to access the data so that you could save it on the server.
 				</p>
 				<p>
-					Be aware that a <strong><a href="https://ckeditor.com/cke4/addon/save">Save</a></strong> plugin for CKEditor is available. It provides the <span class="button_icon" data-icon="save" title="Save">&nbsp;</span> button, which fires a <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-event-save">save</a></code> event, but it currently works only for classic editor placed inside the <code>&lt;form&gt;</code> element. If you would like to use the <strong>Save</strong> button to save data without reloading the page, e.g. in an Ajax application using inline editor, check <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_savedata">the documentation about saving data</a>.
+					Be aware that a <strong><a href="https://ckeditor.com/cke4/addon/save">Save</a></strong> plugin for CKEditor is available. It provides the <span class="button_icon" data-icon="save" title="Save">&nbsp;</span> button, which fires a <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-save">save</a></code> event, but it currently works only for classic editor placed inside the <code>&lt;form&gt;</code> element. If you would like to use the <strong>Save</strong> button to save data without reloading the page, e.g. in an Ajax application using inline editor, check <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_savedata.html">the documentation about saving data</a>.
 				</p>
 			</div>
 

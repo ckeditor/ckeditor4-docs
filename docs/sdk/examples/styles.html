@@ -31,18 +31,18 @@ For licensing, see license.html or http://ckeditor.com/license.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
-			<h1>Applying Styles to Editor Content <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles">Documentation</a></h1>
+			<h1>Applying Styles to Editor Content <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_styles.html">Documentation</a></h1>
 
 			<p>
 				The <strong>Styles</strong> drop-down list contains styles that you can <strong>apply to editor content in order to assign semantic value</strong> to the text you are creating in CKEditor. It is provided by the <a href="https://ckeditor.com/cke4/addon/stylescombo">Styles Combo</a> plugin which by default is available in the Standard and Full distributions.
 			</p>
 			<p>
-				When the Styles Combo plugin is enabled, the <img src="assets/stylesheetparser/stylesheetparser_01.png" title="Styles" style="margin:0; display:inline-block"> button is automatically added to the toolbar. Once clicked, it opens a drop-down list with styles that can be applied to your content. The styles are <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles-section-style-types">categorized into groups</a>, depending on their target, so you can use block, inline, object and widget styles for the content that you are creating. If you want to quickly remove inline and object styles from your document, use the <span class="button_icon" data-icon="removeformat" title="Remove Format">&nbsp;</span> button provided by the <a href="./removeformat.html">Remove Format</a> plugin.
+				When the Styles Combo plugin is enabled, the <img src="assets/stylesheetparser/stylesheetparser_01.png" title="Styles" style="margin:0; display:inline-block"> button is automatically added to the toolbar. Once clicked, it opens a drop-down list with styles that can be applied to your content. The styles are <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_styles.html#style-types">categorized into groups</a>, depending on their target, so you can use block, inline, object and widget styles for the content that you are creating. If you want to quickly remove inline and object styles from your document, use the <span class="button_icon" data-icon="removeformat" title="Remove Format">&nbsp;</span> button provided by the <a href="./removeformat.html">Remove Format</a> plugin.
 			</p>
 
 			<h2>Default Styles Combo Plugin Implementation</h2>
 			<p>
-				Please note that the default styles available in the drop-down list are defined in the <code>styles.js</code> file and are just examples which will not work without the matching <code>contents.css</code> file. They will also not work in the inline editor which uses page stylesheets instead of the <code>contents.css</code> file. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles">Applying Styles to Editor Content</a> article to learn more about this feature.
+				Please note that the default styles available in the drop-down list are defined in the <code>styles.js</code> file and are just examples which will not work without the matching <code>contents.css</code> file. They will also not work in the inline editor which uses page stylesheets instead of the <code>contents.css</code> file. Refer to the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_styles.html">Applying Styles to Editor Content</a> article to learn more about this feature.
 			</p>
 			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
 				&lt;h1&gt;&lt;img alt=&quot;Saturn V carrying Apollo 11&quot; class=&quot;right&quot; src=&quot;assets/sample.jpg&quot;/&gt; Apollo 11&lt;/h1&gt; &lt;p&gt;&lt;b&gt;Apollo 11&lt;/b&gt;
@@ -76,7 +76,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 
 			<h2 id="widget-styles">Widget Styles</h2>
 			<p>
-				Widgets are special rich content units and therefore standard styles (like block or object ones) cannot be applied to them. Only styles of a special type (<code>'widget'</code>) work with widgets. The styles are defined for particular widget types and more than one style can be applied to a widget instance. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles-section-widget-styles">Widget Styles</a> section for more information.
+				Widgets are special rich content units and therefore standard styles (like block or object ones) cannot be applied to them. Only styles of a special type (<code>'widget'</code>) work with widgets. The styles are defined for particular widget types and more than one style can be applied to a widget instance. Refer to the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_styles.html#widget-styles">Widget Styles</a> section for more information.
 			</p>
 
 			<p>
@@ -122,10 +122,10 @@ For licensing, see license.html or http://ckeditor.com/license.
 
 			<h2>Stylesheet Parser Plugin</h2>
 			<p>
-				The optional <a href="https://ckeditor.com/cke4/addon/stylesheetparser">Stylesheet Parser</a> plugin fills the <strong>Styles</strong> drop-down list based on the CSS rules available in the stylesheet defined in the <code><a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-contentsCss">config.contentsCss</a></code> option.
+				The optional <a href="https://ckeditor.com/cke4/addon/stylesheetparser">Stylesheet Parser</a> plugin fills the <strong>Styles</strong> drop-down list based on the CSS rules available in the stylesheet defined in the <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-contentsCss">config.contentsCss</a></code> option.
 			</p>
 			<p>
-				A few configuration options are available to fine-tune this feature, including using regular expressions to <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-stylesheetParser_validSelectors">choose</a> or <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-stylesheetParser_skipSelectors">limit CSS selectors</a> that will be available for editor content. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_styles-section-the-stylesheet-parser-plugin">Stylesheet Parser</a> documentation to learn more about this feature.
+				A few configuration options are available to fine-tune this feature, including using regular expressions to <a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-stylesheetParser_validSelectors">choose</a> or <a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-stylesheetParser_skipSelectors">limit CSS selectors</a> that will be available for editor content. Refer to the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_styles.html#the-stylesheet-parser-plugin">Stylesheet Parser</a> documentation to learn more about this feature.
 			</p>
 			<p>
 				<strong>Note:</strong> The default styles configuration was cleared in the editor instance below. The default styles are thus not applied to editor content and the only styles available in the <strong>Styles</strong> drop-down are those coming from the document stylesheet provided in the editor configuration.

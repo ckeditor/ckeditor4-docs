@@ -31,16 +31,16 @@ For licensing, see license.html or http://ckeditor.com/license.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
-			<h1>Creating Mathematical Formulas <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_mathjax">Documentation</a></h1>
+			<h1>Creating Mathematical Formulas <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_mathjax.html">Documentation</a></h1>
 
 			<p>
-				The optional <a href="https://ckeditor.com/cke4/addon/mathjax">Mathematical Formulas</a> plugin, introduced in CKEditor 4.3, provides the MathJax <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_widgets">widget</a> which can be used to create or modify equations using TeX.
+				The optional <a href="https://ckeditor.com/cke4/addon/mathjax">Mathematical Formulas</a> plugin, introduced in CKEditor 4.3, provides the MathJax <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_widgets.html">widget</a> which can be used to create or modify equations using TeX.
 			</p>
 			<p>
-				When the Mathematical Formulas plugin is enabled and the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-mathJaxLib">path</a> to the <a href="http://www.mathjax.org/">MathJax library</a> is configured, the <span class="button_icon" data-icon="mathjax" title="Math">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Mathematics in TeX</strong> dialog window that lets you write an equation in TeX and immediately see its preview.
+				When the Mathematical Formulas plugin is enabled and the <a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-mathJaxLib">path</a> to the <a href="http://www.mathjax.org/">MathJax library</a> is configured, the <span class="button_icon" data-icon="mathjax" title="Math">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Mathematics in TeX</strong> dialog window that lets you write an equation in TeX and immediately see its preview.
 			</p>
 			<p>
-				A few configuration options are available to fine-tune this feature, including setting the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.config-cfg-mathJaxClass">default class</a> for an element that will be converted into a mathematical formulas widget. Refer to the <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/dev_mathjax">Creating Mathematical Formulas</a> article to learn more about this feature.
+				A few configuration options are available to fine-tune this feature, including setting the <a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-mathJaxClass">default class</a> for an element that will be converted into a mathematical formulas widget. Refer to the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_mathjax.html">Creating Mathematical Formulas</a> article to learn more about this feature.
 			</p>
 			<textarea cols="10" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
 				&lt;p&gt;The following equations are represented in the HTML source code as LaTeX expressions.&lt;/p&gt;&lt;h1&gt;The Cauchy-Schwarz Inequality&lt;/h1&gt;&lt;p&gt;&lt;span class=&quot;math-tex&quot;&gt;\( \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \)&lt;/span&gt;&lt;/p&gt;&lt;h1&gt;The probability of getting &lt;span class=&quot;math-tex&quot;&gt;\(k\)&lt;/span&gt; heads when flipping &lt;span class=&quot;math-tex&quot;&gt;\(n\)&lt;/span&gt; coins is&lt;/h1&gt;&lt;p&gt;&lt;span class=&quot;math-tex&quot;&gt;\(P(E) = {n \choose k} p^k (1-p)^{ n-k} \)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Finally, while displaying equations is useful for demonstration purposes, the ability to mix math and text in a paragraph is also important. This expression &lt;span class=&quot;math-tex&quot;&gt;\(\sqrt{3x-1}+(1+x)^2\)&lt;/span&gt; is an example of an inline equation.  As you see, MathJax equations can be used this way as well, without disturbing the spacing between the lines.&lt;/p&gt;

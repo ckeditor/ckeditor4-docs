@@ -30,8 +30,8 @@ For licensing, see license.html or http://ckeditor.com/license.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
-			<h1>Using CKEditor API <a class="documentation" href="https://docs.ckeditor.com/ckeditor4/docs/#!/api">Documentation</a></h1>
-			<p>CKEditor comes with a rich API that allows developers to interact with the editor as well as provide new features for it (see for example <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/plugin_sdk_intro">Plugin SDK</a> and <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/guide/widget_sdk_intro">Widget SDK</a>). The examples presented below show just a tiny subset of all available features that <a href="https://docs.ckeditor.com/ckeditor4/docs/#!/api">CKEditor API</a> offers.</p>
+			<h1>Using CKEditor API <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/api.html">Documentation</a></h1>
+			<p>CKEditor comes with a rich API that allows developers to interact with the editor as well as provide new features for it (see for example <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/plugin_sdk_intro.html">Plugin SDK</a> and <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/widget_sdk_intro.html">Widget SDK</a>). The examples presented below show just a tiny subset of all available features that <a href="https://ckeditor.com/docs/ckeditor4/latest/api.html">CKEditor API</a> offers.</p>
 
 			<textarea cols="100" id="editor1" name="editor1" rows="10" data-sample="1">
 				&lt;p&gt;This is some &lt;strong&gt;sample text&lt;/strong&gt;.
@@ -53,7 +53,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					if ( editor.mode == 'wysiwyg' )
 					{
 						// Insert HTML code.
-						// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-insertHtml
+						// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-insertHtml
 						editor.insertHtml( value );
 					}
 					else
@@ -69,7 +69,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					if ( editor.mode == 'wysiwyg' )
 					{
 						// Insert as plain text.
-						// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-insertText
+						// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-insertText
 						editor.insertText( value );
 					}
 					else
@@ -82,7 +82,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					var value = document.getElementById( 'htmlArea' ).value;
 
 					// Set editor content (replace current content).
-					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-setData
+					// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-setData
 					editor.setData( value );
 				}
 
@@ -91,7 +91,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					var editor = CKEDITOR.instances.editor1;
 
 					// Get editor content.
-					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-getData
+					// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-getData
 					alert( editor.getData() );
 				}
 
@@ -103,7 +103,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					if ( editor.mode == 'wysiwyg' )
 					{
 						// Execute the command.
-						// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-execCommand
+						// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-execCommand
 						editor.execCommand( commandName );
 					}
 					else
@@ -115,7 +115,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					var editor = CKEDITOR.instances.editor1;
 					// Checks whether the current editor content contains changes when compared
 					// to the content loaded into the editor at startup.
-					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-checkDirty
+					// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-checkDirty
 					alert( editor.checkDirty() );
 				}
 
@@ -123,7 +123,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					// Get the editor instance that you want to interact with.
 					var editor = CKEDITOR.instances.editor1;
 					// Resets the "dirty state" of the editor.
-					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-resetDirty
+					// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-resetDirty
 					editor.resetDirty();
 					alert( 'The "IsDirty" status was reset.' );
 				}
@@ -132,7 +132,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 					// Get the editor instance that you want to interact with.
 					var editor = CKEDITOR.instances.editor1;
 					// Focuses the editor.
-					// https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor-method-focus
+					// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-focus
 					editor.focus();
 				}
 			</script>
@@ -154,7 +154,7 @@ For licensing, see license.html or http://ckeditor.com/license.
 				} );
 
 				// Attaching event listeners to CKEditor instances.
-				// Refer to https://docs.ckeditor.com/ckeditor4/docs/#!/api/CKEDITOR.editor for a list of all available events.
+				// Refer to https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html for a list of all available events.
 				editor.on( 'focus', function( evt ) {
 					ShowMessage( 'Editor instance <em>' + this.name + '</em> <b>is focused</b>.' );
 				});

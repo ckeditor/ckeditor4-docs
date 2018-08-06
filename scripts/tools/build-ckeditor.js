@@ -21,7 +21,7 @@ module.exports = ( { destinationPath, dev = false } ) => new Promise( ( resolve,
     } else {
         return removeCkeditorFolder( path.join( destinationPath, 'ckeditor' ) )
             .then( () => buildAndCopyCkeditor( destinationPath ) )
-            .then( resolve );
+            .then( () => resolve() );
     }
 } );
 

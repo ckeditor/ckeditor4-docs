@@ -305,6 +305,7 @@
 		"id": "sdk",
 		"sourceDir": "sdk/examples",
 		"slug": "sdk",
+		"shortEditorContent": "<p>This is some <strong>sample text</strong>. You are using <a href=\"https://ckeditor.com/\">CKEditor</a>.</p>",
 		"categories": [
 			{
 				"name": "End-user Features",

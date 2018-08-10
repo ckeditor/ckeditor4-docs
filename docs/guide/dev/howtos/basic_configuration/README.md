@@ -44,9 +44,9 @@ Do remember to use the [online builder](https://ckeditor.com/cke4/builder) to do
 
 ## How Do I Find Code Examples Showing CKEditor Customization?
 
-[CKEditor SDK](https://sdk.ckeditor.com/) was created to present a broad range of existing features, usage scenarios and customization options for CKEditor. Each SDK sample contains a short description and references as well as one or more CKEditor instances to play with. Scroll down to the "Get Sample Source Code" of each sample to view the source code ready to copy and implement in your own solution.
+{@linksdk index CKEditor SDK} was created to present a broad range of existing features, usage scenarios and customization options for CKEditor. Each SDK sample contains a short description and references as well as one or more CKEditor instances to play with. Scroll down to the "Get Sample Source Code" of each sample to view the source code ready to copy and implement in your own solution.
 
-The figure below presents one of the CKEditor samples, [Creating Mathematical Formulas](https://sdk.ckeditor.com/samples/mathjax.html), opened in a browser.
+The figure below presents one of the CKEditor samples, {@linksdk mathjax Creating Mathematical Formulas}, opened in a browser.
 
 <img src="%BASE_PATH%/assets/img/ckeditor-SDK-sample.png" width="918" height="763" alt="One of the CKEditor samples as viewed in Firefox">
 

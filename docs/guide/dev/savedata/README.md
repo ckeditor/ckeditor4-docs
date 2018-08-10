@@ -78,5 +78,5 @@ A dedicated **[Save](https://ckeditor.com/cke4/addon/save)** plugin for CKEditor
 
 The following samples are available for getting and saving data in CKEditor:
 
-* The [Saving Data in CKEditor Replacing a Textarea](https://sdk.ckeditor.com/samples/savetextarea.html) sample shows how to save data for classic and inline editor replacing a `<textarea>` element.
-* The [CKEditor in Ajax Applications](https://sdk.ckeditor.com/samples/saveajax.html) sample shows how to dynamically create and destroy the editor and how to use the {@linkapi CKEDITOR.editor#change change} event.
+* The {@linksdk savetextarea Saving Data in CKEditor Replacing a Textarea} sample shows how to save data for classic and inline editor replacing a `<textarea>` element.
+* The {@linksdk saveajax CKEditor in Ajax Applications} sample shows how to dynamically create and destroy the editor and how to use the {@linkapi CKEDITOR.editor#change change} event.

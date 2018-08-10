@@ -149,7 +149,7 @@ Throttling is configurable by using the {@linkapi CKEDITOR.plugins.mentions.conf
 
 ## Mentions Demo
 
-See the [working "Mentions, Tags and Emoji" sample](https://sdk.ckeditor.com/samples/mentions.html) to check how mentions helps create a useful completion system for user name mentions and tags, saving your time and limiting the opportunity to make mistakes.
+See the {@linksdk mentions working "Mentions, Tags and Emoji" sample} to check how mentions helps create a useful completion system for user name mentions and tags, saving your time and limiting the opportunity to make mistakes.
 
 ## Related Features
 

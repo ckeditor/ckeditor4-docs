@@ -74,7 +74,7 @@ CKEditor will then output the color definition as `<font>` elements with `color`
 
 ## Text and Background Color Demo
 
-See the [working "Setting Text and Background Color" sample](https://sdk.ckeditor.com/samples/colorbutton.html) that showcases the usage and customization of the text and background color features.
+See the {@linksdk colorbutton working "Setting Text and Background Color" sample} that showcases the usage and customization of the text and background color features.
 
 ## Related Features
 

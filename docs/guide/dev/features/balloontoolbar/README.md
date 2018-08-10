@@ -66,4 +66,4 @@ It is possible to use low level API to control a Balloon Toolbar directly, in su
 
 ## Balloon Toolbar Demo
 
-See the ["Balloon Toolbar" sample](https://sdk.ckeditor.com/samples/balloontoolbar.html) that shows an example of Balloon Toolbar usage.
+See the {@linksdk balloontoolbar "Balloon Toolbar" sample} that shows an example of Balloon Toolbar usage.

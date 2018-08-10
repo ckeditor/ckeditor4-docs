@@ -60,4 +60,4 @@ You need to hover your mouse over the column border to see the cursor change to 
 
 ## Table Support Demo
 
-See the [working "Table Support with Column Resizing" sample](https://sdk.ckeditor.com/samples/table.html) that showcases CKEditor support for creating and editing tables, including table column resizing with your mouse.
+See the {@linksdk table working "Table Support with Column Resizing" sample} that showcases CKEditor support for creating and editing tables, including table column resizing with your mouse.

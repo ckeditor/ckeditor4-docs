@@ -46,7 +46,7 @@ will look like below after pasting to CKEditor with the [Paste from Word](https:
 
 ## Paste from Excel Demo
 
-See the [working "Pasting content from Microsoft Excel" sample](https://sdk.ckeditor.com/samples/pastefromexcel.html) that showcases the using the Paste from Word plugin to paste Excel content.
+See the {@linksdk pastefromexcel working "Pasting content from Microsoft Excel" sample} that showcases the using the Paste from Word plugin to paste Excel content.
 
 ## Related Features
 

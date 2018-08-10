@@ -69,4 +69,4 @@ The {@linkapi CKEDITOR.config.magicline_tabuList CKEDITOR.config.magicline_tabuL
 
 ## Magic Line Demo
 
-See the [working "Magic Line" sample](https://sdk.ckeditor.com/samples/magicline.html) that showcases how Magic Line helps solve issues with cursor placement before or after elements such as nested tables, `<div>` elements, adjacent lists, or multiple horizontal rules.
+See the {@linksdk magicline working "Magic Line" sample} that showcases how Magic Line helps solve issues with cursor placement before or after elements such as nested tables, `<div>` elements, adjacent lists, or multiple horizontal rules.

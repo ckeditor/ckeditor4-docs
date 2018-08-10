@@ -52,7 +52,7 @@ The following features will make it possible for people with special needs to us
 
 ## Accessibility Features Overview
 
-The following section describes some of the most important accessibility-related features that are available in CKEditor. You can try them out on the [working "Accessibility Support and Keyboard Shortcuts" sample](https://sdk.ckeditor.com/samples/accessibility.html) or any other applicable demos listed below.
+The following section describes some of the most important accessibility-related features that are available in CKEditor. You can try them out on the {@linksdk accessibility working "Accessibility Support and Keyboard Shortcuts" sample} or any other applicable demos listed below.
 
 ### Keyboard Access
 
@@ -60,7 +60,7 @@ The following features make working with CKEditor through standard keyboard easy
 
 #### Reaching the Editor on the Page
 
-CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. It can be reached and exited by using the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keyboard shortcuts that are commonly used for navigating between page elements. Read more {@link guide/dev/features/tabindex/README here} and see the [working demo](https://sdk.ckeditor.com/samples/tabindex.html) here.
+CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. It can be reached and exited by using the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keyboard shortcuts that are commonly used for navigating between page elements. Read more {@link guide/dev/features/tabindex/README here} and see the {@linksdk tabindex working demo} here.
 
 #### Keyboard Navigation
 
@@ -76,7 +76,7 @@ Additionally, for CKEditor 4.6 and later, all keyboard shortcuts available for a
 
 {@img assets/img/keyboardshortcuts_01.png Keyboard shortcuts visible in the editor context menu}
 
-You can also try out the [working demo](https://sdk.ckeditor.com/samples/accessibility.html). The editor usage through the keyboard is most intuitive and as straightforward as possible.
+You can also try out the {@linksdk accessibility working demo}. The editor usage through the keyboard is most intuitive and as straightforward as possible.
 
 ### Assistive Technology Support
 
@@ -136,18 +136,18 @@ The following features can be used by developers to ensure that content created 
 
 #### Accessibility Checker
 
-The innovative {@link guide/dev/features/accessibility_checker/README Accessibility Checker} tool lets you inspect the accessibility level of content created in the editor and fix reported issues, often fully automatically. It is a **must-have addon** for government institutions and companies that are often required by law to ensure the content they produce meets accessibility standards. See the [working demo](https://sdk.ckeditor.com/samples/accessibilitychecker.html) and get the plugin [here](https://ckeditor.com/cke4/addon/a11ychecker).
+The innovative {@link guide/dev/features/accessibility_checker/README Accessibility Checker} tool lets you inspect the accessibility level of content created in the editor and fix reported issues, often fully automatically. It is a **must-have addon** for government institutions and companies that are often required by law to ensure the content they produce meets accessibility standards. See the {@linksdk accessibilitychecker working demo} and get the plugin [here](https://ckeditor.com/cke4/addon/a11ychecker).
 
 #### Setting Language of Parts for Editor Content
 
-The optional Language plugin, introduced in CKEditor 4.3, implements the [WCAG 3.1.2 Language of Parts](http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) specification. It lets you assign one of the pre-configured languages to a text selection. See the [working demo](https://sdk.ckeditor.com/samples/language.html) and get the plugin [here](https://ckeditor.com/cke4/addon/language).
+The optional Language plugin, introduced in CKEditor 4.3, implements the [WCAG 3.1.2 Language of Parts](http://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) specification. It lets you assign one of the pre-configured languages to a text selection. See the {@linksdk language working demo} and get the plugin [here](https://ckeditor.com/cke4/addon/language).
 
 ## Accessibility Features Demos
 
 See the following working samples to check some accessibility-related features of CKEditor:
 
-* The ["Accessibility Support and Keyboard Shortcuts" sample](https://sdk.ckeditor.com/samples/accessibility.html) showcases such features as the Accessibility Help dialog or the usage of keyboard shortcuts.
-* The ["Accessibility Checker" sample](https://sdk.ckeditor.com/samples/accessibilitychecker.html) shows how to detect and fix accessibility issues in your editor content.
+* The {@linksdk accessibility "Accessibility Support and Keyboard Shortcuts" sample} showcases such features as the Accessibility Help dialog or the usage of keyboard shortcuts.
+* The {@linksdk accessibilitychecker "Accessibility Checker" sample} shows how to detect and fix accessibility issues in your editor content.
 
 ## Related Features
 

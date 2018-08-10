@@ -51,7 +51,7 @@ Easy Image allows for changing the default alternative text for the image. Provi
 
 ## Easy Image Demo
 
-See the [working "Easy Image Plugin" sample](https://sdk.ckeditor.com/samples/easyimage.html) that showcases the Easy Image plugin with its uploading, captioning and custom styles.
+See the {@linksdk easyimage working "Easy Image Plugin" sample} that showcases the Easy Image plugin with its uploading, captioning and custom styles.
 
 ## Related Features
 

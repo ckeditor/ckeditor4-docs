@@ -16,7 +16,7 @@ If you feel you found an issue in CKEditor, we will be grateful for letting us k
 
 ## Reproduce on Demo Page
 
-To eliminate the chance that the issue might be caused by some third-party software or your customizations, try to reproduce the issue on CKEditor samples in [CKEditor SDK](https://sdk.ckeditor.com/samples/standardpreset.html) first.
+To eliminate the chance that the issue might be caused by some third-party software or your customizations, try to reproduce the issue on CKEditor samples in {@linksdk standardpreset CKEditor SDK} first.
 
 CKEditor SDK samples are always running the latest editor version. Please note that if the problem was fixed in one of the releases that succeeded the version you are using, you will need to upgrade your CKEditor installation as we do not backport fixes.
 

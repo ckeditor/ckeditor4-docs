@@ -107,7 +107,7 @@ Screen readers will announce each of the toolbar groups by using either their re
 
 ## Custom Toolbar Demo 
 
-See the [working "Custom Editor Toolbar" sample](https://sdk.ckeditor.com/samples/toolbar.html) that showcases an editor instance with a one-row toolbar set to include just a few most relevant editing features.
+See the {@linksdk toolbar working "Custom Editor Toolbar" sample} that showcases an editor instance with a one-row toolbar set to include just a few most relevant editing features.
 
 ## Related Features
 

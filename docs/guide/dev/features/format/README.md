@@ -86,7 +86,7 @@ Remember that depending on your use case, the CSS classes for text formats need 
 
 ## Block-Level Text Formats Demo
 
-See the [working "Applying Block-Level Text Formats" sample](https://sdk.ckeditor.com/samples/format.html) that showcases the usage and customization of basic text formatting.
+See the {@linksdk format working "Applying Block-Level Text Formats" sample} that showcases the usage and customization of basic text formatting.
 
 ## Related Features
 

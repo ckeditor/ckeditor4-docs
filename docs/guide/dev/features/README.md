@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # CKEditor Functionality Overview
 
-This section presents a whole variety of features that CKEditor has to offer. It is complemented by [**CKEditor SDK**](https://sdk.ckeditor.com/), an awesome collection of **working editor samples** that present all concepts discussed here and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!
+This section presents a whole variety of features that CKEditor has to offer. It is complemented by {@linksdk index **CKEditor SDK**}, an awesome collection of **working editor samples** that present all concepts discussed here and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!
 
 The Functionality Overview section is divided into two parts, **End-user Features** and **Integration Features**.
 

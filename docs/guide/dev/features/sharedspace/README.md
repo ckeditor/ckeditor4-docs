@@ -64,7 +64,7 @@ config.removePlugins = 'resize';
 
 ## Shared Toolbar and Bottom Bar Demo
 
-See the [working "Shared Toolbar and Bottom Bar" sample](https://sdk.ckeditor.com/samples/sharedspace.html) that showcases how multiple editor instances can share the same toolbar and bottom bar.
+See the {@linksdk sharedspace working "Shared Toolbar and Bottom Bar" sample} that showcases how multiple editor instances can share the same toolbar and bottom bar.
 
 ## Related Features
 

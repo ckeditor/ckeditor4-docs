@@ -50,7 +50,7 @@ There are a few scenarios where CKEditor seems to be just the tool that you need
 
 * CKEditor is not a tool that will let you input invalid HTML code. CKEditor abides by W3C standards so it will modify code if it is invalid.
 
-At the end of the day, **CKEditor is an editor &mdash; nothing more, nothing less**. Visit the [CKEditor SDK](https://sdk.ckeditor.com/) to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
+At the end of the day, **CKEditor is an editor &mdash; nothing more, nothing less**. Visit the {@linksdk index CKEditor SDK} to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
 
 ## How CKEditor Works
 

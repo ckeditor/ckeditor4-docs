@@ -14,7 +14,7 @@ For licensing, see LICENSE.md.
 
 Classic editing is still probably the most common way to use CKEditor. In this usage scenario the editor is most often represented by a toolbar and an editing area placed in a specific position on the page, usually as a part of a form that you use to submit some content to the server. Sometimes it is also called "framed editing", because in this case the editor creates a temporary `<iframe>` element for itself.
 
-This method is used in the {@link guide/dev/installation/README#adding-ckeditor-to-your-page Quick Start Guide} example. To try it out, see also the [classic editing demo](https://sdk.ckeditor.com/samples/classic.html).
+This method is used in the {@link guide/dev/installation/README#adding-ckeditor-to-your-page Quick Start Guide} example. To try it out, see also the {@linksdk classic classic editing demo}.
 
 <img src="%BASE_PATH%/assets/img/classic_example.png" alt="Classic editor example">
 
@@ -95,7 +95,7 @@ To insert a CKEditor instance, you can use the following sample that creates a b
 
 ## Classic Editing Demo
 
-See the [working "Classic Editor" sample](https://sdk.ckeditor.com/samples/classic.html) that showcases a few usage scenarios for classic editing.
+See the {@linksdk classic working "Classic Editor" sample} that showcases a few usage scenarios for classic editing.
 
 ## Further Reading
 

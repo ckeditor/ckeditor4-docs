@@ -30,4 +30,4 @@ Learning by example is always the best idea, so check our **plugin tutorials** t
  1. **{@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter}** &ndash; Learn how to implement Advanced Content Filter support in your plugins.
  1. **{@link guide/plugin_sdk/styles/README Plugin Stylesheets}** &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
  1. **{@linkapi CKEDITOR.pluginDefinition Plugin Definition API}** &ndash; Detailed description of the plugin definition.
- 1. **Live Demos** &ndash; See the **working demos** of the custom [Timestamp](https://sdk.ckeditor.com/samples/timestamp.html) and [Abbreviation](https://sdk.ckeditor.com/samples/abbr.html) plugins created in the tutorials live in action in CKEditor SDK.
+ 1. **Live Demos** &ndash; See the **working demos** of the custom {@linksdk timestamp Timestamp} and {@linksdk abbr Abbreviation} plugins created in the tutorials live in action in CKEditor SDK.

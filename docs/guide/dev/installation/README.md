@@ -88,7 +88,7 @@ Go ahead and play a bit more with the sample; try to change your configuration a
 1. Get familiar with {@link guide/dev/acf/README Advanced Content Filter}. This is a useful tool that adjusts the content inserted into CKEditor to the features that are enabled and filters out disallowed content.
 1. {@link guide/dev/features/toolbar/README Modify your toolbar} to only include the features that you need. You can find the useful visual toolbar configurator directly in your editor sample.
 1. Learn about CKEditor features in the {@link guide/dev/features/README Functionality Overview} section.
-1. Visit the [CKEditor SDK](http://sdk.ckeditor.com) to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.
+1. Visit the {@linksdk index CKEditor SDK} to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.
 1. Browse the [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) for some additional plugins or skins.
 1. Use [online builder](https://ckeditor.com/cke4/builder) to create your custom CKEditor build.
 1. Browse the {@link guide/index Developer's Guide} for some further ideas on what to do with CKEditor and join the CKEditor community at [Stack Overflow](http://stackoverflow.com/questions/tagged/ckeditors) to discuss all things CKEditor with fellow developers!

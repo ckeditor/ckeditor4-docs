@@ -107,7 +107,7 @@ var setupOptimizationsCalculator = ( function() {
 			<p class="sdk-col">Please wait while image is being processed…</p>';
 			container.appendChild( requestContainer );
 
-			xhr.open( 'POST', 'easyimage.php' );
+			xhr.open( 'POST', 'https://d1.ckeditor.com/easyimage/index.php' );
 			xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
 			xhr.send( 'imgs=' + encodeURIComponent( JSON.stringify( loader.responseData.response ) ) );
 

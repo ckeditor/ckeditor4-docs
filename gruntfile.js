@@ -32,7 +32,7 @@ module.exports = function( grunt ) {
 			dev,
 			clean
 		} )
-			.then( done )
+			.then( () => { done() } )
 			.catch( err => {
 				grunt.log.error( `Building Documentation failed: ${ err }` );
 				done();

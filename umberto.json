@@ -311,41 +311,49 @@
 				"name": "End-user Features",
 				"id": "sdk-end-user-features",
 				"slug": "end-user-features",
+				"order": 10,
 				"categories": [
 				{
 					"name": "User Interface",
 					"id": "sdk-user-interface",
-					"slug": "user-interface"
+					"slug": "user-interface",
+					"order": 10
 				},
 				{
 					"name": "Editor Resizing",
 					"id": "sdk-editor-resizing",
-					"slug": "editor-resizing"
+					"slug": "editor-resizing",
+					"order": 20
 				},
 				{
 					"name": "Inserting Images",
 					"id": "sdk-inserting-images",
-					"slug": "inserting-images"
+					"slug": "inserting-images",
+					"order": 30
 				},
 				{
 					"name": "Inserting Content",
 					"id": "sdk-inserting-content",
-					"slug": "inserting-content"
+					"slug": "inserting-content",
+					"order": 40
 				},
 				{
 					"name": "Styling and Formatting",
 					"id": "sdk-styling-and-formatting",
-					"slug": "styling-and-formatting"
+					"slug": "styling-and-formatting",
+					"order": 50
 				},
 				{
 					"name": "Working with Document",
 					"id": "sdk-working-with-document",
-					"slug": "working-with-document"
+					"slug": "working-with-document",
+					"order": 60
 				},
 				{
 					"name": "Accessibility Support",
 					"id": "sdk-accessibility-support",
-					"slug": "accessibility-support"
+					"slug": "accessibility-support",
+					"order": 70
 				}
 				]
 			},
@@ -353,56 +361,67 @@
 				"name": "Integration Features",
 				"id": "sdk-integration-features",
 				"slug": "integration-features",
+				"order": 20,
 				"categories": [
 				{
 					"name": "Editor Types",
 					"id": "sdk-editor-types",
-					"slug": "editor-types"
+					"slug": "editor-types",
+					"order": 10
 				},
 				{
 					"name": "Editor UI",
 					"id": "sdk-editor-ui",
-					"slug": "editor-ui"
+					"slug": "editor-ui",
+					"order": 20
 				},
 				{
 					"name": "Editor Presets",
 					"id": "sdk-editor-presets",
-					"slug": "editor-presets"
+					"slug": "editor-presets",
+					"order": 30
 				},
 				{
 					"name": "Toolbar",
 					"id": "sdk-toolbar",
-					"slug": "toolbar"
+					"slug": "toolbar",
+					"order": 40
 				},
 				{
 					"name": "Content Filtering",
 					"id": "sdk-content-filtering",
-					"slug": "content-filtering"
+					"slug": "content-filtering",
+					"order": 50
 				},
 				{
 					"name": "Saving Data",
 					"id": "sdk-saving-data",
-					"slug": "saving-data"
+					"slug": "saving-data",
+					"order": 60
 				},
 				{
 					"name": "Output Control",
 					"id": "sdk-output-control",
-					"slug": "output-control"
+					"slug": "output-control",
+					"order": 70
 				},
 				{
 					"name": "API Usage",
 					"id": "sdk-api-usage",
-					"slug": "api-usage"
+					"slug": "api-usage",
+					"order": 80
 				},
 				{
 					"name": "Utilities",
 					"id": "sdk-utilities",
-					"slug": "utilities"
+					"slug": "utilities",
+					"order": 90
 				},
 				{
 					"name": "Tutorials",
 					"id": "sdk-tutorials",
-					"slug": "tutorials"
+					"slug": "tutorials",
+					"order": 100
 				}
 				]
 			}

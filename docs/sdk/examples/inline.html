@@ -25,115 +25,6 @@ For licensing, see license.html or http://ckeditor.com/license.
 	<!--[if lt IE 9]>
 	<script src="assets/html5shiv.min.js"></script>
 	<![endif]-->
-
-	<style data-sample="2">
-		/* The following styles are here just to make the "Massive Inline Editing" sample look nice. */
-
-		/* A workaround to show Arial Black font in Firefox. */
-		@font-face {
-			font-family: 'arial-black';
-			src: local('Arial Black');
-		}
-
-		#columns *[contenteditable="true"], #header *[contenteditable="true"] {
-			padding: 10px;
-		}
-
-		#header {
-			overflow: hidden;
-			padding: 0 0 30px;
-			border-bottom: 5px solid #05B2D2;
-			position: relative;
-			color: #333;
-			background-color: #f9f9f9;
-		}
-
-		#headerLeft,
-		#headerRight {
-			width: 49%;
-			overflow: hidden;
-		}
-
-		#headerLeft {
-			float: left;
-			padding: 10px 1px 1px;
-		}
-
-		#headerLeft h2,
-		#headerLeft h3 {
-			text-align: right;
-			margin: 0;
-			overflow: hidden;
-			font-weight: normal;
-		}
-
-		#headerLeft h2 {
-			font-family: "Arial Black", arial-black;
-			font-size: 3.6em;
-			line-height: 1.1;
-			text-transform: uppercase;
-		}
-
-		#headerLeft h3 {
-			font-size: 1.9em;
-			line-height: 1.1;
-			margin: .2em 0 0;
-			color: #666;
-		}
-
-		#headerRight {
-			float: right;
-			padding: 1px;
-		}
-
-		#headerRight p {
-			line-height: 1.8;
-			text-align: justify;
-			margin: 0;
-		}
-
-		#headerRight p + p {
-			margin-top: 20px;
-		}
-
-		#headerRight > div {
-			padding: 20px;
-			margin: 0 0 0 30px;
-			font-size: 1.2em;
-			color: #666;
-		}
-
-		#columns {
-			color: #333;
-			overflow: hidden;
-			padding: 20px 0;
-			font-size: 0.9em;
-			background-color: #f9f9f9;
-		}
-
-		#columns > div {
-			float: left;
-			width: 33.3%;
-		}
-
-		#columns #column1 > div {
-			margin-left: 1px;
-		}
-
-		#columns #column3 > div {
-			margin-right: 1px;
-		}
-
-		#columns > div > div {
-			margin: 0px 10px;
-			padding: 10px 20px;
-		}
-
-		#columns blockquote {
-			margin-left: 15px;
-		}
-
-	</style>
 	<link rel="icon" href="../template/theme/img/favicon.ico">
 </head>
 <body>
@@ -143,6 +34,115 @@ For licensing, see license.html or http://ckeditor.com/license.
 	<nav class="sdk-sidebar">
 	</nav>
 	<section class="sdk-contents">
+		<style data-sample="2">
+			/* The following styles are here just to make the "Massive Inline Editing" sample look nice. */
+		
+			/* A workaround to show Arial Black font in Firefox. */
+			@font-face {
+				font-family: 'arial-black';
+				src: local('Arial Black');
+			}
+		
+			#columns *[contenteditable="true"], #header *[contenteditable="true"] {
+				padding: 10px;
+			}
+		
+			#header {
+				overflow: hidden;
+				padding: 0 0 30px;
+				border-bottom: 5px solid #05B2D2;
+				position: relative;
+				color: #333;
+				background-color: #f9f9f9;
+			}
+		
+			#headerLeft,
+			#headerRight {
+				width: 49%;
+				overflow: hidden;
+			}
+		
+			#headerLeft {
+				float: left;
+				padding: 10px 1px 1px;
+			}
+		
+			#headerLeft h2,
+			#headerLeft h3 {
+				text-align: right;
+				margin: 0;
+				overflow: hidden;
+				font-weight: normal;
+			}
+		
+			#headerLeft h2 {
+				font-family: "Arial Black", arial-black;
+				font-size: 3.6em;
+				line-height: 1.1;
+				text-transform: uppercase;
+			}
+		
+			#headerLeft h3 {
+				font-size: 1.9em;
+				line-height: 1.1;
+				margin: .2em 0 0;
+				color: #666;
+			}
+		
+			#headerRight {
+				float: right;
+				padding: 1px;
+			}
+		
+			#headerRight p {
+				line-height: 1.8;
+				text-align: justify;
+				margin: 0;
+			}
+		
+			#headerRight p + p {
+				margin-top: 20px;
+			}
+		
+			#headerRight > div {
+				padding: 20px;
+				margin: 0 0 0 30px;
+				font-size: 1.2em;
+				color: #666;
+			}
+		
+			#columns {
+				color: #333;
+				overflow: hidden;
+				padding: 20px 0;
+				font-size: 0.9em;
+				background-color: #f9f9f9;
+			}
+		
+			#columns > div {
+				float: left;
+				width: 33.3%;
+			}
+		
+			#columns #column1 > div {
+				margin-left: 1px;
+			}
+		
+			#columns #column3 > div {
+				margin-right: 1px;
+			}
+		
+			#columns > div > div {
+				margin: 0px 10px;
+				padding: 10px 20px;
+			}
+		
+			#columns blockquote {
+				margin-left: 15px;
+			}
+		
+		</style>
+
 		<div data-sample="1" id="introduction">
 			<h1>Inline Editor <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_inline.html">Documentation</a></h1>
 
@@ -425,7 +425,6 @@ For licensing, see license.html or http://ckeditor.com/license.
 		}
 	} );
 </script>
-
 
 </body>
 </html>

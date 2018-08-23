@@ -45,7 +45,15 @@ module.exports = function( grunt ) {
 		}
 		const done = this.async();
 		return buildSdk
-			.then( done );
+			.then( () => {
+				done();
+			} )
+			.catch( err => {
+				if ( err ) {
+					throw err;
+					process.exitCode = 1;
+				}
+			} );
 	} );
 
 	grunt.registerTask( 'fix-scayt-docs', function() {

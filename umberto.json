@@ -290,17 +290,6 @@
 		]
 	},
 	{
-		"name": "API",
-		"id": "api-reference",
-		"sourceDir": "api/data",
-		"slug": "api",
-		"type": "jsduck",
-		"middlewares": [
-		"relation-fixer"
-		],
-		"trimLongname": false
-	},
-	{
 		"name": "Examples",
 		"id": "sdk",
 		"sourceDir": "sdk/examples",
@@ -426,6 +415,17 @@
 				]
 			}
 		]
+	},
+	{
+		"name": "API",
+		"id": "api-reference",
+		"sourceDir": "api/data",
+		"slug": "api",
+		"type": "jsduck",
+		"middlewares": [
+			"relation-fixer"
+		],
+		"trimLongname": false
 	}
 	]
 }

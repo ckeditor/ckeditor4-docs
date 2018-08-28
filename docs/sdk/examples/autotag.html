@@ -20,6 +20,25 @@ For licensing, see license.html or http://ckeditor.com/license.
 	<script src="assets/contentloaded.js"></script>
 	<script src="assets/simplesample.js"></script>
 	<script src="assets/beautify-html.js"></script>
+	<style data-sample="1">
+		ul.cke_autocomplete_panel {
+			width: 300px;
+		}
+		ul.cke_autocomplete_panel > li {
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+		.issue-bug::before {
+			content: "🐛 "
+		}
+		.issue-feature::before {
+			content: "⭐ "
+		}
+		.issue-task::before {
+			content: "👷 "
+		}
+	</style>
 	<!--[if lt IE 9]>
 	<script src="assets/html5shiv.min.js"></script>
 	<![endif]-->
@@ -32,6 +51,25 @@ For licensing, see license.html or http://ckeditor.com/license.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
+			<style>
+				ul.cke_autocomplete_panel {
+					width: 300px;
+				}
+				ul.cke_autocomplete_panel > li {
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					overflow: hidden;
+				}
+				.issue-bug::before {
+					content: "🐛 "
+				}
+				.issue-feature::before {
+					content: "⭐ "
+				}
+				.issue-task::before {
+					content: "👷 "
+				}
+			</style>
 			<h1>Autotag plugin <small>(Creating a Most Basic Autocomplete Plugin)</small><a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_autocomplete.html">Documentation</a></h1>
 
 			<p>
@@ -62,10 +100,15 @@ For licensing, see license.html or http://ckeditor.com/license.
 			</ul>
 
 			<script data-sample="1">
-				CKEDITOR.plugins.addExternal( 'autotag', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/autotag/', 'plugin.js' );
+				CKEDITOR.plugins.addExternal( 'autotag', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/ckeditor-docs-samples/tutorial-autotag/autotag/', 'plugin.js' );
 
 				CKEDITOR.replace( 'editor1', {
-					extraPlugins: 'autotag'
+					plugins: 'textmatch,toolbar,wysiwygarea,basicstyles,link,undo,autotag',
+					toolbar: [
+						{ name: 'document', items: [ 'Undo', 'Redo' ] },
+						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline' ] },
+						{ name: 'links', items: [ 'Link', 'Unlink' ] }
+					]
 				} );
 			</script>
 

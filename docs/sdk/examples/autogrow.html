@@ -46,12 +46,12 @@ For licensing, see license.html or http://ckeditor.com/license.
 			<p>
 				The editor instance below was customized by setting the following Auto Grow plugin <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_configuration.html">configuration options</a>:
 			</p>
-<pre>
+<pre><code class="javascript">
 config.extraPlugins = 'autogrow';
 config.autoGrow_minHeight = 200;
 config.autoGrow_maxHeight = 600;
 config.autoGrow_bottomSpace = 50;
-</pre>
+</code></pre>
 			<p>
 				Notice how the editor expands when you start adding more content and see how it reaches the <a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-autoGrow_maxHeight">maximum auto grow height</a>
 				defined in its configuration (600 pixels). At the same time, when you start deleting content, the editor UI will shrink to finally reach the

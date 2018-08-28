@@ -1,0 +1,7 @@
+{
+	"uploadUrl": "/apps/ckfinder/3.4.4/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json",
+	"filebrowserBrowseUrl": "/apps/ckfinder/3.4.4/ckfinder.html",
+	"filebrowserImageBrowseUrl": "/apps/ckfinder/3.4.4/ckfinder.html?type=Images",
+	"filebrowserUploadUrl": "/apps/ckfinder/3.4.4/core/connector/php/connector.php?command=QuickUpload&type=Files",
+	"filebrowserImageUploadUrl": "/apps/ckfinder/3.4.4/core/connector/php/connector.php?command=QuickUpload&type=Images"
+}

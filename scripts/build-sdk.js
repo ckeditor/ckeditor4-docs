@@ -12,15 +12,18 @@ const promisify = require( './tools/promisify' );
 const destinationPath = path.join( process.cwd(), 'docs', 'sdk', 'examples', 'vendors' );
 
 module.exports = makeFolder( destinationPath )
-    .then( () => buildCkeditor( {
-        destinationPath,
-        dev: false
+    .then( () => {
+        buildCkeditor( {
+            destinationPath,
+            dev: false
         } )
-    )
-    .then( () => updateConfigFile( {
-        configFileSrc: path.join( process.cwd(), 'common-examples-config.json' ),
-        configFileDst: path.join( destinationPath, 'ckeditor', 'config.js' )
-    } ) )
+    } )
+    .then( () => {
+        updateConfigFile( {
+            configFileSrc: path.join( process.cwd(), 'common-examples-config.json' ),
+            configFileDst: path.join( destinationPath, 'ckeditor', 'config.js' )
+        } )
+    } )
     .catch( ( err ) => {
         process.exitCode = 1;
     } );

@@ -14,7 +14,7 @@ module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve,
             if ( status.isFile() ) {
                 return promisify( fs.readFile, fs)( configFileSrc );
             } else {
-                reject();;
+                reject();
             }
         } )
         .then( data => data.toString() )
@@ -26,7 +26,7 @@ module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve,
             if ( status.isFile() ) {
                 return promisify( fs.readFile, fs)( configFileDst );
             } else {
-                reject();;
+                reject();
             }
         } )
         .then( data => data.toString() )

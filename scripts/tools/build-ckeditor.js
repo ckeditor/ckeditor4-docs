@@ -17,7 +17,9 @@ module.exports = ( { destinationPath, dev = false } ) => new Promise( ( resolve,
     }
     return removeCkeditorFolder( path.join( destinationPath, 'ckeditor' ) )
         .then( () => buildAndCopyCkeditor( destinationPath ) )
-        .then( () => resolve() );
+        .then( () => {
+            resolve();
+        } );
 } );
 
 function removeCkeditorFolder( vendorFolderPath ) {
@@ -27,7 +29,7 @@ function removeCkeditorFolder( vendorFolderPath ) {
 function buildAndCopyCkeditor( destinationPath ) {
     console.log( 'Building CKEditor...' );
     return buildCkeditor()
-        .then( () => copyCkeditor( destinationPath ) )
+        .then( () => copyCkeditor( destinationPath ) );
 }
 
 function buildCkeditor() {

@@ -6,7 +6,6 @@
 'use strict';
 
 const Umberto = require( 'umberto' );
-const buildSdk = require( './scripts/build-sdk' );
 
 module.exports = function( grunt ) {
 	const packageVersion = grunt.file.readJSON( 'package.json' ).version;
@@ -40,6 +39,8 @@ module.exports = function( grunt ) {
 	} );
 
 	grunt.registerTask( 'prepare-sdk', function() {
+		const buildSdk = require( './scripts/build-sdk' );
+
 		if ( grunt.option( 'skipSdk' ) ) {
 			return;
 		}

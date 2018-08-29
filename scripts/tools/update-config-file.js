@@ -34,7 +34,7 @@ module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve,
             let insertedData = '\t// Custom config injected by \'update-config-file.js\' script.\n';
             for ( const key in commonConfig ) {
                 if ( commonConfig.hasOwnProperty( key ) ) {
-                    insertedData += `\tconfig.${ key } = '${ commonConfig[ key ] }',\n`;
+                    insertedData += `\tconfig.${ key } = '${ commonConfig[ key ] }';\n`;
                 }
             }
             insertedData += '\t// End of injected config.\n';

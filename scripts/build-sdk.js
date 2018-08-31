@@ -7,28 +7,21 @@ const path = require( 'path' );
 const fs = require( 'fs' );
 const buildCkeditor = require( './tools/build-ckeditor' );
 const updateConfigFile = require( './tools/update-config-file' );
-const promisify = require( './tools/promisify' );
+const chalk = require( 'chalk' );
 
 const destinationPath = path.join( process.cwd(), 'docs', 'sdk', 'examples', 'vendors' );
 
 module.exports = new Promise( ( resolve, reject ) => {
     makeFolder( destinationPath )
+        .then( () => buildCkeditor( {
+            destinationPath
+        } ) )
+        .then( () => updateConfigFile( {
+            configFileSrc: path.join( process.cwd(), 'common-examples-config.json' ),
+            configFileDst: path.join( destinationPath, 'ckeditor', 'config.js' )
+        } ) )
         .then( () => {
-            console.log( 'Building CKEitor inside presets started.' );
-            return buildCkeditor( {
-                destinationPath,
-                dev: false
-            } )
-        } )
-        .then( () => {
-            console.log( 'Inject variables into config' );
-            return updateConfigFile( {
-                configFileSrc: path.join( process.cwd(), 'common-examples-config.json' ),
-                configFileDst: path.join( destinationPath, 'ckeditor', 'config.js' )
-            } )
-        } )
-        .then( () => {
-            console.log( 'Building CKEditor in presets complete.' );
+            console.log( chalk.greenBright( 'Building CKEditor in presets complete.' ) );
             resolve();
         } )
         .catch( ( err ) => {
@@ -38,7 +31,7 @@ module.exports = new Promise( ( resolve, reject ) => {
 } );
 
 function makeFolder( createdFolder ) {
-    return new Promise( ( resolve, reject ) => {
+    return new Promise( ( resolve ) => {
         if ( fs.existsSync( createdFolder ) ) {
             resolve( createdFolder );
         } else {

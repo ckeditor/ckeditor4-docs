@@ -51,8 +51,8 @@ module.exports = function( grunt ) {
 			} )
 			.catch( err => {
 				if ( err ) {
-					throw err;
 					process.exitCode = 1;
+					grunt.log.error( `Building Documentation failed: ${ err }` );
 				}
 			} );
 	} );

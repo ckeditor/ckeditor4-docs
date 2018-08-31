@@ -4,7 +4,6 @@
  */
 
 const fs = require( 'fs' );
-
 const promisify = require( './promisify.js' );
 
 module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve, reject ) => {

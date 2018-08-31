@@ -27,7 +27,7 @@ function removeCkeditorFolder( vendorFolderPath ) {
 }
 
 function buildAndCopyCkeditor( destinationPath ) {
-    console.log( 'Building CKEditor...' );
+    console.log( chalk.greenBright( 'Building CKEditor...' ) );
     return buildCkeditor()
         .then( () => copyCkeditor( destinationPath ) );
 }

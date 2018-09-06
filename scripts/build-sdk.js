@@ -8,11 +8,17 @@ const fs = require( 'fs' );
 const buildCkeditor = require( './tools/build-ckeditor' );
 const updateConfigFile = require( './tools/update-config-file' );
 const chalk = require( 'chalk' );
-
-const destinationPath = path.join( process.cwd(), 'docs', 'sdk', 'examples', 'vendors' );
+const promisify = require( './tools/promisify.js' );
 
 module.exports = new Promise( ( resolve, reject ) => {
-    makeFolder( destinationPath )
+    let destinationPath;
+
+    getConfigSdkPath()
+        .then( configParts => path.join( process.cwd(), 'docs', ...configParts, 'vendors' ) )
+        .then( dstPth => {
+            destinationPath = dstPth;
+        } )
+        .then( () => makeFolder( destinationPath ) )
         .then( () => buildCkeditor( {
             destinationPath
         } ) )
@@ -40,3 +46,19 @@ function makeFolder( createdFolder ) {
         }
     } );
 };
+
+function getConfigSdkPath() {
+    return new Promise( ( resolve, reject ) => {
+        const umbertoJsonPath = path.join( process.cwd(), 'umberto.json' );
+        promisify( fs.readFile, fs )( umbertoJsonPath, 'utf8' )
+            .then( data => data.toString() )
+            .then( data => JSON.parse( data ) )
+            .then( data => {
+                const sdkGroup = data.groups.find( g => g.id === 'sdk' );
+                resolve( sdkGroup.sourceDir.split( '/' ) );
+            } )
+            .catch( err => {
+                reject( err );
+            } );
+    } );
+}

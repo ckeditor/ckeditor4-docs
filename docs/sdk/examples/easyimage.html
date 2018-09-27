@@ -208,7 +208,17 @@ For licensing, see license.html or http://ckeditor.com/license.
 				<li><a href="./image.html">Inserting Images &ndash; Enhanced Image Plugin</a></li>
 				<li><a href="./styles.html#widget-styles">Authoring Content &ndash; Applying Styles to Editor Content</a></li>
 			</ul>
-
+			<script>
+				CKEDITOR.once( 'instanceCreated', function( evt ) {
+					evt.editor.once( 'configLoaded', function( evt ) {
+						delete evt.editor.config.uploadUrl;
+						delete evt.editor.config.filebrowserBrowseUrl;
+						delete evt.editor.config.filebrowserImageBrowseUrl;
+						delete evt.editor.config.filebrowserUploadUrl;
+						delete evt.editor.config.filebrowserImageUploadUrl;
+					} );
+				} );
+			</script>
 			<script data-sample="1" >
 				// Don't forget to add CSS for your custom styles.
 				CKEDITOR.addCss( 'figure[class*=easyimage-gradient]::before { content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }' +

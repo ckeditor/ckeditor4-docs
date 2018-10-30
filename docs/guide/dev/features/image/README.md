@@ -23,6 +23,7 @@ The default [Image](https://ckeditor.com/cke4/addon/image) plugin supports inser
 * It provides **image preview**.
 * It supports **adding links to images** through the dedicated Link tab directly in the Image Properties dialog.
 * It can be integrated with a **file manager** of your choice such as [CKFinder](https://ckeditor.com/ckeditor-4/ckfinder/) for image upload and storage support.
+* It allows you to set **alternative text** for low-vision or text-only users.
 
 <info-box info="">
     If you are looking for more modern image support with a clean UI and features such as image captions, drag and drop positioning, click and drag resizing, image alignment (including centering) with inline styles or CSS classes, custom image styles or cloud storage support with optimized images and responsive markup, try {@link guide/dev/features/image2/README Enhanced Image} and {@link guide/dev/features/easyimage/README Easy Image} plugins.

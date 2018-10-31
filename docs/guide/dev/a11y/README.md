@@ -134,6 +134,10 @@ Color blind users may have trouble accessing information that is conveyed with c
 
 The following features can be used by developers to ensure that content created with CKEditor is accessible.
 
+#### Support for the `alt` Attribute in Images
+
+All three of CKEditor 4's Image plugins offer support for the `alt` attribute. This is done through an "Alternative Text" prompt. If the prompt is left blank, the `alt` attribute will be `""`.
+
 #### Accessibility Checker
 
 The innovative {@link guide/dev/features/accessibility_checker/README Accessibility Checker} tool lets you inspect the accessibility level of content created in the editor and fix reported issues, often fully automatically. It is a **must-have addon** for government institutions and companies that are often required by law to ensure the content they produce meets accessibility standards. See the [working demo](https://sdk.ckeditor.com/samples/accessibilitychecker.html) and get the plugin [here](https://ckeditor.com/cke4/addon/a11ychecker).

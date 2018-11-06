@@ -142,7 +142,7 @@ preset | standard-all | basic | standard | full
  --- | --- | --- | --- | ---
 latest | `dev-latest` | `dev-basic/latest` | `dev-standard/latest` | `dev-full/latest`
 stable | `dev-stable` | `dev-basic/stable` | `dev-standard/stable` | `dev-full/stable`
-4.11.x | `dev-4.11.x` | `dev-basic/4.11.x` | `dev-standard/4.11.x` | `dev-full/4.11.x`
+4.11.x | `4.11.x-dev` | `dev-basic/4.11.x` | `dev-standard/4.11.x` | `dev-full/4.11.x`
 
 For example, let us consider that we want to include the `full` preset of the most up-to-date `4.11.x` release. In this case the `composer.json` file should contain the following code:
 

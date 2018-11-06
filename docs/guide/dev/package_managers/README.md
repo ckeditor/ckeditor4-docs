@@ -58,7 +58,7 @@ or by manually editing your `package.json` file. Just make sure to create a refe
 {
     "name": "my-project",
     "dependencies": {
-        "ckeditor": "4.5.7"
+        "ckeditor": "4.11.0"
     }
 }
 ```
@@ -104,9 +104,9 @@ Then execute the following command:
 
 By default only the `standard-all` CKEditor installation preset can be fetched. However, there is a workaround to install a diffrent package using the `#<preset>/<version>` syntax.
 
-For example, if you would like to download the `full` preset of CKEditor 4.3.3, execute the following command:
+For example, if you would like to download the `full` preset of CKEditor 4.11.0, execute the following command:
 
-	bower install ckeditor#full/4.3.3
+	bower install ckeditor#full/4.11.0
 
 ## Composer
 
@@ -142,14 +142,14 @@ preset | standard-all | basic | standard | full
  --- | --- | --- | --- | ---
 latest | `dev-latest` | `dev-basic/latest` | `dev-standard/latest` | `dev-full/latest`
 stable | `dev-stable` | `dev-basic/stable` | `dev-standard/stable` | `dev-full/stable`
-4.3.x | `dev-4.3.x` | `dev-basic/4.3.x` | `dev-standard/4.3.x` | `dev-full/4.3.x`
+4.11.x | `dev-4.11.x` | `dev-basic/4.11.x` | `dev-standard/4.11.x` | `dev-full/4.11.x`
 
-For example, let us consider that we want to include the `full` preset of the most up-to-date `4.3.x` release. In this case the `composer.json` file should contain the following code:
+For example, let us consider that we want to include the `full` preset of the most up-to-date `4.11.x` release. In this case the `composer.json` file should contain the following code:
 
 ```js
 {
     "require": {
-        "ckeditor/ckeditor": "dev-full/4.3.x"
+        "ckeditor/ckeditor": "dev-full/4.11.x"
     }
 }
 ```
@@ -180,4 +180,4 @@ e.g.
 
 	nuget install ckeditor-standard
 
-You will find the package installed into a directory like `ckeditor-standard.4.7.3`.
+You will find the package installed into a directory like `ckeditor-standard.4.11.0`.

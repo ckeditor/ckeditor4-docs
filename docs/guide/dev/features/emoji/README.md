@@ -20,13 +20,23 @@ The emoji feature introduces support for easy inserting of emoji characters in a
 
 {@img assets/img/emoji_01.png Emoji plugin showing two emoji suggestions.}
 
-The [Emoji](https://ckeditor.com/cke4/addon/emoji) plugin that provides this functionality is an implementation of the {@link guide/dev/features/autocomplete/README Autocomplete} feature.  
+The [Emoji](https://ckeditor.com/cke4/addon/emoji) plugin that provides this functionality is an implementation of the {@link guide/dev/features/autocomplete/README Autocomplete} feature.
 
 It includes an autocomplete component that will list available emojis. Each identifier should be wrapped in colon (`:`) characters, like `:slightly_smiling_face:`, `:cat_face:` or `:winking_face:`.
 
 When you press the <kbd>Enter</kbd> or <kbd>Tab</kbd> key, the suggested value will be inserted into the editor.
 
 {@img assets/img/emoji_03.png The editor content with emoji inserted.}
+
+## Dropdown
+
+Starting with CKEditor 4.11.0 the Emoji plugin features also a button that shows a dropdown where you can browse all the available emojis.
+
+{@img assets/img/emoji_04.png Emoji dropdown with search input focused.}
+
+Clicking any icon in categories section will scroll the dropdown down to a given category.
+
+You can also use the text filter input to type and narrow the results. This filter also matches the keywords, so if the database contains emoji like `:man_health_worker:` and `:woman_health_worker:` with `doctor` keyword, then typing `doctor` will also include these two results.
 
 ## Configuration
 
@@ -39,13 +49,6 @@ By default CKEditor comes with a list of around 1500 emojis, which is just a sub
 ### Characters Needed for Autocompletion
 
 You can adjust the number of characters needed to show the emoji list when typing. Reducing this number will improve the performance. Refer to the {@linkapi CKEDITOR.config.emoji_minChars `config.emoji_minChars`} option for more details.
-
-## Roadmap
-
-The first implementation of emoji support was introduced in CKEditor 4.10, and the following features are planned to be added soon:
-
-* [Emoji list button with a search feature](https://github.com/ckeditor/ckeditor-dev/issues/2062#issuecomment-395386515)
-* [Improved emoji matching with support for keywords](https://github.com/ckeditor/ckeditor-dev/issues/2181)
 
 ## Emoji Demo
 

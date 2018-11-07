@@ -98,7 +98,7 @@ in a headache when trying to add plugin A, that requires plugin B, that requires
 In a brief summary it involves the following steps:
 <ol>
     <li>Downloading the predefined package (Basic/Standard/Full) from the <a href="https://ckeditor.com/ckeditor-4/download/">Download page</a>.</li>
-    <li>Downloading additional plugins manually from the <a href="https://ckeditor.com/cke4/addons/plugins/all/all">Add-ons Repository</a>.</li>
+    <li>Downloading additional plugins manually from the <a href="https://ckeditor.com/cke4/addons/plugins/all/">Add-ons Repository</a>.</li>
     <li>Downloading plugins required by additional plugins manually.</li>
     <li>Enabling additional plugins manually through CKEDITOR.config.extraPlugins.</li>
 </ol>

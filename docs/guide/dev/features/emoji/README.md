@@ -28,6 +28,16 @@ When you press the <kbd>Enter</kbd> or <kbd>Tab</kbd> key, the suggested value w
 
 {@img assets/img/emoji_03.png The editor content with emoji inserted.}
 
+## Dropdown
+
+Starting with CKEditor 4.11.0 the Emoji plugin features also a button that shows a dropdown where you can browse all the available emojis.
+
+{@img assets/img/emoji_04.png Emoji dropdown with search input focused.}
+
+Clicking any icon in categories section will scroll the dropdown down to a given category.
+
+You can also use the text filter input to type and narrow the results. This filter also matches the keywords, so if the database contains emoji like `:man_health_worker:` and `:woman_health_worker:` with `doctor` keyword, then typing `doctor` will also include these two results.
+
 ## Configuration
 
 The emoji feature is ready-to-use out of the box, but you can customize it by modifying the default emoji list or changing the number of characters that trigger the autocompletion mechanism.

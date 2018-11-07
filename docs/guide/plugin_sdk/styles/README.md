@@ -47,7 +47,7 @@ The same is true for the final page where the content created by CKEditor is loa
 
 ## Note for Plugin Authors
 
-If you are [sharing a plugin](https://ckeditor.com/cke4/addons/plugins/all/) that needs to use additional styles:
+If you are [sharing a plugin](https://ckeditor.com/cke4/addons/plugins/all) that needs to use additional styles:
 
 1. Place the styles in an easily recognizable directory inside the plugin directory (for example, the `styles` directory).
 1. Add the path to the plugin stylesheet to the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} setting in your plugin code.

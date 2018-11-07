@@ -86,7 +86,7 @@ This will have the following effect:
 * `img(left,right)[!src,alt,width,height]` &ndash; The `src` attribute is obligatory for the `<img>` tag. The `alt`, `width`, `height` and `class` attributes are accepted, but `class` must be either `class="left"` or `class="right"`.
 * Several toolbar buttons and dialog window fields that are responsible for the features which were not explicitely listed as allowed will be removed. In the Standard editor preset this will mean that, for example, the Strike-through, Numbered List, Bulleted List, Anchor, Table and Horizontal Line toolbar buttons will be gone, just like most of the fields of the Image Properties dialog window and formats from the Format drop-down list.
 
-See the [Advanced Content Filter &ndash; Custom Mode](https://sdk.ckeditor.com/samples/acf_custom.html) sample for a live demonstration.
+See the [Advanced Content Filter &ndash; Custom Mode](https://sdk.ckeditor.com/samples/acfcustom.html) sample for a live demonstration.
 
 ## Content Transformations
 

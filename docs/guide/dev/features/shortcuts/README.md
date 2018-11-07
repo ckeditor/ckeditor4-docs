@@ -95,7 +95,7 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 
 ## Rich Text
 
-* <kbd>Ctrl+L</kbd> &ndash; Opens the **Link** dialog window.
+* <kbd>Ctrl+L</kbd>, <kbd>Ctrl+K</kbd> &ndash; Opens the **Link** dialog window.
 * <kbd>Tab</kbd> &ndash; Indents a list.
 * <kbd>Shift+Tab</kbd> &ndash; Outdents a list.
 

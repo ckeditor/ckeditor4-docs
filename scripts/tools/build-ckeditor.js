@@ -43,9 +43,10 @@ function buildCkeditor() {
 
 function copyCkeditor( destinationPath ) {
     return getCkeditorVersion( process.cwd() )
-        .then( ckeditorVersion => promisify( ncp, this )( 
-            path.join( process.cwd(), 'repos', 'ckeditor-presets', 'build', ckeditorVersion, 'standard-all', 'ckeditor' ),
-            path.join( destinationPath, 'ckeditor' ) )
+        .then( ckeditorVersion => promisify( ncp, this )(
+                path.join( process.cwd(), 'repos', 'ckeditor-presets', 'build', ckeditorVersion, 'standard-all', 'ckeditor' ),
+                path.join( destinationPath, 'ckeditor' )
+            )
         );
 }
 
@@ -60,5 +61,5 @@ function getCkeditorVersion( basePath ) {
                 }
             } )
             .then( data => data.toString() )
-            .then( data => JSON.parse( data ).version );
+            .then( data => JSON.parse( data.trim() ).version );
 }

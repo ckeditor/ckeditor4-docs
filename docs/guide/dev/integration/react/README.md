@@ -66,11 +66,13 @@ The `data` property used in the above example is responsible for setting the edi
 
 ## Customizing CKEditor Preset or Version
 
-By default `CKEditor` React component loads standard preset of newest CKEditor version from <a href="https://cdn.ckeditor.com/">CDN</a> before creating the first editor. This behavior can be altered by changing the value of `CKEditor.editorUrl` variable to point to another CKEditor version and preset:
+By default `CKEditor` React component loads standard preset of newest CKEditor version from <a href="https://cdn.ckeditor.com/">CDN</a> while creating the first editor. This behavior can be altered by changing the value of `CKEditor.editorUrl` variable to point to another CKEditor version and preset:
 
 ```javascript
 CKEditor.editorUrl = 'http://cdn.example.com/custom-ckeditor.js';
 ```
+
+Note that variable has to be assigned **before first component is initialized**.
 
 Alternatively you can load CKEditor before loading `CKEditor` React component. In that case the component will use the already loaded CKEditor:
 

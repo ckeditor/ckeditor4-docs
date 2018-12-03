@@ -6,6 +6,7 @@
 'use strict';
 
 const Umberto = require( 'umberto' );
+const webpackReactConf = require( './react/webpack.config.js' );
 
 module.exports = function( grunt ) {
 	const packageVersion = grunt.file.readJSON( 'package.json' ).version;
@@ -13,6 +14,7 @@ module.exports = function( grunt ) {
 	require( 'load-grunt-tasks' )( grunt );
 
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
+	grunt.loadTasks( 'grunt-webpack' );
 	grunt.loadTasks( 'dev/tasks' );
 	grunt.registerTask( 'api', [ 'jsduck:api' ] );
 	grunt.registerTask( 'umberto', function() {
@@ -66,8 +68,9 @@ module.exports = function( grunt ) {
 		done();
 	} );
 
-	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'umberto' ] );
-	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'umberto', 'connect' ] );
+	grunt.registerTask( 'build-react', [ 'webpack:react' ] );
+	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-react', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-react', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
@@ -125,6 +128,10 @@ module.exports = function( grunt ) {
 					open: 'http://localhost:9001/ckeditor4/' + packageVersion + '/guide/dev_installation.html'
 				}
 			}
+		},
+
+		webpack: {
+			react: webpackReactConf
 		}
 	} );
 

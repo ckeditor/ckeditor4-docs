@@ -167,4 +167,4 @@ For more information on integrating CKEditor with a file manager refer to the fo
 * {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
 * {@link guide/dev/features/drop_paste/README Uploading Pasted and Dropped Files}
 
-See also the {@link guide/plugin_sdk/intro/README CKEditor Plugin SDK} with tutorials on creating your own plugins with dialog windows.
+See also the {@link guide/plugin_sdk/intro/README CKEditor Plugin Examples} with tutorials on creating your own plugins with dialog windows.

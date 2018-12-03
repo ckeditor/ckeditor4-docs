@@ -59,5 +59,5 @@ Technically, **each widget is defined in a CKEditor plugin that uses the feature
 
 ## Further Reading
 
-If you want to create your own widgets, take a look at the {@link guide/widget_sdk/intro/README Widget SDK} that includes a {@link guide/widget_sdk/tutorial_1/README step-by-step tutorial} on how to create widgets.
+If you want to create your own widgets, take a look at the {@link guide/widget_sdk/intro/README Widget Examples} that includes a {@link guide/widget_sdk/tutorial_1/README step-by-step tutorial} on how to create widgets.
 

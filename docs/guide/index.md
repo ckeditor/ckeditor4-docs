@@ -18,24 +18,24 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 <dt>{@link guide/dev/howtos/basic_configuration/README HOWTOs}</dt><dd>Most frequently asked questions and answers.</dd>
 </dl>
 
-## CKEditor 4 Plugin SDK
+## CKEditor 4 Plugin Examples
 
 <dl>
-<dt>{@link guide/plugin_sdk/intro/README Introduction}</dt><dd>Introduction to CKEditor Plugin SDK.</dd>
+<dt>{@link guide/plugin_sdk/intro/README Introduction}</dt><dd>Introduction to CKEditor Plugin Examples.</dd>
 <dt>{@link guide/plugin_sdk/sample/README Creating a Basic Plugin}</dt><dd>Creating a CKEditor Plugin in 20 Lines of Code.</dd>
 <dt>{@link guide/plugin_sdk/sample_1/README Simple Plugin Tutorial}</dt><dd>Learn by creating a simple plugin, part 1.</dd>
 <dt>{@link guide/plugin_sdk/sample_2/README Integration with ACF}</dt><dd>Integrate a plugin with Advanced Content Filter.</dd>
 <dt>{@link guide/plugin_sdk/styles/README Plugin Stylesheets}</dt><dd>How to add plugin styles and integrate them with CKEditor.</dd>
 </dl>
 
-## CKEditor 4 Widget SDK
+## CKEditor 4 Widget Examples
 
 <dl>
 <dt>{@link guide/widget_sdk/intro/README Introduction}</dt><dd>Creating custom CKEditor widgets.</dd>
 <dt>{@link guide/widget_sdk/tutorial_1/README Widget Tutorial}</dt><dd>Learn by creating a simple widget.</dd>
 </dl>
 
-## CKEditor 4 Skin SDK
+## CKEditor 4 Skin Examples
 
 <dl>
 <dt>{@link guide/skin_sdk/intro/README Introduction}</dt><dd>Creating custom CKEditor skins.</dd>

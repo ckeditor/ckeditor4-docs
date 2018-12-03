@@ -240,7 +240,7 @@
 			"order": 80
 		},
 		{
-			"name": "CKEditor 4 Plugin SDK",
+			"name": "CKEditor 4 Plugin Examples",
 			"id": "ckeditor-4-plugin-sdk",
 			"slug": "ckeditor-4-plugin-sdk",
 			"order": 90,
@@ -254,7 +254,7 @@
 			]
 		},
 		{
-			"name": "CKEditor 4 Widget SDK",
+			"name": "CKEditor 4 Widget Examples",
 			"id": "ckeditor-4-widget-sdk",
 			"slug": "cke4-widget-sdk",
 			"order": 100,
@@ -268,7 +268,7 @@
 			]
 		},
 		{
-			"name": "CKEditor 4 Skin SDK",
+			"name": "CKEditor 4 Skin Examples",
 			"id": "ckeditor-4-skin-sdk",
 			"slug": "ckeditor-4-skin-sdk",
 			"order": 110,

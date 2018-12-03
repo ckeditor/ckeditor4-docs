@@ -5,7 +5,6 @@
 
 const path = require( 'path' );
 const fs = require( 'fs-extra' );
-const promisify = require( './promisify.js' );
 const chalk = require( 'chalk' );
 const { spawn } = require( 'child_process' );
 

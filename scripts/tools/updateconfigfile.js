@@ -8,7 +8,7 @@ const fs = require( 'fs-extra' );
 module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve, reject ) => {
     Promise.all( [ fs.readJson( configFileSrc ), fs.readFile( configFileDst ).then( data => data.toString() ) ] )
         .then( ( [ srcConfig, dstFile ] ) => {
-            let insertedData = '\t// Custom config injected by docs building script.\n';
+            let insertedData = '\t// Common config injected by examples building script.\n';
             for ( const key in srcConfig ) {
                 if ( srcConfig.hasOwnProperty( key ) && typeof srcConfig[ key ] === 'string' ) {
                     insertedData += `\tconfig.${ key } = '${ srcConfig[ key ] }';\n`;

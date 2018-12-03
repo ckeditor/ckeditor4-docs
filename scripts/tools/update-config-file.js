@@ -3,44 +3,23 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-const fs = require( 'fs' );
-const promisify = require( './promisify.js' );
+const fs = require( 'fs-extra' );
 
 module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve, reject ) => {
-    let commonConfig = {};
-    promisify( fs.stat, fs )( configFileSrc )
-        .then( status => {
-            if ( status.isFile() ) {
-                return promisify( fs.readFile, fs)( configFileSrc );
-            } else {
-                reject();
-            }
-        } )
-        .then( data => data.toString() )
-        .then( data => { 
-            commonConfig = JSON.parse( data );
-        } )
-        .then( () => promisify( fs.stat, fs )( configFileDst ) )
-        .then( status => {
-            if ( status.isFile() ) {
-                return promisify( fs.readFile, fs)( configFileDst );
-            } else {
-                reject();
-            }
-        } )
-        .then( data => data.toString() )
-        .then( data => {
-            let insertedData = '\t// Custom config injected by \'update-config-file.js\' script.\n';
-            for ( const key in commonConfig ) {
-                if ( commonConfig.hasOwnProperty( key ) ) {
-                    insertedData += `\tconfig.${ key } = '${ commonConfig[ key ] }';\n`;
+    Promise.all( [ fs.readJson( configFileSrc ), fs.readFile( configFileDst ).then( data => data.toString() ) ] )
+        .then( ( [ srcConfig, dstFile ] ) => {
+            let insertedData = '\t// Custom config injected by docs building script.\n';
+            for ( const key in srcConfig ) {
+                if ( srcConfig.hasOwnProperty( key ) && typeof srcConfig[ key ] === 'string' ) {
+                    insertedData += `\tconfig.${ key } = '${ srcConfig[ key ] }';\n`;
                 }
             }
             insertedData += '\t// End of injected config.\n';
-            return data.replace( /function\( config \) \{\n/, 'function( config ) {\n' + insertedData );
+            return dstFile.replace( /function\( config \) \{\n/, 'function( config ) {\n' + insertedData );
         } )
-        .then( data => promisify( fs.writeFile, fs )( configFileDst, data, 'utf8' ) )
+        .then( data => fs.writeFile( configFileDst, data, 'utf8' ) )
         .then( () => {
             resolve();
-        } );
+        } )
+        .catch( err => reject( err ) );
 } );

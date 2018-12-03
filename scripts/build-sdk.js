@@ -23,7 +23,7 @@ module.exports = new Promise( ( resolve, reject ) => {
             destinationPath
         } ) )
         .then( () => updateConfigFile( {
-            configFileSrc: path.join( process.cwd(), 'common-examples-config.json' ),
+            configFileSrc: path.join( process.cwd(), 'commonconfig.json' ),
             configFileDst: path.join( destinationPath, 'ckeditor', 'config.js' )
         } ) )
         .then( () => {

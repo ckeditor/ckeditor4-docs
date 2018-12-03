@@ -4,7 +4,7 @@
  */
 
 const path = require( 'path' );
-const fs = require( 'fs' );
+const fs = require( 'fs-extra' );
 const buildCkeditor = require( './tools/build-ckeditor' );
 const updateConfigFile = require( './tools/update-config-file' );
 const chalk = require( 'chalk' );
@@ -48,17 +48,9 @@ function makeFolder( createdFolder ) {
 };
 
 function getConfigSdkPath() {
-    return new Promise( ( resolve, reject ) => {
-        const umbertoJsonPath = path.join( process.cwd(), 'umberto.json' );
-        promisify( fs.readFile, fs )( umbertoJsonPath, 'utf8' )
-            .then( data => data.toString() )
-            .then( data => JSON.parse( data ) )
-            .then( data => {
-                const sdkGroup = data.groups.find( g => g.id === 'sdk' );
-                resolve( sdkGroup.sourceDir.split( '/' ) );
-            } )
-            .catch( err => {
-                reject( err );
-            } );
-    } );
+    return fs.readJson( path.join( process.cwd(), 'umberto.json' ) )
+        .then( data => {
+            const sdkGroup = data.groups.find( g => g.id === 'sdk' );
+            return sdkGroup.sourceDir.split( '/' );
+        } );
 }

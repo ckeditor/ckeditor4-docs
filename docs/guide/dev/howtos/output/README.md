@@ -19,7 +19,7 @@ The following article contains tips about customizing the output HTML code produ
 
 If you want CKEditor to output valid HTML4 code instead of XHTML, you should configure the behavior of the {@linkapi CKEDITOR.dataProcessor dataProcessor}.
 
-For some tips on how to achieve this, check the {@link guide/dev/features/output_format/README HTML Output Formatting} article as well as the {@linksdk htmlformatting HTML Output Formatting} sample in CKEditor SDK.
+For some tips on how to achieve this, check the {@link guide/dev/features/output_format/README HTML Output Formatting} article as well as the {@linksdk htmlformatting HTML Output Formatting} sample in CKEditor Examples.
 
 If, for example, you want CKEditor to output the self-closing tags in the HTML4 way, creating `<br>` elements instead of `<br/>`, configure the `selfClosingEnd` setting in the following way.
 

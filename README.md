@@ -2,8 +2,6 @@
 
 This is the official developer documentation project for CKEditor. It uses the customized CKEditor [JSDuck clone](https://github.com/ckeditor/jsduck) for compilation and is available online at <http://docs.ckeditor.com>.
 
-Developer documentation is a part of [CKEditor SDK](https://sdk.ckeditor.com).
-
 ## Building the Documentation
 
 Follow the steps listed below to build CKEditor documentation locally.

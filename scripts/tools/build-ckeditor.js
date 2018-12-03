@@ -4,27 +4,21 @@
  */
 
 const path = require( 'path' );
-const fs = require( 'fs' );
+const fs = require( 'fs-extra' );
 const promisify = require( './promisify.js' );
-const rimraf = require( 'rimraf' );
 const chalk = require( 'chalk' );
 const { spawn } = require( 'child_process' );
-const { ncp } = require( 'ncp' );
 
-module.exports = ( { destinationPath, dev = false } ) => new Promise( ( resolve, reject ) => {
+module.exports = ( { destinationPath } ) => new Promise( ( resolve, reject ) => {
     if ( !destinationPath ) {
-        reject( new Error( 'There is no destination path given' ) )
+        reject( new Error( 'There is no destination path given.' ) )
     }
-    return removeCkeditorFolder( path.join( destinationPath, 'ckeditor' ) )
+    return fs.remove( path.join( destinationPath, 'ckeditor' ) )
         .then( () => buildAndCopyCkeditor( destinationPath ) )
         .then( () => {
             resolve();
         } );
 } );
-
-function removeCkeditorFolder( vendorFolderPath ) {
-    return promisify( rimraf, this )( vendorFolderPath );
-}
 
 function buildAndCopyCkeditor( destinationPath ) {
     console.log( chalk.greenBright( 'Building CKEditor...' ) );
@@ -43,7 +37,7 @@ function buildCkeditor() {
 
 function copyCkeditor( destinationPath ) {
     return getCkeditorVersion( process.cwd() )
-        .then( ckeditorVersion => promisify( ncp, this )(
+        .then( ckeditorVersion => fs.copy(
                 path.join( process.cwd(), 'repos', 'ckeditor-presets', 'build', ckeditorVersion, 'standard-all', 'ckeditor' ),
                 path.join( destinationPath, 'ckeditor' )
             )

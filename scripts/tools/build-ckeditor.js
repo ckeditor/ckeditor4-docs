@@ -29,7 +29,7 @@ function buildAndCopyCkeditor( destinationPath ) {
 function buildCkeditor() {
     return new Promise( ( resolve, reject ) => {
         const build = spawn( path.join( process.cwd(), 'repos', 'ckeditor-presets', 'build.sh' ), [ 'standard', 'all' ] );
-        build.stdout.on( 'data', data => { console.log( data.toString().trim() ) } );
+        build.stdout.on( 'data', data => { process.stdout.write( data.toString() ) } );
         build.on( 'close', resolve );
         build.on( 'error', reject );
     } );
@@ -45,15 +45,6 @@ function copyCkeditor( destinationPath ) {
 }
 
 function getCkeditorVersion( basePath ) {
-    const ckeditorPath = path.join( basePath, 'repos', 'ckeditor-presets', 'ckeditor' );
-        return promisify( fs.stat, fs )( path.join( ckeditorPath, 'package.json' ) )
-            .then( status => {
-                if ( status.isFile() ) {
-                    return promisify( fs.readFile, fs)( path.join( ckeditorPath, 'package.json' ) );
-                } else {
-                    return Promise.reject();
-                }
-            } )
-            .then( data => data.toString() )
-            .then( data => JSON.parse( data.trim() ).version );
+    return fs.readJson( path.join( basePath, 'repos', 'ckeditor-presets', 'ckeditor', 'package.json' ) )
+        .then( data => data.version );
 }

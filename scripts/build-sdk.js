@@ -14,11 +14,8 @@ module.exports = new Promise( ( resolve, reject ) => {
     let destinationPath;
 
     getConfigSdkPath()
-        .then( configParts => path.join( process.cwd(), 'docs', ...configParts, 'vendors' ) )
-        .then( dstPth => {
-            destinationPath = dstPth;
-        } )
-        .then( () => makeFolder( destinationPath ) )
+        .then( configParts => { destinationPath = path.join( process.cwd(), 'docs', ...configParts, 'vendors' ) } )
+        .then( () => fs.ensureDir( destinationPath ) )
         .then( () => buildCkeditor( {
             destinationPath
         } ) )
@@ -35,17 +32,6 @@ module.exports = new Promise( ( resolve, reject ) => {
             reject( err );
         } );
 } );
-
-function makeFolder( createdFolder ) {
-    return new Promise( ( resolve ) => {
-        if ( fs.existsSync( createdFolder ) ) {
-            resolve( createdFolder );
-        } else {
-            fs.mkdir( createdFolder );
-            resolve( createdFolder );
-        }
-    } );
-};
 
 function getConfigSdkPath() {
     return fs.readJson( path.join( process.cwd(), 'umberto.json' ) )

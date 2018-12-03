@@ -37,7 +37,7 @@ module.exports = function( grunt ) {
 	} );
 
 	grunt.registerTask( 'prepare-examples', function() {
-		const buildSdk = require( './scripts/build-sdk' );
+		const buildSdk = require( './scripts/buildsdk' );
 
 		const done = this.async();
 		return buildSdk

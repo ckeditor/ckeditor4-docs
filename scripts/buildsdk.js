@@ -5,8 +5,8 @@
 
 const path = require( 'path' );
 const fs = require( 'fs-extra' );
-const buildCkeditor = require( './tools/build-ckeditor' );
-const updateConfigFile = require( './tools/update-config-file' );
+const buildCkeditor = require( './tools/buildckeditor' );
+const updateConfigFile = require( './tools/updateconfigfile' );
 const chalk = require( 'chalk' );
 
 module.exports = new Promise( ( resolve, reject ) => {

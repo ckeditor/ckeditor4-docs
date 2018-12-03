@@ -8,7 +8,6 @@ const fs = require( 'fs-extra' );
 const buildCkeditor = require( './tools/build-ckeditor' );
 const updateConfigFile = require( './tools/update-config-file' );
 const chalk = require( 'chalk' );
-const promisify = require( './tools/promisify.js' );
 
 module.exports = new Promise( ( resolve, reject ) => {
     let destinationPath;

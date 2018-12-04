@@ -8,7 +8,7 @@ class TwoWayBinding extends Component {
 		super( props );
 
 		this.state = {
-			data: '<p>React is really <em>nice</em>!</p>'
+			data: '<p>This is CKEditor 4 instance created by ️⚛️ React.</p>'
 		};
 
 		this.handleChange = this.handleChange.bind( this );
@@ -43,7 +43,15 @@ class TwoWayBinding extends Component {
 				<div style={{overflow: 'auto'}}>
 					<CKEditor
 						data={this.state.data}
+						
 						config={{
+							toolbar: [
+								[ 'Source' ],
+								[ 'Bold', 'Italic' ],
+								[ 'Cut', 'Copy' ],
+								[ 'EasyImageUpload' ],
+								[ 'About' ]
+							],
 							extraPlugins: 'easyimage',
 							removePlugins: 'image',
 							cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',

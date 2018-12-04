@@ -38,9 +38,11 @@ class ConfigEvents extends Component {
 					Additionally editor component allows to bind any event handler using props with names starting with <code>on</code>, followed by the name of the event with capitalized first letter. Following example shows how to bind several common CKEditor's events.
 				</p>
 				<CKEditor
-					data="I'm CKEditor 4 instance."
+					data="This is CKEditor 4 instance created by ️⚛️ React."
 					config={{
 						toolbar: [
+							[ 'Source' ],
+							[ 'Styles', 'Format', 'Font', 'FontSize' ],
 							[ 'Bold', 'Italic' ],
 							[ 'Cut', 'Copy' ],
 							[ 'EasyImageUpload' ],

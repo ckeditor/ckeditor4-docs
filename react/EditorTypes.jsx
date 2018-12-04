@@ -2,7 +2,7 @@ import React from 'react';
 import CKEditor from 'ckeditor4-react/dist/ckeditor.js';
 import Code from './Code.jsx';
 
-const initialData = '<p>This is an example CKEditor 4 instance.</p>';
+const initialData = '<p>This is CKEditor 4 instance created by ️⚛️ React.</p>';
 
 const EditorTypes = () => (
 	<div>
@@ -18,10 +18,10 @@ const EditorTypes = () => (
 		<CKEditor type="inline" data={initialData} />
 
 		<Code id="1">
-			{`	<CKEditor data="<p>This is an example CKEditor 4 instance.</p>" />`}
+			{`	<CKEditor data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>" />`}
 		</Code>
 		<Code id="2">
-			{`	<CKEditor type="inline" data="<p>This is an example CKEditor 4 instance.</p>" />`}
+			{`	<CKEditor type="inline" data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>" />`}
 		</Code>
 	</div>
 );

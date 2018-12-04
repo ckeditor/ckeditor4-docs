@@ -32,6 +32,109 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
+			<style>
+				textarea.binding-editor {
+					width: 100%;
+				}
+
+				/* Menu styling. */
+				ul.react-nav__menu {
+					display: block;
+					width: 100%;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+				}
+
+				li.react-nav__menu-item {
+					display: inline-block;
+					width: 33%;
+				}
+
+				li.react-nav__menu-item a {
+					display: block;
+					position: relative;
+					padding: 10px 15px;
+					border: 1px solid #3e59ad;
+					margin-right: 1%;
+					text-align: center;
+					transition: 250ms ease background;
+					text-decoration: none;
+				}
+
+				li.react-nav__menu-item a.active {
+					font-weight: bold;
+					background: hsla(225, 14%, 83%, 0.5);
+					text-decoration: none;
+				}
+
+				li.react-nav__menu-item a.active:after {
+					content: '';
+					width: 100%;
+					height: 3px;
+					background: #3e59ad;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+
+				li.react-nav__menu-item a:hover:not(.active),
+				li.react-nav__menu-item a:focus:not(.active){
+					background: hsla(225, 14%, 83%, 0.3);
+				}
+
+				@media screen and (max-width: 768px) {
+					li.react-nav__menu-item {
+						width: 100%;
+						margin-bottom: 5px;
+					}
+				}
+
+				/* 1st sample styling. */
+				.cke_editable_inline {
+					border: 1px solid #d1d1d1;
+					padding-left: 10px;
+					padding-top: 10px;
+				}
+
+				/* 2nd sample styling. */
+				.event-log {
+					font-family: "SF Mono",menlo,monaco,"Roboto Mono",Consolas,"Lucida Console",monospace;
+					font-size: .866666em;
+					padding: 1.333em;
+					background: #2b2c26;
+					color: #fff;
+					margin-bottom: 10px;
+				}
+
+				ul.event-log__events {
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+					max-height: 200px;
+					overflow: auto;
+				}
+
+				/* 3rd sample styling. */
+				.editor-preview {
+					float: right;
+					width: 49%;
+					border: 1px solid #d1d1d1;
+					padding: 10px;
+				}
+
+				.editor-preview h2 {
+					padding-top: 0;
+				}
+
+				@media screen and (max-width: 768px) {
+					.editor-preview,
+					#cke_editor17 {
+						width: 100%;
+					}
+				}
+			</style>
+
 			<h1>React Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html">Documentation</a></h1>
 
 			<p>
@@ -40,6 +143,10 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 			<p>
 				Following examples showcase the most important features of React integration. The showcase itself shows how CKEditor React component could be used together with <a href="https://reacttraining.com/react-router/">React Router</a>.
+			</p>
+
+			<p>
+				<strong>Click and change an example:</strong>
 			</p>
 
 			<div id="app"></div>

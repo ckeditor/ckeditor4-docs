@@ -42,7 +42,7 @@ Below you can see the plugin's Image Properties dialog window with the file brow
 
 ## Image Plugin Demo
 
-See the {@linksdk image working "Default Image Plugin" sample} that showcases the Image plugin with all its capabilities.
+See the {@linkexample image working "Default Image Plugin" sample} that showcases the Image plugin with all its capabilities.
 
 ## Related Features
 

@@ -62,4 +62,4 @@ will turn all `<span class="equation">` elements into mathematical formulas widg
 
 ## Mathematical Formulas Demo
 
-See the {@linksdk mathjax working "Creating Mathematical Formulas" sample} that showcases the Mathematical Formulas plugin with its MathJax widget that supports writing equations in TeX.
+See the {@linkexample mathjax working "Creating Mathematical Formulas" sample} that showcases the Mathematical Formulas plugin with its MathJax widget that supports writing equations in TeX.

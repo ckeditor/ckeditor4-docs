@@ -58,7 +58,7 @@ Additionally, you can use the optional [Document Properties](https://ckeditor.co
 
 ## Full Page Editing Demo
 
-See the {@linksdk fullpage working "Full Page Editing with Document Properties Plugin" sample} that showcases using CKEditor to work on a complete HTML page and to setup some document metadata.
+See the {@linkexample fullpage working "Full Page Editing with Document Properties Plugin" sample} that showcases using CKEditor to work on a complete HTML page and to setup some document metadata.
 
 ## Related Features
 

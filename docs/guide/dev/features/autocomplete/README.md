@@ -174,9 +174,9 @@ You can review and download the complete solution in the [documentation code sam
 
 ## Autocomplete Demos
 
-See the {@linksdk autocomplete working "Autocomplete" sample} to check how autocomplete helps create a useful templating system, saving your time and limiting the opportunity to make mistakes.
+See the {@linkexample autocomplete working "Autocomplete" sample} to check how autocomplete helps create a useful templating system, saving your time and limiting the opportunity to make mistakes.
 
-Check the {@linksdk autotag "Autotag Plugin (Creating a Custom Autocomplete Plugin)"} sample to see the working Autotag plugin created in this tutorial.
+Check the {@linkexample autotag "Autotag Plugin (Creating a Custom Autocomplete Plugin)"} sample to see the working Autotag plugin created in this tutorial.
 
 ## Related Features
 

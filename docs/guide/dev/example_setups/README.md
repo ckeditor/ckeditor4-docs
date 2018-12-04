@@ -75,7 +75,7 @@ Inline editor provides a real WYSIWYG experience "out of the box" because unlike
 This demo showcases the <strong>Accessibility Checker</strong> plugin &mdash; an innovative solution that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
 
 <info-box hint="">
-  Visit the {@linksdk accessibilitychecker CKEditor Examples} website to try out this configuration.
+  Visit the {@linkexample accessibilitychecker CKEditor Examples} website to try out this configuration.
 </info-box>
 
 <div class="responsive">

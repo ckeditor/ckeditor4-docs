@@ -42,7 +42,7 @@ In both modes it is possible to extend the filter configuration by using the {@l
 
 Advanced Content Filter works in automatic mode when the {@linkapi CKEDITOR.config#allowedContent } setting is not provided. During editor initialization, editor features add their rules to the filter. As a result, only the content that may be edited using currently loaded features is allowed, and all the rest is filtered out.
 
-Please note that this means that **ACF is tightly connected with editor configuration**. Take the official CKEditor presets (Basic, Standard and Full). Each one of them includes a different set of features (toolbar buttons, keyboard shortcuts, content styles) and as a result, the same content pasted into editor instances with these configurations {@linksdk acf will look completely different}, as CKEditor will adjust it to what is available in a particular setup.
+Please note that this means that **ACF is tightly connected with editor configuration**. Take the official CKEditor presets (Basic, Standard and Full). Each one of them includes a different set of features (toolbar buttons, keyboard shortcuts, content styles) and as a result, the same content pasted into editor instances with these configurations {@linkexample acf will look completely different}, as CKEditor will adjust it to what is available in a particular setup.
 
 Whenever you adjust your editor configuration, for example by using the {@linkapi CKEDITOR.config.removePlugins CKEDITOR.config.removePlugins} and {@linkapi CKEDITOR.config.removeButtons CKEDITOR.config.removeButtons} methods or customizing the **Format** and **Styles** drop-down lists, these changes will affect the filter and the automatic ACF mode will make the editor remove content corresponding to disabled features.
 
@@ -56,7 +56,7 @@ Consider the following configuration for an editor with ACF working in default, 
 
 In this setup several tags will not be allowed in the editor because there is no plugin or button that is responsible for creating and editing this kind of content. This pertains to elements such as `<img>` (Image feature), `<table>` and its descendants (Table and Table Tools plugins) and `<hr>` (Horizontal Rule feature) as well as `<u>`, `<s>`, `<sub>` and `<sup>` that are normally provided by the Basic Styles plugin, but whose buttons were removed in the configuration. The **Format** drop-down list was trimmed down, too, so unsupported formats will also be removed.
 
-See the {@linksdk acf Advanced Content Filter &ndash; Automatic Mode} sample for a live demonstration.
+See the {@linkexample acf Advanced Content Filter &ndash; Automatic Mode} sample for a live demonstration.
 
 <info-box hint=""> If you want to configure the editor to work in automatic mode, but need to enable additional HTML tags, attributes, styles, or classes, use the {@linkapi CKEDITOR.config#extraAllowedContent } configuration option. <strong>Since CKEditor 4.4</strong> you can also disallow some of the automatically allowed content by using the {@linkapi CKEDITOR.config#disallowedContent }.
 </info-box>
@@ -86,7 +86,7 @@ This will have the following effect:
 * `img(left,right)[!src,alt,width,height]` &ndash; The `src` attribute is obligatory for the `<img>` tag. The `alt`, `width`, `height` and `class` attributes are accepted, but `class` must be either `class="left"` or `class="right"`.
 * Several toolbar buttons and dialog window fields that are responsible for the features which were not explicitely listed as allowed will be removed. In the Standard editor preset this will mean that, for example, the Strike-through, Numbered List, Bulleted List, Anchor, Table and Horizontal Line toolbar buttons will be gone, just like most of the fields of the Image Properties dialog window and formats from the Format drop-down list.
 
-See the {@linksdk acfcustom Advanced Content Filter &ndash; Custom Mode} sample for a live demonstration.
+See the {@linkexample acfcustom Advanced Content Filter &ndash; Custom Mode} sample for a live demonstration.
 
 ## Content Transformations
 
@@ -116,8 +116,8 @@ Read more about the paste filter in the {@linkapi CKEDITOR.config#pasteFilter } 
 
 The following samples are available for two ACF modes:
 
-* The {@linksdk acf Advanced Content Filter &ndash; Automatic Mode} sample shows the default implementation of ACF and its customization.
-* The {@linksdk acfcustom Advanced Content Filter &ndash; Custom Mode} sample shows how the custom ACF mode works.
+* The {@linkexample acf Advanced Content Filter &ndash; Automatic Mode} sample shows the default implementation of ACF and its customization.
+* The {@linkexample acfcustom Advanced Content Filter &ndash; Custom Mode} sample shows how the custom ACF mode works.
 
 ## Further Reading
 

@@ -119,7 +119,7 @@ Remember that depending on your use case, the CSS classes for basic text styles 
 
 ## Basic Text Styles Demo
 
-See the {@linksdk basicstyles working "Basic Text Styles: Bold, Italic and More" sample} that showcases the usage and customization of basic text formatting.
+See the {@linkexample basicstyles working "Basic Text Styles: Bold, Italic and More" sample} that showcases the usage and customization of basic text formatting.
 
 ## Related Features
 

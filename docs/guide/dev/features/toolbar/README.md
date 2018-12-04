@@ -65,7 +65,7 @@ When you are happy with your toolbar, copy the modified toolbar configuration fr
 
 ## Custom Toolbar Demo
 
-See the {@linksdk toolbar working "Custom Editor Toolbar" sample} that showcases an editor instance with a one-row toolbar set to include just a few most relevant editing features.
+See the {@linkexample toolbar working "Custom Editor Toolbar" sample} that showcases an editor instance with a one-row toolbar set to include just a few most relevant editing features.
 
 ## Related Features
 

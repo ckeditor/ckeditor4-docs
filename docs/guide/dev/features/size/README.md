@@ -55,7 +55,7 @@ Additionally, the [Editor Resize](https://ckeditor.com/cke4/addon/resize) plugin
 
 ## Editor Size Demo
 
-See the {@linksdk size working "Setting Editor Size" sample} that showcases an editor instance with modified dimensions.
+See the {@linkexample size working "Setting Editor Size" sample} that showcases an editor instance with modified dimensions.
 
 ## Related Features
 

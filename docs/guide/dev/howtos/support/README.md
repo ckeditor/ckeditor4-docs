@@ -24,7 +24,7 @@ If you are having trouble installing, configuring, or integrating CKEditor to yo
 
 ### Documentation
 
-First of all, CKEditor comes with really extensive {@link guide/index documentation} that you should read and {@linksdk index plenty of samples} that you can try out and even download to copy and implement in your own environment.
+First of all, CKEditor comes with really extensive {@link guide/index documentation} that you should read and {@linkexample index plenty of samples} that you can try out and even download to copy and implement in your own environment.
 
 ### Stack Overflow
 

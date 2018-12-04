@@ -146,8 +146,8 @@ Bold text can be represented on websites by `<strong>`, `<b>`, or `<span style="
 
 The following samples are available for two ACF modes:
 
-* The {@linksdk acf Advanced Content Filter &ndash; Automatic Mode} sample shows the default implementation of ACF and its customization.
-* The {@linksdk acfcustom Advanced Content Filter &ndash; Custom Mode} sample shows how the custom ACF mode works.
+* The {@linkexample acf Advanced Content Filter &ndash; Automatic Mode} sample shows the default implementation of ACF and its customization.
+* The {@linkexample acfcustom Advanced Content Filter &ndash; Custom Mode} sample shows how the custom ACF mode works.
 
 ## Further Reading
 

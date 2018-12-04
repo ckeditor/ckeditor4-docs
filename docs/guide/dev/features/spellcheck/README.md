@@ -58,4 +58,4 @@ You can find them on the {@linkapi CKEDITOR.config CKEDITOR.config} page, starti
 
 ## Spell Checking Demo
 
-See the {@linksdk spellchecker working "Spell Checker and Spell Check As You Type" sample} that showcases both Spell Check As You Type and spell checking in a dialog window.
+See the {@linkexample spellchecker working "Spell Checker and Spell Check As You Type" sample} that showcases both Spell Check As You Type and spell checking in a dialog window.

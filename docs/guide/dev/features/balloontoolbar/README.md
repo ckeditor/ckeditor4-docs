@@ -66,4 +66,4 @@ It is possible to use low level API to control a Balloon Toolbar directly, in su
 
 ## Balloon Toolbar Demo
 
-See the {@linksdk balloontoolbar "Balloon Toolbar" sample} that shows an example of Balloon Toolbar usage.
+See the {@linkexample balloontoolbar "Balloon Toolbar" sample} that shows an example of Balloon Toolbar usage.

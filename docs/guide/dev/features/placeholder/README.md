@@ -28,7 +28,7 @@ Please note that the default placeholder implementation might easily be extended
 
 ## Placeholder Demo
 
-See the {@linksdk placeholder working "Using Placeholders" sample} that showcases a possible use for the Placeholder plugin in automatic replies sent from a Customer Support system.
+See the {@linkexample placeholder working "Using Placeholders" sample} that showcases a possible use for the Placeholder plugin in automatic replies sent from a Customer Support system.
 
 ## Related Features
 

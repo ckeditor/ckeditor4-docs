@@ -64,7 +64,7 @@ config.removePlugins = 'resize';
 
 ## Shared Toolbar and Bottom Bar Demo
 
-See the {@linksdk sharedspace working "Shared Toolbar and Bottom Bar" sample} that showcases how multiple editor instances can share the same toolbar and bottom bar.
+See the {@linkexample sharedspace working "Shared Toolbar and Bottom Bar" sample} that showcases how multiple editor instances can share the same toolbar and bottom bar.
 
 ## Related Features
 

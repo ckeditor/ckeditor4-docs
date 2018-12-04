@@ -70,7 +70,7 @@ Do remember, though, that you need to define the CSS rules for these classes in 
 * For {@link guide/dev/framed/README classic editor} it can be done by defining additional styles in the stylesheets loaded by the editor. The same styles must be provided on the target page where the content will be loaded.
 * For {@link guide/dev/inline/README inline editor} the styles can be defined directly with `<style> ... <style>` or `<link href="..." rel="stylesheet">`, i.e. within the `<head>` section of the page.
 
-See the following {@linksdk styles#widget-styles showcase} of captioned image styling and alignment done through classes.
+See the following {@linkexample styles#widget-styles showcase} of captioned image styling and alignment done through classes.
 
 ## Making Alternative Text Mandatory
 
@@ -86,7 +86,7 @@ config.image2_altRequired = true;
 
 ## Enhanced Image Plugin Demo
 
-See the {@linksdk image2 working "Enhanced Image Plugin" sample} that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.
+See the {@linkexample image2 working "Enhanced Image Plugin" sample} that showcases the Enhanced Image plugin with its captioning, "drag and drop" positioning, and "click and drag" resizing.
 
 ## Related Features
 

@@ -54,7 +54,7 @@ You can adjust the number of characters needed to show the emoji list when typin
 
 ## Emoji Demo
 
-See the {@linksdk mentions "Mentions, Tags and Emoji" sample} that shows an example of emoji used together with the mentions feature.
+See the {@linkexample mentions "Mentions, Tags and Emoji" sample} that shows an example of emoji used together with the mentions feature.
 
 ## Related Features
 

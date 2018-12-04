@@ -33,7 +33,7 @@ Additionally, since CKEditor 4.5 it is possible to configure a {@link guide/dev/
 
 	config.pasteFilter = 'p; a[!href]';
 
-You can also read more about {@link guide/dev/acf/README content filtering} in general and see the {@linksdk acf working "Content Filtering" sample}.
+You can also read more about {@link guide/dev/acf/README content filtering} in general and see the {@linkexample acf working "Content Filtering" sample}.
 
 ## File Upload
 
@@ -49,9 +49,9 @@ Note that this feature is limited because of browsers and operating systems limi
 
 See the following samples for examples of pasting and dropping into editor content:
 
-* The {@linksdk fileupload#uploading-dropped-and-pasted-images "Uploading Dropped and Pasted Images"} sample.
-* The {@linksdk draganddrop "Drag and Drop Integration"} sample.
-* The {@linksdk pastefromword "Paste from Word"} sample.
+* The {@linkexample fileupload#uploading-dropped-and-pasted-images "Uploading Dropped and Pasted Images"} sample.
+* The {@linkexample draganddrop "Drag and Drop Integration"} sample.
+* The {@linkexample pastefromword "Paste from Word"} sample.
 
 ## Further Reading
 

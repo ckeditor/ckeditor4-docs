@@ -16,6 +16,15 @@ class ConfigEvents extends Component {
 	}
 
 	logEvent( event ) {
+		event.timestamp = new Intl.DateTimeFormat( 'en', {
+			hour12: false,
+			hour: '2-digit',
+			minute: '2-digit',
+			second: '2-digit'
+		} ).format( new Date() );
+
+		console.log( event.timestamp, event.name, event.data || 'No additional data was provided' );
+
 		this.setState( {
 			events: [ event, ...this.state.events ]
 		} );
@@ -102,16 +111,7 @@ const EventLog = ( { stream } ) => {
 	);
 }
 
-const Event = ( { data: { name, data } } ) => {
-	const timestamp = new Intl.DateTimeFormat( 'en', {
-		hour12: false,
-		hour: '2-digit',
-		minute: '2-digit',
-		second: '2-digit'
-	} ).format( new Date() );
-
-	console.log( timestamp, name, data );
-
+const Event = ( { data: { name, timestamp } } ) => {
 	return (
 		<>
 			{timestamp} – {name}

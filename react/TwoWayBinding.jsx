@@ -48,7 +48,7 @@ class TwoWayBinding extends Component {
 							toolbar: [
 								[ 'Source' ],
 								[ 'Bold', 'Italic' ],
-								[ 'Cut', 'Copy' ],
+								[ 'Undo', 'Redo' ],
 								[ 'EasyImageUpload' ],
 								[ 'About' ]
 							],

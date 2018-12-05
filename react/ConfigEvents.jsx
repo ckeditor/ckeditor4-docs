@@ -44,7 +44,7 @@ class ConfigEvents extends Component {
 							[ 'Source' ],
 							[ 'Styles', 'Format', 'Font', 'FontSize' ],
 							[ 'Bold', 'Italic' ],
-							[ 'Cut', 'Copy' ],
+							[ 'Undo', 'Redo' ],
 							[ 'EasyImageUpload' ],
 							[ 'About' ]
 						],

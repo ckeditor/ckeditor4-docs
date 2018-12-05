@@ -17,7 +17,7 @@ class ConfigEvents extends Component {
 
 	logEvent( event ) {
 		this.setState( {
-			events: [ ...this.state.events, event ]
+			events: [ event, ...this.state.events ]
 		} );
 	}
 
@@ -103,11 +103,18 @@ const EventLog = ( { stream } ) => {
 }
 
 const Event = ( { data: { name, data } } ) => {
-	console.log( name, data );
+	const timestamp = new Intl.DateTimeFormat( 'en', {
+		hour12: false,
+		hour: '2-digit',
+		minute: '2-digit',
+		second: '2-digit'
+	} ).format( new Date() );
+
+	console.log( timestamp, name, data );
 
 	return (
 		<>
-			{name}
+			{timestamp} – {name}
 		</>
 	);
 }

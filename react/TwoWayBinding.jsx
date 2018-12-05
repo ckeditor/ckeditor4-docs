@@ -38,12 +38,12 @@ class TwoWayBinding extends Component {
 					<label>Change value:</label>
 				</p>
 				<p>
-					<textarea className="binding-editor" defaultValue={this.state.data} onChange={this.handleChange} />
+					<textarea className="binding-editor" value={this.state.data} onChange={this.handleChange} />
 				</p>
 				<div style={{overflow: 'auto'}}>
 					<CKEditor
 						data={this.state.data}
-						
+
 						config={{
 							toolbar: [
 								[ 'Source' ],

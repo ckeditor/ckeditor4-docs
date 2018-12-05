@@ -1,6 +1,6 @@
 ﻿/**
  * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or https://github.com/ckeditor/ckeditor-docs/blob/master/LICENSE.md.
+ * For licensing, see LICENSE.md.
  */
 
 var CKEDITOR_LANGS = (function () {

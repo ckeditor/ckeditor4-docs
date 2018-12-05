@@ -28,38 +28,15 @@ class TwoWayBinding extends Component {
 	}
 
 	render() {
-		var textareaValue = {};
-
-		if ( !this.state.focused ) {
-			textareaValue = {
-				value: this.state.data
-			};
-		}
-
 		return (
 			<div>
 				<h2>Two-way data binding</h2>
 				<p>
 					Using internal state of React components, it's possible to create simple two-way data binding between editor component and other components, e.g. preview component that renders the content of the editor.
 				</p>
-				<p>
-					<label>Change value:</label>
-				</p>
-				<p>
-					<textarea
-						className="binding-editor"
-						{...textareaValue}
-						onChange={this.handleChange}
-						onFocus={ () => { this.setState( {
-								focused: true
-							} );
-						}}
-						onBlur={ () => { this.setState( {
-								focused: false
-							} );
-						}}
-					/>
-				</p>
+
+				<EditorEditor data={this.state.data} handler={this.handleChange} />
+
 				<div style={{overflow: 'auto'}}>
 					<CKEditor
 						data={this.state.data}
@@ -162,6 +139,60 @@ EditorPreview.defaultProps = {
 
 EditorPreview.propTypes = {
 	data: PropTypes.string
+};
+
+class EditorEditor extends Component {
+	constructor( props ) {
+		super( props );
+
+		this.state = {
+			focused: false
+		};
+	}
+
+	render() {
+		var textareaValue = {};
+
+		if ( !this.state.focused ) {
+			textareaValue = {
+				value: this.props.data
+			};
+		}
+
+		return (
+			<>
+				<p>
+					<label for="editor-editor">Change value:</label>
+				</p>
+				<p>
+					<textarea
+						id="editor-editor"
+						className="binding-editor"
+						{...textareaValue}
+						onChange={this.props.handler}
+						onFocus={ () => { this.setState( {
+								focused: true
+							} );
+						}}
+						onBlur={ () => { this.setState( {
+								focused: false
+							} );
+						}}
+					/>
+				</p>
+			</>
+		);
+	}
+}
+
+EditorEditor.defaultProps = {
+	data: '',
+	handler: () => {}
+};
+
+EditorEditor.propTypes = {
+	data: PropTypes.string,
+	handler: PropTypes.function
 };
 
 export default TwoWayBinding;

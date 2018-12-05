@@ -28,6 +28,14 @@ class TwoWayBinding extends Component {
 	}
 
 	render() {
+		var textareaValue = {};
+
+		if ( !this.state.focused ) {
+			textareaValue = {
+				value: this.state.data
+			};
+		}
+
 		return (
 			<div>
 				<h2>Two-way data binding</h2>
@@ -38,7 +46,19 @@ class TwoWayBinding extends Component {
 					<label>Change value:</label>
 				</p>
 				<p>
-					<textarea className="binding-editor" value={this.state.data} onChange={this.handleChange} />
+					<textarea
+						className="binding-editor"
+						{...textareaValue}
+						onChange={this.handleChange}
+						onFocus={ () => { this.setState( {
+								focused: true
+							} );
+						}}
+						onBlur={ () => { this.setState( {
+								focused: false
+							} );
+						}}
+					/>
 				</p>
 				<div style={{overflow: 'auto'}}>
 					<CKEditor

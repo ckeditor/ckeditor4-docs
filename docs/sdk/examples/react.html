@@ -97,6 +97,14 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 					padding-top: 10px;
 				}
 
+				.cke_editable_inline:not(.cke_focus) {
+					cursor: pointer;
+				}
+
+				.cke_editable_inline:hover:not(.cke_focus) {
+					outline: #2ba2f1 auto 5px;
+				}
+
 				/* 2nd sample styling. */
 				.event-log {
 					font-family: "SF Mono",menlo,monaco,"Roboto Mono",Consolas,"Lucida Console",monospace;
@@ -128,8 +136,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				}
 
 				@media screen and (max-width: 768px) {
-					.editor-preview,
-					#cke_editor17 {
+					.editor-preview {
 						width: 100%;
 					}
 				}

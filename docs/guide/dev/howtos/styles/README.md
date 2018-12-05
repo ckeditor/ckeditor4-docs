@@ -37,7 +37,7 @@ Depending on whether your definitions were placed inline or in an external file,
 	// For a definition in an external file.
 	config.stylesSet = 'my_styles:http://www.example.com/styles.js';
 
-For more details on the definition format and best practices on how to customize the styles please refer to the {@link guide/dev/features/styles/README Applying Styles to Editor Content} article and see the relevant {@linksdk styles CKEditor Examples sample}.
+For more details on the definition format and best practices on how to customize the styles please refer to the {@link guide/dev/features/styles/README Applying Styles to Editor Content} article and see the relevant {@linksdk styles CKEditor example}.
 
 
 ### Stylesheet Parser Plugin

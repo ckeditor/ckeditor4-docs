@@ -12,7 +12,7 @@
     "grunt-contrib-copy": "~0.8.0",
     "load-grunt-tasks": "~0.6.0",
     "mime": "^2.1.0",
-    "umberto": "^0.13.3"
+    "umberto": "^0.13.4"
   },
   "author": "CKSource (http://cksource.com/)",
   "repository": {

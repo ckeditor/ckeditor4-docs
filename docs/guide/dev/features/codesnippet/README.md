@@ -36,7 +36,7 @@ If you use the {@link guide/dev/inline/README inline} or [div-based](https://cke
 ```
 
 <info-box hint="">
-    You can preview themes in the <a href="https://sdk.ckeditor.com/samples/codesnippet.html">"Inserting Code Snippets" sample</a>. You can also browse them on the <a href="http://highlightjs.org/static/test.html">highlight.js demo page</a>.
+    You can preview themes in the {@linksdk codesnippet "Inserting Code Snippets" sample}. You can also browse them on the <a href="http://highlightjs.org/static/test.html">highlight.js demo page</a>.
 </info-box>
 
 ### Target Page
@@ -70,7 +70,7 @@ In {@link guide/dev/framed/README classic editor} use the {@linkapi CKEDITOR.con
 
     config.codeSnippet_theme = 'school_book';
 
-For a complete list of available themes see the [Inserting Code Snippets sample](https://sdk.ckeditor.com/samples/codesnippet.html) or the [highlight.js's demo page](http://highlightjs.org/static/test.html).
+For a complete list of available themes see the {@linksdk codesnippet Inserting Code Snippets sample} or the [highlight.js's demo page](http://highlightjs.org/static/test.html).
 
 {@img assets/img/codesnippet_05.png}
 
@@ -107,4 +107,4 @@ Since **Internet Explorer 8** support was dropped in [highlight.js](http://highl
 
 ## Code Snippets Demo
 
-See the [working "Inserting Code Snippets" sample](https://sdk.ckeditor.com/samples/codesnippet.html) that shows a few instances of the code snippet widgets as well as the syntax highlighter themes which are available in the default implementation.
+See the {@linksdk codesnippet working "Inserting Code Snippets" sample} that shows a few instances of the code snippet widgets as well as the syntax highlighter themes which are available in the default implementation.

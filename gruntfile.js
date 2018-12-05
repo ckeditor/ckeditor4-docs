@@ -1,6 +1,6 @@
 /**
  * @license Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.html or http://ckeditor.com/license
+ * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
 'use strict';
@@ -29,10 +29,26 @@ module.exports = function( grunt ) {
 			dev,
 			clean
 		} )
-			.then( done )
+			.then( () => { done() } )
 			.catch( err => {
 				grunt.log.error( `Building Documentation failed: ${ err }` );
 				done();
+			} );
+	} );
+
+	grunt.registerTask( 'prepare-examples', function() {
+		const buildSdk = require( './scripts/buildsdk' );
+
+		const done = this.async();
+		return buildSdk
+			.then( () => {
+				done();
+			} )
+			.catch( err => {
+				if ( err ) {
+					process.exitCode = 1;
+					grunt.log.error( `Building Documentation failed: ${ err }` );
+				}
 			} );
 	} );
 
@@ -50,8 +66,8 @@ module.exports = function( grunt ) {
 		done();
 	} );
 
-	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'umberto' ] );
-	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'umberto', 'connect' ] );
+	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),

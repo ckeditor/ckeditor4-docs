@@ -65,7 +65,7 @@ With this setting in place, the 50-pixel-high space below the content will alway
 
 ## Auto Grow Demo
 
-See the [working "Automatic Editor Height Adjustment to Content" sample](https://sdk.ckeditor.com/samples/autogrow.html) that shows how the editor can automatically expand and shrink vertically to fit the content.
+See the {@linksdk autogrow working "Automatic Editor Height Adjustment to Content" sample} that shows how the editor can automatically expand and shrink vertically to fit the content.
 
 ## Related Features
 

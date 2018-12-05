@@ -124,7 +124,7 @@ Please refer to the {@link guide/dev/features/accessibility_checker/README#keybo
 
 ## Accessibility and Keyboard Shortcuts Demo
 
-See the [working "Accessibility Support and Keyboard Shortcuts" sample](https://sdk.ckeditor.com/samples/accessibility.html) that showcases the usage of some accessibility-related features.
+See the {@linksdk accessibility working "Accessibility Support and Keyboard Shortcuts" sample} that showcases the usage of some accessibility-related features.
 
 ## Related Features
 

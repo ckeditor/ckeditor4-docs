@@ -121,7 +121,7 @@ Sample widget styles:
 { name: 'thumb', type: 'widget', widget: 'embed', attributes: { 'class': 'embed-thumb' }, group: [ 'size', 'alignment' ] }
 ```
 
-To see how this works in practice, refer to the [Widget Styles](https://sdk.ckeditor.com/samples/styles.html#widget-styles) sample. It contains a working editor instance that includes the {@link guide/dev/features/image2/README enhanced image}, {@link guide/dev/features/embed/README embedded media resources} and {@link guide/dev/features/mathjax/README mathematical formulas} widgets with additional styling.
+To see how this works in practice, refer to the {@linksdk styles#widget-styles Widget Styles} sample. It contains a working editor instance that includes the {@link guide/dev/features/image2/README enhanced image}, {@link guide/dev/features/embed/README embedded media resources} and {@link guide/dev/features/mathjax/README mathematical formulas} widgets with additional styling.
 
 ## The Stylesheet Parser Plugin
 
@@ -168,7 +168,7 @@ config.stylesheetParser_skipSelectors = /(^body\.|^caption\.|\.high|^\.)/i;
 
 ## Editor Styles Demo
 
-See the [working "Applying Styles to Editor Content" sample](https://sdk.ckeditor.com/samples/styles.html) that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation.
+See the {@linksdk styles working "Applying Styles to Editor Content" sample} that showcases the use of default editor styles as well as a Stylesheet Parser plugin implementation.
 
 ## Related Features
 

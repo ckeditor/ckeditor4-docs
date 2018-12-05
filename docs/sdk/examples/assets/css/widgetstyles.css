@@ -1,0 +1,61 @@
+* {
+	box-sizing: border-box;
+}
+
+figure {
+	margin: 10px 0;
+}
+
+/* Never exceed parent's size. */
+figure, img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Let the image have figure's size. */
+figure img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Image narrow style. */
+figure.image-narrow img, img.image-narrow {
+	max-width: 300px;
+	height: auto;
+}
+
+/* Image wide style. */
+figure.image-wide img, img.image-wide {
+	max-width: 500px;
+	height: auto;
+}
+
+/* Image alignment styles. */
+.image-align-right {
+	float: right;
+	margin-left: 20px;
+}
+
+.image-align-left {
+	float: left;
+	margin-right: 20px;
+}
+
+.image-align-center {
+	text-align: center;
+}
+
+.image-align-center > figure {
+	display: inline-block;
+}
+
+/* Embed narrow style. */
+.embed-narrow {
+	width: 75%;
+}
+
+/* Embed center style. */
+.embed-align-center {
+	margin-left: auto;
+	margin-right: auto;
+}

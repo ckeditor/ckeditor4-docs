@@ -7,3 +7,9 @@
 [submodule "repos/ckeditor-plugin-wsc"]
 	path = repos/ckeditor-plugin-wsc
 	url = https://github.com/WebSpellChecker/ckeditor-plugin-wsc.git
+[submodule "repos/ckeditor-presets"]
+	path = repos/ckeditor-presets
+	url = https://github.com/ckeditor/ckeditor-presets.git
+[submodule "docs/sdk/examples/assets/ckeditor-docs-samples"]
+	path = docs/sdk/examples/assets/ckeditor-docs-samples
+	url = https://github.com/ckeditor/ckeditor-docs-samples.git

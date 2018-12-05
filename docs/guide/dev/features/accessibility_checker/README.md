@@ -289,7 +289,7 @@ Please note that the predefined keyboard shortcuts can be changed with the custo
 
 ## Accessibility Checker Demo
 
-See the [working "Accessibility Checker" sample](https://sdk.ckeditor.com/samples/accessibilitychecker.html) where you can try how to detect and fix accessibility issues in your editor content.
+See the {@linksdk accessibilitychecker working "Accessibility Checker" sample} where you can try how to detect and fix accessibility issues in your editor content.
 
 ## Related Features
 

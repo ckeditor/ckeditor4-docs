@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CKEditor from 'ckeditor4-react';
-import Code from './Code.jsx';
 
 class TwoWayBinding extends Component {
 	constructor( props ) {
@@ -63,60 +62,6 @@ class TwoWayBinding extends Component {
 					/>
 					<EditorPreview data={this.state.data} />
 				</div>
-					<Code id="4">
-						{`
-	class TwoWayBinding extends Component {
-		constructor( props ) {
-			super( props );
-
-			this.state = {
-				data: '<p>foo bar</p>'
-			};
-
-			this.handleChange = this.handleChange.bind( this );
-			this.onEditorChange = this.onEditorChange.bind( this );
-		}
-
-		onEditorChange( evt ) {
-			this.setState( {
-				data: evt.editor.getData()
-			} );
-		}
-
-		handleChange( changeEvent ) {
-			this.setState( {
-				data: changeEvent.target.value
-			} );
-		}
-
-		render() {
-			return (
-				<div>
-					<h2>Two-way data binding</h2>
-					<CKEditor
-						data={this.state.data}
-						onChange={this.onEditorChange} />
-						<label style={{ clear: 'both' }}>
-							Change val:
-							<textarea defaultValue={this.state.data} onChange={this.handleChange} />;
-						</label>
-						<EditorPreview data={this.state.data} />
-				</div>
-			);
-		}
-	}
-
-	class EditorPreview extends Component {
-		render() {
-			return (
-				<div className="editor-preview">
-					<h2>Rendered content:</h2>
-					<div dangerouslySetInnerHTML={{ __html: this.props.data }}></div>
-				</div>
-			);
-		}
-	}`}
-					</Code>
 			</div>
 		);
 	}

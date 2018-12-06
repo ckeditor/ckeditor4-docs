@@ -163,5 +163,157 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 	<footer class="sdk-footer">
 	</footer>
+
+<div data-sample="1" data-sample-preserveWhitespace>
+	import ReactDOM from 'react-dom';
+	import CKEditor from 'ckeditor4-react';
+
+	ReactDOM.render(
+		<CKEditor data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>,
+		document.getElementById( 'app' )
+	);
+</div>
+<div data-sample="2" data-sample-preserveWhitespace>
+		import ReactDOM from 'react-dom';
+		import CKEditor from 'ckeditor4-react';
+
+		ReactDOM.render(
+			<CKEditor type="inline" data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>,
+			document.getElementById( 'app' )
+		);
+	</div>
+<div data-sample="3" data-sample-preserveWhitespace>
+import ReactDOM from 'react-dom';
+import CKEditor from 'ckeditor4-react';
+
+ReactDOM.render(
+	<CKEditor
+		data="I'm CKEditor 4 instance."
+		config={{
+			toolbar: [
+				[ 'Bold', 'Italic' ],
+				[ 'Cut', 'Copy' ],
+				[ 'About' ]
+			]
+		}}
+		onFocus={customHandler}
+		onBlur={customHandler}
+		onChage={customHandler}
+		onSelectionChange={customHandler}
+	/>,
+	document.getElementById( 'app' )
+);
+
+function customHandler( evt ) {
+	console.log( evt );
+}
+</div>
+<div data-sample="4" data-sample-preserveWhitespace>
+import React from 'react';
+import ReactDOM from 'react-dom';
+import CKEditor from 'ckeditor4-react';
+
+class TwoWayBinding extends Component {
+	constructor( props ) {
+		super( props );
+
+		this.state = {
+			data: '<p>This is CKEditor 4 instance created by ️⚛️ React.</p>'
+		};
+
+		this.handleChange = this.handleChange.bind( this );
+		this.onEditorChange = this.onEditorChange.bind( this );
+	}
+
+	onEditorChange( evt ) {
+		this.setState( {
+			data: evt.editor.getData()
+		} );
+	}
+
+	handleChange( changeEvent ) {
+		this.setState( {
+			data: changeEvent.target.value
+		} );
+	}
+
+	render() {
+		return (
+			<div>
+				<EditorEditor data={this.state.data} handler={this.handleChange} />
+
+				<div style={{overflow: 'auto'}}>
+					<CKEditor
+						data={this.state.data}
+						onChange={this.onEditorChange}
+						style={{
+							float: 'left',
+							width: '50%'
+						}}
+					/>
+					<EditorPreview data={this.state.data} />
+				</div>
+			</div>
+		);
+	}
+}
+
+class EditorPreview extends Component {
+	render() {
+		return (
+			<div className="editor-preview">
+				<h2>Rendered content:</h2>
+				<div dangerouslySetInnerHTML={{ __html: this.props.data }}></div>
+			</div>
+		);
+	}
+}
+
+class EditorEditor extends Component {
+	constructor( props ) {
+		super( props );
+
+		this.state = {
+			focused: false
+		};
+	}
+
+	render() {
+		var textareaValue = {};
+
+		if ( !this.state.focused ) {
+			textareaValue = {
+				value: this.props.data
+			};
+		}
+
+		return (
+			<>
+				<p>
+					<label for="editor-editor">Change value:</label>
+				</p>
+				<p>
+					<textarea
+						id="editor-editor"
+						className="binding-editor"
+						{...textareaValue}
+						onChange={this.props.handler}
+						onFocus={ () => { this.setState( {
+								focused: true
+							} );
+						}}
+						onBlur={ () => { this.setState( {
+								focused: false
+							} );
+						}}
+					/>
+				</p>
+			</>
+		);
+	}
+}
+
+ReactDOM.render( <TwoWayBinding />, document.getElementById( 'app' ) );
+</div>
 </body>
 </html>

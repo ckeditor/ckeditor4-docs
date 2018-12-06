@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CKEditor from 'ckeditor4-react';
-import Code from './Code.jsx';
 
 class ConfigEvents extends Component {
 	constructor( props ) {
@@ -72,22 +71,6 @@ class ConfigEvents extends Component {
 					<p><small>To check additional details about every event, please consult console in browser's devtools.</small></p>
 					<EventLog stream={this.state.events} />
 					<button onClick={this.clearEvents}>Clear events log</button>
-					<Code id="3">
-						{`	<CKEditor
-		data="I'm CKEditor 4 instance."
-		config={{
-			toolbar: [
-				[ 'Bold', 'Italic' ],
-				[ 'Cut', 'Copy' ],
-				[ 'About' ]
-			]
-		}}
-		onFocus={customHandler}
-		onBlur={customHandler}
-		onChage={customHandler}
-		onSelectionChange={customHandler}
-	/>`}
-					</Code>
 			</div>
 		);
 	}

@@ -40,7 +40,7 @@ If you want to use it in an inline editor instance (which by default uses floati
 
 	config.extraPlugins = 'sourcedialog';
 
-<info-box hint="">If you are using the {@link guide/dev/features/toolbar/README#item-by-item-configuration "item by item" toolbar configuration}, note that the button name for the Source dialog is <code>Source<b>d</b>ialog</code>.</info-box>
+<info-box hint="">If you are using the {@link guide/dev/features/toolbarconcepts/README#item-by-item-configuration "item by item" toolbar configuration}, note that the button name for the Source dialog is <code>Source<b>d</b>ialog</code>.</info-box>
 
 If, on the other hand, you want to replace the default source editing area with the source dialog for classic editor with fixed user interface, use the following settings:
 

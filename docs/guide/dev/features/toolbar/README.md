@@ -47,7 +47,7 @@ There are two types of toolbar configurator available: the **basic**, more visua
 
 ### Basic Toolbar Configurator
 
-The basic toolbar configurator uses the "{@link guide/dev/features/toolbar/README#toolbar-groups-configuration toolbar groups}" approach which is the recommended way to arrange the editor toolbar. You can modify the order of the toolbar groups by clicking the Up and Down arrows and toggle button visibility by selecting and deselecting the checkboxes. Use the "Add row separator" button to create a new toolbar row.
+The basic toolbar configurator uses the "{@link guide/dev/features/toolbarconcepts/README#toolbar-groups-configuration toolbar groups}" approach which is the recommended way to arrange the editor toolbar. You can modify the order of the toolbar groups by clicking the Up and Down arrows and toggle button visibility by selecting and deselecting the checkboxes. Use the "Add row separator" button to create a new toolbar row.
 
 {@img assets/img/toolbar_configurator_basic.png CKEditor 4.5 basic toolbar configurator}
 
@@ -55,7 +55,7 @@ When you are happy with your toolbar, click the "Get toolbar config" button to d
 
 ### Advanced Toolbar Configurator
 
-The basic, more visual toolbar configurator is based on the "toolbar groups" concept. However, if you would like to create a completely custom toolbar with an "{@link guide/dev/features/toolbar/README#item-by-item-configuration item by item}" configuration, and precisely define the visibility and position of each toolbar button, you can achieve this with the advanced toolbar configurator.
+The basic, more visual toolbar configurator is based on the "toolbar groups" concept. However, if you would like to create a completely custom toolbar with an "{@link guide/dev/features/toolbarconcepts/README#item-by-item-configuration item by item}" configuration, and precisely define the visibility and position of each toolbar button, you can achieve this with the advanced toolbar configurator.
 
 {@img assets/img/toolbar_configurator_advanced.png CKEditor 4.5 advanced toolbar configurator}
 

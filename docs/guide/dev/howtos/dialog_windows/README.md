@@ -76,7 +76,7 @@ For more examples on setting a default field value refer to the old "Using the J
 
 If you want to change your CKEditor configuration to show a different tab on opening a dialog window, you can hook into the {@linkapi CKEDITOR.dialog.definition#onShow onShow} event of the dialog window.
 
-Firstly, you will need to know the names of the dialog window and the tab that you want to set as default, so use the {@link guide/dev/howtos/dialog_windows/README#how-do-i-learn-the-names-of-ckeditor-dialog-window-fields%3F Developer Tools} plugin to get these.
+Firstly, you will need to know the names of the dialog window and the tab that you want to set as default, so use the {@link guide/dev/howtos/dialog_windows/README#how-do-i-learn-the-names-of-ckeditor-dialog-window-fields Developer Tools} plugin to get these.
 
 Once you have the names you can add the following code into the page that contains your CKEditor instance. The example below sets the [Image Properties](https://ckeditor.com/cke4/addon/image) dialog window to open the **Link** tab by default.
 

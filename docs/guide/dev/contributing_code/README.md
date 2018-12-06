@@ -54,12 +54,14 @@ Note that all patches which change the editor code **must include tests**.
 
 Every change which can be tested automatically should have at least one automated test. Read about {@link guide/dev/tests/README#creating-your-own-test writing tests in Bender.js}.
 
-<info-box hint=""> If you do not know how to write tests for your patch, you can make an {@link guide/dev/contributing/README#proposing-incomplete-patches incomplete pull request} and the core team will give you some hints or perhaps someone else from the community will step in.
+<info-box hint="">
+ If you do not know how to write tests for your patch, you can make an {@link guide/dev/contributing_code/README#proposing-incomplete-patches incomplete pull request} and the core team will give you some hints or perhaps someone else from the community will step in.
 </info-box>
 
 Some types of features or bugs cannot be tested automatically. In such cases, create a manual test (see [this one](https://github.com/ckeditor/ckeditor-dev/tree/master/tests/tickets/12735) for instance).
 
-<info-box hint=""> To see manual tests in the Bender.js dashboard you need to change the filter from <code>is:unit</code> to <code>is:manual</code>.
+<info-box hint="">
+ To see manual tests in the Bender.js dashboard you need to change the filter from <code>is:unit</code> to <code>is:manual</code>.
 </info-box>
 
 ## Creating a Pull Request

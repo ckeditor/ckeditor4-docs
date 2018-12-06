@@ -36,7 +36,7 @@ It is unlikely that you can apply a patch to the package that you already run on
 
 ### Release Version
 
-The release version is a CKEditor package that was processed by {@link guide/dev/build/README#about-ckbuilder-%28command-line%29 CKBuilder} in order to reduce the number of files and minify the resulting code. The release version is offered for download on [CKEditor download page](https://ckeditor.com/ckeditor-4/download/) and also by the [CKEditor online builder](https://ckeditor.com/cke4/builder).
+The release version is a CKEditor package that was processed by {@link guide/dev/build/README#about-ckbuilder-command-line CKBuilder} in order to reduce the number of files and minify the resulting code. The release version is offered for download on [CKEditor download page](https://ckeditor.com/ckeditor-4/download/) and also by the [CKEditor online builder](https://ckeditor.com/cke4/builder).
 
 ### Source Version
 

@@ -24,7 +24,7 @@
 			<script src="assets/html5shiv.min.js"></script>
 		<![endif]-->
 		<link rel="icon" href="../template/theme/img/favicon.ico">
-		
+
 	</head>
 	<body>
 		<header class="sdk-header">
@@ -37,7 +37,7 @@
 					.chat {
 						width: 600px;
 					}
-			
+
 					.chat > .posts {
 						list-style-type: none;
 						padding: 15px;
@@ -45,58 +45,58 @@
 						border: 1px solid #d1d1d1;
 						border-bottom: none;
 					}
-			
+
 					.chat > .posts li:first-child {
 						margin-bottom: 15px;
 					}
-			
+
 					.chat > .posts .message {
 						display: inline-block;
 						margin-left: 20px;
 						width: 80%;
 					}
-			
+
 					.chat > .posts .time {
 						color: #b7b7b7;
 						font-size: .9em;
 					}
-			
+
 					.chat > .posts .photo {
 						height: 40px;
 						vertical-align: top;
 						border-radius: 15%;
 					}
-			
+
 					ul.cke_autocomplete_panel {
 						width: 250px;
 					}
-			
+
 					ul.cke_autocomplete_panel .photo {
 						display: inline-block;
 						vertical-align: middle;
 						height: 30px;
 						border-radius: 50%;
 					}
-			
+
 					.bullet {
 						padding-left: 5px;
 						padding-right: 5px;
 						color: #b7b7b7;
 					}
-			
+
 					.cke_autocomplete_panel .username {
 						padding-left: 5px;
 					}
-			
+
 					.cke_autocomplete_panel .fullname {
 						padding-left: 5px;
 						color: #b7b7b7;
 					}
-			
+
 					.sdk-contents .cke {
 						margin: 0;
 					}
-			
+
 					.sdk-contents button.send {
 						width: 100px;
 						height: 35px;
@@ -109,26 +109,26 @@
 						float: right;
 						cursor: pointer;
 					}
-			
+
 					.sdk-contents button.send:hover {
 						background-color: #027abc
 					}
-			
+
 					.sdk-contents a.mailto-user {
 						color: #b7b7b7;
 						text-decoration: underline;
 					}
-			
+
 					.sdk-contents a.mailto-user:hover {
 						color: #a0a0a0;
 					}
-			
+
 					.sdk-contents p.post-content {
 						margin: 0;
 						line-height: 19px;;
 					}
 				</style>
-				
+
 				<h1>Mentions, Tags and Emoji <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_mentions.html">Documentation</a></h1>
 
 				<p>
@@ -156,7 +156,7 @@
 								<span class="bullet">•</span>
 								<span class="time">2 hours ago</span>
 								<p class="post-content">
-								Thanks for another <a href="#yummy">#yummy</a> recipe, <a href="mailto: dwilliams@example.com">@dwilliams</a>! Makes me <a href="#hungry">#hungry</a> just looking at the photos 😋. Definitely adding it to my TODO list for our next <a href="#mediterranean">#mediterranean</a> potluck.
+								Thanks for another <a data-skip-validation="true" href="#yummy">#yummy</a> recipe, <a href="mailto: dwilliams@example.com">@dwilliams</a>! Makes me <a data-skip-validation="true" href="#hungry">#hungry</a> just looking at the photos 😋. Definitely adding it to my TODO list for our next <a data-skip-validation="true" href="#mediterranean">#mediterranean</a> potluck.
 								</p>
 							</div>
 						</li>
@@ -169,14 +169,14 @@
 								<span class="bullet">•</span>
 								<span class="time">4 hours ago</span>
 								<p class="post-content">
-								Really appreciate the <a href="#vegetarian">#vegetarian</a> and <a href="#vegan">#vegan</a> variations of your recipes. So thoughtful of you! 🌱
+								Really appreciate the <a data-skip-validation="true" href="#vegetarian">#vegetarian</a> and <a data-skip-validation="true" href="#vegan">#vegan</a> variations of your recipes. So thoughtful of you! 🌱
 								</p>
 							</div>
 						</li>
 					</ul>
 					<div class="editor">
 						<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
-							<p>I agree with <a href="mailto: mildred@example.com">@mwilson</a> 👍. It’s so nice of you to always be providing a few options to try! I love <a href="#greek">#greek</a> cuisine with a modern twist, this one will be perfect to try.</p>
+							<p>I agree with <a href="mailto: mildred@example.com">@mwilson</a> 👍. It’s so nice of you to always be providing a few options to try! I love <a data-skip-validation="true" href="#greek">#greek</a> cuisine with a modern twist, this one will be perfect to try.</p>
 						</textarea>
 					</div>
 					<button id="send" class="send">Send</button>
@@ -203,7 +203,7 @@
 						{ id: 8, avatar: 'm_8', fullname: 'Albert Johnson', username: 'ajohnson' },
 						{ id: 9, avatar: 'm_9', fullname: 'Steve Roberts', username: 'sroberts' },
 						{ id: 10, avatar: 'm_10', fullname: 'Kevin Evans', username: 'kevans' },
-		
+
 						{ id: 11, avatar: 'w_1', fullname: 'Mildred Wilson', username: 'mwilson' },
 						{ id: 12, avatar: 'w_2', fullname: 'Melissa Nelson', username: 'mnelson' },
 						{ id: 13, avatar: 'w_3', fullname: 'Kathleen Allen', username: 'kallen' },
@@ -279,7 +279,7 @@
 						'yum',
 						'yummy'
 					];
-		
+
 				CKEDITOR.replace( 'editor1', {
 					plugins: 'mentions,emoji,basicstyles,undo,link,wysiwygarea,toolbar',
 					contentsCss: [
@@ -312,21 +312,21 @@
 						}
 					]
 				} );
-		
+
 				function dataFeed( opts, callback ) {
 					var matchProperty = 'username',
 						data = users.filter( function( item ) {
 							return item[ matchProperty ].indexOf( opts.query.toLowerCase() ) == 0;
 						} );
-		
+
 					data = data.sort( function( a, b ) {
 						return a[ matchProperty ].localeCompare( b[ matchProperty ], undefined, { sensitivity: 'accent' } );
 					} );
-		
+
 					callback( data );
 				}
 				</script>
-		
+
 				<script>
 					CKEDITOR.instances.editor1.once( 'instanceReady', function( evt ) {
 						document.getElementById( 'send' ).addEventListener( 'click', function() {

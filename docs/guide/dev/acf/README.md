@@ -40,7 +40,7 @@ Common use case: Applications whose users are familiar with {@link guide/dev/fea
 
 ### Allow everything, except...
 
-See {@link guide/dev/deep_dive/advanced_content_filter/disallowed_content/README#how-to-allow-everything-except... Disallowed Content} in the Deep Dive section.
+See {@link guide/dev/deep_dive/advanced_content_filter/disallowed_content/README#how-to-allow-everything-except Disallowed Content} in the Deep Dive section.
 
 Common use case: An alternative to allowing just everything, which helps, for example, protect users from accidental copying  of the `<script>` tags or `onclick` handlers from other websites. Keep in mind that blacklisting is usually a bad idea.
 

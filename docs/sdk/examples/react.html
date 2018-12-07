@@ -164,25 +164,25 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<footer class="sdk-footer">
 	</footer>
 
-<div data-sample="1" data-sample-preserveWhitespace>
-	import ReactDOM from 'react-dom';
-	import CKEditor from 'ckeditor4-react';
+<script type="text/jsx" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import ReactDOM from 'react-dom';
+import CKEditor from 'ckeditor4-react';
 
-	ReactDOM.render(
-		<CKEditor data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>,
-		document.getElementById( 'app' )
-	);
-</div>
-<div data-sample="2" data-sample-preserveWhitespace>
-		import ReactDOM from 'react-dom';
-		import CKEditor from 'ckeditor4-react';
+ReactDOM.render(
+	<CKEditor data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>" />,
+	document.getElementById( 'app' )
+);
+</script>
+<script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import ReactDOM from 'react-dom';
+import CKEditor from 'ckeditor4-react';
 
-		ReactDOM.render(
-			<CKEditor type="inline" data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>,
-			document.getElementById( 'app' )
-		);
-	</div>
-<div data-sample="3" data-sample-preserveWhitespace>
+ReactDOM.render(
+	<CKEditor type="inline" data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>" />,
+	document.getElementById( 'app' )
+);
+</script>
+<script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
 import ReactDOM from 'react-dom';
 import CKEditor from 'ckeditor4-react';
 
@@ -207,8 +207,8 @@ ReactDOM.render(
 function customHandler( evt ) {
 	console.log( evt );
 }
-</div>
-<div data-sample="4" data-sample-preserveWhitespace>
+</script>
+<script type="text/jsx" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CKEditor from 'ckeditor4-react';
@@ -314,6 +314,6 @@ class EditorEditor extends Component {
 }
 
 ReactDOM.render( <TwoWayBinding />, document.getElementById( 'app' ) );
-</div>
+</script>
 </body>
 </html>

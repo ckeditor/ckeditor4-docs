@@ -10,19 +10,29 @@ class TwoWayBinding extends Component {
 			data: '<p>This is CKEditor 4 instance created by ️⚛️ React.</p>'
 		};
 
-		this.handleChange = this.handleChange.bind( this );
+		this.onTextareaChange = this.onTextareaChange.bind( this );
 		this.onEditorChange = this.onEditorChange.bind( this );
 	}
 
-	onEditorChange( evt ) {
-		this.setState( {
-			data: evt.editor.getData()
-		} );
+	onEditorChange( { editor } ) {
+		this.updateEditor( editor.getData() );
 	}
 
-	handleChange( changeEvent ) {
+	onTextareaChange( { target: { value } } ) {
+		if ( !CKEDITOR.env.ie ) {
+			return this.updateEditor( value );
+		}
+
+		if ( !this._throttle ) {
+			this._throttle = new CKEDITOR.tools.buffers.throttle( 500, this.updateEditor, this );
+		}
+
+		this._throttle.input( value );
+	}
+
+	updateEditor( data ) {
 		this.setState( {
-			data: changeEvent.target.value
+			data
 		} );
 	}
 
@@ -34,7 +44,7 @@ class TwoWayBinding extends Component {
 					Using internal state of React components, it's possible to create simple two-way data binding between editor component and other components, e.g. preview component that renders the content of the editor.
 				</p>
 
-				<EditorEditor data={this.state.data} handler={this.handleChange} />
+				<EditorEditor data={this.state.data} handler={this.onTextareaChange} />
 
 				<div style={{overflow: 'auto'}}>
 					<CKEditor

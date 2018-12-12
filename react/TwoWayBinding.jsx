@@ -117,7 +117,7 @@ class SourceEditor extends Component {
 		return (
 			<>
 				<p>
-					<label for="editor-editor">Change value:</label>
+					<label htmlFor="editor-editor">Change value:</label>
 				</p>
 				<p>
 					<textarea

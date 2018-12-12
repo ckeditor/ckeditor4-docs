@@ -1,7 +1,7 @@
 {
-	"uploadUrl": "/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json",
-	"filebrowserBrowseUrl": "/apps/ckfinder/3.4.5/ckfinder.html",
-	"filebrowserImageBrowseUrl": "/apps/ckfinder/3.4.5/ckfinder.html?type=Images",
-	"filebrowserUploadUrl": "/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files",
-	"filebrowserImageUploadUrl": "/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Images"
+	"uploadUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json",
+	"filebrowserBrowseUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/ckfinder.html",
+	"filebrowserImageBrowseUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/ckfinder.html?type=Images",
+	"filebrowserUploadUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Files",
+	"filebrowserImageUploadUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Images"
 }

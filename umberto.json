@@ -45,6 +45,9 @@
 	"og": {
 	"description": "Learn how to install, integrate and configure CKEditor 4. More complex aspects, like creating plugins, widgets and skins are explained here, too. API reference and examples included."
 	},
+	"variables": {
+		"CKFINDER_VERSION": "3.4.5"
+	},
 	"groups": [
 	{
 		"name": "Guides",

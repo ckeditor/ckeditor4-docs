@@ -66,10 +66,10 @@ The `data` property used in the above example is responsible for setting the edi
 
 ## Customizing CKEditor Preset or Version
 
-By default `CKEditor` React component loads standard preset of newest CKEditor version from <a href="https://cdn.ckeditor.com/">CDN</a> while creating the first editor. This behavior can be altered by changing the value of `CKEditor.editorUrl` variable to point to another CKEditor version and preset:
+By default `CKEditor` React component loads standard preset of the latest CKEditor release from <a href="https://cdn.ckeditor.com/">CDN</a> while creating the first editor. This behavior can be altered by changing the value of `CKEditor.editorUrl` variable to point to desired CKEditor location:
 
 ```javascript
-CKEditor.editorUrl = 'http://cdn.example.com/custom-ckeditor.js';
+CKEditor.editorUrl = 'https://your-website.example/ckeditor/ckeditor.js';
 ```
 
 Note that variable has to be assigned **before first component is initialized**.
@@ -95,7 +95,7 @@ By default `CKEditor` React component creates {@link guide/dev/framed/README cla
 / >
 ```
 
-You can also explicitly set `type` property to `classic` to create classic editor:
+You can also explicitly set `type` property to `classic` to create the classic editor:
 
 ```jsx
 <CKEditor
@@ -106,7 +106,7 @@ You can also explicitly set `type` property to `classic` to create classic edito
 
 Every other value of `type` property will be treated as `classic`.
 
-### Changing Configuration of Editor
+### Changing Editor Configuration
 
 Custom configuration can be passed to the editor via `config` property of `CKEditor` React component. The following example shows {@link guide/dev/features/toolbar/README how to change the contents of the toolbar}:
 
@@ -134,7 +134,7 @@ This property takes precedence over {@linkapi CKEDITOR.config#readOnly `config.r
 
 ## Event Handlers
 
-`CKEditor` React component allows to bind any event handler to the editor via properties that starts with `on`. The `on` is followed by the name of the event with capitalized first letter, e.g. event handler for `change` event would be written as `onChange`:
+`CKEditor` React component allows to bind any event handler to the editor via properties that starts with `on`. The `on` is followed by the name of the event with capitalized first letter, e.g. event handler for {@linkapi CKEDITOR.editor.change `change` event} would be written as `onChange`:
 
 ```jsx
 <CKEditor

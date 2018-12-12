@@ -12,7 +12,7 @@ const EditorTypes = () => (
 		<CKEditor data={initialData} />
 		<h2>Inline editor</h2>
 		<p>
-			To change the type of created editor, <code>type</code> prop can be used. In the following example inline editor is created.
+			To use inline editor editor set <code>type</code> property to <code>inline</code>. In the following example inline editor is created.
 		</p>
 		<CKEditor type="inline" data={initialData} />
 	</div>

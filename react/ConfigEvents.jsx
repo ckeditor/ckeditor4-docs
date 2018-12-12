@@ -40,7 +40,7 @@ class ConfigEvents extends Component {
 			<div>
 				<h2>Editor with custom event handlers and config</h2>
 				<p>
-					Editors created by React component are highly customisable. It is possible to overwrite every configuration variable using <code>config</code> prop and passing object containing configuration to it.
+					Editors created by React component are highly customisable. It is possible to overwrite every configuration setting using <code>config</code> prop and passing object containing configuration to it.
 				</p>
 				<p>
 					Additionally editor component allows to bind any event handler using props with names starting with <code>on</code>, followed by the name of the event with capitalized first letter. Following example shows how to bind several common CKEditor's events.

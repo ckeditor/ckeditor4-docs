@@ -383,6 +383,21 @@
 					"order": 50
 				},
 				{
+					"name": "Framework Integration",
+					"id": "sdk-framework-integration",
+					"slug": "framework-integration",
+					"order": 30,
+					"samples": [
+						{
+							"name": "React Integration",
+							"id": "sdk-react",
+							"slug": "react",
+							"order": 10
+						}
+
+					]
+				},
+				{
 					"name": "Saving Data",
 					"id": "sdk-saving-data",
 					"slug": "saving-data",
@@ -413,23 +428,7 @@
 					"order": 100
 				}
 				]
-			},
-			{
-				"name": "Framework Integration",
-				"id": "sdk-framework-integration",
-				"slug": "framework-integration",
-				"order": 30,
-				"samples": [
-					{
-						"name": "React Integration",
-						"id": "sdk-react",
-						"slug": "react",
-						"order": 10
-					}
-
-				]
 			}
-
 		]
 	},
 	{

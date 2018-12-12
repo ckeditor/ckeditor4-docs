@@ -83,7 +83,7 @@ By default `CKEditor` React component creates {@link guide/dev/framed/README cla
 <CKEditor
 	data="<p>Some initial data</p>"
 	type="inline"
-/ >
+/>
 ```
 
 You can also explicitly set `type` property to `classic` to create the classic editor:
@@ -92,7 +92,7 @@ You can also explicitly set `type` property to `classic` to create the classic e
 <CKEditor
 	data="<p>Some initial data</p>"
 	type="classic"
-/ >
+/>
 ```
 
 Every other value of `type` property will be treated as `classic`.
@@ -107,7 +107,7 @@ Custom configuration can be passed to the editor via `config` property of `CKEdi
 	config={ {
 		toolbar: [ [ 'Bold' ] ]
 	} }
-/ >
+/>
 ```
 
 {@linkapi CKEDITOR.config All configuration} options can be changed this way.
@@ -117,8 +117,8 @@ There is also additional way to set the {@link guide/dev/features/readonly/READM
 ```jsx
 <CKEditor
 	data="<p>Editor's content</p>"
-	readOnly=true
-/ >
+	readOnly={true}
+/>
 ```
 
 This property takes precedence over {@linkapi CKEDITOR.config#readOnly `config.readOnly`} setting.
@@ -131,7 +131,7 @@ This property takes precedence over {@linkapi CKEDITOR.config#readOnly `config.r
 <CKEditor
 	data="<p>Editor's content</p>"
 	onChange={evt => console.log( evt )}
-/ >
+/>
 ```
 
 ## Data Binding
@@ -142,7 +142,6 @@ Wrapping `CKEditor` React component in another component allows to create two-wa
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CKEditor from 'ckeditor4-react';
-import Code from './Code.jsx';
 
 class TwoWayBinding extends Component {
 	constructor( props ) {

@@ -198,7 +198,7 @@ ReactDOM.render(
 		}}
 		onFocus={customHandler}
 		onBlur={customHandler}
-		onChage={customHandler}
+		onChange={customHandler}
 		onSelectionChange={customHandler}
 	/>,
 	document.getElementById( 'app' )
@@ -209,7 +209,7 @@ function customHandler( evt ) {
 }
 </script>
 <script type="text/jsx" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import CKEditor from 'ckeditor4-react';
 
@@ -240,7 +240,7 @@ class TwoWayBinding extends Component {
 	render() {
 		return (
 			<div>
-				<EditorEditor data={this.state.data} handler={this.handleChange} />
+				<SourceEditor data={this.state.data} handler={this.handleChange} />
 
 				<div style={{overflow: 'auto'}}>
 					<CKEditor
@@ -269,7 +269,7 @@ class EditorPreview extends Component {
 	}
 }
 
-class EditorEditor extends Component {
+class SourceEditor extends Component {
 	constructor( props ) {
 		super( props );
 
@@ -290,7 +290,7 @@ class EditorEditor extends Component {
 		return (
 			<>
 				<p>
-					<label for="editor-editor">Change value:</label>
+					<label htmlFor="editor-editor">Change value:</label>
 				</p>
 				<p>
 					<textarea

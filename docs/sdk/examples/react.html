@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Editor Size. Setting Custom Editor Width and Height.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, react, integration">
+	<meta name="sdk-samples" content="Classic editor|Inline editor|Editor with custom event handlers and config|Two-way data binding">
+	<meta name="sdk-category" content="sdk-framework-integration">
+	<meta name="sdk-order" content="10">
+	<title>React Integration</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/react/samples.css">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<style>
+				textarea.binding-editor {
+					width: 100%;
+				}
+
+				/* Menu styling. */
+				ul.react-nav__menu {
+					display: block;
+					width: 100%;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+				}
+
+				li.react-nav__menu-item {
+					display: inline-block;
+					width: 33%;
+				}
+
+				li.react-nav__menu-item a {
+					display: block;
+					position: relative;
+					padding: 10px 15px;
+					border: 1px solid #3e59ad;
+					margin-right: 1%;
+					text-align: center;
+					transition: 250ms ease background;
+					text-decoration: none;
+				}
+
+				li.react-nav__menu-item a.active {
+					font-weight: bold;
+					background: hsla(225, 14%, 83%, 0.5);
+					text-decoration: none;
+				}
+
+				li.react-nav__menu-item a.active:after {
+					content: '';
+					width: 100%;
+					height: 3px;
+					background: #3e59ad;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+
+				li.react-nav__menu-item a:hover:not(.active),
+				li.react-nav__menu-item a:focus:not(.active){
+					background: hsla(225, 14%, 83%, 0.3);
+				}
+
+				@media screen and (max-width: 768px) {
+					li.react-nav__menu-item {
+						width: 100%;
+						margin-bottom: 5px;
+					}
+				}
+
+				/* 1st sample styling. */
+				.cke_editable_inline {
+					border: 1px solid #d1d1d1;
+					padding-left: 10px;
+					padding-top: 10px;
+				}
+
+				.cke_editable_inline:not(.cke_focus) {
+					cursor: pointer;
+				}
+
+				.cke_editable_inline:hover:not(.cke_focus) {
+					outline: #2ba2f1 auto 5px;
+				}
+
+				/* 2nd sample styling. */
+				.event-log {
+					font-family: "SF Mono",menlo,monaco,"Roboto Mono",Consolas,"Lucida Console",monospace;
+					font-size: .866666em;
+					padding: 1.333em;
+					background: #2b2c26;
+					color: #fff;
+					margin-bottom: 10px;
+				}
+
+				ul.event-log__events {
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+					max-height: 200px;
+					overflow: auto;
+				}
+
+				/* 3rd sample styling. */
+				.editor-preview {
+					float: right;
+					width: 49%;
+					border: 1px solid #d1d1d1;
+					padding: 10px;
+				}
+
+				.editor-preview h2 {
+					padding-top: 0;
+				}
+
+				@media screen and (max-width: 768px) {
+					.editor-preview {
+						width: 100%;
+					}
+				}
+			</style>
+
+			<h1>React Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html">Documentation</a></h1>
+
+			<p>
+				<strong>React integration</strong> allows you to easily use CKEditor 4 as a <a href="https://reactjs.org/">React</a> component, using <code>&lt;CKEditor /&gt;</code> JSX tag.
+			</p>
+
+			<p>
+				Following examples showcase the most important features of React integration.
+			</p>
+
+			<p>
+				<strong>Click and change an example:</strong>
+			</p>
+
+			<div id="app"></div>
+			<script src="assets/react/main.js"></script>
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+
+<script type="text/jsx" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import ReactDOM from 'react-dom';
+import CKEditor from 'ckeditor4-react';
+
+ReactDOM.render(
+	<CKEditor data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>" />,
+	document.getElementById( 'app' )
+);
+</script>
+<script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import ReactDOM from 'react-dom';
+import CKEditor from 'ckeditor4-react';
+
+ReactDOM.render(
+	<CKEditor type="inline" data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>" />,
+	document.getElementById( 'app' )
+);
+</script>
+<script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import ReactDOM from 'react-dom';
+import CKEditor from 'ckeditor4-react';
+
+ReactDOM.render(
+	<CKEditor
+		data="I'm CKEditor 4 instance."
+		config={{
+			toolbar: [
+				[ 'Bold', 'Italic' ],
+				[ 'Cut', 'Copy' ],
+				[ 'About' ]
+			]
+		}}
+		onFocus={customHandler}
+		onBlur={customHandler}
+		onChange={customHandler}
+		onSelectionChange={customHandler}
+	/>,
+	document.getElementById( 'app' )
+);
+
+function customHandler( evt ) {
+	console.log( evt );
+}
+</script>
+<script type="text/jsx" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import CKEditor from 'ckeditor4-react';
+
+class TwoWayBinding extends Component {
+	constructor( props ) {
+		super( props );
+
+		this.state = {
+			data: '<p>This is CKEditor 4 instance created by ️⚛️ React.</p>'
+		};
+
+		this.handleChange = this.handleChange.bind( this );
+		this.onEditorChange = this.onEditorChange.bind( this );
+	}
+
+	onEditorChange( evt ) {
+		this.setState( {
+			data: evt.editor.getData()
+		} );
+	}
+
+	handleChange( changeEvent ) {
+		this.setState( {
+			data: changeEvent.target.value
+		} );
+	}
+
+	render() {
+		return (
+			<div>
+				<SourceEditor data={this.state.data} handler={this.handleChange} />
+
+				<div style={{overflow: 'auto'}}>
+					<CKEditor
+						data={this.state.data}
+						onChange={this.onEditorChange}
+						style={{
+							float: 'left',
+							width: '50%'
+						}}
+					/>
+					<EditorPreview data={this.state.data} />
+				</div>
+			</div>
+		);
+	}
+}
+
+class EditorPreview extends Component {
+	render() {
+		return (
+			<div className="editor-preview">
+				<h2>Rendered content:</h2>
+				<div dangerouslySetInnerHTML={{ __html: this.props.data }}></div>
+			</div>
+		);
+	}
+}
+
+class SourceEditor extends Component {
+	constructor( props ) {
+		super( props );
+
+		this.state = {
+			focused: false
+		};
+	}
+
+	render() {
+		var textareaValue = {};
+
+		if ( !this.state.focused ) {
+			textareaValue = {
+				value: this.props.data
+			};
+		}
+
+		return (
+			<>
+				<p>
+					<label htmlFor="editor-editor">Change value:</label>
+				</p>
+				<p>
+					<textarea
+						id="editor-editor"
+						className="binding-editor"
+						{...textareaValue}
+						onChange={this.props.handler}
+						onFocus={ () => { this.setState( {
+								focused: true
+							} );
+						}}
+						onBlur={ () => { this.setState( {
+								focused: false
+							} );
+						}}
+					/>
+				</p>
+			</>
+		);
+	}
+}
+
+ReactDOM.render( <TwoWayBinding />, document.getElementById( 'app' ) );
+</script>
+</body>
+</html>

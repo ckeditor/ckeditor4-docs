@@ -2,3 +2,4 @@
 docs/api/data
 node_modules
 docs/sdk/examples/vendors/
+docs/sdk/examples/assets/react/main.js*

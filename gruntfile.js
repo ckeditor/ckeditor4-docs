@@ -12,10 +12,8 @@ module.exports = function( grunt ) {
 	const packageVersion = grunt.file.readJSON( 'package.json' ).version;
 
 	require( 'load-grunt-tasks' )( grunt );
-
-	grunt.loadNpmTasks( 'grunt-contrib-connect' );
-	grunt.loadTasks( 'grunt-webpack' );
 	grunt.loadTasks( 'dev/tasks' );
+
 	grunt.registerTask( 'api', [ 'jsduck:api' ] );
 	grunt.registerTask( 'umberto', function() {
 		const done = this.async();

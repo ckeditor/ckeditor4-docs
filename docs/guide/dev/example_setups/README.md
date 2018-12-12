@@ -141,7 +141,7 @@ This is the easiest way of using CKEditor if additional third-party plugins are 
 
 Using [Builder](https://ckeditor.com/cke4/builder) to build a bundle with all required plugins is highly recommended in case of using customized packages, especially those with additional third-party plugins.
 
-Refer to the {@link guide/dev/plugins/README#through-ckbuilder Installing Plugins &ndash; Online Builder Installation} article for information about building a custom editor package.
+Refer to the {@link guide/dev/plugins/README#through-online-builder Installing Plugins &ndash; Online Builder Installation} article for information about building a custom editor package.
 
 <table border="1" class="hints">
 <tr><td class="hints-benchmark">Benchmark</td><td class="hints-result">Result</td><td>Comments</td></tr>

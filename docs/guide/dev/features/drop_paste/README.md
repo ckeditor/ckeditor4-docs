@@ -17,7 +17,7 @@ For licensing, see LICENSE.md.
 
 One of the CKEditor features is that it takes care over the input data you paste or drop into the editor. The [Clipboard](https://ckeditor.com/cke4/addon/clipboard) plugin which is included in every preset implements custom input content handling, which means that the editor will handle pasted and &mdash; since version 4.5 &mdash; dropped content.
 
-All pasted and dropped content is passed through the {@linkapi CKEDITOR.editor#paste } event which makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like {@link guide/dev/features/drop_paste/README#filtering Advanced Content Filter and paste filter}, {@link guide/dev/features/pastefromword/README Paste from Word filter} or {@link guide/dev/features/drop_paste/README#file-upload support for uploading dropped files}.
+All pasted and dropped content is passed through the {@linkapi CKEDITOR.editor#paste } event which makes it easy to process it before it is inserted into the editor. This mechanism is used extensively by CKEditor features like {@link guide/dev/features/drop_paste/README#filtering-content Advanced Content Filter and paste filter}, {@link guide/dev/features/pastefromword/README Paste from Word filter} or {@link guide/dev/features/drop_paste/README#file-upload support for uploading dropped files}.
 
 Note that browsers support clipboard operations differently and because of that the behavior of the drag and drop or copy and paste may be slightly different between browsers.
 

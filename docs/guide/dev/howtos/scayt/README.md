@@ -17,14 +17,14 @@ The following article contains tips about customizing the spell checker behavior
 
 ## How Do I Set SCAYT to Turn On Automatically?
 
-If you want to turn on the {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-%28scayt%29 Spell Check As You Type (SCAYT)} feature in CKEditor by default, set the {@linkapi CKEDITOR.config#scayt_autoStartup CKEDITOR.config#scayt_autoStartup} configuration setting to `true`.
+If you want to turn on the {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-scayt Spell Check As You Type (SCAYT)} feature in CKEditor by default, set the {@linkapi CKEDITOR.config#scayt_autoStartup CKEDITOR.config#scayt_autoStartup} configuration setting to `true`.
 
 	config.scayt_autoStartup = true;
 
 
 ## How Do I Disable SCAYT in CKEditor?
 
-If you want to completely disable the {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-%28scayt%29 Spell Check As You Type (SCAYT)} feature in CKEditor, remove the [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) from your CKEditor build with online builder or alternatively, disable the `scayt` plugin using the {@linkapi CKEDITOR.config#removePlugins CKEDITOR.config#removePlugins} configuration setting.
+If you want to completely disable the {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-scayt Spell Check As You Type (SCAYT)} feature in CKEditor, remove the [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) from your CKEditor build with online builder or alternatively, disable the `scayt` plugin using the {@linkapi CKEDITOR.config#removePlugins CKEDITOR.config#removePlugins} configuration setting.
 
 	config.removePlugins = 'scayt';
 
@@ -35,7 +35,7 @@ If you want to leave SCAYT available, but prevent the feature from being turned 
 
 ## How Do I Change the Default Language for Spell Check As You Type (SCAYT)?
 
-By default {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-%28scayt%29 SCAYT} treats the text written in the editor as American English (`en_US`). If you want to change the default SCAYT language, set the {@linkapi CKEDITOR.config#scayt_sLang CKEDITOR.config#scayt_sLang} configuration option to one of the 16 possible language codes that are currently accepted.
+By default {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-scayt SCAYT} treats the text written in the editor as American English (`en_US`). If you want to change the default SCAYT language, set the {@linkapi CKEDITOR.config#scayt_sLang CKEDITOR.config#scayt_sLang} configuration option to one of the 16 possible language codes that are currently accepted.
 
 	// Sets SCAYT to French.
 	config.scayt_sLang = 'fr_FR';

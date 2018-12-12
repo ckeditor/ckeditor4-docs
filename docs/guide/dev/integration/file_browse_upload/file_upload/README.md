@@ -207,7 +207,7 @@ For example if the response is `fileUrl|optionalErrorMessage`:
 
 ### Integration with CKFinder
 
-CKEditor can be easily integrated with [CKFinder](http://cksource.com/ckfinder), an advanced Ajax file manager. See {@link guide/dev/integration/file_browse_upload/README#using-ckfinder CKFinder Integration} for more information.
+CKEditor can be easily integrated with [CKFinder](http://cksource.com/ckfinder), an advanced Ajax file manager. See {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} for more information.
 
 <info-box info=""> Uploading dropped or pasted files will work for CKFinder 2.5+ and CKFinder 3.x.
 </info-box>

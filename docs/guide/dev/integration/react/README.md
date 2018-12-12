@@ -31,16 +31,7 @@ After installing, `CKEditor` React component can be imported in JS code:
 import CKEditor from 'ckeditor4-react';
 ```
 
-Alternatively `CKEditor` React component can be loaded alongside React in browser using `<script>` tag:
-
-```html
-<script src="node_modules/react/react.production.min.js"></script>
-<script src="node_modules/react-dom/react-dom.production.min.js"></script>
-<script src="node_modules/ckeditor4-react/dist/ckeditor.js"></script>
-<script src="app.js"></script>
-```
-
-After installing `CKEditor` React component can be used inside your project:
+Example `App` component featuring `CKEditor` would look like the following:
 
 ```jsx
 import React, { Component } from 'react';

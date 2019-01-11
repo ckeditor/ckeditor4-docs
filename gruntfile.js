@@ -142,7 +142,7 @@ module.exports = function( grunt ) {
 	function getCKEditorPath() {
 		grunt.log.writeln( 'CKEditor Documentation Builder v' + packageVersion + '.' );
 
-		var ckeditorPath = 'repos/ckeditor-dev';
+		var ckeditorPath = 'repos/ckeditor-presets/ckeditor';
 
 		if ( process.env.CKEDITOR_DEV ) {
 			grunt.log.writeln( '[i] Using CKEditor directory from CKEDITOR_DEV env variable.' );

@@ -20,6 +20,11 @@ check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/R
 
 ## Interaction Between CKEditor and File Manager
 
+Note: the following guide needs a configuration option for CKEditor >= 4.9.0
+
+`filebrowserUploadMethod: 'form'`
+
+
 CKEditor automatically sends some additional arguments to the file manager:
 
 * {@linkapi CKEDITOR.editor#name CKEditor} &ndash; the name of the CKEditor instance.

@@ -20,7 +20,7 @@ Clone this repository locally:
 Go to the `ckeditor-docs` directory and update the submodules:
 
 	> cd ckeditor-docs
-	> git submodule update --init
+	> git submodule update --init --recursive
 
 Clone the custom CKEditor [JSDuck repository](https://github.com/ckeditor/jsduck) to a separate folder next to `ckeditor-docs`:
 

@@ -1,0 +1,9 @@
+/**
+ * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md.
+ */
+
+:host ::ng-deep .ck.ck-editor__editable:not([contenteditable]) {
+	background: #fafafa;
+	color: #888;
+}

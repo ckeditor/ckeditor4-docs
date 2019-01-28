@@ -6,7 +6,10 @@
 'use strict';
 
 const Umberto = require( 'umberto' );
-const webpackReactConf = require( './react/webpack.config.js' );
+const webpackConfigs = {
+	rect: require( './react/webpack.config.js' ),
+	angular: require( './angular/webpack.config.js' )
+};
 
 module.exports = function( grunt ) {
 	const packageVersion = grunt.file.readJSON( 'package.json' ).version;
@@ -66,9 +69,26 @@ module.exports = function( grunt ) {
 		done();
 	} );
 
-	grunt.registerTask( 'build-react', [ 'webpack:react' ] );
-	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-react', 'umberto' ] );
-	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-react', 'umberto', 'connect' ] );
+	//Register task to enable/disable --force flag, because angular has circullar dependecies, which can't be fixed on our side.
+	grunt.registerTask( 'force-on',
+		'set option force to true',
+		function() {
+			if ( !grunt.option( 'force' ) ) {
+				grunt.config.set( 'usetheforce_set', true );
+				grunt.option( 'force', true );
+			}
+		} );
+	grunt.registerTask( 'force-off',
+		'set option force to false',
+		function() {
+			if ( grunt.config.get( 'usetheforce_set' ) ) {
+				grunt.option( 'force', false );
+			}
+		} );
+
+	grunt.registerTask( 'build-integrations', [ 'force-on', 'webpack:angular', 'webpack:react', 'force-off' ] );
+	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples','build-integrations', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-integrations', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
@@ -129,7 +149,8 @@ module.exports = function( grunt ) {
 		},
 
 		webpack: {
-			react: webpackReactConf
+			react: webpackConfigs.react,
+			angular: webpackConfigs.angular
 		}
 	} );
 

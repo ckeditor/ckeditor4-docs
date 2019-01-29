@@ -6,11 +6,11 @@
 import { Component } from '@angular/core';
 
 @Component( {
-	selector: 'app-simple-usage',
-	templateUrl: './simple-usage.component.html',
-	styleUrls: [ './simple-usage.component.css' ]
+	selector: 'app-editor-types',
+	templateUrl: './editor-types.component.html',
+	styleUrls: [ './editor-types.component.css' ]
 } )
-export class SimpleUsageComponent {
+export class EditorTypesComponent {
 	public isReadOnly = false;
 	public editorData =
 		`<p>Getting used to an entirely different culture can be challenging.

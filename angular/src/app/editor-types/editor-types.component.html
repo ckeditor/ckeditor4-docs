@@ -1,6 +1,4 @@
-<h2>Simple usage</h2>
-
-<p><strong>Note:</strong> Open the console for additional logs.</p>
+<h2>Editor types</h2>
 
 <h3>{{( inline ? 'Inline' : 'Classic') + ' Editor:' }}</h3>
 
@@ -20,26 +18,6 @@
 	(focus)="onFocus( $event, 'Classic' )"
 	(blur)="onBlur( $event, 'Classic' )">
 </ckeditor>
-
-<ckeditor
-	*ngIf="!isRemoved && inline"
-	[hidden]="isHidden"
-	[(data)]="editorData"
-	[readOnly]="isReadOnly"
-	#inline
-
-	id="inline-editor"
-	name="inline-editor"
-
-	type="inline"
-
-	(ready)="onReady( $event, 'Inline' )"
-	(change)="onChange( $event, 'Inline' )"
-	(focus)="onFocus( $event, 'Inline' )"
-	(blur)="onBlur( $event, 'Inline' )">
-</ckeditor>
-
-<p>Note: both editors have it's data synchronized, so every change in one of editors propagates to another.</p>
 
 <h4>Component controls:</h4>
 

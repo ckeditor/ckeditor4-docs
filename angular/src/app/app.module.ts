@@ -10,12 +10,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { CKEditorModule } from '@ckeditor/ckeditor4-angular';
-import { SimpleUsageComponent } from './simple-usage/simple-usage.component';
+import { EditorTypesComponent } from './editor-types/editor-types.component';
 import { DemoFormComponent } from './demo-form/demo-form.component';
 
 const appRoutes: Routes = [
-	{ path: '', redirectTo: '/simple-usage', pathMatch: 'full' },
-	{ path: 'simple-usage', component: SimpleUsageComponent },
+	{ path: '', redirectTo: '/editor-types', pathMatch: 'full' },
+	{ path: 'editor-types', component: EditorTypesComponent },
 	{ path: 'forms', component: DemoFormComponent }
 ];
 
@@ -29,7 +29,7 @@ const appRoutes: Routes = [
 	declarations: [
 		AppComponent,
 		DemoFormComponent,
-		SimpleUsageComponent
+		EditorTypesComponent
 	],
 	providers: [],
 	bootstrap: [ AppComponent ]

@@ -21,10 +21,16 @@ You learn to appreciate each and every single one of the differences while you b
 
 	isRemoved = false;
 
+	inline = false;
+
 	public componentEvents: string[] = [];
 
 	toggleDisableEditors() {
 		this.isReadOnly = !this.isReadOnly;
+	}
+
+	changeEditorType() {
+		this.inline = !this.inline;
 	}
 
 	onReady( editor: any, EditorName: string ): void {

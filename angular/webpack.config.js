@@ -83,7 +83,7 @@ module.exports = {
 			tsConfigPath: resolve( './angular/src/tsconfig.app.json' ),
 			skipCodeGeneration: false,
 			hostReplacementPaths: {
-				[ resolve( 'src/environments/environment.ts' ) ]: resolve( 'src/environments/environment.prod.ts' )
+				[ resolve( 'angular/src/environments/environment.ts' ) ]: resolve( 'angular/src/environments/environment.prod.ts' )
 			}
 		} ),
 

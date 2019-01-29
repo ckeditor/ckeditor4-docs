@@ -6,10 +6,6 @@
 'use strict';
 
 const Umberto = require( 'umberto' );
-const webpackConfigs = {
-	rect: require( './react/webpack.config.js' ),
-	angular: require( './angular/webpack.config.js' )
-};
 
 module.exports = function( grunt ) {
 	const packageVersion = grunt.file.readJSON( 'package.json' ).version;
@@ -69,26 +65,27 @@ module.exports = function( grunt ) {
 		done();
 	} );
 
-	//Register task to enable/disable --force flag, because angular has circullar dependecies, which can't be fixed on our side.
-	grunt.registerTask( 'force-on',
-		'set option force to true',
-		function() {
-			if ( !grunt.option( 'force' ) ) {
-				grunt.config.set( 'usetheforce_set', true );
-				grunt.option( 'force', true );
-			}
-		} );
-	grunt.registerTask( 'force-off',
-		'set option force to false',
-		function() {
-			if ( grunt.config.get( 'usetheforce_set' ) ) {
-				grunt.option( 'force', false );
-			}
-		} );
 
-	grunt.registerTask( 'build-integrations', [ 'force-on', 'webpack:angular', 'webpack:react', 'force-off' ] );
-	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples','build-integrations', 'umberto' ] );
-	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-integrations', 'umberto', 'connect' ] );
+	function buildIntegrationTask( name ) {
+		return function() {
+			var done = this.async();
+
+			grunt.util.spawn( {
+				cmd: 'npm',
+				args: [ 'run', 'build-' + name ],
+				opts: { stdio: 'inherit' } // This option is necessary for grunt to display commands output.
+			}, done );
+		}
+	}
+
+	// Hacky way to add build-angular task, but otherwise we have some webpack errors about circular references which building.
+	// Also there is some conflict between two webpack configurations, building react in same way is working workaround.
+	grunt.registerTask( 'build-angular', buildIntegrationTask( 'angular' ) );
+	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );
+
+	// grunt.registerTask( 'build-react', [ 'webpack:react' ] );
+	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
@@ -146,11 +143,6 @@ module.exports = function( grunt ) {
 					open: 'http://localhost:9001/ckeditor4/' + packageVersion + '/guide/dev_installation.html'
 				}
 			}
-		},
-
-		webpack: {
-			react: webpackConfigs.react,
-			angular: webpackConfigs.angular
 		}
 	} );
 

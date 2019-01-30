@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 
 import { CKEditorModule } from '@ckeditor/ckeditor4-angular';
 import { EditorTypesComponent } from './editor-types/editor-types.component';
+import { EventsComponent } from './events/events.component';
 import { DemoFormComponent } from './demo-form/demo-form.component';
 
 const appRoutes: Routes = [
 	{ path: '', redirectTo: '/editor-types', pathMatch: 'full' },
 	{ path: 'editor-types', component: EditorTypesComponent },
+	{ path: 'events', component: EventsComponent },
 	{ path: 'forms', component: DemoFormComponent }
 ];
 
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
 	declarations: [
 		AppComponent,
 		DemoFormComponent,
-		EditorTypesComponent
+		EditorTypesComponent,
+		EventsComponent
 	],
 	providers: [],
 	bootstrap: [ AppComponent ]

@@ -1,32 +1,15 @@
 <h2>Editor types</h2>
 
-<h3>{{( inline ? 'Inline' : 'Classic') + ' Editor:' }}</h3>
+<h3>{{( inline ? 'Inline' : 'Classic')}} Editor:</h3>
 
-<button (click)="changeEditorType()">{{ 'Change editor type to ' + ( inline ? 'Inline' : 'Classic' ) }}</button>
+<button (click)="changeEditorType()">Change editor type to {{ inline ? 'Inline' : 'Classic' }}</button>
 
 <ckeditor
-	*ngIf="!isRemoved && !inline"
-	[(data)]="editorData"
-	[readOnly]="isReadOnly"
-	[hidden]="isHidden"
-	#classic
-	id="classic-editor"
-	name="classic-editor"
-
-	(ready)="onReady( $event, 'Classic' )"
-	(change)="onChange( $event, 'Classic' )"
-	(focus)="onFocus( $event, 'Classic' )"
-	(blur)="onBlur( $event, 'Classic' )">
+	*ngIf="!inline"
+	[(data)]="editorData">
 </ckeditor>
-
-<h4>Component controls:</h4>
-
-<p>
-	<label><input type="checkbox" [(ngModel)]="isHidden">Hide editor with '[hidden]' directive.</label>
-</p>
-<p>
-	<label><input type="checkbox" [(ngModel)]="isRemoved">Remove editor from DOM with '*ngIf' directive.</label>
-</p>
-<p>
-	<label><input type="checkbox" [(ngModel)]="isReadOnly">Make editor read only.</label>
-</p>
+<ckeditor
+	*ngIf="inline"
+	type="inline"
+	[(data)]="editorData">
+</ckeditor>

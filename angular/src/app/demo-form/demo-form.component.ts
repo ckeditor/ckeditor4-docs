@@ -35,7 +35,7 @@ export class DemoFormComponent implements AfterViewInit {
 	public formDataPreview?: string;
 
 	onSubmit() {
-		alert( `Form submit, model: ${ this.model }` );
+		alert( `Form submit, model: ${ JSON.stringify( this.model ) }` );
 	}
 
 	reset() {
@@ -52,7 +52,5 @@ export class DemoFormComponent implements AfterViewInit {
 				this.previewModel = value;
 			}
 		} );
-		this.demoForm!.control.valueChanges
-			.subscribe( values => this.formDataPreview = JSON.stringify( values ) );
 	}
 }

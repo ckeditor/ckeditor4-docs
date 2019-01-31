@@ -13,8 +13,9 @@
 		<input [(ngModel)]="model.surname" type="text" name="surname" id="surname">
 	</div>
 
-	<label>Description</label>
+	<label for="description">Description</label>
 	<ckeditor
+		#editor
 		[(ngModel)]="model.description"
 		id="description"
 		name="description">
@@ -28,16 +29,16 @@
 	</p>
 	<p>
 		<button type="submit">Submit this form</button>
-		<em>(Open the console first)</em></p>
+	</p>
 </form>
 
-<h3>Editor data preview (read only)</h3>
+<h3>Editor data preview</h3>
 <p>
 	Note that it's only a prove of concept of using the `ngModel`.
-	It allows editing, but the editor instantly strips out unknown tags and autoparagraphs text outside of block
-	elements.
+	It allows editing, but the editor strips out unknown tags and autoparagraphs text outside of block
+	elements. Editor updates when textarea is blurred.
 </p>
-<textarea readonly="true" [ngModel]="model.description" style="width: 100%; height: 40px"></textarea>
-
-<h3>Form data preview</h3>
-<pre>{{ formDataPreview }}</pre>
+<textarea #preview
+		  (focus)="isPreviewActive = true; previewModel = model.description"
+		  (change)="isPreviewActive = false; model.description = previewModel"
+		  [(ngModel)]="previewModel"></textarea>

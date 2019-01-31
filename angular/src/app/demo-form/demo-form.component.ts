@@ -6,7 +6,8 @@
 import {
 	Component,
 	ViewChild,
-	AfterViewInit
+	AfterViewInit,
+	ElementRef
 } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
@@ -18,22 +19,23 @@ import { NgForm } from '@angular/forms';
 } )
 export class DemoFormComponent implements AfterViewInit {
 	@ViewChild( 'demoForm' ) demoForm?: NgForm;
+	@ViewChild( 'preview' ) preview: ElementRef;
+	@ViewChild( 'editor' ) editor;
 
 	public model = {
 		name: 'John',
 		surname: 'Doe',
-		description: '<p>A <b>really</b> nice fellow.</p>'
+		description: '<p>Hello world!</p>'
 	};
+
+	public isPreviewActive: boolean;
+
+	public previewModel: string;
 
 	public formDataPreview?: string;
 
-	ngAfterViewInit() {
-		this.demoForm!.control.valueChanges
-			.subscribe( values => this.formDataPreview = JSON.stringify( values ) );
-	}
-
 	onSubmit() {
-		console.log( 'Form submit, model', this.model );
+		alert( `Form submit, model: ${ this.model }` );
 	}
 
 	reset() {
@@ -42,5 +44,15 @@ export class DemoFormComponent implements AfterViewInit {
 
 	get description() {
 		return this.demoForm!.controls.description;
+	}
+
+	ngAfterViewInit() {
+		this.editor.dataChange.subscribe( ( value ) => {
+			if ( !this.isPreviewActive ) {
+				this.previewModel = value;
+			}
+		} );
+		this.demoForm!.control.valueChanges
+			.subscribe( values => this.formDataPreview = JSON.stringify( values ) );
 	}
 }

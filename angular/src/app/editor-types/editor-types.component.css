@@ -2,3 +2,12 @@
  * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
+
+button {
+	margin: 8px 0;
+}
+
+:host ::ng-deep .cke_editable_inline {
+	padding: 0 8px;
+	border: 1px solid #d1d1d1;
+}

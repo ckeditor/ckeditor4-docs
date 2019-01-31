@@ -1,15 +1,16 @@
 <h2>Editor types</h2>
 
-<h3>{{( inline ? 'Inline' : 'Classic')}} Editor:</h3>
-
-<button (click)="changeEditorType()">Change editor type to {{ inline ? 'Inline' : 'Classic' }}</button>
+<h3>{{( inline ? 'Inline' : 'Divarea')}} Editor:</h3>
 
 <ckeditor
 	*ngIf="!inline"
 	[(data)]="editorData">
 </ckeditor>
+
 <ckeditor
 	*ngIf="inline"
 	type="inline"
 	[(data)]="editorData">
 </ckeditor>
+
+<button class="editor-type" (click)="changeEditorType()">Change editor type to {{ inline ? 'Divarea' : 'Inline' }}</button>

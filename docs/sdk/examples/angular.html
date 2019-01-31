@@ -8,7 +8,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<meta charset="utf-8">
 	<meta name="description" content="Editor Size. Setting Custom Editor Width and Height.">
 	<meta name="keywords" content="ckeditor, editor, wysiwyg, angular, integration">
-	<meta name="sdk-samples" content="Classic editor">
+	<meta name="sdk-samples" content="Editor types|Component events and Angular directives|Form example">
 	<meta name="sdk-category" content="sdk-framework-integration">
 	<meta name="sdk-order" content="10">
 	<title>Angular Integration</title>
@@ -62,62 +62,6 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 </footer>
 
 <script type="text/jsx" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
-	import { BrowserModule } from '@angular/platform-browser';
-	import { NgModule } from '@angular/core';
-	import { FormsModule } from '@angular/forms';
-	import { RouterModule, Routes } from '@angular/router';
-	import { AppComponent } from './app.component';
-
-	import { CKEditorModule } from '@ckeditor/ckeditor4-angular';
-	import { EditorTypesComponent } from './editor-types/editor-types.component';
-	import { EventsComponent } from './events/events.component';
-	import { DemoFormComponent } from './demo-form/demo-form.component';
-
-	const appRoutes: Routes = [
-		{ path: '', redirectTo: '/editor-types', pathMatch: 'full' },
-		{ path: 'editor-types', component: EditorTypesComponent },
-		{ path: 'events', component: EventsComponent },
-		{ path: 'forms', component: DemoFormComponent }
-	];
-
-	@NgModule( {
-		imports: [
-			BrowserModule,
-			FormsModule,
-			CKEditorModule,
-			RouterModule.forRoot( appRoutes, { useHash: true } )
-		],
-		declarations: [
-			AppComponent,
-			DemoFormComponent,
-			EditorTypesComponent,
-			EventsComponent
-		],
-		providers: [],
-		bootstrap: [ AppComponent ]
-	} )
-
-	export class AppModule {
-	}
-</script>
-<script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
-	@Component( {
-		selector: 'app-root',
-		template:
-			`<nav>
-				<ul>
-					<li><a routerLink="/editor-types" routerLinkActive="active">Editor types</a></li>
-					<li><a routerLink="/events" routerLinkActive="active">Component events and Angular directives</a></li>
-					<li><a routerLink="/forms" routerLinkActive="active">Integration with forms (<code>ngModel</code>)</a></li>
-				</ul>
-			</nav>
-
-			<router-outlet></router-outlet>`
-	} )
-	export class AppComponent {
-	}
-</script>
-<script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
 	import { Component } from '@angular/core';
 
 	@Component( {
@@ -153,7 +97,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	}
 
 </script>
-<script type="text/jsx" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
+<script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
 	import { Component } from '@angular/core';
 
 	interface ComponentEvent {
@@ -246,7 +190,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		}
 	}
 </script>
-<script type="text/jsx" data-sample="5" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
+<script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
 
 	import {
 		Component,

@@ -15,7 +15,7 @@ For licensing, see LICENSE.md.
 <info-box info=""> This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-angular"><code>ckeditor4-angular</code> npm package</a>.
 </info-box>
 
-CKEditor offers native Angular integration through `CKEditor` Angular component. It provides deep integration of CKEditor and Angular that lets you use the native features of CKEditor inside Angular component. The `CKEditor` Angular component is compatible with Angular versions 2.0+.
+CKEditor offers native Angular integration through `CKEditor` Angular component. It provides deep integration of CKEditor and Angular that lets you use the native features of CKEditor inside Angular component. The `CKEditor` Angular component is compatible with Angular versions 2.0 and later.
 
 ## Basic Usage
 

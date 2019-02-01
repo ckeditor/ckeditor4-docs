@@ -67,7 +67,7 @@ Alternatively you can load CKEditor before loading `CKEditor` Angular component.
 
 ## Choosing Editor Type
 
-By default `CKEditor` Angular component creates {@link guide/dev/framed/README classic editor}. To create {@link guide/dev/inline/README inline editor} `type` property with value of `inline` must be added:
+By default `CKEditor` Angular component creates {@link guide/dev/inline/README inline editor} with [Fixed User Interface](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_uitypes.html#fixed-ui-for-inline-editor), it will be referred as `divarea` editor. To create  with floating UI `type` property with value of `inline` must be added:
 
 ```html
 <ckeditor
@@ -76,18 +76,20 @@ By default `CKEditor` Angular component creates {@link guide/dev/framed/README c
 ></ckeditor>
 ```
 
-You can also explicitly set `type` property to `classic` to create the classic editor:
+You can also explicitly set `type` property to `divarea` to create the divarea editor:
 
 ```html
 <ckeditor
 	data="<p>Some initial data</p>"
-	type="classic"
-/></ckeditor>
+	type="divarea"
+></ckeditor>
 ```
 
-Every other value of `type` property will be treated as `classic`.
+Every other value of `type` property will be treated as `divarea`.
 
-Note: Due to some Angular limitations, `classic` editor has to be used with [divarea plugin](https://ckeditor.com/cke4/addon/divarea). This plugin must be included in your editor build, but there is no need to list it in [config.plugins](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-plugins) or [config.extraPlugins](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-extraPlugins).
+Notes:
+- Due to some Angular limitations, `classic` editor is not yet supported.
+- [divarea plugin](https://ckeditor.com/cke4/addon/divarea) must be included in your editor build, but there is no need to list it in [config.plugins](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-plugins) or [config.extraPlugins](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-extraPlugins).
 
 ## Integration with ngModel
 
@@ -110,7 +112,7 @@ export class MyComponent {
 Then you can use the model in the template to enable a two-way binding.
 
 ```html
-<ckeditor [(ngModel)]="model.editorData" [editor]="Editor"></ckeditor>
+<ckeditor [(ngModel)]="model.editorData"></ckeditor>
 ```
 
 ## Supported `@Input` properties

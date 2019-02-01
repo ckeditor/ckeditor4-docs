@@ -205,8 +205,6 @@ import { CKEditor4 } from "@ckeditor/ckeditor4-angular/ckeditor";
     ...
 } )
 export class MyComponent {
-    public Editor = ClassicEditor;
-
     public onChange( event: CKEditor4.EventInfo ) {
         console.log( event.editor.getData() );
     }

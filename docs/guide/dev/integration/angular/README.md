@@ -56,7 +56,7 @@ By default `CKEditor` Angular component loads standard preset of the latest CKEd
 <ckeditor [editorUrl]="https://your-website.example/ckeditor/ckeditor.js"></ckeditor>
 ```
 
-Note that attribute has to be assigned **before first component is initialized**.
+Note that attribute has to be assigned **before the first component is initialized**.
 
 Alternatively you can load CKEditor before loading `CKEditor` Angular component. In that case the component will use the already loaded CKEditor:
 

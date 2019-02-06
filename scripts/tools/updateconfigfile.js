@@ -7,6 +7,7 @@
 
 const fs = require( 'fs-extra' );
 const path = require( 'path' );
+const template = require( 'string-placeholder' );
 
 module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve, reject ) => {
 	Promise.all( [
@@ -18,7 +19,7 @@ module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve,
 			let insertedData = '\t// Common config injected by examples building script.\n';
 			for ( const key in srcConfig ) {
 				if ( srcConfig.hasOwnProperty( key ) && typeof srcConfig[ key ] === 'string' ) {
-					insertedData += `\tconfig.${ key } = '${ replacePlaceholders( srcConfig[ key ], config.variables ) }';\n`;
+					insertedData += `\tconfig.${ key } = '${ template( srcConfig[ key ], config.variables, { before: '{%', after: '%}' } ) }';\n`;
 				}
 			}
 			insertedData += '\t// End of injected config.\n';
@@ -30,22 +31,3 @@ module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve,
 		} )
 		.catch( err => reject( err ) );
 } );
-
-function replacePlaceholders( inputString, variables ) {
-	const macros = new Set( inputString.match( /\{%\s?[A-Z_]+?\s?%\}/g ) );
-	let outputText = inputString;
-	if ( !macros.size ) {
-		return inputString;
-	}
-	if ( !variables ) {
-		throw new Error( `Variables are not defined in umberto config, however there was detected macro usage in customconfig.js` );
-	}
-	macros.forEach( macro => {
-		const name = macro.match( /\{%\s?([A-Z_]+)\s?%\}/ )[ 1 ]
-		if ( variables[ name ] === undefined ) {
-			throw new Error( `Macro "${ macro }" used in customconfig.js doesn't have corresponding variable in configuration.` );
-		}
-		outputText = outputText.replace( new RegExp( macro, 'g' ), variables[ name ] );
-	} );
-	return outputText;
-}

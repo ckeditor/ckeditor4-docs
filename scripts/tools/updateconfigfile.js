@@ -9,7 +9,11 @@ const fs = require( 'fs-extra' );
 const path = require( 'path' );
 
 module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve, reject ) => {
-	Promise.all( [ fs.readJson( configFileSrc ), fs.readFile( configFileDst ).then( data => data.toString() ), fs.readJson( path.join( process.cwd(), 'umberto.json' ) ) ] )
+	Promise.all( [
+			fs.readJson( configFileSrc ),
+			fs.readFile( configFileDst ).then( data => data.toString() ),
+			fs.readJson( path.join( process.cwd(), 'umberto.json' ) )
+		] )
 		.then( ( [ srcConfig, dstFile, config ] ) => {
 			let insertedData = '\t// Common config injected by examples building script.\n';
 			for ( const key in srcConfig ) {

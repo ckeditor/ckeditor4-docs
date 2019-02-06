@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -54,7 +54,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					It includes hassle-free <strong>"click and drag" resizing</strong>.
 				</li>
 				<li>
-					It can be integrated with a <strong>file manager</strong> of your choice such as <a href="https://ckeditor.com/ckeditor-4/ckfinder/">CKFinder</a> for image upload and storage support. 
+					It can be integrated with a <strong>file manager</strong> of your choice such as <a href="https://ckeditor.com/ckeditor-4/ckfinder/">CKFinder</a> for image upload and storage support.
 				</li>
 			</ul>
 			<p>
@@ -108,6 +108,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					],
 
 					// Configure your file manager integration. This example uses CKFinder 3 for PHP.
+<<<<<<< HEAD
 					filebrowserBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html',
 					filebrowserImageBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html?type=Images',
 					filebrowserUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files',
@@ -115,6 +116,15 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 					// Upload dropped or pasted images to the CKFinder connector (note that the response type is set to JSON).
 					uploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+=======
+					filebrowserBrowseUrl: '/apps/ckfinder/3.4.4/ckfinder.html',
+					filebrowserImageBrowseUrl: '/apps/ckfinder/3.4.4/ckfinder.html?type=Images',
+					filebrowserUploadUrl: '/apps/ckfinder/3.4.4/core/connector/php/connector.php?command=QuickUpload&type=Files',
+					filebrowserImageUploadUrl: '/apps/ckfinder/3.4.4/core/connector/php/connector.php?command=QuickUpload&type=Images',
+
+					// Upload dropped or pasted images to the CKFinder connector (note that the response type is set to JSON).
+					uploadUrl: '/apps/ckfinder/3.4.4/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+>>>>>>> Updated license headers to 2019.
 
 					// Reduce the list of block elements listed in the Format drop-down to the most commonly used.
 					format_tags: 'p;h1;h2;h3;pre',

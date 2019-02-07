@@ -41,6 +41,20 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: Authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.cloudServices_tokenUrl token URL} returned an empty response.
 * Additional data: None.
 
+## editor-incorrect-element
+
+* Location: `core/editor.js`
+* Description: The requested element couldn't be found in page's DOM. Check the passed argument if it points to the correct element.
+* Additional data:
+	* `element`: The element's `id` attribute.
+
+## editor-element-conflict
+
+* Location: `core/editor.js`
+* Description: There is already editor's instance attached to the provided element and attaching another one to it is not allowed.
+* Additional data:
+	* `editorName`: The name of the already attached editor.
+
 ## editor-destroy-iframe
 
 * Location: `plugins/wysiwygarea/plugin.js`

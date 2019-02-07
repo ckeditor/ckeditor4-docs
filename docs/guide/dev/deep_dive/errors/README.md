@@ -44,7 +44,7 @@ This article contains the list of CKEditor error codes and their explanation. Th
 ## editor-incorrect-element
 
 * Location: `core/editor.js`
-* Description: The requested element couldn't be found in page's DOM. Check the passed argument if it points to the correct element.
+* Description: The requested element couldn't be found in page's DOM. Check if passed argument points to the correct element.
 * Additional data:
 	* `element`: The element's `id` attribute.
 

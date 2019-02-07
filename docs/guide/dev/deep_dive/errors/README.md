@@ -41,12 +41,11 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: Authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.cloudServices_tokenUrl token URL} returned an empty response.
 * Additional data: None.
 
-## editor-incorrect-element
+## editor-destroy-iframe
 
-* Location: `core/editor.js`
-* Description: The requested element couldn't be found in page's DOM. Check if passed argument points to the correct element.
-* Additional data:
-	* `element`: The element's `id` attribute.
+* Location: `plugins/wysiwygarea/plugin.js`
+* Description: The editor's `<iframe>` could not be destroyed correctly because it had been unloaded before the editor was destroyed. Make sure to destroy the editor before detaching it from the DOM.
+* Additional data: None.
 
 ## editor-element-conflict
 
@@ -55,17 +54,18 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Additional data:
 	* `editorName`: The name of the already attached editor.
 
-## editor-destroy-iframe
-
-* Location: `plugins/wysiwygarea/plugin.js`
-* Description: The editor's `<iframe>` could not be destroyed correctly because it had been unloaded before the editor was destroyed. Make sure to destroy the editor before detaching it from the DOM.
-* Additional data: None.
-
 ## editor-incorrect-destroy
 
 * Location: `core/editor.js`
 * Description: The editor is being destroyed before it is fully initialized.
 * Additional data: None.
+
+## editor-incorrect-element
+
+* Location: `core/editor.js`
+* Description: The requested element couldn't be found in page's DOM. Check if passed argument points to the correct element.
+* Additional data:
+	* `element`: The element's `id` attribute.
 
 ## editor-plugin-required
 

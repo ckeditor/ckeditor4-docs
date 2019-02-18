@@ -144,13 +144,13 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 					// Adding drag and drop image upload.
 					extraPlugins: 'print,format,font,colorbutton,justify,uploadimage',
-					uploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+					uploadUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
 
 					// Configure your file manager integration. This example uses CKFinder 3 for PHP.
-					filebrowserBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html',
-					filebrowserImageBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html?type=Images',
-					filebrowserUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files',
-					filebrowserImageUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Images',
+					filebrowserBrowseUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/ckfinder.html',
+					filebrowserImageBrowseUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/ckfinder.html?type=Images',
+					filebrowserUploadUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Files',
+					filebrowserImageUploadUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Images',
 
 					height: 560,
 

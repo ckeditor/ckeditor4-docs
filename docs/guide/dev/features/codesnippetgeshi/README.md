@@ -6,7 +6,7 @@ menu-title: Code Snippets (GeSHi)
 meta-title-short: Code Snippets (GeSHi)
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2014-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2014-2017, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/license
  */
 

@@ -211,11 +211,11 @@ Fires when the content of the editor has changed. In contrast to `change` - only
 
 ### `focus`
 
-Fires when the editor's editable is focused. It corresponds with the `editor#focus` https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-focus event.
+Fires when the editor's editable is focused. It corresponds with the [`editor#focus`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-focus) event.
 
 ### `blur`
 
-Fires when the editing view of the editor is blurred. It corresponds with the `editor#blur` https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-blur event.
+Fires when the editing view of the editor is blurred. It corresponds with the [`editor#blur`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-blur) event.
 
 ### Note
 

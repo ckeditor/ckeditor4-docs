@@ -220,7 +220,7 @@ Fires when the content of the editor has changed. In contrast to `change` - only
 
 ### `focus`
 
-Fires when the editing view of the editor is focused. It corresponds with the `editor#focus` https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-focus event.
+Fires when the editor's editable is focused. It corresponds with the `editor#focus` https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-focus event.
 
 ### `blur`
 

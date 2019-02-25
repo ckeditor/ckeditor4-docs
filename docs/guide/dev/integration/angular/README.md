@@ -76,15 +76,6 @@ By default `CKEditor` Angular component creates {@link guide/dev/inline/README i
 ></ckeditor>
 ```
 
-You can also explicitly set `type` property to `divarea` to create the divarea editor:
-
-```html
-<ckeditor
-	data="<p>Some initial data</p>"
-	type="divarea"
-></ckeditor>
-```
-
 Every other value of `type` property will be treated as `divarea`.
 
 Notes:

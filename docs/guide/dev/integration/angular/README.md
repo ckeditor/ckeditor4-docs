@@ -40,7 +40,7 @@ import CKEditorModule from 'ckeditor4-angular';
 } )
 ```
 
-Now you can use `<ckeditor>` tag in component template to run the rich text editor:
+Now you can use `<ckeditor>` tag in component template to include the rich text editor:
 
 ```html
 <ckeditor data="<p>Hello, world!</p>"></ckeditor>

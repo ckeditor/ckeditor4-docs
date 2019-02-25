@@ -67,7 +67,7 @@ Alternatively you can load CKEditor before loading `CKEditor` Angular component.
 
 ## Choosing Editor Type
 
-By default `CKEditor` Angular component creates {@link guide/dev/inline/README inline editor} with [Fixed User Interface](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_uitypes.html#fixed-ui-for-inline-editor), it will be referred as `divarea` editor. To create  with floating UI `type` property with value of `inline` must be added:
+By default `CKEditor` Angular component creates {@link guide/dev/inline/README inline editor} with {@link guide/dev_uitypes.html#fixed-ui-for-inline-editor}, it will be referred as `divarea` editor. To create  with floating UI `type` property with value of `inline` must be added:
 
 ```html
 <ckeditor
@@ -80,7 +80,7 @@ Every other value of `type` property will be treated as `divarea`.
 
 Notes:
 - Due to some Angular limitations, `classic` editor is not yet supported.
-- [divarea plugin](https://ckeditor.com/cke4/addon/divarea) must be included in your editor build, but there is no need to list it in [config.plugins](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-plugins) or [config.extraPlugins](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-extraPlugins).
+- [divarea plugin](https://ckeditor.com/cke4/addon/divarea) must be included in your editor build, but there is no need to list it in {@linkapi CKEDITOR.config#plugins `config.plugins`} or {@linkapi CKEDITOR.config#extraPlugins `config.plugins`}.
 
 ## Integration with ngModel
 
@@ -179,13 +179,11 @@ The following `@Output` properties are supported by CKEditor 4 Angular component
 
 ### `ready`
 
-Fires when the editor is ready. It corresponds with the `editor#instanceReady` https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-instanceReady event.
+Fires when the editor is ready. It corresponds with the {@linkapi CKEDITOR.editor#instanceReady `editor#instanceReady`} event.
 
 ### `change`
 
-Fires when the content of the editor has changed.
-
-Corresponds with the `editor#change` https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-change event. For performance reasons this event may be called even when data didn't really changed.
+Fires when the content of the editor has changed. It corresponds with the {@linkapi CKEDITOR.editor#change `editor#change`} event. For performance reasons this event may be called even when data didn't really changed.
 
 ```html
 <ckeditor (change)="onChange($event)"></ckeditor>
@@ -212,11 +210,11 @@ Fires when the content of the editor has changed. In contrast to `change` - only
 
 ### `focus`
 
-Fires when the editor's editable is focused. It corresponds with the [`editor#focus`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-focus) event.
+Fires when the editor's editable is focused. It corresponds with the {@linkapi CKEDITOR.editor#focus `editor#focus`} event.
 
 ### `blur`
 
-Fires when the editing view of the editor is blurred. It corresponds with the [`editor#blur`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-blur) event.
+Fires when the editing view of the editor is blurred. It corresponds with the {@linkapi CKEDITOR.editor.blur `editor#blur`} event.
 
 ### Note
 

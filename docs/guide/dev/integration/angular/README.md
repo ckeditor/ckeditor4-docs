@@ -32,11 +32,11 @@ import CKEditorModule from 'ckeditor4-angular';
 
 @NgModule( {
 	imports: [
-	...
+	…
 	CKEditorModule,
 	…
 	],
-	...
+	…
 } )
 ```
 
@@ -99,13 +99,13 @@ To use it, first create model in your component:
 
 ``` typescript
 @Component( {
-    ...
+    …
 } )
 export class MyComponent {
     public model = {
         editorData: '<p>Hello, world!</p>'
     };
-    ...
+    …
 }
 ```
 
@@ -140,23 +140,23 @@ Custom configuration can be passed to the editor via `config` attribute passed t
 The initial data of the editor. It can be a static value:
 
 ```html
-<ckeditor data="<p>Hello, world!</p>" ...></ckeditor>
+<ckeditor data="<p>Hello, world!</p>" …></ckeditor>
 ```
 
 or a shared parent component’s property
 
 ```typescript
 @Component( {
-    ...
+    …
 } )
 export class MyComponent {
     public editorData = '<p>Hello, world!</p>';
-    ...
+    …
 }
 ```
 
 ```html
-<ckeditor [data]="editorData" ...></ckeditor>
+<ckeditor [data]="editorData" …></ckeditor>
 ```
 
 ### `tagName`
@@ -165,7 +165,7 @@ Specifies the tag name of the HTML element on which the editor will be created.
 
 The default tag is `<textArea>`.
 ``` html
-<ckeditor tagName="textarea" ...></ckeditor>
+<ckeditor tagName="textarea" …></ckeditor>
 ```
 
 ### `readOnly`
@@ -204,13 +204,13 @@ Fires when the content of the editor has changed. It corresponds with the `edito
 import { CKEditor4 } from "@ckeditor/ckeditor4-angular/ckeditor";
 
 @Component( {
-    ...
+    …
 } )
 export class MyComponent {
     public onChange( event: CKEditor4.EventInfo ) {
         console.log( event.editor.getData() );
     }
-    ...
+    …
 }
 ```
 

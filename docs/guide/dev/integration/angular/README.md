@@ -174,7 +174,7 @@ This property takes precedence over {@linkapi CKEDITOR.config#readOnly `config.r
 
 ## Supported `@Output` properties
 
-The following `@Input` properties are supported by CKEditor 4 Angular component:
+The following `@Output` properties are supported by CKEditor 4 Angular component:
 
 ### `ready`
 

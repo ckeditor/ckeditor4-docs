@@ -242,4 +242,4 @@ Please note that this property is initialised asynchronously, when component is 
 
 ## Types
 
-CKEditor types can be installed from [@types/ckeditor](https://www.npmjs.com/package/@types/ckeditor). Note, they aren't developed by the CKEditor Team, so we can't guarantee that are up to date.
+CKEditor types can be installed from [@types/ckeditor](https://www.npmjs.com/package/@types/ckeditor). Note, they aren't maintained by the CKEditor Team, so we can't guarantee that are up to date.

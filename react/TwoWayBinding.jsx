@@ -7,7 +7,7 @@ class TwoWayBinding extends Component {
 		super( props );
 
 		this.state = {
-			data: '<p>This is CKEditor 4 instance created by ️⚛️ React.</p>'
+			data: '<p>This is a CKEditor 4 instance created by ️⚛️ React.</p>'
 		};
 
 		this.onTextareaChange = this.onTextareaChange.bind( this );
@@ -41,7 +41,7 @@ class TwoWayBinding extends Component {
 			<div>
 				<h2>Two-way data binding</h2>
 				<p>
-					Using internal state of React components, it's possible to create simple two-way data binding between editor component and other components, e.g. preview component that renders the content of the editor.
+					Using the internal state of React components, it is possible to create a simple two-way data binding between the editor component and other components, for example the preview component that renders the content of the editor.
 				</p>
 
 				<SourceEditor data={this.state.data} handler={this.onTextareaChange} />

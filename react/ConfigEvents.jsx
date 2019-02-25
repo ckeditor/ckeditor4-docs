@@ -38,15 +38,15 @@ class ConfigEvents extends Component {
 	render() {
 		return (
 			<div>
-				<h2>Editor with custom event handlers and config</h2>
+				<h2>WYSIWYG editor with custom event handlers and configuration</h2>
 				<p>
-					Editors created by React component are highly customisable. It is possible to overwrite every configuration setting using <code>config</code> prop and passing object containing configuration to it.
+					Editors created with the React component are highly customizable. It is possible to overwrite every configuration setting using the <code>config</code> property and passing an object containing the configuration to it.
 				</p>
 				<p>
-					Additionally editor component allows to bind any event handler using props with names starting with <code>on</code>, followed by the name of the event with capitalized first letter. Following example shows how to bind several common CKEditor's events.
+					Additionally, the WYSIWYG editor component allows to bind any event handler using properties with names starting with <code>on</code>, followed by the name of the event with a capitalized first letter. The following example shows how to bind several common CKEditor events.
 				</p>
 				<CKEditor
-					data="This is CKEditor 4 instance created by ️⚛️ React."
+					data="This is a CKEditor 4 instance created by ️⚛️ React."
 					config={{
 						toolbar: [
 							[ 'Source' ],
@@ -68,7 +68,7 @@ class ConfigEvents extends Component {
 					onChange={this.logEvent}
 					onSelectionChange={this.logEvent} />
 					<h3>Events Log</h3>
-					<p><small>To check additional details about every event, please consult console in browser's devtools.</small></p>
+					<p><small>To check additional details about every event, consult the console in the browser's developer tools.</small></p>
 					<EventLog stream={this.state.events} />
 					<button onClick={this.clearEvents}>Clear events log</button>
 			</div>

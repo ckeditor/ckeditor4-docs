@@ -182,9 +182,9 @@ Fires when the editor is ready. It corresponds with the `editor#instanceReady` h
 
 ### `change`
 
-Fires when the content of the editor has changed. In contrast to `change` - only emits when data really changed thus can be successfully used with `[data]` and two way `[(data)]` binding.
+Fires when the content of the editor has changed.
 
-Fires when the content of the editor has changed. It corresponds with the `editor#change` https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-change event. For performance reasons this event may be called even when data didn't really changed.
+Corresponds with the `editor#change` https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#event-change event. For performance reasons this event may be called even when data didn't really changed.
 
 ```html
 <ckeditor (change)="onChange($event)"></ckeditor>

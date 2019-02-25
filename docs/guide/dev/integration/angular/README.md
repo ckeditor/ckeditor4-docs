@@ -62,7 +62,7 @@ Alternatively you can load CKEditor before loading `CKEditor` Angular component.
 
 ```html
 <script src="my-custom-build/ckeditor.js"></script>
-<script src="main.js"></script>
+<script src="your-app-bundle.js"></script>
 ```
 
 ## Choosing Editor Type

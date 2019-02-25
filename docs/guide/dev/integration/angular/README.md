@@ -61,7 +61,7 @@ Note that attribute must be assigned **before the first component is initialized
 Alternatively you can load CKEditor before loading `CKEditor` Angular component. In that case the component will use the already loaded CKEditor:
 
 ```html
-<script src="custom-ckeditor.js"></script>
+<script src="my-custom-build/ckeditor.js"></script>
 <script src="main.js"></script>
 ```
 

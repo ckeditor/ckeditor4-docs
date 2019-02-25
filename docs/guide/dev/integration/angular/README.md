@@ -111,7 +111,8 @@ Then you can use the model in the template to enable a two-way binding.
 The following `@Input` properties are supported by CKEditor 4 Angular component:
 
 ### `editorUrl`
-see [Customising CKEditor Preset or Version](#customizing-ckeditor-preset-or-version)
+
+URL address to `ckeditor.js`, for more detailed information see [Customising CKEditor Preset or Version](#customizing-ckeditor-preset-or-version).
 
 ### `config`
 

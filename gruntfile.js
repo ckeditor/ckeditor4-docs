@@ -76,6 +76,10 @@ module.exports = function( grunt ) {
 	// Build docs for production. It assumes Umberto is run by external process - useful when building as part of projects bundle.
 	grunt.registerTask( 'docs-prod', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react' ] );
 
+	grunt.registerTask( 'before-build', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-react' ] ); // We need this task for multidocs.
+	grunt.registerTask( 'build', [ 'before-build', 'umberto' ] );
+	grunt.registerTask( 'build-serve', [ 'build', 'connect' ] );
+
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
 

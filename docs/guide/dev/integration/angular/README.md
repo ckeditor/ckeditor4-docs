@@ -80,7 +80,7 @@ Every other value of `type` property will be treated as `divarea`.
 
 Notes:
 - Due to some Angular limitations, `classic` editor is not yet supported.
-- [divarea plugin](https://ckeditor.com/cke4/addon/divarea) must be included in your editor build, but there is no need to list it in {@linkapi CKEDITOR.config#plugins `config.plugins`} or {@linkapi CKEDITOR.config#extraPlugins `config.plugins`}.
+- [divarea plugin](https://ckeditor.com/cke4/addon/divarea) must be included in your editor build, but there is no need to list it in {@linkapi CKEDITOR.config#plugins `config.plugins`} or {@linkapi CKEDITOR.config#extraPlugins `config.extraPlugins`}.
 
 ## Integration with ngModel
 

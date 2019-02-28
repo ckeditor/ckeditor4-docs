@@ -132,7 +132,7 @@ Custom configuration can be passed to the editor via `config` attribute passed t
 The initial data of the editor. It can be a static value:
 
 ```html
-<ckeditor data="<p>Hello, world!</p>" …></ckeditor>
+<ckeditor data="<p>Hello, world!</p>"></ckeditor>
 ```
 
 or a shared parent component’s property
@@ -143,12 +143,11 @@ or a shared parent component’s property
 } )
 export class MyComponent {
     public editorData = '<p>Hello, world!</p>';
-    …
 }
 ```
 
 ```html
-<ckeditor [data]="editorData" …></ckeditor>
+<ckeditor [data]="editorData"></ckeditor>
 ```
 
 ### `tagName`
@@ -157,7 +156,7 @@ Specifies the tag name of the HTML element on which the editor will be created.
 
 The default tag is `<textArea>`.
 ``` html
-<ckeditor tagName="textarea" …></ckeditor>
+<ckeditor tagName="textarea"></ckeditor>
 ```
 
 ### `readOnly`

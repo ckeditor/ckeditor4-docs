@@ -67,7 +67,7 @@ Alternatively you can load CKEditor before loading `CKEditor` Angular component.
 
 ## Choosing Editor Type
 
-By default `CKEditor` Angular component creates {@link guide/dev/inline/README inline editor} with {@link guide/dev_uitypes.html#fixed-ui-for-inline-editor}, it will be referred as `divarea` editor. To create  with floating UI `type` property with value of `inline` must be added:
+By default `CKEditor` Angular component creates {@link guide/dev/inline/README inline editor} with {@link guide/dev/features/uitypes/README#fixed-ui-for-inline-editor fixed UI}, it will be referred as `divarea` editor. To create  with floating UI `type` property with value of `inline` must be added:
 
 ```html
 <ckeditor

@@ -28,7 +28,7 @@ npm install --save ckeditor4-angular
 After installing, import `CKEditorModule` to your application:
 
 ```typescript
-import CKEditorModule from 'ckeditor4-angular';
+import { CKEditorModule } from '@ckeditor/ckeditor4-angular';
 
 @NgModule( {
 	imports: [
@@ -53,7 +53,7 @@ The `data` attribute used in the above example is responsible for setting the ed
 By default `CKEditor` Angular component loads [Standard Preset](https://ckeditor.com/docs/ckeditor4/latest/examples/standardpreset.html) of the latest CKEditor release from <a href="https://cdn.ckeditor.com/">CDN</a> while creating the first editor. This behavior can be altered by setting the value of `editorUrl` attribute in template to point to desired CKEditor location:
 
 ```html
-<ckeditor [editorUrl]="https://your-website.example/ckeditor/ckeditor.js"></ckeditor>
+<ckeditor editorUrl="https://your-website.example/ckeditor/ckeditor.js"></ckeditor>
 ```
 
 Note that attribute must be assigned **before the first component is initialized**.
@@ -121,7 +121,7 @@ Custom configuration can be passed to the editor via `config` attribute passed t
 ```html
 <ckeditor
 	data="<p>Editor' content</p>"
-	[config]="{ { toolbar: [ [ 'Bold' ] ] } }"
+	[config]="{ toolbar: [ [ 'Bold' ] ] }"
 ></ckeditor>
 ```
 

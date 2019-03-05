@@ -167,7 +167,7 @@ Editor can be set to {@link guide/dev/features/readonly/README read-only mode} v
 <ckeditor
 	data="<p>Editor's content</p>"
 	readOnly="true"
-><ckeditor>
+></ckeditor>
 ```
 
 This property takes precedence over {@linkapi CKEDITOR.config#readOnly `config.readOnly`} setting.
@@ -190,7 +190,7 @@ Fires when the content of the editor has changed. It corresponds with the {@link
 
 ``` typescript
 
-import { CKEditor4 } from "@ckeditor/ckeditor4-angular/ckeditor";
+import { CKEditor4 } from '@ckeditor/ckeditor4-angular/ckeditor';
 
 @Component( {
     …

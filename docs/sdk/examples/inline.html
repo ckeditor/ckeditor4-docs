@@ -300,6 +300,68 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<li><a href="./saveajax.html">Saving Data &ndash; CKEditor in Ajax Applications</a></li>
 		</ul>
 
+		<script>
+			// Sample: Inline Editing Enabled by Code
+			(function () {
+				var isEditingEnabled,
+					toggle = document.getElementById( 'toggle' ),
+					reset = document.getElementById( 'reset' ),
+					introduction = document.getElementById( 'introduction' ),
+					introductionHTML = introduction.innerHTML;
+
+				function enableEditing() {
+					if ( !CKEDITOR.instances.introduction ) {
+						CKEDITOR.inline( 'introduction', {
+							extraAllowedContent: 'a(documentation);abbr[title];code',
+							removePlugins: 'stylescombo',
+							extraPlugins: 'sourcedialog',
+							startupFocus: true
+						} );
+					}
+				}
+
+				function disableEditing() {
+					if ( CKEDITOR.instances.introduction )
+						CKEDITOR.instances.introduction.destroy();
+				}
+
+				function toggleEditor() {
+					if ( isEditingEnabled ) {
+						if ( CKEDITOR.instances.introduction && CKEDITOR.instances.introduction.checkDirty() ) {
+							reset.style.display = 'inline';
+						}
+						disableEditing();
+						introduction.setAttribute( 'contenteditable', false );
+						this.innerHTML = 'Start editing';
+						isEditingEnabled = false;
+					}
+					else {
+						introduction.setAttribute( 'contenteditable', true );
+						enableEditing();
+						this.innerHTML = 'Finish editing';
+						isEditingEnabled = true;
+					}
+				}
+
+				function resetContent() {
+					reset.style.display = 'none';
+					introduction.innerHTML = introductionHTML;
+				}
+
+				function onClick( element, callback ) {
+					if ( window.addEventListener ) {
+						element.addEventListener( 'click', callback, false );
+					}
+					else if ( window.attachEvent ) {
+						element.attachEvent( 'onclick', callback );
+					}
+				}
+
+				onClick( toggle, toggleEditor );
+				onClick( reset, resetContent );
+
+			})();
+		</script>
 	</section>
 </section>
 
@@ -321,68 +383,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			startupFocus: true
 		} );
 	&lt;/script&gt;
-</script>
-<script>
-	// Sample: Inline Editing Enabled by Code
-	(function () {
-		var isEditingEnabled,
-				toggle = document.getElementById( 'toggle' ),
-				reset = document.getElementById( 'reset' ),
-				introduction = document.getElementById( 'introduction' ),
-				introductionHTML = introduction.innerHTML;
-
-		function enableEditing() {
-			if ( !CKEDITOR.instances.introduction ) {
-				CKEDITOR.inline( 'introduction', {
-					extraAllowedContent: 'a(documentation);abbr[title];code',
-					removePlugins: 'stylescombo',
-					extraPlugins: 'sourcedialog',
-					startupFocus: true
-				} );
-			}
-		}
-
-		function disableEditing() {
-			if ( CKEDITOR.instances.introduction )
-				CKEDITOR.instances.introduction.destroy();
-		}
-
-		function toggleEditor() {
-			if ( isEditingEnabled ) {
-				if ( CKEDITOR.instances.introduction && CKEDITOR.instances.introduction.checkDirty() ) {
-					reset.style.display = 'inline';
-				}
-				disableEditing();
-				introduction.setAttribute( 'contenteditable', false );
-				this.innerHTML = 'Start editing';
-				isEditingEnabled = false;
-			}
-			else {
-				introduction.setAttribute( 'contenteditable', true );
-				enableEditing();
-				this.innerHTML = 'Finish editing';
-				isEditingEnabled = true;
-			}
-		}
-
-		function resetContent() {
-			reset.style.display = 'none';
-			introduction.innerHTML = introductionHTML;
-		}
-
-		function onClick( element, callback ) {
-			if ( window.addEventListener ) {
-				element.addEventListener( 'click', callback, false );
-			}
-			else if ( window.attachEvent ) {
-				element.attachEvent( 'onclick', callback );
-			}
-		}
-
-		onClick( toggle, toggleEditor );
-		onClick( reset, resetContent );
-
-	})();
 </script>
 <script data-sample="2">
 	// Sample: Massive Inline Editing

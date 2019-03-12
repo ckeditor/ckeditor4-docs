@@ -51,7 +51,7 @@ The `data` attribute used in the example above is responsible for setting the ed
 
 ## Customizing CKEditor Preset or Version
 
-By default, the `CKEditor` Angular component loads the [Standard preset](https://ckeditor.com/docs/ckeditor4/latest/examples/standardpreset.html) of the latest CKEditor 4 release from the <a href="https://cdn.ckeditor.com/">CDN</a> when creating the first editor. This behavior can be altered by setting the value of the `editorUrl` attribute in the template to point to the desired CKEditor location:
+By default, the `CKEditor` Angular component loads the [Standard-all preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the <a href="https://cdn.ckeditor.com/">CDN</a> when creating the first editor. This behavior can be altered by setting the value of the `editorUrl` attribute in the template to point to the desired CKEditor location:
 
 ```html
 <ckeditor editorUrl="https://your-website.example/ckeditor/ckeditor.js"></ckeditor>

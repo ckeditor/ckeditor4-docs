@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Angular Integration
 
 <info-box info="">
-    This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-angular"><code>ckeditor4-angular</code> npm package</a>.
+	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-angular"><code>ckeditor4-angular</code> npm package</a>.
 </info-box>
 
 CKEditor 4 offers a native Angular integration through the CKEditor 4 Angular component. It provides deep integration of CKEditor 4 and Angular that lets you use the native features of the WYSIWYG editor inside an Angular component. The CKEditor 4 Angular component is compatible with Angular versions 2.0 and later.
@@ -91,13 +91,13 @@ To use it, first create a model in your component:
 
 ``` typescript
 @Component( {
-    ...
+	...
 } )
 export class MyComponent {
-    public model = {
-        editorData: '<p>Hello, world!</p>'
-    };
-    ...
+	public model = {
+		editorData: '<p>Hello, world!</p>'
+	};
+	...
 }
 ```
 
@@ -140,10 +140,10 @@ or a shared parent component’s property:
 
 ```typescript
 @Component( {
-    ...
+	...
 } )
 export class MyComponent {
-    public editorData = '<p>Hello, world!</p>';
+	public editorData = '<p>Hello, world!</p>';
 }
 ```
 
@@ -194,13 +194,13 @@ Fires when the content of the editor has changed. It corresponds with the {@link
 import { CKEditor4 } from '@ckeditor/ckeditor4-angular/ckeditor';
 
 @Component( {
-    ...
+	...
 } )
 export class MyComponent {
-    public onChange( event: CKEditor4.EventInfo ) {
-        console.log( event.editor.getData() );
-    }
-    ...
+	public onChange( event: CKEditor4.EventInfo ) {
+		console.log( event.editor.getData() );
+	}
+	...
 }
 ```
 

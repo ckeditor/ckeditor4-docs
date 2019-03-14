@@ -229,7 +229,7 @@ component.instance.getData();
 ```
 
 Please note that this property is initialised asynchronously, when the component is ready.
-i
+
 ## Types
 
 CKEditor types can be installed from [@types/ckeditor](https://www.npmjs.com/package/@types/ckeditor). Note that they are not maintained by the CKEditor team, so we cannot guarantee that they are up to date.

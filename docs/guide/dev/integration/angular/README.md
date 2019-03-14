@@ -29,7 +29,7 @@ npm install --save ckeditor4-angular
 After installing, import `CKEditorModule` to your application:
 
 ```typescript
-import { CKEditorModule } from '@ckeditor/ckeditor4-angular';
+import { CKEditorModule } from 'ckeditor4-angular';
 
 @NgModule( {
 	imports: [
@@ -191,7 +191,7 @@ Fires when the content of the editor has changed. It corresponds with the {@link
 
 ``` typescript
 
-import { CKEditor4 } from '@ckeditor/ckeditor4-angular/ckeditor';
+import { CKEditor4 } from 'ckeditor4-angular/ckeditor';
 
 @Component( {
 	...
@@ -229,7 +229,7 @@ component.instance.getData();
 ```
 
 Please note that this property is initialised asynchronously, when the component is ready.
-
+i
 ## Types
 
 CKEditor types can be installed from [@types/ckeditor](https://www.npmjs.com/package/@types/ckeditor). Note that they are not maintained by the CKEditor team, so we cannot guarantee that they are up to date.

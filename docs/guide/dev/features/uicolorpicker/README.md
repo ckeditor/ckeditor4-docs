@@ -27,7 +27,7 @@ When the plugin is enabled, it adds a new **UI Color Picker** button (<img class
 
 {@img assets/img/uicolor_02.png}
 
-For a start, you can click anywhere in the color palette to select a color. You can also choose one of the pre-defined color sets and fine-tune it as you see fit. Last but not least you can simply manually enter an RGB color code in appropriate field.
+For a start, you can click anywhere in the color palette to select a color. You can also choose one of the pre-defined color sets and fine-tune it as you see fit. Last but not least you can simply manually enter an RGB color code in the appropriate field.
 
 A nice feature of this tool is that it offers instant preview of the selected color, so testing your changes is really quick.
 

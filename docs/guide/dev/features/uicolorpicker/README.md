@@ -23,11 +23,11 @@ For licensing, see LICENSE.md.
 
 {@link guide/dev/features/uicolor/README CKEditor UI color can be set manually} in the editor configuration, but adjusting the UI color can be even easier than that. To make use of the second method, your CKEditor build needs to include the optional [UI Color Picker](https://ckeditor.com/cke4/addon/uicolor) plugin.
 
-When the plugin is enabled, it adds a new **UI Color Picker** button (<img class="inline" src="%BASE_PATH%/assets/img/uicolorpicker.png">) to your toolbar. Clicking this button opens the **UI Color Picker** dialog window where you have a few options to find the right color.
+When the plugin is enabled, it adds a new **UI Color Picker** button (<img class="inline" src="%BASE_PATH%/assets/img/uicolorpicker.png">) to your toolbar. Clicking this button opens the **UI Color Picker** dialog window where you find a color palette to help you choose the right color.
 
 {@img assets/img/uicolor_02.png}
 
-For a start, you can click anywhere in the color palette to select a color. You can also choose from one of the pre-defined color sets and fine-tune as you see fit. Last but not least you can simply manually enter an RGB color code or the RGB and HSV values in appropriate fields.
+For a start, you can click anywhere in the color palette to select a color. You can also choose one of the pre-defined color sets and fine-tune it as you see fit. Last but not least you can simply manually enter an RGB color code in the appropriate field.
 
 A nice feature of this tool is that it offers instant preview of the selected color, so testing your changes is really quick.
 

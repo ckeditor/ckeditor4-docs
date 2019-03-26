@@ -46,10 +46,10 @@ By default {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-s
 config.scayt_sLang = 'fr_FR';
 ```
 
-Additionally user's ability to specify a default language in the UI must be disabled:
+Additionally, option to store user's chosen language may be disabled so the language defined in `config.scayt_sLang` will be always used by default:
 
 ```javascript
 config.scayt_disableOptionsStorage = 'lang';
 ```
 
-Language codes supported by SCAYT can be found {@linkapi CKEDITOR.config#scayt_sLang here}. If you enter a language code that is not supported, SCAYT will fall back to the default American English setting.
+Language codes supported by SCAYT can be found in {@linkapi CKEDITOR.config#scayt_sLang `scayt_sLang` config option definition}. If you enter a language code that is not supported, SCAYT will fall back to the default American English setting.

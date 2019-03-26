@@ -19,25 +19,37 @@ The following article contains tips about customizing the spell checker behavior
 
 If you want to turn on the {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-scayt Spell Check As You Type (SCAYT)} feature in CKEditor by default, set the {@linkapi CKEDITOR.config#scayt_autoStartup CKEDITOR.config#scayt_autoStartup} configuration setting to `true`.
 
-	config.scayt_autoStartup = true;
-
+```javascript
+config.scayt_autoStartup = true;
+```
 
 ## How Do I Disable SCAYT in CKEditor?
 
 If you want to completely disable the {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-scayt Spell Check As You Type (SCAYT)} feature in CKEditor, remove the [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) from your CKEditor build with online builder or alternatively, disable the `scayt` plugin using the {@linkapi CKEDITOR.config#removePlugins CKEDITOR.config#removePlugins} configuration setting.
 
-	config.removePlugins = 'scayt';
+```javascript
+config.removePlugins = 'scayt';
+```
 
 If you want to leave SCAYT available, but prevent the feature from being turned on automatically on loading the editor, set the {@linkapi CKEDITOR.config#scayt_autoStartup CKEDITOR.config#scayt_autoStartup} configuration setting to `false`. This is the default value for CKEditor configuration.
 
-	config.scayt_autoStartup = false;
-
+```javascript
+config.scayt_autoStartup = false;
+```
 
 ## How Do I Change the Default Language for Spell Check As You Type (SCAYT)?
 
 By default {@link guide/dev/features/spellcheck/README#spell-check-as-you-type-scayt SCAYT} treats the text written in the editor as American English (`en_US`). If you want to change the default SCAYT language, set the {@linkapi CKEDITOR.config#scayt_sLang CKEDITOR.config#scayt_sLang} configuration option to one of the 16 possible language codes that are currently accepted.
 
-	// Sets SCAYT to French.
-	config.scayt_sLang = 'fr_FR';
+```javascript
+// Sets SCAYT to French.
+config.scayt_sLang = 'fr_FR';
+```
 
-The following language codes are currently supported by SCAYT: `en_US`, `en_GB`, `pt_BR`, `da_DK`, `nl_NL`, `en_CA`, `fi_FI`, `fr_FR`, `fr_CA`, `de_DE`, `el_GR`, `it_IT`, `nb_NO`, `pt_PT`, `es_ES`, and `sv_SE`. If you enter a language code that is not supported, SCAYT will fall back to the default American English setting.
+Additionally, option to store user's chosen language may be disabled so the language defined in `config.scayt_sLang` will be always used by default:
+
+```javascript
+config.scayt_disableOptionsStorage = 'lang';
+```
+
+Language codes supported by SCAYT can be found in {@linkapi CKEDITOR.config#scayt_sLang `scayt_sLang` config option definition}. If you enter a language code that is not supported, SCAYT will fall back to the default American English setting.

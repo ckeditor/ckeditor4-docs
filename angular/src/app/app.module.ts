@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
-import { CKEditorModule } from '@ckeditor/ckeditor4-angular';
+import { CKEditorModule } from 'ckeditor4-angular';
 import { EditorTypesComponent } from './editor-types/editor-types.component';
 import { EventsComponent } from './events/events.component';
 import { DemoFormComponent } from './demo-form/demo-form.component';

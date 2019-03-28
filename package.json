@@ -16,7 +16,7 @@
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
-    "@ckeditor/ckeditor4-angular": "file:../ckeditor4-angular/dist/ckeditor-ckeditor4-angular-0.0.0.tgz",
+    "ckeditor4-angular": "0.1.1",
     "babel-loader": "^8.0.4",
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",
@@ -41,7 +41,7 @@
     "rxjs": "^6.3.3",
     "terser-webpack-plugin": "^1.2.1",
     "to-string-loader": "^1.1.5",
-    "typescript": "^3.1.1",
+    "typescript": "~3.1.1",
     "zone.js": "^0.8.29"
   },
   "author": "CKSource (http://cksource.com/)",

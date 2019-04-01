@@ -227,9 +227,6 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 					name="description">
 				</ckeditor>
 
-				<p *ngIf="description && description.dirty" class="alert">Description is "dirty".</p>
-				<p *ngIf="description && description.touched" class="alert">Description has been "touched".</p>
-
 				<p>
 					<button type="reset" (click)="reset()">Reset form</button>
 				</p>
@@ -265,8 +262,6 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		public isPreviewActive: boolean;
 
 		public previewModel: string;
-
-		public formDataPreview?: string;
 
 		onSubmit() {
 			alert( `Form submit, model: ${ JSON.stringify( this.model ) }` );

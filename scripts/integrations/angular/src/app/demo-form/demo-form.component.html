@@ -21,9 +21,6 @@
 		name="description">
 	</ckeditor>
 
-	<p *ngIf="description && description.dirty" class="alert">Description is "dirty".</p>
-	<p *ngIf="description && description.touched" class="alert">Description has been "touched".</p>
-
 	<p>
 		<button type="reset" (click)="reset()">Reset form</button>
 	</p>

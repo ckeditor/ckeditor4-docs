@@ -32,8 +32,6 @@ export class DemoFormComponent implements AfterViewInit {
 
 	public previewModel: string;
 
-	public formDataPreview?: string;
-
 	onSubmit() {
 		alert( `Form submit, model: ${ JSON.stringify( this.model ) }` );
 	}

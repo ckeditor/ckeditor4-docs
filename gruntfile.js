@@ -78,7 +78,7 @@ module.exports = function( grunt ) {
 		};
 	}
 
-	// Hacky way to add build-angular task, but otherwise we have some webpack errors about circular references which building.
+	// Hacky way to add build-angular task, but otherwise we have some webpack errors about circular references when building.
 	// Also there is some conflict between two webpack configurations, building react in same way is working workaround.
 	grunt.registerTask( 'build-angular', buildIntegrationTask( 'angular' ) );
 	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );

@@ -13,8 +13,7 @@ interface ComponentEvent {
 
 @Component( {
 	selector: 'app-events',
-	templateUrl: './events.component.html',
-	styleUrls: [ './events.component.css' ]
+	templateUrl: './events.component.html'
 } )
 export class EventsComponent {
 	public isReadOnly = false;

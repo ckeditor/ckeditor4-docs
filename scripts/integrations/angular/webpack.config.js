@@ -19,8 +19,7 @@ module.exports = {
 
 	entry: {
 		main: angularDir + '/src/main.ts',
-		polyfills: angularDir + '/src/polyfills.ts',
-		styles: angularDir + '/src/styles.css'
+		polyfills: angularDir + '/src/polyfills.ts'
 	},
 
 	mode: 'production',
@@ -35,11 +34,6 @@ module.exports = {
 			{
 				test: /\.html$/,
 				use: 'raw-loader'
-			},
-			{
-				test: /\.css$/,
-				use: [ 'to-string-loader', 'css-loader' ],
-				exclude: [ resolve( angularDir + '/src/styles.css' ) ]
 			},
 
 			// This hides some Webpack warnings.

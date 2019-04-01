@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 
 @Component( {
 	selector: 'app-editor-types',
-	templateUrl: './editor-types.component.html',
-	styleUrls: [ './editor-types.component.css' ]
+	templateUrl: './editor-types.component.html'
 } )
 export class EditorTypesComponent {
 	public isReadOnly = false;

@@ -55,7 +55,7 @@
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
-    "build-angular": "webpack --config angular/webpack.config.js",
-    "build-react": "webpack --config react/webpack.config.js"
+    "build-angular": "webpack --config scripts/integrations/angular/webpack.config.js",
+    "build-react": "webpack --config scripts/integrations/react/webpack.config.js"
   }
 }

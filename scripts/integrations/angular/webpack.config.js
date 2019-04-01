@@ -12,14 +12,15 @@ const ProgressPlugin = require( 'webpack/lib/ProgressPlugin' );
 const rxPaths = require( 'rxjs/_esm5/path-mapping' );
 const TerserPlugin = require( 'terser-webpack-plugin' );
 
+const angularDir = './scripts/integrations/angular';
 
 module.exports = {
 	devtool: 'source-map',
 
 	entry: {
-		main: './angular/src/main.ts',
-		polyfills: './angular/src/polyfills.ts',
-		styles: './angular/src/styles.css'
+		main: angularDir + '/src/main.ts',
+		polyfills: angularDir + '/src/polyfills.ts',
+		styles: angularDir + '/src/styles.css'
 	},
 
 	mode: 'production',
@@ -38,7 +39,7 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [ 'to-string-loader', 'css-loader' ],
-				exclude: [ resolve( './angular/src/styles.css' ) ]
+				exclude: [ resolve( angularDir + '/src/styles.css' ) ]
 			},
 
 			// This hides some Webpack warnings.
@@ -65,7 +66,7 @@ module.exports = {
 	},
 
 	output: {
-		path: path.join( __dirname, '..', 'docs', 'sdk', 'examples', 'assets', 'angular' ),
+		path: path.join( __dirname, '..', '..', '..', 'docs', 'sdk', 'examples', 'assets', 'angular' ),
 		filename: '[name].js',
 		libraryTarget: 'umd',
 		libraryExport: 'default'
@@ -77,13 +78,13 @@ module.exports = {
 
 	plugins: [
 		new AngularCompilerPlugin( {
-			mainPath: resolve( './angular/src/main.ts' ),
+			mainPath: resolve( angularDir + '/src/main.ts' ),
 			sourceMap: true,
 			nameLazyFiles: false,
-			tsConfigPath: resolve( './angular/src/tsconfig.app.json' ),
+			tsConfigPath: resolve( angularDir + '/src/tsconfig.app.json' ),
 			skipCodeGeneration: false,
 			hostReplacementPaths: {
-				[ resolve( 'angular/src/environments/environment.ts' ) ]: resolve( 'angular/src/environments/environment.prod.ts' )
+				[ resolve( angularDir + '/src/environments/environment.ts' ) ]: resolve( angularDir + '/src/environments/environment.prod.ts' )
 			}
 		} ),
 
@@ -92,7 +93,7 @@ module.exports = {
 		new ProgressPlugin(),
 
 		// Prevents webpack error.
-		new ContextReplacementPlugin( /\@angular(\\|\/)core(\\|\/)fesm5/, path.join( __dirname, './angular/src/' ) ),
+		new ContextReplacementPlugin( /\@angular(\\|\/)core(\\|\/)fesm5/, path.join( __dirname, './scripts/integrations/' ) ),
 	],
 
 	resolve: {

@@ -65,19 +65,6 @@ module.exports = function( grunt ) {
 		done();
 	} );
 
-
-	function buildIntegrationTask( name ) {
-		return function() {
-			var done = this.async();
-
-			grunt.util.spawn( {
-				cmd: 'npm',
-				args: [ 'run', 'build-' + name ],
-				opts: { stdio: 'inherit' } // This option is necessary for grunt to display commands output.
-			}, done );
-		};
-	}
-
 	// Hacky way to add build-angular task, but otherwise we have some webpack errors about circular references when building.
 	// Also there is some conflict between two webpack configurations, building react in same way is working workaround.
 	grunt.registerTask( 'build-angular', buildIntegrationTask( 'angular' ) );
@@ -175,5 +162,17 @@ module.exports = function( grunt ) {
 		grunt.log.writeln( '[i] Using', ckeditorPath[ 'cyan' ], 'as source directory.' );
 
 		return ckeditorPath;
+	}
+
+	function buildIntegrationTask( name ) {
+		return function() {
+			var done = this.async();
+
+			grunt.util.spawn( {
+				cmd: 'npm',
+				args: [ 'run', 'build-' + name ],
+				opts: { stdio: 'inherit' } // This option is necessary for grunt to display commands output.
+			}, done );
+		};
 	}
 };

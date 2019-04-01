@@ -75,7 +75,7 @@ module.exports = function( grunt ) {
 				args: [ 'run', 'build-' + name ],
 				opts: { stdio: 'inherit' } // This option is necessary for grunt to display commands output.
 			}, done );
-		}
+		};
 	}
 
 	// Hacky way to add build-angular task, but otherwise we have some webpack errors about circular references which building.

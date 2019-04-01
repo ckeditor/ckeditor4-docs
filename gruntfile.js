@@ -54,7 +54,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'fix-scayt-docs', function() {
 		const done = this.async();
 		const scaytMap = grunt.file.readJSON( 'scayturls.json' );
-		var file = grunt.file.read( 'docs/api/data/CKEDITOR.config.json' );
+		let file = grunt.file.read( 'docs/api/data/CKEDITOR.config.json' );
 
 		for ( const key in scaytMap ) {
 			file = file.replace( new RegExp( '@@' + key , 'g' ), scaytMap[ key ] );
@@ -142,7 +142,7 @@ module.exports = function( grunt ) {
 	function getCKEditorPath() {
 		grunt.log.writeln( 'CKEditor Documentation Builder v' + packageVersion + '.' );
 
-		var ckeditorPath = 'repos/ckeditor-presets/ckeditor';
+		let ckeditorPath = 'repos/ckeditor-presets/ckeditor';
 
 		if ( process.env.CKEDITOR_DEV ) {
 			grunt.log.writeln( '[i] Using CKEditor directory from CKEDITOR_DEV env variable.' );
@@ -166,7 +166,7 @@ module.exports = function( grunt ) {
 
 	function buildIntegrationTask( name ) {
 		return function() {
-			var done = this.async();
+			const done = this.async();
 
 			grunt.util.spawn( {
 				cmd: 'npm',

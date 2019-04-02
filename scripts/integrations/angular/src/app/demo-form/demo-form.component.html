@@ -1,17 +1,15 @@
 <h2>Integration with forms (<code>ngModel</code>)</h2>
 
-<form (ngSubmit)="onSubmit()" #demoForm="ngForm">
+<form class="demo-form" (ngSubmit)="onSubmit()" #demoForm="ngForm">
 	<h3>User profile form</h3>
 
-	<div>
-		<label for="name">Name</label>
+	<label>Name<br>
 		<input [(ngModel)]="model.name" type="text" name="name" id="name">
-	</div>
+	</label>
 
-	<div>
-		<label for="surname">Surname</label>
+	<label for="surname">Surname<br>
 		<input [(ngModel)]="model.surname" type="text" name="surname" id="surname">
-	</div>
+	</label>
 
 	<label for="description">Description</label>
 	<ckeditor
@@ -21,10 +19,8 @@
 		name="description">
 	</ckeditor>
 
-	<p>
+	<p class="demo-form__controls">
 		<button type="reset" (click)="reset()">Reset form</button>
-	</p>
-	<p>
 		<button type="submit">Submit this form</button>
 	</p>
 </form>
@@ -35,7 +31,7 @@
 	It allows editing, but the editor strips out unknown tags and autoparagraphs text outside of block
 	elements. Editor updates when textarea is blurred.
 </p>
-<textarea #preview
+<textarea class="editor-preview" #preview
 		  (focus)="isPreviewActive = true; previewModel = model.description"
 		  (change)="isPreviewActive = false; model.description = previewModel"
 		  [(ngModel)]="previewModel"></textarea>

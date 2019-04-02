@@ -36,56 +36,137 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				color: black;
 				background-color: white;
 			}
+
 			.cke_editable_inline {
-				padding: 0 8px;
 				border: 1px solid #d1d1d1;
-			}
-			nav a.active {
-				font-weight: bold;
+				padding-left: 0.666em;
+				padding-top: 0.666em;
 			}
 
-			form {
-				background: rgba( 128, 128, 128, 0.35 );
+			.cke_editable_inline:not(.cke_focus) {
+				cursor: pointer;
+			}
+
+			.cke_editable_inline:hover:not(.cke_focus) {
+				outline: #2ba2f1 auto 5px;
+			}
+
+
+			.angular-nav__menu {
+				display: block;
+				width: 100%;
+				list-style-type: none;
+				margin: 0 !important;
+				padding: 0;
+			}
+
+			.angular-nav__menu-item {
+				display: inline-block;
+				width: 33%;
+			}
+
+			.angular-nav__menu-item a {
+				display: block;
+				position: relative;
+				padding: 10px 15px;
+				border: 1px solid #3e59ad;
+				margin-right: 1%;
+				text-align: center;
+				transition: 250ms ease background;
+				text-decoration: none;
+			}
+
+			.angular-nav__menu-item a.active {
+				font-weight: bold;
+				background: hsla(225, 14%, 83%, 0.5);
+				text-decoration: none;
+			}
+
+			.angular-nav__menu-item a.active:after {
+				content: '';
+				width: 100%;
+				height: 3px;
+				background: #3e59ad;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+
+			.angular-nav__menu-item a:hover:not(.active),
+			.angular-nav__menu-item a:focus:not(.active) {
+				background: hsla(225, 14%, 83%, 0.3);
+			}
+
+			.column {
+				width: 50%;
+			}
+
+			.events {
+				float: left;
+				padding-right: 0.3em;
+			}
+
+			.events__log {
+				max-height: 200px;
+				overflow: auto;
+				list-style-type: none !important;
+				font-family: "SF Mono",menlo,monaco,"Roboto Mono",Consolas,"Lucida Console",monospace;
+				font-size: .866666em;
+				padding: 0.2em;
+				background: #2b2c26;
+				color: #fff;
+				margin: 0 !important;
+			}
+
+			.directives {
+				float: right;
+				padding-left: 5px;
+			}
+
+			@media screen and (max-width: 768px) {
+				.angular-nav__menu-item {
+					width: 100%;
+					margin-bottom: 0.3em;
+				}
+
+				.column {
+					width: 100%;
+				}
+			}
+
+			.demo-form {
+				background: rgba(128, 128, 128, 0.35);
 				padding: 1em 1.5em;
 			}
 
-			form  label {
+			.demo-form label {
 				display: block;
 				font-weight: bold;
+				margin-top: 0.3em;
 			}
 
-			form  input {
+			.demo-form input {
 				width: 30em;
 			}
 
-			form > div {
-				margin-bottom: 1em;
+			.editor-type, .demo-form__controls button {
+				margin: 0.3em 0.3em 0.3em 0
 			}
 
-			pre {
-				word-wrap: break-word;
-				white-space: pre-wrap;
-			}
-
-			p.alert {
-				color: orange;
-			}
-
-			p.alert::before {
-				content: "⚠️ ";
-			}
-
-			textarea {
+			.editor-preview {
 				font-family: monospace;
 				width: 100%;
 				height: 84px;
 			}
 		</style>
 
-		<h1>Angular Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html">Documentation</a></h1>
+		<h1>Angular Integration <a class="documentation"
+								   href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html">Documentation</a>
+		</h1>
 
 		<p>
-			<strong>Angular 2+ integration</strong> allows usage of CKEditor 4 as an <a href="https://angular.io/">Angular</a> component, using <code>&lt;ckeditor&gt;</code> tag.
+			<strong>Angular 2+ integration</strong> allows usage of CKEditor 4 as an <a href="https://angular.io/">Angular</a>
+			component, using <code>&lt;ckeditor&gt;</code> tag.
 		</p>
 
 		<p>
@@ -105,26 +186,29 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 <footer class="sdk-footer">
 </footer>
 
-<script type="text/jsx" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
+<script type="text/jsx" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag
+		data-sample-template="empty" data-sample-highlighter="typescript">
 	import { Component } from '@angular/core';
 
 	@Component( {
 		selector: 'app-editor-types',
 		template:
-			`<h2>{{( inline ? 'Inline' : 'Divarea')}} Editor:</h2>
+				`<h2>{{( inline ? 'Inline' : 'Divarea' )}} Editor:</h2>
 
-			<ckeditor
-				*ngIf="!inline"
-				[(data)]="editorData">
-			</ckeditor>
+		<ckeditor
+			*ngIf="!inline"
+			[(data)]="editorData">
+		</ckeditor>
 
-			<ckeditor
-				*ngIf="inline"
-				type="inline"
-				[(data)]="editorData">
-			</ckeditor>
+		<ckeditor
+			*ngIf="inline"
+			type="inline"
+			[(data)]="editorData">
+		</ckeditor>
 
-			<button class="editor-type" (click)="changeEditorType()">Change editor type to {{ inline ? 'Divarea' : 'Inline' }}</button>`
+		<button class="editor-type" (click)="changeEditorType()">Change editor type to {{ inline ? 'Divarea' : 'Inline'
+			}}
+		</button>`
 	} )
 	export class EditorTypesComponent {
 		public isReadOnly = false;
@@ -141,10 +225,13 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	}
 
 </script>
-<script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
+<script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag
+		data-sample-template="empty" data-sample-highlighter="typescript">
 	import { Component } from '@angular/core';
 
-	interface ComponentEvent {
+	interface
+	ComponentEvent
+	{
 		name: string;
 		counter: number;
 		message: string;
@@ -153,39 +240,39 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	@Component( {
 		selector: 'app-events',
 		template:
-			`<h2>Events</h2>
-			<ckeditor
-				*ngIf="!isRemoved"
-				data="<p>Hello world!</p>"
-				[readOnly]="isReadOnly"
-				[hidden]="isHidden"
+				`<h2>Events</h2>
+		<ckeditor
+			*ngIf="!isRemoved"
+			data="<p>Hello world!</p>"
+			[readOnly]="isReadOnly"
+			[hidden]="isHidden"
 
-				(ready)="onReady()"
-				(change)="onChange()"
-				(focus)="onFocus()"
-				(blur)="onBlur()">
-			</ckeditor>
+			(ready)="onReady()"
+			(change)="onChange()"
+			(focus)="onFocus()"
+			(blur)="onBlur()">
+		</ckeditor>
 
-			<h3>Events log:</h3>
-			<ul class="events-log">
-				<li *ngFor="let event of componentEvents">{{ event.message }}
-					<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
-				</li>
-			</ul>
+		<h3>Events log:</h3>
+		<ul class="events-log">
+			<li *ngFor="let event of componentEvents">{{ event.message }}
+				<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
+			</li>
+		</ul>
 
-			<button (click)="clearEventsLog()">Clear events log</button>
+		<button (click)="clearEventsLog()">Clear events log</button>
 
-			<h3>Angular directives:</h3>
+		<h3>Angular directives:</h3>
 
-			<p>
-				<label><input type="checkbox" [(ngModel)]="isHidden">Hide editor with '[hidden]' directive.</label>
-			</p>
-			<p>
-				<label><input type="checkbox" [(ngModel)]="isRemoved">Remove editor from DOM with '*ngIf' directive.</label>
-			</p>
-			<p>
-				<label><input type="checkbox" [(ngModel)]="isReadOnly">Make editor read only.</label>
-			</p>`
+		<p>
+			<label><input type="checkbox" [(ngModel)]="isHidden">Hide editor with '[hidden]' directive.</label>
+		</p>
+		<p>
+			<label><input type="checkbox" [(ngModel)]="isRemoved">Remove editor from DOM with '*ngIf' directive.</label>
+		</p>
+		<p>
+			<label><input type="checkbox" [(ngModel)]="isReadOnly">Make editor read only.</label>
+		</p>`
 	} )
 	export class EventsComponent {
 		public isReadOnly = false;
@@ -234,7 +321,8 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		}
 	}
 </script>
-<script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="typescript">
+<script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag
+		data-sample-template="empty" data-sample-highlighter="typescript">
 
 	import {
 		Component,
@@ -248,52 +336,54 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	@Component( {
 		selector: 'app-demo-form',
 		template:
-			`<h2>Integration with forms (<code>ngModel</code>)</h2>
+				`<h2>Integration with forms (<code>ngModel</code>)</h2>
 
-			<form (ngSubmit)="onSubmit()" #demoForm="ngForm">
-				<h3>User profile form</h3>
+		<form (ngSubmit)="onSubmit()" #demoForm="ngForm">
+			<h3>User profile form</h3>
 
-				<div>
-					<label for="name">Name</label>
-					<input [(ngModel)]="model.name" type="text" name="name" id="name">
-				</div>
+			<div>
+				<label for="name">Name</label>
+				<input [(ngModel)]="model.name" type="text" name="name" id="name">
+			</div>
 
-				<div>
-					<label for="surname">Surname</label>
-					<input [(ngModel)]="model.surname" type="text" name="surname" id="surname">
-				</div>
+			<div>
+				<label for="surname">Surname</label>
+				<input [(ngModel)]="model.surname" type="text" name="surname" id="surname">
+			</div>
 
-				<label for="description">Description</label>
-				<ckeditor
-					#editor
-					[(ngModel)]="model.description"
-					id="description"
-					name="description">
-				</ckeditor>
+			<label for="description">Description</label>
+			<ckeditor
+				#editor
+				[(ngModel)]="model.description"
+				id="description"
+				name="description">
+			</ckeditor>
 
-				<p>
-					<button type="reset" (click)="reset()">Reset form</button>
-				</p>
-				<p>
-					<button type="submit">Submit this form</button>
-				</p>
-			</form>
-
-			<h3>Editor data preview</h3>
 			<p>
-				Note that it's only a prove of concept of using the \`ngModel\`.
-				It allows editing, but the editor strips out unknown tags and autoparagraphs text outside of block
-				elements. Editor updates when textarea is blurred.
+				<button type="reset" (click)="reset()">Reset form</button>
 			</p>
-			<textarea #preview
-					  (focus)="isPreviewActive = true; previewModel = model.description"
-					  (change)="isPreviewActive = false; model.description = previewModel"
-					  [(ngModel)]="previewModel"></textarea>
-			`,
+			<p>
+				<button type="submit">Submit this form</button>
+			</p>
+		</form>
+
+		<h3>Editor data preview</h3>
+		<p>
+			Note that it's only a prove of concept of using the \`ngModel\`.
+			It allows editing, but the editor strips out unknown tags and autoparagraphs text outside of block
+			elements. Editor updates when textarea is blurred.
+		</p>
+		<textarea #preview
+				  (focus)="isPreviewActive = true; previewModel = model.description"
+				  (change)="isPreviewActive = false; model.description = previewModel"
+				  [(ngModel)]="previewModel"></textarea>
+		`,
 		styleUrls: [ './demo-form.component.css' ]
 	} )
 	export class DemoFormComponent implements AfterViewInit {
-		@ViewChild( 'demoForm' ) demoForm?: NgForm;
+		@ViewChild( 'demoForm' ) demoForm
+	?:
+		NgForm;
 		@ViewChild( 'preview' ) preview: ElementRef;
 		@ViewChild( 'editor' ) editor;
 
@@ -312,11 +402,17 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		}
 
 		reset() {
-			this.demoForm!.reset();
+			this.demoForm
+			!
+		.
+			reset();
 		}
 
 		get description() {
-			return this.demoForm!.controls.description;
+			return this.demoForm
+			!
+		.
+			controls.description;
 		}
 
 		ngAfterViewInit() {

@@ -12,23 +12,25 @@
 	(blur)="onBlur()">
 </ckeditor>
 
-<h3>Events log:</h3>
-<ul class="events-log">
-	<li *ngFor="let event of componentEvents">{{ event.message }}
-		<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
-	</li>
-</ul>
+<section class="column events">
+	<h3>Events log:</h3>
+	<ul class="events__log">
+		<li *ngFor="let event of componentEvents">{{ event.message }}
+			<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
+		</li>
+	</ul>
+	<button (click)="clearEventsLog()">Clear events log</button>
+</section>
 
-<button (click)="clearEventsLog()">Clear events log</button>
-
-<h3>Angular directives:</h3>
-
-<p>
-	<label><input type="checkbox" [(ngModel)]="isHidden">Hide editor with '[hidden]' directive.</label>
-</p>
-<p>
-	<label><input type="checkbox" [(ngModel)]="isRemoved">Remove editor from DOM with '*ngIf' directive.</label>
-</p>
-<p>
-	<label><input type="checkbox" [(ngModel)]="isReadOnly">Make editor read only.</label>
-</p>
+<section class="column directives">
+	<h3>Angular directives:</h3>
+	<p>
+		<label><input type="checkbox" [(ngModel)]="isHidden">Hide editor with '[hidden]' directive.</label>
+	</p>
+	<p>
+		<label><input type="checkbox" [(ngModel)]="isRemoved">Remove editor from DOM with '*ngIf' directive.</label>
+	</p>
+	<p>
+		<label><input type="checkbox" [(ngModel)]="isReadOnly">Make editor read only.</label>
+	</p>
+</section>

@@ -192,23 +192,24 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 	@Component( {
 		selector: 'app-editor-types',
-		template:
-				`<h2>{{( inline ? 'Inline' : 'Divarea' )}} Editor:</h2>
+		template: `
+			<h2>{{( inline ? 'Inline' : 'Divarea' )}} Editor:</h2>
 
-		<ckeditor
-			*ngIf="!inline"
-			[(data)]="editorData">
-		</ckeditor>
+			<ckeditor
+				*ngIf="!inline"
+				[(data)]="editorData">
+			</ckeditor>
 
-		<ckeditor
-			*ngIf="inline"
-			type="inline"
-			[(data)]="editorData">
-		</ckeditor>
+			<ckeditor
+				*ngIf="inline"
+				type="inline"
+				[(data)]="editorData">
+			</ckeditor>
 
-		<button class="editor-type" (click)="changeEditorType()">Change editor type to {{ inline ? 'Divarea' : 'Inline'
-			}}
-		</button>`
+			<button class="editor-type" (click)="changeEditorType()">
+				Change editor type to {{ inline ? 'Divarea' : 'Inline' }}
+			</button>
+		`
 	} )
 	export class EditorTypesComponent {
 		public isReadOnly = false;
@@ -237,8 +238,8 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 	@Component( {
 		selector: 'app-events',
-		template:
-			`<h2>Events</h2>
+		template: `
+			<h2>Events</h2>
 			<ckeditor
 				*ngIf="!isRemoved"
 				data="<p>Hello world!</p>"
@@ -253,7 +254,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 			<h3>Events log:</h3>
 			<ul class="events-log">
-				<li *ngFor="let event of componentEvents">{{ event.message }}
+				<li *ngFor="let event of componentEvents">{{ event.message }}>
 					<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
 				</li>
 			</ul>
@@ -262,15 +263,10 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 			<h3>Angular directives:</h3>
 
-			<p>
-				<label><input type="checkbox" [(ngModel)]="isHidden">Hide editor with '[hidden]' directive.</label>
-			</p>
-			<p>
-				<label><input type="checkbox" [(ngModel)]="isRemoved">Remove editor from DOM with '*ngIf' directive.</label>
-			</p>
-			<p>
-				<label><input type="checkbox" [(ngModel)]="isReadOnly">Make editor read only.</label>
-			</p>`
+			<p><label><input type="checkbox" [(ngModel)]="isHidden">Hide editor with <code>[hidden]</code> directive.</label></p>
+			<p><label><input type="checkbox" [(ngModel)]="isRemoved">Remove editor from DOM with <code>*ngIf</code> directive.</label></p>
+			<p><label><input type="checkbox" [(ngModel)]="isReadOnly">Make editor read only.</label></p>
+		`
 	} )
 	export class EventsComponent {
 		public isReadOnly = false;
@@ -333,8 +329,8 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 	@Component( {
 		selector: 'app-demo-form',
-		template:
-			`<h2>Integration with forms (<code>ngModel</code>)</h2>
+		template: `
+			<h2>Integration with forms (<code>ngModel</code>)</h2>
 
 			<form (ngSubmit)="onSubmit()" #demoForm="ngForm">
 				<h3>User profile form</h3>
@@ -357,24 +353,22 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 					name="description">
 				</ckeditor>
 
-				<p>
-					<button type="reset" (click)="reset()">Reset form</button>
-				</p>
-				<p>
-					<button type="submit">Submit this form</button>
-				</p>
+				<p><button type="reset" (click)="reset()">Reset form</button></p>
+				<p><button type="submit">Submit this form</button></p>
 			</form>
 
 			<h3>Editor data preview</h3>
 			<p>
-				Note that it's only a prove of concept of using the \`ngModel\`.
+				Note that it's only a proof of concept of using the <code>ngModel</code>.
 				It allows editing, but the editor strips out unknown tags and autoparagraphs text outside of block
 				elements. Editor updates when textarea is blurred.
 			</p>
+
 			<textarea #preview
-					  (focus)="isPreviewActive = true; previewModel = model.description"
-					  (change)="isPreviewActive = false; model.description = previewModel"
-					  [(ngModel)]="previewModel"></textarea>`,
+				(focus)="isPreviewActive = true; previewModel = model.description"
+				(change)="isPreviewActive = false; model.description = previewModel"
+				[(ngModel)]="previewModel"></textarea>
+		`,
 		styleUrls: [ './demo-form.component.css' ]
 	} )
 	export class DemoFormComponent implements AfterViewInit {

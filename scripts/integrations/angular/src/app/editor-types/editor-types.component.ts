@@ -14,7 +14,7 @@ export class EditorTypesComponent {
 	public editorData =
 		`<p>Hello world!</p>`;
 
-	inline = false;
+	public inline = false;
 
 	public componentEvents: string[] = [];
 

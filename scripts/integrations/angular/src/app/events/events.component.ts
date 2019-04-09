@@ -18,31 +18,14 @@ interface ComponentEvent {
 export class EventsComponent {
 	public isReadOnly = false;
 
-	isHidden = false;
+	public isHidden = false;
 
-	isRemoved = false;
-
-	inline = false;
+	public isRemoved = false;
 
 	public componentEvents: ComponentEvent[] = [];
 
-	clearEventsLog() {
+	clearEventsLog(): void {
 		this.componentEvents.length = 0;
-	}
-
-	saveEvent( eventName: string ): void {
-		const events = this.componentEvents;
-		let message = `Editor ${ eventName === 'changed' ? 'has' : 'is' } ${ eventName }`;
-
-		if ( events.length && events[ 0 ].name === eventName ) {
-			events[ 0 ].counter++;
-		} else {
-			events.unshift( {
-				name: eventName,
-				counter: 1,
-				message: message
-			} );
-		}
 	}
 
 	onReady(): void {
@@ -59,5 +42,20 @@ export class EventsComponent {
 
 	onBlur(): void {
 		this.saveEvent( 'blurred' );
+	}
+
+	private saveEvent( eventName: string ): void {
+		const events = this.componentEvents;
+		let message = `Editor ${ eventName === 'changed' ? 'has' : 'is' } ${ eventName }`;
+
+		if ( events.length && events[ 0 ].name === eventName ) {
+			events[ 0 ].counter++;
+		} else {
+			events.unshift( {
+				name: eventName,
+				counter: 1,
+				message: message
+			} );
+		}
 	}
 }

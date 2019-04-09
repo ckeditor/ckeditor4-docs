@@ -38,6 +38,7 @@
     "react-router-dom": "^4.3.1",
     "rxjs": "^6.3.3",
     "terser-webpack-plugin": "^1.2.1",
+    "tslint": "^5.15.0",
     "typescript": "~3.1.1",
     "umberto": "^0.19.3",
     "webpack": "^4.29.0",

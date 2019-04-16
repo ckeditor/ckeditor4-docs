@@ -93,6 +93,13 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: The {@linkapi CKEDITOR.config#mathJaxLib CKEDITOR.config#mathJaxLib} property is not set. Refer to {@linkapi CKEDITOR.config#mathJaxLib API documentation} for more information.
 * Additional data: None.
 
+## no-vendor-lib
+
+* Location: `core/tools.js`
+* Description: Unable to find vendor library. Make sure that vendor library is available at the given path.
+* Additional data:
+	* `path`: A path to the vendor library.
+
 ## range-endcontainer
 
 * Location: `core/dom/range.js`

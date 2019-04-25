@@ -115,7 +115,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				padding: 0.2em;
 				background: #2b2c26;
 				color: #fff;
-				margin: 0 !important;
+				margin: 0 0 10px 0 !important;
 			}
 
 			.directives {
@@ -160,8 +160,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 			}
 		</style>
 
-		<h1>CKEditor 4 Angular Integration <a class="documentation"
-								   href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html">Documentation</a>
+		<h1>CKEditor 4 Angular Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html">Documentation</a>
 		</h1>
 
 		<p>
@@ -194,7 +193,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		selector: 'app-editor-types',
 		template: `
 			<h2>{{( inline ? 'Inline' : 'Divarea' )}} Editor</h2>
-			
+
 			<p>
 				The basic use of the WYSIWYG editor component is as simple as creating a new <code><ckeditor></code> tag. The initial data of the editor can be set with the <code>data</code> property.
 			</p>
@@ -249,11 +248,14 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	@Component( {
 		selector: 'app-events',
 		template: `
-			<h2>Events</h2>
+			<h2>Events and Directives</h2>
 
 			<p>
-				The component allows you to bind event handlers with <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html#supported-output-properties"><code>@input</code></a> attributes in the html code.<br>
-				The following example shows how to bind several CKEditor events. Additionally it presents how the component works with <a href="https://angular.io/guide/attribute-directives">Angular Directives</a>.
+				The component allows to bind event handlers with <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html#supported-output-properties"><code>@input</code></a> attributes in the html code.
+			</p>
+
+			<p>
+				The following example shows how to bind several CKEditor events. Additionally it presents how the component could be used with <a href="https://angular.io/guide/attribute-directives">Angular directives</a>.
 			</p>
 
 			<ckeditor
@@ -269,6 +271,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 			</ckeditor>
 
 			<h3>Events log</h3>
+
 			<ul class="events-log">
 				<li *ngFor="let event of componentEvents">{{ event.message }}>
 					<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
@@ -348,7 +351,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 			<p>
 				The component implements the <a href="https://angular.io/api/forms/ControlValueAccessor"><code>ControlValueAccessor</code>
-				interface</a> and works with the <code>ngModel</code>. For example a simple form with few inputs.
+				interface</a> and works with the <code>ngModel</code>. For example, it can be used to integrate with a simple form like the one below.
 			</p>
 
 			<form (ngSubmit)="onSubmit()" #demoForm="ngForm">

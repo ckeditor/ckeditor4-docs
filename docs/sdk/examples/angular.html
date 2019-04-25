@@ -250,6 +250,12 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		selector: 'app-events',
 		template: `
 			<h2>Events</h2>
+
+			<p>
+				The component allows you can bind event handlers with <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html#supported-output-properties"><code>@input</code></a> attributes in the html code.<br>
+				The following example shows how to bind several CKEditor events. Additionally it presents how the component works with <a href="https://angular.io/guide/attribute-directives">Angular Directives</a>.
+			</p>
+
 			<ckeditor
 				*ngIf="!isRemoved"
 				data="<p>This is a CKEditor 4 instance created with Angular.</p>"
@@ -339,6 +345,11 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		selector: 'app-demo-form',
 		template: `
 			<h2>Integration with forms (<code>ngModel</code>)</h2>
+
+			<p>
+				The component implements the <a href="https://angular.io/api/forms/ControlValueAccessor"><code>ControlValueAccessor</code>
+				interface</a> and works with the <code>ngModel</code>. For example a simple form with few inputs.
+			</p>
 
 			<form (ngSubmit)="onSubmit()" #demoForm="ngForm">
 				<h3>User profile form</h3>

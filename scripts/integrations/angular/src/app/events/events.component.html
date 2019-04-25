@@ -2,7 +2,7 @@
 
 <ckeditor
 	*ngIf="!isRemoved"
-	data="<p>Hello world!</p>"
+	data="<p>This is a CKEditor 4 instance created with Angular.</p>"
 	[readOnly]="isReadOnly"
 	[hidden]="isHidden"
 
@@ -13,7 +13,7 @@
 </ckeditor>
 
 <section class="column events">
-	<h3>Events log:</h3>
+	<h3>Events log</h3>
 	<ul class="events__log">
 		<li *ngFor="let event of componentEvents">{{ event.message }}
 			<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
@@ -23,14 +23,14 @@
 </section>
 
 <section class="column directives">
-	<h3>Angular directives:</h3>
+	<h3>Angular directives</h3>
 	<p>
-		<label><input type="checkbox" [(ngModel)]="isHidden">Hide editor with <code>[hidden]</code> directive.</label>
+		<label><input type="checkbox" [(ngModel)]="isHidden">Hide the editor with the <code>[hidden]</code> directive.</label>
 	</p>
 	<p>
-		<label><input type="checkbox" [(ngModel)]="isRemoved">Remove editor from DOM with <code>*ngIf</code> directive.</label>
+		<label><input type="checkbox" [(ngModel)]="isRemoved">Remove the editor from DOM with the <code>*ngIf</code> directive.</label>
 	</p>
 	<p>
-		<label><input type="checkbox" [(ngModel)]="isReadOnly">Make editor read only.</label>
+		<label><input type="checkbox" [(ngModel)]="isReadOnly">Make the editor read-only.</label>
 	</p>
 </section>

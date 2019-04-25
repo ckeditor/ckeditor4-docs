@@ -27,9 +27,9 @@
 
 <h3>Editor data preview</h3>
 <p>
-	Note that it's only a proof of concept of using the <code>ngModel</code>.
-	It allows editing, but the editor strips out unknown tags and autoparagraphs text outside of block
-	elements. Editor updates when textarea is blurred.
+	Note that this is only a proof of concept of using <code>ngModel</code>.
+	It allows for editing the form, but the editor strips out unknown tags. It also autoparagraphs text outside of block
+	elements. The editor updates when the textarea element is blurred.
 </p>
 <textarea class="editor-preview" #preview
 		  (focus)="isPreviewActive = true; previewModel = model.description"

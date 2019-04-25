@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
 export class EditorTypesComponent {
 	public isReadOnly = false;
 	public editorData =
-		`<p>Hello world!</p>`;
+		`<p>This is a CKEditor 4 instance created with Angular.</p>`;
 
 	public inline = false;
 

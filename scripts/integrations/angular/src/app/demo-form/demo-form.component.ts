@@ -24,7 +24,7 @@ export class DemoFormComponent implements AfterViewInit {
 	public model = {
 		name: 'John',
 		surname: 'Doe',
-		description: '<p>Hello world!</p>'
+		description: '<p>This is a sample form using CKEditor 4 and created in Angular.</p>'
 	};
 
 	public isPreviewActive: boolean;

@@ -81,8 +81,8 @@ module.exports = function( grunt ) {
 					'<%= path %>/adapters',
 					'<%= path %>/ckeditor.js',
 
-					'repos/ckeditor-plugin-scayt',
-					'repos/ckeditor-plugin-wsc'
+					'repos/ckeditor-presets/plugins/scayt',
+					'repos/ckeditor-presets/plugins/wsc'
 				],
 
 				cmd: 'ckeditor-jsduck',

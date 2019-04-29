@@ -1,0 +1,41 @@
+<h2>Integration with forms (<code>ngModel</code>)</h2>
+
+<p>
+	The CKEditor 4 WYSIWYG editor component implements the <a href="https://angular.io/api/forms/ControlValueAccessor"><code>ControlValueAccessor</code> interface</a> and works with <code>ngModel</code>. For example, it can be used to integrate with a simple form like the one below.
+</p>
+
+<form class="demo-form" (ngSubmit)="onSubmit()" #demoForm="ngForm">
+	<h3>User profile form</h3>
+
+	<label>Name<br>
+		<input [(ngModel)]="model.name" type="text" name="name" id="name">
+	</label>
+
+	<label for="surname">Surname<br>
+		<input [(ngModel)]="model.surname" type="text" name="surname" id="surname">
+	</label>
+
+	<label for="description">Description</label>
+	<ckeditor
+		#editor
+		[(ngModel)]="model.description"
+		id="description"
+		name="description">
+	</ckeditor>
+
+	<p class="demo-form__controls">
+		<button type="reset" (click)="reset()">Reset form</button>
+		<button type="submit">Submit this form</button>
+	</p>
+</form>
+
+<h3>Editor data preview</h3>
+<p>
+	Note that this is only a proof of concept of using <code>ngModel</code>.
+	It allows for editing the form, but the editor strips out unknown tags. It also autoparagraphs text outside of block
+	elements. The editor updates when the textarea element is blurred.
+</p>
+<textarea class="editor-preview" #preview
+		  (focus)="isPreviewActive = true; previewModel = model.description"
+		  (change)="isPreviewActive = false; model.description = previewModel"
+		  [(ngModel)]="previewModel"></textarea>

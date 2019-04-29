@@ -36,7 +36,7 @@ module.exports = {
 	entry: path.join( __dirname, 'Samples.jsx' ),
 
 	output: {
-		path: path.join( __dirname, '..', 'docs', 'sdk', 'examples', 'assets', 'react' ),
+		path: path.join( __dirname, '..', '..', '..', 'docs', 'sdk', 'examples', 'assets', 'react' ),
 		filename: '[name].js',
 		libraryTarget: 'umd',
 		libraryExport: 'default'

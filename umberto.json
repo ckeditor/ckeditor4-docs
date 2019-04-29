@@ -393,6 +393,12 @@
 							"id": "sdk-react",
 							"slug": "react",
 							"order": 10
+						},
+						{
+							"name": "Angular Integration",
+							"id": "sdk-angular",
+							"slug": "angular",
+							"order": 20
 						}
 
 					]

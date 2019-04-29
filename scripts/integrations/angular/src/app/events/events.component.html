@@ -1,0 +1,44 @@
+<h2>Events and Directives</h2>
+
+<p>
+	The CKEditor 4 WYSIWYG editor component allows you to bind event handlers with <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html#supported-output-properties"><code>@Output</code></a> attributes in the HTML code.
+</p>
+
+<p>
+	The following example shows how to bind several CKEditor events. Additionally, it presents how the component could be used with <a href="https://angular.io/guide/attribute-directives">Angular directives</a>.
+</p>
+
+<ckeditor
+	*ngIf="!isRemoved"
+	data="<p>This is a CKEditor 4 instance created with Angular.</p>"
+	[readOnly]="isReadOnly"
+	[hidden]="isHidden"
+
+	(ready)="onReady()"
+	(change)="onChange()"
+	(focus)="onFocus()"
+	(blur)="onBlur()">
+</ckeditor>
+
+<section class="column events">
+	<h3>Events log</h3>
+	<ul class="events__log">
+		<li *ngFor="let event of componentEvents">{{ event.message }}
+			<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
+		</li>
+	</ul>
+	<button (click)="clearEventsLog()">Clear events log</button>
+</section>
+
+<section class="column directives">
+	<h3>Angular directives</h3>
+	<p>
+		<label><input type="checkbox" [(ngModel)]="isHidden">Hide the editor with the <code>[hidden]</code> directive.</label>
+	</p>
+	<p>
+		<label><input type="checkbox" [(ngModel)]="isRemoved">Remove the editor from DOM with the <code>*ngIf</code> directive.</label>
+	</p>
+	<p>
+		<label><input type="checkbox" [(ngModel)]="isReadOnly">Make the editor read-only.</label>
+	</p>
+</section>

@@ -6,7 +6,6 @@
 'use strict';
 
 const Umberto = require( 'umberto' );
-const webpackReactConf = require( './react/webpack.config.js' );
 
 module.exports = function( grunt ) {
 	const packageVersion = grunt.file.readJSON( 'package.json' ).version;
@@ -55,7 +54,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'fix-scayt-docs', function() {
 		const done = this.async();
 		const scaytMap = grunt.file.readJSON( 'scayturls.json' );
-		var file = grunt.file.read( 'docs/api/data/CKEDITOR.config.json' );
+		let file = grunt.file.read( 'docs/api/data/CKEDITOR.config.json' );
 
 		for ( const key in scaytMap ) {
 			file = file.replace( new RegExp( '@@' + key , 'g' ), scaytMap[ key ] );
@@ -66,9 +65,14 @@ module.exports = function( grunt ) {
 		done();
 	} );
 
-	grunt.registerTask( 'build-react', [ 'webpack:react' ] );
-	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-react', 'umberto' ] );
-	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-react', 'umberto', 'connect' ] );
+	// Hacky way to add build-angular task, but otherwise we have some webpack errors about circular references when building.
+	// Also there is some conflict between two webpack configurations, building react in same way is working workaround.
+	grunt.registerTask( 'build-angular', buildIntegrationTask( 'angular' ) );
+	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );
+
+	// grunt.registerTask( 'build-react', [ 'webpack:react' ] );
+	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'umberto' ] );
+	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'umberto', 'connect' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
@@ -126,10 +130,6 @@ module.exports = function( grunt ) {
 					open: 'http://localhost:9001/ckeditor4/' + packageVersion + '/guide/dev_installation.html'
 				}
 			}
-		},
-
-		webpack: {
-			react: webpackReactConf
 		}
 	} );
 
@@ -142,7 +142,7 @@ module.exports = function( grunt ) {
 	function getCKEditorPath() {
 		grunt.log.writeln( 'CKEditor Documentation Builder v' + packageVersion + '.' );
 
-		var ckeditorPath = 'repos/ckeditor-presets/ckeditor';
+		let ckeditorPath = 'repos/ckeditor-presets/ckeditor';
 
 		if ( process.env.CKEDITOR_DEV ) {
 			grunt.log.writeln( '[i] Using CKEditor directory from CKEDITOR_DEV env variable.' );
@@ -162,5 +162,17 @@ module.exports = function( grunt ) {
 		grunt.log.writeln( '[i] Using', ckeditorPath[ 'cyan' ], 'as source directory.' );
 
 		return ckeditorPath;
+	}
+
+	function buildIntegrationTask( name ) {
+		return function() {
+			const done = this.async();
+
+			grunt.util.spawn( {
+				cmd: 'npm',
+				args: [ 'run', 'build-' + name ],
+				opts: { stdio: 'inherit' } // This option is necessary for grunt to display commands output.
+			}, done );
+		};
 	}
 };

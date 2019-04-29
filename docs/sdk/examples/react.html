@@ -6,9 +6,9 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="Editor Size. Setting Custom Editor Width and Height.">
+	<meta name="description" content="CKEditor 4 React integration. Using CKEditor 4 as a React component.">
 	<meta name="keywords" content="ckeditor, editor, wysiwyg, react, integration">
-	<meta name="sdk-samples" content="Classic editor|Inline editor|Editor with custom event handlers and config|Two-way data binding">
+	<meta name="sdk-samples" content="Classic editor|Inline editor|Editor with custom event handlers and configuration|Two-way data binding">
 	<meta name="sdk-category" content="sdk-framework-integration">
 	<meta name="sdk-order" content="10">
 	<title>React Integration</title>
@@ -142,18 +142,18 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				}
 			</style>
 
-			<h1>React Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html">Documentation</a></h1>
+			<h1>CKEditor 4 React Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html">Documentation</a></h1>
 
 			<p>
-				<strong>React integration</strong> allows you to easily use CKEditor 4 as a <a href="https://reactjs.org/">React</a> component, using <code>&lt;CKEditor /&gt;</code> JSX tag.
+				The <strong>React integration</strong> allows you to implement CKEditor 4 as a <a href="https://reactjs.org/">React</a> component, using the <code>&lt;CKEditor /&gt;</code> JSX tag.
 			</p>
 
 			<p>
-				Following examples showcase the most important features of React integration.
+				The following examples showcase the most important features of the CKEditor 4 WYSIWYG editor React integration.
 			</p>
 
 			<p>
-				<strong>Click and change an example:</strong>
+				<strong>Click the tab below to change an example.</strong>
 			</p>
 
 			<div id="app"></div>
@@ -169,7 +169,7 @@ import ReactDOM from 'react-dom';
 import CKEditor from 'ckeditor4-react';
 
 ReactDOM.render(
-	<CKEditor data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>" />,
+	<CKEditor data="<p>This is a CKEditor 4 instance created by ️⚛️ React.</p>" />,
 	document.getElementById( 'app' )
 );
 </script>
@@ -178,7 +178,7 @@ import ReactDOM from 'react-dom';
 import CKEditor from 'ckeditor4-react';
 
 ReactDOM.render(
-	<CKEditor type="inline" data="<p>This is CKEditor 4 instance created by ️⚛️ React.</p>" />,
+	<CKEditor type="inline" data="<p>This is a CKEditor 4 instance created by ️⚛️ React.</p>" />,
 	document.getElementById( 'app' )
 );
 </script>
@@ -188,7 +188,7 @@ import CKEditor from 'ckeditor4-react';
 
 ReactDOM.render(
 	<CKEditor
-		data="I'm CKEditor 4 instance."
+		data="I'm a CKEditor 4 instance."
 		config={{
 			toolbar: [
 				[ 'Bold', 'Italic' ],
@@ -218,7 +218,7 @@ class TwoWayBinding extends Component {
 		super( props );
 
 		this.state = {
-			data: '<p>This is CKEditor 4 instance created by ️⚛️ React.</p>'
+			data: '<p>This is a CKEditor 4 instance created by ️⚛️ React.</p>'
 		};
 
 		this.handleChange = this.handleChange.bind( this );
@@ -262,7 +262,7 @@ class EditorPreview extends Component {
 	render() {
 		return (
 			<div className="editor-preview">
-				<h2>Rendered content:</h2>
+				<h2>Rendered content</h2>
 				<div dangerouslySetInnerHTML={{ __html: this.props.data }}></div>
 			</div>
 		);
@@ -290,7 +290,7 @@ class SourceEditor extends Component {
 		return (
 			<>
 				<p>
-					<label htmlFor="editor-editor">Change value:</label>
+					<label htmlFor="editor-editor">The editor content:</label>
 				</p>
 				<p>
 					<textarea

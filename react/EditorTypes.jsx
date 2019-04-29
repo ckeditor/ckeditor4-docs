@@ -7,12 +7,12 @@ const EditorTypes = () => (
 	<div>
 		<h2>Classic WYSIWYG editor</h2>
 		<p>
-			The basic use of the WYSIWYG editor component is as simple as creating a new <code>&lt;CKEditor /&gt;</code> component. The initial data of the editor can be set via the <code>data</code> property.
+			To use the CKEditor 4 classic editor in React, create a new <code>&lt;CKEditor /&gt;</code> component. The initial data of the editor can be set with the <code>data</code> property.
 		</p>
 		<CKEditor data={initialData} />
 		<h2>Inline WYSIWYG editor</h2>
 		<p>
-			To use inline WYSIWYG editor, set the <code>type</code> property to <code>inline</code>. In the following example inline editor is created.
+			To use the CKEditor 4 inline editor in React, set the <code>type</code> property of <code>&lt;CKEditor /&gt;</code> to <code>inline</code>.
 		</p>
 		<CKEditor type="inline" data={initialData} />
 	</div>

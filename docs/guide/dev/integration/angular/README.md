@@ -10,7 +10,7 @@ Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Angular Integration
+# CKEditor 4 WYSIWYG Editor Angular Integration
 
 <info-box info="">
 	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-angular"><code>ckeditor4-angular</code> npm package</a>.
@@ -51,7 +51,7 @@ The `data` attribute used in the example above is responsible for setting the ed
 
 ## Customizing CKEditor Preset or Version
 
-By default, the CKEditor 4 Angular component loads the [Standard-All preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the <a href="https://cdn.ckeditor.com/">CDN</a> when creating the first editor. This behavior can be altered by setting the value of the `editorUrl` attribute in the template to point to the desired CKEditor location:
+By default, the CKEditor 4 Angular component loads the [Standard-All preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the <a href="https://cdn.ckeditor.com/">CDN</a> when creating the first editor. This behavior can be altered by setting the value of the `editorUrl` attribute in the template to point to the desired CKEditor script location:
 
 ```html
 <ckeditor editorUrl="https://your-website.example/ckeditor/ckeditor.js"></ckeditor>

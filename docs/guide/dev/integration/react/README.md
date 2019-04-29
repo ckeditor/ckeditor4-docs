@@ -10,28 +10,29 @@ Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# React Integration
+# CKEditor 4 WYSIWYG Editor React Integration
 
-<info-box info=""> This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-react"><code>ckeditor4-react</code> npm package</a>.
+<info-box info="">
+	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-react"><code>ckeditor4-react</code> npm package</a>.
 </info-box>
 
-CKEditor offers native React integration through `CKEditor` React component. It provides deep integration of CKEditor and React that lets you use the native features of CKEditor inside React component. The `CKEditor` React component is compatible with React versions 16.0+.
+CKEditor 4 offers a native React integration through the CKEditor 4 React component. It provides deep integration of CKEditor 4 and React that lets you use the native features of the WYSIWYG editor inside a React component. The CKEditor 4 React component is compatible with React versions 16.0+.
 
 ## Basic Usage
 
-In order to create editor instance in React, install `ckeditor4-react` npm package as a dependency of your project:
+In order to create an editor instance in React, install the `ckeditor4-react` npm package as a dependency of your project:
 
 ```bash
 npm install --save ckeditor4-react
 ```
 
-After installing, `CKEditor` React component can be imported in JS code:
+After installing, the CKEditor 4 React component can be imported in your JavaScript code:
 
 ```javascript
 import CKEditor from 'ckeditor4-react';
 ```
 
-Example `App` component featuring `CKEditor` would look like the following:
+An example `App` component featuring `CKEditor` would look like the following:
 
 ```jsx
 import React, { Component } from 'react';
@@ -53,19 +54,19 @@ class App extends Component {
 export default App;
 ```
 
-The `data` property used in the above example is responsible for setting the editor's data.
+The `data` property used in the example above is responsible for setting the editor's data.
 
 ## Customizing CKEditor Preset or Version
 
-By default `CKEditor` React component loads standard preset of the latest CKEditor release from <a href="https://cdn.ckeditor.com/">CDN</a> while creating the first editor. This behavior can be altered by changing the value of `CKEditor.editorUrl` variable to point to desired CKEditor location:
+By default, the CKEditor 4 React component loads the [standard preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `CKEditor.editorUrl` variable to point to the desired CKEditor script location:
 
 ```javascript
 CKEditor.editorUrl = 'https://your-website.example/ckeditor/ckeditor.js';
 ```
 
-Note that variable has to be assigned **before first component is initialized**.
+Note that the variable must be assigned **before the first component is initialized**.
 
-Alternatively you can load CKEditor before loading `CKEditor` React component. In that case the component will use the already loaded CKEditor:
+Alternatively, you can load CKEditor before loading the CKEditor 4 React component. In this case the component will use the already loaded CKEditor:
 
 ```html
 <script src="custom-ckeditor.js"></script>
@@ -75,9 +76,9 @@ Alternatively you can load CKEditor before loading `CKEditor` React component. I
 <script src="app.js"></script>
 ```
 
-## Choosing Editor Type
+## Choosing the Editor Type
 
-By default `CKEditor` React component creates {@link guide/dev/framed/README classic editor}. To create {@link guide/dev/inline/README inline editor} `type` property with value of `inline` must be added:
+By default, the CKEditor 4 React component creates a {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with value of `inline` to the `<CKEditor />` tag:
 
 ```jsx
 <CKEditor
@@ -86,7 +87,7 @@ By default `CKEditor` React component creates {@link guide/dev/framed/README cla
 />
 ```
 
-You can also explicitly set `type` property to `classic` to create the classic editor:
+You can also explicitly set the `type` property to `classic` to create the classic editor:
 
 ```jsx
 <CKEditor
@@ -95,11 +96,11 @@ You can also explicitly set `type` property to `classic` to create the classic e
 />
 ```
 
-Every other value of `type` property will be treated as `classic`.
+Every other value of the `type` property will be treated as `classic`.
 
-### Changing Editor Configuration
+### Changing the Editor Configuration
 
-Custom configuration can be passed to the editor via `config` property of `CKEditor` React component. The following example shows {@link guide/dev/features/toolbar/README how to change the contents of the toolbar}:
+Custom configuration can be passed to the editor with the `config` property of the CKEditor 4 React component. The following example shows {@link guide/dev/features/toolbar/README how to change the contents of the toolbar}:
 
 ```jsx
 <CKEditor
@@ -112,7 +113,7 @@ Custom configuration can be passed to the editor via `config` property of `CKEdi
 
 {@linkapi CKEDITOR.config All configuration} options can be changed this way.
 
-There is also additional way to set the {@link guide/dev/features/readonly/README read-only mode} via `readOnly` property:
+There is also an additional way to set the {@link guide/dev/features/readonly/README read-only mode} with the `readOnly` property:
 
 ```jsx
 <CKEditor
@@ -121,11 +122,11 @@ There is also additional way to set the {@link guide/dev/features/readonly/READM
 />
 ```
 
-This property takes precedence over {@linkapi CKEDITOR.config#readOnly `config.readOnly`} setting.
+This property takes precedence over the {@linkapi CKEDITOR.config#readOnly `config.readOnly`} setting.
 
 ## Event Handlers
 
-`CKEditor` React component allows to bind any event handler to the editor via properties that starts with `on`. The `on` is followed by the name of the event with capitalized first letter, e.g. event handler for {@linkapi CKEDITOR.editor.change `change` event} would be written as `onChange`:
+The CKEditor 4 React component allows you to bind any event handler to the editor with properties that start with `on`. The `on` is followed by the name of the event with the first letter capitalized, for example, an event handler for the {@linkapi CKEDITOR.editor.change `change` event} would be written as `onChange`:
 
 ```jsx
 <CKEditor
@@ -136,7 +137,7 @@ This property takes precedence over {@linkapi CKEDITOR.config#readOnly `config.r
 
 ## Data Binding
 
-Wrapping `CKEditor` React component in another component allows to create two-way binding between editor's data and content of the external elements. This way updating the editor will update the elements and vice versa:
+Wrapping the CKEditor 4 React component in another component allows to create a two-way binding between the editor's data and the content of the external elements. This way updating the editor will update the elements and vice versa:
 
 ```jsx
 import React, { Component } from 'react';
@@ -174,7 +175,7 @@ class TwoWayBinding extends Component {
 					data={this.state.data}
 					onChange={this.onEditorChange} />
 					<label>
-						Change val:
+						Change value:
 						<textarea defaultValue={this.state.data} onChange={this.handleChange} />
 					</label>
 					<EditorPreview data={this.state.data} />
@@ -187,7 +188,7 @@ class EditorPreview extends Component {
 	render() {
 		return (
 			<div className="editor-preview">
-				<h2>Rendered content:</h2>
+				<h2>Rendered content</h2>
 				<div dangerouslySetInnerHTML={ { __html: this.props.data } }></div>
 			</div>
 		);
@@ -206,10 +207,14 @@ export default TwoWayBinding;
 ```
 ## Editor Instance
 
-In most cases there is no need to break the encapsulation provided by `CKEditor` React component as editor's configuration and events handlers are configurable via component's properties. However If you need access to the {@linkapi CKEDITOR.editor } object, you can use the `editor` property of the component's instance:
+In most cases there is no need to break the encapsulation provided by the CKEditor 4 React component as the editor configuration and events handlers are configurable with the component's properties. However, if you need access to the {@linkapi CKEDITOR.editor } object, you can use the `editor` property of the component's instance:
 
 ```javascript
 component.editor.getData();
 ```
 
 Please note that this property is initialised asynchronously, after mounting the component.
+
+## CKEditor 4 React Integration Demo
+
+See the {@linksdk react working "CKEditor 4 React Integration" sample} that showcases the most iomportant features of the integration, including choosing the editor type, configuration and events and setting up two-way data binding.

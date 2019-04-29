@@ -197,13 +197,13 @@
 				"name": "File Manager",
 				"id": "file-manager",
 				"slug": "file-manager",
-				"order": 50
+				"order": 60
 			},
 			{
 				"name": "Accessibility Checker",
 				"id": "accessibility-checker",
 				"slug": "accessibility-checker",
-				"order": 50
+				"order": 70
 			}
 			]
 		},

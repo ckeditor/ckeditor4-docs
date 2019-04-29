@@ -1,6 +1,6 @@
 ---
 category: integration
-order: 50
+order: 40
 url: guide/dev_react
 menu-title: React Integration
 meta-title-short: React Integration

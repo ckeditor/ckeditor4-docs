@@ -1,6 +1,6 @@
 ---
 category: integration
-order: 60
+order: 30
 url: guide/dev_angular
 menu-title: Angular Integration
 meta-title-short: Angular Integration

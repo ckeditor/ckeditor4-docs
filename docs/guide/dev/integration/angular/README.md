@@ -233,3 +233,7 @@ Please note that this property is initialised asynchronously, when the component
 ## Types
 
 CKEditor types can be installed from [@types/ckeditor](https://www.npmjs.com/package/@types/ckeditor). Note that they are not maintained by the CKEditor team, so we cannot guarantee that they are up to date.
+
+## CKEditor 4 Angular Integration Demo
+
+See the {@linksdk angular working "CKEditor 4 Angular Integration" sample} that showcases the most iomportant features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

@@ -34,6 +34,8 @@ To install [the official CKEditor 4 NPM package](https://www.npmjs.com/package/c
 npm install --save ckeditor
 ```
 
+For more detailed information you can check guide {@link guide/dev/package_managers/README Installing CKEditor with Package Managers}.
+
 ## Trying Out
 
 CKEditor comes with a sample that you can check to verify if the installation was successful as well as a few "next steps" ideas and references to further resources.

@@ -93,7 +93,7 @@ When you are done, open your test page in the browser.
 
 Instead of downloading CKEditor to your server and hosting it you can also use the CDN version. Go to the [official CKEditor CDN](http://cdn.ckeditor.com/) page for more details.
 
-## CKEditor Framework Integrations:
+## CKEditor 4 Framework Integrations
 
 CKEditor 4 supported frameworks:
 

@@ -95,17 +95,27 @@ Instead of downloading CKEditor to your server and hosting it you can also use t
 
 ## CKEditor 4 Framework Integrations
 
-### [CKEditor 4 React Integration](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html):
+### CKEditor 4 React Integration
+
+To install the Official CKEditor 4 React Component package run:
 
 ```bash
 npm install --save ckeditor4-react
 ```
 
-### [CKEditor 4 Angular Integration](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html):
+By default it will automatically fetch latest CKEditor 4  [Standard preset](https://ckeditor.com/cke4/presets-all)  via CDN. Check the {@link guide/dev/integration/react/README integration guides} on how it can be changed and how to configure the component to fit you needs.
+
+### CKEditor 4 Angular Integration
+
+To install the Official CKEditor 4 Angular Component package run:
 
 ```bash
 npm install --save ckeditor4-angular
 ```
+
+By default it will automatically fetch latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/angular/README integration guides} on how it can be changed and how to configure the component to fit you needs.
+
+### CKEditor 4 Vue Integration
 
 CKEditor Vue Integration is under developement.
 

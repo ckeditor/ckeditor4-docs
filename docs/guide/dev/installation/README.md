@@ -28,7 +28,7 @@ Unpack (extract) the downloaded `.zip` archive to the `ckeditor` directory in th
 
 ## Install from the NPM registry
 
-To install [the CKEditor 4 NPM package](https://www.npmjs.com/package/ckeditor):
+To install [the official CKEditor 4 NPM package](https://www.npmjs.com/package/ckeditor) run:
 
 ```bash
 npm install --save ckeditor

@@ -95,8 +95,6 @@ Instead of downloading CKEditor to your server and hosting it you can also use t
 
 ## CKEditor 4 Framework Integrations
 
-CKEditor 4 supported frameworks:
-
 ### [CKEditor 4 React Integration](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html):
 
 ```bash

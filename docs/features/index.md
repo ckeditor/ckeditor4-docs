@@ -1,8 +1,8 @@
 ---
 toc: false
 category: features
-menu-title: Functionality Overview
-meta-title-short: Functionality Overview
+menu-title: Features Overview
+meta-title-short: Features Overview
 ---
 
 <!--
@@ -10,11 +10,11 @@ Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor Functionality Overview
+# CKEditor Features Overview
 
 This section presents a whole variety of features that CKEditor has to offer. It is complemented by {@linksdk index **CKEditor Examples**}, an awesome collection of **working editor samples** that present all concepts discussed here and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!
 
-The Functionality Overview section is divided into two parts, **End-user Features** and **Integration Features**.
+The Features Overview section is divided into two parts, **End-user Features** and **Integration Features**.
 
 <info-box hint="">
     You can select the articles from the list below or from the sidebar menu.

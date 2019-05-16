@@ -25,7 +25,7 @@ Note: The following instructions work starting with Accessibility Checker **1.1.
 
 In order to hook into the process of issue gathering there are a few things to be done:
 
-* Registering the {@link guide/dev/features/accessibility_checker/README#what-exactly-are-issues issue type}.
+* Registering the {@link features/accessibility_checker/README#what-exactly-are-issues issue type}.
 * Hooking to the `process` event of `editor._.a11ychecker.engine`.
 
 In this guide whenever we refer to the `editor` variable, it is an instance of {@linkapi CKEDITOR.editor CKEDITOR.editor} type, and when referring to the `a11ychecker` variable, it is a `editor._.a11ychecker` member.
@@ -160,5 +160,5 @@ Accessibility Checker will automatically mark these issues in the editor editabl
 
 Refer to the following resources for more information about Accessibility Checker:
 
-* The {@link guide/dev/features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article explains how Accessibility Checker works.
+* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article explains how Accessibility Checker works.
 * The {@link guide/dev/integration/a11ychecker/custom_quick_fixes/README Custom Quick Fixes in Accessibility Checker} article shows how to add custom Quick Fixes.

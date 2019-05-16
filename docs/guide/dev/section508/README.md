@@ -24,7 +24,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 </thead><tbody>
 <tr>
 <td align="left">(a) When software is designed to run on a system that has a keyboard, product functions shall be executable from a keyboard where the function itself or the result of performing a function can be discerned textually.</td>
-<td align="left">All CKEditor features can be reached with keyboard. {@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</td>
+<td align="left">All CKEditor features can be reached with keyboard. {@link features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</td>
 <td align="left"></td>
 </tr>
 <tr>
@@ -189,7 +189,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <ul>
 <li>Pressing <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> to change focus to CKEditor from the outside will put the focus directly into the editing area, instead of other focusable elements of the editor (e.g. toolbar buttons).</li>
 <li>The toolbar can be accessed with <kbd>Alt+F10</kbd> and it is divided into groups that can be navigated with the <kbd>Tab</kbd> key. The navigation inside those groups is possible with <kbd>Arrow</kbd> keys.</li>
-<li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
+<li>{@link features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 </ul></td>
 <td align="left"></td>
 </tr>
@@ -458,7 +458,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <td align="left">
 <ul>
 <li>All CKEditor features can be reached with keyboard and/or mouse.</li>
-<li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
+<li>{@link features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 <li>The use of user speech is not required for operating the editor.</li>
 </ul></td>
 <td align="left"></td>
@@ -468,7 +468,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 <td align="left">
 <ul>
 <li>All CKEditor features can be reached with keyboard and/or mouse.</li>
-<li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
+<li>{@link features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 <li>A mouse is thus not required for using the editor.</li>
 </ul></td>
 <td align="left"></td>
@@ -506,7 +506,7 @@ The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retri
 Refer to the following resources for more information about accessibility in CKEditor:
 
 * The {@link guide/dev/a11y/README Accessibility Support in CKEditor} article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
-* The {@link guide/dev/features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
-* The {@link guide/dev/features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
-* The {@link guide/dev/features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
+* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
+* The {@link features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
+* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/wcag/README CKEditor WCAG 2.0 Compliance} article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.

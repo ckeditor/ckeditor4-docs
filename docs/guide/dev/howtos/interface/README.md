@@ -29,23 +29,23 @@ Alternatively, you can use the {@linkapi CKEDITOR.config.removePlugins CKEDITOR.
 
 ## How Do I Change the Size of the Editor?
 
-Refer to the {@link guide/dev/features/size/README Setting Editor Size} article.
+Refer to the {@link features/size/README Setting Editor Size} article.
 
 ## How Do I Change the Size of the Editor on the Fly?
 
-Refer to the {@link guide/dev/features/resize/README Editor Resizing Customization} article.
+Refer to the {@link features/resize/README Editor Resizing Customization} article.
 
 ## How Do I Remove the Ability to Resize CKEditor?
 
-Refer to the {@link guide/dev/features/resize/README Editor Resizing Customization} article.
+Refer to the {@link features/resize/README Editor Resizing Customization} article.
 
 ## How Do I Limit the Width and Height for CKEditor Resizing?
 
-Refer to the {@link guide/dev/features/resize/README Editor Resizing Customization} article.
+Refer to the {@link features/resize/README Editor Resizing Customization} article.
 
 ## How Do I Limit the Directions for CKEditor Resizing to Horizontal or Vertical Only?
 
-Refer to the {@link guide/dev/features/resize/README Editor Resizing Customization} article.
+Refer to the {@link features/resize/README Editor Resizing Customization} article.
 
 ## How Do I Add the Toolbar Collapse Button?
 
@@ -63,17 +63,17 @@ CKEditor {@linkapi CKEDITOR.config#toolbar toolbar} is an array of button elemen
 
 {@img assets/img/toolbar_05.png The CKEditor toolbar}
 
-Since version 4.5 each CKEditor installation package includes a handy tool called Toolbar Configurator that makes toolbar customization a breeze. Please refer to the {@link guide/dev/features/toolbar/README Toolbar Configuration} article for more information on how to use it.
+Since version 4.5 each CKEditor installation package includes a handy tool called Toolbar Configurator that makes toolbar customization a breeze. Please refer to the {@link features/toolbar/README Toolbar Configuration} article for more information on how to use it.
 
 ## How Do I Navigate CKEditor Using the Keyboard?
 
 The {@link guide/dev/a11y/README Accessibility Support in CKEditor} contains lots of useful information on using the CKEditor interface with your keyboard or with assistive devices such as screen readers.
 
-CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. Read more {@link guide/dev/features/tabindex/README here} and see the {@linksdk tabindex working demo} here.
+CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. Read more {@link features/tabindex/README here} and see the {@linksdk tabindex working demo} here.
 
 Many functions in CKEditor have their equivalent keyboard shortcuts. This is one of the reasons why working with the editor is simple and efficient.
 
-The {@link guide/dev/features/shortcuts/README Keyboard Shortcuts} article describes available keyboard shortcuts grouped by problem areas.
+The {@link features/shortcuts/README Keyboard Shortcuts} article describes available keyboard shortcuts grouped by problem areas.
 
 
 ## How Do I Configure CKEditor to Use the `Arrow` Keys to Navigate Between All Toolbar Buttons?

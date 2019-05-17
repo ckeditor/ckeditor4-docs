@@ -22,7 +22,7 @@ To install [the official CKEditor 4 NPM package](https://www.npmjs.com/package/c
 npm install --save ckeditor
 ```
 
-For more detailed information you can check guide {@link guide/dev/package_managers/README Installing CKEditor with Package Managers}.
+For more detailed information you can check the guide on {@link guide/dev/package_managers/README Installing CKEditor 4 with Package Managers}.
 
 ## Download from Official Site
 
@@ -40,31 +40,31 @@ Unpack (extract) the downloaded `.zip` archive to the `ckeditor` directory in th
 
 Instead of downloading CKEditor to your server and hosting it you can also use the CDN version. Go to the [official CKEditor CDN](http://cdn.ckeditor.com/) page for more details.
 
-## CKEditor 4 Framework Integrations
+## Integrate with popular frameworks
 
 ### CKEditor 4 Angular Integration
 
-To install the Official CKEditor 4 Angular Component package run:
+To install the Official CKEditor 4 Angular Component run:
 
 ```bash
 npm install --save ckeditor4-angular
 ```
 
-By default it will automatically fetch latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/angular/README integration guides} on how it can be changed and how to configure the component to fit you needs.
+By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/angular/README integration guides} on how it can be changed and how to configure the component to fit you needs.
 
 ### CKEditor 4 React Integration
 
-To install the Official CKEditor 4 React Component package run:
+To install the Official CKEditor 4 React Component run:
 
 ```bash
 npm install --save ckeditor4-react
 ```
 
-By default it will automatically fetch latest CKEditor 4  [Standard preset](https://ckeditor.com/cke4/presets-all)  via CDN. Check the {@link guide/dev/integration/react/README integration guides} on how it can be changed and how to configure the component to fit you needs.
+By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/react/README integration guides} on how it can be changed and how to configure the component to fit you needs.
 
 ### CKEditor 4 Vue Integration
 
-CKEditor Vue Integration is under developement.
+{@link guide/dev/integration/vue/README CKEditor 4 Vue Integration} is under development.
 
 ## Trying Out
 

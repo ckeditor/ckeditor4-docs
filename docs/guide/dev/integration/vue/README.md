@@ -14,4 +14,4 @@ For licensing, see LICENSE.md.
 
 The CKEditor 4 Vue Integration is currently under development. Progress of our work can be tracked in the [CKEditor4-Vue repository](https://github.com/ckeditor/ckeditor4-vue).
 
-We are open for any valuable feedback. Don't hesitate to post any ideas or feature requests in  the [Vue Integration Issue page](https://github.com/ckeditor/ckeditor-dev/issues/2861).
+We are open for any valuable feedback. Don't hesitate to post any ideas or feature requests on the [Vue Integration issue page](https://github.com/ckeditor/ckeditor-dev/issues/2861).

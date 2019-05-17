@@ -14,6 +14,17 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 <dt>{@linksdk index CKEditor 4 SDK with Editor Samples}</dt><dd>A collection of examples designed to help you get familiar with all editor features.</dd>
 </dl>
 
+## CKEditor 4 Framework Integrations
+
+<dl>
+<dt>{@link guide/dev/integration/angular/README CKEditor 4 Angular Integration}</dt>
+<dd>Official CKEditor 4 Angular 2+ integration available through the Angular component. Available as <code>ckeditor4-angular</code> npm package.</dd>
+<dt>{@link guide/dev/integration/react/README CKEditor 4 React Integration}</dt>
+<dd>Official CKEditor 4 React integration available through the React component. Available as <code>ckeditor4-react</code> npm package.</dd>
+<dt>{@link guide/dev/integration/vue/README CKEditor 4 Vue Integration}</dt>
+<dd>Official CKEditor 4 Vue integration. Currently under developement.</dd>
+</dl>
+
 ## Accessibility Checker for CKEditor 4
 
 {@link guide/dev/features/accessibility_checker/README Accessibility Checker documentation}

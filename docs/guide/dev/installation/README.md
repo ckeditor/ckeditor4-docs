@@ -14,15 +14,57 @@ For licensing, see LICENSE.md.
 
 The aim of this article is to get you up and running with CKEditor in two minutes.
 
-## Download
+## Install from the NPM registry
+
+To install [the official CKEditor 4 NPM package](https://www.npmjs.com/package/ckeditor) run:
+
+```bash
+npm install --save ckeditor
+```
+
+For more detailed information you can check the guide on {@link guide/dev/package_managers/README Installing CKEditor 4 with Package Managers}.
+
+## Download from Official Site
+
+### Download
 
 Visit the official [CKEditor Download](https://ckeditor.com/ckeditor-4/download/) site. For a production site we recommend you choose the default **Standard Package** and click the **Download CKEditor** button to get the `.zip` installation file. If you want to try out more editor features, you can download the **Full Package** instead.
 
 <a href="https://ckeditor.com/ckeditor-4/download/"><img src="%BASE_PATH%/assets/img/ckeditor_quick_start_download.png" alt="CKEditor Download site" width="914" height="440"/></a>
 
-## Unpacking
+### Unpacking
 
 Unpack (extract) the downloaded `.zip` archive to the `ckeditor` directory in the root of your website.
+
+## Using the CDN
+
+Instead of downloading CKEditor to your server and hosting it you can also use the CDN version. Go to the [official CKEditor CDN](http://cdn.ckeditor.com/) page for more details.
+
+## Integrate with popular frameworks
+
+### CKEditor 4 Angular Integration
+
+To install the Official CKEditor 4 Angular Component run:
+
+```bash
+npm install --save ckeditor4-angular
+```
+
+By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/angular/README integration guides} on how it can be changed and how to configure the component to fit you needs.
+
+### CKEditor 4 React Integration
+
+To install the Official CKEditor 4 React Component run:
+
+```bash
+npm install --save ckeditor4-react
+```
+
+By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/react/README integration guides} on how it can be changed and how to configure the component to fit you needs.
+
+### CKEditor 4 Vue Integration
+
+{@link guide/dev/integration/vue/README CKEditor 4 Vue Integration} is under development.
 
 ## Trying Out
 
@@ -30,6 +72,9 @@ CKEditor comes with a sample that you can check to verify if the installation wa
 
 Open the following page in the browser to see the sample:
 `http://<your site="">/ckeditor/samples/index.html`
+
+When using the NPM package open the following:
+`http://<your site="">/node_modules/ckeditor/samples/index.html`
 
 <img src="%BASE_PATH%/assets/img/ckeditor_sample.png" alt="CKEditor sample available in each installation package" width="802" height="530">
 
@@ -75,10 +120,6 @@ When you are done, open your test page in the browser.
 **Congratulations! You have just installed and used CKEditor on your own page in virtually no time!**
 
 {@img assets/img/ckeditor_on_page.png CKEditor added to your sample page}
-
-## Using the CDN
-
-Instead of downloading CKEditor to your server and hosting it you can also use the CDN version. Go to the [official CKEditor CDN](http://cdn.ckeditor.com/) page for more details.
 
 ## Next Steps
 

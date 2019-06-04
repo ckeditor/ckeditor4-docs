@@ -35,6 +35,12 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: {@linkapi CKEDITOR.config.cloudServices_tokenUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
 * Additional data: None.
 
+## dangerous-tags-allowed
+
+* Location: `core/htmldataprocessor.js`
+* Description: Flag {@linkapi CKEDITOR.config.allowDangerousTags} is set to true. This can potentially allow execution of malicious scripts inside the editor. Use with caution.
+* Additional data: None.
+
 ## cloudservices-no-token
 
 * Location: `plugins/cloudservices/plugin.js`

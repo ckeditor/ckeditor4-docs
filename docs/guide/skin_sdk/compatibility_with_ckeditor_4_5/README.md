@@ -12,7 +12,7 @@ meta-title-short: Compatibility with CKEditor 4.5
 
 Two of the new features introduced in [CKEditor 4.5](https://ckeditor.com/blog/CKEditor-4.4-Released) require additional styles to be added to the skin's CSS. These two features are:
 
-* {@link guide/dev/features/notifications/README Notifications}
+* {@link features/notifications/README Notifications}
 * {@linkapi CKEDITOR.dialog#setState Busy dialog state}.
 
 Notifications do not work with an incompatible skin. Dialog state gracefully degrades from a spinner to a static hourglass.

@@ -58,7 +58,7 @@ p { margin: 0; }
 ```
 
 ### Configure Styles drop-down
-If you are using a CKEditor build which includes the Styles drop-down (like Standard or Full), take a few minutes to {@link guide/dev/features/styles/README configure it} after you install the editor.
+If you are using a CKEditor build which includes the Styles drop-down (like Standard or Full), take a few minutes to {@link features/styles/README configure it} after you install the editor.
 
 The default styles included in the `styles.js` file are just examples which will not work without the matching `contents.css` file. They will also not work in the inline editor which uses page stylesheets instead of the `contents.css` file.
 
@@ -99,12 +99,12 @@ Although ACF is not a security filter, leaving it in default, automatic mode sho
 
 ### Disable source mode
 
-{@link guide/dev/features/sourcearea/README Source mode} is an advanced feature that lets your users insert HTML code into your website and is not really needed in most use cases (after all, you are installing a WYSIWYG editor to avoid the need to write content in HTML). Disabling it is thus highly recommended.
+{@link features/sourcearea/README Source mode} is an advanced feature that lets your users insert HTML code into your website and is not really needed in most use cases (after all, you are installing a WYSIWYG editor to avoid the need to write content in HTML). Disabling it is thus highly recommended.
 
 ### Validate preview content
 
 The [Preview](https://ckeditor.com/cke4/addon/preview) plugin displays a preview of the document as it will be shown to the end user or printed. In order for the content to be displayed as closely as possible to how it looks on your page it will not be processed or secured in any special way by the plugin. This opens up possibilities for XSS attacks, so it is highly recommended to sanitize the preview content using the {@linkapi CKEDITOR.contentPreview} event. This event allows you to modify content HTML before it is displayed in the browser.
 
-For example, if you enabled the {@link guide/dev/features/sourcearea/README source mode} in the editor and an unaware user uses it with malicious HTML, the preview plugin will **directly display** this content in the browser, causing an XSS attack.
+For example, if you enabled the {@link features/sourcearea/README source mode} in the editor and an unaware user uses it with malicious HTML, the preview plugin will **directly display** this content in the browser, causing an XSS attack.
 
 Most of the preview plugin XSS vectors can be reduced by following security best practices described in this article. However, make sure that you do not accidentally open your site for a potential XSS attack using the same {@linkapi CKEDITOR.contentPreview} event recommended to mitigate XSS vectors, for example by replacing placeholders with HTML code from an untrusted source.

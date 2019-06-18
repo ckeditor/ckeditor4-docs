@@ -68,7 +68,7 @@ Alternatively, you can load CKEditor before loading the CKEditor 4 Angular compo
 
 ## Choosing the Editor Type
 
-By default, the CKEditor 4 Angular component creates an {@link guide/dev/inline/README inline editor} with a {@link guide/dev/features/uitypes/README#fixed-ui-for-inline-editor fixed UI}. This editor type will be referred to as a `divarea` editor. To create an editor with a {@link guide/dev/features/uitypes/README#floating-user-interface floating UI}, add the `type` property with a value of `inline`:
+By default, the CKEditor 4 Angular component creates an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI}. This editor type will be referred to as a `divarea` editor. To create an editor with a {@link features/uitypes/README#floating-user-interface floating UI}, add the `type` property with a value of `inline`:
 
 ```html
 <ckeditor
@@ -117,7 +117,7 @@ The URL address to `ckeditor.js`. Refer to [Customising CKEditor Preset or Versi
 
 ### `config`
 
-Custom configuration can be passed to the editor with the `config` attribute passed to `<ckeditor>` in the component template. The following example shows {@link guide/dev/features/toolbar/README how to change the toolbar configuration}:
+Custom configuration can be passed to the editor with the `config` attribute passed to `<ckeditor>` in the component template. The following example shows {@link features/toolbar/README how to change the toolbar configuration}:
 
 ```html
 <ckeditor
@@ -162,7 +162,7 @@ The default tag is `<textarea>`.
 
 ### `readOnly`
 
-The editor can be set to {@link guide/dev/features/readonly/README read-only mode} with the `readOnly` property:
+The editor can be set to {@link features/readonly/README read-only mode} with the `readOnly` property:
 
 ```html
 <ckeditor

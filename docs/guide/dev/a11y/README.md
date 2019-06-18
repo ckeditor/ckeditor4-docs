@@ -60,7 +60,7 @@ The following features make working with CKEditor through standard keyboard easy
 
 #### Reaching the Editor on the Page
 
-CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. It can be reached and exited by using the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keyboard shortcuts that are commonly used for navigating between page elements. Read more {@link guide/dev/features/tabindex/README here} and see the {@linksdk tabindex working demo} here.
+CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. It can be reached and exited by using the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keyboard shortcuts that are commonly used for navigating between page elements. Read more {@link features/tabindex/README here} and see the {@linksdk tabindex working demo} here.
 
 #### Keyboard Navigation
 
@@ -70,7 +70,7 @@ Once the editor is in focus (i.e. it is an active element for the user), its ent
 * <kbd>Alt+F11</kbd> &ndash; Moves the focus to the elements path. <kbd>Enter</kbd> and <kbd>Esc</kbd> can be used here as well.
 * <kbd>Tab</kbd>, <kbd>Shift+Tab</kbd> and <kbd>Arrow</kbd> keys &ndash; Move through toolbar groups and buttons as well as context menu options and dialog window elements.
 
-There are plenty other keyboard shortcuts that can be utilized. For most editor functions we have chosen the key combinations that the user will naturally use. Everything else is clarified in the {@link guide/dev/features/shortcuts/README documentation} as well as the **Accessibility Instructions** dialog window (<kbd>Alt+0</kbd>).
+There are plenty other keyboard shortcuts that can be utilized. For most editor functions we have chosen the key combinations that the user will naturally use. Everything else is clarified in the {@link features/shortcuts/README documentation} as well as the **Accessibility Instructions** dialog window (<kbd>Alt+0</kbd>).
 
 Additionally, for CKEditor 4.6 and later, all keyboard shortcuts available for a particular action or command are displayed directly in the editor, in toolbar button tooltips or context menu entries.
 
@@ -136,7 +136,7 @@ The following features can be used by developers to ensure that content created 
 
 #### Accessibility Checker
 
-The innovative {@link guide/dev/features/accessibility_checker/README Accessibility Checker} tool lets you inspect the accessibility level of content created in the editor and fix reported issues, often fully automatically. It is a **must-have addon** for government institutions and companies that are often required by law to ensure the content they produce meets accessibility standards. See the {@linksdk accessibilitychecker working demo} and get the plugin [here](https://ckeditor.com/cke4/addon/a11ychecker).
+The innovative {@link features/accessibility_checker/README Accessibility Checker} tool lets you inspect the accessibility level of content created in the editor and fix reported issues, often fully automatically. It is a **must-have addon** for government institutions and companies that are often required by law to ensure the content they produce meets accessibility standards. See the {@linksdk accessibilitychecker working demo} and get the plugin [here](https://ckeditor.com/cke4/addon/a11ychecker).
 
 #### Setting Language of Parts for Editor Content
 
@@ -153,8 +153,8 @@ See the following working samples to check some accessibility-related features o
 
 Refer to the following resources for more information about accessibility in CKEditor:
 
-* The {@link guide/dev/features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
-* The {@link guide/dev/features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
-* The {@link guide/dev/features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
+* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
+* The {@link features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
+* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/section508/README CKEditor Section 508 Compliance} article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
 * The {@link guide/dev/wcag/README CKEditor WCAG 2.0 Compliance} article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.

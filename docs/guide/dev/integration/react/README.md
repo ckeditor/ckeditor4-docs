@@ -100,7 +100,7 @@ Every other value of the `type` property will be treated as `classic`.
 
 ### Changing the Editor Configuration
 
-Custom configuration can be passed to the editor with the `config` property of the CKEditor 4 React component. The following example shows {@link guide/dev/features/toolbar/README how to change the contents of the toolbar}:
+Custom configuration can be passed to the editor with the `config` property of the CKEditor 4 React component. The following example shows {@link features/toolbar/README how to change the contents of the toolbar}:
 
 ```jsx
 <CKEditor
@@ -113,7 +113,7 @@ Custom configuration can be passed to the editor with the `config` property of t
 
 {@linkapi CKEDITOR.config All configuration} options can be changed this way.
 
-There is also an additional way to set the {@link guide/dev/features/readonly/README read-only mode} with the `readOnly` property:
+There is also an additional way to set the {@link features/readonly/README read-only mode} with the `readOnly` property:
 
 ```jsx
 <CKEditor

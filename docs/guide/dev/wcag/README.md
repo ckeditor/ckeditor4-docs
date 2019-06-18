@@ -258,7 +258,7 @@ User interface components and navigation must be operable. See [reference](http:
 			<td>
 				<ul>
 					<li>All CKEditor features can be reached with keyboard.</li>
-					<li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
+					<li>{@link features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 				</ul>
 			</td>
 			<td>
@@ -336,7 +336,7 @@ User interface components and navigation must be operable. See [reference](http:
 				<ul>
 					<li>Pressing <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> to change focus to the editor from the outside will put the focus directly into the editing area, instead of into other focusable elements of the editor (e.g. toolbar buttons).</li>
 					<li>The editor toolbar is accessible by pressing <kbd>Alt+F10</kbd> and it is divided into groups that can be navigated via tabbing. The navigation inside the groups is possible with <kbd>Arrow</kbd> keys.</li>
-					<li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
+					<li>{@link features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 					<li>The editor is marked as an application using WAI-ARIA landmarks.</li>
 					<li>Features that contain multiple options are expressed as collapsible lists or buttons that open modal dialogs.</li>
 				</ul>
@@ -371,7 +371,7 @@ User interface components and navigation must be operable. See [reference](http:
 				<ul>
 					<li>Pressing <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> to change focus to the editor from the outside will put the focus directly into the editing area, instead of into other focusable elements of the editor (e.g. toolbar buttons).</li>
 					<li>The editor toolbar is accessible by pressing <kbd>Alt+F10</kbd> and it is divided into groups that can be navigated via tabbing. The navigation inside the groups is possible with <kbd>Arrow</kbd> keys.</li>
-					<li>{@link guide/dev/features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
+					<li>{@link features/shortcuts/README Keyboard shortcuts} are available for the most frequently used features.</li>
 					<li>If a modal dialog is open, the focus is moved inside it and trapped until the dialog is closed. The tabbing order inside a dialog is consistent with the visual order.</li>
 				</ul>
 			</td>
@@ -672,7 +672,7 @@ Content must be robust enough that it can be interpreted reliably by a wide vari
 Refer to the following resources for more information about accessibility in CKEditor:
 
 * The {@link guide/dev/a11y/README Accessibility Support in CKEditor} article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
-* The {@link guide/dev/features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
-* The {@link guide/dev/features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
-* The {@link guide/dev/features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
+* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
+* The {@link features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
+* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/section508/README CKEditor Section 508 Compliance} article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).

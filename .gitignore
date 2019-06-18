@@ -1,3 +1,7 @@
 /build
 docs/api/data
 node_modules
+docs/sdk/examples/vendors/
+docs/sdk/examples/assets/react/main.js*
+docs/sdk/examples/assets/angular/main.js*
+docs/sdk/examples/assets/angular/polyfills.js*

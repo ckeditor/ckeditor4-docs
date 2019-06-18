@@ -1,0 +1,24 @@
+<h2>{{( inline ? 'Inline' : 'Divarea' )}} Editor</h2>
+
+<p>
+	To use the CKEditor 4 WYSIWYG editor component, create a new <code>&lt;ckeditor&gt;</code> tag. The initial data of the editor can be set with the <code>data</code> property.
+</p>
+
+<p>
+	The two available editor types are <strong>divarea editor</strong> (an inline editor with a <a href="./fixedui.html">fixed UI</a>) and <strong>inline editor</strong> with a <a href="./floatingui.html">floating UI</a>.
+</p>
+
+<p>Use the button below to change the editor type.</p>
+
+<ckeditor
+	*ngIf="!inline"
+	[(data)]="editorData">
+</ckeditor>
+
+<ckeditor
+	*ngIf="inline"
+	type="inline"
+	[(data)]="editorData">
+</ckeditor>
+
+<button class="editor-type" (click)="changeEditorType()">Change to {{ inline ? 'divarea' : 'inline' }}</button>

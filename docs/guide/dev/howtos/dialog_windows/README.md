@@ -6,7 +6,7 @@ menu-title: Dialog Windows
 meta-title-short: Dialog Windows
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -76,7 +76,7 @@ For more examples on setting a default field value refer to the old "Using the J
 
 If you want to change your CKEditor configuration to show a different tab on opening a dialog window, you can hook into the {@linkapi CKEDITOR.dialog.definition#onShow onShow} event of the dialog window.
 
-Firstly, you will need to know the names of the dialog window and the tab that you want to set as default, so use the {@link guide/dev/howtos/dialog_windows/README#how-do-i-learn-the-names-of-ckeditor-dialog-window-fields%3F Developer Tools} plugin to get these.
+Firstly, you will need to know the names of the dialog window and the tab that you want to set as default, so use the {@link guide/dev/howtos/dialog_windows/README#how-do-i-learn-the-names-of-ckeditor-dialog-window-fields Developer Tools} plugin to get these.
 
 Once you have the names you can add the following code into the page that contains your CKEditor instance. The example below sets the [Image Properties](https://ckeditor.com/cke4/addon/image) dialog window to open the **Link** tab by default.
 
@@ -101,7 +101,7 @@ If, for example, you want to open the **Upload** tab first to make it more conve
 
 ## How Do I Learn the Names of CKEditor Dialog Window Fields?
 
-If you want to customize a dialog window, the easiest and most convenient way is to enable the {@link guide/dev/features/devtools/README Developer Tools} plugin that displays the names and IDs of all dialog window elements when you hover them with your mouse. You can see the plugin demo in [CKEditor SDK](https://sdk.ckeditor.com/samples/devtools.html).
+If you want to customize a dialog window, the easiest and most convenient way is to enable the {@link features/devtools/README Developer Tools} plugin that displays the names and IDs of all dialog window elements when you hover them with your mouse. You can see the plugin demo in {@linksdk devtools CKEditor Examples}.
 
 The following figure shows the tooltip that describes the **URL** field of the **Link** dialog window that is displayed after the **Developer Tools** plugin was enabled.
 

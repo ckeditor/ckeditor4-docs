@@ -6,7 +6,7 @@ menu-title: Content Filtering (ACF)
 meta-title-short: Content Filtering (ACF)
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -36,11 +36,11 @@ By default, ACF works in **automatic mode**. It means that out-of-the-box CKEdit
 
 	config.allowedContent = true;
 
-Common use case: Applications whose users are familiar with {@link guide/dev/features/sourcearea/README source mode editing} and should be allowed to enter anything they want, where no server-side filtering is done to sanitize submitted data.
+Common use case: Applications whose users are familiar with {@link features/sourcearea/README source mode editing} and should be allowed to enter anything they want, where no server-side filtering is done to sanitize submitted data.
 
 ### Allow everything, except...
 
-See {@link guide/dev/deep_dive/advanced_content_filter/disallowed_content/README#how-to-allow-everything-except... Disallowed Content} in the Deep Dive section.
+See {@link guide/dev/deep_dive/advanced_content_filter/disallowed_content/README#how-to-allow-everything-except Disallowed Content} in the Deep Dive section.
 
 Common use case: An alternative to allowing just everything, which helps, for example, protect users from accidental copying  of the `<script>` tags or `onclick` handlers from other websites. Keep in mind that blacklisting is usually a bad idea.
 
@@ -146,8 +146,8 @@ Bold text can be represented on websites by `<strong>`, `<b>`, or `<span style="
 
 The following samples are available for two ACF modes:
 
-* The [Advanced Content Filter &ndash; Automatic Mode](https://sdk.ckeditor.com/samples/acf.html) sample shows the default implementation of ACF and its customization.
-* The [Advanced Content Filter &ndash; Custom Mode](https://sdk.ckeditor.com/samples/acfcustom.html) sample shows how the custom ACF mode works.
+* The {@linksdk acf Advanced Content Filter &ndash; Automatic Mode} sample shows the default implementation of ACF and its customization.
+* The {@linksdk acfcustom Advanced Content Filter &ndash; Custom Mode} sample shows how the custom ACF mode works.
 
 ## Further Reading
 

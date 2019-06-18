@@ -6,7 +6,7 @@ menu-title: Easy Image
 meta-title-short: Easy Image
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -135,4 +135,4 @@ config.on = {
 
 ## About Easy Image
 
-For more information about Easy Image refer to {@link guide/dev/features/easyimage/README Functionality Overview – Easy Image}.
+For more information about Easy Image refer to {@link features/easyimage/README Features Overview – Easy Image}.

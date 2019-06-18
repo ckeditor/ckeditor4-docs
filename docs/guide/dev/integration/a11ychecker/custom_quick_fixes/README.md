@@ -6,7 +6,7 @@ menu-title: Custom Quick Fixes
 meta-title-short: Custom Quick Fixes
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -128,5 +128,5 @@ var config = {
 
 Refer to the following resources for more information about Accessibility Checker:
 
-* The {@link guide/dev/features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article explains how Accessibility Checker works.
+* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article explains how Accessibility Checker works.
 * The {@link guide/dev/integration/a11ychecker/custom_issue_types/README Custom Issue Types in Accessibility Checker} article shows how to add custom issue types.

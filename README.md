@@ -2,7 +2,7 @@
 
 This is the official developer documentation project for CKEditor. It uses the customized CKEditor [JSDuck clone](https://github.com/ckeditor/jsduck) for compilation and is available online at <http://docs.ckeditor.com>.
 
-Developer documentation is a part of [CKEditor SDK](https://sdk.ckeditor.com).
+**All issues regarding CKEditor 4 Documentation should be reported in the [`ckeditor-dev` repository](https://github.com/ckeditor/ckeditor-dev/issues/new/choose).**
 
 ## Building the Documentation
 
@@ -22,7 +22,7 @@ Clone this repository locally:
 Go to the `ckeditor-docs` directory and update the submodules:
 
 	> cd ckeditor-docs
-	> git submodule update --init
+	> git submodule update --init --recursive
 
 Clone the custom CKEditor [JSDuck repository](https://github.com/ckeditor/jsduck) to a separate folder next to `ckeditor-docs`:
 

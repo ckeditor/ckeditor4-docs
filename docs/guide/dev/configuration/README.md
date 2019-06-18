@@ -6,7 +6,7 @@ menu-title: Setting Configuration
 meta-title-short: Setting Configuration
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -83,6 +83,6 @@ This setting is definitely recommended, if you are not setting the configuration
 
 ## Editor Features
 
-If you are wondering what CKEditor features are available, head to the {@link guide/dev/features/README Functionality Overview} section. You will find a many editor features categorized and explained there, along with references to configuration options that let you customize them.
+If you are wondering what CKEditor features are available, head to the {@link features/index Features Overview} section. You will find a many editor features categorized and explained there, along with references to configuration options that let you customize them.
 
-The Functionality Overview section is complemented by [CKEditor SDK](http://sdk.ckeditor.com), an awesome collection of **working editor samples** that present all concepts discussed there and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!
+The Features Overview section is complemented by {@linksdk index CKEditor Examples}, an awesome collection of **working editor samples** that present all concepts discussed there and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!

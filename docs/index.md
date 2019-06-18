@@ -1,5 +1,6 @@
 ---
 toc: false
+feedback-widget: false
 sitenav: false
 meta-title: CKEditor 4 documentation
 meta-description: Learn how to install, integrate, configure and develop CKEditor 4. Browse through API documentation and online samples.
@@ -10,14 +11,14 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 <dl>
 <dt>{@link guide/index CKEditor 4 Developer's Guide}</dt><dd>Learn how to install, integrate and configure CKEditor 4. More complex aspects, like creating plugins, widgets and skins are explained here, too.</dd>
 <dt>{@link api/index CKEditor 4 API Reference}</dt><dd>A complete API documentation.</dd>
-<dt><a href="https://sdk.ckeditor.com/">CKEditor 4 SDK with Editor Samples</a></dt><dd>A collection of examples designed to help you get familiar with all editor features.</dd>
+<dt>{@linksdk index CKEditor 4 SDK with Editor Samples}</dt><dd>A collection of examples designed to help you get familiar with all editor features.</dd>
 </dl>
 
 ## Accessibility Checker for CKEditor 4
 
-{@link guide/dev/features/accessibility_checker/README Accessibility Checker documentation}
+{@link features/accessibility_checker/README Accessibility Checker documentation}
 
-[Accessibility Checker SDK sample](https://sdk.ckeditor.com/samples/accessibilitychecker.html)
+{@linksdk accessibilitychecker Accessibility Checker SDK sample}
 
 ## Contribute
 

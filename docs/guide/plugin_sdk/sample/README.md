@@ -6,7 +6,7 @@ menu-title: Creating a Basic Plugin
 meta-title-short: Creating a Basic Plugin
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -106,7 +106,7 @@ The {@linkapi CKEDITOR.ui.addButton CKEDITOR.ui.addButton} method call above cre
 
  * `label` &ndash; the textual part of the button (if visible) and its tooltip.
  * `command` &ndash; the command to be executed once the button is activated. This is the command we created in the previous step.
- * `toolbar` &ndash; the {@link guide/dev/features/toolbar/README#toolbar-groups-configuration toolbar group} into which the button will be added.
+ * `toolbar` &ndash; the {@link features/toolbarconcepts/README#toolbar-groups-configuration toolbar group} into which the button will be added.
 
 Please note that you can influence the position of the button in the toolbar group by providing an optional index, for example:
 
@@ -177,7 +177,7 @@ order to insert other types of content into your document.
 
 ## Timestamp Plugin Demo
 
-See the [working "Timestamp (Creating a Most Basic CKEditor Plugin)" sample](https://sdk.ckeditor.com/samples/timestamp.html) that shows the Timestamp plugin integrated with an editor instance.
+See the {@linksdk timestamp working "Timestamp (Creating a Most Basic CKEditor Plugin)" sample} that shows the Timestamp plugin integrated with an editor instance.
 
 ## Further Reading
 

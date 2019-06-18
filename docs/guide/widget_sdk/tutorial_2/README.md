@@ -6,7 +6,7 @@ menu-title: Widget Tutorial (Part 2)
 meta-title-short: Widget Tutorial (Part 2)
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -459,4 +459,4 @@ If you double click an existing widget instance, the dialog window will open aga
 
 ## Simple Box Widget Demo
 
-See the [working "SimpleBox (Creating a Custom Widget)" sample](https://sdk.ckeditor.com/samples/simplebox.html) that shows the final version of the Simple Box widget integrated with an editor instance.
+See the {@linksdk simplebox working "SimpleBox (Creating a Custom Widget)" sample} that shows the final version of the Simple Box widget integrated with an editor instance.

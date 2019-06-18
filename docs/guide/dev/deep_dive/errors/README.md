@@ -6,7 +6,7 @@ menu-title: Error Code Reference
 meta-title-short: Error Code Reference
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -77,7 +77,7 @@ This article contains the list of CKEditor error codes and their explanation. Th
 
 ## editor-plugin-conflict
 
-* Location: `core/tools.js`
+* Location: `core/editor.js`
 * Description: A plugin cannot be initialized because it is in conflict with another plugin.
 * Additional data:
 	* `plugin`: The name of the plugin that cannot be initialized.
@@ -106,6 +106,13 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Location: `plugins/mathjax/plugin.js`
 * Description: The {@linkapi CKEDITOR.config#mathJaxLib CKEDITOR.config#mathJaxLib} property is not set. Refer to {@linkapi CKEDITOR.config#mathJaxLib API documentation} for more information.
 * Additional data: None.
+
+## no-vendor-lib
+
+* Location: `core/tools.js`
+* Description: Unable to find vendor library. Make sure that vendor library is available at the given path.
+* Additional data:
+	* `path`: A path to the vendor library.
 
 ## range-endcontainer
 

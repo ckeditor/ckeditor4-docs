@@ -6,7 +6,7 @@ menu-title: Example CKEditor Setups
 meta-title-short: Example CKEditor Setups
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 # Example CKEditor Setups
@@ -24,11 +24,11 @@ The Article Editor demo showcases an editor designed mainly for writing web text
 The Article Editor is based on the [Standard package](https://ckeditor.com/ckeditor-4/download/) with a few modifications:
 
  * Added five additional plugins:
-   * [Auto Embed](https://ckeditor.com/cke4/addon/autoembed) and [Semantic Media Embed](https://ckeditor.com/cke4/addon/embedsemantic) for inserting {@link guide/dev/features/embed/README embedded media resources} like videos (e.g. from YouTube, Vimeo), tweets or slideshows.
-   * [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to provide {@link guide/dev/features/image2/README captioned images}.
-   * [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) and [Upload File](https://ckeditor.com/cke4/addon/uploadfile) to support {@link guide/dev/features/drop_paste/README file uploads via drag&drop and pasting} images from clipboard.
- * Adjusted the {@link guide/dev/features/toolbar/README toolbar configuration} to display buttons in a single row.
- * Adjusted {@link guide/dev/features/styles/README content CSS styles}, including usage of [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) font from [Google Fonts](https://developers.google.com/fonts/docs/getting_started).
+   * [Auto Embed](https://ckeditor.com/cke4/addon/autoembed) and [Semantic Media Embed](https://ckeditor.com/cke4/addon/embedsemantic) for inserting {@link features/embed/README embedded media resources} like videos (e.g. from YouTube, Vimeo), tweets or slideshows.
+   * [Enhanced Image](https://ckeditor.com/cke4/addon/image2) to provide {@link features/image2/README captioned images}.
+   * [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) and [Upload File](https://ckeditor.com/cke4/addon/uploadfile) to support {@link features/drop_paste/README file uploads via drag&drop and pasting} images from clipboard.
+ * Adjusted the {@link features/toolbar/README toolbar configuration} to display buttons in a single row.
+ * Adjusted {@link features/styles/README content CSS styles}, including usage of [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) font from [Google Fonts](https://developers.google.com/fonts/docs/getting_started).
 
 <div class="responsive">
 {@img assets/img/editor1.png Article Editor}
@@ -45,11 +45,11 @@ The Document Editor demo showcases a more robust editor designed for creating do
 The Document Editor is based on the [Full package](https://ckeditor.com/ckeditor-4/download/) with a few modifications:
 
  * Added three additional plugins:
-   * [Table Resize](https://ckeditor.com/cke4/addon/tableresize) to enable {@link guide/dev/features/table/README#table-resizing-with-your-mouse table columns resizing}.
-   * [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) and [Upload File](https://ckeditor.com/cke4/addon/uploadfile) to support {@link guide/dev/features/drop_paste/README file uploads via drag&drop and pasting} images from clipboard.
- * Adjusted the {@link guide/dev/features/toolbar/README toolbar configuration} to display buttons in a single row.
+   * [Table Resize](https://ckeditor.com/cke4/addon/tableresize) to enable {@link features/table/README#table-resizing-with-your-mouse table columns resizing}.
+   * [Upload Image](https://ckeditor.com/cke4/addon/uploadimage) and [Upload File](https://ckeditor.com/cke4/addon/uploadfile) to support {@link features/drop_paste/README file uploads via drag&drop and pasting} images from clipboard.
+ * Adjusted the {@link features/toolbar/README toolbar configuration} to display buttons in a single row.
  * Reduced the number of buttons in the toolbar (Full preset comes with plenty of them).
- * Adjusted {@link guide/dev/features/styles/README content CSS styles} to render the document in a way that resembles a real sheet of paper.
+ * Adjusted {@link features/styles/README content CSS styles} to render the document in a way that resembles a real sheet of paper.
 
 
 <div class="responsive">
@@ -75,7 +75,7 @@ Inline editor provides a real WYSIWYG experience "out of the box" because unlike
 This demo showcases the <strong>Accessibility Checker</strong> plugin &mdash; an innovative solution that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
 
 <info-box hint="">
-  Visit the <a href="https://sdk.ckeditor.com/samples/accessibilitychecker.html">CKEditor SDK</a> website to try out this configuration.
+  Visit the {@linksdk accessibilitychecker CKEditor Examples} website to try out this configuration.
 </info-box>
 
 <div class="responsive">
@@ -141,7 +141,7 @@ This is the easiest way of using CKEditor if additional third-party plugins are 
 
 Using [Builder](https://ckeditor.com/cke4/builder) to build a bundle with all required plugins is highly recommended in case of using customized packages, especially those with additional third-party plugins.
 
-Refer to the {@link guide/dev/plugins/README#through-ckbuilder Installing Plugins &ndash; Online Builder Installation} article for information about building a custom editor package.
+Refer to the {@link guide/dev/plugins/README#through-online-builder Installing Plugins &ndash; Online Builder Installation} article for information about building a custom editor package.
 
 <table border="1" class="hints">
 <tr><td class="hints-benchmark">Benchmark</td><td class="hints-result">Result</td><td>Comments</td></tr>

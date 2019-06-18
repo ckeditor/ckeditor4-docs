@@ -1,12 +1,12 @@
 ---
 category: integration
-order: 40
+order: 50
 url: guide/dev_jquery
 menu-title: jQuery Adapter
 meta-title-short: jQuery Adapter
 ---
 <!--
-Copyright (c) 2003-2018, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

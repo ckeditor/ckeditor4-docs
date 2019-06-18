@@ -16,7 +16,7 @@ For licensing, see LICENSE.md.
 	Uploading pasted and dragged images was introduced in <strong>CKEditor 4.5</strong>. It is provided through the <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugin that is included in the Standard and Full presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-Starting from CKEditor 4.5 it is possible to enable uploading pasted and dropped images. This article is about the editor-server configuration for pasted and dropped files since it uses a different API than the {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser} plugin. To get an overview about this feature, refer to the {@link guide/dev/features/drop_paste/README Dropping and Pasting into Editor Content} article.
+Starting from CKEditor 4.5 it is possible to enable uploading pasted and dropped images. This article is about the editor-server configuration for pasted and dropped files since it uses a different API than the {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser} plugin. To get an overview about this feature, refer to the {@link features/drop_paste/README Dropping and Pasting into Editor Content} article.
 
 ## Basic Configuration
 
@@ -234,5 +234,5 @@ For more information on pasting, dropping and uploading files with CKEditor refe
 * {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration}
 * {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}
 * {@link guide/dev/integration/file_browse_upload/dialog_add_file_browser/README Adding the File Manager to Dialog Windows}
-* {@link guide/dev/features/drop_paste/README Dropping and Pasting into Editor Content}
+* {@link features/drop_paste/README Dropping and Pasting into Editor Content}
 * {@link guide/dev/deep_dive/clipboard/README Clipboard Integration}

@@ -47,11 +47,25 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: The editor's `<iframe>` could not be destroyed correctly because it had been unloaded before the editor was destroyed. Make sure to destroy the editor before detaching it from the DOM.
 * Additional data: None.
 
+## editor-element-conflict
+
+* Location: `core/editor.js`
+* Description: There is already editor's instance attached to the provided element and attaching another one to it is not allowed.
+* Additional data:
+	* `editorName`: The name of the already attached editor.
+
 ## editor-incorrect-destroy
 
 * Location: `core/editor.js`
 * Description: The editor is being destroyed before it is fully initialized.
 * Additional data: None.
+
+## editor-incorrect-element
+
+* Location: `core/editor.js`
+* Description: The requested element couldn't be found in page's DOM. Check if passed argument points to the correct element.
+* Additional data:
+	* `element`: The element's `id` attribute.
 
 ## editor-plugin-required
 
@@ -92,6 +106,13 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Location: `plugins/mathjax/plugin.js`
 * Description: The {@linkapi CKEDITOR.config#mathJaxLib CKEDITOR.config#mathJaxLib} property is not set. Refer to {@linkapi CKEDITOR.config#mathJaxLib API documentation} for more information.
 * Additional data: None.
+
+## no-vendor-lib
+
+* Location: `core/tools.js`
+* Description: Unable to find vendor library. Make sure that vendor library is available at the given path.
+* Additional data:
+	* `path`: A path to the vendor library.
 
 ## range-endcontainer
 

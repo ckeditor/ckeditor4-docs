@@ -38,14 +38,14 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					width: 520px;
 				}
 			</style>
-			<h1>Embedding Media Resources with oEmbed <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_media_embed.html">Documentation</a></h1>
+			<h1>Embedding Media Resources with oEmbed <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/media_embed.html">Documentation</a></h1>
 
 			<p>
 				The optional <a href="https://ckeditor.com/cke4/addon/embed">Media Embed</a> and <a href="https://ckeditor.com/cke4/addon/embedsemantic">Semantic Media Embed</a> plugins, introduced in CKEditor 4.5, allow to embed resources (videos, images, tweets, etc.) hosted by other services (called the "content providers") in the editor.
 			</p>
 
 			<p>
-				When either Media Embed or Semantic Media Embed plugin is enabled and the <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_media_embed.html#configuring-the-content-provider">content provider</a> is configured, the <span class="button_icon" data-icon="embed" title="Media Embed">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Media Embed</strong> dialog window that lets you add the URL of the resource to be embedded. You can also <strong>paste</strong> that resource's URL into the editor content and it will be automatically embedded if the optional <a href="https://ckeditor.com/cke4/addon/autoembed">Auto Embed</a> plugin is enabled.
+				When either Media Embed or Semantic Media Embed plugin is enabled and the <a href="https://ckeditor.com/docs/ckeditor4/latest/features/media_embed.html#configuring-the-content-provider">content provider</a> is configured, the <span class="button_icon" data-icon="embed" title="Media Embed">&nbsp;</span> button is automatically added to the toolbar. Once clicked, it opens the <strong>Media Embed</strong> dialog window that lets you add the URL of the resource to be embedded. You can also <strong>paste</strong> that resource's URL into the editor content and it will be automatically embedded if the optional <a href="https://ckeditor.com/cke4/addon/autoembed">Auto Embed</a> plugin is enabled.
 			</p>
 
 			<p>
@@ -54,7 +54,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 			<h2>Using Media Embed with Auto Embed</h2>
 
-			<p>The sample below uses the <a href="https://ckeditor.com/cke4/addon/embed">Media Embed</a> plugin together with the <a href="https://ckeditor.com/cke4/addon/autoembed">Auto Embed</a> and <a href="https://ckeditor.com/cke4/addon/image2">Enhanced Image</a> plugins. Additional <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_styles.html#widget-styles">widget styles</a> are defined to control widget size and alignment.</p>
+			<p>The sample below uses the <a href="https://ckeditor.com/cke4/addon/embed">Media Embed</a> plugin together with the <a href="https://ckeditor.com/cke4/addon/autoembed">Auto Embed</a> and <a href="https://ckeditor.com/cke4/addon/image2">Enhanced Image</a> plugins. Additional <a href="https://ckeditor.com/docs/ckeditor4/latest/features/styles.html#widget-styles">widget styles</a> are defined to control widget size and alignment.</p>
 
 			<p>Try embedding more resources like the following. You can either paste these URLs into the editor or use the Media Embed dialog.</p>
 
@@ -137,7 +137,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						CKEDITOR.basePath + 'contents.css',
 						'assets/css/widgetstyles.css'
 					],
-					// Setup content provider. See https://ckeditor.com/docs/ckeditor4/latest/guide/dev_media_embed
+					// Setup content provider. See https://ckeditor.com/docs/ckeditor4/latest/features/media_embed
 					embed_provider: '//ckeditor.iframe.ly/api/oembed?url={url}&callback={callback}',
 
 					// Configure the Enhanced Image plugin to use classes instead of styles and to disable the

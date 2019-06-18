@@ -17,7 +17,7 @@ For licensing, see LICENSE.md.
 
 One of the most important CKEditor features is the integration with the operating system's clipboard. The main role of this feature is to intercept any content that is being pasted, dropped, cut, copied or dragged from or to the editor. This allows to apply certain rules to this content, for instance with {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}.
 
-This feature is provided by the Clipboard plugin and, because of incomplete, broken or totally missing native support for this type of operations across browsers, it is very complex. The aim of this article is to explain how CKEditor integration with clipboard works under the hood. We recommend reading the {@link guide/dev/features/drop_paste/README Drop and Paste Feature Overview} article first.
+This feature is provided by the Clipboard plugin and, because of incomplete, broken or totally missing native support for this type of operations across browsers, it is very complex. The aim of this article is to explain how CKEditor integration with clipboard works under the hood. We recommend reading the {@link features/drop_paste/README Drop and Paste Feature Overview} article first.
 
 ## Why Is Custom Clipboard Integration Needed?
 
@@ -25,7 +25,7 @@ The main problem is that the developers want to have control over what can be pa
 
 Therefore, filters must be implemented. But in order to do so, the content must be intercepted before it is inserted into the editor.
 
-But this is only one of many reasons why having control over the clipboard is useful. It also allows to implement features like {@link guide/dev/features/drop_paste/README uploading pasted files}, customized integration that {@link guide/dev/deep_dive/widgets/README widgets} have and finally, allows what we love most, to have a highly unified behavior across all browsers.
+But this is only one of many reasons why having control over the clipboard is useful. It also allows to implement features like {@link features/drop_paste/README uploading pasted files}, customized integration that {@link guide/dev/deep_dive/widgets/README widgets} have and finally, allows what we love most, to have a highly unified behavior across all browsers.
 
 The `contentEditable` attribute has no official specification yet, and features like what sort of content is put into the clipboard when the user copies some selected text will not be specified in the near future. Therefore, browsers vary when it comes to algorithms such as {@linkapi CKEDITOR.editor#getSelectedHtml "get selected HTML"} or {@linkapi CKEDITOR.editor#method-insertHtml "insert HTML into the selection"} that yield different, often very poor, results.
 

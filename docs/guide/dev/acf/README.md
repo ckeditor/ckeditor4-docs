@@ -36,7 +36,7 @@ By default, ACF works in **automatic mode**. It means that out-of-the-box CKEdit
 
 	config.allowedContent = true;
 
-Common use case: Applications whose users are familiar with {@link guide/dev/features/sourcearea/README source mode editing} and should be allowed to enter anything they want, where no server-side filtering is done to sanitize submitted data.
+Common use case: Applications whose users are familiar with {@link features/sourcearea/README source mode editing} and should be allowed to enter anything they want, where no server-side filtering is done to sanitize submitted data.
 
 ### Allow everything, except...
 

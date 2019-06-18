@@ -94,7 +94,7 @@ The above {@linkapi CKEDITOR.ui.addButton CKEDITOR.ui.addButton} function call c
 
  * `label` &ndash; the textual part of the button (if visible) and its tooltip.
  * `command` &ndash; the command to be executed once the button is activated. This is the command we created in the previous step.
- * `toolbar` &ndash; the {@link guide/dev/features/toolbarconcepts/README#toolbar-groups-configuration toolbar group} into which the button will be added.
+ * `toolbar` &ndash; the {@link features/toolbarconcepts/README#toolbar-groups-configuration toolbar group} into which the button will be added.
 
 Please note that you can influence the position of the button in the toolbar group by providing an optional index, for example:
 

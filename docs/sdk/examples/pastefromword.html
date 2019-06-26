@@ -157,7 +157,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
 					{ name: 'colors', items: [ 'TextColor', 'BGColor', 'CopyFormatting' ] },
 					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-					{ name: 'document', items: [ 'Print', 'Source' ] }
+					{ name: 'document', items: [ 'Print', 'PageBreak', 'Source' ] }
 				],
 
 				// Since we define all configuration options here, let's instruct CKEditor to not load config.js which it does by default.
@@ -183,7 +183,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				extraAllowedContent: 'img[width,height,align];span{background}',
 
 				// Enabling extra plugins, available in the full-all preset: https://ckeditor.com/cke4/presets
-				extraPlugins: 'colorbutton,font,justify,print,tableresize,uploadimage,uploadfile,pastefromword,liststyle',
+				extraPlugins: 'colorbutton,font,justify,print,tableresize,uploadimage,uploadfile,pastefromword,liststyle,pagebreak',
 
 				/*********************** File management support ***********************/
 				// In order to turn on support for file uploads, CKEditor has to be configured to use some server side

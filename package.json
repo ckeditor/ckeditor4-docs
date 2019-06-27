@@ -1,6 +1,6 @@
 {
   "name": "ckeditor-docs",
-  "version": "4.11.4",
+  "version": "4.12.0",
   "description": "The official documentation of CKEditor 4. http://docs.ckeditor.com",
   "dependencies": {
     "@angular-devkit/build-angular": "^0.12.3",
@@ -19,8 +19,8 @@
     "babel-loader": "^8.0.4",
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",
-    "ckeditor4-angular": "0.1.1",
-    "ckeditor4-react": "^0.1.0",
+    "ckeditor4-angular": "^1.0.0-beta",
+    "ckeditor4-react": "^1.0.0-beta",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.7",
     "dargs": "~4.0.0",

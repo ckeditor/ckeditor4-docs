@@ -70,9 +70,11 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'build-angular', buildIntegrationTask( 'angular' ) );
 	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );
 
-	// grunt.registerTask( 'build-react', [ 'webpack:react' ] );
 	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'umberto' ] );
 	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'umberto', 'connect' ] );
+
+	// Build docs for production. It assumes Umberto is run by external process - useful when building as part of projects bundle.
+	grunt.registerTask( 'docs-prod', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react' ] );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),

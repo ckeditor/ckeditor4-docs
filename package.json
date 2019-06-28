@@ -1,6 +1,6 @@
 {
   "name": "ckeditor-docs",
-  "version": "4.12.1",
+  "version": "4.12.2",
   "description": "The official documentation of CKEditor 4. http://docs.ckeditor.com",
   "dependencies": {
     "@angular-devkit/build-angular": "^0.12.3",

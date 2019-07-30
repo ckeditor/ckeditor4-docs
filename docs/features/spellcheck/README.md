@@ -46,6 +46,26 @@ The [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugin is another spe
 
 {@img assets/img/wsc_01.png Spell Checker in the dialog window in CKEditor}
 
+## Proofreading with WProofreader plugin
+
+The [WProofreader](https://webspellchecker.com/wsc-proofreader) is a multi-language proofreading tool, which provides both instant and on-click proofreading modes in a new convenient UI. It is bundled with [WSC](https://ckeditor.com/cke4/addon/wsc) / [SCAYT](https://ckeditor.com/cke4/addon/scayt) plugin so no extra plugins are required. However, it requires few lines of configuration:
+
+```js
+window.WEBSPELLCHECKER_CONFIG = {
+    autoSearch: true,
+    enableGrammar: true,
+    serviceId: 'your-service-ID'
+};
+```
+
+If [WSC](https://ckeditor.com/cke4/addon/wsc) and [SCAYT](https://ckeditor.com/cke4/addon/scayt) plugins are disabled, additonal script needs to be loaded (which will loaded by he plugins itself when enabled):
+
+```html
+<script type="text/javascript" src="https://svc.webspellchecker.net/spellcheck31/wscbundle/wscbundle.js"></script>
+```
+
+For more detailed documentation, please refer to [official Getting Started Guide](https://docs.webspellchecker.net/pages/viewpage.action?pageId=442663877).
+
 ## Customization Options
 
 Both plugins include numerous configuration options that let you customize the default spell checking

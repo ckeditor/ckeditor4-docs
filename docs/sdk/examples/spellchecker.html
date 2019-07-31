@@ -157,15 +157,22 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script data-sample="3">
 				window.WEBSPELLCHECKER_CONFIG = {
 					autoSearch: true,
-					// enableAutoSearchIn: [ '#wproofreader' ],
+					enableAutoSearchIn: [ '.cke_wproofreader' ],
 					enableGrammar: true,
-					serviceId: ''
+					serviceId: '1:Eebp63-lWHbt2-ASpHy4-AYUpy2-fo3mk4-sKrza1-NsuXy4-I1XZC2-0u2F54-aqYWd1-l3Qf14-umd'
 				};
 
 				CKEDITOR.replace( 'editor3', {
 					height: 250,
 					// Remove the WebSpellChecker and SpellCheckAsYouType (SCAYT) plugins.
-					removePlugins: 'scayt,wsc'
+					removePlugins: 'scayt,wsc',
+					on: {
+						// Add special class to editor iframe so WProofreader will be only initialized on this
+						// particular instance (see 'enableAutoSearchIn' in 'WEBSPELLCHECKER_CONFIG' above).
+						instanceReady: function( evt ) {
+							evt.editor.container.findOne( 'iframe' ).addClass( 'cke_wproofreader' );
+						}
+					}
 				} );
 			</script>
 

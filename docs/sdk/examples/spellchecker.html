@@ -7,11 +7,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Spell Checker and SCAYT. Using Native Browser Spell Checker.">
-	<meta name="keywords" content="ckeditor, editor, wysiwyg, spell, checker, spellchecker, spellchecking, check, scayt, wsc, wproofreader">
-	<meta name="sdk-samples" content="Spell Check As You Type (SCAYT)|Spell checker in a dialog window|WebSpellChecker Proofreader|Native browser spell checker">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, spell, checker, spellchecker, spellchecking, grammar, grammar checker, proofreading, proofreader, check, scayt, wsc, wproofreader">
+	<meta name="sdk-samples" content="Spell Check As You Type (SCAYT)|Spell checker in a dialog window|Distraction-free proofreader|Native browser spell checker">
 	<meta name="sdk-category" content="sdk-working-with-document">
 	<meta name="sdk-order" content="10">
-	<title>Spell Checking</title>
+	<title>Spelling and Grammar Checking</title>
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
 	<script src="../../ckeditor-dev/ckeditor.js"></script>
@@ -33,34 +33,27 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
-			<h1>Spell Checker and Spell Check As You Type <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/spellcheck.html">Documentation</a></h1>
+			<h1>Proofreading, Spelling and Grammar Checking <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/spellcheck.html">Documentation</a></h1>
 
 			<p>
 				The Standard and Full CKEditor packages include the integrated spell checking functionality.
-				It is an out-of-the-box solution provided by third-party plugins, <a href="https://ckeditor.com/cke4/addon/wsc">WebSpellChecker</a>
-				and <a href="https://ckeditor.com/cke4/addon/scayt">SpellCheckAsYouType (SCAYT)</a>, that use the
-				<a href="http://webspellchecker.net/">WebSpellChecker.net</a> web service.
+				It is an out-of-the-box solution provided by third-party plugins, <a href="https://ckeditor.com/cke4/addon/wsc">WebSpellChecker</a> and <a href="https://ckeditor.com/cke4/addon/scayt">SpellCheckAsYouType (SCAYT)</a>, that use the <a href="https://webspellchecker.com">WebSpellChecker</a> web service.
 			</p>
 
 			<p>
-				When either of the plugins is enabled, the <span class="button_icon" data-icon="scayt" title="Spell Checker">&nbsp;</span>
-				button is automatically added to the toolbar. Depending on which plugin you use, it may contain numerous SCAYT options
-				and open the Spell Check dialog window.
+				When either of the plugins is enabled, the <span class="button_icon" data-icon="scayt" title="Spell Checker">&nbsp;</span> button is automatically added to the toolbar. Depending on which plugin you use, it may contain numerous SCAYT options and open the Spell Checker dialog window.
 			</p>
 
 			<div class="tip">
-				The out-of-the-box spell checking functionality is ad-supported. If you want to remove the
-				ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
+				The out-of-the-box spell checking functionality is ad-supported. If you want to remove the ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
 			</div>
 
 			<h2>Spell Check As You Type (SCAYT)</h2>
 
 			<p>
 				The <a href="https://ckeditor.com/cke4/addon/scayt">SpellCheckAsYouType (SCAYT)</a> plugin checks the spelling
-				of the text in the editing area immediately as you type it and marks all errors with a red wavy line. By default it
-				needs to be enabled by choosing <strong>Enable SCAYT</strong> from the
-				<span class="button_icon" data-icon="scayt" title="Spell Checker">&nbsp;</span> toolbar button, but you can also
-				<a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-scayt_autoStartup">configure SCAYT to start automatically</a>
+				of the text in the editing area immediately as you type it and marks all errors with a red line. By default it
+				needs to be enabled by choosing <strong>Enable SCAYT</strong> from the <span class="button_icon" data-icon="scayt" title="Spell Checker">&nbsp;</span> toolbar button, but you can also <a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-scayt_autoStartup">configure SCAYT to start automatically</a>
 				on editor loading, like in the editor instance below.
 			</p>
 
@@ -78,9 +71,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<h2>Spell Checking in a Dialog Window</h2>
 
 			<p>
-				The <a href="https://ckeditor.com/cke4/addon/wsc">WebSpellChecker</a> plugin provides the <strong>Spell Check</strong>
-				dialog window that lets you check the spelling of the document word by word. Additionally, for some languages a
-				Grammar Checker and Thesaurus feature is also available.
+				The <a href="https://ckeditor.com/cke4/addon/wsc">WebSpellChecker</a> plugin provides the <strong>Spell Checker</strong> dialog window that lets you check the spelling of the document word by word. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
 			</p>
 
 			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2">
@@ -94,12 +85,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				&lt;p&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 			</textarea>
 
-			<h2>Using WebSpellChecker Proofreader (WProofreader)</h2>
+			<h2>Distraction-free Proofreader</h2>
 
 			<p>
-				The <a href="https://webspellchecker.com/wsc-proofreader">WProofreader</a> is a multi-language proofreading tool, which provides both instant
-				and on-click proofreading modes in a new convenient UI. End users just need to hover on the marked words for instant correction suggestions
-				or click the dialog icon in the bottom right corner to have the whole text proofread at once.
+				<a href="https://webspellchecker.com/wsc-proofreader">WProofreader</a> is the ultimate proofreading tool that combines the functionality of "spell check as you type" and "spell check in a dialog" in a modern UI. Spelling and grammar suggestions are available on hover with no clicking needed. The distraction-free badge gives you access to proofreader suggestions, settings and proofreading overview in a dialog.
 			</p>
 
 			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3">
@@ -167,7 +156,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Remove the WebSpellChecker and SpellCheckAsYouType (SCAYT) plugins.
 					removePlugins: 'scayt,wsc',
 					on: {
-						// Add special class to editor iframe so WProofreader will be only initialized on this
+						// Add a special class to the editor iframe so WProofreader will only be initialized on this
 						// particular instance (see 'enableAutoSearchIn' in 'WEBSPELLCHECKER_CONFIG' above).
 						instanceReady: function( evt ) {
 							evt.editor.container.findOne( 'iframe' ).addClass( 'cke_wproofreader' );

@@ -48,6 +48,10 @@ The [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugin is another spe
 
 ## Distraction-free Proofreading
 
+<info-box info="">
+    This is a commercial solution provided by our partner, [WebSpellChecker](https://webspellchecker.com/), and is in beta version. You can report any issues in its [GitHub repository](https://github.com/WebSpellChecker/wproofreader).
+</info-box>
+
 [WProofreader](https://webspellchecker.com/wsc-proofreader) is the ultimate proofreading tool that combines the functionality of "spell check as you type" and "spell check in a dialog" in a modern UI. Spelling and grammar suggestions are available on hover with no clicking needed.
 
 {@img assets/img/wproofreader_01.png 730 Spelling and grammar checking with WProofreader in CKEditor 4 WYSIWYG editor}
@@ -81,6 +85,12 @@ WProofreader is a commercial solution, so you need to [purchase a license](https
 Additionally, this feature is bundled with the [SCAYT](https://ckeditor.com/cke4/addon/scayt) and [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugins, so you can use it as long as you have WSC or SCAYT installed.
 
 For more detailed documentation, refer to the [official WProofreader "Getting Started" guide](https://docs.webspellchecker.net/pages/viewpage.action?pageId=442663877).
+
+## Supported Languages
+
+By default the WebSpellChecker solutions support 16 languages for spell checking: American English, British English, Brazilian Portuguese, Canadian English, Canadian French, Danish, Dutch, Finnish, French, German, Greek, Italian, Norwegian Bokmal, Portuguese, Spanish and Swedish. Grammar checking is available for 14 of them &mdash; there is no grammar checking for Finnish and Norwegian.
+
+There are also over 150 additional languages and specialized dictionaries such as medical and legal available for an additional fee. You can check the full list [here](https://webspellchecker.com/additional-dictionaries/).
 
 ## Customization Options
 

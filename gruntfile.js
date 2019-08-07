@@ -71,7 +71,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );
 
 	// Build docs for production/multidocs. It assumes Umberto is run by external process - useful when building as part of projects bundle.
-	grunt.registerTask( 'before-build', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react' ] );
+	grunt.registerTask( 'before-build', [ 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react' ] );
 
 	grunt.registerTask( 'build', [ 'before-build', 'umberto' ] );
 	grunt.registerTask( 'build-serve', [ 'build', 'connect' ] );
@@ -94,6 +94,14 @@ module.exports = function( grunt ) {
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
 
+		copy: {
+			main: {
+				expand: true,
+				cwd: 'node_modules/@wiris/mathtype-ckeditor4',
+				src: '**',
+				dest: 'docs/sdk/examples/assets/plugins/ckeditor_wiris'
+			}
+		},
 		jsduck: {
 			api: {
 				src: [

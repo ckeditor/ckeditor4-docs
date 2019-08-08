@@ -101,8 +101,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 					CKEDITOR.replace( 'editor1', {
 						extraPlugins: 'ckeditor_wiris',
+						removePlugins: 'uploadimage,uploadwidget,uploadfile,filetools',
 						height: 320,
-						extraAllowedContent: mathElements.join( ' ' ) + '(*)[*]{*}'
+						extraAllowedContent: mathElements.join( ' ' ) + '(*)[*]{*};img[data-mathml,data-custom-editor,role](Wirisformula)'
 					} );
 				}() );
 			</script>

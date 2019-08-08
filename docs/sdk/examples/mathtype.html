@@ -51,13 +51,60 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			</ul>
 
 			<script data-sample="1">
-				CKEDITOR.plugins.addExternal( 'ckeditor_wiris', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/ckeditor_wiris/', 'plugin.js' );
+				( function() {
+					var mathElements = [
+						'math',
+						'maction',
+						'maligngroup',
+						'malignmark',
+						'menclose',
+						'merror',
+						'mfenced',
+						'mfrac',
+						'mglyph',
+						'mi',
+						'mlabeledtr',
+						'mlongdiv',
+						'mmultiscripts',
+						'mn',
+						'mo',
+						'mover',
+						'mpadded',
+						'mphantom',
+						'mroot',
+						'mrow',
+						'ms',
+						'mscarries',
+						'mscarry',
+						'msgroup',
+						'msline',
+						'mspace',
+						'msqrt',
+						'msrow',
+						'mstack',
+						'mstyle',
+						'msub',
+						'msup',
+						'msubsup',
+						'mtable',
+						'mtd',
+						'mtext',
+						'mtr',
+						'munder',
+						'munderover',
+						'semantics',
+						'annotation',
+						'annotation-xml'
+					];
 
-				CKEDITOR.replace( 'editor1', {
-					extraPlugins: 'ckeditor_wiris',
-					height: 320,
-					allowedContent: true
-				} );
+					CKEDITOR.plugins.addExternal( 'ckeditor_wiris', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/ckeditor_wiris/', 'plugin.js' );
+
+					CKEDITOR.replace( 'editor1', {
+						extraPlugins: 'ckeditor_wiris',
+						height: 320,
+						extraAllowedContent: mathElements.join( ' ' ) + '(*)[*]{*}'
+					} );
+				}() );
 			</script>
 
 		</section>

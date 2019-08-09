@@ -10,7 +10,7 @@ Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Creating Mathematical Formulas
+# Creating Mathematical Formulas with MathJax
 
 <info-box info="">
  This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>. In order to enable the plugin you need to {@link features/mathjax/README#setting-the-path-to-mathjax-library set the path to the MathJax library} first.
@@ -62,4 +62,10 @@ will turn all `<span class="equation">` elements into mathematical formulas widg
 
 ## Mathematical Formulas Demo
 
-See the {@linksdk mathjax working "Creating Mathematical Formulas" sample} that showcases the Mathematical Formulas plugin with its MathJax widget that supports writing equations in TeX.
+See the {@linksdk mathjax working "Creating Mathematical Formulas with MathJax" sample} that showcases the Mathematical Formulas plugin with its MathJax widget that supports writing equations in TeX.
+
+## Related Features
+
+Refer to the following resources for more information about related features:
+
+* {@link features/mathtype/README Creating Mathematical and Chemical Formulas with MathType} explains how to use an alternative solution, MathType, to insert math equations and chemical formulas into your content.

@@ -21,6 +21,90 @@ For licensing, see LICENSE.md.
 
 Additionally, MathType offers a special tool designed to help you work with chemical notation. When enabled, ChemType adds a specialized toolbar with the common chemical symbols as well as changes the notation to make it more intuitive to work with chemical formulas.
 
+## Installation
+
+To install MathType plugin, visit [MathType for CKEditor offical site](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/html/ckeditor) and donwload version appropriate for your server software. After downloading the archive, unpack `ckeditor_wiris` directory into `plugins` directory of your CKEditor 4 directory. Plugin can be added to the editor using {@linkapi CKEDITOR.config.extraPlugins `extraPlugins` configuration variable}.
+
+Alternatively you can install the npm package:
+
+```bash
+npm install @wiris/mathtype-ckeditor4
+```
+
+The installed plugin can be later added to the editor using {@linkapi CKEDITOR.plugins.addExternal `CKEDITOR.plugins.addExternal` method}:
+
+```javascript
+CKEDITOR.plugins.addExternal( 'ckeditor_wiris', '<your-project-directory>/node_modules/@wiris/mathtype-ckeditor4/plugin.js' );
+
+CKEDITOR.replace( 'editor', {
+	extraPlugins: 'ckeditor_wiris'
+} );
+```
+
+Please note that version installed via npm uses backend services provided by Wiris to transform MathML formulas to images.
+
+## Configuration
+
+To be able to use the plugin, editor must allow to include MathML syntax via {@link guide/dev/acf/README Advanced Content Filtering mechanism}. Additionaly MathType plugin is not compatible with the {@link guide/dev/integration/file_browse_upload/file_upload/README official upload integration} and it must be disabled via {@linkapi CKEDITOR.config.removePlugins `removePlugins` configuration variable} to allow use of MathType plugin.
+
+The sample configuration can look like this:
+
+```javascript
+( function() {
+	var mathElements = [
+		'math',
+		'maction',
+		'maligngroup',
+		'malignmark',
+		'menclose',
+		'merror',
+		'mfenced',
+		'mfrac',
+		'mglyph',
+		'mi',
+		'mlabeledtr',
+		'mlongdiv',
+		'mmultiscripts',
+		'mn',
+		'mo',
+		'mover',
+		'mpadded',
+		'mphantom',
+		'mroot',
+		'mrow',
+		'ms',
+		'mscarries',
+		'mscarry',
+		'msgroup',
+		'msline',
+		'mspace',
+		'msqrt',
+		'msrow',
+		'mstack',
+		'mstyle',
+		'msub',
+		'msup',
+		'msubsup',
+		'mtable',
+		'mtd',
+		'mtext',
+		'mtr',
+		'munder',
+		'munderover',
+		'semantics',
+		'annotation',
+		'annotation-xml'
+	];
+
+	CKEDITOR.replace( 'editor1', {
+		extraPlugins: 'ckeditor_wiris',
+		removePlugins: 'filetools,uploadimage,uploadwidget,uploadfile,filebrowser,easyimage',
+		height: 320,
+		extraAllowedContent: mathElements.join( ' ' ) + '(*)[*]{*};img[data-mathml,data-custom-editor,role](Wirisformula)'
+	} );
+}() );
+```
+
 ## Usage
 
 In order to start creating math or chemical formulas in the WYSIWYG editor below, click the **MathType** or **ChemType** buttons in the toolbar. This will open the relevant dialog on the screen.

@@ -23,7 +23,7 @@ Additionally, MathType offers a special tool designed to help you work with chem
 
 ## Installation
 
-To install MathType plugin, visit [MathType for CKEditor offical site](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/html/ckeditor) and donwload version appropriate for your server software. After downloading the archive, unpack `ckeditor_wiris` directory into `plugins` directory of your CKEditor 4 directory. Plugin can be added to the editor using {@linkapi CKEDITOR.config.extraPlugins `extraPlugins` configuration variable}.
+To install the MathType plugin, visit the official site of [MathType for CKEditor](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/html/ckeditor) and download the version appropriate for your server software. After downloading the archive, unpack the `ckeditor_wiris` directory into the `plugins` directory of your CKEditor 4 installation. The plugin can be added to the WYSIWYG editor using the {@linkapi CKEDITOR.config.extraPlugins `config.extraPlugins`} configuration option.
 
 Alternatively you can install the npm package:
 
@@ -31,9 +31,9 @@ Alternatively you can install the npm package:
 npm install @wiris/mathtype-ckeditor4
 ```
 
-The installed plugin can be later added to the editor using {@linkapi CKEDITOR.plugins.addExternal `CKEDITOR.plugins.addExternal` method}:
+The installed plugin can be later added to the editor using the {@linkapi CKEDITOR.plugins.addExternal `CKEDITOR.plugins.addExternal`} method:
 
-```javascript
+```js
 CKEDITOR.plugins.addExternal( 'ckeditor_wiris', '<your-project-directory>/node_modules/@wiris/mathtype-ckeditor4/plugin.js' );
 
 CKEDITOR.replace( 'editor', {
@@ -41,15 +41,19 @@ CKEDITOR.replace( 'editor', {
 } );
 ```
 
-Please note that version installed via npm uses backend services provided by Wiris to transform MathML formulas to images.
+Please note that the version installed via npm uses backend services provided by Wiris to transform MathML formulas to images.
 
 ## Configuration
 
-To be able to use the plugin, editor must allow to include MathML syntax via {@link guide/dev/acf/README Advanced Content Filtering mechanism}. Additionaly MathType plugin is not compatible with the {@link guide/dev/integration/file_browse_upload/file_upload/README official upload integration} and it must be disabled via {@linkapi CKEDITOR.config.removePlugins `removePlugins` configuration variable} to allow use of MathType plugin.
+To be able to use the plugin, the editor must allow to include MathML syntax via the {@link guide/dev/acf/README Advanced Content Filter} mechanism. 
 
-The sample configuration can look like this:
+<info-box info="">
+	At the moment the MathType plugin is not compatible with the {@link guide/dev/integration/file_browse_upload/file_upload/README official file upload integration for CKEditor 4}. File upload capabilities must be disabled with the {@linkapi CKEDITOR.config.removePlugins `config.removePlugins`} configuration option to allow the use of MathType.
+</info-box>
 
-```javascript
+The sample configuration of CKEditor 4 with MathType included can look like this:
+
+```js
 ( function() {
 	var mathElements = [
 		'math',
@@ -156,8 +160,8 @@ Refer to the following resources for more information about related features:
 ## Additional Resources
 
 The following resources can come in handy if you want to become proficient at working with MathType:
+* [MathType for CKEditor](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/html/ckeditor) discusses different installation and customization options for CKEditor 4.
 * [Using MathType Web](https://docs.wiris.com/en/mathtype/mathtype_web/using_mathtype) covers the basics of creating formulas, using your keyboard, moving the cursor in templates, formatting your content or writing on mobile devices.
 * [Introductory tutorials](https://docs.wiris.com/en/mathtype/mathtype_web/intro_tutorials) are intended to get you started using MathType.
 * [ChemType](https://docs.wiris.com/en/mathtype/mathtype_web/chemistry) explains the features of the dedicated chemistry toolbar.
 * [MathType documentation](https://docs.wiris.com/en/mathtype/mathtype_web/start) is a complete reference to all MathType features and settings.
-* [MathType for CKEditor](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/html/ckeditor) discusses different installation and customization options for CKEditor 4.

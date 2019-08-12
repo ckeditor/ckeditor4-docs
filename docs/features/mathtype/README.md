@@ -102,8 +102,10 @@ The sample configuration of CKEditor 4 with MathType included can look like this
 
 	CKEDITOR.replace( 'editor1', {
 		extraPlugins: 'ckeditor_wiris',
+		// For now, MathType is incompatible with CKEditor file upload plugins.
 		removePlugins: 'filetools,uploadimage,uploadwidget,uploadfile,filebrowser,easyimage',
 		height: 320,
+		// Update the ACF configuration with MathML syntax.
 		extraAllowedContent: mathElements.join( ' ' ) + '(*)[*]{*};img[data-mathml,data-custom-editor,role](Wirisformula)'
 	} );
 }() );
@@ -121,7 +123,7 @@ Use the toolbar to write your equation or formula. At any time you can also clic
 
 {@img assets/img/mathtype_02.png 685 Handwriting mode in MathType.}
 
-When you are done creating your scientific content, click the "OK" button to insert your formula into CKEditor 5. You can also edit any existing formulas by double-clicking them in your document.
+When you are done creating your scientific content, click the "OK" button to insert your formula into CKEditor 4. You can also edit any existing formulas by double-clicking them in your document.
 
 {@img assets/img/mathtype_03.png 654 Math equation inserted into CKEditor 4 WYSIWYG editor with MathType.}
 

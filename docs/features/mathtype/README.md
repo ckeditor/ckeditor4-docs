@@ -45,7 +45,7 @@ Please note that the version installed via npm uses backend services provided by
 
 ## Configuration
 
-To be able to use the plugin, the editor must allow to include MathML syntax via the {@link guide/dev/acf/README Advanced Content Filter} mechanism. 
+To be able to use the plugin, the editor must allow to include MathML syntax via the {@link guide/dev/acf/README Advanced Content Filter} mechanism.
 
 <info-box info="">
 	At the moment the MathType plugin is not compatible with the {@link guide/dev/integration/file_browse_upload/file_upload/README official file upload integration for CKEditor 4}. File upload capabilities must be disabled with the {@linkapi CKEDITOR.config.removePlugins `config.removePlugins`} configuration option to allow the use of MathType.
@@ -139,7 +139,7 @@ If you visit a page using MathType with your mobile device, the handwriting inte
 
 MathType is based upon standards like MathML for internal representation and the PNG image format for displaying formulas. It can also handle other formats like LaTeX, Flash, SVG and EPS.
 
-Equations and chemical formulas are displayed in the editor as images, so they have {@link guide/dev/deep_dive/widgets/README#common-usage-scenarios all advantages of widgets}, i.e. you can **treat the entire equation as one entity** and select, delete, or move it with drag and drop in the editor content area as one unit.
+Equations and chemical formulas are displayed in the editor as {@link features/image/README images}, having all their advantages, i.e. you can **treat the entire equation as one entity** and select, delete, or move it with drag and drop in the editor content area as one unit.
 
 ## Displaying on Target Page
 

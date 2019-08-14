@@ -10,17 +10,17 @@ Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Spell Checking
+# Spelling and Grammar Checking
 
 <info-box info="">
-    The out-of-the-box spell checking functionality is provided through plugins that are included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+    The out-of-the-box spelling and grammar checking functionality is provided through plugins that are included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-CKEditor can be configured to use either native spell checking capabilities provided by the browser or to use an external spell checking web service.
+CKEditor 4 can be configured to use either native spell checking capabilities provided by the browser or to use an external spell checking web service.
 
 ## Native Browser Spell Checker
 
-By default, browser native spell check functionality is disabled in the editor. Use the {@linkapi CKEDITOR.config.disableNativeSpellChecker CKEDITOR.config.disableNativeSpellChecker} configuration option to enable it:
+By default, native browser spell check functionality is disabled in the editor. Use the {@linkapi CKEDITOR.config.disableNativeSpellChecker `config.disableNativeSpellChecker`} configuration option to enable it:
 
 ```js
 config.disableNativeSpellChecker = false;
@@ -34,28 +34,74 @@ After reloading the editor you should be able to see the spelling corrections un
 
 ## Spell Check As You Type (SCAYT)
 
-The [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) plugin provides inline spell checking, much like the native browser spell checker, well integrated with the CKEditor context menu.
+The [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) plugin provides inline spelling and grammar checking, much like the native browser spell checker, well-integrated with the CKEditor context menu.
 
-It is provided by [WebSpellChecker.net](http://www.webspellchecker.net/). It uses the WebSpellChecker.net web services, transferring the text to their servers and performing spell checking. This is a cross-browser solution.
+It is provided by [WebSpellChecker](https://webspellchecker.com/wsc-scayt-ckeditor4/). It uses the WebSpellChecker web services, transferring the text to their servers and performing spelling and grammar checking. This is a cross-browser solution.
 
-{@img assets/img/scayt_02.png Spell Check As You Type in CKEditor}
+{@img assets/img/scayt_02.png 876 Spell Check As You Type in CKEditor 4 WYSIWYG editor}
 
 ## Spell Checking in a Dialog Window
 
-The [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugin is another spell checking solution provided by [WebSpellChecker.net](http://www.webspellchecker.net/). It runs the check through a dialog window instead of marking misspelled words inline. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
+The [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugin is another spell checker solution provided by [WebSpellChecker](https://webspellchecker.com/wsc-dialog-ckeditor4/). It runs the check through a dialog window instead of marking misspelled words inline. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
 
-{@img assets/img/wsc_01.png Spell Checker in the dialog window in CKEditor}
+{@img assets/img/wsc_01.png 881 Spell Checker in the dialog window in CKEditor 4 WYSIWYG editor}
+
+## Distraction-free Proofreading
+
+<info-box info="">
+    This is a commercial solution provided by our partner, [WebSpellChecker](https://webspellchecker.com/). You can report any issues in its [GitHub repository](https://github.com/WebSpellChecker/wproofreader).
+</info-box>
+
+[WProofreader](https://webspellchecker.com/wsc-proofreader) is an innovative proofreading tool that combines the functionality of "spell check as you type" and "spell check in a dialog" in a modern UI. Spelling and grammar suggestions are available on hover with no clicking needed.
+
+{@img assets/img/wproofreader_01.png 730 Spelling and grammar checking with WProofreader in CKEditor 4 WYSIWYG editor}
+
+The distraction-free badge gives you access to proofreader suggestions, settings and proofreading overview in a dialog.
+
+{@img assets/img/wproofreader_02.png 730 Distraction-free proofreader badge in CKEditor 4 WYSIWYG editor}
+
+If you want to see an overview of all spelling and grammar mistakes, click the "Proofread in dialog" button in the badge.
+
+{@img assets/img/wproofreader_03.png 730 Proofreading overview in CKEditor 4 WYSIWYG editor}
+
+In order to use the proofreader, you need to load the following script on your site:
+
+```html
+<script type="text/javascript" src="https://svc.webspellchecker.net/spellcheck31/wscbundle/wscbundle.js"></script>
+```
+
+And add a few lines of configuration to your editor:
+
+```js
+window.WEBSPELLCHECKER_CONFIG = {
+    autoSearch: true,
+    enableGrammar: true,
+    serviceId: 'your-service-ID'
+};
+```
+
+WProofreader is a commercial solution, so you need to [purchase a license](https://ckeditor.com/contact/) and then add your `serviceId` to the configuration. You can also request a trial ID on the [WebSpellChecker website](https://www.webspellchecker.net/signup/hosted-signup.html#webspellchecker-proofreader-trial).
+
+Additionally, this feature is bundled with the [SCAYT](https://ckeditor.com/cke4/addon/scayt) and [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugins, so you can use it as long as you have WSC or SCAYT installed.
+
+For more detailed documentation, refer to the [official WProofreader "Getting Started" guide](https://docs.webspellchecker.net/pages/viewpage.action?pageId=442663877).
+
+## Supported Languages
+
+By default the WebSpellChecker solutions support 16 languages for spell checking: American English, British English, Brazilian Portuguese, Canadian English, Canadian French, Danish, Dutch, Finnish, French, German, Greek, Italian, Norwegian Bokmal, Portuguese, Spanish and Swedish. Grammar checking is available for 14 of them &mdash; there is no grammar checking for Finnish and Norwegian.
+
+There are also over 150 additional languages and specialized dictionaries such as medical and legal available for an additional fee. You can check the full list [here](https://webspellchecker.com/additional-dictionaries/).
 
 ## Customization Options
 
-Both plugins include numerous configuration options that let you customize the default spell checking
-language, number of SCAYT suggestions available or the content of the spell checker context menu and dialog window.
-You can find them on the {@linkapi CKEDITOR.config CKEDITOR.config} page, starting from `scayt_` and `wsc_`.
+The SCAYT and WebSpellChecker plugins include numerous configuration options that let you customize the default spell checking language, the number of SCAYT suggestions available or the content of the spell checker context menu and dialog window.
+
+You can find them on the {@linkapi CKEDITOR.config `CKEDITOR.config`} API page, starting from `scayt_` and `wsc_`.
 
 <info-box hint="">
-    The out-of-the-box spell checking functionality is ad-supported. If you want to remove the ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
+    The out-of-the-box spell checking functionality of SCAYT and WebSpellChecker is ad-supported. If you want to remove the ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
 </info-box>
 
 ## Spell Checking Demo
 
-See the {@linksdk spellchecker working "Spell Checker and Spell Check As You Type" sample} that showcases both Spell Check As You Type and spell checking in a dialog window.
+See the {@linksdk spellchecker working "Proofreading, Spelling and Grammar Checking" sample} that showcases all three official spell and grammar checking solutions.

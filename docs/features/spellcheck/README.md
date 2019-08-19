@@ -2,7 +2,7 @@
 category: working-with-document
 order: 20
 url: features/spellcheck
-menu-title: Spell Checking
+menu-title: Spelling and Grammar Checking
 meta-title-short: Spell Checking
 ---
 <!--
@@ -10,7 +10,7 @@ Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Spelling and Grammar Checking
+# Proofreading, Spelling and Grammar Checking
 
 <info-box info="">
     The out-of-the-box spelling and grammar checking functionality is provided through plugins that are included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.

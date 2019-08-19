@@ -53,7 +53,7 @@ This part describes features that are targeted at end users and affect their ove
     * {@link features/format/README Applying Block-Level Text Formats}
     * {@link features/colorbutton/README Setting Text and Background Color}
 * **Working with Document** &ndash; Editing content source code or using document-related features such as magic line or spell checker.
-    * {@link features/spellcheck/README Spell Checking}
+    * {@link features/spellcheck/README Proofreading, Spelling and Grammar Checking}
     * {@link features/autocomplete/README Autocomplete}
     * {@link features/mentions/README Mentions and Tags}
     * {@link features/emoji/README Emoji}

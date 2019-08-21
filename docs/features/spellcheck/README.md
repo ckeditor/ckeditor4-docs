@@ -42,7 +42,7 @@ It is provided by [WebSpellChecker](https://webspellchecker.com/wsc-scayt-ckedit
 
 ## Spell Checking in a Dialog Window
 
-The [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugin is another spell checker solution provided by [WebSpellChecker](https://webspellchecker.com/wsc-dialog-ckeditor4/). It runs the check through a dialog window instead of marking misspelled words inline. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
+The [WebSpellChecker Dialog](https://ckeditor.com/cke4/addon/wsc) plugin is another spell checker solution provided by [WebSpellChecker](https://webspellchecker.com/wsc-dialog-ckeditor4/). It runs the check through a dialog window instead of marking misspelled words inline. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
 
 {@img assets/img/wsc_01.png 881 Spell Checker in the dialog window in CKEditor 4 WYSIWYG editor}
 
@@ -60,17 +60,11 @@ The distraction-free badge gives you access to proofreader suggestions, settings
 
 {@img assets/img/wproofreader_02.png 730 Distraction-free proofreader badge in CKEditor 4 WYSIWYG editor}
 
-If you want to see an overview of all spelling and grammar mistakes, click the "Proofread in dialog" button in the badge.
+If you want to see an overview of all spelling and grammar mistakes, click the "Proofread in dialog" icon in the badge.
 
 {@img assets/img/wproofreader_03.png 730 Proofreading overview in CKEditor 4 WYSIWYG editor}
 
-In order to use the proofreader, you need to load the following script on your site:
-
-```html
-<script type="text/javascript" src="https://svc.webspellchecker.net/spellcheck31/wscbundle/wscbundle.js"></script>
-```
-
-And add a few lines of configuration to your editor:
+In order to use the proofreader, you need to add a few lines of configuration to your editor:
 
 ```js
 window.WEBSPELLCHECKER_CONFIG = {
@@ -80,15 +74,21 @@ window.WEBSPELLCHECKER_CONFIG = {
 };
 ```
 
-WProofreader is a commercial solution, so you need to [purchase a license](https://ckeditor.com/contact/) and then add your `serviceId` to the configuration. You can also request a trial ID on the [WebSpellChecker website](https://www.webspellchecker.net/signup/hosted-signup.html#webspellchecker-proofreader-trial).
+And load the following script on your site:
 
-Additionally, this feature is bundled with the [SCAYT](https://ckeditor.com/cke4/addon/scayt) and [WebSpellChecker](https://ckeditor.com/cke4/addon/wsc) plugins, so you can use it as long as you have WSC or SCAYT installed.
+```html
+<script type="text/javascript" src="https://svc.webspellchecker.net/spellcheck31/wscbundle/wscbundle.js"></script>
+```
+
+WProofreader is a commercial solution, so you need to [purchase a license](https://ckeditor.com/contact/) and then add your `serviceId` to the configuration. You can also [request a free trial ID](https://ckeditor.com/contact/).
+
+Additionally, this feature is bundled with the [SCAYT](https://ckeditor.com/cke4/addon/scayt) and [WebSpellChecker Dialog](https://ckeditor.com/cke4/addon/wsc) plugins, so you can use it as long as you have WSC or SCAYT installed.
 
 For more detailed documentation, refer to the [official WProofreader "Getting Started" guide](https://docs.webspellchecker.net/pages/viewpage.action?pageId=442663877).
 
 ## Supported Languages
 
-By default the WebSpellChecker solutions support 16 languages for spell checking: American English, British English, Brazilian Portuguese, Canadian English, Canadian French, Danish, Dutch, Finnish, French, German, Greek, Italian, Norwegian Bokmal, Portuguese, Spanish and Swedish. Grammar checking is available for 14 of them &mdash; there is no grammar checking for Finnish and Norwegian.
+By default the WebSpellChecker solutions support 17 languages for spell checking: American English, British English, Brazilian Portuguese, Canadian English, Canadian French, Danish, Dutch, Finnish, French, German, Greek, Italian, Norwegian Bokmal, Portuguese, Spanish, Swedish and Ukrainian. Grammar checking is available for 15 of them &mdash; there is no grammar checking for Finnish and Norwegian.
 
 There are also over 150 additional languages and specialized dictionaries such as medical and legal available for an additional fee. You can check the full list [here](https://webspellchecker.com/additional-dictionaries/).
 
@@ -99,7 +99,7 @@ The SCAYT and WebSpellChecker plugins include numerous configuration options tha
 You can find them on the {@linkapi CKEDITOR.config `CKEDITOR.config`} API page, starting from `scayt_` and `wsc_`.
 
 <info-box hint="">
-    The out-of-the-box spell checking functionality of SCAYT and WebSpellChecker is ad-supported. If you want to remove the ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
+    The out-of-the-box spell checking functionality of SCAYT and WebSpellChecker Dialog is ad-supported. If you want to remove the ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
 </info-box>
 
 ## Spell Checking Demo

@@ -332,6 +332,18 @@ elements: [
 ]
 ```
 
+## DTD Configuration
+
+If your element is to be an empty element or a block-level element, the DTD needs to be configured.
+
+```
+CKEDITOR.dtd.element_name = {};
+// Define element as block level.
+CKEDITOR.dtd.$block.element_name = 1;
+// Define element as empty.
+CKEDITOR.dtd.$empty.element_name = 1; 
+```
+
 ## Full Source Code
 
 The complete content of the `plugin.js` file is as follows:

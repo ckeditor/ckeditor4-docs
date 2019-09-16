@@ -26,7 +26,7 @@ Paste from Google Docs retains the following formatting:
 
 * Text formatting
     * Text and background colors
-    * Font name, style and size
+    * Font family, style and size
     * Basic formatting (bold, italic, underline)
     * Font effects (strikethrough, superscript, subscript)
     * Heading levels

@@ -3,7 +3,9 @@
 	"slug": "ckeditor4",
 	"path": "docs",
 	"github": {
-	"url": "https://github.com/ckeditor/ckeditor-dev"
+		"url": "https://github.com/ckeditor/ckeditor-dev",
+		"contributeUrl": "https://github.com/ckeditor/ckeditor-docs",
+		"issueUrl": "https://github.com/ckeditor/ckeditor4"
 	},
 	"docsearch": {
 	"customRanking": [

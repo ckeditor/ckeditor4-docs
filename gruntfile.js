@@ -174,10 +174,14 @@ module.exports = function( grunt ) {
 
 			ckeditorPath = process.env.CKEDITOR_DEV;
 		} else {
-			grunt.log.writeln( '[i] CKEDITOR_DEV env variable not set. Looking for', '../ckeditor-dev...'[ 'cyan' ] );
+			grunt.log.writeln( '[i] CKEDITOR_DEV env variable not set. Looking for', '../ckeditor4...'[ 'cyan' ], 'or', '../ckeditor-dev...'[ 'cyan' ] );
 
-			if ( grunt.file.exists( '../ckeditor-dev/ckeditor.js' ) ) {
+			if ( grunt.file.exists( '../ckeditor4/ckeditor.js' ) ) {
+				grunt.log.writeln( '[i] Directory', '../ckeditor4'[ 'cyan' ], 'found!' );
+				ckeditorPath = '../ckeditor4';
+			} else if ( grunt.file.exists( '../ckeditor-dev/ckeditor.js' ) ){
 				grunt.log.writeln( '[i] Directory', '../ckeditor-dev'[ 'cyan' ], 'found!' );
+				grunt.log.writeln( '[i] Please migrate with ckeditor-dev to', 'ckeditor4'[ 'yellow' ], 'name.' );
 				ckeditorPath = '../ckeditor-dev';
 			} else {
 				grunt.log.writeln( '[i] CKEditor directory not found.' );

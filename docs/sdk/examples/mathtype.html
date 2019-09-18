@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Mathematical and chemical formulas. Inserting equations into CKEditor content.">
+	<meta name="keywords" content="ckeditor, editor, ckeditor4, wysiwyg, math, maths, mathematical, chemistry, chemical, formula, formulas, formulae, mathtype, chemtype, equation, equations, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Creating mathematical and chemical formulas with MathType">
+	<meta name="sdk-category" content="sdk-inserting-content">
+	<meta name="sdk-order" content="80">
+	<title>Mathematical and Chemical Formulas</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Creating Mathematical and Chemical Formulas with MathType <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/mathtype.html">Documentation</a></h1>
+
+			<p>
+				The optional, commercial <a href="http://www.wiris.com/solutions/ckeditor">MathType</a> plugin provides integration with a popular mathematical and science formula editor with classical and handwriting input modes created by our partner, <a href="http://www.wiris.com">Wiris</a>. You can use it to create math equations or chemical formulas right inside the CKEditor 4 content.
+			</p>
+
+			<p>
+				When the MathType plugin is enabled, the <strong>MathType</strong> and <strong>ChemType</strong> buttons are automatically added to the toolbar. Once clicked, they open the respective dialog windows that let you write your equation and immediately see its preview.
+			</p>
+
+			<h2>Using MathType</h2>
+
+			<p>
+				The MathType window is split into two main areas: a <a href="https://docs.wiris.com/en/mathtype/mathtype_web/toolbar">tabbed toolbar</a> that contains a large number of icons that are useful for creating math equations and chemical formulas, and an editing area where you can see your current formula, the location of the cursor, and the text currently selected (if any).
+			</p>
+
+			<p>
+				Use the toolbar to write your equation or formula. At any time you can also click the "Go to handwritten mode" button on the right side of the MathType editor to switch to handwriting.
+			</p>
+
+			<p>
+				When you are done creating your scientific content, click the "OK" button to insert your formula into CKEditor 4. You can also edit any existing formulas by double-clicking them in your document.
+			</p>
+
+			<textarea cols="10" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+				&lt;p&gt;In elementary algebra, the &lt;b&gt;quadratic formula&lt;/b&gt; is the solution of the quadratic equation:&lt;/p&gt;
+				&lt;p style="text-align: center;"&gt;&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mo&gt;-&lt;/mo&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mo&gt;&#x000B1;&lt;/mo&gt;&lt;msqrt&gt;&lt;msup&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;-&lt;/mo&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;/msqrt&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;&lt;/p&gt;
+				&lt;p&gt;&lt;b&gt;Water is made from two elements&lt;/b&gt;: hydrogen and oxygen. If you put the two gases together, along with energy, you can make water:&lt;/p&gt;
+				&lt;p style="text-align: center;"&gt;&lt;math class="wrs_chemistry" xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;msub&gt;&lt;mi mathvariant="normal"&gt;H&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mfenced&gt;&lt;mi mathvariant="normal"&gt;g&lt;/mi&gt;&lt;/mfenced&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;msub&gt;&lt;mi mathvariant="normal"&gt;O&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mfenced&gt;&lt;mi mathvariant="normal"&gt;g&lt;/mi&gt;&lt;/mfenced&gt;&lt;mo&gt;&#x21CC;&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;msub&gt;&lt;mi mathvariant="normal"&gt;H&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mi mathvariant="normal"&gt;O&lt;/mi&gt;&lt;mfenced&gt;&lt;mi mathvariant="normal"&gt;l&lt;/mi&gt;&lt;/mfenced&gt;&lt;/math&gt;&lt;/p&gt;
+				&lt;p&gt;The entire formula for the surface area of a cylinder is: &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;msup&gt;&lt;mi&gt;&#x3C0;r&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;&#x3C0;rh&lt;/mi&gt;&lt;/math&gt;&lt;/p&gt;
+			</textarea>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><a href="./mathjax.html">Inserting Content &ndash; Creating Mathematical Formulas with MathJax</a></li>
+			</ul>
+
+			<script data-sample="1">
+				( function() {
+					var mathElements = [
+						'math',
+						'maction',
+						'maligngroup',
+						'malignmark',
+						'menclose',
+						'merror',
+						'mfenced',
+						'mfrac',
+						'mglyph',
+						'mi',
+						'mlabeledtr',
+						'mlongdiv',
+						'mmultiscripts',
+						'mn',
+						'mo',
+						'mover',
+						'mpadded',
+						'mphantom',
+						'mroot',
+						'mrow',
+						'ms',
+						'mscarries',
+						'mscarry',
+						'msgroup',
+						'msline',
+						'mspace',
+						'msqrt',
+						'msrow',
+						'mstack',
+						'mstyle',
+						'msub',
+						'msup',
+						'msubsup',
+						'mtable',
+						'mtd',
+						'mtext',
+						'mtr',
+						'munder',
+						'munderover',
+						'semantics',
+						'annotation',
+						'annotation-xml'
+					];
+
+					CKEDITOR.plugins.addExternal( 'ckeditor_wiris', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/ckeditor_wiris/', 'plugin.js' );
+
+					CKEDITOR.replace( 'editor1', {
+						extraPlugins: 'ckeditor_wiris',
+						// For now, MathType is incompatible with CKEditor file upload plugins.
+						removePlugins: 'uploadimage,uploadwidget,uploadfile,filetools,filebrowser',
+						height: 320,
+						// Update the ACF configuration with MathML syntax.
+						extraAllowedContent: mathElements.join( ' ' ) + '(*)[*]{*};img[data-mathml,data-custom-editor,role](Wirisformula)'
+					} );
+				}() );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

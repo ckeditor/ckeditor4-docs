@@ -48,14 +48,15 @@ Do remember that if the DOM element for which inline editing is being enabled do
 </div>
 <script>
     // Turn off automatic editor creation first.
-    {@linkapi CKEDITOR.disableAutoInline CKEDITOR.disableAutoInline} = true;
-    {@linkapi CKEDITOR.inline CKEDITOR.inline}( 'editor1' );
+    CKEDITOR.disableAutoInline = true;
+    CKEDITOR.inline( 'editor1' );
 </script>
 ```
 
 When you click inside the content of this `<div>` element, the CKEditor toolbar will appear.
 
-<info-box hint=""> The list of elements that support inline editing is available in the {@linkapi CKEDITOR.dtd.s-editable CKEDITOR.dtd.$editable} property.
+<info-box hint="">
+	The list of elements that support inline editing is available in the {@linkapi CKEDITOR.dtd.s-editable CKEDITOR.dtd.$editable} property.
 </info-box>
 
 ## Inline Editing for Textarea

@@ -169,15 +169,19 @@ module.exports = function( grunt ) {
 
 		let ckeditorPath = 'repos/ckeditor-presets/ckeditor';
 
-		if ( process.env.CKEDITOR_DEV ) {
-			grunt.log.writeln( '[i] Using CKEditor directory from CKEDITOR_DEV env variable.' );
+		if ( process.env.CKEDITOR_DEV_PATH ) {
+			grunt.log.writeln( '[i] Using CKEditor directory from CKEDITOR_DEV_PATH env variable.' );
 
-			ckeditorPath = process.env.CKEDITOR_DEV;
+			ckeditorPath = process.env.CKEDITOR_DEV_PATH;
 		} else {
-			grunt.log.writeln( '[i] CKEDITOR_DEV env variable not set. Looking for', '../ckeditor-dev...'[ 'cyan' ] );
+			grunt.log.writeln( '[i] CKEDITOR_DEV_PATH env variable not set. Looking for', '../ckeditor4'[ 'cyan' ], 'or', '../ckeditor-dev'[ 'cyan' ], 'directories.' );
 
-			if ( grunt.file.exists( '../ckeditor-dev/ckeditor.js' ) ) {
+			if ( grunt.file.exists( '../ckeditor4/ckeditor.js' ) ) {
+				grunt.log.writeln( '[i] Directory', '../ckeditor4'[ 'cyan' ], 'found!' );
+				ckeditorPath = '../ckeditor4';
+			} else if ( grunt.file.exists( '../ckeditor-dev/ckeditor.js' ) ){
 				grunt.log.writeln( '[i] Directory', '../ckeditor-dev'[ 'cyan' ], 'found!' );
+				grunt.log.writeln( '[i] Please migrate to new folder structure renaming', 'ckeditor-dev'[ 'cyan' ], 'to', 'ckeditor4'[ 'yellow' ] );
 				ckeditorPath = '../ckeditor-dev';
 			} else {
 				grunt.log.writeln( '[i] CKEditor directory not found.' );

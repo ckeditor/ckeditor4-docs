@@ -2,7 +2,7 @@
 
 This is the official developer documentation project for CKEditor. It uses the customized CKEditor [JSDuck clone](https://github.com/ckeditor/jsduck) for compilation and is available online at <http://docs.ckeditor.com>.
 
-**All issues regarding CKEditor 4 Documentation should be reported in the [`ckeditor-dev` repository](https://github.com/ckeditor/ckeditor-dev/issues/new/choose).**
+**All issues regarding CKEditor 4 Documentation should be reported in the [`ckeditor4` repository](https://github.com/ckeditor/ckeditor4/issues/new/choose).**
 
 ## Building the Documentation
 
@@ -17,14 +17,14 @@ Follow the steps listed below to build CKEditor documentation locally.
 
 Clone this repository locally:
 
-	> git clone git@github.com:ckeditor/ckeditor-docs.git
+	> git clone git@github.com:ckeditor/ckeditor4-docs.git
 
-Go to the `ckeditor-docs` directory and update the submodules:
+Go to the `ckeditor4-docs` directory and update the submodules:
 
-	> cd ckeditor-docs
+	> cd ckeditor4-docs
 	> git submodule update --init --recursive
 
-Clone the custom CKEditor [JSDuck repository](https://github.com/ckeditor/jsduck) to a separate folder next to `ckeditor-docs`:
+Clone the custom CKEditor [JSDuck repository](https://github.com/ckeditor/jsduck) to a separate folder next to `ckeditor4-docs`:
 
 	> cd ..
 	> git clone git@github.com:ckeditor/jsduck.git
@@ -35,14 +35,14 @@ Checkout the `stable` branch of the `jsduck` repository and install the latest `
 	> git checkout stable
 	> gem install ckeditor-jsduck-<version>.gem
 
-Go back to the `ckeditor-docs` repository and install [npm dependencies](package.json):
+Go back to the `ckeditor4-docs` repository and install [npm dependencies](package.json):
 
     > npm install
 
-Then finally execute `grunt docs-serve`:
+Then finally execute `grunt build-serve`:
 
-	> grunt docs-serve [--options]
-	
+	> grunt build-serve [--options]
+
 Available options:
 
 * `--dev` - use it to build documentation and view it locally,
@@ -56,13 +56,13 @@ Use `grunt docs` to build documentation without setting a server.
 
 The `repos/` folder contains submodules for the repositories currently included in the API documentation. As expected, the API is documented inline in the source code contained in these repositories, and is then integrated into the documentation files.
 
-## Using Local Versions of ckeditor-dev
+## Using Local Versions of ckeditor4
 
-While the main CKEditor repository for API documents, [ckeditor-dev](https://github.com/ckeditor/ckeditor-dev), is available as a submodule, it is also possible to make the builder use its local copy to avoid submodule limitations and speed up API documentation work. There are two ways to achieve it:
+While the main CKEditor repository for API documents, [ckeditor4](https://github.com/ckeditor/ckeditor4), is available as a submodule, it is also possible to make the builder use its local copy to avoid submodule limitations and speed up API documentation work. There are two ways to achieve it:
 
- * Keeping `ckeditor-docs/` and `ckeditor-dev/` folders in the same directory.
+ * Keeping `ckeditor4-docs/` and `ckeditor4/` folders in the same directory.
 
- * Setting the `CKEDITOR_DEV_PATH` environment variable to point to your `ckeditor-dev/` folder path.
+ * Setting the `CKEDITOR_DEV_PATH` environment variable to point to your `ckeditor4/` folder path.
 
 ## License
 

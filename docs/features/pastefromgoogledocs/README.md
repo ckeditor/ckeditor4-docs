@@ -42,17 +42,17 @@ Paste from Google Docs retains the following formatting:
     * Cell alignment
 * Images
 
-Paste from Google Docs maintains most of Google Docs text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML, e.g. it will not handle equations created in Google Docs.
+Paste from Google Docs maintains most of Google Docs text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will not handle equations created in Google Docs.
 
 ## Sample
 
 The following sample content from a Google Docs document:
 
-{@img assets/img/pastefromgdocs_01.png Sample Google Docs document}
+{@img assets/img/pastefromgoogledocs_01.png 804 A sample Google Docs document.}
 
 will look like below after pasting to CKEditor with the [Paste from Google Docs](https://ckeditor.com/cke4/addon/pastefromgdocs) plugin enabled:
 
-{@img assets/img/pastefromgdocs_02.png Google Docs content pasted into CKEditor}
+{@img assets/img/pastefromgoogledocs_02.png 952 Google Docs content pasted into CKEditor 4 WYSIWYG editor.}
 
 ## Filters
 

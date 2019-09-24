@@ -40,7 +40,7 @@ Paste from Word retains the following formatting:
     * Borders and shading
     * Cell size (width and height)
     * Cell alignment
-    * Text formatting (as listed above)
+* Images
 * Paste from Excel
     * Cell formatting (size, background, borders, special characters)
     * Row and column size

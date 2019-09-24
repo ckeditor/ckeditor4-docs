@@ -40,7 +40,7 @@ Paste from Google Docs retains the following formatting:
     * Borders and shading
     * Cell size (width and height)
     * Cell alignment
-    * Text formatting (as listed above)
+* Images
 
 Paste from Google Docs maintains most of Google Docs text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML, e.g. it will not handle equations created in Google Docs.
 

@@ -184,6 +184,16 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				extraPlugins: 'colorbutton,font,justify,print,tableresize,liststyle',
 				removeButtons: '',
 
+				// An array of stylesheets to style the WYSIWYG area.
+				// Note: it is recommended to keep your own styles in a separate file in order to make future updates painless.
+				contentsCss: [
+					CKEDITOR.basePath + 'contents.css',
+					'assets/css/pastefromgdocs.css'
+				],
+
+				// This is optional, but will let us define multiple different styles for multiple editors using the same CSS file.
+				bodyClass: 'document-editor',
+
 				// Make the editing area bigger than default.
 				height: 350,
 				width: 940

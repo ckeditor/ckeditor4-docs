@@ -27,4 +27,4 @@ Please note that since CKEditor 4.1 you need to add {@link guide/dev/acf/README 
 
 ## Is pasting from Google Docs supported and how to enable it?
 
-CKEditor 4.13 introduced new feature, {@link features/pastefromword/README Paste from Google Docs}. To enable this feature, you have to {@link guide/dev/plugins/README add Paste from Google Docs plugin to your editor build}. The plugin is also available in Standard and Full distributions.
+CKEditor 4.13 introduced new feature, {@link features/pastefromgoogledocs/README Paste from Google Docs}. To enable this feature, you have to {@link guide/dev/plugins/README add Paste from Google Docs plugin to your editor build}. The plugin is also available in Standard and Full distributions.

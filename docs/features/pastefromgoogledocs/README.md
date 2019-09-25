@@ -46,13 +46,23 @@ Paste from Google Docs maintains most of Google Docs text formatting features wi
 
 ## Sample
 
-The following sample content from a Google Docs document:
+The following sample content from a [Google Docs document](https://docs.google.com/document/d/1eLN7jVMlR771M1goN4Hv1PCmZeqzs3daU09Nz1sjZiM/):
 
 {@img assets/img/pastefromgoogledocs_01.png 804 A sample Google Docs document.}
 
 will look like below after pasting to CKEditor with the [Paste from Google Docs](https://ckeditor.com/cke4/addon/pastefromgdocs) plugin enabled:
 
 {@img assets/img/pastefromgoogledocs_02.png 952 Google Docs content pasted into CKEditor 4 WYSIWYG editor.}
+
+Here is [another sample](https://docs.google.com/document/d/1PIyoi1-hTcY1U7zZAG-7Rt4bbub_DO33D7s3rRN2YvY/) with some more complicated formatting and styling as well as an image:
+
+{@img assets/img/pastefromgoogledocs_03.png 748 A sample Google Docs document with complex formatting and image.}
+
+It will look like this after pasting into CKEditor:
+
+{@img assets/img/pastefromgoogledocs_04.png 950 Complex Google Docs content pasted into CKEditor 4 WYSIWYG editor.}
+
+In the example above you can see that after pasting into CKEditor, the first list has different list item markers than in the Google Docs document. Although pasting lists with different markers is supported in CKEditor 4 (check the second and third list in the example above), this is a specific case. Such list style is not natively supported by the browser. However, it can be adjusted by using extra CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
 
 ## Filters
 

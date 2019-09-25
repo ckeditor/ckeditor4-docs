@@ -78,13 +78,13 @@ will look like below after pasting to CKEditor with the [Paste from Word](https:
 
 {@img assets/img/pastefromword_02.png 951 Microsoft Word content pasted into CKEditor 4 WYSIWYG editor.}
 
-Here is another sample with some more complicated formatting and styling:
+Here is another sample with some more complicated formatting and styling as well as an image:
 
-{@img assets/img/pastefromword_03.png A sample Microsoft Word document with complex formatting.}
+{@img assets/img/pastefromword_03.png 628 A sample Microsoft Word document with complex formatting and image.}
 
 It will look like this after pasting into CKEditor:
 
-{@img assets/img/pastefromword_04.png Complex Word content pasted into CKEditor 4 WYSIWYG editor.}
+{@img assets/img/pastefromword_04.png 953 Complex Word content pasted into CKEditor 4 WYSIWYG editor.}
 
 In the example above you can see that after pasting into CKEditor, the first list has different list item markers than in the Word document. Although pasting lists with different markers is supported in CKEditor 4 (check the second and third list in the example above), this is a specific case. Such list style is not natively supported by the browser. However, it can be adjusted by using extra CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
 

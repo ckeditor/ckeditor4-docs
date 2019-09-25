@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # Dropping and Pasting into Editor Content
 
-<info-box info=""> Some of these features were introduced in <strong>CKEditor 4.5</strong>. They are provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a>, <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> and <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugins. Part of them are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+<info-box info="">
+	Some of these features were introduced in <strong>CKEditor 4.5</strong>. They are provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a>, <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> and <a href="https://ckeditor.com/cke4/addon/uploadimage">Upload Image</a> plugins. Part of them are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 One of the CKEditor features is that it takes care over the input data you paste or drop into the editor. The [Clipboard](https://ckeditor.com/cke4/addon/clipboard) plugin which is included in every preset implements custom input content handling, which means that the editor will handle pasted and &mdash; since version 4.5 &mdash; dropped content.
@@ -29,7 +30,7 @@ The most important feature related to clipboard is being able to limit what data
 
 Therefore, all pasted and dropped content is filtered by {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} unless it was disabled.
 
-Additionally, since CKEditor 4.5 it is possible to configure a {@link guide/dev/deep_dive/advanced_content_filter/README#filtering-pasted-and-dropped-content separate filter (called *paste filter*)} which will handle only pasted and dropped content. By default it is enabled in Chrome, Opera and Safari to clean up the messy HTML they create. The paste filter is configurable using the {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README allowed content rules} and it also has two presets &mdash; `'plain-text'` and `'semantic-content'`. The first of them replaces the {@linkapi CKEDITOR.config.forcePasteAsPlainText CKEDITOR.config.forcePasteAsPlainText} option, but thanks to the flexibility of the paste filter it is now also possible to achieve results like "only text with links":
+Additionally, since CKEditor 4.5 it is possible to configure a {@link guide/dev/deep_dive/advanced_content_filter/README#filtering-pasted-and-dropped-content separate filter (called "paste filter")} which will handle only pasted and dropped content. By default it is enabled in Chrome, Opera and Safari to clean up the messy HTML they create. The paste filter is configurable using the {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README allowed content rules} and it also has two presets &mdash; `'plain-text'` and `'semantic-content'`. The first of them replaces the {@linkapi CKEDITOR.config.forcePasteAsPlainText CKEDITOR.config.forcePasteAsPlainText} option, but thanks to the flexibility of the paste filter it is now also possible to achieve results like "only text with links":
 
 	config.pasteFilter = 'p; a[!href]';
 
@@ -59,6 +60,7 @@ For more information on pasting, dropping and uploading files with CKEditor refe
 
 * {@link guide/dev/deep_dive/clipboard/README Clipboard Integration}
 * {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files}
-* {@link features/pastefromword/README Paste from Word}
+* {@link features/pastefromword/README Pasting Content from Microsoft Word}
+* {@link features/pastefromgoogledocs/README Pasting Content from Google Docs}
 * {@link guide/dev/acf/README Content Filtering (ACF)}
 * {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}

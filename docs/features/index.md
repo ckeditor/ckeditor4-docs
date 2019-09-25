@@ -36,6 +36,7 @@ This part describes features that are targeted at end users and affect their ove
     * {@link features/easyimage/README Easy Image Plugin}
 * **Inserting Content** &ndash; Adding rich text elements such as code snippets, tables, mathematical formulas, embedded media resources etc. and pasting content from Microsoft Word and Excel.
     * {@link features/pastefromword/README Pasting Content from Microsoft Word}
+    * {@link features/pastefromgoogledocs/README Pasting Content from Google Docs}
     * {@link features/pastefromexcel/README Pasting Content from Microsoft Excel}
     * {@link features/table/README Table Support with Column Resizing}
     * {@link features/embed/README Embedding Media Resources with oEmbed}

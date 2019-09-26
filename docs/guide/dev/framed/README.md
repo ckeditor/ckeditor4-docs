@@ -82,7 +82,7 @@ To insert a CKEditor instance, you can use the following sample that creates a b
             My Editor:<br>
             <textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
             <script>
-                {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1' );
+                CKEDITOR.replace( 'editor1' );
             </script>
         </p>
         <p>

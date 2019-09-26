@@ -70,15 +70,38 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'build-angular', buildIntegrationTask( 'angular' ) );
 	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );
 
-	grunt.registerTask( 'docs', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'umberto' ] );
-	grunt.registerTask( 'docs-serve', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'umberto', 'connect' ] );
+	// Build docs for production/multidocs. It assumes Umberto is run by external process - useful when building as part of projects bundle.
+	grunt.registerTask( 'before-build', [ 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react' ] );
 
-	// Build docs for production. It assumes Umberto is run by external process - useful when building as part of projects bundle.
-	grunt.registerTask( 'docs-prod', [ 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react' ] );
+	grunt.registerTask( 'build', [ 'before-build', 'umberto' ] );
+	grunt.registerTask( 'build-serve', [ 'build', 'connect' ] );
+
+	grunt.registerTask( 'docs', function() {
+		grunt.log.error( 'WARNING: \'docs\' task is deprecated please use \'build\' task instead!' );
+		grunt.task.run( 'build' );
+	} );
+
+	grunt.registerTask( 'docs-serve', function() {
+		grunt.log.error( 'WARNING: \'docs-serve\' task is deprecated please use \'build-serve\' task instead!' );
+		grunt.task.run( 'build-serve' );
+	} );
+
+	grunt.registerTask( 'docs-prod', function() {
+		grunt.log.error( 'WARNING: \'docs-prod\' task is deprecated please use \'before-build\' task instead!' );
+		grunt.task.run( 'before-build' );
+	} );
 
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
 
+		copy: {
+			main: {
+				expand: true,
+				cwd: 'node_modules/@wiris/mathtype-ckeditor4',
+				src: '**',
+				dest: 'docs/sdk/examples/assets/plugins/ckeditor_wiris'
+			}
+		},
 		jsduck: {
 			api: {
 				src: [
@@ -146,15 +169,19 @@ module.exports = function( grunt ) {
 
 		let ckeditorPath = 'repos/ckeditor-presets/ckeditor';
 
-		if ( process.env.CKEDITOR_DEV ) {
-			grunt.log.writeln( '[i] Using CKEditor directory from CKEDITOR_DEV env variable.' );
+		if ( process.env.CKEDITOR_DEV_PATH ) {
+			grunt.log.writeln( '[i] Using CKEditor directory from CKEDITOR_DEV_PATH env variable.' );
 
-			ckeditorPath = process.env.CKEDITOR_DEV;
+			ckeditorPath = process.env.CKEDITOR_DEV_PATH;
 		} else {
-			grunt.log.writeln( '[i] CKEDITOR_DEV env variable not set. Looking for', '../ckeditor-dev...'[ 'cyan' ] );
+			grunt.log.writeln( '[i] CKEDITOR_DEV_PATH env variable not set. Looking for', '../ckeditor4'[ 'cyan' ], 'or', '../ckeditor-dev'[ 'cyan' ], 'directories.' );
 
-			if ( grunt.file.exists( '../ckeditor-dev/ckeditor.js' ) ) {
+			if ( grunt.file.exists( '../ckeditor4/ckeditor.js' ) ) {
+				grunt.log.writeln( '[i] Directory', '../ckeditor4'[ 'cyan' ], 'found!' );
+				ckeditorPath = '../ckeditor4';
+			} else if ( grunt.file.exists( '../ckeditor-dev/ckeditor.js' ) ){
 				grunt.log.writeln( '[i] Directory', '../ckeditor-dev'[ 'cyan' ], 'found!' );
+				grunt.log.writeln( '[i] Please migrate to new folder structure renaming', 'ckeditor-dev'[ 'cyan' ], 'to', 'ckeditor4'[ 'yellow' ] );
 				ckeditorPath = '../ckeditor-dev';
 			} else {
 				grunt.log.writeln( '[i] CKEditor directory not found.' );

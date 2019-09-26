@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Setting Editor User Interface Language
 
-CKEditor is translated into over 60 languages and by default, it is displayed in the user's language (as set in the browser or operating system settings). If the matching language version is not available, the editor user interface will be displayed in the default language version (most commonly: English).
+CKEditor is translated into 70 languages and by default, it is displayed in the user's language (as set in the browser or operating system settings). If the matching language version is not available, the editor user interface will be displayed in the default language version (most commonly: English).
 
 <info-box hint="">
     Please note that CKEditor localizations are mostly provided by our awesome community through the <a href="https://www.transifex.com/projects/p/ckeditor/">CKEditor UI Translation Center</a>, so if you would like to help with translating CKEditor into your native language or correct an existing localization, do not hesitate to join us!
@@ -20,15 +20,17 @@ CKEditor is translated into over 60 languages and by default, it is displayed in
 
 ## Setting the Default Language
 
-The website developer can set the default language that will be used for CKEditor UI if the user's language is not available. English is the default setting here, but you can adjust this to your needs by modifying the {@linkapi CKEDITOR.config.defaultLanguage CKEDITOR.config.defaultLanguage} configuration option.
+The website developer can set the default language that will be used for the CKEditor UI if the user's language is not available. English is the default setting here, but you can adjust this to your needs by modifying the {@linkapi CKEDITOR.config.defaultLanguage CKEDITOR.config.defaultLanguage} configuration option.
 
 For example, if your website is targeted at the German audience, you may want to set the default CKEditor UI language to German, too:
 
-    config.defaultLanguage = 'de';
+```js
+config.defaultLanguage = 'de';
+```
 
 This will cause CKEditor to be displayed in German to all users for whom a matching localization cannot be found.
 
-{@img assets/img/uilanguage_01.png}
+{@img assets/img/uilanguage_01.png 753 CKEditor 4 WYSIWYG editor with the UI language set to German.}
 
 ## Overriding User Language Settings
 

@@ -40,7 +40,7 @@ Paste from Word retains the following formatting:
     * Borders and shading
     * Cell size (width and height)
     * Cell alignment
-    * Text formatting (as listed above)
+* Images
 * Paste from Excel
     * Cell formatting (size, background, borders, special characters)
     * Row and column size
@@ -49,7 +49,7 @@ Paste from Word retains the following formatting:
     * Default styles
     * User-defined styles
 
-Paste from Word maintains most of Microsoft Word text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML, e.g. it will paste only standard bullets from the bullet library, or will not use a double strikethrough effect. Such elements are replaced by the default ones to resemble your Word content in the most accurate way.
+Paste from Word maintains most of Microsoft Word text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will paste only standard bullets from the bullet library, or will not use a double strikethrough effect. Such elements are replaced by the default ones to resemble your Word content in the most accurate way.
 
 ## Advanced Paste from Word &mdash; CKEditor 4.6+
 
@@ -72,22 +72,21 @@ Here are some areas where the new, Advanced Paste from Word really shines:
 
 The following sample content from a Microsoft Word document:
 
-{@img assets/img/pastefromword_01.png Sample Word document}
+{@img assets/img/pastefromword_01.png 683 A sample Microsoft Word document.}
 
 will look like below after pasting to CKEditor with the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin enabled:
 
-{@img assets/img/pastefromword_02.png Word content pasted into CKEditor}
+{@img assets/img/pastefromword_02.png 951 Microsoft Word content pasted into CKEditor 4 WYSIWYG editor.}
 
-Here is another sample with more fancy content:
+Here is another sample with some more complicated formatting and styling as well as an image:
 
-{@img assets/img/pastefromword_03.png}
+{@img assets/img/pastefromword_03.png 628 A sample Microsoft Word document with complex formatting and image.}
 
 It will look like this after pasting into CKEditor:
 
-{@img assets/img/pastefromword_04.png}
+{@img assets/img/pastefromword_04.png 953 Complex Word content pasted into CKEditor 4 WYSIWYG editor.}
 
-In the example above you can see that after pasting into CKEditor, the first list has different list item markers than in the Word document.
-As far as pasting lists with different markers is supported (check the second and third list in the example above) this is a specific case. Such list style is not natively supported by the browser. However, it can be adjusted by using extra CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
+In the example above you can see that after pasting into CKEditor, the first list has different list item markers than in the Word document. Although pasting lists with different markers is supported in CKEditor 4 (check the second and third list in the example above), this is a specific case. Such list style is not natively supported by the browser. However, it can be adjusted by using extra CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
 
 ## Filters
 
@@ -113,6 +112,7 @@ See the {@linksdk pastefromword working "Pasting content from Microsoft Word" sa
 
 Refer to the following resources for more information about pasting content:
 
+* The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains more information about the Paste from Google Docs feature.
 * The {@link features/pastefromexcel/README Pasting content from Microsoft Excel} article contains more information about the Paste from Excel feature.
 * The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.
 * The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.

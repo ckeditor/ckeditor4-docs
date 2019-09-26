@@ -36,12 +36,14 @@ This part describes features that are targeted at end users and affect their ove
     * {@link features/easyimage/README Easy Image Plugin}
 * **Inserting Content** &ndash; Adding rich text elements such as code snippets, tables, mathematical formulas, embedded media resources etc. and pasting content from Microsoft Word and Excel.
     * {@link features/pastefromword/README Pasting Content from Microsoft Word}
+    * {@link features/pastefromgoogledocs/README Pasting Content from Google Docs}
     * {@link features/pastefromexcel/README Pasting Content from Microsoft Excel}
     * {@link features/table/README Table Support with Column Resizing}
     * {@link features/embed/README Embedding Media Resources with oEmbed}
     * {@link features/codesnippet/README Inserting Code Snippets}
     * {@link features/codesnippetgeshi/README Inserting Code Snippets Using GeSHi}
-    * {@link features/mathjax/README Creating Mathematical Formulas}
+    * {@link features/mathjax/README Creating Mathematical Formulas with MathJax}
+    * {@link features/mathjax/README Creating Mathematical and Chemical Formulas with MathType}
     * {@link features/placeholder/README Using Placeholders}
     * {@link features/drop_paste/README Dropping and Pasting into Editor Content}
 * **Styling and Formatting** &ndash; Working with text styling and formatting.
@@ -52,7 +54,7 @@ This part describes features that are targeted at end users and affect their ove
     * {@link features/format/README Applying Block-Level Text Formats}
     * {@link features/colorbutton/README Setting Text and Background Color}
 * **Working with Document** &ndash; Editing content source code or using document-related features such as magic line or spell checker.
-    * {@link features/spellcheck/README Spell Checking}
+    * {@link features/spellcheck/README Proofreading, Spelling and Grammar Checking}
     * {@link features/autocomplete/README Autocomplete}
     * {@link features/mentions/README Mentions and Tags}
     * {@link features/emoji/README Emoji}

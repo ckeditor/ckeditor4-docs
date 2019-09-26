@@ -498,6 +498,7 @@
 		"guide/dev_uicolor.html": "features/uicolor.html",
 		"guide/dev_uicolorpicker.html": "features/uicolorpicker.html",
 		"guide/dev_uilanguage.html": "features/uilanguage.html",
-		"guide/dev_uitypes.html": "features/uitypes.html"
+		"guide/dev_uitypes.html": "features/uitypes.html",
+		"features.html": "features/index.html"
 	}
 }

@@ -55,7 +55,7 @@ CKEditor is also compatible with **Chrome for Android** (which is preinstalled o
 
 <info-box hint="">Prior to version 4.5 CKEditor was disabled in some versions of Chrome for Android and may be disabled in Internet Explorer Mobile for Windows Phone. You can, however, {@link guide/dev/deep_dive/unsupported_environments/README change CKEditor settings to accept any mobile environment} (at your own risk).</info-box>
 
-Full mobile support will be introduced in **CKEditor 5**. We aim to have perfect CKEditor support for most popular mobile platforms, so if you encountered an issue with an environment that is unsupported as of now, please report it on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues).
+Full mobile support will be introduced in **CKEditor 5**. We aim to have perfect CKEditor support for most popular mobile platforms, so if you encountered an issue with an environment that is unsupported as of now, please report it on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues).
 
 ## Unsupported Environments
 

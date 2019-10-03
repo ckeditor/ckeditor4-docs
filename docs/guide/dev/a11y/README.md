@@ -31,7 +31,7 @@ In our accessibility testing we use the **latest Firefox** version with **latest
 
 This does not mean, however, that CKEditor has any major issues with other modern, standards-compliant browsers (including latest Internet Explorer versions) and alternative screen reader solutions like VoiceOver, NonVisual Desktop Access (NVDA) or ChromeVox. On the contrary: we assume that since we test in the most standards-compliant solution, other standards-compliant environments should also work correctly.
 
-In any case, if you encounter any accessibility-related issue while using CKEditor, please let us know by {@link guide/dev/issues_tracker/README creating an issue} on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues). We treat all accessibility issues with utmost attention and will be happy to solve them and further improve CKEditor compliance with accessibility standards.
+In any case, if you encounter any accessibility-related issue while using CKEditor, please let us know by {@link guide/dev/issues_tracker/README creating an issue} on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues). We treat all accessibility issues with utmost attention and will be happy to solve them and further improve CKEditor compliance with accessibility standards.
 
 ## Assisting Users with Special Needs
 

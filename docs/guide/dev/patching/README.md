@@ -50,19 +50,19 @@ Check the size of the `ckeditor.js` file located in the `ckeditor` folder that i
 
 In order to apply patches to CKEditor and then build the release version, you need the source version. The source version of CKEditor is stored on GitHub.
 
-### ckeditor-dev vs ckeditor-presets
+### ckeditor4 vs ckeditor4-presets
 
-There are two repositories where CKEditor source files are kept: [`ckeditor-dev`](https://github.com/ckeditor/ckeditor-dev) and [`ckeditor-presets`](https://github.com/ckeditor/ckeditor-presets).
+There are two repositories where CKEditor source files are kept: [`ckeditor4`](https://github.com/ckeditor/ckeditor4) and [`ckeditor4-presets`](https://github.com/ckeditor/ckeditor4-presets).
 
-The `ckeditor-presets` repository is used by the CKEditor team to build the Basic/Standard/Full distributions. It uses `ckeditor-dev` as a dependency and scripts included there further automate the build process:
+The `ckeditor4-presets` repository is used by the CKEditor team to build the Basic/Standard/Full distributions. It uses `ckeditor4` as a dependency and scripts included there further automate the build process:
 
  - It has information about which plugins should be included in which preset.
  - It loads spell checker plugins (`scayt` and `wsc`) from separate repositories where they are developed, if they are to be included in a release.
  - It sets the proper configuration file in the release package depending on the created preset.
 
-Although `ckeditor-presets` saves time in the long term, to reduce the complexity of this documentation article we recommend cloning the `ckeditor-dev` repository.
+Although `ckeditor4-presets` saves time in the long term, to reduce the complexity of this documentation article we recommend cloning the `ckeditor4` repository.
 
-### Downloading ckeditor-dev
+### Downloading ckeditor4
 
 The following section descibes how to download the source version of CKEditor from its GitHub repository.
 
@@ -80,8 +80,8 @@ In this case the version of CKEditor is *4.4.4* and the revision is *1ba5105*.
 
 Use the following steps to download CKEditor with a command line tool.
 
-1. `git clone https://github.com/ckeditor/ckeditor-dev.git`
-2. `cd ckeditor-dev`
+1. `git clone https://github.com/ckeditor/ckeditor4.git`
+2. `cd ckeditor4`
 3. `git checkout <revision>`
 
 Where `<revision>` has to be set to exactly the same revision that you are using. For the example above that would be:
@@ -92,13 +92,13 @@ Where `<revision>` has to be set to exactly the same revision that you are using
 
 Use the following steps to download CKEditor directly from the browser.
 
-1. Open `https://github.com/ckeditor/ckeditor-dev/tree/<revision>` in your browser. For the example above the proper URL would be: [https://github.com/ckeditor/ckeditor-dev/tree/1ba5105](https://github.com/ckeditor/ckeditor-dev/tree/1ba5105).
+1. Open `https://github.com/ckeditor/ckeditor4/tree/<revision>` in your browser. For the example above the proper URL would be: [https://github.com/ckeditor/ckeditor4/tree/1ba5105](https://github.com/ckeditor/ckeditor4/tree/1ba5105).
 
 2. Press the "Download ZIP" button.
 
 	<img src="%BASE_PATH%/assets/img/patching_download_zip.png" width="814" height="448" alt="Downloading a selected revision from GitHub">
 
-3. Unzip the file and rename the top-level folder into `ckeditor-dev`.
+3. Unzip the file and rename the top-level folder into `ckeditor4`.
 
 ## Patching Process
 
@@ -106,7 +106,7 @@ CKEditor source code is stored in the Git repository. The development takes plac
 
 ### Select the Changes You Want to Port
 
-If you are reading this document, most probably you already know which feature you want to port. Whenever you find a change that you need to port it is recommended to find in which ticket on the [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) or a [former Development site](http://dev.ckeditor.com/) the change has been tracked.
+If you are reading this document, most probably you already know which feature you want to port. Whenever you find a change that you need to port it is recommended to find in which ticket on the [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues) or a [former Development site](http://dev.ckeditor.com/) the change has been tracked.
 
 #### Example
 
@@ -114,7 +114,7 @@ Suppose you are interested in porting a patch for the following problem:
 
     Remove Format button did not remove the <cite> element in versions prior to 4.4.5.
 
-By looking into the [changelog](https://ckeditor.com/cke4/release-notes) you find a link to [ticket #12311](http://dev.ckeditor.com/ticket/12311). The ticket not only explains what the problem was and how to reproduce it, but at the end it also contains a link to a changeset where the code fix was introduced: [http://github.com/ckeditor/ckeditor-dev/commit/b373ace](http://github.com/ckeditor/ckeditor-dev/commit/b373ace)
+By looking into the [changelog](https://ckeditor.com/cke4/release-notes) you find a link to [ticket #12311](http://dev.ckeditor.com/ticket/12311). The ticket not only explains what the problem was and how to reproduce it, but at the end it also contains a link to a changeset where the code fix was introduced: [http://github.com/ckeditor/ckeditor4/commit/b373ace](http://github.com/ckeditor/ckeditor4/commit/b373ace)
 
 The hash of the changeset is `b373ace`.
 
@@ -124,8 +124,8 @@ The hash of the changeset is `b373ace`.
 
 If for any reason you cannot use Git, you have to apply the changes manually. It is highly unrecommended though. Be careful when changing the files manually.
 
-1. View the changes on GitHub using the link found in the ticket: [http://github.com/ckeditor/ckeditor-dev/commit/b373ace](http://github.com/ckeditor/ckeditor-dev/commit/b373ace)
-2. Search for relevant files in your `ckeditor-dev` folder. Open them in your editor.
+1. View the changes on GitHub using the link found in the ticket: [http://github.com/ckeditor/ckeditor4/commit/b373ace](http://github.com/ckeditor/ckeditor4/commit/b373ace)
+2. Search for relevant files in your `ckeditor4` folder. Open them in your editor.
 3. Add/modify/remove code as shown in the diff.
 
 Note that the **line numbers** displayed on GitHub and in your editor **might be different** due to different versions on which you work and to which the change was applied. In worst case it may turn out that the lines of code that have been changed do not even exist. In such case a {@link guide/dev/upgrade/README full upgrade} and testing will require less effort than continuing with patching.
@@ -136,7 +136,7 @@ As mentioned earlier, this is not a Git manual, so we will continue the instruct
 
 The hash of the changeset is `b373ace`, so open your command line tool and go through the steps below:
 
-1. `cd ckeditor-dev`
+1. `cd ckeditor4`
 2. `git show b373ace`
 
 	<img src="%BASE_PATH%/assets/img/patching_02.png" width="434" height="100" alt="Merge commit shown">
@@ -179,17 +179,17 @@ In order to be able to create the same build that you used so far, you should ta
 
 ### Add Missing Plugins to the `plugins` Folder
 
-It is possible that `ckeditor-dev/plugins` does not contain all plugins that your build had. Before building you need to verify `build-config.js` and check whether each plugin listed there exists in the `plugins` folder.
+It is possible that `ckeditor4/plugins` does not contain all plugins that your build had. Before building you need to verify `build-config.js` and check whether each plugin listed there exists in the `plugins` folder.
 
 #### Your Custom Plugins
 
-If you used a custom build of CKEditor with your own custom plugins, copy them to the `ckeditor-dev/plugins` folder.
+If you used a custom build of CKEditor with your own custom plugins, copy them to the `ckeditor4/plugins` folder.
 
 #### Spell Checker Plugins
 
-If the build that you used had spell checker plugins (`scayt` or `wsc`), then you need to copy them as well. Spell checker plugins must be downloaded with the proper revision. The revision of `scayt` and `wsc` plugin that was used with release versions of CKEditor can be checked in the `ckeditor-presets` repository
+If the build that you used had spell checker plugins (`scayt` or `wsc`), then you need to copy them as well. Spell checker plugins must be downloaded with the proper revision. The revision of `scayt` and `wsc` plugin that was used with release versions of CKEditor can be checked in the `ckeditor4-presets` repository
 
-1. Open [https://github.com/ckeditor/ckeditor-presets]( https://github.com/ckeditor/ckeditor-presets).
+1. Open [https://github.com/ckeditor/ckeditor4-presets]( https://github.com/ckeditor/ckeditor4-presets).
 
 2. Press the "branch:" selection list and then select the Tags tab.
 
@@ -235,15 +235,15 @@ Starting from version 4.4.2, the CKEditor project is using [Bender.js](https://g
 ### Testing CKEditor 4.4.4 (example)
 
 CKEditor 4.4.4 has been released on August 19th, 2014:<br>
-[https://github.com/ckeditor/ckeditor-dev/releases](https://github.com/ckeditor/ckeditor-dev/releases)
+[https://github.com/ckeditor/ckeditor4/releases](https://github.com/ckeditor/ckeditor4/releases)
 
 The latest version of Bender.js available on that day was 0.1.7:<br>
 [https://github.com/benderjs/benderjs/releases](https://github.com/benderjs/benderjs/releases)
 
-1. Clone the `ckeditor-dev` repository.
+1. Clone the `ckeditor4` repository.
 
 ``` sh
-git clone https://github.com/ckeditor/ckeditor-dev.git
+git clone https://github.com/ckeditor/ckeditor4.git
 ```
 2. Checkout the tag that indicates the version you want to work with.
 

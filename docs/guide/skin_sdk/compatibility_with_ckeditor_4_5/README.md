@@ -23,7 +23,7 @@ It is highly recommended to make your skin compatible with CKEditor 4.5 because 
 
 You can add support for notifications to your skin in these three easy steps.
 
-1. Copy the [notification.css](https://github.com/ckeditor/ckeditor-dev/blob/master/skins/moono/notification.css) file from the [Moono skin](https://ckeditor.com/cke4/addon/moono) to your skin's directory.
+1. Copy the [notification.css](https://github.com/ckeditor/ckeditor4/blob/master/skins/moono/notification.css) file from the [Moono skin](https://ckeditor.com/cke4/addon/moono) to your skin's directory.
 
 2. In the `editor.css` file of your skin add the following line:
 
@@ -31,7 +31,7 @@ You can add support for notifications to your skin in these three easy steps.
 	@import url("notification.css");
 	```
 
-	See an [example](https://github.com/ckeditor/ckeditor-dev/blob/a513a923aeab1b388efbec2022af1f6d8403376a/skins/moono/editor.css#L47).
+	See an [example](https://github.com/ckeditor/ckeditor4/blob/a513a923aeab1b388efbec2022af1f6d8403376a/skins/moono/editor.css#L47).
 
 3. Modify the `notification.css` file to match your skin's styles.
 
@@ -110,7 +110,7 @@ You can add support for displaying that a dialog window is in a busy state by fo
 }
 ```
 
-2. Add the [spinner image](https://github.com/ckeditor/ckeditor-dev/blob/a513a923aeab1b388efbec2022af1f6d8403376a/skins/moono/images/spinner.gif) to the `images/` directory of your skin. It is used in Internet Explorer 8-9 which do not support CSS animations.
+2. Add the [spinner image](https://github.com/ckeditor/ckeditor4/blob/a513a923aeab1b388efbec2022af1f6d8403376a/skins/moono/images/spinner.gif) to the `images/` directory of your skin. It is used in Internet Explorer 8-9 which do not support CSS animations.
 
 3. Adjust the added styles to make the modifications match your skin styles.
 

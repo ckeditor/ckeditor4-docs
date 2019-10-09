@@ -22,13 +22,13 @@ CKEditor 4 offers a native React integration through the CKEditor 4 React compon
 
 In order to create an editor instance in React, install the `ckeditor4-react` npm package as a dependency of your project:
 
-```bash
+```plaintext
 npm install --save ckeditor4-react
 ```
 
 After installing, the CKEditor 4 React component can be imported in your JavaScript code:
 
-```javascript
+```js
 import CKEditor from 'ckeditor4-react';
 ```
 
@@ -54,13 +54,13 @@ class App extends Component {
 export default App;
 ```
 
-The `data` property used in the example above is responsible for setting the editor's data.
+The `data` property used in the example above is responsible for setting the WYSIWYG editor's data.
 
 ## Customizing CKEditor Preset or Version
 
 By default, the CKEditor 4 React component loads the [standard preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `CKEditor.editorUrl` variable to point to the desired CKEditor script location:
 
-```javascript
+```js
 CKEditor.editorUrl = 'https://your-website.example/ckeditor/ckeditor.js';
 ```
 
@@ -78,7 +78,7 @@ Alternatively, you can load CKEditor before loading the CKEditor 4 React compone
 
 ## Choosing the Editor Type
 
-By default, the CKEditor 4 React component creates a {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with value of `inline` to the `<CKEditor />` tag:
+By default, the CKEditor 4 React component creates a {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with the value of `inline` to the `<CKEditor />` tag:
 
 ```jsx
 <CKEditor
@@ -104,7 +104,7 @@ Custom configuration can be passed to the editor with the `config` property of t
 
 ```jsx
 <CKEditor
-	data="<p>Editor' content</p>"
+	data="<p>Editor's content</p>"
 	config={ {
 		toolbar: [ [ 'Bold' ] ]
 	} }
@@ -137,7 +137,7 @@ The CKEditor 4 React component allows you to bind any event handler to the edito
 
 ## Data Binding
 
-Wrapping the CKEditor 4 React component in another component allows to create a two-way binding between the editor's data and the content of the external elements. This way updating the editor will update the elements and vice versa:
+Wrapping the CKEditor 4 React component in another component allows to create a two-way binding between the editor's data and the content of external elements. This way updating the editor will update the elements and vice versa:
 
 ```jsx
 import React, { Component } from 'react';
@@ -207,9 +207,9 @@ export default TwoWayBinding;
 ```
 ## Editor Instance
 
-In most cases there is no need to break the encapsulation provided by the CKEditor 4 React component as the editor configuration and events handlers are configurable with the component's properties. However, if you need access to the {@linkapi CKEDITOR.editor } object, you can use the `editor` property of the component's instance:
+In most cases there is no need to break the encapsulation provided by the CKEditor 4 React component as the editor configuration and event handlers can be configured with the component's properties. However, if you need access to the {@linkapi CKEDITOR.editor} object, you can use the `editor` property of the component's instance:
 
-```javascript
+```js
 component.editor.getData();
 ```
 
@@ -217,4 +217,4 @@ Please note that this property is initialised asynchronously, after mounting the
 
 ## CKEditor 4 React Integration Demo
 
-See the {@linksdk react working "CKEditor 4 React Integration" sample} that showcases the most iomportant features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.
+See the {@linksdk react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

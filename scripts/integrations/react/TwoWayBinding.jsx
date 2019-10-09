@@ -7,7 +7,7 @@ class TwoWayBinding extends Component {
 		super( props );
 
 		this.state = {
-			data: '<p>This is a CKEditor 4 instance created by ️⚛️ React.</p>'
+			data: '<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>'
 		};
 
 		this.onTextareaChange = this.onTextareaChange.bind( this );

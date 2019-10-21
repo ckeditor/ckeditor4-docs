@@ -31,45 +31,49 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 
 Spreadsheet widget can be inserted via spreadsheet dialog or using Content Templates plugin with prepared spreadsheet templates. Below you can see simple 3x3 spreadsheet widget right after being inserted into editor.
 
-// TODO image1 - empty 3x3 spreadsheet widget
+{@img assets/img/spreadsheets1.png Spreadsheet plugin widget}
 
 ## Converting existing tables
 
 If you already have tables in your content and plan to use Spreadsheet plugin there is no need to recreate entire table from scratch as you may simply convert them to spreadsheet widget instance:
 
-// TODO image2 - table context menu with Convert option visible
+{@img assets/img/spreadsheets2.png Spreadsheet plugin convert existing table context menu option}
 
 ## Sorting
 
-Sorting is a must to efficently analyze and present any tabular data, thus spreadsheet plugin allows for sorting data based on single or multiple columns:
+Sorting is a must to efficiently analyze and present any tabular data, thus spreadsheet plugin allows for sorting data based on single or multiple columns:
 
-// TODO image3 - spreadsheet with multisort visible
+{@img assets/img/spreadsheets3.png Spreadsheet plugin widget with multisort}
 
 ## Basic styles support
 
 While spreadsheets are mostly about data, its presentation is also very important. Basic styles like bold or italics comes handy when trying to highlight or make more visible some parts of data or single spreadsheet cells:
 
-// TODO image4 - spreadsheet with styling
+{@img assets/img/spreadsheets4.png Spreadsheet plugin widget with basic styling}
 
 ## Data types, formats and validation
 
 Data is the essence of every spreadsheet or data-grid element. This means it requires correct typing so for example formulas and conditional formatting knows how to handle it. Spreadsheet plugin provides few data types like Text, Number, Date, Time, Password and various formats so visually it can be presented in various ways. Additionally, each data type has a strict validation so it is clearly visible when something is not right with the data:
 
-// TODO image5 - spreadsheet with various data types / formats / validation
+{@img assets/img/spreadsheets5.png Spreadsheet plugin with Cells Type and Format dialog}
 
 ## Formulas
 
 Formulas provide a way to calculate many different things and automate data processing in any spreadsheet. Just type `=` and the rest of the formula, easy as one two three!
 
-// TODO image6 - spreadsheet with formulas (one calculated on in preview)
+{@img assets/img/spreadsheets6.png Spreadsheet plugin with formula preview}
 
-## Conditionl formatting
+## Conditional formatting
 
 Need to add some colors to your data? Conditional formatting allows to format data (any cell, column or entire table) based on its content. You may mark cells red when they are empty, make them green when theri value is above any threshold or blue if the cell value contains specific text.
 
 Conditional formatting comes with dozen of rules when for each cell any number of rules can be set up allowing for complex formatting and handling advanced cases.
 
-// TODO image7 - conditional formatting
+{@img assets/img/spreadsheets7.png Spreadsheet plugin with Conditional formatting dialog}
+
+## Frontend  integration
+
+One of the main features of WYSIWYG editor is the ability to show the created content in a way that it appears almost identical as during edition. With Spreadsheet plugin is it possible to show regular HTML table with all the styling and colors preserved. The other possibility is to show fully interactive spreadsheet instance (the same as used during editing) with all styles - this option is available thanks to {@link guide/dev/integration/spreadsheets/README#frontend-layer-integration frontend integration adapter}.
 
 ## Spreadsheets Demo
 

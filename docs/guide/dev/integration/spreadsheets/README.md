@@ -149,6 +149,11 @@ editor.on( 'toHtml', function( evt ) {
 
 Adding special `data-cke-spreadsheet-widget` attribute, allows Spreadsheet plugin to identify regular table and transform it into spreadsheet widget.
 
+<info-box hint="">
+	Keep in mind that this code will be executed every time data is set in the editor, so it will convert any plain HTML table. It makes sense to use when entirely replacing Table plugin with Spreadsheet plugin.
+	Also, since spreadsheets support only plain text cell values, every more complex structure (like lists) will bo converted to plain text.
+</info-box>
+
 ## Frontend layer integration
 
 The standard CKEditor 4 output produces regular HTML table from any spreadsheet widget. This gives huge flexibility thanks to using standardized structure and allows integrating with variety of tools, workflows, etc, out of the box. However, there are cases where one would like to present the content created in CKEditor 4 with rich spreadsheets functionality on the frontend layer.

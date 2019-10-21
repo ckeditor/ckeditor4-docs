@@ -101,6 +101,13 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Additional data:
 	* `responseText`: Upload response text.
 
+## invalid-license-key
+
+* Location: various plugins
+* Description: The plugin license key passed to the plugin is missing or invalid. Refer to the plugin documentation for more information.
+* Additional data:
+	* `plugin`: Name of the plugin that raised the error.
+
 ## mathjax-no-config
 
 * Location: `plugins/mathjax/plugin.js`

@@ -10,7 +10,7 @@ Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor 4 Advanced Data Grid functionality with Spreadsheet plugin
+# CKEditor 4 advanced data-grid functionality with Spreadsheet plugin
 
 <info-box info="">
 	This feature is compatible with **CKEditor 4** starting from `4.13` version. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Read below how to to enable it.

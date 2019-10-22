@@ -173,12 +173,16 @@ And initializing it with license key:
 CKE4Spreadsheet.licenseKey = 'yourLicenseKey';
 ```
 
-Adapter will automatically transform all available spreadsheet instances. If you plan to transform only specific ones, you may set additional options:
+Adapter will automatically transform all available spreadsheet instances. To transform only specific instances, additional options should be set:
 
 ```js
 CKE4Spreadsheet.autoConvert = false;
 CKE4Spreadsheet.convert( document.querySelector( 'container' ) );
 ```
+
+## Browser support
+
+Spreadsheet plugin is fully supported on latest **Chrome**, **Firefox** and **Safari** browsers. **Internet Explorer 11** browser support is limited, plugin is usable but there are know, visible issues. **Edge** browser is not supported ate the moment, however we are looking into providing support there too.
 
 ## Features overview
 

@@ -23,8 +23,8 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 * Converting existing tables to spreadsheet instances and vice versa.
 * Single and multi-column sorting.
 * Basic data styling like bold, italics, underline and so on.
-* Defining data types and formatting with support for validation invalid data.
-* Inserting formulas.
+* Selecting cell types and formatting with data validation support.
+* Formulas support.
 * Applying various conditional formatting rules to single/multiple cells, entire columns or spreadsheets.
 
 ## Inserting spreadsheet widget
@@ -45,23 +45,48 @@ Sorting is a must to efficiently analyze and present any tabular data, thus spre
 
 {@img assets/img/spreadsheets3.png Spreadsheet plugin widget with multisort}
 
+Sorting by single column is easy as clicking column header. To use multisort, any column which should be added to sorting should be clicked while <kbd>Ctrl</kbd> is pressed.
+
 ## Basic styles support
 
-While spreadsheets are mostly about data, its presentation is also very important. Basic styles like bold or italics comes handy when trying to highlight or make more visible some parts of data or single spreadsheet cells:
+While spreadsheets are mostly about data, its presentation is also very important. Basic styles like bold, italics or alignment comes handy when trying to highlight or make more visible some parts of data or single spreadsheet cells:
 
 {@img assets/img/spreadsheets4.png Spreadsheet plugin widget with basic styling}
 
 ## Data types, formats and validation
 
-Data is the essence of every spreadsheet or data-grid element. This means it requires correct typing so for example formulas and conditional formatting knows how to handle it. Spreadsheet plugin provides few data types like Text, Number, Date, Time, Password and various formats so visually it can be presented in various ways. Additionally, each data type has a strict validation so it is clearly visible when something is not right with the data:
+Data is the essence of every spreadsheet or data-grid element. Spreadsheet plugin provides few data types:
+
+* Text - default type formatted as a plain text which allows any input.
+* Numeric - reserved for numeric values like accounting records. You can choose one from available patterns to format data like percentage, financial, currency, etc.
+* Date - type for presenting dates with few formats available.
+* Time - time format providing conversion between 12h and 24h format.
+* Password - password type used for masking cell data.
+
+Additionally, each data type has a strict validation so it is clearly visible when something is not right with the data:
 
 {@img assets/img/spreadsheets5.png Spreadsheet plugin with Cells Type and Format dialog}
 
 ## Formulas
 
-Formulas provide a way to calculate many different things and automate data processing in any spreadsheet. Just type `=` and the rest of the formula, easy as one two three!
+Formulas provides support for mathematical expression calculations based on input data. Just type = and the rest of the formula, using arithmetic expression and cell references to customize the output. Supported features:
+
+* Any numbers, negative and positive as float or integer.
+* Arithmetic operations such as: `+`, `-`, `/`, `*`, `%`, `^`.
+* Logical operations such as: `AND()`, `OR()`, `NOT()`, `XOR()`.
+* Comparison operations such as: `=`, `>`, `>=`, `<`, `<=`, `<>`.
+* All JavaScript Math constants such as: `PI()`, `E()`, `LN10()`, `LN2()`, `LOG10E()`, `LOG2E()`, `SQRT1_2()`, `SQRT2()`.
+* Error handling: `#DIV/0!`, `#ERROR!`, `#VALUE!`, `#REF!`, `#NAME?`, `#N/A`, `#NUM!`.
+* String operations such as: `&` (concatenation eq. `=-(2&5)` will return `-25`).
+* Relative and absolute cell references such as: `A1`, `$A1`, `A$1`, `$A$1`.
+* Build-in variables such as: `TRUE`, `FALSE`, `NULL`.
+* Custom variables.
+* Nested functions.
+* Dynamic updates.
 
 {@img assets/img/spreadsheets6.png Spreadsheet plugin with formula preview}
+
+_For full formulas documentation please see official [Handsontable formulas reference](https://handsontable.com/docs/latest/demo-formula-support.html)_.
 
 ## Conditional formatting
 

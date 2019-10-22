@@ -217,7 +217,7 @@ CKEDITOR.plugins.spreadsheet.loadData( widget, [
 ### Fetching data from spreadsheet widget
 
 ```js
-var data = CKEDITOR.plugin.spreadsheet.toData( widget );
+var data = CKEDITOR.plugins.spreadsheet.toData( widget );
 
 console.log( data );
 

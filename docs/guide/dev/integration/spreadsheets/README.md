@@ -180,6 +180,57 @@ CKE4Spreadsheet.autoConvert = false;
 CKE4Spreadsheet.convert( document.querySelector( 'container' ) );
 ```
 
+## Manipulating spreadsheet widget data via API
+
+Spreadsheet plugins uses [Handsontable library](https://handsontable.com/) internally. While the Handsontable instances can be accessed directly via `CKEDITOR.instances.editor.plugins.spreadsheet.Spreadsheet` it is not recommended since any direct API calls may break the integration.
+
+For that reason, CKEditor exposes its own API which can be used to insert, update and fetch data from any spreadsheet widget.
+
+### Inserting new spreadsheet widget
+
+To initializes spreadsheet instance at the current editor selection use:
+
+```js
+CKEDITOR.plugins.spreadsheet.toSpreadsheet( editor, [
+    [ 1.1, 1.2, 1.3 ],
+    [ 2.1, 2.2, 2.3 ],
+    [ 3.1, 3.2, 3.3 ]
+] );
+```
+
+This method accepts array of arrays as a data source.
+
+### Updating data in existing spreadsheet widget
+
+To load new data into existing widget:
+
+```js
+CKEDITOR.plugins.spreadsheet.loadData( widget, [
+    [ 1.1, 1.2, 1.3 ],
+    [ 2.1, 2.2, 2.3 ],
+    [ 3.1, 3.2, 3.3 ]
+] );
+```
+
+**Please note** that this method will replace the whole spreadsheet widget data and reset its styling, data types and formatting.
+
+### Fetching data from spreadsheet widget
+
+```js
+var data = CKEDITOR.plugin.spreadsheet.toData( widget );
+
+console.log( data );
+
+// =>
+// [
+//	[ 1.1, 1.2, 1.3 ],
+//	[ 2.1, 2.2, 2.3 ],
+//	[ 3.1, 3.2, 3.3 ]
+// ]
+```
+
+The above API call returns spreadsheet widget data as an array of arrays.
+
 ## Browser support
 
 Spreadsheet plugin is fully supported on latest **Chrome**, **Firefox** and **Safari** browsers. **Internet Explorer 11** browser support is limited, plugin is usable but there are know, visible issues. **Edge** browser is not supported ate the moment, however we are looking into providing support there too.

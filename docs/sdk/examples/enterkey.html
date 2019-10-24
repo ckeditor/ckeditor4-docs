@@ -36,20 +36,21 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<section class="sdk-contents">
 			<script>
 				var editor;
-		
+
 				function changeEnter() {
 					// If an editor instance exists, destroy it first.
 					if ( editor )
 						editor.destroy( true );
-		
+
 					// Create an editor instance again, with appropriate settings.
 					editor = CKEDITOR.replace( 'editor1', {
+	baseFloatZIndex: 10100,
 						height: 120,
 						enterMode: Number( document.getElementById( 'xEnter' ).value ),
 						shiftEnterMode: Number( document.getElementById( 'xShiftEnter' ).value )
 					});
 				}
-		
+
 				window.onload = changeEnter;
 			</script>
 			<h1>Enter Key Configuration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/enterkey.html">Documentation</a></h1>
@@ -116,6 +117,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script type="template" data-sample="1">
 			&lt;script&gt;
 				CKEDITOR.replace( 'editor1', {
+					baseFloatZIndex: 10100,
 					// Pressing Enter will create a new &lt;div&gt; element.
 					enterMode: CKEDITOR.ENTER_DIV,
 					// Pressing Shift+Enter will create a new &lt;p&gt; element.

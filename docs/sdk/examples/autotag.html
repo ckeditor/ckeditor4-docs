@@ -103,6 +103,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				CKEDITOR.plugins.addExternal( 'autotag', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/ckeditor-docs-samples/tutorial-autotag/autotag/', 'plugin.js' );
 
 				CKEDITOR.replace( 'editor1', {
+					baseFloatZIndex: 10100,
 					plugins: 'textmatch,toolbar,wysiwygarea,basicstyles,link,undo,autotag',
 					toolbar: [
 						{ name: 'document', items: [ 'Undo', 'Redo' ] },

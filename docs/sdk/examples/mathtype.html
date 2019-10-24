@@ -119,6 +119,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					CKEDITOR.plugins.addExternal( 'ckeditor_wiris', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/ckeditor_wiris/', 'plugin.js' );
 
 					CKEDITOR.replace( 'editor1', {
+						baseFloatZIndex: 10100,
 						extraPlugins: 'ckeditor_wiris',
 						// For now, MathType is incompatible with CKEditor file upload plugins.
 						removePlugins: 'uploadimage,uploadwidget,uploadfile,filetools,filebrowser',

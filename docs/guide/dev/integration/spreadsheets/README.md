@@ -33,12 +33,12 @@ If CKEditor 4 was also installed through NPM (`ckeditor4` package) in your proje
 If not, copy or link the `spreadsheet` folder from `ckeditor4-plugin-spreadsheet` package to CKEditor 4 `plugins/` directory. If you prefer not to touch any files, you may use [`CKEDITOR.plugins.addExternal`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins.html#method-addExternal) API instead, to load it directly from `node_modules/` directory:
 
 ```js
-CKEDITOR.plugins.addExternal( 'spreadsheet', '/node-modules/ckeditor4-plugin-spreadsheet/spreadsheet/' );
+CKEDITOR.plugins.addExternal( 'spreadsheet', './node-modules/ckeditor4-plugin-spreadsheet/spreadsheet/' );
 ```
 
 ### Custom build with Online Builder
 
-**Spreadsheet plugin** is also available in the [official CKEditor 4 addons repository](https://ckeditor.com/cke4/addons/plugins/all). This allows to automatically include it in any custom build which is created via [online builder](https://ckeditor.com/cke4/builder).
+**Spreadsheet plugin** is also available in the [official CKEditor 4 addons repository](https://ckeditor.com/cke4/addon/spreadsheet). This allows to automatically include it in any custom build which is created via [online builder](https://ckeditor.com/cke4/builder).
 
 To help you in getting started, below you can find direct links to the online builder with Spreadsheet plugin already included:
 
@@ -52,12 +52,12 @@ If you prefer to simply download a zip package:
 
 ### Download manually from Addson repository
 
-If, for any reason you prefer to download the plugin code manually, you can do this via addons repository. Simply download the [Spreadsheet plugin](https://ckeditor.com/cke4/addon/spreadsheet) and place it in CKEditor 4 `plugins/` directory.
+If, for any reason, you prefer to download the plugin code manually, you can do this via addons repository. Simply download the [Spreadsheet plugin](https://ckeditor.com/cke4/addon/spreadsheet) and place it in CKEditor 4 `plugins/` directory.
 
 ### Enable Spreadsheet plugin
 
 <info-box info="">
-	Since Spreadsheet plugin is commercial CKEditor 4 plugin, please request <a href="https://orders.ckeditor.com/trial/cke4-spreadsheets">free trial license key</a> in order to test and use it.
+	Since Spreadsheet plugin is a commercial CKEditor 4 plugin, please request <a href="https://orders.ckeditor.com/trial/cke4-spreadsheets">free trial license key</a> in order to start using it.
 </info-box>
 
 The setup is straightforward as enabling plugin and adding license key in CKEditor 4 configuration:
@@ -125,11 +125,11 @@ CKEDITOR.addTemplates( 'spreadsheets', {
 } );
 ```
 
-The above will allow inserting 2x2 Spreadsheet with default ascending sorting order (on first column) and numeric data type (in second column) with just two clicks. See it in action on [Spreadsheets sample page](TODO//Sample page link).
+The above will allow inserting 2x2 Spreadsheet with default ascending sorting order (on first column) and numeric data type (in second column) with just two clicks. See it in action on {@linksdk spreadsheets working "CKEditor 4 Spreadsheets" sample}.
 
 ## Convert existing tables automatically
 
-Any existing table can be easily transformed with `Convert to Spreadsheet` option from table context menu. However, it may become cumbersome when dealing with content containing dozen of tables. The entire procedure can be easily automated thanks to CKEditor 4 data processing pipeline.
+Any existing table can be easily transformed with {@link features/spreadsheets/README#converting-existing-tables Convert to Spreadsheet} option from table context menu. However, it may become cumbersome when dealing with content containing dozen of tables. The entire procedure can be easily automated thanks to CKEditor 4 data processing pipeline.
 
 
 ```js
@@ -151,7 +151,7 @@ Adding special `data-cke-spreadsheet-widget` attribute, allows Spreadsheet plugi
 
 <info-box hint="">
 	Keep in mind that this code will be executed every time data is set in the editor, so it will convert any plain HTML table. It makes sense to use when entirely replacing Table plugin with Spreadsheet plugin.
-	Also, since spreadsheets support only plain text cell values, every more complex structure (like lists) will bo converted to plain text.
+	Also, since spreadsheets support only plain text cell values, every more complex structure (like lists) will be converted to plain text.
 </info-box>
 
 ## Frontend layer integration
@@ -160,10 +160,12 @@ The standard CKEditor 4 output produces regular HTML table from any spreadsheet 
 
 This is where Spreadsheets frontend adapter comes into play. With minimal configuration, one may simply recreate the spreadsheet with all it's styling on the frontend layer.
 
-This requires including adapter script which is present in plugin package (`adapters/frontend.js`):
+This requires including adapter scripts and stylesheet which is present in plugin package (`adapters/frontend.js`):
 
 ```html
-<script src="pluginPath/libs/handsontable.min.js"></script>
+<link rel="stylesheet" href="pluginPath/libs/handsontable/dist/handsontable.full.min.css">
+
+<script src="pluginPath/libs/handsontable/dist/handsontable.full.min.js"></script>
 <script src="pluginPath/adapters/frontend.js"></script>
 ```
 
@@ -182,7 +184,7 @@ CKE4Spreadsheet.convert( document.querySelector( 'container' ) );
 
 ## Manipulating spreadsheet widget data via API
 
-Spreadsheet plugins uses [Handsontable library](https://handsontable.com/) internally. While the Handsontable instances can be accessed directly via `CKEDITOR.instances.editor.plugins.spreadsheet.Spreadsheet` it is not recommended since any direct API calls may break the integration.
+Spreadsheet plugin uses [Handsontable library](https://handsontable.com/) internally. While the Handsontable instances can be accessed directly via `CKEDITOR.instances.editor.plugins.spreadsheet.Spreadsheet` it is not recommended since any direct API calls may break the integration.
 
 For that reason, CKEditor exposes its own API which can be used to insert, update and fetch data from any spreadsheet widget.
 
@@ -220,8 +222,6 @@ CKEDITOR.plugins.spreadsheet.loadData( widget, [
 var data = CKEDITOR.plugins.spreadsheet.toData( widget );
 
 console.log( data );
-
-// =>
 // [
 //	[ 1.1, 1.2, 1.3 ],
 //	[ 2.1, 2.2, 2.3 ],
@@ -233,7 +233,11 @@ The above API call returns spreadsheet widget data as an array of arrays.
 
 ## Browser support
 
-Spreadsheet plugin is fully supported on latest **Chrome**, **Firefox** and **Safari** browsers. **Internet Explorer 11** browser support is limited, plugin is usable but there are know, visible issues. **Edge** browser is not supported ate the moment, however we are looking into providing support there too.
+Spreadsheet plugin is fully supported on latest **Chrome**, **Firefox** and **Safari** browsers.
+
+**Internet Explorer 11** browser support is limited, plugin is usable but there are know, visible issues. **Edge** browser is not supported ate the moment, however we are looking into providing support there too.
+
+If your application requires support for Internet Explorer 11 or Edge browsers, please [contact us](https://ckeditor.com/contact/).
 
 ## Features overview
 

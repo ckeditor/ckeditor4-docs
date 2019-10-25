@@ -19,10 +19,10 @@ For licensing, see LICENSE.md.
 The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin lets you insert customizable spreadsheet widgets, that has the following capabilities:
 
 * Inserting spreadsheets with and without header row/column and with any number of rows/columns.
-* Inserting spreadsheets using predefined templates (see {@link guide/dev/integration/spreadsheets/README#templates-plugin-integration Content Template plugin integration guide}).
+* Inserting spreadsheets using predefined templates.
 * Converting existing tables to spreadsheet instances and vice versa.
-* Spreadsheet structure manipulation (adding/removing rows ans columns)
-* Rows and columns resizing
+* Spreadsheet structure manipulation (adding/removing rows ans columns).
+* Rows and columns resizing.
 * Single and multi-column sorting.
 * Basic data styling like bold, italics, underline and so on.
 * Selecting cell types and formatting with data validation support.
@@ -33,7 +33,7 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 
 ## Inserting spreadsheet widget
 
-Spreadsheet widget can be inserted via spreadsheet dialog or using Content Templates plugin with prepared spreadsheet templates. Below you can see simple 3x3 spreadsheet widget right after being inserted into editor.
+Spreadsheet widget can be inserted via spreadsheet dialog or using {@link guide/dev/integration/spreadsheets/README#templates-plugin-integration Content Template} plugin with prepared spreadsheet templates. Below you can see simple 3x3 spreadsheet widget right after being inserted into editor.
 
 {@img assets/img/spreadsheets1.png Spreadsheet plugin widget}
 
@@ -45,7 +45,7 @@ If you already have tables in your content and plan to use Spreadsheet plugin th
 
 ## Spreadsheet structure manipulation
 
-Spreadsheet plugin allows for easy structure manipulation with options like **Insert row above**, **Insert row below**, **Insert column left**, **Insert column right**, **Remove rows**, **Remove columns**.
+Spreadsheet plugin allows for easy structure manipulation with options like **Insert row above**, **Insert row below**, **Insert column left**, **Insert column right**, **Remove row**, **Remove column**.
 
 {@img assets/img/spreadsheets10.png Spreadsheet plugin context menu with rows and columns manipulation options}
 
@@ -57,7 +57,7 @@ Some data points or observations may contain quite long data which might be inco
 
 ## Sorting
 
-Sorting is a must to efficiently analyze and present any tabular data, thus spreadsheet plugin allows for sorting data based on single or multiple columns:
+Sorting is a must to efficiently analyze and present any tabular data, thus Spreadsheet plugin allows for sorting data based on single or multiple columns.
 
 {@img assets/img/spreadsheets3.png Spreadsheet plugin widget with multisort}
 
@@ -65,7 +65,7 @@ Sorting by single column is easy as clicking column header. To use multisort, an
 
 ## Basic styles support
 
-While spreadsheets are mostly about data, its presentation is also very important. Basic styles like bold, italics or alignment comes handy when trying to highlight or make more visible some parts of data or single spreadsheet cells:
+While spreadsheets are mostly about data, its presentation is also very important. Basic styles like bold, italics or alignment comes handy when trying to highlight or make more visible some parts of data or single spreadsheet cells.
 
 {@img assets/img/spreadsheets4.png Spreadsheet plugin widget with basic styling}
 
@@ -79,13 +79,13 @@ Data is the essence of every spreadsheet or data-grid element. Spreadsheet plugi
 * Time - time format providing conversion between 12h and 24h format.
 * Password - password type used for masking cell data.
 
-Additionally, each data type has a strict validation so it is clearly visible when something is not right with the data:
+Additionally, each data type has a strict validation so it is clearly visible when something is not right with the data.
 
 {@img assets/img/spreadsheets5.png Spreadsheet plugin with Cells Type and Format dialog}
 
 ## Formulas
 
-Formulas provides support for mathematical expression calculations based on input data. Just type = and the rest of the formula, using arithmetic expression and cell references to customize the output. Supported features:
+Formulas provides support for mathematical expression calculations based on input data. Just type `=` and the rest of the formula, using arithmetic expression and cell references to customize the output. Supported features:
 
 * Any numbers, negative and positive as float or integer.
 * Arithmetic operations such as: `+`, `-`, `/`, `*`, `%`, `^`.

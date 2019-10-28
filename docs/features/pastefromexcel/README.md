@@ -50,8 +50,10 @@ See the {@linksdk pastefromexcel working "Pasting content from Microsoft Excel" 
 
 ## Related Features
 
-Refer to the following resources for more information about pasting content:
+Refer to the following resources for more information about pasting content as well as support for tabular data:
 
+* The {@link features/table/README Table plugin} provides support for creating and editing complex tables including features like resizing, styling, custom selection and complex structural changes (merge, split, insert, remove cells, rows, columns).
+* The {@link features/spreadsheets/README Spreadsheet plugin} provides support for creating complex data sheets that provide data types, formatting and styling, formulas, conditional formatting and more.
 * The {@link features/pastefromword/README Pasting content from Microsoft Word} article contains more information about the Paste from Word plugin and its features.
 * The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains more information about the Paste from Google Docs feature.
 * The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.

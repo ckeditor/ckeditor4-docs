@@ -35,7 +35,7 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 
 ## Inserting Spreadsheet Widget
 
-The spreadsheet {@link guide/dev/deep_dive/widgets/README widget} can be inserted into your editor content with the Spreadsheet Properties dialog opened with the Insert Spreadsheet toolbar button (<img class="inline" src="%BASE_PATH%/assets/img/spreadsheet-button.png" alt="Insert Spreadsheet toolbar button">). It can also be added through a predefined spreadsheet template when {@link guide/dev/integration/spreadsheets/README#templates-plugin-integration using the Content Templates plugin}.
+The spreadsheet {@link guide/dev/deep_dive/widgets/README widget} can be inserted into your editor content with the Spreadsheet Properties dialog opened with the Insert Spreadsheet toolbar button (<img class="inline" src="%BASE_PATH%/assets/img/spreadsheet-button.png" alt="Insert Spreadsheet toolbar button">). It can also be added through a predefined spreadsheet template when {@link guide/dev/integration/spreadsheets/README#content-templates-plugin-integration using the Content Templates plugin}.
 
 Below you can see a simple 3x3 spreadsheet widget right after being inserted into the WYSIWYG editor.
 
@@ -140,6 +140,6 @@ See the {@linksdk spreadsheets working "Creating Data Grids with Spreadsheet Plu
 
 Refer to the following resources for more information about tabular data support in CKEditor 4:
 
-* The {@link features/pastefromexcel/README Paste from Excel plugin} allows you to also paste content from **Microsoft Excel** and maintain original content structure and formatting.
+* The {@link features/pastefromexcel/README Paste from Excel plugin} allows you to also paste content from Microsoft Excel and maintain original content structure and formatting.
 * The {@link features/table/README Table plugin} provides support for creating and editing complex tables including features like resizing, styling, custom selection and complex structural changes (merge, split, insert, remove cells, rows, columns).
 * The {@link guide/dev/integration/spreadsheets/README Spreadsheets Integration} guide explains how to enable and use the Spreadsheet plugin in CKEditor 4 as well as how to customize some of its features.

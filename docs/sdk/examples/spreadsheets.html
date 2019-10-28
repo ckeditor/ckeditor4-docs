@@ -220,12 +220,13 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<script>
 			var LICENSE_KEY = '';
+
+			CKEDITOR.addCss( '.cke table, th, td {border-collapse: collapse;border: 1px solid #444;} .cke table {width: 100%;} .cke th, td {padding: 0 2px;}' );
+
+			CKEDITOR.plugins.addExternal( 'spreadsheet', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/spreadsheet/', 'plugin.js' );
 		</script>
 
 		<script data-sample="1" >
-			// Don't forget to add CSS for your custom styles.-->
-			CKEDITOR.addCss( '' );
-
 			CKEDITOR.replace( 'editor1', {
 				width: 'auto',
 				height: 550,
@@ -250,21 +251,21 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					'undo,' +
 					'resize,' +
 					'wysiwygarea,' +
-					// 'spreadsheet,' +
+					'spreadsheet,' +
 					'contextmenu,' +
 					'colorbutton,' +
 					'table',
 
-					toolbarGroups: [
-						{ name: 'insert' },
-						{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-						{ name: 'colors' },
-						{ name: 'paragraph', groups: [ 'align' ] },
-						{ name: 'clipboard', groups: [ 'undo' ] },
-						{ name: 'document', groups: [ 'mode' ] }
-					],
+				toolbarGroups: [
+					{ name: 'insert' },
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'colors' },
+					{ name: 'paragraph', groups: [ 'align' ] },
+					{ name: 'clipboard', groups: [ 'undo' ] },
+					{ name: 'document', groups: [ 'mode' ] }
+				],
 
-					removeButtons: 'Cut,Copy,Paste'
+				removeButtons: 'Table,Cut,Copy,Paste'
 			} );
 		</script>
 	</section>

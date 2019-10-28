@@ -1,0 +1,131 @@
+.cke_dialog_body div.spreadsheetCard {
+	position: relative;
+	padding: 8px 5px;
+	vertical-align: baseline;
+	border: 1px solid transparent;
+}
+
+.cke_dialog_body div.spreadsheetCard:hover {
+	background-color: #f8f8f8;
+	border: 1px solid #d1d1d1;;
+}
+
+.cke_dialog_body div.spreadsheetCardPreview {
+	border: 1px solid #d1d1d1;
+	margin-right: 5px;
+	margin-bottom: .2em;
+	display: inline-block;
+
+	min-width: 38px;
+	height: 1.2em;
+	font-size: 0.9em;
+	border-radius: 2px;
+	padding: 5px 10px;
+	text-align: center;
+}
+
+.cke_dialog_body div.spreadsheetCard,
+.cke_dialog_body div.spreadsheetCardPreview,
+.cke_dialog_body label.spreadsheetCardLabel,
+.cke_dialog_body strong.spreadsheetCardValue
+{
+	cursor: grab;
+}
+
+.cke_dialog_body strong.spreadsheetCardValue {
+	padding: 0 3px;
+}
+
+.cke_dialog_body div.spreadsheetCardOptions {
+	position: absolute;
+	display: inline;
+	right: 5px;
+	top: 0;
+}
+
+.cke_dialog_body a.spreadsheetCardOption {
+	font-size: 36px;
+	cursor: pointer;
+	padding: 0 5px;
+	color: #c2c2c2;
+}
+
+.cke_dialog_body a.spreadsheetCardOption:hover {
+	color: #8c8989;
+}
+
+.cke_dialog_body div.dropLine {
+	height: 0;
+	border-top: 1px solid #47a4f5;
+	position: relative;
+}
+
+.cke_dialog_body span.dropLineLeft, .cke_dialog_body span.dropLineRight {
+	top: -6px;
+	height: 0;
+	display: block;
+	border-style: solid;
+	border-color: transparent;
+	position: absolute;
+}
+
+.cke_dialog_body span.dropLineLeft {
+	left: 0;
+	border-left-color:#47a4f5;
+	border-width: 6px 0 6px 6px;
+}
+
+.cke_dialog_body span.dropLineRight {
+	right: 0;
+	border-right-color: #47a4f5;
+	border-width: 6px 6px 6px 0;
+}
+
+.cke_dialog_body .spreadsheetCard::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    margin-right: 0px;
+    background-image: url('../icons/draggable.png');
+    background-repeat: no-repeat;
+    opacity: 0;
+    position: relative;
+    top: 6px;
+    margin-left: 5px;
+}
+
+.cke_dialog_body .spreadsheetCard:hover::before {
+    opacity: 1;
+}
+
+.cke_dialog_body a.spreadsheetCardOption {
+	display: inline-block;
+
+	width: 20px;
+	height: .8em;
+	margin: .2em .1em;
+
+	border: 1px solid transparent;
+	border-radius: 2px;
+	transition: 200ms ease border;
+
+	cursor: pointer;
+
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.cke_dialog_body a.spreadsheetCardOption:hover {
+    border: 1px solid #999;
+}
+
+.cke_dialog_body .spreadsheetCardUpdate {
+    background-image: url('../icons/updatecard.png');
+}
+
+
+.cke_dialog_body .spreadsheetCardRemove {
+    background-image: url('../icons/removecard.png');
+}

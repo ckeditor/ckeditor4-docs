@@ -32,6 +32,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	<nav class="sdk-sidebar">
 	</nav>
 	<section class="sdk-contents">
+		<style>
+			#browserSupportInfo, #browserSupportInfo .ie11, #browserSupportInfo .edge {
+				display: none;
+			}
+		</style>
 
 		<h1>Spreadsheet Plugin <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheet.html">Documentation</a></h1>
 
@@ -55,6 +60,17 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<p>
 			For more detailed Spreadsheet plugin features overview, see <a href="https://ckeditor.com/docs/ckeditor4/latest/features/spreadsheets.html">Spreadsheets features page</a>.
+		</p>
+
+		<p class="tip" id="browserSupportInfo" aria-hidden="true">
+			<span class="ie11">
+				<strong>Internet Explorer 11</strong> browser support is limited, plugin is usable but there are know, visible issues.
+				If your application requires wider support for it or you have encountered any issues using Spreadsheet plugin there, please <a href="https://ckeditor.com/contact/">contact us</a>.
+			</span>
+			<span class="edge">
+				<strong>Edge</strong> browser is not supported at the moment, however we are looking into providing support there too. This means the below demo does not include Spreadsheet plugin.
+				If your application requires Edge browser support, please <a href="https://ckeditor.com/contact/">contact us</a>.
+			</span>
 		</p>
 
 		<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
@@ -224,6 +240,13 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			CKEDITOR.addCss( '.cke table, th, td {border-collapse: collapse;border: 1px solid #444;} .cke table {width: 100%;} .cke th, td {padding: 0 2px;}' );
 
 			CKEDITOR.plugins.addExternal( 'spreadsheet', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/spreadsheet/', 'plugin.js' );
+
+			if ( CKEDITOR.env.ie ) {
+				var supportInfoEl = document.querySelector( '#browserSupportInfo' );
+				supportInfoEl.style.display = 'block';
+				supportInfoEl.setAttribute( 'aria-hidden', false );
+				supportInfoEl.querySelector( CKEDITOR.env.edge ? '.edge' : '.ie11' ).style.display = 'block';
+			}
 		</script>
 
 		<script data-sample="1" >
@@ -234,7 +257,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 				spreadsheet_licenseKey: LICENSE_KEY,
 
-				plugins: 'ajax,' +
+				plugins: ( CKEDITOR.env.edge ? '' : 'spreadsheet,' ) + // Edge browser is not supported at the moment.
+					'ajax,' +
 					'undo,' +
 					'justify,' +
 					'enterkey,' +
@@ -251,7 +275,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					'undo,' +
 					'resize,' +
 					'wysiwygarea,' +
-					'spreadsheet,' +
 					'contextmenu,' +
 					'colorbutton,' +
 					'table',
@@ -265,7 +288,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'document', groups: [ 'mode' ] }
 				],
 
-				removeButtons: 'Table,Cut,Copy,Paste'
+				removeButtons: 'Cut,Copy,Paste' + ( CKEDITOR.env.edge ? '' : ',Table' )
 			} );
 		</script>
 	</section>

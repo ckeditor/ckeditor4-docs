@@ -233,11 +233,11 @@ The above API call returns spreadsheet widget data as an array of arrays.
 
 ## Browser support
 
-Spreadsheet plugin is fully supported on latest **Chrome**, **Firefox** and **Safari** browsers.
+Spreadsheet plugin is fully supported on the latest **Chrome**, **Firefox** and **Safari** browsers.
 
-**Internet Explorer 11** browser support is limited, plugin is usable but there are know, visible issues. **Edge** browser is not supported ate the moment, however we are looking into providing support there too.
+**Internet Explorer 11** browser support is limited, plugin is usable but there are know, visible issues. **Edge** browser is not supported at the moment, however we are looking into providing support there too.
 
-If your application requires support for Internet Explorer 11 or Edge browsers, please [contact us](https://ckeditor.com/contact/).
+If your application requires wider support for Internet Explorer 11 or Edge browsers or you have encountered any issues using these browsers, please [contact us](https://ckeditor.com/contact/).
 
 ## Features overview
 

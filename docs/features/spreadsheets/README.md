@@ -33,6 +33,8 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 * Applying various {@link features/spreadsheets/README#conditional-formatting conditional formatting} rules to single and multiple cells, entire columns or spreadsheets.
 * Advanced {@link features/spreadsheets/README#duplicating-spreadsheet-part-with-copy-and-paste copying and pasting}.
 
+{@img assets/img/spreadsheet_01.png A spreadsheet inserted into CKEditor 4 WYSIWYG editor.}
+
 The Spreadsheet plugin allows you to create intelligent, data-driven documents right inside your WYSIWYG editor. This makes it a perfect solution for financial, auditing, engineering, technical and science industries.
 
 ## Inserting Spreadsheet Widget
@@ -41,31 +43,31 @@ The spreadsheet {@link guide/dev/deep_dive/widgets/README widget} can be inserte
 
 Below you can see a simple 3x3 spreadsheet widget right after being inserted into the WYSIWYG editor.
 
-{@img assets/img/spreadsheets1.png Spreadsheet plugin widget inserted into CKEditor 4 WYSIWYG editor.}
+{@img assets/img/spreadsheet_02.png Spreadsheet plugin widget inserted into CKEditor 4 WYSIWYG editor.}
 
 ## Converting Existing Tables
 
 If you already have {@link features/table/README tables} in your content and plan to use the Spreadsheet plugin, there is no need to recreate the entire table from scratch as you may simply convert it to a spreadsheet widget instance:
 
-{@img assets/img/spreadsheets2.png Spreadsheet plugin converts existing table context menu option.}
+{@img assets/img/spreadsheet_03.png Spreadsheet plugin converts existing table context menu option.}
 
 ## Spreadsheet Structure Manipulation
 
-The Spreadsheet plugin allows for easy data structure manipulation with options such as **Insert row above**, **Insert row below**, **Insert column left**, **Insert column right**, **Remove row**, **Remove column**.
+The Spreadsheet plugin allows for easy data structure manipulation with options such as **Insert row above**, **Insert row below**, **Insert column left**, **Insert column right**, **Remove row** or **Remove column**.
 
-{@img assets/img/spreadsheets10.png Spreadsheet plugin context menu with rows and columns manipulation options}
+{@img assets/img/spreadsheet_04.png Spreadsheet plugin context menu with rows and columns manipulation options}
 
 ## Resizing Rows and Columns
 
 Some data points or observations may contain quite long data which might be inconvenient or even unreadable in narrow rows or columns. To solve this issue, you can resize entire columns and rows.
 
-{@img assets/img/spreadsheets11.png The row and column resizing mechanism of the Spreadsheet plugin.}
+{@img assets/img/spreadsheet_05.png The row and column resizing mechanism of the Spreadsheet plugin.}
 
 ## Sorting
 
 Sorting is a must to efficiently analyze and present any tabular data, thus the Spreadsheet plugin allows for sorting data based on single or multiple columns:
 
-{@img assets/img/spreadsheets3.png Spreadsheet plugin widget with multisort.}
+{@img assets/img/spreadsheet_06.png Spreadsheet plugin widget with multisort.}
 
 To sort by a single column, just click the column header. To use multisort, any column which should be added to sorting should be clicked while the <kbd>Ctrl</kbd> key is pressed.
 
@@ -73,7 +75,7 @@ To sort by a single column, just click the column header. To use multisort, any 
 
 While spreadsheets are mostly about data, their presentation is also very important. {@link features/basicstyles/README Basic styles} like bold, italic or alignment come handy when trying to highlight or make some parts of data or individual spreadsheet cells more visible:
 
-{@img assets/img/spreadsheets4.png Spreadsheet plugin widget with basic styling.}
+{@img assets/img/spreadsheet_07.png Spreadsheet plugin widget with basic styling.}
 
 ## Data Types, Formats and Validation
 
@@ -87,7 +89,7 @@ Data is the essence of every spreadsheet or data grid element. The Spreadsheet p
 
 Additionally, each data type has a strict validation so it is clearly visible when something is not right with the data.
 
-{@img assets/img/spreadsheets5.png Spreadsheet plugin with the Cell Type and Format dialog.}
+{@img assets/img/spreadsheet_08.png Spreadsheet plugin with the Cell Type and Format dialog.}
 
 ## Formulas
 
@@ -106,7 +108,7 @@ Formulas provide support for mathematical expression calculations based on input
 * Nested functions.
 * Dynamic updates.
 
-{@img assets/img/spreadsheets6.png Spreadsheet plugin with formula preview.}
+{@img assets/img/spreadsheet_09.png Spreadsheet plugin with formula preview.}
 
 Refer to the official [Handsontable formulas reference](https://handsontable.com/docs/latest/demo-formula-support.html) for more details.
 
@@ -116,19 +118,19 @@ Do you need to add some colors to your data? Conditional formatting allows forma
 
 Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linksdk spreadsheets working Spreadsheets demo}.
 
-{@img assets/img/spreadsheets7.png Spreadsheet plugin with the Conditional Formatting dialog.}
+{@img assets/img/spreadsheet_10.png Spreadsheet plugin with the Conditional Formatting dialog.}
 
 ## Auto Fill in All Directions
 
 Auto fill is a mechanism that allows for easy duplication of content in order to fill empty spreadsheet rows and columns (or both at the same time). The little square (fill handle) in the bottom right-hand corner of the selected cell can be dragged to repeat the values from the cell, just like it can be done in Microsoft Excel or Google Sheets.
 
-{@img assets/img/spreadsheets12.png A data grid with the auto fill feature visible.}
+{@img assets/img/spreadsheet_11.png A data grid with the auto fill feature visible.}
 
 ## Duplicating Spreadsheet Part with Copy and Paste
 
 Apart from creating new spreadsheet instances from scratch or from templates, it is easy to duplicate a part or an entire existing spreadsheet with a simple copy and paste (using <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>V</kbd>).
 
-{@img assets/img/spreadsheets13.png A partially duplicated spreadsheet instance created with copy and paste.}
+{@img assets/img/spreadsheet_12.png A partially duplicated spreadsheet instance created with copy and paste.}
 
 ## Frontend Integration
 

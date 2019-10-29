@@ -29,9 +29,11 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 * {@link features/spreadsheets/README#basic-styles-support Basic data styling} like bold, italic, underline and so on.
 * Selecting {@link features/spreadsheets/README#data-types-formats-and-validation cell type and formatting with data validation support}.
 * Using {@link features/spreadsheets/README#formulas formulas}.
-* {@link features/spreadsheets/README#auto-fill-in-all-directions Auto filling}.
+* {@link features/spreadsheets/README#auto-fill-in-all-directions Auto filling} rows and columns.
 * Applying various {@link features/spreadsheets/README#conditional-formatting conditional formatting} rules to single and multiple cells, entire columns or spreadsheets.
 * Advanced {@link features/spreadsheets/README#duplicating-spreadsheet-part-with-copy-and-paste copying and pasting}.
+
+The Spreadsheet plugin allows you to create intelligent, data-driven documents right inside your WYSIWYG editor. This makes it a perfect solution for financial, auditing, engineering, technical and science industries.
 
 ## Inserting Spreadsheet Widget
 

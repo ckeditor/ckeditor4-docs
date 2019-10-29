@@ -3,5 +3,6 @@
 	"filebrowserBrowseUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/ckfinder.html",
 	"filebrowserImageBrowseUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/ckfinder.html?type=Images",
 	"filebrowserUploadUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Files",
-	"filebrowserImageUploadUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Images"
+	"filebrowserImageUploadUrl": "/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Images",
+	"baseFloatZIndex": 10005
 }

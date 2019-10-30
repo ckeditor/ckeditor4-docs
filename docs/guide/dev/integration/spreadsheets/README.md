@@ -192,7 +192,7 @@ CKE4Spreadsheet.convert( document.querySelector( 'container' ) );
 
 ## Manipulating the Spreadsheet Widget Data via API
 
-The Spreadsheet plugin uses the [Handsontable library](https://handsontable.com/) internally. While the Handsontable instances can be accessed directly with `CKEDITOR.instances.editor.plugins.spreadsheet.Spreadsheet`, it is not recommended since any direct API calls may break the integration.
+The Spreadsheet plugin uses the [Handsontable library](https://handsontable.com/) internally. While the Handsontable API can be accessed directly with `CKEDITOR.instances.editor.plugins.spreadsheet.Spreadsheet`, it is not recommended since any direct API calls may break the integration.
 
 For that reason, CKEditor exposes its own API that can be used to insert, update and fetch the data from any spreadsheet widget.
 

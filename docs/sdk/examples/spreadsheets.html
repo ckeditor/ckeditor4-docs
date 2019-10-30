@@ -254,17 +254,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				supportInfoEl.setAttribute( 'aria-hidden', false );
 				supportInfoEl.querySelector( CKEDITOR.env.edge ? '.edge' : '.ie11' ).style.display = 'block';
 			}
-
-			CKEDITOR.on( 'instanceLoaded', function( evt ) {
-				var store = CKEDITOR.plugins.spreadsheet.getStore( evt.editor );
-
-				store.on( 'instanceCreated', function( evt ) {
-					var spreadsheet = evt.data;
-					spreadsheet.addHookOnce( 'afterRender', function() {
-						spreadsheet.refreshDimensions();
-					} );
-				}, null, null, 999 );
-			} );
 		</script>
 
 		<script data-sample="1" >

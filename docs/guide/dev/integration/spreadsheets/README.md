@@ -65,7 +65,7 @@ Do note, however, that this method is **not recommended** as it requires you to 
 ### Enable the Spreadsheet Plugin
 
 <info-box info="">
-	The Spreadsheet plugin is a commercial product and a license can be purchased [here](https://ckeditor.com/contact/). You can request a <a href="https://orders.ckeditor.com/trial/cke4-spreadsheets">free trial license key</a> in order to start using it.
+	The Spreadsheet plugin is a commercial product and a license can be purchased [here](https://ckeditor.com/contact/). You can request a <a href="https://orders.ckeditor.com/trial/spreadsheets">free trial license key</a> in order to start using it.
 </info-box>
 
 The setup is straightforward &mdash; you just need to enable the plugin and add the license key in your CKEditor 4 configuration:

@@ -48,7 +48,7 @@ The Spreadsheet plugin is also available in the [official CKEditor 4 Add-ons Rep
 
 To help you get started, below you can find direct links to the online builder with Spreadsheet plugin already included:
 
- * [Online builder &ndash; Standard preset with the Spreadsheet plugin](https://ckeditor.com/cke4/builder/7e0954ef373c5b71615b124ff51ecbec)
+ * [Online builder &ndash; Standard preset with the Spreadsheet plugin](https://ckeditor.com/builder/7e0954ef373c5b71615b124ff51ecbec)
  * [Online builder &ndash; Full preset with the Spreadsheet plugin](https://ckeditor.com/builder/7bd869090707ea82d3685d1aa4c9dfaa)
 
 If you prefer to simply download a `zip` package:

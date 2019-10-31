@@ -1,0 +1,15 @@
+.cke_widget_spreadsheet {
+	font-family: Roboto,Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	color: #363636;
+	margin-top: 16px;
+}
+
+.htContextMenu.handsontable {
+  z-index: 10010;
+}
+
+.handsontable .htAutocompleteArrow {
+	display: none;
+}

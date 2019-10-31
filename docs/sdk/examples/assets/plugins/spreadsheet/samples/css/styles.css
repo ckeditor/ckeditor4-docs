@@ -1,0 +1,16 @@
+.adjoined-bottom:before {
+	height: 270px;
+}
+.adjoined-bottom {
+	margin-bottom: 25px;
+}
+.cke table, th, td {
+	border-collapse: collapse;
+	border: 1px solid #444;
+}
+.cke table {
+	width: 100%;
+}
+.cke th, td {
+	padding: 0 2px;
+}

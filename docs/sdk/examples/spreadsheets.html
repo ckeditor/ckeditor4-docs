@@ -290,19 +290,29 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					'wysiwygarea,' +
 					'contextmenu,' +
 					'colorbutton,' +
+					'pastefromword,' +
+					'pastefromgdocs,' +
+					'image,' +
+					'format,' +
+					'font,' +
+					'list,' +
+					'magicline,' +
+					'maximize,' +
+					'print,' +
 					'table',
 
-				toolbarGroups: [
-					{ name: 'insert' },
-					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-					{ name: 'links' },
-					{ name: 'colors' },
-					{ name: 'paragraph', groups: [ 'align' ] },
-					{ name: 'clipboard', groups: [ 'undo' ] },
-					{ name: 'document', groups: [ 'mode' ] }
-				],
-
-				removeButtons: 'Cut,Copy,Paste,Anchor' + ( CKEDITOR.env.edge ? '' : ',Table' )
+					toolbar: [
+						{ name: 'styles', items: [ 'Format', 'Font' ] },
+						{ name: 'insert', items: [ 'Spreadsheet', 'Table', 'Image' ] },
+						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat' ] },
+						{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+						{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+						{ name: 'links', items: [ 'Link', 'Unlink' ] },
+						{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent' ] },
+						{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+						{ name: 'document', items: [ 'Print' ] },
+						{ name: 'tools', items: [ 'Maximize' ] }
+					]
 			} );
 		</script>
 	</section>

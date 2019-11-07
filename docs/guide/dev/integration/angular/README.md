@@ -16,7 +16,7 @@ For licensing, see LICENSE.md.
 	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-angular"><code>ckeditor4-angular</code> npm package</a>.
 </info-box>
 
-CKEditor 4 offers a native Angular integration through the CKEditor 4 Angular component. It provides deep integration of CKEditor 4 and Angular that lets you use the native features of the WYSIWYG editor inside an Angular component. The CKEditor 4 Angular component is compatible with Angular versions 2.0 and later.
+CKEditor 4 offers a native Angular integration through the CKEditor 4 Angular component. It provides deep integration of CKEditor 4 and Angular that lets you use the native features of the WYSIWYG editor inside an Angular component. The CKEditor 4 Angular component is compatible with Angular versions 5.0 and later.
 
 ## Basic Usage
 

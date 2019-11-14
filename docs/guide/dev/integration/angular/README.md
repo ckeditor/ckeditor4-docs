@@ -219,7 +219,7 @@ Fires when the editor's editable is focused. It corresponds with the {@linkapi C
 
 ### `blur`
 
-Fires when the editing view of the editor is blurred. It corresponds with the {@linkapi CKEDITOR.editor.blur `editor#blur`} event.
+Fires when the editing view of the editor is blurred. It corresponds with the {@linkapi CKEDITOR.editor#blur `editor#blur`} event.
 
 ### Note
 

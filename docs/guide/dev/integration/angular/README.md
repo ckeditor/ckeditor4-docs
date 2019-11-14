@@ -181,9 +181,14 @@ The following `@Output` properties are supported by the CKEditor 4 Angular compo
 
 Fires when the editor is ready. It corresponds with the {@linkapi CKEDITOR.editor#instanceReady `editor#instanceReady`} event.
 
+### `dataReady`
+
+Fires when the editor data is loaded, e.g. after switching from WYSIWYG mode or using {@linkapi CKEDITOR.editor#setData() `editor#setData()`} method. It corresponds with the {@linkapi CKEDITOR.editor#dataReady `editor#dataReady`} event.
+
 ### `change`
 
 Fires when the content of the editor has changed. It corresponds with the {@linkapi CKEDITOR.editor#change `editor#change`} event. For performance reasons this event may be called even when data has not really changed.
+Please note that this event will only be fired when [`undo`](https://ckeditor.com/cke4/addon/undo) plugin is loaded. If you need to listen for editor changes (e.g. for two-way data binding), use [`dataChange` event](#dataChange) instead.
 
 ```html
 <ckeditor (change)="onChange($event)"></ckeditor>

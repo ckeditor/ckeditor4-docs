@@ -1,7 +1,7 @@
 {
-  "name": "ckeditor-docs",
+  "name": "ckeditor4-docs",
   "version": "4.13.0",
-  "description": "The official documentation of CKEditor 4. http://docs.ckeditor.com",
+  "description": "The official documentation of CKEditor 4. https://ckeditor.com/docs/",
   "dependencies": {
     "@angular-devkit/build-angular": "^0.12.3",
     "@angular/common": "^7.2.2",
@@ -49,7 +49,7 @@
   "author": "CKSource (http://cksource.com/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor-docs"
+    "url": "https://github.com/ckeditor/ckeditor4-docs"
   },
   "license": "For licensing, see LICENSE.md.",
   "devDependencies": {

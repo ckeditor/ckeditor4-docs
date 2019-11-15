@@ -21,7 +21,7 @@ Instead, you must create a CKEditor "build" or "release version" (in contrast to
 
 ## The `dev/builder` Folder
 
-<info-box info="">The builder will only work on the source version of CKEditor cloned from the a Git repository (for example from the <a href="https://github.com/ckeditor/ckeditor-dev">official CKEditor development repository</a>). It will not work on the project downloaded as a <code>.zip</code> package.</info-box>
+<info-box info="">The builder will only work on the source version of CKEditor cloned from the a Git repository (for example from the <a href="https://github.com/ckeditor/ckeditor4">official CKEditor development repository</a>). It will not work on the project downloaded as a <code>.zip</code> package.</info-box>
 
 The source code of CKEditor contains a pre-configured environment that allows you to easily create editor builds.
 

@@ -24,7 +24,7 @@ The aim of this tutorial is to demonstrate **how to extend an existing CKEditor 
 
 Instead of creating a new plugin, this time we are going to expand on the functionality of the {@link guide/widget_sdk/tutorial_1/README Simple Box widget plugin created in the previous installment} of the widget tutorial series.
 
-<info-box hint=""> We need to start where we previously left off. You can <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-1">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor-docs-samples/blob/master/README.md">instructions</a>.
+<info-box hint=""> We need to start where we previously left off. You can <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-simplebox-1">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/blob/master/README.md">instructions</a>.
 </info-box>
 
 Should you have any questions about the content of the existing plugin and its configuration, refer to the {@link guide/widget_sdk/tutorial_1/README Creating a Simple CKEditor Widget (Part 1)} tutorial.
@@ -446,7 +446,7 @@ The following are all styles needed by the widget that should be added to your `
 }
 ```
 
-<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-2">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor-docs-samples/blob/master/README.md">instructions</a>.
+<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-simplebox-2">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/blob/master/README.md">instructions</a>.
 </info-box>
 
 ## Working Example

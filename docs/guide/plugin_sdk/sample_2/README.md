@@ -20,7 +20,7 @@ Instead of creating a new plugin, this time we are going to
 expand on the functionality of the **Abbreviation** plugin created in the
 {@link guide/plugin_sdk/sample_1/README previous installment} of the tutorial series.
 
-<info-box hint=""> We need to start where we previously left off. You can download the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-1">entire plugin folder</a> including the icon and the fully commented source code.
+<info-box hint=""> We need to start where we previously left off. You can download the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-abbr-1">entire plugin folder</a> including the icon and the fully commented source code.
 </info-box>
 
 If you have any doubts about the content of the plugin and its configuration, refer to the
@@ -467,7 +467,7 @@ This is what we have in the `dialogs/abbr.js` file:
 		};
 	});
 
-<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-2">download the entire plugin folder</a> inluding the icon and the fully commented source code.
+<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-abbr-2">download the entire plugin folder</a> inluding the icon and the fully commented source code.
 </info-box>
 
 ## Working Example

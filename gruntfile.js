@@ -96,10 +96,17 @@ module.exports = function( grunt ) {
 
 		copy: {
 			main: {
-				expand: true,
-				cwd: 'node_modules/@wiris/mathtype-ckeditor4',
-				src: '**',
-				dest: 'docs/sdk/examples/assets/plugins/ckeditor_wiris'
+				files: [ {
+					expand: true,
+					cwd: 'node_modules/@wiris/mathtype-ckeditor4',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/ckeditor_wiris'
+				}, {
+					expand: true,
+					cwd: 'node_modules/ckeditor4-plugin-spreadsheet/spreadsheet',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/spreadsheet'
+				} ]
 			}
 		},
 		jsduck: {

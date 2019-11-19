@@ -25,6 +25,7 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 * {@link features/spreadsheets/README#converting-existing-tables Converting existing tables} to spreadsheet instances and vice versa.
 * {@link features/spreadsheets/README#spreadsheet-structure-manipulation Spreadsheet structure manipulation} (adding or removing rows and columns).
 * {@link features/spreadsheets/README#resizing-rows-and-columns Resizing rows and columns}.
+* {@link features/spreadsheets/README#renaming-rows-and-columns-headers Renaming rows and columns headers}.
 * Single and multi-column {@link features/spreadsheets/README#sorting sorting}.
 * {@link features/spreadsheets/README#basic-styles-support Basic data styling} like bold, italic, underline and so on.
 * Selecting {@link features/spreadsheets/README#data-types-formats-and-validation cell type and formatting with data validation support}.
@@ -62,6 +63,12 @@ The Spreadsheet plugin allows for easy data structure manipulation with options 
 Some data points or observations may contain quite long data which might be inconvenient or even unreadable in narrow rows or columns. To solve this issue, you can resize entire columns and rows.
 
 {@img assets/img/spreadsheet_05.png The row and column resizing mechanism of the Spreadsheet plugin.}
+
+## Renaming Rows and Columns Headers
+
+It is important to label your data in a clear and understandable way. Spreadsheet plugin allows easy rows and columns headers renaming via a simple dialog:
+
+{@img assets/img/spreadsheet_colrow_rename.png The rows and columns headers renaming mechanism in the Spreadsheet plugin.}
 
 ## Sorting
 

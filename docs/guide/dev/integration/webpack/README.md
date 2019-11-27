@@ -13,18 +13,18 @@ For licensing, see LICENSE.md.
 # CKEditor 4 WYSIWYG Editor Webpack Integration
 
 <info-box info="">
-	The sample of the integration is provided through the <a href="https://github.com/ckeditor/ckeditor4-webpack-template"><code>ckeditor4-webpack-template</code> GitHub template repository</a>.
+	The sample of the integration is provided through the <a href="https://github.com/ckeditor/ckeditor4-webpack-template"><code>ckeditor4-webpack-template</code> GitHub template repository</a>. It can be used as a quick starting point for your project.
 </info-box>
 
-Out of the box CKEditor 4 does not work correctly after being bundled using webpack. However integrating CKEditor 4 and webpack is not difficult and this tutorial shows how to achieve it.
+Integrating CKEditor 4 with Webpack requires few simple steps to prepare correct Webpack configuration to create working bundle.
 
-## Basic Integration
+## Basic Webpack Integration
 
-In order to use CKEditor 4 with webpack, start with creating the new project:
+In order to use CKEditor 4 with Webpack, start with creating a new project:
 
 ```sh
-mkdir my-project
-cd my-project
+mkdir ckeditor4-webpack
+cd ckeditor4-webpack
 npm init -y
 ```
 
@@ -55,7 +55,7 @@ module.exports = {
 };
 ```
 
-The next step is creating the source code, which will be contained in two files: `src/basePath.js` and `src/index.js`. The main file, `src/index.js`, should look like this:
+The next step is creating the source code, which will be contained in two files: `src/basePath.js` and `src/index.js`. The main file, `src/index.js`, should look like below:
 
 ```javascript
 import './basePath.js';
@@ -78,8 +78,8 @@ The final step is to build the app containing CKEditor 4:
 npx webpack
 ```
 
-The bundled code will appear in `dist/app.js` file.
+The bundled code will appear in the `dist/app.js` file.
 
 ## CKEditor 4 Webpack Integration Template
 
-The more complex integration, featuring also transpiling the code with Babel and minimizing with Terser, is available in [`ckeditor4-webpack-template` GitHub template repository](https://github.com/ckeditor/ckeditor4-webpack-template). It can be used as a starting point for web apps projects.
+The more complex integration, featuring transpiling the code with Babel and minimizing with Terser, is available in [`ckeditor4-webpack-template` GitHub template repository](https://github.com/ckeditor/ckeditor4-webpack-template). It can be used as a starting point for web apps projects.

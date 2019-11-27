@@ -14,7 +14,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<title>Angular Integration</title>
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
-	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="../../ckeditor4/ckeditor.js"></script>
 	<script src="assets/picoModal-2.0.1.min.js"></script>
 	<script src="assets/contentloaded.js"></script>
 	<script src="assets/simplesample.js"></script>
@@ -158,13 +158,21 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				width: 100%;
 				height: 84px;
 			}
+
+			app-editor-types .select-editor-type {
+				margin-top: 10px;
+			}
+
+			app-editor-types .select-editor-type label {
+				padding-right: 5px;
+			}
 		</style>
 
 		<h1>CKEditor 4 Angular Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html">Documentation</a>
 		</h1>
 
 		<p>
-			The <strong>Angular 2+ integration</strong> allows you to implement CKEditor 4 as an <a href="https://angular.io/">Angular</a> component, using the <code>&lt;ckeditor&gt;</code> tag.
+			The <strong>Angular 5+ integration</strong> allows you to implement CKEditor 4 as an <a href="https://angular.io/">Angular</a> component, using the <code>&lt;ckeditor&gt;</code> tag.
 		</p>
 
 		<p>
@@ -191,20 +199,26 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	@Component( {
 		selector: 'app-editor-types',
 		template: `
-			<h2>{{( inline ? 'Inline' : 'Divarea' )}} Editor</h2>
+			<h2>{{ type }} Editor</h2>
 
 			<p>
 				To use the CKEditor 4 WYSIWYG editor component, create a new <code>&lt;ckeditor&gt;</code> tag. The initial data of the editor can be set with the <code>data</code> property.
 			</p>
 
 			<p>
-				The two available editor types are <strong>divarea editor</strong> (an inline editor with a <a href="./fixedui.html">fixed UI</a>) and <strong>inline editor</strong> with a <a href="./floatingui.html">floating UI</a>.
+				Three available editor types are <strong>classic editor</strong> (default one), <strong>divarea editor</strong> (an inline editor with a <a href="./fixedui.html">fixed UI</a>) and <strong>inline editor</strong> with a <a href="./floatingui.html">floating UI</a>.
 			</p>
 
-			<p>Use the button below to change the editor type.</p>
+			<p>Use the select below to change the editor type.</p>
 
 			<ckeditor
-				*ngIf="!inline"
+				*ngIf="!inline && !divarea"
+				[(data)]="editorData">
+			</ckeditor>
+
+			<ckeditor
+				*ngIf="divarea"
+				type="divarea"
 				[(data)]="editorData">
 			</ckeditor>
 
@@ -214,25 +228,36 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				[(data)]="editorData">
 			</ckeditor>
 
-			<button class="editor-type" (click)="changeEditorType()">
-				Change to {{ inline ? 'divarea' : 'inline' }}
-			</button>
+			<div class="select-editor-type">
+				<label for="editor-type">Choose editor type:</label>
+
+				<select id="editor-type" class="editor-type" (change)="onChange($event.target.value)">
+					<option value="classic">Classic Editor</option>
+					<option value="divarea">Divarea Editor</option>
+					<option value="inline">Inline Editor</option>
+				</select>
+			</div>
 		`
 	} )
+
 	export class EditorTypesComponent {
 		public isReadOnly = false;
 		public editorData =
 			`<p>This is a CKEditor 4 instance created with Angular.</p>`;
 
+		public type = 'Classic';
 		public inline = false;
+		public divarea = false;
 
 		public componentEvents: string[] = [];
 
-		changeEditorType() {
-			this.inline = !this.inline;
+		onChange( newValue ) {
+			this.inline = newValue === 'inline';
+			this.divarea = newValue === 'divarea';
+
+			this.type = newValue.charAt( 0 ).toUpperCase() + newValue.substring( 1 );
 		}
 	}
-
 </script>
 <script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag
 		data-sample-template="empty" data-sample-highlighter="typescript">
@@ -286,6 +311,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 			<p><label><input type="checkbox" [(ngModel)]="isReadOnly">Make the editor read-only.</label></p>
 		`
 	} )
+
 	export class EventsComponent {
 		public isReadOnly = false;
 
@@ -370,7 +396,8 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 					#editor
 					[(ngModel)]="model.description"
 					id="description"
-					name="description">
+					name="description"
+					type="divarea">
 				</ckeditor>
 
 				<p><button type="reset" (click)="reset()">Reset form</button></p>
@@ -391,6 +418,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		`,
 		styleUrls: [ './demo-form.component.css' ]
 	} )
+
 	export class DemoFormComponent implements AfterViewInit {
 		@ViewChild( 'demoForm' ) demoForm?: NgForm;
 		@ViewChild( 'preview' ) preview: ElementRef;

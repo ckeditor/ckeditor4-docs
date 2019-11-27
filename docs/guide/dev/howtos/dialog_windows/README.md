@@ -17,7 +17,7 @@ The following article contains tips about customizing the editor dialog windows.
 
 ## How Do I Change the Content of a CKEditor Dialog Window?
 
-CKEditor allows you to customize dialog windows without changing the original editor code. For an example on how to add or remove dialog window tabs and fields refer to the old "Using the JavaScript API to customize dialog windows" [sample](http://nightly.ckeditor.com/standard/samples/old/dialog/dialog.html) and its [source code](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/dialog/samples/dialog.html). Please note this sample is just an example which is not maintained anymore.
+CKEditor allows you to customize dialog windows without changing the original editor code. For an example on how to add or remove dialog window tabs and fields refer to the old "Using the JavaScript API to customize dialog windows" [sample](http://nightly.ckeditor.com/standard/samples/old/dialog/dialog.html) and its [source code](https://github.com/ckeditor/ckeditor4/blob/master/plugins/dialog/samples/dialog.html). Please note this sample is just an example which is not maintained anymore.
 
 ## How Do I Set a Default Value for a CKEditor Dialog Window Field?
 
@@ -66,7 +66,7 @@ After this customization the **Link** dialog window will contain the `www.exampl
 
 {@img assets/img/dialog_02.png Link dialog window with a default value for the URL field}
 
-For more examples on setting a default field value refer to the old "Using the JavaScript API to customize dialog windows" [sample](http://nightly.ckeditor.com/standard/samples/old/dialog/dialog.html) and its [source code](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/dialog/samples/dialog.html). Please note this sample is just an example which is not maintained anymore.
+For more examples on setting a default field value refer to the old "Using the JavaScript API to customize dialog windows" [sample](http://nightly.ckeditor.com/standard/samples/old/dialog/dialog.html) and its [source code](https://github.com/ckeditor/ckeditor4/blob/master/plugins/dialog/samples/dialog.html). Please note this sample is just an example which is not maintained anymore.
 
 <info-box hint=""> Since in some old browsers <code>default</code> is a reserved word in JavaScript, remember to always put it in quotes when used in your code (<code>'default'</code>).
 </info-box>

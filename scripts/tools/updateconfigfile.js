@@ -18,8 +18,16 @@ module.exports = ( { configFileSrc, configFileDst } ) => new Promise( ( resolve,
 		.then( ( [ srcConfig, dstFile, config ] ) => {
 			let insertedData = '\t// Common config injected by examples building script.\n';
 			for ( const key in srcConfig ) {
-				if ( srcConfig.hasOwnProperty( key ) && typeof srcConfig[ key ] === 'string' ) {
+				if ( !srcConfig.hasOwnProperty( key ) ) {
+					continue;
+				}
+
+				if ( typeof srcConfig[ key ] === 'string' ) {
 					insertedData += `\tconfig.${ key } = '${ template( srcConfig[ key ], config.variables, { before: '{%', after: '%}' } ) }';\n`;
+				}
+
+				if ( typeof srcConfig[ key ] === 'number' ) {
+					insertedData += `\tconfig.${ key } = ${ srcConfig[ key ] };\n`;
 				}
 			}
 			insertedData += '\t// End of injected config.\n';

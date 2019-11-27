@@ -16,7 +16,7 @@ For licensing, see LICENSE.md.
 	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-angular"><code>ckeditor4-angular</code> npm package</a>.
 </info-box>
 
-CKEditor 4 offers a native Angular integration through the CKEditor 4 Angular component. It provides deep integration of CKEditor 4 and Angular that lets you use the native features of the WYSIWYG editor inside an Angular component. The CKEditor 4 Angular component is compatible with Angular versions 2.0 and later.
+CKEditor 4 offers a native Angular integration through the CKEditor 4 Angular component. It provides deep integration of CKEditor 4 and Angular that lets you use the native features of the WYSIWYG editor inside an Angular component. The CKEditor 4 Angular component is compatible with Angular versions 5.0 and later.
 
 ## Basic Usage
 
@@ -68,7 +68,7 @@ Alternatively, you can load CKEditor before loading the CKEditor 4 Angular compo
 
 ## Choosing the Editor Type
 
-By default, the CKEditor 4 Angular component creates an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI}. This editor type will be referred to as a `divarea` editor. To create an editor with a {@link features/uitypes/README#floating-user-interface floating UI}, add the `type` property with a value of `inline`:
+By default, starting from stable `1.0.0` version, the CKEditor 4 Angular component creates a {@link guide/dev/framed/README classic editor}. You can easily switch to an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI} (which was the default one for integration beta versions) by setting component `type` property to `divarea`. To create an editor with a {@link features/uitypes/README#floating-user-interface floating UI}, change the `type` property to `inline`:
 
 ```html
 <ckeditor
@@ -77,11 +77,14 @@ By default, the CKEditor 4 Angular component creates an {@link guide/dev/inline/
 ></ckeditor>
 ```
 
-Every other value of the `type` property will be treated as a `divarea`.
+So there are 3 possible values for the `type` property:
+
+* `classic` (default)
+* `divarea`
+* `inline`
 
 Notes:
-* Due to some Angular limitations, {@link guide/dev/framed/README classic editor} is not supported yet.
-* The [Div Editing Area plugin](https://ckeditor.com/cke4/addon/divarea) must be {@link guide/dev/plugins/README included in your editor build}. In this case, however, there is no need to list it in the {@linkapi CKEDITOR.config#plugins `config.plugins`} or {@linkapi CKEDITOR.config#extraPlugins `config.extraPlugins`} options as the Angular component does this automatically for you.
+* The [Div Editing Area plugin](https://ckeditor.com/cke4/addon/divarea) must be {@link guide/dev/plugins/README included in your editor build} to use `divarea` editor type. In this case, however, there is no need to list it in the {@linkapi CKEDITOR.config#plugins `config.plugins`} or {@linkapi CKEDITOR.config#extraPlugins `config.extraPlugins`} options as the Angular component does this automatically for you.
 
 ## Integration with ngModel
 
@@ -181,9 +184,14 @@ The following `@Output` properties are supported by the CKEditor 4 Angular compo
 
 Fires when the editor is ready. It corresponds with the {@linkapi CKEDITOR.editor#instanceReady `editor#instanceReady`} event.
 
+### `dataReady`
+
+Fires when the editor data is loaded, e.g. after switching from WYSIWYG mode or using {@linkapi CKEDITOR.editor#setData `editor#setData()`} method. It corresponds with the {@linkapi CKEDITOR.editor#dataReady `editor#dataReady`} event.
+
 ### `change`
 
 Fires when the content of the editor has changed. It corresponds with the {@linkapi CKEDITOR.editor#change `editor#change`} event. For performance reasons this event may be called even when data has not really changed.
+Please note that this event will only be fired when [`Undo`](https://ckeditor.com/cke4/addon/undo) plugin is loaded. If you need to listen for editor changes (e.g. for two-way data binding), use [`dataChange` event](#datachange) instead.
 
 ```html
 <ckeditor (change)="onChange($event)"></ckeditor>
@@ -214,7 +222,7 @@ Fires when the editor's editable is focused. It corresponds with the {@linkapi C
 
 ### `blur`
 
-Fires when the editing view of the editor is blurred. It corresponds with the {@linkapi CKEDITOR.editor.blur `editor#blur`} event.
+Fires when the editing view of the editor is blurred. It corresponds with the {@linkapi CKEDITOR.editor#blur `editor#blur`} event.
 
 ### Note
 

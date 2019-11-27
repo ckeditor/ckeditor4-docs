@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Contributing Code and Providing Patches to CKEditor
 
-To propose a bug fix or a new functionality you need to create a pull request in the [CKEditor GitHub repository](https://github.com/ckeditor/ckeditor-dev) (you can read more about [pull requests](https://help.github.com/articles/using-pull-requests/) and [how to create them](https://help.github.com/articles/creating-a-pull-request/) first).
+To propose a bug fix or a new functionality you need to create a pull request in the [CKEditor GitHub repository](https://github.com/ckeditor/ckeditor4) (you can read more about [pull requests](https://help.github.com/articles/using-pull-requests/) and [how to create them](https://help.github.com/articles/creating-a-pull-request/) first).
 
 ## Setting Up the Development Environment
 
@@ -26,7 +26,7 @@ To propose a bug fix or a new functionality you need to create a pull request in
 
 	* Install CKEditor's development dependencies (Grunt plugins, {@link guide/dev/tests/README Bender.js}, etc.)
 
-			cd ckeditor-dev
+			cd ckeditor4
 			npm install
 
 	* Set the {@link guide/dev/tests/README testing environment} up, because your changes in the editor code will need tests.
@@ -44,7 +44,7 @@ To propose a bug fix or a new functionality you need to create a pull request in
 
 ## Branches
 
-When the environment is set up and running you can start working on your patch. First, create a separate branch to group your changes. If there is an issue on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) use its number, otherwise {@link guide/dev/issues_tracker/README create a new issue} yourself and use its number or just pick any meaningful name:
+When the environment is set up and running you can start working on your patch. First, create a separate branch to group your changes. If there is an issue on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues) use its number, otherwise {@link guide/dev/issues_tracker/README create a new issue} yourself and use its number or just pick any meaningful name:
 
 	git checkout -b t/12345
 
@@ -58,7 +58,7 @@ Every change which can be tested automatically should have at least one automate
  If you do not know how to write tests for your patch, you can make an {@link guide/dev/contributing_code/README#proposing-incomplete-patches incomplete pull request} and the core team will give you some hints or perhaps someone else from the community will step in.
 </info-box>
 
-Some types of features or bugs cannot be tested automatically. In such cases, create a manual test (see [this one](https://github.com/ckeditor/ckeditor-dev/tree/master/tests/tickets/12735) for instance).
+Some types of features or bugs cannot be tested automatically. In such cases, create a manual test (see [this one](https://github.com/ckeditor/ckeditor4/tree/master/tests/tickets/12735) for instance).
 
 <info-box hint="">
  To see manual tests in the Bender.js dashboard you need to change the filter from <code>is:unit</code> to <code>is:manual</code>.
@@ -70,7 +70,7 @@ Once your patch is ready, tested and committed, push your branch to your CKEdito
 
 	git push origin t/12345
 
-And [create a pull request](https://help.github.com/articles/creating-a-pull-request/) in the official [CKEditor repository](https://github.com/ckeditor/ckeditor-dev).
+And [create a pull request](https://help.github.com/articles/creating-a-pull-request/) in the official [CKEditor repository](https://github.com/ckeditor/ckeditor4).
 
 ## Review
 

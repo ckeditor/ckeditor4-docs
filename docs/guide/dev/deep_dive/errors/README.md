@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # CKEditor Error Code Reference
 
-<info-box info=""> This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
+<info-box info="">
+	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </info-box>
 
 This article contains the list of CKEditor error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
@@ -100,6 +101,13 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: An error occurred when parsing the upload response. Text could not be parsed to JSON.
 * Additional data:
 	* `responseText`: Upload response text.
+
+## invalid-license-key
+
+* Location: Various plugins
+* Description: The plugin license key passed to the plugin is missing or invalid. Refer to the plugin documentation for more information.
+* Additional data:
+	* `plugin`: The name of the plugin that threw the error.
 
 ## mathjax-no-config
 

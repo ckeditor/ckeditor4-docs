@@ -155,7 +155,7 @@ CKEDITOR.plugins.add( 'timestamp', {
 });
 ```
 
-<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-timestamp">download the entire plugin folder</a> including the icon and the fully commented source code.
+<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-timestamp">download the entire plugin folder</a> including the icon and the fully commented source code.
 </info-box>
 
 ## Working Example

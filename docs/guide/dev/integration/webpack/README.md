@@ -16,11 +16,11 @@ For licensing, see LICENSE.md.
 	The sample of the integration is provided through the <a href="https://github.com/ckeditor/ckeditor4-webpack-template"><code>ckeditor4-webpack-template</code> GitHub template repository</a>. It can be used as a quick starting point for your project.
 </info-box>
 
-Integrating CKEditor 4 with Webpack requires few simple steps to prepare correct Webpack configuration to create working bundle.
+Integrating CKEditor 4 with webpack requires few simple steps to prepare correct webpack configuration to create working bundle.
 
 ## Basic Webpack Integration
 
-In order to use CKEditor 4 with Webpack, start with creating a new project:
+In order to use CKEditor 4 with webpack, start with creating a new project:
 
 ```sh
 mkdir ckeditor4-webpack

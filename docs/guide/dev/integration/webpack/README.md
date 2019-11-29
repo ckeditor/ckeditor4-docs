@@ -62,6 +62,10 @@ import './basePath.js';
 import 'ckeditor4';
 
 // Insert yout code here.
+// The code below is a sample of using CKEditor 4.
+CKEDITOR.replace( 'app', {
+	extraPlugins: 'iframe'
+} );
 ```
 
 The remaining file, `src/basePath.js`, will contain only setting the correct path to CKEditor 4:
@@ -78,7 +82,22 @@ The final step is to build the app containing CKEditor 4:
 npx webpack
 ```
 
-The bundled code will appear in the `dist/app.js` file.
+The bundled code will appear in the `dist/app.js` file. It can be used on a webpage like a normal script:
+
+```html
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>CKEditor 4 webpack sample</title>
+		</head>
+		<body>
+			<div id="app"></div>
+
+			<script src="<path to your project>/dist/app.js"></script>
+		</body>
+	</html>
+```
 
 ## CKEditor 4 Webpack Integration Template
 

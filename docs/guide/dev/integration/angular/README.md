@@ -23,7 +23,7 @@ CKEditor 4 offers a native Angular integration through the CKEditor 4 Angular co
 In order to create an editor instance in Angular, install the `ckeditor4-angular` npm package as a dependency of your project:
 
 ```bash
-npm install --save ckeditor4-angular
+npm install ckeditor4-angular
 ```
 
 After installing, import `CKEditorModule` to your application:

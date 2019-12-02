@@ -19,7 +19,7 @@ The aim of this article is to get you up and running with CKEditor in two minute
 To install [the official CKEditor 4 NPM package](https://www.npmjs.com/package/ckeditor4) run:
 
 ```bash
-npm install ckeditor4 --save
+npm install ckeditor4
 ```
 
 For more detailed information you can check the guide on {@link guide/dev/package_managers/README Installing CKEditor 4 with Package Managers}.
@@ -47,7 +47,7 @@ Instead of downloading CKEditor 4 to your server and hosting it you can also use
 To install the Official CKEditor 4 Angular Component run:
 
 ```bash
-npm install ckeditor4-angular --save
+npm install ckeditor4-angular
 ```
 
 By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/angular/README integration guides} on how it can be changed and how to configure the component to fit you needs.
@@ -57,7 +57,7 @@ By default it will automatically fetch the latest CKEditor 4 [Standard-All prese
 To install the Official CKEditor 4 React Component run:
 
 ```bash
-npm install ckeditor4-react --save
+npm install ckeditor4-react
 ```
 
 By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/react/README integration guides} on how it can be changed and how to configure the component to fit you needs.

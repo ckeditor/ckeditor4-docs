@@ -48,11 +48,11 @@ By default CKEditor will be placed in the `node_modules/ckeditor4` directory.
 
 ### Adding CKEditor 4 as a Dependency Using the `package.json` File
 
-You may add CKEditor 4 to the dependencies list by using the `--save` flag:
+Using `npm install` command will automatically create a reference to `ckeditor4` in your `package.json` file:
 
-    npm install ckeditor4 --save
+    npm install ckeditor4
 
-or by manually editing your `package.json` file. Just make sure to create a reference to `ckeditor4` in the `dependencies` property.
+You should see the following reference in the `dependencies` property:
 
 ```js
 {

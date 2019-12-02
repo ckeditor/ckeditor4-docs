@@ -23,7 +23,7 @@ CKEditor 4 offers a native React integration through the CKEditor 4 React compon
 In order to create an editor instance in React, install the `ckeditor4-react` npm package as a dependency of your project:
 
 ```plaintext
-npm install --save ckeditor4-react
+npm install ckeditor4-react
 ```
 
 After installing, the CKEditor 4 React component can be imported in your JavaScript code:

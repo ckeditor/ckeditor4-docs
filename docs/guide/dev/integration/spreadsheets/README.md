@@ -29,7 +29,7 @@ There are a few methods that you can use in order to add the Spreadsheet plugin 
 The Spreadsheet plugin for CKEditor 4 is available through npm. To use it, install the `ckeditor4-plugin-spreadsheet` npm package as a dependency of your project:
 
 ```plaintext
-npm install --save ckeditor4-plugin-spreadsheet
+npm install ckeditor4-plugin-spreadsheet
 ```
 
 If CKEditor 4 was also installed through npm (using the `ckeditor4` package) in your project, the plugin will create a symbolic link itself in the CKEditor 4 `plugins/` directory so you do not need to move or copy any files.

@@ -13,30 +13,30 @@ For licensing, see LICENSE.md.
 # CKEditor 4 WYSIWYG Editor Webpack Integration
 
 <info-box info="">
-	The sample of the integration is provided through the <a href="https://github.com/ckeditor/ckeditor4-webpack-template"><code>ckeditor4-webpack-template</code> GitHub template repository</a>. It can be used as a quick starting point for your project.
+	A working sample of the webpack integration is provided through the <a href="https://github.com/ckeditor/ckeditor4-webpack-template"><code>ckeditor4-webpack-template</code> GitHub template repository</a>. It can be used as a quick starting point for your project.
 </info-box>
 
-Integrating CKEditor 4 with webpack requires few simple steps to prepare correct webpack configuration to create working bundle.
+Integrating CKEditor 4 with webpack requires a few simple steps to prepare a correct webpack configuration for a working bundle.
 
 ## Basic Webpack Integration
 
-In order to use CKEditor 4 with webpack, start with creating a new project:
+In order to use CKEditor 4 with webpack, create a new project:
 
-```sh
+```
 mkdir ckeditor4-webpack
 cd ckeditor4-webpack
 npm init -y
 ```
 
-After creating the project, install necessary development dependencies:
+After creating the project, install the necessary development dependencies:
 
-```sh
+```
 npm install --save-dev ckeditor4 webpack webpack-cli
 ```
 
-After installing, create webpack configuration in `webpack.config.js` file. Sample configuration is presented below:
+After installing, create the webpack configuration in the `webpack.config.js` file. A configuration example is presented below:
 
-```javascript
+```js
 'use strict';
 
 const path = require( 'path' );
@@ -57,28 +57,28 @@ module.exports = {
 
 The next step is creating the source code, which will be contained in two files: `src/basePath.js` and `src/index.js`. The main file, `src/index.js`, should look like below:
 
-```javascript
+```js
 import './basePath.js';
 import 'ckeditor4';
 
-// Insert yout code here.
-// The code below is a sample of using CKEditor 4.
+// Insert your code here.
+// The code below is an example of using CKEditor 4.
 CKEDITOR.replace( 'app', {
 	extraPlugins: 'iframe'
 } );
 ```
 
-The remaining file, `src/basePath.js`, will contain only setting the correct path to CKEditor 4:
+The remaining file, `src/basePath.js`, will be used to set the correct path to CKEditor 4:
 
-```javascript
+```js
 window.CKEDITOR_BASEPATH = '/node_modules/ckeditor4/';
 ```
 
-This variable has to be in the separate file to be loaded before `ckeditor4` package. It's needed to bypass the way in which webpack works, moving all imports before the code containing them.
+This variable needs to be in a separate file that has to be loaded before the `ckeditor4` package. This is needed to bypass the way in which webpack works, moving all imports before the code containing them.
 
-The final step is to build the app containing CKEditor 4:
+The final step is to build the application containing CKEditor 4 WYSIWYG editor:
 
-```javascript
+```js
 npx webpack
 ```
 
@@ -101,4 +101,4 @@ The bundled code will appear in the `dist/app.js` file. It can be used on a webp
 
 ## CKEditor 4 Webpack Integration Template
 
-The more complex integration, featuring transpiling the code with Babel and minimizing with Terser, is available in [`ckeditor4-webpack-template` GitHub template repository](https://github.com/ckeditor/ckeditor4-webpack-template). It can be used as a starting point for web apps projects.
+A more complex integration, featuring transpiling the code with Babel and minimizing with Terser, is available in the dedicated [`ckeditor4-webpack-template` GitHub template repository](https://github.com/ckeditor/ckeditor4-webpack-template). It can be used as a starting point for web application projects.

@@ -14,11 +14,11 @@ For licensing, see LICENSE.md.
 
 The aim of this article is to get you up and running with CKEditor in two minutes.
 
-## Install from the NPM registry
+## Install from the npm Registry
 
-To install [the official CKEditor 4 NPM package](https://www.npmjs.com/package/ckeditor4) run:
+To install [the official CKEditor 4 npm package](https://www.npmjs.com/package/ckeditor4) run:
 
-```bash
+```
 npm install ckeditor4
 ```
 
@@ -40,13 +40,13 @@ Unpack (extract) the downloaded `.zip` archive to the `ckeditor4` directory in t
 
 Instead of downloading CKEditor 4 to your server and hosting it you can also use the CDN version. Go to the [official CKEditor CDN](http://cdn.ckeditor.com/) page for more details.
 
-## Integrate with popular frameworks
+## Integrate with Popular Frameworks
 
 ### CKEditor 4 Angular Integration
 
 To install the Official CKEditor 4 Angular Component run:
 
-```bash
+```
 npm install ckeditor4-angular
 ```
 
@@ -56,7 +56,7 @@ By default it will automatically fetch the latest CKEditor 4 [Standard-All prese
 
 To install the Official CKEditor 4 React Component run:
 
-```bash
+```
 npm install ckeditor4-react
 ```
 
@@ -73,7 +73,7 @@ CKEditor 4 comes with a sample that you can check to verify if the installation 
 Open the following page in the browser to see the sample:
 `http://<your site="">/ckeditor4/samples/index.html`
 
-When using the NPM package open the following:
+When using the npm package open the following:
 `http://<your site="">/node_modules/ckeditor4/samples/index.html`
 
 <img src="%BASE_PATH%/assets/img/ckeditor_sample.png" alt="CKEditor 4 sample available in each installation package" width="802" height="530">

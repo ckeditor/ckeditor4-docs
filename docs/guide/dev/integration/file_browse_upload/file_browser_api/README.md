@@ -41,6 +41,7 @@ For example:
 Suppose that CKEditor was created using the following JavaScript call:
 
 	CKEDITOR.replace( 'editor2', {
+	    filebrowserUploadMethod: 'form', //required since CKEditor 4.9
 		filebrowserBrowseUrl: '/browser/browse.php?type=Files',
 		filebrowserUploadUrl: '/uploader/upload.php?type=Files'
 	});

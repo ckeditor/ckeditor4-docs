@@ -43,8 +43,8 @@ This part describes features that are targeted at end users and affect their ove
     * {@link features/embed/README Embedding Media Resources with oEmbed}
     * {@link features/codesnippet/README Inserting Code Snippets}
     * {@link features/codesnippetgeshi/README Inserting Code Snippets Using GeSHi}
+    * {@link features/mathtype/README Creating Mathematical and Chemical Formulas with MathType}
     * {@link features/mathjax/README Creating Mathematical Formulas with MathJax}
-    * {@link features/mathjax/README Creating Mathematical and Chemical Formulas with MathType}
     * {@link features/placeholder/README Using Placeholders}
     * {@link features/drop_paste/README Dropping and Pasting into Editor Content}
 * **Styling and Formatting** &ndash; Working with text styling and formatting.

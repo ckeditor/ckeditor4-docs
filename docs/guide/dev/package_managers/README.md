@@ -44,7 +44,7 @@ In order to fetch the most recent build, execute the following command:
 
 	npm install ckeditor4
 
-The above command will install `standard-all` preset of the CKEditor. It's also possible to install different preset using repository `ckeditor/ckeditor4-releases#<BRANCH_NAME>` dependency instead of NPM package where `<BRANCH_NAME>` points into correct [CKEditor4 Release branch](https://github.com/ckeditor/ckeditor4-releases/branches) name, e.g.
+The above command will install the `standard-all` preset of CKEditor 4. It is also possible to install a different preset using the `ckeditor/ckeditor4-releases#<BRANCH_NAME>` repository dependency instead of the npm package. The `<BRANCH_NAME>` should then point to the correct [CKEditor4 Release branch](https://github.com/ckeditor/ckeditor4-releases/branches) name, e.g.
 
 	npm install ckeditor/ckeditor4-releases#full/latest
 

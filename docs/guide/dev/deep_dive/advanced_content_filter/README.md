@@ -114,7 +114,7 @@ Read more about the paste filter in the {@linkapi CKEDITOR.config#pasteFilter } 
 
 ## Supplying Paste Tools with ACF
 
-Plugins derived from Paste Tools family, like Paste From Word and Paste From Google Docs ensures their filtering features used to clean up content provided by 3rd party apps. Nevertheless, they are mostly the first brigade against incorrect, nonsemantic HTML packed into browser clipboard. These plugins will fix HTML structure and clean up meaningless code, but at the same time try to preserve as much information as possible which can be correctly consumed later. A significant part of the content preparation goes to a huge CKEditor 4 plugins ecosystem with predefined ACF rules used to semantically improve HTML content.
+Plugins derived from [Paste Tools](https://ckeditor.com/cke4/addon/pastetools) family, like [Paste From Word](https://ckeditor.com/cke4/addon/pastefromword) and [Paste From Google Docs](https://ckeditor.com/cke4/addon/pastefromgdocs) ensures their filtering features used to clean up content provided by 3rd party apps. Nevertheless, they are mostly the first brigade against incorrect, nonsemantic HTML packed into browser clipboard. These plugins will fix HTML structure and clean up meaningless code, but at the same time try to preserve as much information as possible which can be correctly consumed later. A significant part of the content preparation goes to a huge CKEditor 4 plugins ecosystem with predefined ACF rules used to semantically improve HTML content.
 
 As an example, when pasting an image from MS Word document, you should enable one of the image plugins like Image or Enchanced Image, otherwise, the image will be removed from content by default ACF mode.
 

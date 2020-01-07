@@ -112,6 +112,24 @@ In browsers where it is possible to recognize whether the content comes (was cop
 
 Read more about the paste filter in the {@linkapi CKEDITOR.config#pasteFilter } documentation.
 
+## Supplying Paste Tools with ACF
+
+Plugins derived from Paste Tools family, like Paste From Word and Paste From Google Docs ensures their filtering features used to clean up content provided by 3rd party apps. Nevertheless, they are mostly the first brigade against incorrect, nonsemantic HTML packed into browser clipboard. These plugins will fix HTML structure and clean up meaningless code, but at the same time try to preserve as much information as possible which can be correctly consumed later. A significant part of the content preparation goes to a huge CKEditor 4 plugins ecosystem with predefined ACF rules used to semantically improve HTML content.
+
+As an example, when pasting an image from MS Word document, you should enable one of the image plugins like Image or Enchanced Image, otherwise, the image will be removed from content by default ACF mode.
+
+However, as you probably already read, you can still enhance this behavior by your custom ACF rules and explicitly tell that image should be still preserved despite missing image plugins:
+
+	config.extraAllowedContent = 'img';
+
+### Remove font styles example
+
+One of the features which have been deprecated lately in favor of ACF is {@linkapi CKEDITOR.config#pasteTools_removeFontStyles}, so let's see how the same result could be accomplished with ACF:
+
+	config.disallowedContent = 'span{font,font-size,font-family}';
+
+The above rule will exactly tell to remove all font styles from pasted HTML reflecting the same logic as deprecated {@linkapi CKEDITOR.config#pasteTools_removeFontStyles} option. Font styles will be trimmed down with {@linkapi CKEDITOR.config#disallowedContent } setting.
+
 ## Advanced Content Filter Demos
 
 The following samples are available for two ACF modes:

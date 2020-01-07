@@ -97,7 +97,7 @@ HTML exposed by Microsoft Word does not comply to any imaginable rules. It is a 
 
 Starting from version 4.6 of CKEditor the following options were deprecated:
 
-* {@linkapi CKEDITOR.config.pasteFromWordRemoveFontStyles CKEDITOR.config.pasteFromWordRemoveFontStyles} (deprecated in favor of Advanced Content Filter, see {@link guide/dev_advanced_content_filter.html#remove-font-styles-example} for more information)
+* {@linkapi CKEDITOR.config.pasteFromWordRemoveFontStyles CKEDITOR.config.pasteFromWordRemoveFontStyles} (deprecated in favor of Advanced Content Filter, see {@link guide/dev/deep_dive/advanced_content_filter/README#remove-font-styles-example Remove font styles example})
 
 For CKEditor versions older than 4.6 the following options were available, too:
 

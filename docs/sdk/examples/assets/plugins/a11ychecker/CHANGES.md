@@ -3,7 +3,7 @@ CKEditor Accessibility Checker Changelog
 
 [CKEditor Accessibility Checker](https://cksource.com/accessibility-checker/)
 
-Copyright (c) 2014-2017, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2014-2020, CKSource - Frederico Knabben. All rights reserved.
 
 ## Version 1.1.0
 

@@ -6,7 +6,7 @@ menu-title: Paste from Google Docs
 meta-title-short: Paste from Google Docs
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

@@ -55,113 +55,101 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	</footer>
 
 <textarea type="text/template" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
-<template>
-	<div>
-		<ckeditor :value="editorData"></ckeditor>
-	</div>
-</template>
+<div id="app">
+	<ckeditor value="<p>This is a CKEditor 4 WYSIWYG editor instance created with ️Vue.</p>"></ckeditor>
+</div>
 
 <script>
-export default {
-	name: 'classic-editor',
-	data() {
-		return {
-			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with ️Vue.</p>'
-		}
-	}
-}
+	Vue.use( CKEditor );
+
+	new Vue( {
+		el: '#app'
+	} );
 </script>
 </textarea>
 
 <textarea type="text/template" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
-<template>
-	<div>
-		<ckeditor :value="editorData" type="inline"></ckeditor>
-	</div>
-</template>
+<div id="app">
+	<ckeditor type="inline" value="<p>This is a CKEditor 4 WYSIWYG editor instance created with ️Vue.</p>"></ckeditor>
+</div>
 
 <script>
-export default {
-	name: 'inline-editor',
-	data() {
-		return {
-			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with ️Vue.</p>'
-		}
-	}
-}
+	Vue.use( CKEditor );
+
+	new Vue( {
+		el: '#app'
+	} );
 </script>
 </textarea>
 
 <textarea type="text/template" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
-<template>
-	<div>
-		<ckeditor
-			@ready="customHandler"
-			@focus="customHandler"
-			@blur="customHandler"
-			@input="customHandler"
+<div id="app">
+	<ckeditor
+		@ready="customHandler"
+		@focus="customHandler"
+		@blur="customHandler"
+		@input="customHandler"
 
-			:config="editorConfig"
-			:value="editorData"
+		:config="editorConfig"
+		:value="editorData"
 		></ckeditor>
-	</div>
-</template>
-
+</div>
 <script>
-export default {
-	name: 'custom-editor',
-	data: function() {
-		return {
-			events: [],
-			editorData: 'This is a CKEditor 4 instance created with Vue.',
-			editorConfig: {
-				toolbar: [
-					[ 'Source' ],
-					[ 'Styles', 'Format', 'Font', 'FontSize' ],
-					[ 'Bold', 'Italic' ],
-					[ 'Undo', 'Redo' ],
-					[ 'About' ]
-				]
+	Vue.use( CKEditor );
+
+	new Vue( {
+		el: '#app',
+		data: function() {
+			return {
+				editorData: 'This is a CKEditor 4 instance created with Vue.',
+				editorConfig: {
+					toolbar: [
+						[ 'Source' ],
+						[ 'Styles', 'Format', 'Font', 'FontSize' ],
+						[ 'Bold', 'Italic' ],
+						[ 'Undo', 'Redo' ],
+						[ 'About' ]
+					]
+				}
 			}
-		};
-	},
-	methods: {
-		customHandler: function( event ) {
-			console.log( event );
+		},
+		methods: {
+			customHandler: function( event ) {
+				console.log( event );
+			}
 		}
-	}
-}
+	} );
 </script>
 </textarea>
 
 <textarea type="text/template" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
-<template>
-	<div>
-		<textarea v-model.lazy="editorData"></textarea>
-		<ckeditor
-			:config="editorConfig"
-			v-model="editorData"
+<div id="app">
+	<textarea v-model.lazy="editorData" style="width: 100%"></textarea>
+	<ckeditor
+		v-model="editorData"
+		:config="editorConfig"
 		></ckeditor>
-	</div>
-</template>
-
+</div>
 <script>
-export default {
-	name: 'data-binding',
-	data() {
-		return {
-			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with Vue.</p>',
-			editorConfig: {
-				toolbar: [
-					[ 'Source' ],
-					[ 'Bold', 'Italic' ],
-					[ 'Undo', 'Redo' ],
-					[ 'About' ]
-				]
+	Vue.use( CKEditor );
+
+	new Vue( {
+		el: '#app',
+		data: function() {
+			return {
+				editorData: 'This is a CKEditor 4 instance created with Vue.',
+				editorConfig: {
+					toolbar: [
+						[ 'Source' ],
+						[ 'Styles', 'Format', 'Font', 'FontSize' ],
+						[ 'Bold', 'Italic' ],
+						[ 'Undo', 'Redo' ],
+						[ 'About' ]
+					]
+				}
 			}
 		}
-	}
-}
+	} );
 </script>
 </textarea>
 </body>

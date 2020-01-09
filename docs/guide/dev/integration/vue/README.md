@@ -249,7 +249,7 @@ To execute an action when the editor data changes, use the [`input`](#input) eve
 
 ### `v-model`
 
-A [standard directive](https://vuejs.org/v2/api/#v-model) for form inputs in Vue. Unlike [`value`](#setting-initial-data), it creates a two–way data binding, which:
+A [standard directive](https://vuejs.org/v2/api/#v-model) for form inputs in Vue. Unlike [`value`](#value), it creates a two–way data binding, which:
 
 * sets the initial editor content,
 * automatically updates the state of the application as the editor content changes (e.g. as the user types),

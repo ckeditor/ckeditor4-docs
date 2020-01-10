@@ -114,21 +114,21 @@ Read more about the paste filter in the {@linkapi CKEDITOR.config#pasteFilter } 
 
 ## Supplying Paste Tools
 
-Plugins derived from [Paste Tools](https://ckeditor.com/cke4/addon/pastetools) family, like [Paste From Word](https://ckeditor.com/cke4/addon/pastefromword) and [Paste From Google Docs](https://ckeditor.com/cke4/addon/pastefromgdocs) ensures their filtering features used to clean up content provided by 3rd party apps. Nevertheless, they are mostly the first filter against incorrect, nonsemantic HTML packed into browser clipboard. These plugins will fix HTML structure and clean up meaningless code, but at the same time try to preserve as much information as possible which can be correctly consumed later. A significant part of the content preparation goes to a huge CKEditor 4 plugins ecosystem with predefined ACF rules used to semantically improve HTML content.
+Plugins derived from [Paste Tools](https://ckeditor.com/cke4/addon/pastetools) family, like [Paste From Word](https://ckeditor.com/cke4/addon/pastefromword) and [Paste From Google Docs](https://ckeditor.com/cke4/addon/pastefromgdocs) ensures their filtering features clean up content provided by 3rd party applications. Nevertheless, they are mostly the first filter against incorrect, non-semantic HTML pasted into the editor. These plugins fix HTML structure and clean up meaningless code, but at the same time try to preserve as much information as possible which can be correctly consumed further and displayed in the editor. A significant part of the content preparation goes to a huge CKEditor 4 plugins ecosystem with predefined ACF rules used to semantically improve HTML content.
 
-As an example, when pasting an image from MS Word document, you should enable one of the image plugins like [Image](https://ckeditor.com/cke4/addon/image) or [Enchanced Image](https://ckeditor.com/cke4/addon/image2), otherwise, the image will be removed from content by default ACF mode.
+As an example, when pasting an image from MS Word document, you should enable one of the image plugins like [Image](https://ckeditor.com/cke4/addon/image) or [Enchanced Image](https://ckeditor.com/cke4/addon/image2), otherwise, the image will be removed from content by default ACF configuration.
 
-However, as you probably already read, you can still enhance this behavior by your custom ACF rules and explicitly tell that image should be still preserved despite missing image plugins:
+However, you can still enhance this behavior by adding custom ACF rules and explicitly defining that images should be still preserved despite missing image plugins:
 
 	config.extraAllowedContent = 'img';
 
 ### Remove font styles example
 
-One of the features which have been deprecated lately in favor of ACF is {@linkapi CKEDITOR.config#pasteTools_removeFontStyles}, so let's see how the same result could be accomplished with ACF:
+One of the features which have been deprecated recently in favor of ACF is {@linkapi CKEDITOR.config#pasteTools_removeFontStyles}, so let's see how the same result could be accomplished with ACF:
 
 	config.disallowedContent = 'span{font,font-size,font-family}';
 
-The above rule will exactly tell to remove all font styles from pasted HTML reflecting the same logic as deprecated {@linkapi CKEDITOR.config#pasteTools_removeFontStyles} option. Font styles will be trimmed down with {@linkapi CKEDITOR.config#disallowedContent } setting.
+Using the above rule with {@linkapi CKEDITOR.config#disallowedContent} setting will result in removing all font styles from pasted HTML reflecting the same logic as deprecated {@linkapi CKEDITOR.config#pasteTools_removeFontStyles} option.
 
 ## Advanced Content Filter Demos
 

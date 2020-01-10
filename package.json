@@ -65,6 +65,7 @@
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
+    "postinstall": "cd node_modules/ckeditor4-vue && npm i && npm run build",
     "build-angular": "webpack --config scripts/integrations/angular/webpack.config.js",
     "build-react": "webpack --config scripts/integrations/react/webpack.config.js",
     "build-vue": "webpack --config scripts/integrations/vue/webpack.config.js"

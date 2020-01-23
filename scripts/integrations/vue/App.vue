@@ -1,11 +1,7 @@
 <template>
 	<div id="app">
 		<nav>
-			<ul>
-				<li><router-link to="/">Editor Types</router-link></li>
-				<li><router-link to="/configuration">Events and Directives</router-link></li>
-				<li><router-link to="/2-way-binding">Two-way Data Binding</router-link></li>
-			</ul>
+			<ul><li><router-link to="/">Editor Types</router-link></li><li><router-link to="/configuration">Events and Directives</router-link></li><li><router-link to="/2-way-binding">Two-way Data Binding</router-link></li></ul>
 		</nav>
 
 		<router-view></router-view>

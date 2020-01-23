@@ -31,8 +31,6 @@ Now you need to enable the CKEditor Vue component in your application. There are
 * [via a direct script include](#direct-script-include),
 * [by using ES6 module imports](#using-es6-modules).
 
-Optionally, you can [use the component locally](#using-component-locally).
-
 ### Direct script include
 
 This is the quickest way to start using CKEditor in your project. Assuming [Vue is installed](https://vuejs.org/v2/guide/installation.html), include the `<script>` tags for the WYSIWYG editor component and the build:

@@ -161,7 +161,7 @@ If you do not want the CKEditor component to be enabled globally, you can skip t
 
 ### `editorUrl`
 
-By default, the CKEditor 4 Vue component loads the [standard preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `editorUrl` directive to point to the desired CKEditor script location:
+By default, the CKEditor 4 Vue component loads the [standard-all preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `editorUrl` directive to point to the desired CKEditor script location:
 
 ```html
 <template>

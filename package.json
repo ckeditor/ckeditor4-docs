@@ -23,7 +23,7 @@
     "ckeditor4-angular": "^1.0.0",
     "ckeditor4-plugin-spreadsheet": "^1.1.0",
     "ckeditor4-react": "^1.0.0",
-    "ckeditor4-vue": "https://github.com/ckeditor/ckeditor4-vue#develop",
+    "ckeditor4-vue": "https://github.com/ckeditor/ckeditor4-vue#development",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.7",
     "dargs": "~4.0.0",

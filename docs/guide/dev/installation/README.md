@@ -70,7 +70,7 @@ To install the Official CKEditor 4 Vue Component run:
 npm install ckeditor4-vue
 ```
 
-By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/vue/README integration guide} on how it can be changed and how to configure the component to fit you needs.
+By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/vue/README integration guides} on how it can be changed and how to configure the component to fit you needs.
 
 ## Trying Out
 

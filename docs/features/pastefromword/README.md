@@ -92,17 +92,17 @@ In the example above you can see that after pasting into CKEditor, the first lis
 
 HTML exposed by Microsoft Word does not comply to any imaginable rules. It is a poetry of what can be done wrong. Therefore, a separate filter had to be created to normalize this content. It is implemented in the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin and, beside the {@link features/drop_paste/README#filtering-content standard filtering options}, it has additional settings:
 
-* {@linkapi CKEDITOR.config.pasteFromWordCleanupFile CKEDITOR.config.pasteFromWordCleanupFile}
-* {@linkapi CKEDITOR.config.pasteFromWordPromptCleanup CKEDITOR.config.pasteFromWordPromptCleanup}
+* {@linkapi CKEDITOR.config.pasteFromWordCleanupFile `CKEDITOR.config.pasteFromWordCleanupFile`}
+* {@linkapi CKEDITOR.config.pasteFromWordPromptCleanup `CKEDITOR.config.pasteFromWordPromptCleanup`}
 
 Starting from version 4.6 of CKEditor the following options were deprecated:
 
-* {@linkapi CKEDITOR.config.pasteFromWordRemoveFontStyles CKEDITOR.config.pasteFromWordRemoveFontStyles} (deprecated in favor of Advanced Content Filter, see {@link guide/dev/deep_dive/advanced_content_filter/README#remove-font-styles-example Remove font styles example})
+* {@linkapi CKEDITOR.config.pasteFromWordRemoveFontStyles `CKEDITOR.config.pasteFromWordRemoveFontStyles`} (deprecated in favor of Advanced Content Filter, see {@link guide/dev/deep_dive/advanced_content_filter/README#example-removing-font-styles an example of removing font styles})
 
 For CKEditor versions older than 4.6 the following options were available, too:
 
-* {@linkapi CKEDITOR.config.pasteFromWordNumberedHeadingToList CKEDITOR.config.pasteFromWordNumberedHeadingToList}
-* {@linkapi CKEDITOR.config.pasteFromWordRemoveStyles CKEDITOR.config.pasteFromWordRemoveStyles}
+* {@linkapi CKEDITOR.config.pasteFromWordNumberedHeadingToList `CKEDITOR.config.pasteFromWordNumberedHeadingToList`}
+* {@linkapi CKEDITOR.config.pasteFromWordRemoveStyles `CKEDITOR.config.pasteFromWordRemoveStyles`}
 
 ## Paste from Word Demo
 

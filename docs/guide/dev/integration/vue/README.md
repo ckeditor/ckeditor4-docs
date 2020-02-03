@@ -93,7 +93,7 @@ Vue.use( CKEditor );
 ```
 
 <info-box>
-	Instead of calling `Vue.use()`, you can always [use the component locally](#using-component-locally).
+	Instead of calling `Vue.use()`, you can always [use the component locally](#using-the-component-locally).
 </info-box>
 
 The following example showcases a single–file component of the application. Use the `<ckeditor>` component in your template:

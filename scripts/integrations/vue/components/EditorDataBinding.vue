@@ -2,7 +2,7 @@
 	<div>
 		<h2>Two-way data binding</h2>
 		<p>
-			Using <code>v-model</code> directive, it is possible to create a simple two-way data binding between the CKEditor 4 WYSIWYG editor component and other components, for example the preview component that renders the content of the editor.
+			Using the <code>v-model</code> directive, it is possible to create a simple two-way data binding between the CKEditor 4 WYSIWYG editor component and other components, for example the preview component that renders the content of the editor.
 		</p>
 
 		<textarea class="source-editor" v-model.lazy="editorData"></textarea>

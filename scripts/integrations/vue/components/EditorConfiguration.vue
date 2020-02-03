@@ -1,6 +1,12 @@
 <template>
 	<div>
-		<h2>Editor events</h2>
+		<h2>WYSIWYG editor with custom event handlers and configuration</h2>
+		<p>
+			Editors created with the CKEditior 4 Vue component are highly customizable. It is possible to overwrite every configuration setting using the <code>config</code> directive and passing an object containing the configuration to it.
+		</p>
+		<p>
+			Additionally, the CKEditor 4 WYSIWYG editor component for Vue allows you to bind predefined component events using <code>v-on</code> or <code>@</code> modifiers. The following example shows how to bind several common CKEditor 4 events.
+		</p>
 
 		<ckeditor
 			@ready="logEvent('ready', $event)"

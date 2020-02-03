@@ -26,7 +26,7 @@ In order to create an editor instance in Vue, install the `ckeditor4-vue` npm pa
 npm install ckeditor4-vue
 ```
 
-Now you need to enable the CKEditor Vue component in your application. There are 2 ways to do so:
+Now you need to enable the CKEditor 4 Vue component in your application. There are two ways to do so:
 
 * [via a direct script include](#direct-script-include),
 * [by using ES6 module imports](#using-es6-modules).
@@ -47,7 +47,7 @@ Vue.use( CKEditor );
 ```
 
 <info-box>
-	Instead of calling `Vue.use()`, you can always [use the component locally](#using-component-locally).
+	Instead of calling `Vue.use()`, you can always [use the component locally](#using-the-component-locally).
 </info-box>
 
 Use the `<ckeditor>` component in your template:
@@ -73,7 +73,7 @@ const app = new Vue( {
 } );
 ```
 
-Voilà! You should see CKEditor 4 running in your Vue.js app.
+Voilà! You should see CKEditor 4 running in your Vue.js application.
 
 <info-box>
 	See the list of supported [directives](#component-directives) and [events](#component-events) that will help you configure the component.
@@ -127,9 +127,9 @@ The following example showcases a single–file component of the application. Us
 	See the list of supported [directives](#component-directives) and [events](#component-events) that will help you configure the component.
 </info-box>
 
-### Using component locally
+### Using the component locally
 
-If you do not want the CKEditor component to be enabled globally, you can skip the `Vue.use( CKEditor )` part entirely. Instead, configure it in the `components` property of your view.
+If you do not want the CKEditor 4 component to be enabled globally, you can skip the `Vue.use( CKEditor )` part entirely. Instead, configure it in the `components` property of your view.
 
 ```html
 <template>
@@ -157,11 +157,11 @@ If you do not want the CKEditor component to be enabled globally, you can skip t
 </script>
 ```
 
-## Component directives
+## Component Directives
 
 ### `editorUrl`
 
-By default, the CKEditor 4 Vue component loads the [standard-all preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `editorUrl` directive to point to the desired CKEditor script location:
+By default, the CKEditor 4 Vue component loads the [standard-all preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `editorUrl` directive to point to the desired CKEditor 4 script location:
 
 ```html
 <template>
@@ -225,7 +225,7 @@ Custom configuration can be passed to the editor with the `config` directive of 
 </script>
 ```
 
-{@linkapi CKEDITOR.config All configuration} options can be changed this way.
+{@linkapi CKEDITOR.config All configuration options} can be changed this way.
 
 ### `tag-name`
 
@@ -293,7 +293,7 @@ This directive controls the {@linkapi CKEDITOR.editor#readOnly `readOnly`} prope
 <ckeditor readOnly="true"></ckeditor>
 ```
 
-Note that you can still pass `readOnly` property as an [`config`](#config) directive, however, [`read-only`](#read-only) directive will take precedence over configuration property if set.
+Note that you can still pass `readOnly` property as a [`config`](#config) directive, however, the [`read-only`](#read-only) directive will take precedence over the configuration property if set.
 
 ## Component events
 
@@ -323,7 +323,7 @@ Corresponds to the {@linkapi CKEDITOR.editor#event-blur `blur`} editor event.
 
 ### `input`
 
-Corresponds to the {@linkapi CKEDITOR.editor#event-change `change`} editor event. Called only once editor's data changed. Note that `change` event requires [`Undo`](https://ckeditor.com/cke4/addon/undo) plugin to work, otherwise, it will be called only one time on editor initialization. See also the [`v-model` directive](#v-model) to learn more.
+Corresponds to the {@linkapi CKEDITOR.editor#event-change `change`} editor event. Called only once the editor's data changed. Note that the `change` event requires the [`Undo`](https://ckeditor.com/cke4/addon/undo) plugin to work. Otherwise it will be called only one time on the editor initialization. See also the [`v-model` directive](#v-model) to learn more.
 
 ```html
 <ckeditor @input="onEditorInput"></ckeditor>

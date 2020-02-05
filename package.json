@@ -23,7 +23,7 @@
     "ckeditor4-angular": "^1.0.0",
     "ckeditor4-plugin-spreadsheet": "^1.1.0",
     "ckeditor4-react": "^1.0.0",
-    "ckeditor4-vue": "https://github.com/ckeditor/ckeditor4-vue#development",
+    "ckeditor4-vue": "^0.1.0",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.7",
     "dargs": "~4.0.0",
@@ -65,7 +65,6 @@
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
-    "postinstall": "cd node_modules/ckeditor4-vue && npm i && npm run build",
     "build-angular": "webpack --config scripts/integrations/angular/webpack.config.js",
     "build-react": "webpack --config scripts/integrations/react/webpack.config.js",
     "build-vue": "webpack --config scripts/integrations/vue/webpack.config.js"

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.html or https://sdk.ckeditor.com/license.html.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="CKEditor 4 Vue integration. Using CKEditor 4 as a Vue component.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, vue, integration">
+	<meta name="sdk-samples" content="Classic editor|Inline editor|Editor with custom event handlers and configuration|Two-way data binding">
+	<meta name="sdk-category" content="sdk-framework-integration">
+	<meta name="sdk-order" content="10">
+	<title>Vue Integration</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/vue/samples.css">
+	<script src="../../ckeditor4/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>CKEditor 4 WYSIWYG Editor Vue Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_vue.html">Documentation</a></h1>
+
+			<p>
+				The <strong>Vue integration</strong> allows you to implement CKEditor 4 as a <a href="https://vuejs.org/">Vue</a> component, using the <code>&lt;ckeditor /&gt;</code> tag.
+			</p>
+
+			<p>
+				The following examples showcase the most important features of the CKEditor 4 WYSIWYG editor Vue integration.
+			</p>
+
+			<p>
+				<strong>Click the tab below to change an example.</strong>
+			</p>
+
+			<div id="app"></div>
+			<script src="assets/vue/main.js"></script>
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+
+<textarea type="text/template" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
+<div id="app">
+	<ckeditor value="<p>This is a CKEditor 4 WYSIWYG editor instance created with ️Vue.</p>"></ckeditor>
+</div>
+
+<script>
+	Vue.use( CKEditor );
+
+	new Vue( {
+		el: '#app'
+	} );
+</script>
+</textarea>
+
+<textarea type="text/template" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
+<div id="app">
+	<ckeditor type="inline" value="<p>This is a CKEditor 4 WYSIWYG editor instance created with ️Vue.</p>"></ckeditor>
+</div>
+
+<script>
+	Vue.use( CKEditor );
+
+	new Vue( {
+		el: '#app'
+	} );
+</script>
+</textarea>
+
+<textarea type="text/template" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
+<div id="app">
+	<ckeditor
+		@ready="customHandler"
+		@focus="customHandler"
+		@blur="customHandler"
+		@input="customHandler"
+
+		:config="editorConfig"
+		:value="editorData"
+		></ckeditor>
+</div>
+<script>
+	Vue.use( CKEditor );
+
+	new Vue( {
+		el: '#app',
+		data: function() {
+			return {
+				editorData: 'This is a CKEditor 4 instance created with Vue.',
+				editorConfig: {
+					toolbar: [
+						[ 'Source' ],
+						[ 'Styles', 'Format', 'Font', 'FontSize' ],
+						[ 'Bold', 'Italic' ],
+						[ 'Undo', 'Redo' ],
+						[ 'About' ]
+					]
+				}
+			}
+		},
+		methods: {
+			customHandler: function( event ) {
+				console.log( event );
+			}
+		}
+	} );
+</script>
+</textarea>
+
+<textarea type="text/template" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
+<div id="app">
+	<textarea v-model.lazy="editorData" style="width: 100%"></textarea>
+	<ckeditor
+		v-model="editorData"
+		:config="editorConfig"
+		></ckeditor>
+</div>
+<script>
+	Vue.use( CKEditor );
+
+	new Vue( {
+		el: '#app',
+		data: function() {
+			return {
+				editorData: 'This is a CKEditor 4 instance created with Vue.',
+				editorConfig: {
+					toolbar: [
+						[ 'Source' ],
+						[ 'Styles', 'Format', 'Font', 'FontSize' ],
+						[ 'Bold', 'Italic' ],
+						[ 'Undo', 'Redo' ],
+						[ 'About' ]
+					]
+				}
+			}
+		}
+	} );
+</script>
+</textarea>
+</body>
+</html>

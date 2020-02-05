@@ -23,7 +23,7 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 <dt>{@link guide/dev/integration/react/README CKEditor 4 React Integration}</dt>
 <dd>The official CKEditor 4 React integration using a React component. Available as the <code>ckeditor4-react</code> npm package.</dd>
 <dt>{@link guide/dev/integration/vue/README CKEditor 4 Vue Integration}</dt>
-<dd>The official CKEditor 4 Vue integration. Currently under developement.</dd>
+<dd>The official CKEditor 4 Vue integration using a Vue component. Available as the <code>ckeditor4-vue</code> npm package.</dd>
 </dl>
 
 ## Accessibility Checker for CKEditor 4

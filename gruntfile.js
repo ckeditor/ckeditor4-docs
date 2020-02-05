@@ -69,9 +69,10 @@ module.exports = function( grunt ) {
 	// Also there is some conflict between two webpack configurations, building react in same way is working workaround.
 	grunt.registerTask( 'build-angular', buildIntegrationTask( 'angular' ) );
 	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );
+	grunt.registerTask( 'build-vue', buildIntegrationTask( 'vue' ) );
 
 	// Build docs for production/multidocs. It assumes Umberto is run by external process - useful when building as part of projects bundle.
-	grunt.registerTask( 'before-build', [ 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react' ] );
+	grunt.registerTask( 'before-build', [ 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'build-vue' ] );
 
 	grunt.registerTask( 'build', [ 'before-build', 'umberto' ] );
 	grunt.registerTask( 'build-serve', [ 'build', 'connect' ] );

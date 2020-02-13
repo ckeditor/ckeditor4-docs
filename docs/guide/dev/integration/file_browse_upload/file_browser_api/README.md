@@ -12,18 +12,19 @@ For licensing, see LICENSE.md.
 
 # File Browser API - Creating a Custom File Manager
 
-<info-box info=""> CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+<info-box info="">
+	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in {@linksdk standardpreset Standard} and {@linksdk fullpreset Full} presets.
 </info-box>
 
-To connect a file browser/uploader that is already compatible with CKEditor, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
-check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
+<info-box info="">
+	Since <strong>CKEDITOR 4.9.0</strong> all file uploads (including the one initiated by the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin) expect JSON response (like <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_file_upload.html#response-file-uploaded-successfully">this one</a>). If you don't intend to provide one, you should use appropriate config option:
+
+		config.filebrowserUploadMethod = 'form';
+</info-box>
+
+To connect a file browser/uploader that is already compatible with CKEditor, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/), check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
 
 ## Interaction Between CKEditor and File Manager
-
-Note: the following guide needs a configuration option for CKEditor >= 4.9.0
-
-`filebrowserUploadMethod: 'form'`
-
 
 CKEditor automatically sends some additional arguments to the file manager:
 

@@ -30,17 +30,15 @@ To propose a bug fix or a new functionality you need to create a pull request in
 			npm install
 
 	* Set the {@link guide/dev/tests/README testing environment} up, because your changes in the editor code will need tests.
-	* Install Git hooks (currently there is only one hook that will run a linter and code style checker when you make a commit):
+	* You can run linter and code style checker on the files that are staged (modified, added to the commit by `git add`, but not committed yet) by executing the `lint:staged` npm script:
 
-			grunt githooks
+			npm run lint:staged
 
-		Note: You can run linter and code style checker on the files that were modified (and not committed yet) by executing the default Grunt task:
+		Or on the entire repository (it takes a while…):
 
-			grunt
+			npm run lint
 
-		Or on the entire repository (it takes a while...):
-
-			grunt jshint:all && grunt jscs:all
+		Linting will be also done automatically on commiting.
 
 ## Branches
 

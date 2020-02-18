@@ -30,3 +30,7 @@ Please note that since CKEditor 4.1 you need to add {@link guide/dev/acf/README 
 ## Is Pasting from Google Docs Supported?
 
 CKEditor 4.13 introduced a new feature, {@link features/pastefromgoogledocs/README Paste from Google Docs}. To enable this feature, you need to {@link guide/dev/plugins/README add the Paste from Google Docs plugin to your editor build}. By default, the plugin is also available in Standard and Full distributions.
+
+## Is Pasting from LibreOffice Writer Supported?
+
+CKEditor 4.14 introduced a new feature, {@link features/pastefromlibreoffice/README Paste from LibreOffice}. To enable this feature, you need to {@link guide/dev/plugins/README add the Paste from LibreOffice plugin to your editor build}. By default, the plugin is also available in Standard and Full distributions.

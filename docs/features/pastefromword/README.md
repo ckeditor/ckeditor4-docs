@@ -49,7 +49,7 @@ Paste from Word retains the following formatting:
     * Default styles
     * User-defined styles
 
-Paste from Word maintains most of Microsoft Word text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will paste only standard bullets from the bullet library, or will not use a double strikethrough effect. Such elements are replaced by the default ones to resemble your Word content in the most accurate way.
+The Paste from Word plugin maintains most of Microsoft Word text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will paste only standard bullets from the bullet library, or will not use a double strikethrough effect. Such elements are replaced by the default ones to resemble your Word content in the most accurate way.
 
 ## Advanced Paste from Word &mdash; CKEditor 4.6+
 

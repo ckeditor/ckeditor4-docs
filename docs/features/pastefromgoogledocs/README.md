@@ -42,7 +42,7 @@ Paste from Google Docs retains the following formatting:
     * Cell alignment
 * Images
 
-Paste from Google Docs maintains most of Google Docs text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will not handle equations created in Google Docs.
+The Paste from Google Docs plugin maintains most of Google Docs text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will not handle equations created in Google Docs.
 
 ## Sample
 

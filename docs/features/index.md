@@ -38,6 +38,7 @@ This part describes features that are targeted at end users and affect their ove
     * {@link features/pastefromword/README Pasting Content from Microsoft Word}
     * {@link features/pastefromgoogledocs/README Pasting Content from Google Docs}
     * {@link features/pastefromexcel/README Pasting Content from Microsoft Excel}
+    * {@link features/pastefromlibreoffice/README Pasting Content from Libre Office}
     * {@link features/table/README Table Support with Column Resizing}
     * {@link features/embed/README Embedding Media Resources with oEmbed}
     * {@link features/codesnippet/README Inserting Code Snippets}

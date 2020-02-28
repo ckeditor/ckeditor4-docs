@@ -42,7 +42,7 @@ Paste from LibreOffice retains the following formatting:
     * Cell alignment
 * Images
 
-Paste from LibreOffice maintains most of Google Docs text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML.
+The Paste from LibreOffice plugin maintains most of LibreOffice Writer text formatting features with some exceptions related to advanced styling, customizations, or styles that are not supported by HTML.
 
 ## Sample
 

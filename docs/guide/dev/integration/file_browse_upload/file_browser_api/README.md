@@ -17,7 +17,7 @@ For licensing, see LICENSE.md.
 </info-box>
 
 <info-box info="">
-	Since <strong>CKEditor 4.9.0</strong> all file uploads (including the one initiated by the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin) expect JSON response (like <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_file_upload.html#response-file-uploaded-successfully">this one</a>). If you don't intend to provide one, you should use appropriate config option:
+	Since <strong>CKEditor 4.9.0</strong> all file uploads (including the one initiated by the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin) expects JSON response (like <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_file_upload.html#response-file-uploaded-successfully">this one</a>). If you don't intend to provide one, you should use appropriate config option:
 
 		config.filebrowserUploadMethod = 'form';
 </info-box>
@@ -45,7 +45,7 @@ Suppose that CKEditor was created using the following JavaScript call:
 		filebrowserUploadUrl: '/uploader/upload.php?type=Files'
 	});
 
-**Note:** As mentioned before, since CKEditor 4.9.0 you may also need to add `filebrowserUploadMethod: 'form'` config option.
+**Note:** As mentioned before, since **CKEditor 4.9.0** you may also need to add `filebrowserUploadMethod: 'form'` config option.
 
 In order to browse files, CKEditor will call:
 

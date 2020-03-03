@@ -12,54 +12,68 @@ For licensing, see LICENSE.md.
 
 # File Browser API - Creating a Custom File Manager
 
-<info-box info=""> CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+<info-box info="">
+	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in the {@linksdk standardpreset Standard} and {@linksdk fullpreset Full} presets.
 </info-box>
 
-To connect a file browser/uploader that is already compatible with CKEditor, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
-check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
+<info-box info="">
+	Since <strong>CKEditor 4.9</strong> all file uploads, including those initiated by the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin, expect a JSON response (like <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_file_upload.html#response-file-uploaded-successfully">this one</a>). If you do not intend to provide one, you should use an appropriate configuration option:
+
+        config.filebrowserUploadMethod = 'form';
+</info-box>
+
+To connect a file browser/uploader that is already compatible with CKEditor, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](https://ckeditor.com/ckfinder/), check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
 
 ## Interaction Between CKEditor and File Manager
 
 CKEditor automatically sends some additional arguments to the file manager:
 
-* {@linkapi CKEDITOR.editor#name CKEditor} &ndash; the name of the CKEditor instance.
-* {@linkapi CKEDITOR.editor#langCode langCode} &ndash; CKEditor language (`en` for English).
-* `CKEditorFuncNum` &ndash; anonymous function reference number used to pass the URL of a file to CKEditor (a random number).
+* {@linkapi CKEDITOR.editor#name `CKEditor`} &ndash; The name of the CKEditor instance.
+* {@linkapi CKEDITOR.editor#langCode `langCode`} &ndash; CKEditor language (`en` for English).
+* `CKEditorFuncNum` &ndash; Anonymous function reference number used to pass the URL of a file to CKEditor (a random number).
 
 For example:
 
-	CKEditor=editor1&CKEditorFuncNum=1&langCode=en
+```
+CKEditor=editor1&CKEditorFuncNum=1&langCode=en
+```
 
 ### Example 1
 
 Suppose that CKEditor was created using the following JavaScript call:
 
-	CKEDITOR.replace( 'editor2', {
-		filebrowserBrowseUrl: '/browser/browse.php?type=Files',
-		filebrowserUploadUrl: '/uploader/upload.php?type=Files'
-	});
+```js
+CKEDITOR.replace( 'editor2', {
+	filebrowserBrowseUrl: '/browser/browse.php?type=Files',
+	filebrowserUploadUrl: '/uploader/upload.php?type=Files'
+});
+```
+
+**Note:** As mentioned before, since **CKEditor 4.9.0** you may also need to add the {@linkapi CKEDITOR.config#filebrowserUploadMethod `filebrowserUploadMethod: 'form'`} configuration option.
 
 In order to browse files, CKEditor will call:
 
-	/browser/browse.php?type=Files&CKEditor=editor2&CKEditorFuncNum=2&langCode=de
+```
+/browser/browse.php?type=Files&CKEditor=editor2&CKEditorFuncNum=2&langCode=de
+```
 
 The call includes the following elements:
 
-* `/browser/browse.php?type=Files` &ndash; the value of the `filebrowserBrowseUrl` parameter.
-* `&CKEditor=editor2&CKEditorFuncNum=2&langCode=de` &ndash; the information added by CKEditor:
-	* `CKEditor=editor2` &ndash; the name of the CKEditor instance (`editor2`).
-	* `CKEditorFuncNum=2` &ndash; the reference number of an anonymous
-		function that should be used in the {@linkapi CKEDITOR.tools#callFunction callFunction} method.
-	* `langCode=de` &ndash; the language code (in this case: `de` for German). This
+* `/browser/browse.php?type=Files` &ndash; The value of the `filebrowserBrowseUrl` parameter.
+* `&CKEditor=editor2&CKEditorFuncNum=2&langCode=de` &ndash; The information added by CKEditor:
+	* `CKEditor=editor2` &ndash; The name of the CKEditor instance (`editor2`).
+	* `CKEditorFuncNum=2` &ndash; The reference number of an anonymous
+		function that should be used in the {@linkapi CKEDITOR.tools#callFunction `callFunction()`} method.
+	* `langCode=de` &ndash; The language code (in this case: `de` for German). This
 		parameter can be used to send localized error messages.
 
 ## Passing the URL of the Selected File
 
-To send back the file URL from an external file manager, call
-{@linkapi CKEDITOR.tools#callFunction } and pass `CKEditorFuncNum` as the first
-argument:
+To send back the file URL from an external file manager, call {@linkapi CKEDITOR.tools#callFunction `callFunction()`} and pass `CKEditorFuncNum` as the first argument:
 
-	window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl [, data] );
+```js
+window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl [, data] );
+```
 
 If `data` (the third argument) is a string, it will be displayed by CKEditor. This parameter is usually used to display an error message if a problem occurs during the file upload.
 
@@ -67,7 +81,7 @@ If `data` (the third argument) is a string, it will be displayed by CKEditor. Th
 
 The following example shows how to send the URL from a file manager using JavaScript code (save it as `browse.php`):
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -103,7 +117,7 @@ If `data` is a function, it will be executed in the scope of the button that cal
 
 Suppose that apart from passing the `fileUrl` value that is assigned to an appropriate field automatically based on the dialog window definition you also want to set the `alt` attribute, if the file manager was opened in the **Image Properties** dialog window. In order to do this, pass an anonymous function as a third argument:
 
-``` html
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,7 +180,7 @@ $funcNum = $_GET['CKEditorFuncNum'] ;
 $CKEditor = $_GET['CKEditor'] ;
 // Optional: might be used to provide localized messages.
 $langCode = $_GET['langCode'] ;
-// Optional: compare it with the value of `ckCsrfToken` sent in a cookie to protect your server side uploader against CSRF.
+// Optional: compare it with the value of `ckCsrfToken` sent in a cookie to protect your server-side uploader against CSRF.
 // Available since CKEditor 4.5.6.
 $token = $_POST['ckCsrfToken'] ;
 

@@ -48,21 +48,19 @@ The Paste from LibreOffice plugin maintains most of LibreOffice Writer text form
 
 The following sample content from a LibreOffice Writer document:
 
-{@img assets/img/pastefromlibreoffice_01.png 804 A sample LibreOffice Writer document.}
+{@img assets/img/pastefromlibreoffice_01.png 599 A sample LibreOffice Writer document.}
 
 will look like below after pasting to CKEditor with the [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugin enabled:
 
-{@img assets/img/pastefromlibreoffice_02.png 952 LibreOffice Writer content pasted into CKEditor 4 WYSIWYG editor.}
+{@img assets/img/pastefromlibreoffice_02.png 956 LibreOffice Writer content pasted into CKEditor 4 WYSIWYG editor.}
 
 Here is another sample with some more complicated formatting and styling as well as an image:
 
-{@img assets/img/pastefromlibreoffice_03.png 748 A sample LibreOffice Writer document with complex formatting and image.}
+{@img assets/img/pastefromlibreoffice_03.png 599 A sample LibreOffice Writer document with complex formatting and image.}
 
 It will look like this after pasting into CKEditor:
 
-{@img assets/img/pastefromlibreoffice_04.png 950 Complex LibreOffice Writer content pasted into CKEditor 4 WYSIWYG editor.}
-
-In the example above you can see that after pasting into CKEditor, the first list has different list item markers than in the LibreOffice Writer document. Although pasting lists with different markers is supported in CKEditor 4 (check the second and third list in the example above), this is a specific case. Such list style is not natively supported by the browser. However, it can be adjusted by using extra CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
+{@img assets/img/pastefromlibreoffice_04.png 954 Complex LibreOffice Writer content pasted into CKEditor 4 WYSIWYG editor.}
 
 ## Filters
 

@@ -49,7 +49,7 @@ Paste from Word retains the following formatting:
     * Default styles
     * User-defined styles
 
-Paste from Word maintains most of Microsoft Word text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will paste only standard bullets from the bullet library, or will not use a double strikethrough effect. Such elements are replaced by the default ones to resemble your Word content in the most accurate way.
+The Paste from Word plugin maintains most of Microsoft Word text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will paste only standard bullets from the bullet library, or will not use a double strikethrough effect. Such elements are replaced by the default ones to resemble your Word content in the most accurate way.
 
 ## Advanced Paste from Word &mdash; CKEditor 4.6+
 
@@ -114,6 +114,7 @@ Refer to the following resources for more information about pasting content:
 
 * The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains more information about the Paste from Google Docs feature.
 * The {@link features/pastefromexcel/README Pasting content from Microsoft Excel} article contains more information about the Paste from Excel feature.
+* The {@link features/pastefromlibreoffice/README Pasting content from LibreOffice Writer} article contains more information about the Paste from LibreOffice feature.
 * The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.
 * The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
 * The {@link guide/dev/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.

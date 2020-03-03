@@ -6,7 +6,7 @@ menu-title: Creating a Basic Plugin
 meta-title-short: Creating a Basic Plugin
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -155,7 +155,7 @@ CKEDITOR.plugins.add( 'timestamp', {
 });
 ```
 
-<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-timestamp">download the entire plugin folder</a> including the icon and the fully commented source code.
+<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-timestamp">download the entire plugin folder</a> including the icon and the fully commented source code.
 </info-box>
 
 ## Working Example

@@ -6,7 +6,7 @@ menu-title: Uploading Dropped or Pasted Files
 meta-title-short: Uploading Dropped or Pasted Files
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

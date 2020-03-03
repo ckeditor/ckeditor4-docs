@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -14,7 +14,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	<title>Enter Key Configuration</title>
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
-	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="../../ckeditor4/ckeditor.js"></script>
 	<script src="assets/picoModal-2.0.1.min.js"></script>
 	<script src="assets/sample.js"></script>
 	<script src="assets/contentloaded.js"></script>
@@ -36,12 +36,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<section class="sdk-contents">
 			<script>
 				var editor;
-		
+
 				function changeEnter() {
 					// If an editor instance exists, destroy it first.
 					if ( editor )
 						editor.destroy( true );
-		
+
 					// Create an editor instance again, with appropriate settings.
 					editor = CKEDITOR.replace( 'editor1', {
 						height: 120,
@@ -49,8 +49,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						shiftEnterMode: Number( document.getElementById( 'xShiftEnter' ).value )
 					});
 				}
-		
-				window.onload = changeEnter;
+
+				window.addEventListener( 'load', changeEnter );
 			</script>
 			<h1>Enter Key Configuration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/enterkey.html">Documentation</a></h1>
 

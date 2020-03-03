@@ -6,7 +6,7 @@ menu-title: Getting Source Code
 meta-title-short: Getting Source Code
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -18,20 +18,20 @@ Working with the source code of CKEditor may be useful. These are some possible 
  * You are assembling the editor by yourself, by adding plugins and skins to it manually.
  * You want to understand the CKEditor API better by reading the code.
  * You want to fix an issue. (Yes, do it!)
- * You want to propose some new features or enhancements. (Likewise, we are [looking forward to them](https://github.com/ckeditor/ckeditor-dev/pulls)!)
+ * You want to propose some new features or enhancements. (Likewise, we are [looking forward to them](https://github.com/ckeditor/ckeditor4/pulls)!)
 
 
 ## Cloning from GitHub
 
-The CKEditor source code is available in the [ckeditor-dev](https://github.com/ckeditor/ckeditor-dev) Git repository hosted at GitHub.
+The CKEditor source code is available in the [ckeditor4](https://github.com/ckeditor/ckeditor4) Git repository hosted at GitHub.
 
 If you have Git installed in your system, use the following command line call to create your local copy:
 
 ``` sh
-git clone https://github.com/ckeditor/ckeditor-dev.git
+git clone https://github.com/ckeditor/ckeditor4.git
 ```
 
-This will download the full CKEditor development code into the `ckeditor-dev` folder.
+This will download the full CKEditor development code into the `ckeditor4` folder.
 
 ## Performance
 

@@ -6,7 +6,7 @@ menu-title: Reporting Issues
 meta-title-short: Reporting Issues
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -24,7 +24,7 @@ Most of the issues are reproducible on samples. If you have a different case tho
 
 ## Avoid Duplicates
 
-Before you file a new issue, make sure your issue has not been reported yet. Use the [search page](https://github.com/ckeditor/ckeditor-dev/issues) to check it.
+Before you file a new issue, make sure your issue has not been reported yet. Use the [search page](https://github.com/ckeditor/ckeditor4/issues) to check it.
 If the issue has already been reported, just add a 👍 (+1) reaction to it.
 
 CKEditor is in active development, so there is a chance that we have already fixed your issue in the current code base. You should thus also test it on the latest [Nightly Build](http://nightly.ckeditor.com).

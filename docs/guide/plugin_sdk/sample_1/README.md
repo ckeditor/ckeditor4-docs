@@ -6,7 +6,7 @@ menu-title: Simple Plugin (Part 1)
 meta-title-short: Simple Plugin (Part 1)
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -371,7 +371,7 @@ This is what we have in the `dialogs/abbr.js` file:
 		};
 	});
 
-<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-1">download the entire plugin folder</a> inluding the icon and the fully commented source code.
+<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-abbr-1">download the entire plugin folder</a> inluding the icon and the fully commented source code.
 </info-box>
 
 ## Working Example

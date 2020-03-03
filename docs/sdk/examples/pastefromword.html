@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -14,7 +14,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	<title>Paste from Word</title>
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
-	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="../../ckeditor4/ckeditor.js"></script>
 	<script src="assets/picoModal-2.0.1.min.js"></script>
 	<script src="assets/sample.js"></script>
 	<script src="assets/contentloaded.js"></script>
@@ -202,7 +202,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				//  - About Disallowed Content: https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content
 				//  - About Allowed Content: https://ckeditor.com/docs/ckeditor4/latest/guide/dev_allowed_content_rules
 				disallowedContent: 'img{width,height,float}',
-				extraAllowedContent: 'img[width,height,align];span{background}',
+				extraAllowedContent: 'img[width,height,align]',
 
 				// Enabling extra plugins, available in the full-all preset: https://ckeditor.com/cke4/presets
 				extraPlugins: 'colorbutton,font,justify,print,tableresize,uploadimage,uploadfile,pastefromword,liststyle,pagebreak',

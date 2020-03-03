@@ -6,7 +6,7 @@ menu-title: How to Contribute
 meta-title-short: How to Contribute
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -14,9 +14,9 @@ For licensing, see LICENSE.md.
 
 This section explains how you can contribute to CKEditor development. CKEditor is an Open Source product that is free for anyone to download, use, and customize. It has an amazing community around it that supports it in all possible ways. If you would like to contribute to its development, you can consider the following actions:
 
-1. {@link guide/dev/issues_readme/README Report bugs} or feature requests through the CKEditor [GitHub repository](https://github.com/ckeditor/ckeditor-dev/issues).
+1. {@link guide/dev/issues_readme/README Report bugs} or feature requests through the CKEditor [GitHub repository](https://github.com/ckeditor/ckeditor4/issues).
 
-2. Fork CKEditor at [GitHub](https://github.com/ckeditor/ckeditor-dev), fix bugs or propose new functionality by using {@link guide/dev/contributing_code/README pull requests}.
+2. Fork CKEditor at [GitHub](https://github.com/ckeditor/ckeditor4), fix bugs or propose new functionality by using {@link guide/dev/contributing_code/README pull requests}.
 
 3. Create your own plugins or skins and submit them to [CKEditor Add-Ons Repository](https://ckeditor.com/cke4/addons/plugins/all).
 

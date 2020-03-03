@@ -6,7 +6,7 @@ menu-title: Enabling CKEditor in Unsupported Environments
 meta-title-short: Enabling CKEditor in Unsupported Environments
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -86,6 +86,6 @@ Although this is not a recommended approach, it is also possible to edit the {@l
 
 ## Help Us by Reporting Issues!
 
-Enabling CKEditor in unsupported environments is an experimental feature aimed at developers who are willing to help us bring official support to a wider range of devices and setups. We would thus appreciate if you {@link guide/dev/issues_tracker/README reported any issues} that you find on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues). Do remember to describe the tested environment (operating system, browser, device) in as much detail as possible.
+Enabling CKEditor in unsupported environments is an experimental feature aimed at developers who are willing to help us bring official support to a wider range of devices and setups. We would thus appreciate if you {@link guide/dev/issues_tracker/README reported any issues} that you find on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues). Do remember to describe the tested environment (operating system, browser, device) in as much detail as possible.
 
 If you are particularly interested in using CKEditor on mobile devices, you can check the results of our [recent study](http://dev.ckeditor.com/ticket/11712#comment:5) on the state of CKEditor support in iOS and Android.

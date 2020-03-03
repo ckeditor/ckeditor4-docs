@@ -6,7 +6,7 @@ menu-title: Keyboard Shortcuts
 meta-title-short: Keyboard Shortcuts
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -50,8 +50,8 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 
 * <kbd>Enter</kbd> (<kbd>Return</kbd>) &ndash; Ends a paragraph and starts a new one.
 * <kbd>Shift+Enter</kbd> &ndash; Adds a line break.
-* <kbd>Shift+Ctrl+3</kbd> &ndash; Enables enetring content (by adding a new paragraph) before a problematic element such as an image, table or `<div>` element that starts or ends a document, list, or even adjacent horizontal lines.
-* <kbd>Shift+Ctrl+4</kbd> &ndash; Enables enetring content (by adding a new paragraph) after a problematic element such as an image, table or `<div>` element that starts or ends a document, list, or even adjacent horizontal lines.
+* <kbd>Shift+Ctrl+3</kbd> &ndash; Enables entering content (by adding a new paragraph) before a problematic element such as an image, table or `<div>` element that starts or ends a document, list, or even adjacent horizontal lines.
+* <kbd>Shift+Ctrl+4</kbd> &ndash; Enables entering content (by adding a new paragraph) after a problematic element such as an image, table or `<div>` element that starts or ends a document, list, or even adjacent horizontal lines.
 * <kbd>Backspace</kbd>, <kbd>Del</kbd> &ndash; Deletes a character.
 * <kbd>Ctrl+Backspace</kbd>, <kbd>Ctrl+Del</kbd> &ndash; Deletes a word.
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 -->
 <html>
@@ -15,7 +15,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
 	<link rel="stylesheet" href="assets/react/samples.css">
-	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="../../ckeditor4/ckeditor.js"></script>
 	<script src="assets/picoModal-2.0.1.min.js"></script>
 	<script src="assets/contentloaded.js"></script>
 	<script src="assets/simplesample.js"></script>
@@ -142,7 +142,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				}
 			</style>
 
-			<h1>CKEditor 4 React Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html">Documentation</a></h1>
+			<h1>CKEditor 4 WYSIWYG Editor React Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html">Documentation</a></h1>
 
 			<p>
 				The <strong>React integration</strong> allows you to implement CKEditor 4 as a <a href="https://reactjs.org/">React</a> component, using the <code>&lt;CKEditor /&gt;</code> JSX tag.
@@ -169,7 +169,7 @@ import ReactDOM from 'react-dom';
 import CKEditor from 'ckeditor4-react';
 
 ReactDOM.render(
-	<CKEditor data="<p>This is a CKEditor 4 instance created by ️⚛️ React.</p>" />,
+	<CKEditor data="<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>" />,
 	document.getElementById( 'app' )
 );
 </script>
@@ -178,7 +178,7 @@ import ReactDOM from 'react-dom';
 import CKEditor from 'ckeditor4-react';
 
 ReactDOM.render(
-	<CKEditor type="inline" data="<p>This is a CKEditor 4 instance created by ️⚛️ React.</p>" />,
+	<CKEditor type="inline" data="<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>" />,
 	document.getElementById( 'app' )
 );
 </script>
@@ -218,7 +218,7 @@ class TwoWayBinding extends Component {
 		super( props );
 
 		this.state = {
-			data: '<p>This is a CKEditor 4 instance created by ️⚛️ React.</p>'
+			data: '<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>'
 		};
 
 		this.handleChange = this.handleChange.bind( this );

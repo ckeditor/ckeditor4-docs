@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or http://ckeditor.com/license
  */
 
@@ -69,9 +69,10 @@ module.exports = function( grunt ) {
 	// Also there is some conflict between two webpack configurations, building react in same way is working workaround.
 	grunt.registerTask( 'build-angular', buildIntegrationTask( 'angular' ) );
 	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );
+	grunt.registerTask( 'build-vue', buildIntegrationTask( 'vue' ) );
 
 	// Build docs for production/multidocs. It assumes Umberto is run by external process - useful when building as part of projects bundle.
-	grunt.registerTask( 'before-build', [ 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react' ] );
+	grunt.registerTask( 'before-build', [ 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'build-vue' ] );
 
 	grunt.registerTask( 'build', [ 'before-build', 'umberto' ] );
 	grunt.registerTask( 'build-serve', [ 'build', 'connect' ] );
@@ -96,10 +97,17 @@ module.exports = function( grunt ) {
 
 		copy: {
 			main: {
-				expand: true,
-				cwd: 'node_modules/@wiris/mathtype-ckeditor4',
-				src: '**',
-				dest: 'docs/sdk/examples/assets/plugins/ckeditor_wiris'
+				files: [ {
+					expand: true,
+					cwd: 'node_modules/@wiris/mathtype-ckeditor4',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/ckeditor_wiris'
+				}, {
+					expand: true,
+					cwd: 'node_modules/ckeditor4-plugin-spreadsheet/spreadsheet',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/spreadsheet'
+				} ]
 			}
 		},
 		jsduck: {

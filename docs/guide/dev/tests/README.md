@@ -6,13 +6,13 @@ menu-title: Testing Environment
 meta-title-short: Testing Environment
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # CKEditor Testing Environment (Bender.js)
 
-An advanced project like CKEditor could not exist without a set of automated tests. CKEditor uses [Bender.js](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can, we always implement tests. We encourage you to do the same when you create a pull request on [GitHub](https://github.com/ckeditor/ckeditor-dev) or fork the CKEditor repository in order to customize some editor behavior.
+An advanced project like CKEditor could not exist without a set of automated tests. CKEditor uses [Bender.js](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can, we always implement tests. We encourage you to do the same when you create a pull request on [GitHub](https://github.com/ckeditor/ckeditor4) or fork the CKEditor repository in order to customize some editor behavior.
 
 ## Setting up Bender.js
 
@@ -44,16 +44,16 @@ you should see the following message:
 
 When Bender.js is installed you need to set up the CKEditor tests project.
 
-First of all, you need to {@link guide/dev/source/README clone the CKEditor development} repository hosted at [GitHub](https://github.com/ckeditor/ckeditor-dev):
+First of all, you need to {@link guide/dev/source/README clone the CKEditor development} repository hosted at [GitHub](https://github.com/ckeditor/ckeditor4):
 
 ``` sh
-> git clone https://github.com/ckeditor/ckeditor-dev.git
+> git clone https://github.com/ckeditor/ckeditor4.git
 ```
 
 Go to the main CKEditor directory (it should contain the `bender.js`, `package.json` files, among others, and the `tests/` directory):
 
 ```sh
-> cd ckeditor-dev
+> cd ckeditor4
 ```
 
 You will now need to install the Bender.js engine (`benderjs-cli` installed globally uses a local `benderjs` module) and all required modules, like the [Sinon.JS plugin for Bender.js](https://github.com/benderjs/benderjs-sinon). To do so use:
@@ -107,7 +107,7 @@ If you want, you can specify a port or a hostname where Bender.js runs:
 <info-box hint=""> Some tests require the browser to be in focus. This means that you can not use other applications when running them.
 </info-box>
 
-Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again (when opened directly), they should pass. If a test fails a few times in a row, it is a sign that something went wrong. {@link guide/dev/issues_readme/README Report a CKEditor issue} on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues) in such case. Remember to include a link to the failing test and information about the browser in which it fails.
+Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again (when opened directly), they should pass. If a test fails a few times in a row, it is a sign that something went wrong. {@link guide/dev/issues_readme/README Report a CKEditor issue} on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues) in such case. Remember to include a link to the failing test and information about the browser in which it fails.
 
 ## CKEditor Tests Structure
 
@@ -164,7 +164,7 @@ Please note that some CKEditor plugins are needed for reasons that might not be 
 * [Undo](https://ckeditor.com/cke4/addon/undo) (`undo`) &ndash; Needed to fire the {@linkapi CKEDITOR.editor#change change} event.
 * [Basic Styles](https://ckeditor.com/cke4/addon/basicstyles) (`basicstyles`) &ndash; Needed to preserve basic text formatting in your test HTML, otherwise {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} will remove all `<strong>`, `<em>`, `<u>` tags and so on.
 
-If the editor behaves differently when testing and during development, try to add all plugins you use during the development (you can find such list in the [`config.js`](https://github.com/ckeditor/ckeditor-dev/blob/master/config.js) file) and then remove redundant ones. Please note that adding all existing CKEditor plugins might not be a good solution since, for example, the [BBCode plugin](https://ckeditor.com/cke4/addon/bbcode) will strip HTML in your output.
+If the editor behaves differently when testing and during development, try to add all plugins you use during the development (you can find such list in the [`config.js`](https://github.com/ckeditor/ckeditor4/blob/master/config.js) file) and then remove redundant ones. Please note that adding all existing CKEditor plugins might not be a good solution since, for example, the [BBCode plugin](https://ckeditor.com/cke4/addon/bbcode) will strip HTML in your output.
 
 ### Tagging Tests
 
@@ -209,7 +209,7 @@ If there is a need to reference a Trac issue instead of the GitHub one, full URL
 
 CKEditor tests use the [YUI library](http://yuilibrary.com/) for assertions provided by the [Bender.js YUI plugin](https://github.com/benderjs/benderjs-yui/).
 
-The testing environment provides a bunch of [tools](https://github.com/ckeditor/ckeditor-dev/blob/master/tests/_benderjs/ckeditor/static/tools.js) useful when creating tests and the [Editor Bot](https://github.com/ckeditor/ckeditor-dev/blob/master/tests/_benderjs/ckeditor/static/bot.js) which helps you create and manage an editor instance.
+The testing environment provides a bunch of [tools](https://github.com/ckeditor/ckeditor4/blob/master/tests/_benderjs/ckeditor/static/tools.js) useful when creating tests and the [Editor Bot](https://github.com/ckeditor/ckeditor4/blob/master/tests/_benderjs/ckeditor/static/bot.js) which helps you create and manage an editor instance.
 
 ### Sample Test File
 
@@ -261,4 +261,4 @@ If you need, you can add the entire content of the `<html>` page element, for ex
 </body>
 ```
 
-To learn more about writing tests, check the [existing tests code](https://github.com/ckeditor/ckeditor-dev/tree/master/tests).
+To learn more about writing tests, check the [existing tests code](https://github.com/ckeditor/ckeditor4/tree/master/tests).

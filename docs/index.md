@@ -23,7 +23,7 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 <dt>{@link guide/dev/integration/react/README CKEditor 4 React Integration}</dt>
 <dd>The official CKEditor 4 React integration using a React component. Available as the <code>ckeditor4-react</code> npm package.</dd>
 <dt>{@link guide/dev/integration/vue/README CKEditor 4 Vue Integration}</dt>
-<dd>The official CKEditor 4 Vue integration. Currently under developement.</dd>
+<dd>The official CKEditor 4 Vue integration using a Vue component. Available as the <code>ckeditor4-vue</code> npm package.</dd>
 </dl>
 
 ## Accessibility Checker for CKEditor 4
@@ -34,4 +34,4 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 
 ## Contribute
 
-CKEditor is an Open Source project and your contribution is most welcome. Feel free to {@link guide/dev/issues_readme/README report bugs} or improve the code on [GitHub](https://github.com/ckeditor/ckeditor-dev). Since CKEditor is localized, you can also help [to translate it](https://www.transifex.com/ckeditor/ckeditor/). You do not need to be a programmer to contribute to the project!
+CKEditor is an Open Source project and your contribution is most welcome. Feel free to {@link guide/dev/issues_readme/README report bugs} or improve the code on [GitHub](https://github.com/ckeditor/ckeditor4). Since CKEditor is localized, you can also help [to translate it](https://www.transifex.com/ckeditor/ckeditor/). You do not need to be a programmer to contribute to the project!

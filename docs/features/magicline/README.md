@@ -6,7 +6,7 @@ menu-title: Magic Line
 meta-title-short: Magic Line
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -44,7 +44,7 @@ This will change magic line's color to blue, as presented in the image below.
 
 To further enhance CKEditor's accessibility, the following {@link features/shortcuts/README keyboard shortcuts} are available for working with magic line:
 
-* <kbd>Shift+Ctrl+3</kbd> &ndash; Enables enetring content (by adding a new paragraph) **before** a problematic element.
+* <kbd>Shift+Ctrl+3</kbd> &ndash; Enables entering content (by adding a new paragraph) **before** a problematic element.
 * <kbd>Shift+Ctrl+4</kbd> &ndash; Enables entering content (by adding a new paragraph) **after** a problematic element.
 
 You can also adjust the keyboard shortcuts by setting the {@linkapi CKEDITOR.config.magicline_keystrokeNext CKEDITOR.config.magicline_keystrokeNext} and {@linkapi CKEDITOR.config.magicline_keystrokePrevious CKEDITOR.config.magicline_keystrokePrevious} configuration options, respectively. For example:

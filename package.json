@@ -1,7 +1,7 @@
 {
-  "name": "ckeditor-docs",
+  "name": "ckeditor4-docs",
   "version": "4.14.0",
-  "description": "The official documentation of CKEditor 4. http://docs.ckeditor.com",
+  "description": "The official documentation of CKEditor 4. https://ckeditor.com/docs/",
   "dependencies": {
     "@angular-devkit/build-angular": "^0.12.3",
     "@angular/common": "^7.2.2",
@@ -20,8 +20,10 @@
     "babel-loader": "^8.0.4",
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",
-    "ckeditor4-angular": "^1.0.0-beta",
-    "ckeditor4-react": "^1.0.0-beta",
+    "ckeditor4-angular": "^1.0.0",
+    "ckeditor4-plugin-spreadsheet": "^1.1.0",
+    "ckeditor4-react": "^1.0.0",
+    "ckeditor4-vue": "^0.1.0",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.7",
     "dargs": "~4.0.0",
@@ -42,22 +44,29 @@
     "terser-webpack-plugin": "^1.2.1",
     "tslint": "^5.15.0",
     "typescript": "~3.1.1",
-    "umberto": "^1.0.0",
+    "umberto": "^1.2.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.3",
     "webpack": "^4.29.0",
     "zone.js": "^0.8.29"
   },
   "author": "CKSource (http://cksource.com/)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor-docs"
+    "url": "https://github.com/ckeditor/ckeditor4-docs"
   },
   "license": "For licensing, see LICENSE.md.",
   "devDependencies": {
+    "css-loader": "^3.4.1",
     "grunt-contrib-connect": "^1.0.2",
+    "vue-loader": "^15.8.3",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
     "build-angular": "webpack --config scripts/integrations/angular/webpack.config.js",
-    "build-react": "webpack --config scripts/integrations/react/webpack.config.js"
+    "build-react": "webpack --config scripts/integrations/react/webpack.config.js",
+    "build-vue": "webpack --config scripts/integrations/vue/webpack.config.js"
   }
 }

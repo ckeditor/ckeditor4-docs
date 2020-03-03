@@ -6,14 +6,14 @@ menu-title: Issues Tracker
 meta-title-short: Issues Tracker
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
 # Issues Tracker Site
 
 <info-box hint="">
-    CKEditor issues are handled through the <a href="https://github.com/ckeditor/ckeditor-dev/issues">GitHub issues page</a> since the CKEditor 4.7 release (May 25th, 2017). The <a href="https://dev.ckeditor.com">former tracking system</a> is still available in the read-only mode and all past issues are still available publicly.
+    CKEditor issues are handled through the <a href="https://github.com/ckeditor/ckeditor4/issues">GitHub issues page</a> since the CKEditor 4.7 release (May 25th, 2017). The <a href="https://dev.ckeditor.com">former tracking system</a> is still available in the read-only mode and all past issues are still available publicly.
 </info-box>
 
 The issues page is used daily by the CKEditor core team to organize and distribute the development workflow. It is also the right place to report issues.
@@ -46,8 +46,8 @@ Before clicking the following link, make sure you have read the instructions abo
 
 Only registered GitHub users may create issues. If you are not registered, take a minute to [create a GitHub account](https://github.com/join).
 
-Once you log in, you will be ready to [report a CKEditor issue](https://github.com/ckeditor/ckeditor-dev/issues/new/choose).
+Once you log in, you will be ready to [report a CKEditor issue](https://github.com/ckeditor/ckeditor4/issues/new/choose).
 
 ### Labels
 
-Each issue is categorised with labels. Refer to the [GitHub label list](https://github.com/ckeditor/ckeditor-dev/labels) for the label descriptions.
+Each issue is categorised with labels. Refer to the [GitHub label list](https://github.com/ckeditor/ckeditor4/labels) for the label descriptions.

@@ -6,7 +6,7 @@ menu-title: Support
 meta-title-short: Support
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -40,9 +40,9 @@ CKEditor is and has always been an Open Source product. We are proud to be a par
 
 If you also want to support the development of CKEditor, it will be most welcome. Here are a couple of things that you can do:
 
-* {@link guide/dev/issues_readme/README Report bugs} or feature requests on our [GitHub issues page](https://github.com/ckeditor/ckeditor-dev/issues).
+* {@link guide/dev/issues_readme/README Report bugs} or feature requests on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues).
 
-* {@link guide/dev/contributing_code/README Submit code patches} through pull requests in the [official CKEditor repository](https://github.com/ckeditor/ckeditor-dev).
+* {@link guide/dev/contributing_code/README Submit code patches} through pull requests in the [official CKEditor repository](https://github.com/ckeditor/ckeditor4).
 
 * Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.net/projects/p/ckeditor/).
 

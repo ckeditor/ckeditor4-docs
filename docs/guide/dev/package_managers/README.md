@@ -6,7 +6,7 @@ menu-title: Using Package Managers
 meta-title-short: Using Package Managers
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -23,9 +23,9 @@ For example, if you wanted to add the **Text Color** and **Background Color** bu
 
 	config.extraPlugins = 'colorbutton';
 
-## Custom CKEditor Configuration
+## Custom CKEditor 4 Configuration
 
-If you want to use package managers to keep CKEditor up to date, your custom editor configuration should not be done in any of the core CKEditor files like `config.js` (otherwise you risk overwriting them during the update process).
+If you want to use package managers to keep CKEditor 4 up to date, your custom editor configuration should not be done in any of the core CKEditor files like `config.js` (otherwise you risk overwriting them during the update process).
 
 It is thus recommended to use of the following strategies:
 
@@ -42,23 +42,27 @@ This article assumes that you have **npm** already installed and added to your `
 
 In order to fetch the most recent build, execute the following command:
 
-	npm install ckeditor
+	npm install ckeditor4
 
-By default CKEditor will be placed in the `node_modules/ckeditor` directory.
+The above command will install the `standard-all` preset of CKEditor 4. It is also possible to install a different preset using the `ckeditor/ckeditor4-releases#<BRANCH_NAME>` repository dependency instead of the npm package. The `<BRANCH_NAME>` should then point to the correct [CKEditor4 Release branch](https://github.com/ckeditor/ckeditor4-releases/branches) name, e.g.
 
-### Adding CKEditor as a Dependency Using the `package.json` File
+	npm install ckeditor/ckeditor4-releases#full/latest
 
-You may add CKEditor to the dependencies list by using the `--save` flag:
+By default CKEditor will be placed in the `node_modules/ckeditor4` directory.
 
-    npm install ckeditor --save
+### Adding CKEditor 4 as a Dependency Using the `package.json` File
 
-or by manually editing your `package.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
+Using `npm install` command will automatically create a reference to `ckeditor4` in your `package.json` file:
+
+    npm install ckeditor4
+
+You should see the following reference in the `dependencies` property:
 
 ```js
 {
     "name": "my-project",
     "dependencies": {
-        "ckeditor": "4.11.0"
+        "ckeditor4": "4.13.0"
     }
 }
 ```
@@ -69,7 +73,7 @@ Then execute the following command:
 
 ### Fetching a Particular Build Preset
 
-Currently only the `standard-all` CKEditor installation preset can be fetched.
+Currently only the `standard-all` CKEditor 4 installation preset can be fetched.
 
 ## Bower
 
@@ -81,11 +85,11 @@ In order to fetch the most recent build, execute the following command:
 
 	bower install ckeditor
 
-By default CKEditor will be placed in the `bower_components/ckeditor` directory.
+By default CKEditor 4 will be placed in the `bower_components/ckeditor` directory.
 
-### Adding CKEditor as a Dependency Using the `bower.json` File
+### Adding CKEditor 4 as a Dependency Using the `bower.json` File
 
-You may add CKEditor to the dependencies list inside your `bower.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
+You may add CKEditor 4 to the dependencies list inside your `bower.json` file. Just make sure to create a reference to `ckeditor` in the `dependencies` property.
 
 ```js
 {
@@ -104,9 +108,9 @@ Then execute the following command:
 
 By default only the `standard-all` CKEditor installation preset can be fetched. However, there is a workaround to install a diffrent package using the `#<preset>/<version>` syntax.
 
-For example, if you would like to download the `full` preset of CKEditor 4.11.0, execute the following command:
+For example, if you would like to download the `full` preset of CKEditor 4.13.0, execute the following command:
 
-	bower install ckeditor#full/4.11.0
+	bower install ckeditor#full/4.13.0
 
 ## Composer
 
@@ -114,7 +118,7 @@ This article assumes that you have **Composer** already up and running. If this 
 
 ### Usage
 
-In order to fetch the most recent CKEditor 4 build, create a `composer.json` file in the directory where you want to install CKEditor. This file should include the  following contents:
+In order to fetch the most recent CKEditor 4 build, create a `composer.json` file in the directory where you want to install CKEditor. This file should include the following contents:
 
 ```js
 {
@@ -130,7 +134,7 @@ Then execute the following command:
 
 ### Fetching a Particular Build Preset
 
-There is a way for Composer to fetch CKEditor built with a desired preset. For each preset you can subscribe to the following branches:
+There is a way for Composer to fetch CKEditor 4 built with a desired preset. For each preset you can subscribe to the following branches:
 
 1. Latest release
 2. Stable release
@@ -142,14 +146,14 @@ preset | standard-all | basic | standard | full
  --- | --- | --- | --- | ---
 latest | `dev-latest` | `dev-basic/latest` | `dev-standard/latest` | `dev-full/latest`
 stable | `dev-stable` | `dev-basic/stable` | `dev-standard/stable` | `dev-full/stable`
-4.11.x | `4.11.x-dev` | `dev-basic/4.11.x` | `dev-standard/4.11.x` | `dev-full/4.11.x`
+4.13.x | `4.13.x-dev` | `dev-basic/4.13.x` | `dev-standard/4.13.x` | `dev-full/4.13.x`
 
-For example, let us consider that we want to include the `full` preset of the most up-to-date `4.11.x` release. In this case the `composer.json` file should contain the following code:
+For example, let us consider that we want to include the `full` preset of the most up-to-date `4.13.x` release. In this case the `composer.json` file should contain the following code:
 
 ```js
 {
     "require": {
-        "ckeditor/ckeditor": "dev-full/4.11.x"
+        "ckeditor/ckeditor": "dev-full/4.13.x"
     }
 }
 ```
@@ -180,4 +184,4 @@ e.g.
 
 	nuget install ckeditor-standard
 
-You will find the package installed into a directory like `ckeditor-standard.4.11.0`.
+You will find the package installed into a directory like `ckeditor-standard.4.13.0`.

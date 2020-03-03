@@ -6,7 +6,7 @@ menu-title: Autocomplete
 meta-title-short: Autocomplete
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -41,7 +41,7 @@ When you press <kbd>Enter</kbd>, <kbd>Tab</kbd> or any other customized {@linkap
 In this tutorial you will create a simple autocomplete implementation in the form of an `autotag` plugin.
 
 <info-box hint="">
-	You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-autotag/autotag">download the entire `autotag` plugin folder</a> with the fully commented source code.
+	You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-autotag/autotag">download the entire `autotag` plugin folder</a> with the fully commented source code.
 </info-box>
 
 Autocomplete feature uses two callbacks to customize matching and data feed:
@@ -145,7 +145,7 @@ config.itemTemplate = '<li data-id="{id}" class="issue-{type}">#{id}: {name}</li
 And create some custom {@linkapi CKEDITOR.plugins.autocomplete.configDefinition#outputTemplate output template}:
 
 ```javascript
-config.outputTemplate = '<a href="https://github.com/ckeditor/ckeditor-dev/issues/{id}">{name} (#{id})</a> ';
+config.outputTemplate = '<a href="https://github.com/ckeditor/ckeditor4/issues/{id}">{name} (#{id})</a> ';
 ```
 
 Note that when creating a custom item template you should use a `<li>` element with the `data-id="{id}"` attribute.
@@ -168,7 +168,7 @@ There is only one thing left to do &mdash; attach autocomplete to the editor alo
 new CKEDITOR.plugins.autocomplete( editor, config );
 ```
 
-You can review and download the complete solution in the [documentation code samples repository](https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-autotag/autotag).
+You can review and download the complete solution in the [documentation code samples repository](https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-autotag/autotag).
 
 {@img assets/img/autocomplete_03.png Custom autocomplete implementation with GitHub tickets.}
 

@@ -6,7 +6,7 @@ menu-title: Integrating with Dialogs
 meta-title-short: Integrating with Dialogs
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -30,7 +30,7 @@ The [File Browser](https://ckeditor.com/cke4/addon/filebrowser) plugin is built-
 
 ### Adding the "Browse Server" Button
 
-To assign the File Browser plugin to an element inside a dialog window, set the `filebrowser` property. For example in the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/image/dialogs/image.js) you can find the following code:
+To assign the File Browser plugin to an element inside a dialog window, set the `filebrowser` property. For example in the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor4/blob/master/plugins/image/dialogs/image.js) you can find the following code:
 
 ```js
 {
@@ -53,7 +53,7 @@ The `'info:txtUrl'` value instructs the plugin to update an element with the ID 
 
 ### Adding "Quick Upload" Support
 
-Again, to see how file uploads can be handled in a dialog window, the following working example from CKEditor will be used. In the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor-dev/blob/master/plugins/image/dialogs/image.js) you can find the following definition of the `Upload` tab:
+Again, to see how file uploads can be handled in a dialog window, the following working example from CKEditor will be used. In the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor4/blob/master/plugins/image/dialogs/image.js) you can find the following definition of the `Upload` tab:
 
 ```js
 {

@@ -6,7 +6,7 @@ menu-title: Integration with ACF
 meta-title-short: Integration with ACF
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -40,7 +40,7 @@ This guide is based on the {@link guide/plugin_sdk/sample_2/README Simple Plugin
 tutorial and explains all code adjustments that are required to make it compatible with
 Advanced Content Filter.
 
-<info-box hint=""> You can <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-2">download the entire plugin folder</a> used in the Simple Plugin (Part 2) tutorial to follow the changes introduced in this guide.
+<info-box hint=""> You can <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-abbr-2">download the entire plugin folder</a> used in the Simple Plugin (Part 2) tutorial to follow the changes introduced in this guide.
 </info-box>
 
 ## Integrating with ACF to Introduce a New Content Type
@@ -252,7 +252,7 @@ pasting content and editing source code.
 
 Read more about {@linkapi CKEDITOR.feature#contentForms contentForms} in CKEditor JavaScript API.
 
-<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-abbr-acf">download the entire modified plugin folder</a> inluding the icon and the fully commented source code.
+<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-abbr-acf">download the entire modified plugin folder</a> inluding the icon and the fully commented source code.
 </info-box>
 
 ## Abbreviation Plugin Demo

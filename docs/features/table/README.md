@@ -6,7 +6,7 @@ menu-title: Tables with Column Resizing
 meta-title-short: Tables with Column Resizing
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -61,3 +61,10 @@ You need to hover your mouse over the column border to see the cursor change to 
 ## Table Support Demo
 
 See the {@linksdk table working "Table Support with Column Resizing" sample} that showcases CKEditor support for creating and editing tables, including table column resizing with your mouse.
+
+## Related Features
+
+Refer to the following resources for more information about tabular data support in CKEditor 4:
+
+* The {@link features/pastefromexcel/README Paste from Excel plugin} allows you to also paste content from Microsoft Excel and maintain original content structure and formatting.
+* The {@link features/spreadsheets/README Spreadsheet plugin} provides support for creating complex data sheets that provide data types, formatting and styling, formulas, conditional formatting and more.

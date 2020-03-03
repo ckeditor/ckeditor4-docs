@@ -6,7 +6,7 @@ menu-title: Example CKEditor Setups
 meta-title-short: Example CKEditor Setups
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 # Example CKEditor Setups
@@ -18,7 +18,7 @@ This article is a detailed explanation of sample editor configurations shown on 
 The Article Editor demo showcases an editor designed mainly for writing web text content like blog posts, articles etc.
 
 <info-box hint="">
-  Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
+  Visit the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/editors">ckeditor4-docs-samples</a> GitHub repository to learn more about this configuration.
 </info-box>
 
 The Article Editor is based on the [Standard package](https://ckeditor.com/ckeditor-4/download/) with a few modifications:
@@ -39,7 +39,7 @@ The Article Editor is based on the [Standard package](https://ckeditor.com/ckedi
 The Document Editor demo showcases a more robust editor designed for creating documents which are usually later printed or exported to PDF files using tools like [wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf) or [PhantomJS](https://github.com/ariya/phantomjs) (note: PhantomJS 2.x currently has a [known zoom issue](https://github.com/ariya/phantomjs/issues/13997)).
 
 <info-box hint="">
-  Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
+  Visit the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/editors">ckeditor4-docs-samples</a> GitHub repository to learn more about this configuration.
 </info-box>
 
 The Document Editor is based on the [Full package](https://ckeditor.com/ckeditor-4/download/) with a few modifications:
@@ -61,7 +61,7 @@ The Document Editor is based on the [Full package](https://ckeditor.com/ckeditor
 The Inline Editor demo showcases {@link guide/dev/inline/README inline editing} that allows you to edit any element on the page in-place.
 
 <info-box hint="">
-  Visit the <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/editors">ckeditor-docs-samples</a> GitHub repository to learn more about this configuration.
+  Visit the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/editors">ckeditor4-docs-samples</a> GitHub repository to learn more about this configuration.
 </info-box>
 
 Inline editor provides a real WYSIWYG experience "out of the box" because unlike in {@link guide/dev/framed/README classic editor}, there is no `<iframe>` element surrounding the editing area. The CSS styles used for editor content are exactly the same as on the target page where the content is rendered.

@@ -6,7 +6,7 @@ menu-title: Widget Tutorial (Part 1)
 meta-title-short: Widget Tutorial (Part 1)
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -384,7 +384,7 @@ This should be added to your `contents.css` file:
 }
 ```
 
-<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor-docs-samples/tree/master/tutorial-simplebox-1">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor-docs-samples/blob/master/README.md">instructions</a>.
+<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-simplebox-1">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/blob/master/README.md">instructions</a>.
 </info-box>
 
 ## Working Example

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.ckeditor.com/4.8.0/standard-all/ckeditor.js"></script>
+	<title>Article Editor</title>
+	<style type="text/css">
+		/* Minimal styling to add some padding around the editor in this sample */
+		body {
+			padding: 30px;
+		}
+		.container {
+			max-width: 1130px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h2><label for="editor1">Article Editor</label></h2>
+	<textarea id="editor1">
+		&lt;h2&gt;Essential things to think about before starting a blog&lt;/h2&gt;
+		&lt;figure class="image illustration" style="float:right;"&gt;&lt;img alt="A picture of wooden spoons with spices and herbs in them." src="https://ckeditor.com/assets/images/bg/spoons.jpg" width="450px"/&gt;
+			&lt;figcaption&gt;It takes several ingredients to create a delicious blog.&lt;/figcaption&gt;
+		&lt;/figure&gt;
+		&lt;p&gt;It has been exactly 3 years since I wrote my first blog series entitled “Flavorful Tuscany”, but starting it was definitely not easy. Back then, I didn’t know much about blogging, let alone think that one day it could become &lt;strong&gt;my full-time job&lt;/strong&gt;. Even though I had many recipes and food-related stories to tell, it never crossed my mind that I could be sharing them with the whole world&lt;/p&gt;
+		&lt;p&gt;I am now a &lt;strong&gt;full-time blogger&lt;/strong&gt; and the curator of the &lt;a href="https://ckeditor.com/ckeditor-4/#"&gt;Simply delicious newsletter&lt;/a&gt;, sharing stories about traveling and cooking, as well as tips on how to run a successful blog.&lt;/p&gt;
+		&lt;p&gt;If you are tempted by the idea of creating your own blog, please think about the following:&lt;/p&gt;
+		&lt;ul&gt;
+			&lt;li&gt;Your story (what do you want to tell your audience)&lt;/li&gt;
+			&lt;li&gt;Your audience (who do you write for)&lt;/li&gt;
+			&lt;li&gt;Your blog name and design&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;p&gt;After you get your head around these 3 essentials, all you have to do is grab your keyboard and the rest will follow.&lt;/p&gt;
+	</textarea>
+</div>
+<script>
+	CKEDITOR.replace( 'editor1', {
+		// Define the toolbar: https://ckeditor.com/docs/ckeditor4/latest/features/toolbar.html
+		// The standard preset from CDN which we used as a base provides more features than we need.
+		// Also by default it comes with a 2-line toolbar. Here we put all buttons in a single row.
+		toolbar: [
+			{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+			{ name: 'styles', items: [ 'Styles', 'Format' ] },
+			{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Strike', '-', 'RemoveFormat' ] },
+			{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
+			{ name: 'links', items: [ 'Link', 'Unlink' ] },
+			{ name: 'insert', items: [ 'Image', 'EmbedSemantic', 'Table' ] },
+			{ name: 'tools', items: [ 'Maximize' ] },
+			{ name: 'editing', items: [ 'Scayt' ] }
+		],
+
+		// Since we define all configuration options here, let's instruct CKEditor to not load config.js which it does by default.
+		// One HTTP request less will result in a faster startup time.
+		// For more information check https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-customConfig
+		customConfig: '',
+
+		// Enabling extra plugins, available in the standard-all preset: https://ckeditor.com/cke4/presets-all
+		extraPlugins: 'autoembed,embedsemantic,image2,uploadimage,uploadfile',
+
+		/*********************** File management support ***********************/
+		// In order to turn on support for file uploads, CKEditor has to be configured to use some server side
+		// solution with file upload/management capabilities, like for example CKFinder.
+		// For more information see https://ckeditor.com/docs/ckeditor4/latest/guide/dev_ckfinder_integration.html
+
+		// Uncomment and correct these lines after you setup your local CKFinder instance.
+		// filebrowserBrowseUrl: 'http://example.com/ckfinder/ckfinder.html',
+		// filebrowserUploadUrl: 'http://example.com/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+		/*********************** File management support ***********************/
+
+		// Remove the default image plugin because image2, which offers captions for images, was enabled above.
+		removePlugins: 'image',
+
+		// Make the editing area bigger than default.
+		height: 600,
+
+		// An array of stylesheets to style the WYSIWYG area.
+		// Note: it is recommended to keep your own styles in a separate file in order to make future updates painless.
+		contentsCss: [ 'https://cdn.ckeditor.com/4.8.0/standard-all/contents.css', 'mystyles.css' ],
+
+		// This is optional, but will let us define multiple different styles for multiple editors using the same CSS file.
+		bodyClass: 'article-editor',
+
+		// Reduce the list of block elements listed in the Format dropdown to the most commonly used.
+		format_tags: 'p;h1;h2;h3;pre',
+
+		// Simplify the Image and Link dialog windows. The "Advanced" tab is not needed in most cases.
+		removeDialogTabs: 'image:advanced;link:advanced',
+
+		// Define the list of styles which should be available in the Styles dropdown list.
+		// If the "class" attribute is used to style an element, make sure to define the style for the class in "mystyles.css"
+		// (and on your website so that it rendered in the same way).
+		// Note: by default CKEditor looks for styles.js file. Defining stylesSet inline (as below) stops CKEditor from loading
+		// that file, which means one HTTP request less (and a faster startup).
+		// For more information see https://ckeditor.com/docs/ckeditor4/latest/features/styles.html
+		stylesSet: [
+			/* Inline Styles */
+			{ name: 'Marker',			element: 'span', attributes: { 'class': 'marker' } },
+			{ name: 'Cited Work',		element: 'cite' },
+			{ name: 'Inline Quotation',	element: 'q' },
+
+			/* Object Styles */
+			{
+				name: 'Special Container',
+				element: 'div',
+				styles: {
+					padding: '5px 10px',
+					background: '#eee',
+					border: '1px solid #ccc'
+				}
+			},
+			{
+				name: 'Compact table',
+				element: 'table',
+				attributes: {
+					cellpadding: '5',
+					cellspacing: '0',
+					border: '1',
+					bordercolor: '#ccc'
+				},
+				styles: {
+					'border-collapse': 'collapse'
+				}
+			},
+			{ name: 'Borderless Table',		element: 'table',	styles: { 'border-style': 'hidden', 'background-color': '#E6E6FA' } },
+			{ name: 'Square Bulleted List',	element: 'ul',		styles: { 'list-style-type': 'square' } },
+
+			/* Widget Styles */
+			// We use this one to style the brownie picture.
+			{ name: 'Illustration', type: 'widget', widget: 'image', attributes: { 'class': 'image-illustration' } },
+			// Media embed
+			{ name: '240p', type: 'widget', widget: 'embedSemantic', attributes: { 'class': 'embed-240p' } },
+			{ name: '360p', type: 'widget', widget: 'embedSemantic', attributes: { 'class': 'embed-360p' } },
+			{ name: '480p', type: 'widget', widget: 'embedSemantic', attributes: { 'class': 'embed-480p' } },
+			{ name: '720p', type: 'widget', widget: 'embedSemantic', attributes: { 'class': 'embed-720p' } },
+			{ name: '1080p', type: 'widget', widget: 'embedSemantic', attributes: { 'class': 'embed-1080p' } }
+		]
+	} );
+</script>
+</body>
+</html>

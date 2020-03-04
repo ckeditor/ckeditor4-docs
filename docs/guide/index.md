@@ -11,7 +11,7 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 <dt>{@link guide/dev/installation/README Getting Started}</dt><dd>How to download, install, and use CKEditor.</dd>
 <dt>{@link guide/dev/advanced_installation/README Advanced Installation Tasks}</dt><dd>More advanced installation tasks, like installing additional components, upgrading, building and using package managers.</dd>
 <dt>{@link features/index Features Overview}</dt><dd>An overview of CKEditor features.</dd>
-<dt>{@link guide/dev/integration/easyimage/README Integration}</dt><dd>How to integrate Easy Image, Angular Framework, React Framework, Vue Framework, file browsers or uploaders, and how to use the jQuery adapter.</dd>
+<dt>{@link guide/dev/integration/README Integration}</dt><dd>How to integrate CKEditor 4 with frameworks such as Angular, React, Vue.js and jQuery as well as with webpack, Easy Image, file browsers or uploaders and Accessibility Checker.</dd>
 <dt>{@link guide/dev/deep_dive/README CKEditor Deep Dive}</dt><dd>More advanced CKEditor concepts, like widgets and content filtering.</dd>
 <dt>{@link guide/dev/contributing/README Contributing}</dt><dd>How to contribute to CKEditor development.</dd>
 <dt>{@link guide/dev/browsers/README Compatibility, Compliance, License}</dt><dd>Browser compatibility and licensing information.</dd>

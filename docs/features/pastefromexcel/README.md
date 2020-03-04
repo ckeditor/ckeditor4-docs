@@ -6,7 +6,7 @@ menu-title: Paste from Excel
 meta-title-short: Paste from Excel
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -56,6 +56,7 @@ Refer to the following resources for more information about pasting content as w
 * The {@link features/spreadsheets/README Spreadsheet plugin} provides support for creating complex data sheets that provide data types, formatting and styling, formulas, conditional formatting and more.
 * The {@link features/pastefromword/README Pasting content from Microsoft Word} article contains more information about the Paste from Word plugin and its features.
 * The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains more information about the Paste from Google Docs feature.
+* The {@link features/pastefromlibreoffice/README Pasting content from LibreOffice Writer} article contains more information about the Paste from LibreOffice feature.
 * The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.
 * The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
 * The {@link guide/dev/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.

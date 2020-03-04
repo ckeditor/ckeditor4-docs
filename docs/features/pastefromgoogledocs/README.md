@@ -6,7 +6,7 @@ menu-title: Paste from Google Docs
 meta-title-short: Paste from Google Docs
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -42,7 +42,7 @@ Paste from Google Docs retains the following formatting:
     * Cell alignment
 * Images
 
-Paste from Google Docs maintains most of Google Docs text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will not handle equations created in Google Docs.
+The Paste from Google Docs plugin maintains most of Google Docs text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will not handle equations created in Google Docs.
 
 ## Sample
 
@@ -78,6 +78,7 @@ Refer to the following resources for more information about pasting content:
 
 * The {@link features/pastefromword/README Pasting content from Microsoft Word} article contains more information about the Paste from Word feature.
 * The {@link features/pastefromexcel/README Pasting content from Microsoft Excel} article contains more information about the Paste from Excel feature.
+* The {@link features/pastefromlibreoffice/README Pasting content from LibreOffice Writer} article contains more information about the Paste from LibreOffice feature.
 * The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.
 * The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
 * The {@link guide/dev/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.

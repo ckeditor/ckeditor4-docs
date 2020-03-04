@@ -6,7 +6,7 @@ menu-title: Paste from Word
 meta-title-short: Paste from Word
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -49,7 +49,7 @@ Paste from Word retains the following formatting:
     * Default styles
     * User-defined styles
 
-Paste from Word maintains most of Microsoft Word text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will paste only standard bullets from the bullet library, or will not use a double strikethrough effect. Such elements are replaced by the default ones to resemble your Word content in the most accurate way.
+The Paste from Word plugin maintains most of Microsoft Word text formatting features with some exceptions related to advanced styling, customizations, or stylings that are not supported by HTML. For example, it will paste only standard bullets from the bullet library, or will not use a double strikethrough effect. Such elements are replaced by the default ones to resemble your Word content in the most accurate way.
 
 ## Advanced Paste from Word &mdash; CKEditor 4.6+
 
@@ -92,17 +92,17 @@ In the example above you can see that after pasting into CKEditor, the first lis
 
 HTML exposed by Microsoft Word does not comply to any imaginable rules. It is a poetry of what can be done wrong. Therefore, a separate filter had to be created to normalize this content. It is implemented in the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin and, beside the {@link features/drop_paste/README#filtering-content standard filtering options}, it has additional settings:
 
-* {@linkapi CKEDITOR.config.pasteFromWordCleanupFile CKEDITOR.config.pasteFromWordCleanupFile}
-* {@linkapi CKEDITOR.config.pasteFromWordPromptCleanup CKEDITOR.config.pasteFromWordPromptCleanup}
+* {@linkapi CKEDITOR.config.pasteFromWordCleanupFile `CKEDITOR.config.pasteFromWordCleanupFile`}
+* {@linkapi CKEDITOR.config.pasteFromWordPromptCleanup `CKEDITOR.config.pasteFromWordPromptCleanup`}
 
 Starting from version 4.6 of CKEditor the following options were deprecated:
 
-* {@linkapi CKEDITOR.config.pasteFromWordRemoveFontStyles CKEDITOR.config.pasteFromWordRemoveFontStyles} (deprecated in favor of Advanced Content Filter)
+* {@linkapi CKEDITOR.config.pasteFromWordRemoveFontStyles `CKEDITOR.config.pasteFromWordRemoveFontStyles`} (deprecated in favor of Advanced Content Filter, see {@link guide/dev/deep_dive/advanced_content_filter/README#example-removing-font-styles an example of removing font styles})
 
 For CKEditor versions older than 4.6 the following options were available, too:
 
-* {@linkapi CKEDITOR.config.pasteFromWordNumberedHeadingToList CKEDITOR.config.pasteFromWordNumberedHeadingToList}
-* {@linkapi CKEDITOR.config.pasteFromWordRemoveStyles CKEDITOR.config.pasteFromWordRemoveStyles}
+* {@linkapi CKEDITOR.config.pasteFromWordNumberedHeadingToList `CKEDITOR.config.pasteFromWordNumberedHeadingToList`}
+* {@linkapi CKEDITOR.config.pasteFromWordRemoveStyles `CKEDITOR.config.pasteFromWordRemoveStyles`}
 
 ## Paste from Word Demo
 
@@ -114,6 +114,7 @@ Refer to the following resources for more information about pasting content:
 
 * The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains more information about the Paste from Google Docs feature.
 * The {@link features/pastefromexcel/README Pasting content from Microsoft Excel} article contains more information about the Paste from Excel feature.
+* The {@link features/pastefromlibreoffice/README Pasting content from LibreOffice Writer} article contains more information about the Paste from LibreOffice feature.
 * The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.
 * The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
 * The {@link guide/dev/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.

@@ -6,7 +6,7 @@ menu-title: Using Package Managers
 meta-title-short: Using Package Managers
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -43,6 +43,10 @@ This article assumes that you have **npm** already installed and added to your `
 In order to fetch the most recent build, execute the following command:
 
 	npm install ckeditor4
+
+The above command will install the `standard-all` preset of CKEditor 4. It is also possible to install a different preset using the `ckeditor/ckeditor4-releases#<BRANCH_NAME>` repository dependency instead of the npm package. The `<BRANCH_NAME>` should then point to the correct [CKEditor4 Release branch](https://github.com/ckeditor/ckeditor4-releases/branches) name, e.g.
+
+	npm install ckeditor/ckeditor4-releases#full/latest
 
 By default CKEditor will be placed in the `node_modules/ckeditor4` directory.
 

@@ -1,3 +1,6 @@
 [submodule "repos/ckeditor-presets"]
 	path = repos/ckeditor-presets
 	url = https://github.com/ckeditor/ckeditor4-presets.git
+[submodule "docs/sdk/examples/assets/ckeditor4-docs-samples"]
+	path = docs/sdk/examples/assets/ckeditor4-docs-samples
+	url = https://github.com/ckeditor/ckeditor4-docs-samples.git

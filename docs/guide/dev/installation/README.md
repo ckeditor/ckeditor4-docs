@@ -6,7 +6,7 @@ menu-title: Quick Start Guide
 meta-title-short: Quick Start Guide
 ---
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -44,27 +44,33 @@ Instead of downloading CKEditor 4 to your server and hosting it you can also use
 
 ### CKEditor 4 Angular Integration
 
-To install the Official CKEditor 4 Angular Component run:
+To install the official CKEditor 4 Angular component, run:
 
 ```
 npm install ckeditor4-angular
 ```
 
-By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/angular/README integration guides} on how it can be changed and how to configure the component to fit you needs.
+By default it will automatically fetch the latest CKEditor 4 [standard-all preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/angular/README Angular Integration guide} on how it can be changed and how to configure the component to fit you needs.
 
 ### CKEditor 4 React Integration
 
-To install the Official CKEditor 4 React Component run:
+To install the official CKEditor 4 React component, run:
 
 ```
 npm install ckeditor4-react
 ```
 
-By default it will automatically fetch the latest CKEditor 4 [Standard-All preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/react/README integration guides} on how it can be changed and how to configure the component to fit you needs.
+By default it will automatically fetch the latest CKEditor 4 [standard-all preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/react/README React Integration guide} on how it can be changed and how to configure the component to fit you needs.
 
 ### CKEditor 4 Vue Integration
 
-{@link guide/dev/integration/vue/README CKEditor 4 Vue Integration} is under development.
+To install the official CKEditor 4 Vue component, run:
+
+```
+npm install ckeditor4-vue
+```
+
+By default it will automatically fetch the latest CKEditor 4 [standard-all preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/vue/README Vue Integration guide} on how it can be changed and how to configure the component to fit you needs.
 
 ## Trying Out
 

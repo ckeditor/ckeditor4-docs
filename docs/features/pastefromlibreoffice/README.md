@@ -44,6 +44,8 @@ Paste from LibreOffice retains the following formatting:
 
 The Paste from LibreOffice plugin maintains most of LibreOffice Writer text formatting features with some exceptions related to advanced styling, customizations, or styles that are not supported by HTML.
 
+The plugin is supported only in Google Chrome, Mozilla Firefox and Microsoft Edge browsers. In Safari and Internet Explorer it is not possible to detect if the content is copied from LibreOffice Writer. However, even without the official support for the plugin, most of the formatting should be preserved correctly upon pasting in these browsers.
+
 ## Sample
 
 The following sample content from a LibreOffice Writer document:

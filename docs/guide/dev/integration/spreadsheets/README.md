@@ -137,28 +137,30 @@ The above template will allow inserting a 2x2 spreadsheet widget with the defaul
 
 ## Automatically Convert Existing Tables
 
-Any existing {@link features/table/README table} can be easily transformed into a spreadsheet with the {@link features/spreadsheets/README#converting-existing-tables Convert to Spreadsheet} option from the table context menu. However, manual conversion may become cumbersome when dealing with content containing dozens of tables. The entire procedure can thus be easily automated thanks to the CKEditor 4 data processing pipeline.
-
+Any existing {@link features/table/README table} can be easily transformed into a spreadsheet with the {@link features/spreadsheets/README#converting-existing-tables Convert to Spreadsheet} option from the table context menu. However, manual conversion may become cumbersome when dealing with content containing dozens of tables. The entire procedure can thus be easily automated thanks to `spreadsheet_enableAutoConversion` configuration option:
 
 ```js
 var editor = CKEDITOR.replace( 'editor', {
     extraPlugins: 'spreadsheet',
-    spreadsheet_licenseKey: 'yourLicenseKey'
+	spreadsheet_licenseKey: 'yourLicenseKey',
+	spreadsheet_enableAutoConversion: true
 } );
-
-editor.on( 'toHtml', function( evt ) {
-  evt.data.dataValue.forEach( function( node ) {
-    if ( node.name && node.name == 'table' ) {
-      node.attributes[ 'data-cke-spreadsheet-widget' ] = 1;
-    }
-  } );
-}, null, null, 14 );
 ```
 
-Adding the special `data-cke-spreadsheet-widget` attribute allows the Spreadsheet plugin to identify a regular table and transform it into the spreadsheet widget.
+To gain more control over which table elements are converted or to add custom conversion heuristics, one may use `addTableTransformation()` API method instead:
+
+```js
+CKEDITOR.plugins.spreadsheet.addTableTransformation( editor, function( element ) {
+	// Here you can provide any custom code. If it returns "true"
+	// table element will be converted into a Spreadsheet instance.
+	return !!element.attributes[ 'data-spreadsheet' ];
+} );
+```
+
+The above API uses {@linkapi CKEDITOR.filter#addTransformations} method underneath, adding special filter to CKEditor 4 instance.
 
 <info-box hint="">
-	Keep in mind that this code will be executed every time the data is set in the editor, so it will convert any plain HTML table. It makes sense to use it when entirely replacing the Table plugin with the Spreadsheet plugin.
+	Keep in mind that autoconversion (both added via configuration option or API) will be executed every time the data is set in the editor, so it will convert any plain HTML table. It makes sense to use it when entirely replacing the Table plugin with the Spreadsheet plugin.
 	Also, since spreadsheets support only plain text cell values, every more complex structure (like lists) will be converted to plain text.
 </info-box>
 

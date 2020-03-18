@@ -2,8 +2,8 @@
 category: inserting-images
 order: 40
 url: features/easyimage
-menu-title: Easy Image
-meta-title-short: Easy Image
+menu-title: Easy Image Plugin
+meta-title-short: Easy Image Plugin
 ---
 <!--
 Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.

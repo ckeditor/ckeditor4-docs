@@ -108,6 +108,29 @@ module.exports = function( grunt ) {
 					src: '**',
 					dest: 'docs/sdk/examples/assets/plugins/spreadsheet'
 				} ]
+			},
+			'docs-samples': {
+				files: [ {
+					expand: true,
+					cwd: 'docs/sdk/examples/assets/ckeditor4-docs-samples/tutorial-abbr-acf/abbr',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/abbr'
+				}, {
+					expand: true,
+					cwd: 'docs/sdk/examples/assets/ckeditor4-docs-samples/tutorial-autotag/autotag',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/autotag'
+				}, {
+					expand: true,
+					cwd: 'docs/sdk/examples/assets/ckeditor4-docs-samples/tutorial-simplebox-2/simplebox',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/simplebox'
+				}, {
+					expand: true,
+					cwd: 'docs/sdk/examples/assets/ckeditor4-docs-samples/tutorial-timestamp/timestamp',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/timestamp'
+				} ]
 			}
 		},
 		jsduck: {

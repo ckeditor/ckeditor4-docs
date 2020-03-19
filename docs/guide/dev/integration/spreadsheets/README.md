@@ -147,7 +147,7 @@ var editor = CKEDITOR.replace( 'editor', {
 } );
 ```
 
-To gain more control over which table elements are converted or to add custom conversion heuristics, one may use `addTableTransformation()` API method instead:
+To gain more control over which table elements are converted or to add custom conversion algorithm, one may use `addTableTransformation()` API method instead:
 
 ```js
 CKEDITOR.plugins.spreadsheet.addTableTransformation( editor, function( element ) {

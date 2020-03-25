@@ -41,15 +41,15 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 
 The Spreadsheet plugin allows you to create intelligent, data-driven documents right inside your WYSIWYG editor. This makes it a perfect solution for financial, auditing, engineering, technical and science industries.
 
-## Referencing cells
+## Cell Referencing
 
-What makes Spreadsheets special? First class integration with content editing! You can start typing `$` to see completion matches from the Spreadsheets inside your document. Cell references are a living part of your document, which means that editing Spreadsheet cell value updates them in a fly. What's more you don't even need to see Spreadsheet in a long document - fuzzy matching will simplify connecting your Spreadsheet data with the editor content.
+What makes Spreadsheets special? First class integration with content editing! You can start typing `$` to see cells suggestions from the Spreadsheets inside your document. Cell references are a living part of your document, which means that editing spreadsheet cell value will also update all the references automatically. What's even more convenient - you don't even need to see spreadsheet instance in a long document - smart suggestions and fuzzy matching will simplify connecting data from any spreadsheet present in the editor with the editor content.
 
 {@img assets/img/spreadsheet_14.png Spreadsheet plugin widget with cell references.}
 
 ## Pasting from Excel and Google Sheets
 
-Moving your tabular data from Microsoft Excel and Google Sheets is as simple as copying and pasting it into the editor. Once you enable automatical tables conversion, Spreadsheets will take care of converting any table to an advanced Spreadsheet instance.
+Moving your tabular data from Microsoft Excel or Google Sheets is as simple as copying and pasting it into the editor. Once the automatic tables conversion is enabled, Spreadsheets will take care of converting any table to an advanced Spreadsheet instance with all features available.
 
 ## Inserting Spreadsheet Widget
 
@@ -99,7 +99,7 @@ While spreadsheets are mostly about data, their presentation is also very import
 
 ## Advanced Styles Support
 
-Spreadsheets are integrated with [Color Button](https://ckeditor.com/cke4/addon/colorbutton) and [Font](https://ckeditor.com/cke4/addon/font) features allowing to change font family, size, background and text colors.
+Spreadsheets are integrated with [Color Button](https://ckeditor.com/cke4/addon/colorbutton) and [Font](https://ckeditor.com/cke4/addon/font) features allowing to change font family, font size, background and text colors for any spreadsheet instance present in the editor.
 
 {@img assets/img/spreadsheet_13.png Spreadsheet plugin widget with advanced styling.}
 

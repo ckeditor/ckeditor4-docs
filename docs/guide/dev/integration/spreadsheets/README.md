@@ -81,59 +81,58 @@ The value of `spreadsheet_licenseKey` is unique for each website and can be foun
 
 This is all. If you are having trouble with setting up the Spreadsheet plugin, please [contact us](https://ckeditor.com/contact/).
 
-## Content Templates Plugin Integration
+## Cell references
 
-The Spreadsheet plugin allows you to create highly customized spreadsheet widget instances from scratch. However, there are also cases when it is more convenient to insert a ready-to-use spreadsheet with a predefined structure and formatting.
+In most situations, cell references default settings should suit your needs. However, you can control some options to customize the behavior of cell referencing if needed.
 
-This is possible thanks to integrating the Spreadsheet plugin with the [Content Templates plugin](https://ckeditor.com/cke4/addon/templates). The Content Templates plugin should be enabled and correctly configured first, though:
+### Custom matching pattern
+
+By defaut, cell references completion panel is triggered by `$` character. To improve performance and pre-validate Spreadsheet names it also uses special pattern when resolving completion matches. The default pattern consist of letters `a-z`, numbers `0-9`, underscore `_`, exclamation mark `!` and colon `:`.
+
+You can create your own completion pattern using simple regex and `spreadsheet_cellReferencesPattern` configuration option:
 
 ```js
 CKEDITOR.replace( 'editor', {
-    extraPlugins: 'spreadsheet',
-    spreadsheet_licenseKey: 'yourLicenseKey',
-    templates: 'spreadsheets',
-    templates_files: [ 'spreadsheet_templates.js' ]
+	spreadsheet_licenseKey: 'yourLicenseKey',
+
+	// Use `%` character as a marker instead of the default `$`.
+	spreadsheet_cellReferencesPattern: /\%[:_\!a-zA-Z0-9À-ž]*$/
 } );
 ```
 
-Refer to the {@linkapi CKEDITOR.config#templates `templates`} and {@linkapi CKEDITOR.config#templates_files `templates_files`} configuration options API documentation for more details.
+### Limiting the number of visible completion items
 
-And the `spreadsheet_templates.js` file may look as follows:
+Using the default settings, completion panel is able to show only 10 items at a time, narrowing down completion matches based on the closest pattern match and Spreadsheets cells order starting from the left top corner e.g. cells starting at the beginning of the Spreadsheet like `A:1` will have higher priority than cells at the end.
+
+If you find out the maximum number of matches limiting, you can customize it using `spreadsheet_cellReferencesLimit` configuration option:
 
 ```js
-CKEDITOR.addTemplates( 'spreadsheets', {
-    imagesPath: CKEDITOR.getUrl( 'path/to/images/folder/' ),
-    templates: [ {
-        title: 'Spreadsheet',
-        image: 'template1.gif', // Thumbnail image used in the Content Templates dialog.
-        description: '2x2 Spreadsheet',
-        html: '' +
-            '<table data-cke-spreadsheet-widget="1">' +
-                '<thead>' +
-                    '<tr>' +
-                        '<th></th>' +
-                        '<th data-sort-order="asc" data-sort-priority="0">Column 1</th>' +
-                        '<th>Column 2</th>' +
-                    '</tr>' +
-                '</thead>' +
-                '<tbody>' +
-                    '<tr>' +
-                        '<th>1</th>' +
-                        '<td></td>' +
-                        '<td data-type="numeric" data-type-pattern="0,0.00"></td>' +
-                    '</tr>' +
-                    '<tr>' +
-                        '<th>2</th>' +
-                        '<td></td>' +
-                        '<td data-type="numeric" data-type-pattern="0,0.00"></td>' +
-                    '</tr>' +
-                '</tbody>' +
-            '</table>'
-    } ]
+CKEDITOR.replace( 'editor', {
+	spreadsheet_licenseKey: 'yourLicenseKey',
+
+	// Increate number of matches visible in completion panel up to 20.
+	spreadsheet_cellReferencesLimit: 20
 } );
 ```
 
-The above template will allow inserting a 2x2 spreadsheet widget with the default ascending sorting order (in the first column) and the numeric data type (in the second column) with just two clicks. See it in action in the {@linksdk spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample}.
+### Throttling completion panel
+
+Quick typers could overheat completion if triggered for every character typed. For that purpose, cell references completion utilizes typing throttling which slightly buffers typing to make it more performant.
+
+You can configure throttling time if you would like to get quicker response from the editor or increase if you target Spreadsheets instances with many rows and columns to improve performance:
+
+```js
+CKEDITOR.replace( 'editor', {
+	spreadsheet_licenseKey: 'yourLicenseKey',
+
+	// Decrease throttling timeout from 200 to 50 for better UX:
+	spreadsheet_cellReferencesThrottle: 50
+} );
+```
+
+## Paste from Excel and Google Sheets
+
+Spreadsheets are able to understand bloated HTML from external editors like Microsoft Excel and Google Sheets and convert it into much more semantic source code. To convert any tabular data which comes from Microsoft Excel or Google Sheets to Spreadsheet instance during pasting operation, use `spreadsheet_enableAutoConversion` option described in {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables its guide section}.
 
 ## Automatically Convert Existing Tables
 
@@ -191,6 +190,60 @@ The frontend adapter will automatically transform all available spreadsheet inst
 CKE4Spreadsheet.autoConvert = false;
 CKE4Spreadsheet.convert( document.querySelector( 'container' ) );
 ```
+
+## Content Templates Plugin Integration
+
+The Spreadsheet plugin allows you to create highly customized spreadsheet widget instances from scratch. However, there are also cases when it is more convenient to insert a ready-to-use spreadsheet with a predefined structure and formatting.
+
+This is possible thanks to integrating the Spreadsheet plugin with the [Content Templates plugin](https://ckeditor.com/cke4/addon/templates). The Content Templates plugin should be enabled and correctly configured first, though:
+
+```js
+CKEDITOR.replace( 'editor', {
+    extraPlugins: 'spreadsheet',
+    spreadsheet_licenseKey: 'yourLicenseKey',
+    templates: 'spreadsheets',
+    templates_files: [ 'spreadsheet_templates.js' ]
+} );
+```
+
+Refer to the {@linkapi CKEDITOR.config#templates `templates`} and {@linkapi CKEDITOR.config#templates_files `templates_files`} configuration options API documentation for more details.
+
+And the `spreadsheet_templates.js` file may look as follows:
+
+```js
+CKEDITOR.addTemplates( 'spreadsheets', {
+    imagesPath: CKEDITOR.getUrl( 'path/to/images/folder/' ),
+    templates: [ {
+        title: 'Spreadsheet',
+        image: 'template1.gif', // Thumbnail image used in the Content Templates dialog.
+        description: '2x2 Spreadsheet',
+        html: '' +
+            '<table data-cke-spreadsheet-widget="1">' +
+                '<thead>' +
+                    '<tr>' +
+                        '<th></th>' +
+                        '<th data-sort-order="asc" data-sort-priority="0">Column 1</th>' +
+                        '<th>Column 2</th>' +
+                    '</tr>' +
+                '</thead>' +
+                '<tbody>' +
+                    '<tr>' +
+                        '<th>1</th>' +
+                        '<td></td>' +
+                        '<td data-type="numeric" data-type-pattern="0,0.00"></td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<th>2</th>' +
+                        '<td></td>' +
+                        '<td data-type="numeric" data-type-pattern="0,0.00"></td>' +
+                    '</tr>' +
+                '</tbody>' +
+            '</table>'
+    } ]
+} );
+```
+
+The above template will allow inserting a 2x2 spreadsheet widget with the default ascending sorting order (in the first column) and the numeric data type (in the second column) with just two clicks. See it in action in the {@linksdk spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample}.
 
 ## Manipulating the Spreadsheet Widget Data via API
 

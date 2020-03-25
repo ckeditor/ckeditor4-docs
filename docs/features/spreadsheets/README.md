@@ -47,6 +47,14 @@ What makes Spreadsheets special? First class integration with content editing! Y
 
 {@img assets/img/spreadsheet_14.png Spreadsheet plugin widget with cell references.}
 
+## Conditional Formatting
+
+Do you need to add some colors to your data? Conditional formatting allows formatting data (any cell, column or entire data grid) based on its content. For example, you can mark cells red when they are empty, make them green when their value is above some threshold or blue if the cell value contains a specific text.
+
+Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linksdk spreadsheets working Spreadsheets demo}.
+
+{@img assets/img/spreadsheet_10.png Spreadsheet plugin with the Conditional Formatting dialog.}
+
 ## Pasting from Microsoft Excel and Google Sheets
 
 Moving your tabular data from Microsoft Excel or Google Sheets is as simple as copying and pasting it into the editor. Once the automatic tables conversion is enabled, Spreadsheets will take care of converting any table to an advanced Spreadsheet instance with all features available.
@@ -65,6 +73,8 @@ If you already have {@link features/table/README tables} in your content and pla
 
 {@img assets/img/spreadsheet_03.png Spreadsheet plugin converts existing table context menu option.}
 
+Converting all existing tables at once automatically can be also done via {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables configuration option or an API call}.
+
 ## Spreadsheet Structure Manipulation
 
 The Spreadsheet plugin allows for easy data structure manipulation with options such as **Insert row above**, **Insert row below**, **Insert column left**, **Insert column right**, **Remove row** or **Remove column**.
@@ -82,14 +92,6 @@ Some data points or observations may contain quite long data which might be inco
 It is important to label your data in a clear and understandable way. Spreadsheet plugin allows easy rows and columns headers renaming via a simple dialog:
 
 {@img assets/img/spreadsheet_colrow_rename.png The rows and columns headers renaming mechanism in the Spreadsheet plugin.}
-
-## Sorting
-
-Sorting is a must to efficiently analyze and present any tabular data, thus the Spreadsheet plugin allows for sorting data based on single or multiple columns:
-
-{@img assets/img/spreadsheet_06.png Spreadsheet plugin widget with multisort.}
-
-To sort by a single column, just click the column header. To use multisort, any column which should be added to sorting should be clicked while the <kbd>Ctrl</kbd> key is pressed.
 
 ## Basic Styles Support
 
@@ -117,6 +119,14 @@ Additionally, each data type has a strict validation so it is clearly visible wh
 
 {@img assets/img/spreadsheet_08.png Spreadsheet plugin with the Cell Type and Format dialog.}
 
+## Sorting
+
+Sorting is a must to efficiently analyze and present any tabular data, thus the Spreadsheet plugin allows for sorting data based on single or multiple columns:
+
+{@img assets/img/spreadsheet_06.png Spreadsheet plugin widget with multisort.}
+
+To sort by a single column, just click the column header. To use multisort, any column which should be added to sorting should be clicked while the <kbd>Ctrl</kbd> key is pressed.
+
 ## Formulas
 
 Formulas provide support for mathematical expression calculations based on input data. Just type `=` and the rest of the formula, using arithmetic expressions and cell references to customize the output. Supported features:
@@ -137,14 +147,6 @@ Formulas provide support for mathematical expression calculations based on input
 {@img assets/img/spreadsheet_09.png Spreadsheet plugin with formula preview.}
 
 Refer to the official [Handsontable formulas reference](https://handsontable.com/docs/latest/demo-formula-support.html) for more details.
-
-## Conditional Formatting
-
-Do you need to add some colors to your data? Conditional formatting allows formatting data (any cell, column or entire data grid) based on its content. For example, you can mark cells red when they are empty, make them green when their value is above some threshold or blue if the cell value contains a specific text.
-
-Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linksdk spreadsheets working Spreadsheets demo}.
-
-{@img assets/img/spreadsheet_10.png Spreadsheet plugin with the Conditional Formatting dialog.}
 
 ## Auto Fill in All Directions
 

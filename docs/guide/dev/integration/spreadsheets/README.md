@@ -132,7 +132,9 @@ CKEDITOR.replace( 'editor', {
 
 ## Paste from Excel and Google Sheets
 
-Spreadsheets are able to understand bloated HTML from external editors like Microsoft Excel and Google Sheets and convert it into much more semantic source code. To convert any tabular data which comes from Microsoft Excel or Google Sheets to Spreadsheet instance during pasting operation, use `spreadsheet_enableAutoConversion` option described in {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables its guide section}.
+Spreadsheets are able to understand bloated HTML from external editors like Microsoft Excel and Google Sheets and convert it into much more semantic source code.
+
+To convert any tabular data which comes from Microsoft Excel or Google Sheets to Spreadsheet instance during pasting operation, use `spreadsheet_enableAutoConversion` option described in {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables its guide section}.
 
 ## Automatically Convert Existing Tables
 

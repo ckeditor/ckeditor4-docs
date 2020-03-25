@@ -21,13 +21,16 @@ For licensing, see LICENSE.md.
 The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin lets you insert customizable spreadsheet widgets into your WYSIWYG editor. It provides support for:
 
 * Inserting spreadsheets with and without a header row or column and with any number of rows and columns.
-* Inserting spreadsheets using predefined templates.
+* {@link features/spreadsheets/README#referencing-cells Referencing cells} inside the editor content using smart completion.
+* {@link features/spreadsheets/README#pasting-from-excel-and-google-sheets Autoconverting tabular data} pasted from Microsoft Excel and Google Sheets into a Spreadsheet instance.
 * {@link features/spreadsheets/README#converting-existing-tables Converting existing tables} to spreadsheet instances and vice versa.
+* Inserting spreadsheets using predefined templates.
 * {@link features/spreadsheets/README#spreadsheet-structure-manipulation Spreadsheet structure manipulation} (adding or removing rows and columns).
 * {@link features/spreadsheets/README#resizing-rows-and-columns Resizing rows and columns}.
 * {@link features/spreadsheets/README#renaming-rows-and-columns-headers Renaming rows and columns headers}.
 * Single and multi-column {@link features/spreadsheets/README#sorting sorting}.
 * {@link features/spreadsheets/README#basic-styles-support Basic data styling} like bold, italic, underline and so on.
+* {@link features/spreadsheets/README#advanced-styles-support Advanced styles support} like the look of text font, cell colors and so on.
 * Selecting {@link features/spreadsheets/README#data-types-formats-and-validation cell type and formatting with data validation support}.
 * Using {@link features/spreadsheets/README#formulas formulas}.
 * {@link features/spreadsheets/README#auto-fill-in-all-directions Auto filling} rows and columns.
@@ -37,6 +40,16 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 {@img assets/img/spreadsheet_01.png A spreadsheet inserted into CKEditor 4 WYSIWYG editor.}
 
 The Spreadsheet plugin allows you to create intelligent, data-driven documents right inside your WYSIWYG editor. This makes it a perfect solution for financial, auditing, engineering, technical and science industries.
+
+## Referencing cells
+
+What makes Spreadsheets special? First class integration with content editing! You can start typing `$` to see completion matches from the Spreadsheets inside your document. Cell references are a living part of your document, which means that editing Spreadsheet cell value updates them in a fly. What's more you don't even need to see Spreadsheet in a long document - fuzzy matching will simplify connecting your Spreadsheet data with the editor content.
+
+{@img assets/img/spreadsheet_14.png Spreadsheet plugin widget with cell references.}
+
+## Pasting from Excel and Google Sheets
+
+Moving your tabular data from Microsoft Excel and Google Sheets is as simple as copying and pasting it into the editor. Once you enable automatical tables conversion, Spreadsheets will take care of converting any table to an advanced Spreadsheet instance.
 
 ## Inserting Spreadsheet Widget
 
@@ -83,6 +96,12 @@ To sort by a single column, just click the column header. To use multisort, any 
 While spreadsheets are mostly about data, their presentation is also very important. {@link features/basicstyles/README Basic styles} like bold, italic or alignment come handy when trying to highlight or make some parts of data or individual spreadsheet cells more visible:
 
 {@img assets/img/spreadsheet_07.png Spreadsheet plugin widget with basic styling.}
+
+## Advanced Styles Support
+
+Spreadsheets are integrated with [Color Button](https://ckeditor.com/cke4/addon/colorbutton) and [Font](https://ckeditor.com/cke4/addon/font) features allowing to change font family, size, background and text colors.
+
+{@img assets/img/spreadsheet_13.png Spreadsheet plugin widget with advanced styling.}
 
 ## Data Types, Formats and Validation
 

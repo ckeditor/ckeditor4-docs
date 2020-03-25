@@ -21,8 +21,8 @@ For licensing, see LICENSE.md.
 The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin lets you insert customizable spreadsheet widgets into your WYSIWYG editor. It provides support for:
 
 * Inserting spreadsheets with and without a header row or column and with any number of rows and columns.
-* {@link features/spreadsheets/README#referencing-cells Referencing cells} inside the editor content using smart completion.
-* {@link features/spreadsheets/README#pasting-from-excel-and-google-sheets Autoconverting tabular data} pasted from Microsoft Excel and Google Sheets into a Spreadsheet instance.
+* {@link features/spreadsheets/README#cell-referencing Referencing cells} inside the editor content using smart completion.
+* {@link features/spreadsheets/README#pasting-from-microsoft-excel-and-google-sheets Autoconverting tabular data} pasted from Microsoft Excel and Google Sheets into a Spreadsheet instance.
 * {@link features/spreadsheets/README#converting-existing-tables Converting existing tables} to spreadsheet instances and vice versa.
 * Inserting spreadsheets using predefined templates.
 * {@link features/spreadsheets/README#spreadsheet-structure-manipulation Spreadsheet structure manipulation} (adding or removing rows and columns).
@@ -47,7 +47,7 @@ What makes Spreadsheets special? First class integration with content editing! Y
 
 {@img assets/img/spreadsheet_14.png Spreadsheet plugin widget with cell references.}
 
-## Pasting from Excel and Google Sheets
+## Pasting from Microsoft Excel and Google Sheets
 
 Moving your tabular data from Microsoft Excel or Google Sheets is as simple as copying and pasting it into the editor. Once the automatic tables conversion is enabled, Spreadsheets will take care of converting any table to an advanced Spreadsheet instance with all features available.
 

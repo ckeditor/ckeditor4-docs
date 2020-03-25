@@ -81,15 +81,30 @@ The value of `spreadsheet_licenseKey` is unique for each website and can be foun
 
 This is all. If you are having trouble with setting up the Spreadsheet plugin, please [contact us](https://ckeditor.com/contact/).
 
-## Cell references
+## Cell References
 
-In most situations, cell references default settings should suit your needs. However, you can control some options to customize the behavior of cell referencing if needed.
+In most situations cell references default settings should suit your needs. However, you can adjust the configuration to customize the behavior of cell referencing if needed.
 
-### Custom matching pattern
+### Limiting/increasing the number of suggestions
 
-By defaut, cell references completion panel is triggered by `$` character. To improve performance and pre-validate Spreadsheet names it also uses special pattern when resolving completion matches. The default pattern consist of letters `a-z`, numbers `0-9`, underscore `_`, exclamation mark `!` and colon `:`.
+By default, cell references suggestions panel will show 10 items at a time, narrowing down completion matches based on the closest pattern match and Spreadsheets cells order starting from the left top corner.
 
-You can create your own completion pattern using simple regex and `spreadsheet_cellReferencesPattern` configuration option:
+If you find the maximum number of matches limiting, you can customize it using `spreadsheet_cellReferencesLimit` configuration option:
+
+```js
+CKEDITOR.replace( 'editor', {
+	spreadsheet_licenseKey: 'yourLicenseKey',
+
+	// Increate the number suggestions up to 20.
+	spreadsheet_cellReferencesLimit: 20
+} );
+```
+
+### Customizing matching pattern
+
+Cell references suggestions panel is triggered by `$` character by default. To improve performance and pre-validate Spreadsheet names it also uses special pattern when resolving completion matches. The default pattern consist of letters `a-z`, numbers `0-9`, underscore `_`, exclamation mark `!` and a colon `:`.
+
+You can create your own completion pattern if you have any non-standard columns or row names. This can be done using simple regular expression and `spreadsheet_cellReferencesPattern` configuration option:
 
 ```js
 CKEDITOR.replace( 'editor', {
@@ -100,41 +115,26 @@ CKEDITOR.replace( 'editor', {
 } );
 ```
 
-### Limiting the number of visible completion items
-
-Using the default settings, completion panel is able to show only 10 items at a time, narrowing down completion matches based on the closest pattern match and Spreadsheets cells order starting from the left top corner e.g. cells starting at the beginning of the Spreadsheet like `A:1` will have higher priority than cells at the end.
-
-If you find out the maximum number of matches limiting, you can customize it using `spreadsheet_cellReferencesLimit` configuration option:
-
-```js
-CKEDITOR.replace( 'editor', {
-	spreadsheet_licenseKey: 'yourLicenseKey',
-
-	// Increate number of matches visible in completion panel up to 20.
-	spreadsheet_cellReferencesLimit: 20
-} );
-```
-
 ### Throttling completion panel
 
-Quick typers could overheat completion if triggered for every character typed. For that purpose, cell references completion utilizes typing throttling which slightly buffers typing to make it more performant.
+Quick typers could overheat suggestions if it is triggered for every character typed. For that purpose, cell references completion algorithm utilizes typing throttling which slightly delays refreshing suggestions list to make it more performant.
 
-You can configure throttling time if you would like to get quicker response from the editor or increase if you target Spreadsheets instances with many rows and columns to improve performance:
+You can change throttling time if you would like to get quicker response from the editor or increase it, if you target Spreadsheet instances with many rows and columns to improve performance:
 
 ```js
 CKEDITOR.replace( 'editor', {
 	spreadsheet_licenseKey: 'yourLicenseKey',
 
-	// Decrease throttling timeout from 200 to 50 for better UX:
+	// Decrease throttling timeout from 200ms to 50ms for better UX:
 	spreadsheet_cellReferencesThrottle: 50
 } );
 ```
 
 ## Paste from Excel and Google Sheets
 
-Spreadsheets are able to understand bloated HTML from external editors like Microsoft Excel and Google Sheets and convert it into much more semantic source code.
+Spreadsheets are able to understand bloated HTML representing tables from external editors like **Microsoft Excel** and **Google Sheets** and are able to convert it into much more semantic representation while keeping the most important information unchanged.
 
-To convert any tabular data which comes from Microsoft Excel or Google Sheets to Spreadsheet instance during pasting operation, use `spreadsheet_enableAutoConversion` option described in {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables its guide section}.
+To convert any tabular data which comes from **Microsoft Excel**, **Google Sheets** or plain HTML website to Spreadsheet instance automatically after pasting it into editor, use `spreadsheet_enableAutoConversion` option described in {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables autoconverting exsisting tables} section below.
 
 ## Automatically Convert Existing Tables
 
@@ -302,11 +302,11 @@ The above API call returns the spreadsheet widget data as an array of arrays.
 
 ## Browser Support
 
-The spreadsheet plugin is fully supported in the latest **Chrome**, **Firefox** and **Safari** browsers.
+The spreadsheet plugin is fully supported in the latest **Chrome**, **Firefox**, **Safari** and **Edge** browsers.
 
-Support for **Internet Explorer 11** is limited: the plugin is usable but there are known, visible issues. **Edge** browser is not supported at the moment, however, we are looking into providing support for it, too.
+Support for **Internet Explorer 11** is limited: the plugin is usable but there are known, visible issues.
 
-If your application requires wider support for Internet Explorer 11 or Edge browsers or you have encountered any issues using these browsers, please [contact us](https://ckeditor.com/contact/).
+If your application requires wider support for Internet Explorer 11 browser or you have encountered any issues using it, please [contact us](https://ckeditor.com/contact/).
 
 ## Functionality Overview
 

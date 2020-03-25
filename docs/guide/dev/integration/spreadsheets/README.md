@@ -83,58 +83,58 @@ This is all. If you are having trouble with setting up the Spreadsheet plugin, p
 
 ## Cell References
 
-In most situations cell references default settings should suit your needs. However, you can adjust the configuration to customize the behavior of cell referencing if needed.
+In most situations the default settings for cell references should suit your needs. However, you can adjust the configuration to customize the behavior of cell referencing if needed.
 
-### Limiting/increasing the number of suggestions
+### Limiting or increasing the number of suggestions
 
-By default, cell references suggestions panel will show 10 items at a time, narrowing down completion matches based on the closest pattern match and Spreadsheets cells order starting from the left top corner.
+By default, cell references suggestion panel will show 10 items at a time. Completion matches are narrowed down based on the closest pattern match and the Spreadsheets cell order, starting from the top-left corner.
 
-If you find the maximum number of matches limiting, you can customize it using `spreadsheet_cellReferencesLimit` configuration option:
+If you find the maximum number of matches limiting, you can customize it using the `spreadsheet_cellReferencesLimit` configuration option:
 
 ```js
 CKEDITOR.replace( 'editor', {
 	spreadsheet_licenseKey: 'yourLicenseKey',
 
-	// Increate the number suggestions up to 20.
+	// Increase the number of suggestions to 20.
 	spreadsheet_cellReferencesLimit: 20
 } );
 ```
 
-### Customizing matching pattern
+### Customizing the matching pattern
 
-Cell references suggestions panel is triggered by `$` character by default. To improve performance and pre-validate Spreadsheet names it also uses special pattern when resolving completion matches. The default pattern consist of letters `a-z`, numbers `0-9`, underscore `_`, exclamation mark `!` and a colon `:`.
+By default the cell references suggestion panel is triggered by the `$` character. To improve performance and pre-validate Spreadsheet names, it also uses a special pattern when resolving completion matches. The default pattern consists of letters `a-z`, numbers `0-9`, underscore `_`, exclamation mark `!` and a colon `:`.
 
-You can create your own completion pattern if you have any non-standard columns or row names. This can be done using simple regular expression and `spreadsheet_cellReferencesPattern` configuration option:
+You can create your own completion pattern if you have any non-standard columns or row names. This can be done using a simple regular expression and the `spreadsheet_cellReferencesPattern` configuration option:
 
 ```js
 CKEDITOR.replace( 'editor', {
 	spreadsheet_licenseKey: 'yourLicenseKey',
 
-	// Use `%` character as a marker instead of the default `$`.
+	// Use the `%` character as a marker instead of the default `$`.
 	spreadsheet_cellReferencesPattern: /\%[:_\!a-zA-Z0-9À-ž]*$/
 } );
 ```
 
-### Throttling completion panel
+### Throttling the completion panel
 
-Quick typers could overheat suggestions if it is triggered for every character typed. For that purpose, cell references completion algorithm utilizes typing throttling which slightly delays refreshing suggestions list to make it more performant.
+Quick typers could overheat suggestions if they were triggered for every character typed. For that purpose, cell references completion algorithm utilizes typing throttling which slightly delays refreshing the suggestion list to make it more performant.
 
-You can change throttling time if you would like to get quicker response from the editor or increase it, if you target Spreadsheet instances with many rows and columns to improve performance:
+You can change the throttling time if you would like to get quicker response from the editor or increase it to improve performance if you target Spreadsheet instances with many rows and columns:
 
 ```js
 CKEDITOR.replace( 'editor', {
 	spreadsheet_licenseKey: 'yourLicenseKey',
 
-	// Decrease throttling timeout from 200ms to 50ms for better UX:
+	// Decrease the throttling timeout from 200ms to 50ms for better UX:
 	spreadsheet_cellReferencesThrottle: 50
 } );
 ```
 
 ## Paste from Excel and Google Sheets
 
-Spreadsheets are able to understand bloated HTML representing tables from external editors like **Microsoft Excel** and **Google Sheets** and are able to convert it into much more semantic representation while keeping the most important information unchanged.
+Spreadsheets are able to understand bloated HTML representing tables from external applications like **Microsoft Excel** and **Google Sheets**. They are also able to convert it into much more semantic representation while keeping the most important information unchanged.
 
-To convert any tabular data which comes from **Microsoft Excel**, **Google Sheets** or plain HTML website to Spreadsheet instance automatically after pasting it into editor, use `spreadsheet_enableAutoConversion` option described in {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables autoconverting exsisting tables} section below.
+To convert any tabular data that comes from **Microsoft Excel**, **Google Sheets** or a plain HTML website to a Spreadsheet instance automatically after pasting it into the editor, use the `spreadsheet_enableAutoConversion` option described in the {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables Automatically Convert Existing Tables} section below.
 
 ## Automatically Convert Existing Tables
 

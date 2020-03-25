@@ -30,7 +30,7 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 * {@link features/spreadsheets/README#renaming-rows-and-columns-headers Renaming rows and columns headers}.
 * Single and multi-column {@link features/spreadsheets/README#sorting sorting}.
 * {@link features/spreadsheets/README#basic-styles-support Basic data styling} like bold, italic, underline and so on.
-* {@link features/spreadsheets/README#advanced-styles-support Advanced styles support} like the look of text font, cell colors and so on.
+* {@link features/spreadsheets/README#advanced-styles-support Advanced styles support} like text font, cell colors and so on.
 * Selecting {@link features/spreadsheets/README#data-types-formats-and-validation cell type and formatting with data validation support}.
 * Using {@link features/spreadsheets/README#formulas formulas}.
 * {@link features/spreadsheets/README#auto-fill-in-all-directions Auto filling} rows and columns.
@@ -43,7 +43,7 @@ The Spreadsheet plugin allows you to create intelligent, data-driven documents r
 
 ## Cell Referencing
 
-What makes Spreadsheets special? First class integration with content editing! You can start typing `$` to see cells suggestions from the Spreadsheets inside your document. Cell references are a living part of your document, which means that editing spreadsheet cell value will also update all the references automatically. What's even more convenient - you don't even need to see spreadsheet instance in a long document - smart suggestions and fuzzy matching will simplify connecting data from any spreadsheet present in the editor with the editor content.
+What makes Spreadsheets special? First-class integration with content editing! You can start typing `$` to see cell suggestions from the spreadsheets inside your document. Cell references are a living part of your document, which means that editing the spreadsheet cell value will also update all the references automatically. What is even more convenient, you do not even need to see the spreadsheet instance in a long document. Smart suggestions and fuzzy matching will simplify connecting the data from any spreadsheet present in the editor with the editor content.
 
 {@img assets/img/spreadsheet_14.png Spreadsheet plugin widget with cell references.}
 
@@ -101,7 +101,7 @@ While spreadsheets are mostly about data, their presentation is also very import
 
 ## Advanced Styles Support
 
-Spreadsheets are integrated with [Color Button](https://ckeditor.com/cke4/addon/colorbutton) and [Font](https://ckeditor.com/cke4/addon/font) features allowing to change font family, font size, background and text colors for any spreadsheet instance present in the editor.
+Spreadsheets are integrated with the [Color Button](https://ckeditor.com/cke4/addon/colorbutton) and [Font](https://ckeditor.com/cke4/addon/font) features. This allows for changing the font family, font size, background and text colors for any spreadsheet instance present in the editor.
 
 {@img assets/img/spreadsheet_13.png Spreadsheet plugin widget with advanced styling.}
 

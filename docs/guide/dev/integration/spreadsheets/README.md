@@ -81,6 +81,118 @@ The value of `spreadsheet_licenseKey` is unique for each website and can be foun
 
 This is all. If you are having trouble with setting up the Spreadsheet plugin, please [contact us](https://ckeditor.com/contact/).
 
+## Cell References
+
+In most situations the default settings for cell references should suit your needs. However, you can adjust the configuration to customize the behavior of cell referencing if needed.
+
+### Limiting or increasing the number of suggestions
+
+By default, cell references suggestion panel will show 10 items at a time. Completion matches are narrowed down based on the closest pattern match and the Spreadsheets cell order, starting from the top-left corner.
+
+If you find the maximum number of matches limiting, you can customize it using the `spreadsheet_cellReferencesLimit` configuration option:
+
+```js
+CKEDITOR.replace( 'editor', {
+	spreadsheet_licenseKey: 'yourLicenseKey',
+
+	// Increase the number of suggestions to 20.
+	spreadsheet_cellReferencesLimit: 20
+} );
+```
+
+### Customizing the matching pattern
+
+By default the cell references suggestion panel is triggered by the `$` character. To improve performance and pre-validate Spreadsheet names, it also uses a special pattern when resolving completion matches. The default pattern consists of letters `a-z`, numbers `0-9`, underscore `_`, exclamation mark `!` and a colon `:`.
+
+You can create your own completion pattern if you have any non-standard columns or row names. This can be done using a simple regular expression and the `spreadsheet_cellReferencesPattern` configuration option:
+
+```js
+CKEDITOR.replace( 'editor', {
+	spreadsheet_licenseKey: 'yourLicenseKey',
+
+	// Use the `%` character as a marker instead of the default `$`.
+	spreadsheet_cellReferencesPattern: /\%[:_\!a-zA-Z0-9À-ž]*$/
+} );
+```
+
+### Throttling the completion panel
+
+Quick typers could overheat suggestions if they were triggered for every character typed. For that purpose, cell references completion algorithm utilizes typing throttling which slightly delays refreshing the suggestion list to make it more performant.
+
+You can change the throttling time if you would like to get quicker response from the editor or increase it to improve performance if you target Spreadsheet instances with many rows and columns:
+
+```js
+CKEDITOR.replace( 'editor', {
+	spreadsheet_licenseKey: 'yourLicenseKey',
+
+	// Decrease the throttling timeout from 200ms to 50ms for better UX:
+	spreadsheet_cellReferencesThrottle: 50
+} );
+```
+
+## Paste from Excel and Google Sheets
+
+Spreadsheets are able to understand bloated HTML representing tables from external applications like **Microsoft Excel** and **Google Sheets**. They are also able to convert it into much more semantic representation while keeping the most important information unchanged.
+
+To convert any tabular data that comes from **Microsoft Excel**, **Google Sheets** or a plain HTML website to a Spreadsheet instance automatically after pasting it into the editor, use the `spreadsheet_enableAutoConversion` option described in the {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables Automatically Convert Existing Tables} section below.
+
+## Automatically Convert Existing Tables
+
+Any existing {@link features/table/README table} can be easily transformed into a spreadsheet with the {@link features/spreadsheets/README#converting-existing-tables Convert to Spreadsheet} option from the table context menu. However, manual conversion may become cumbersome when dealing with content containing dozens of tables. The entire procedure can thus be easily automated thanks to `spreadsheet_enableAutoConversion` configuration option:
+
+```js
+var editor = CKEDITOR.replace( 'editor', {
+    extraPlugins: 'spreadsheet',
+	spreadsheet_licenseKey: 'yourLicenseKey',
+	spreadsheet_enableAutoConversion: true
+} );
+```
+
+To gain more control over which table elements are converted or to add custom conversion algorithm, one may use `addTableTransformation()` API method instead:
+
+```js
+CKEDITOR.plugins.spreadsheet.addTableTransformation( editor, function( element ) {
+	// Here you can provide any custom code. If it returns "true"
+	// table element will be converted into a Spreadsheet instance.
+	return !!element.attributes[ 'data-spreadsheet' ];
+} );
+```
+
+The above API uses {@linkapi CKEDITOR.filter#addTransformations} method underneath, adding special filter to CKEditor 4 instance.
+
+<info-box hint="">
+	Keep in mind that autoconversion (both added via configuration option or API) will be executed every time the data is set in the editor, so it will convert any plain HTML table. It makes sense to use it when entirely replacing the Table plugin with the Spreadsheet plugin.
+	Also, since spreadsheets support only plain text cell values, every more complex structure (like lists) will be converted to plain text.
+</info-box>
+
+## Frontend Layer Integration
+
+The standard CKEditor 4 output produces a regular HTML table from any spreadsheet widget. This gives huge flexibility thanks to using a standardized structure and allows integrating with a variety of tools or workflows out-of-the-box. However, there are cases where one would like to present the content created in CKEditor 4 with rich spreadsheets functionality on the frontend layer.
+
+This is where the Spreadsheets frontend adapter comes into play. With a minimal configuration, one can simply recreate the spreadsheet with all its styling on the frontend layer.
+
+This requires including the adapter scripts and the stylesheet which is present in the Spreadsheet plugin package (`adapters/frontend.js`):
+
+```html
+<link rel="stylesheet" href="pluginPath/libs/handsontable/dist/handsontable.full.min.css">
+
+<script src="pluginPath/libs/handsontable/dist/handsontable.full.min.js"></script>
+<script src="pluginPath/adapters/frontend.js"></script>
+```
+
+And initializing it with the license key:
+
+```js
+CKE4Spreadsheet.licenseKey = 'yourLicenseKey';
+```
+
+The frontend adapter will automatically transform all available spreadsheet instances. To transform only specific instances, additional configuration options should be set:
+
+```js
+CKE4Spreadsheet.autoConvert = false;
+CKE4Spreadsheet.convert( document.querySelector( 'container' ) );
+```
+
 ## Content Templates Plugin Integration
 
 The Spreadsheet plugin allows you to create highly customized spreadsheet widget instances from scratch. However, there are also cases when it is more convenient to insert a ready-to-use spreadsheet with a predefined structure and formatting.
@@ -134,61 +246,6 @@ CKEDITOR.addTemplates( 'spreadsheets', {
 ```
 
 The above template will allow inserting a 2x2 spreadsheet widget with the default ascending sorting order (in the first column) and the numeric data type (in the second column) with just two clicks. See it in action in the {@linksdk spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample}.
-
-## Automatically Convert Existing Tables
-
-Any existing {@link features/table/README table} can be easily transformed into a spreadsheet with the {@link features/spreadsheets/README#converting-existing-tables Convert to Spreadsheet} option from the table context menu. However, manual conversion may become cumbersome when dealing with content containing dozens of tables. The entire procedure can thus be easily automated thanks to the CKEditor 4 data processing pipeline.
-
-
-```js
-var editor = CKEDITOR.replace( 'editor', {
-    extraPlugins: 'spreadsheet',
-    spreadsheet_licenseKey: 'yourLicenseKey'
-} );
-
-editor.on( 'toHtml', function( evt ) {
-  evt.data.dataValue.forEach( function( node ) {
-    if ( node.name && node.name == 'table' ) {
-      node.attributes[ 'data-cke-spreadsheet-widget' ] = 1;
-    }
-  } );
-}, null, null, 14 );
-```
-
-Adding the special `data-cke-spreadsheet-widget` attribute allows the Spreadsheet plugin to identify a regular table and transform it into the spreadsheet widget.
-
-<info-box hint="">
-	Keep in mind that this code will be executed every time the data is set in the editor, so it will convert any plain HTML table. It makes sense to use it when entirely replacing the Table plugin with the Spreadsheet plugin.
-	Also, since spreadsheets support only plain text cell values, every more complex structure (like lists) will be converted to plain text.
-</info-box>
-
-## Frontend Layer Integration
-
-The standard CKEditor 4 output produces a regular HTML table from any spreadsheet widget. This gives huge flexibility thanks to using a standardized structure and allows integrating with a variety of tools or workflows out-of-the-box. However, there are cases where one would like to present the content created in CKEditor 4 with rich spreadsheets functionality on the frontend layer.
-
-This is where the Spreadsheets frontend adapter comes into play. With a minimal configuration, one can simply recreate the spreadsheet with all its styling on the frontend layer.
-
-This requires including the adapter scripts and the stylesheet which is present in the Spreadsheet plugin package (`adapters/frontend.js`):
-
-```html
-<link rel="stylesheet" href="pluginPath/libs/handsontable/dist/handsontable.full.min.css">
-
-<script src="pluginPath/libs/handsontable/dist/handsontable.full.min.js"></script>
-<script src="pluginPath/adapters/frontend.js"></script>
-```
-
-And initializing it with the license key:
-
-```js
-CKE4Spreadsheet.licenseKey = 'yourLicenseKey';
-```
-
-The frontend adapter will automatically transform all available spreadsheet instances. To transform only specific instances, additional configuration options should be set:
-
-```js
-CKE4Spreadsheet.autoConvert = false;
-CKE4Spreadsheet.convert( document.querySelector( 'container' ) );
-```
 
 ## Manipulating the Spreadsheet Widget Data via API
 
@@ -245,11 +302,11 @@ The above API call returns the spreadsheet widget data as an array of arrays.
 
 ## Browser Support
 
-The spreadsheet plugin is fully supported in the latest **Chrome**, **Firefox** and **Safari** browsers.
+The spreadsheet plugin is fully supported in the latest **Chrome**, **Firefox**, **Safari** and **Edge** browsers.
 
-Support for **Internet Explorer 11** is limited: the plugin is usable but there are known, visible issues. **Edge** browser is not supported at the moment, however, we are looking into providing support for it, too.
+Support for **Internet Explorer 11** is limited: the plugin is usable but there are known, visible issues.
 
-If your application requires wider support for Internet Explorer 11 or Edge browsers or you have encountered any issues using these browsers, please [contact us](https://ckeditor.com/contact/).
+If your application requires wider support for Internet Explorer 11 browser or you have encountered any issues using it, please [contact us](https://ckeditor.com/contact/).
 
 ## Functionality Overview
 

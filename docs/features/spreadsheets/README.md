@@ -21,13 +21,16 @@ For licensing, see LICENSE.md.
 The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin lets you insert customizable spreadsheet widgets into your WYSIWYG editor. It provides support for:
 
 * Inserting spreadsheets with and without a header row or column and with any number of rows and columns.
-* Inserting spreadsheets using predefined templates.
+* {@link features/spreadsheets/README#cell-referencing Referencing cells} inside the editor content using smart completion.
+* {@link features/spreadsheets/README#pasting-from-microsoft-excel-and-google-sheets Autoconverting tabular data} pasted from Microsoft Excel and Google Sheets into a Spreadsheet instance.
 * {@link features/spreadsheets/README#converting-existing-tables Converting existing tables} to spreadsheet instances and vice versa.
+* Inserting spreadsheets using predefined templates.
 * {@link features/spreadsheets/README#spreadsheet-structure-manipulation Spreadsheet structure manipulation} (adding or removing rows and columns).
 * {@link features/spreadsheets/README#resizing-rows-and-columns Resizing rows and columns}.
 * {@link features/spreadsheets/README#renaming-rows-and-columns-headers Renaming rows and columns headers}.
 * Single and multi-column {@link features/spreadsheets/README#sorting sorting}.
 * {@link features/spreadsheets/README#basic-styles-support Basic data styling} like bold, italic, underline and so on.
+* {@link features/spreadsheets/README#advanced-styles-support Advanced styles support} like text font, cell colors and so on.
 * Selecting {@link features/spreadsheets/README#data-types-formats-and-validation cell type and formatting with data validation support}.
 * Using {@link features/spreadsheets/README#formulas formulas}.
 * {@link features/spreadsheets/README#auto-fill-in-all-directions Auto filling} rows and columns.
@@ -37,6 +40,24 @@ The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin l
 {@img assets/img/spreadsheet_01.png A spreadsheet inserted into CKEditor 4 WYSIWYG editor.}
 
 The Spreadsheet plugin allows you to create intelligent, data-driven documents right inside your WYSIWYG editor. This makes it a perfect solution for financial, auditing, engineering, technical and science industries.
+
+## Cell Referencing
+
+What makes Spreadsheets special? First-class integration with content editing! You can start typing `$` to see cell suggestions from the spreadsheets inside your document. Cell references are a living part of your document, which means that editing the spreadsheet cell value will also update all the references automatically. What is even more convenient, you do not even need to see the spreadsheet instance in a long document. Smart suggestions and fuzzy matching will simplify connecting the data from any spreadsheet present in the editor with the editor content.
+
+{@img assets/img/spreadsheet_14.png Spreadsheet plugin widget with cell references.}
+
+## Conditional Formatting
+
+Do you need to add some colors to your data? Conditional formatting allows formatting data (any cell, column or entire data grid) based on its content. For example, you can mark cells red when they are empty, make them green when their value is above some threshold or blue if the cell value contains a specific text.
+
+Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linksdk spreadsheets working Spreadsheets demo}.
+
+{@img assets/img/spreadsheet_10.png Spreadsheet plugin with the Conditional Formatting dialog.}
+
+## Pasting from Microsoft Excel and Google Sheets
+
+Moving your tabular data from Microsoft Excel or Google Sheets is as simple as copying and pasting it into the editor. Once the automatic tables conversion is enabled, Spreadsheets will take care of converting any table to an advanced Spreadsheet instance with all features available.
 
 ## Inserting Spreadsheet Widget
 
@@ -51,6 +72,8 @@ Below you can see a simple 3x3 spreadsheet widget right after being inserted int
 If you already have {@link features/table/README tables} in your content and plan to use the Spreadsheet plugin, there is no need to recreate the entire table from scratch as you may simply convert it to a spreadsheet widget instance:
 
 {@img assets/img/spreadsheet_03.png Spreadsheet plugin converts existing table context menu option.}
+
+Converting all existing tables at once automatically can be also done via {@link guide/dev/integration/spreadsheets/README#automatically-convert-existing-tables configuration option or an API call}.
 
 ## Spreadsheet Structure Manipulation
 
@@ -70,19 +93,17 @@ It is important to label your data in a clear and understandable way. Spreadshee
 
 {@img assets/img/spreadsheet_colrow_rename.png The rows and columns headers renaming mechanism in the Spreadsheet plugin.}
 
-## Sorting
-
-Sorting is a must to efficiently analyze and present any tabular data, thus the Spreadsheet plugin allows for sorting data based on single or multiple columns:
-
-{@img assets/img/spreadsheet_06.png Spreadsheet plugin widget with multisort.}
-
-To sort by a single column, just click the column header. To use multisort, any column which should be added to sorting should be clicked while the <kbd>Ctrl</kbd> key is pressed.
-
 ## Basic Styles Support
 
 While spreadsheets are mostly about data, their presentation is also very important. {@link features/basicstyles/README Basic styles} like bold, italic or alignment come handy when trying to highlight or make some parts of data or individual spreadsheet cells more visible:
 
 {@img assets/img/spreadsheet_07.png Spreadsheet plugin widget with basic styling.}
+
+## Advanced Styles Support
+
+Spreadsheets are integrated with the [Color Button](https://ckeditor.com/cke4/addon/colorbutton) and [Font](https://ckeditor.com/cke4/addon/font) features. This allows for changing the font family, font size, background and text colors for any spreadsheet instance present in the editor.
+
+{@img assets/img/spreadsheet_13.png Spreadsheet plugin widget with advanced styling.}
 
 ## Data Types, Formats and Validation
 
@@ -97,6 +118,14 @@ Data is the essence of every spreadsheet or data grid element. The Spreadsheet p
 Additionally, each data type has a strict validation so it is clearly visible when something is not right with the data.
 
 {@img assets/img/spreadsheet_08.png Spreadsheet plugin with the Cell Type and Format dialog.}
+
+## Sorting
+
+Sorting is a must to efficiently analyze and present any tabular data, thus the Spreadsheet plugin allows for sorting data based on single or multiple columns:
+
+{@img assets/img/spreadsheet_06.png Spreadsheet plugin widget with multisort.}
+
+To sort by a single column, just click the column header. To use multisort, any column which should be added to sorting should be clicked while the <kbd>Ctrl</kbd> key is pressed.
 
 ## Formulas
 
@@ -118,14 +147,6 @@ Formulas provide support for mathematical expression calculations based on input
 {@img assets/img/spreadsheet_09.png Spreadsheet plugin with formula preview.}
 
 Refer to the official [Handsontable formulas reference](https://handsontable.com/docs/latest/demo-formula-support.html) for more details.
-
-## Conditional Formatting
-
-Do you need to add some colors to your data? Conditional formatting allows formatting data (any cell, column or entire data grid) based on its content. For example, you can mark cells red when they are empty, make them green when their value is above some threshold or blue if the cell value contains a specific text.
-
-Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linksdk spreadsheets working Spreadsheets demo}.
-
-{@img assets/img/spreadsheet_10.png Spreadsheet plugin with the Conditional Formatting dialog.}
 
 ## Auto Fill in All Directions
 

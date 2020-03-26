@@ -36,12 +36,12 @@ If you use the {@link guide/dev/inline/README inline} or [div-based](https://cke
 ```
 
 <info-box hint="">
-    You can preview themes in the {@linksdk codesnippet "Inserting Code Snippets" sample}. You can also browse them on the <a href="http://highlightjs.org/static/test.html">highlight.js demo page</a>.
+    You can preview themes in the {@linksdk codesnippet "Inserting Code Snippets" sample}. You can also browse them on the <a href="https://highlightjs.org/static/demo/">highlight.js demo page</a>.
 </info-box>
 
 ### Target Page
 
-To see the highlighter styles on the target page where CKEditor content is displayed, you will need to load the `highlight.js` script and theme's stylesheet on this page. You can either reuse a copy of `highlight.js` placed in the `ckeditor/plugins/codesnippet/lib/highlight` directory or download your own copy from the [highlight.js download page](http://highlightjs.org/download).
+To see the highlighter styles on the target page where CKEditor content is displayed, you will need to load the `highlight.js` script and theme's stylesheet on this page. You can either reuse a copy of `highlight.js` placed in the `ckeditor/plugins/codesnippet/lib/highlight` directory or download your own copy from the [highlight.js download page](http://highlightjs.org/download/).
 
 Attach it to the `<head>` section of your page. The following code will load the `highlight.js` library and the stylesheet for the default theme:
 
@@ -60,7 +60,7 @@ Inititalize `highlight.js` on all `<pre><code> .. </code></pre>` elements with t
 ```
 
 <info-box hint="">
-    You might also want to initialize the highlighter only on selected elements. In this case you will need to use the <code>hljs.highlightBlock()</code> method on each DOM element containing the code to highlight. See the "Custom Initialization" section on the <a href="http://highlightjs.org/usage">highlight.js Usage</a> page for more information.</info-box>
+    You might also want to initialize the highlighter only on selected elements. In this case you will need to use the <code>hljs.highlightBlock()</code> method on each DOM element containing the code to highlight. See the "Custom Initialization" section on the <a href="http://highlightjs.org/usage/">highlight.js Usage</a> page for more information.</info-box>
 
 After performing the steps described above, all the code snippets created with CKEditor will be highlighted.
 

@@ -8,7 +8,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	<meta charset="utf-8">
 	<meta name="description" content="Spreadsheets">
 	<meta name="keywords" content="ckeditor, editor, wysiwyg, ckeditor4, ckeditor 4, ckeditor, fckeditor, spreadsheet, data, grid, table, data-grid, data-table, tabular-data, data-spreadsheet, excel, editor, wysiwyg, html, richtext, text, javascript">
-	<meta name="sdk-samples" content="Creating data grids with Spreadsheet plugin">
+	<meta name="sdk-samples" content="Creating data grids with Spreadsheet plugin|Cell Referencing">
 	<meta name="sdk-category" content="sdk-inserting-content">
 	<meta name="sdk-order" content="25">
 	<title>Spreadsheets</title>
@@ -59,11 +59,14 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<li>Spreadsheet structure manipulation like adding, removing and resizing rows and columns.</li>
 			<li>Single and multi-column sorting.</li>
 			<li>Basic data styling like bold, italic, underline and so on.</li>
+			<li>Changing cells alignment, text and background color, font size and font family.</li>
 			<li>Selecting cell type and formatting with data validation support.</li>
 			<li>Using formulas.</li>
 			<li>Auto filling rows and columns.</li>
 			<li>Applying various conditional formatting rules to single and multiple cells, entire columns or spreadsheets.</li>
 			<li>Advanced copying and pasting.</li>
+			<li>Pasting directly from Excel and Google Sheets.</li>
+			<li>Creating auto-updating references to spreadsheet cells right inside editor content.</li>
 		</ul>
 
 		<p>
@@ -71,17 +74,13 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		</p>
 
 		<p class="tip">
-			Some of the existing CKEditor 4 features are not supported in the spreadsheet widget at the moment. This means that applying content changes with the <a href="https://ckeditor.com/docs/ckeditor4/latest/examples/colorbutton.html">Text and Background color</a>, the <a href="https://ckeditor.com/docs/ckeditor4/latest/examples/styles.html">Styles</a>, <a href="https://ckeditor.com/docs/ckeditor4/latest/examples/format.html">Format</a> and <a href="https://ckeditor.com/cke4/addon/font">Font Size and Family</a> dropdowns or inserting <a href="https://ckeditor.com/cke4/addon/emoji">emoji</a> inside the spreadsheet widget content will have no effect.
+			Some of the existing CKEditor 4 features are not supported in the spreadsheet widget at the moment. This means that applying content changes with the <a href="https://ckeditor.com/docs/ckeditor4/latest/examples/styles.html">Styles</a> and <a href="https://ckeditor.com/docs/ckeditor4/latest/examples/format.html">Format</a> dropdowns or inserting <a href="https://ckeditor.com/cke4/addon/emoji">emoji</a> inside the spreadsheet widget content will have no effect.
 		</p>
 
 		<p class="tip" id="browserSupportInfo" aria-hidden="true">
 			<span class="ie11">
 				<strong>Internet Explorer 11</strong> browser support is limited: the plugin is usable but there are known, visible issues.
 				If your application requires wider support for it or you have encountered any issues using the Spreadsheet plugin there, please <a href="https://ckeditor.com/contact/">contact us</a>.
-			</span>
-			<span class="edge">
-				<strong>Edge</strong> browser is not supported at the moment. However, we are looking into providing support for it, too. This means that the editor demo below does not include the Spreadsheet plugin.
-				If your application requires Edge browser support, please <a href="https://ckeditor.com/contact/">contact us</a>.
 			</span>
 		</p>
 
@@ -240,7 +239,253 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<p>Based on "Tech Stocks That Move The Market" by <a href="https://finance.yahoo.com/u/yahoo-finance/watchlists/tech-stocks-that-move-the-market">Yahoo Finance</a>.</p>
 		</textarea>
 
-		<h2>Related Features</h2>
+		<h2 id="cell-referencing">Cell Referencing</h2>
+
+		<p class="tip">
+			Cell Referencing feature have been introduced in <code>1.2.0</code> version of Spreadsheet plugin.
+		</p>
+
+		<p>
+			Cell Referencing feature allows you to create a reference to any spreadsheet cell inside CKEditor 4 content. Creating references is super simple thanks to intuitive autocomplete panel showing the best matching suggestions for the currently typed query. It supports fuzzy matching which means you need to only type part of the spreadsheet or row/column name to get the relevant suggestions. This makes creating references very quick.
+		</p>
+
+		<p>
+			Whenever the spreadsheet cells are updated or their values changes (due to any external trigger - for example updating spreadsheet data via API) the references are auto-updated too, keeping the entire content up to date with no user interference needed.
+		</p>
+
+		<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
+			<h1>The Biggest Passenger Car Producers Worldwide</h1>
+
+			<p>The biggest car producer in the World is
+				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">China</span>
+				&nbsp;which produced
+				<span class="cell-reference" data-column="5" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">2370978</span>
+				&nbsp;thousands cars in 2018. This number is even more impressive when comparing to the total yearly production from year 2000 which was only
+				<span class="cell-reference" data-column="1" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">60.47k</span>
+				&nbsp;thousands cars.
+				<strong>
+					This means a whooping
+					<span class="cell-reference" data-column="8" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">3,821.05%</span>
+					&nbsp;increase in the production amount from year 2000 to 2018
+				</strong>.
+			</p>
+
+			<p>Another country with significant growth in recent years is
+				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">India</span> with
+				<span class="cell-reference" data-column="6" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">10.53%</span>,&nbsp;
+				<span class="cell-reference" data-column="7" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">33.78%</span>&nbsp;and
+				<span class="cell-reference" data-column="8" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">684.77%</span>
+				&nbsp;increase in last 3, 8 and 18 years respectively.
+			</p>
+
+			<table data-cke-spreadsheet-id="e5b10114a6564c5728548c422e48c3c48" data-cke-spreadsheet-name="spreadsheet1" data-cke-spreadsheet-widget="1">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Country</th>
+						<th>2000</th>
+						<th>2005</th>
+						<th>2010</th>
+						<th>2015</th>
+						<th>2018</th>
+						<th>3y change (%)</th>
+						<th>8y change (%)</th>
+						<th>18y change (%)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td>China</td>
+						<td data-type="numeric">60468</td>
+						<td data-type="numeric">307815</td>
+						<td data-type="numeric">1448533</td>
+						<td data-type="numeric">2442074</td>
+						<td data-type="numeric">2370978</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F1-E1)/E1;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(236, 196, 196);">-0.0291</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F1-D1)/D1;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(119, 212, 134);">0.6368</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F1-B1)/B1;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(65, 185, 88);">38.2105</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>Japan</td>
+						<td data-type="numeric">835943</td>
+						<td data-type="numeric">901674</td>
+						<td data-type="numeric">715853</td>
+						<td data-type="numeric">787389</td>
+						<td data-type="numeric">835822</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F2-E2)/E2;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(197, 236, 203);">0.0615</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F2-D2)/D2;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(119, 212, 134);">0.1676</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F2-B2)/B2;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(236, 196, 196);">-0.0001</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<td>Germany</td>
+						<td data-type="numeric">513192</td>
+						<td data-type="numeric">535019</td>
+						<td data-type="numeric">587192</td>
+						<td data-type="numeric">574681</td>
+						<td data-type="numeric">512041</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F3-E3)/E3;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(212, 119, 119);">-0.109</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F3-D3)/D3;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(212, 119, 119);">-0.128</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F3-B3)/B3;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(236, 196, 196);">-0.0022</td>
+					</tr>
+					<tr>
+						<th>4</th>
+						<td>India</td>
+						<td data-type="numeric">51796</td>
+						<td data-type="numeric">126400</td>
+						<td data-type="numeric">303833</td>
+						<td data-type="numeric">367761</td>
+						<td data-type="numeric">406477</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F4-E4)/E4;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(158, 224, 169);">0.1053</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F4-D4)/D4;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(119, 212, 134);">0.3378</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F4-B4)/B4;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(65, 185, 88);">6.8477</td>
+					</tr>
+					<tr>
+						<th>5</th>
+						<td>South&nbsp;Korea</td>
+						<td data-type="numeric">260201</td>
+						<td data-type="numeric">335709</td>
+						<td data-type="numeric">422162</td>
+						<td data-type="numeric">385999</td>
+						<td data-type="numeric">366173</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F5-E5)/E5;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(224, 158, 158);">-0.0514</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F5-D5)/D5;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(212, 119, 119);">-0.1326</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F5-B5)/B5;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(119, 212, 134);">0.4073</td>
+					</tr>
+					<tr>
+						<th>6</th>
+						<td>USA</td>
+						<td data-type="numeric">554222</td>
+						<td data-type="numeric">432127</td>
+						<td data-type="numeric">296613</td>
+						<td data-type="numeric">393436</td>
+						<td data-type="numeric">279597</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F6-E6)/E6;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(199, 80, 80);">-0.2893</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F6-D6)/D6;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(224, 158, 158);">-0.0574</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F6-B6)/B6;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(199, 80, 80);">-0.4955</td>
+					</tr>
+					<tr>
+						<th>7</th>
+						<td>Brazil</td>
+						<td data-type="numeric">135200</td>
+						<td data-type="numeric">200949</td>
+						<td data-type="numeric">253453</td>
+						<td data-type="numeric">177846</td>
+						<td data-type="numeric">238676</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F7-E7)/E7;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(119, 212, 134);">0.342</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F7-D7)/D7;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(224, 158, 158);">-0.0583</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F7-B7)/B7;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(119, 212, 134);">0.7654</td>
+					</tr>
+					<tr>
+						<th>8</th>
+						<td>Spain</td>
+						<td data-type="numeric">236636</td>
+						<td data-type="numeric">209817</td>
+						<td data-type="numeric">181945</td>
+						<td data-type="numeric">235412</td>
+						<td data-type="numeric">226740</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F8-E8)/E8;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(236, 196, 196);">-0.0368</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F8-D8)/D8;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(119, 212, 134);">0.2462</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F8-B8)/B8;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(236, 196, 196);">-0.0418</td>
+					</tr>
+					<tr>
+						<th>9</th>
+						<td>France</td>
+						<td data-type="numeric">287981</td>
+						<td data-type="numeric">311296</td>
+						<td data-type="numeric">193103</td>
+						<td data-type="numeric">162600</td>
+						<td data-type="numeric">176300</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F9-E9)/E9;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(197, 236, 203);">0.0843</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F9-D9)/D9;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(224, 158, 158);">-0.087</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F9-B9)/B9;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(199, 80, 80);">-0.3878</td>
+					</tr>
+					<tr>
+						<th>10</th>
+						<td>Mexico</td>
+						<td data-type="numeric">127909</td>
+						<td data-type="numeric">98984</td>
+						<td data-type="numeric">165708</td>
+						<td data-type="numeric">199317</td>
+						<td data-type="numeric">157581</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F10-E10)/E10;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(199, 80, 80);">-0.2094</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F10-D10)/D10;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(236, 196, 196);">-0.049</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F10-B10)/B10;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(119, 212, 134);">0.232</td>
+					</tr>
+					<tr>
+						<th>11</th>
+						<td data-style="font-weight:bold" style="font-weight: bold;">Total</td>
+						<td data-type="numeric" data-style="font-weight:bold" style="font-weight: bold;">3063548</td>
+						<td data-type="numeric" data-style="font-weight:bold" style="font-weight: bold;">3459790</td>
+						<td data-type="numeric" data-style="font-weight:bold" style="font-weight: bold;">4568395</td>
+						<td data-type="numeric" data-style="font-weight:bold" style="font-weight: bold;">5726515</td>
+						<td data-type="numeric" data-style="font-weight:bold" style="font-weight: bold;">5570385</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F11-E11)/E11;4)" data-style="font-weight:bold" data-type="numeric" data-type-pattern="%0,0.00" style="font-weight: bold; background-color: rgb(236, 196, 196);">-0.0273</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#77d486" data-formatting-0-value-0="0.15" data-formatting-1="greater" data-formatting-1-style="background-color:#9ee0a9" data-formatting-1-value-0="0.1" data-formatting-2="greater" data-formatting-2-style="background-color:#c5eccb" data-formatting-2-value-0="0.05" data-formatting-3="greater" data-formatting-3-style="background-color:#ebf8ed" data-formatting-3-value-0="0" data-formatting-4="less" data-formatting-4-style="background-color:#c75050" data-formatting-4-value-0="-0.15" data-formatting-5="less" data-formatting-5-style="background-color:#d47777" data-formatting-5-value-0="-0.1" data-formatting-6="less" data-formatting-6-style="background-color:#e09e9e" data-formatting-6-value-0="-0.05" data-formatting-7="less" data-formatting-7-style="background-color:#ecc4c4" data-formatting-7-value-0="0" data-formula="=ROUND((F11-D11)/D11;4)" data-style="font-weight:bold" data-type="numeric" data-type-pattern="%0,0.00" style="font-weight: bold; background-color: rgb(119, 212, 134);">0.2193</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((F11-B11)/B11;4)" data-style="font-weight:bold" data-type="numeric" data-type-pattern="%0,0.00" style="font-weight: bold; background-color: rgb(119, 212, 134);">0.8183</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>On the other hand, countries like
+				<em>
+					<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">USA</span>​​,&nbsp;
+					<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="1">France</span>&nbsp;and
+					<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="2">Spain</span>
+					&nbsp;noted a visible decrease in production amount
+				</em>
+				in the recent years and even comparing to year 2000 where, for example,
+				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">USA</span>
+				&nbsp;produced&nbsp;
+				<span class="cell-reference" data-column="1" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">554222</span>
+				&nbsp;thousand cars and only&nbsp;
+				<span class="cell-reference" data-column="2" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">279597</span>
+				&nbsp;thousand cars in 2018 cars is a
+				<span class="cell-reference" data-column="3" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">-49.55%</span>
+				&nbsp;decrease.
+			</p>
+
+			<table data-cke-spreadsheet-id="e5b10114a6564c5728548c422e48c3c48part" data-cke-spreadsheet-name="spreadsheet2" data-cke-spreadsheet-widget="1">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Country</th>
+						<th>2000</th>
+						<th>2018</th>
+						<th>18y change (%)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<td>USA</td>
+						<td data-type="numeric">554222</td>
+						<td data-type="numeric">279597</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((C1-B1)/B1;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(199, 80, 80);">-0.4955</td>
+					</tr>
+					<tr>
+						<th>2</th>
+						<td>France</td>
+						<td data-type="numeric">287981</td>
+						<td data-type="numeric">176300</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((C2-B2)/B2;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(199, 80, 80);">-0.3878</td>
+					</tr>
+					<tr>
+						<th>3</th>
+						<td>Spain</td>
+						<td data-type="numeric">236636</td>
+						<td data-type="numeric">226740</td>
+						<td data-formatting-0="greater" data-formatting-0-style="background-color:#41b958" data-formatting-0-value-0="1" data-formatting-1="greater" data-formatting-1-style="background-color:#77d486" data-formatting-1-value-0="0.15" data-formatting-2="greater" data-formatting-2-style="background-color:#9ee0a9" data-formatting-2-value-0="0.1" data-formatting-3="greater" data-formatting-3-style="background-color:#c5eccb" data-formatting-3-value-0="0.05" data-formatting-4="greater" data-formatting-4-style="background-color:#ebf8ed" data-formatting-4-value-0="0" data-formatting-5="less" data-formatting-5-style="background-color:#c75050" data-formatting-5-value-0="-0.15" data-formatting-6="less" data-formatting-6-style="background-color:#d47777" data-formatting-6-value-0="-0.1" data-formatting-7="less" data-formatting-7-style="background-color:#e09e9e" data-formatting-7-value-0="-0.05" data-formatting-8="less" data-formatting-8-style="background-color:#ecc4c4" data-formatting-8-value-0="0" data-formula="=ROUND((C3-B3)/B3;4)" data-type="numeric" data-type-pattern="%0,0.00" style="background-color: rgb(236, 196, 196);">-0.0418</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Source: <a href="https://knoema.com/kiywikd/world-passenger-car-production">World Passenger Car Production Dataset</a></p>
+		</textarea>
+
+		<h2 id="related-features">Related Features</h2>
 		<ul>
 			<li><a href="./pastefromexcel.html">Inserting Content &ndash; Pasting Content from Microsoft Excel</a></li>
 			<li><a href="./table.html">Inserting Content &ndash; Table Support with Column Resizing</a></li>
@@ -253,23 +498,24 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 			CKEDITOR.plugins.addExternal( 'spreadsheet', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/spreadsheet/', 'plugin.js' );
 
-			if ( CKEDITOR.env.ie ) {
+			if ( CKEDITOR.env.ie && !CKEDITOR.env.edge ) {
 				var supportInfoEl = document.querySelector( '#browserSupportInfo' );
 				supportInfoEl.style.display = 'block';
 				supportInfoEl.setAttribute( 'aria-hidden', false );
-				supportInfoEl.querySelector( CKEDITOR.env.edge ? '.edge' : '.ie11' ).style.display = 'block';
+				supportInfoEl.querySelector( '.ie11' ).style.display = 'block';
 			}
 		</script>
 
-		<script data-sample="1" >
+		<script data-sample="1">
 			CKEDITOR.replace( 'editor1', {
 				width: 'auto',
-				height: 550,
+				height: 500,
 				extraAllowedContent: 'h1;a[!href]',
 
 				spreadsheet_licenseKey: LICENSE_KEY,
 
-				plugins: ( CKEDITOR.env.edge ? '' : 'spreadsheet,' ) + // Edge browser is not supported at the moment.
+				plugins:
+					'spreadsheet,' +
 					'ajax,' +
 					'link,' +
 					'undo,' +
@@ -302,14 +548,68 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					'table',
 
 					toolbar: [
-						{ name: 'styles', items: [ 'Font', 'FontSize' ] },
 						{ name: 'insert', items: [ 'Spreadsheet', 'Table', 'Image' ] },
 						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat' ] },
 						{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
 						{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
 						{ name: 'links', items: [ 'Link', 'Unlink' ] },
-						{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent' ] },
 						{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+						{ name: 'styles', items: [ 'Font', 'FontSize' ] },
+						{ name: 'document', items: [ 'Print' ] },
+						{ name: 'tools', items: [ 'Maximize' ] }
+					]
+			} );
+		</script>
+
+		<script data-sample="2">
+			CKEDITOR.replace( 'editor2', {
+				width: 'auto',
+				height: 700,
+				extraAllowedContent: 'h1;a[!href]',
+
+				spreadsheet_licenseKey: LICENSE_KEY,
+
+				plugins:
+					'spreadsheet,' +
+					'ajax,' +
+					'link,' +
+					'undo,' +
+					'justify,' +
+					'enterkey,' +
+					'about,' +
+					'basicstyles,' +
+					'clipboard,' +
+					'elementspath,' +
+					'floatingspace,' +
+					'htmlwriter,' +
+					'removeformat,' +
+					'sourcedialog,' +
+					'tab,' +
+					'toolbar,' +
+					'undo,' +
+					'resize,' +
+					'wysiwygarea,' +
+					'contextmenu,' +
+					'colorbutton,' +
+					'pastefromword,' +
+					'pastefromgdocs,' +
+					'image,' +
+					'format,' +
+					'font,' +
+					'list,' +
+					'magicline,' +
+					'maximize,' +
+					'print,' +
+					'table',
+
+					toolbar: [
+						{ name: 'insert', items: [ 'Spreadsheet', 'Table', 'Image' ] },
+						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat' ] },
+						{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+						{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+						{ name: 'links', items: [ 'Link', 'Unlink' ] },
+						{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+						{ name: 'styles', items: [ 'Font', 'FontSize' ] },
 						{ name: 'document', items: [ 'Print' ] },
 						{ name: 'tools', items: [ 'Maximize' ] }
 					]

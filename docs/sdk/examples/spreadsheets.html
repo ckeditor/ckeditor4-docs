@@ -253,6 +253,19 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			Whenever the spreadsheet cells are updated or their values changes (due to any external trigger - for example updating spreadsheet data via API) the references are auto-updated too, keeping the entire content up to date with no user interference needed.
 		</p>
 
+		<p>
+			To bring cell referencing suggestion panel, just type <code>$</code> sign (see <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheets.html#customizing-the-matching-pattern">how to reconfigure default matching pattern</a>). By default, suggestion panel will show up to 10 items (<a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheets.html#limiting-or-increasing-the-number-of-suggestions">suggestions number can be configured too</a>) narrowed down based on the closest pattern match and the Spreadsheets cell order, starting from the top-left corner. Each suggestion consists of six parts. For example suggestion like <span style="color:hsl(0, 0%, 45%);">$</span><span style="color:hsl(113, 69%, 26%);">spreadsheet1</span><span style="color:hsl(0, 0%, 45%);">!</span><span style="color:hsl(286, 44%, 47%);">Symbol</span><span style="color:hsl(0, 0%, 45%);">:</span><span style="color:hsl(214, 93%, 41%);">11</span> consists of:
+		</p>
+
+		<ol>
+			<li>Suggestions prefix (<span style="color:hsl(0, 0%, 45%);">$</span>) - opens suggestions panel.</li>
+			<li>Spreadsheet name (<span style="color:hsl(113, 69%, 26%);">spreadsheet1</span>) - used to filter suggestions by spreadsheet names (which can be set during spreadsheet insertion via dialog). It uses fuzzy matching so on can type <code>!sheet</code> to match <code>spreadsheet1</code>, <code>spreadsheet2</code> and <code>spreadsheet3</code> but not <code>custom-data1</code>. It can be also skipped entirely (by typing <span style="color:hsl(0, 0%, 45%);">$!</span>...) - in such cases all spreadsheet instances in the content are taken into account by suggestions panel.</li>
+			<li>Cell prefix (<span style="color:hsl(0, 0%, 45%);">!</span>) - separates spreadsheet name from column/row names.</li>
+			<li>Column name (<span style="color:hsl(286, 44%, 47%);">Symbol</span>) - used to filter suggestions by column names. It also uses fuzzy matching which means typing <code>$!Sy</code> will match <code>Symbol</code> and <code>System</code> columns in all available spreadsheet instances, while typing <code>$sheet1!Sy</code> will match the same columns but only for spreadsheet instances which names contains <code>sheet1</code> text.</li>
+			<li>Column and row name separator (<span style="color:hsl(0, 0%, 45%);">:</span>) - separates column name from row name.</li>
+			<li>Row name (<span style="color:hsl(214, 93%, 41%);">11</span>) - used to filter suggestions by row names. It uses fuzzy matching same as spreadsheet and column name part and can be used to filter suggestions in a smart way quickly.</li>
+		</ol>
+
 		<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
 			<h1>The Biggest Passenger Car Producers Worldwide</h1>
 

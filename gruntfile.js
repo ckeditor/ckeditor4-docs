@@ -72,7 +72,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'build-vue', buildIntegrationTask( 'vue' ) );
 
 	// Build docs for production/multidocs. It assumes Umberto is run by external process - useful when building as part of projects bundle.
-	grunt.registerTask( 'before-build', [ 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'build-vue' ] );
+	grunt.registerTask( 'before-build', [ 'clean', 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'build-vue' ] );
 
 	grunt.registerTask( 'build', [ 'before-build', 'umberto' ] );
 	grunt.registerTask( 'build-serve', [ 'build', 'connect' ] );
@@ -95,6 +95,14 @@ module.exports = function( grunt ) {
 	grunt.initConfig( {
 		path: grunt.option( 'path' ) || getCKEditorPath(),
 
+		clean: {
+			'docs-samples': [
+				'docs/sdk/examples/assets/plugins/abbr',
+				'docs/sdk/examples/assets/plugins/autotag',
+				'docs/sdk/examples/assets/plugins/simplebox',
+				'docs/sdk/examples/assets/plugins/timestamp'
+			 ]
+		},
 		copy: {
 			main: {
 				files: [ {
@@ -107,6 +115,29 @@ module.exports = function( grunt ) {
 					cwd: 'node_modules/ckeditor4-plugin-spreadsheet/spreadsheet',
 					src: '**',
 					dest: 'docs/sdk/examples/assets/plugins/spreadsheet'
+				} ]
+			},
+			'docs-samples': {
+				files: [ {
+					expand: true,
+					cwd: 'docs/sdk/examples/assets/ckeditor4-docs-samples/tutorial-abbr-acf/abbr',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/abbr'
+				}, {
+					expand: true,
+					cwd: 'docs/sdk/examples/assets/ckeditor4-docs-samples/tutorial-autotag/autotag',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/autotag'
+				}, {
+					expand: true,
+					cwd: 'docs/sdk/examples/assets/ckeditor4-docs-samples/tutorial-simplebox-2/simplebox',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/simplebox'
+				}, {
+					expand: true,
+					cwd: 'docs/sdk/examples/assets/ckeditor4-docs-samples/tutorial-timestamp/timestamp',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/timestamp'
 				} ]
 			}
 		},

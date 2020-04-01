@@ -2,6 +2,10 @@
 docs/api/data
 node_modules
 docs/sdk/examples/vendors/
+docs/sdk/examples/assets/plugins/abbr
+docs/sdk/examples/assets/plugins/autotag
+docs/sdk/examples/assets/plugins/simplebox
+docs/sdk/examples/assets/plugins/timestamp
 docs/sdk/examples/assets/plugins/ckeditor_wiris
 docs/sdk/examples/assets/plugins/spreadsheet
 docs/sdk/examples/assets/react/main.js*

@@ -54,19 +54,20 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<ul>
 			<li>Inserting spreadsheets with and without a header row or column and with any number of rows and columns.</li>
-			<li>Inserting spreadsheets using predefined templates.</li>
+			<li>Creating auto-updating references to spreadsheet cells right inside editor content.</li>
+			<li>Autoconverting data pasted from Microsoft Excel and Google Sheets into a Spreadsheet instance.</li>
 			<li>Converting existing tables to spreadsheet instances and vice versa.</li>
-			<li>Spreadsheet structure manipulation like adding, removing and resizing rows and columns.</li>
+			<li>Inserting spreadsheets using predefined templates.</li>
+			<li>Spreadsheet structure manipulation (adding, removing and resizing rows and columns).</li>
+			<li>Renaming row and column headers.</li>
 			<li>Single and multi-column sorting.</li>
 			<li>Basic data styling like bold, italic, underline and so on.</li>
-			<li>Changing cells alignment, text and background color, font size and font family.</li>
+			<li>Changing cell alignment, text and background color, font size and font family.</li>
 			<li>Selecting cell type and formatting with data validation support.</li>
 			<li>Using formulas.</li>
 			<li>Auto filling rows and columns.</li>
 			<li>Applying various conditional formatting rules to single and multiple cells, entire columns or spreadsheets.</li>
 			<li>Advanced copying and pasting.</li>
-			<li>Pasting directly from Excel and Google Sheets.</li>
-			<li>Creating auto-updating references to spreadsheet cells right inside editor content.</li>
 		</ul>
 
 		<p>
@@ -242,53 +243,66 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<h2 id="cell-referencing">Cell Referencing</h2>
 
 		<p class="tip">
-			Cell Referencing feature have been introduced in <code>1.2.0</code> version of Spreadsheet plugin.
+			The cell referencing feature was introduced in version 1.2.0 of the Spreadsheet plugin.
 		</p>
 
 		<p>
-			Cell Referencing feature allows you to create a reference to any spreadsheet cell inside CKEditor 4 content. Creating references is super simple thanks to intuitive autocomplete panel showing the best matching suggestions for the currently typed query. It supports fuzzy matching which means you need to only type part of the spreadsheet or row/column name to get the relevant suggestions. This makes creating references very quick.
+			This feature allows you to create a reference to any spreadsheet cell inside the CKEditor 4 content. Creating references is super simple thanks to an intuitive autocomplete panel showing the best matching suggestions for the currently typed query. It supports fuzzy matching, which means you need to only type a part of the spreadsheet, row or column name to get relevant suggestions. This makes creating references very quick.
 		</p>
 
 		<p>
-			Whenever the spreadsheet cells are updated or their values changes (due to any external trigger - for example updating spreadsheet data via API) the references are auto-updated too, keeping the entire content up to date with no user interference needed.
+			Whenever the spreadsheet cells are updated or their values change (due to any external trigger &mdash; for example updating the spreadsheet data via the API), the references are also auto-updated. This keeps the entire content up to date with no user action needed.
 		</p>
 
 		<p>
-			To bring cell referencing suggestion panel, just type <code>$</code> sign (see <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheets.html#customizing-the-matching-pattern">how to reconfigure default matching pattern</a>). By default, suggestion panel will show up to 10 items (<a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheets.html#limiting-or-increasing-the-number-of-suggestions">suggestions number can be configured too</a>) narrowed down based on the closest pattern match and the Spreadsheets cell order, starting from the top-left corner. Each suggestion consists of six parts. For example suggestion like <span style="color:hsl(0, 0%, 45%);">$</span><span style="color:hsl(113, 69%, 26%);">spreadsheet1</span><span style="color:hsl(0, 0%, 45%);">!</span><span style="color:hsl(286, 44%, 47%);">Symbol</span><span style="color:hsl(0, 0%, 45%);">:</span><span style="color:hsl(214, 93%, 41%);">11</span> consists of:
+			To display the cell referencing suggestion panel, just type the <code>$</code> sign (see <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheets.html#customizing-the-matching-pattern">how to reconfigure the default matching pattern</a>). By default, the suggestion panel will show up to 10 items (<a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheets.html#limiting-or-increasing-the-number-of-suggestions">the number of suggestions is configurable</a>), narrowed down based on the closest pattern match and the spreadsheet cell order, starting from the top-left corner.
+		</p>
+		<p>
+			Each suggestion consists of six parts. For example, a suggestion like <span style="color:hsl(0, 0%, 45%);">$</span><span style="color:hsl(113, 69%, 26%);">spreadsheet1</span><span style="color:hsl(0, 0%, 45%);">!</span><span style="color:hsl(286, 44%, 47%);">Symbol</span><span style="color:hsl(0, 0%, 45%);">:</span><span style="color:hsl(214, 93%, 41%);">11</span> consists of:
 		</p>
 
 		<ol>
-			<li>Suggestions prefix (<span style="color:hsl(0, 0%, 45%);">$</span>) - opens suggestions panel.</li>
-			<li>Spreadsheet name (<span style="color:hsl(113, 69%, 26%);">spreadsheet1</span>) - used to filter suggestions by spreadsheet names (which can be set during spreadsheet insertion via dialog). It uses fuzzy matching so on can type <code>!sheet</code> to match <code>spreadsheet1</code>, <code>spreadsheet2</code> and <code>spreadsheet3</code> but not <code>custom-data1</code>. It can be also skipped entirely (by typing <span style="color:hsl(0, 0%, 45%);">$!</span>...) - in such cases all spreadsheet instances in the content are taken into account by suggestions panel.</li>
-			<li>Cell prefix (<span style="color:hsl(0, 0%, 45%);">!</span>) - separates spreadsheet name from column/row names.</li>
-			<li>Column name (<span style="color:hsl(286, 44%, 47%);">Symbol</span>) - used to filter suggestions by column names. It also uses fuzzy matching which means typing <code>$!Sy</code> will match <code>Symbol</code> and <code>System</code> columns in all available spreadsheet instances, while typing <code>$sheet1!Sy</code> will match the same columns but only for spreadsheet instances which names contains <code>sheet1</code> text.</li>
-			<li>Column and row name separator (<span style="color:hsl(0, 0%, 45%);">:</span>) - separates column name from row name.</li>
-			<li>Row name (<span style="color:hsl(214, 93%, 41%);">11</span>) - used to filter suggestions by row names. It uses fuzzy matching same as spreadsheet and column name part and can be used to filter suggestions in a smart way quickly.</li>
+			<li>The suggestion prefix (<span style="color:hsl(0, 0%, 45%);">$</span>) &ndash; Opens the suggestions panel.</li>
+			<li>The spreadsheet name (<span style="color:hsl(113, 69%, 26%);">spreadsheet1</span>) &ndash; Filters suggestions by spreadsheet names (which can be set via the dialog during the spreadsheet insertion).</li>
+			<li>The cell prefix (<span style="color:hsl(0, 0%, 45%);">!</span>) &ndash; Separates the spreadsheet name from the column and row names.</li>
+			<li>The column name (<span style="color:hsl(286, 44%, 47%);">Symbol</span>) &ndash; Filters suggestions by column names.</li>
+			<li>The column and row name separator (<span style="color:hsl(0, 0%, 45%);">:</span>) &ndash; Separates the column name from the row name.</li>
+			<li>The row name (<span style="color:hsl(214, 93%, 41%);">11</span>) &ndash; Filters suggestions by row names.</li>
 		</ol>
+
+		<div class="tip">
+			<p>Spreadsheet, column and row name filtering uses fuzzy matching. Some examples:</p>
+			<ul>
+				<li>Type <code>!sheet</code> to match <code>spreadsheet1</code> and <code>spreadsheet2</code> but not <code>custom-data1</code>.</li>
+				<li>Type <code>$!</code>... to take all spreadsheet instances in the content into account.</li>
+				<li>Type <code>$!Sy</code> to match the <code>Symbol</code> and <code>System</code> columns in all available spreadsheet instances.</li>
+				<li>Type <code>$sheet1!Sy</code> to match the same columns but only for spreadsheet instances whose names contain the <code>sheet1</code> text.</li>
+			</ul>
+		</div>
 
 		<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
 			<h1>The Biggest Passenger Car Producers Worldwide</h1>
 
-			<p>The biggest car producer in the World is
+			<p>The biggest car producer in the world is
 				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">China</span>
-				&nbsp;which produced
+				&nbsp;that produced
 				<span class="cell-reference" data-column="5" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">2370978</span>
 				&nbsp;thousands cars in 2018. This number is even more impressive when comparing to the total yearly production from year 2000 which was only
 				<span class="cell-reference" data-column="1" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">60.47k</span>
 				&nbsp;thousands cars.
 				<strong>
-					This means a whooping
+					This means a whopping
 					<span class="cell-reference" data-column="8" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">3,821.05%</span>
-					&nbsp;increase in the production amount from year 2000 to 2018
+					&nbsp;increase in the production number from year 2000 to 2018
 				</strong>.
 			</p>
 
-			<p>Another country with significant growth in recent years is
+			<p>Another country with a significant growth in recent years is
 				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">India</span> with
 				<span class="cell-reference" data-column="6" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">10.53%</span>,&nbsp;
 				<span class="cell-reference" data-column="7" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">33.78%</span>&nbsp;and
 				<span class="cell-reference" data-column="8" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">684.77%</span>
-				&nbsp;increase in last 3, 8 and 18 years respectively.
+				&nbsp;increase in the last 3, 8 and 18 years, respectively.
 			</p>
 
 			<table data-cke-spreadsheet-id="e5b10114a6564c5728548c422e48c3c48" data-cke-spreadsheet-name="spreadsheet1" data-cke-spreadsheet-widget="1">
@@ -443,12 +457,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			</table>
 
 			<p>On the other hand, countries like
-				<em>
-					<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">USA</span>​​,&nbsp;
-					<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="1">France</span>&nbsp;and
-					<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="2">Spain</span>
-					&nbsp;noted a visible decrease in production amount
-				</em>
+				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">USA</span>​​,&nbsp;
+				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="1">France</span>&nbsp;and
+				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="2">Spain</span>&nbsp;noted a visible decrease in the production number
 				in the recent years and even comparing to year 2000 where, for example,
 				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">USA</span>
 				&nbsp;produced&nbsp;

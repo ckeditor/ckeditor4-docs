@@ -251,11 +251,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		</p>
 
 		<p>
-			Whenever the spreadsheet cells are updated or their values change (due to any external trigger &mdash; for example updating the spreadsheet data via the API), the references are also auto-updated. This keeps the entire content up to date with no user action needed.
+			Whenever the spreadsheet cells are updated or their values change, the references are also auto-updated. This keeps the entire content up to date with no user action needed.
 		</p>
 
 		<p>
-			To display the cell referencing suggestion panel, just type the <code>$</code> sign (see <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheets.html#customizing-the-matching-pattern">how to reconfigure the default matching pattern</a>). By default, the suggestion panel will show up to 10 items (<a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_spreadsheets.html#limiting-or-increasing-the-number-of-suggestions">the number of suggestions is configurable</a>), narrowed down based on the closest pattern match and the spreadsheet cell order, starting from the top-left corner.
+			To display the cell referencing suggestion panel, just type the <code>$</code> sign. By default, the suggestion panel will show up to 10 items, narrowed down based on the closest pattern match and the spreadsheet cell order, starting from the top-left corner.
 		</p>
 		<p>
 			Each suggestion consists of six parts. For example, a suggestion like <span style="color:hsl(0, 0%, 45%);">$</span><span style="color:hsl(113, 69%, 26%);">spreadsheet1</span><span style="color:hsl(0, 0%, 45%);">!</span><span style="color:hsl(286, 44%, 47%);">Symbol</span><span style="color:hsl(0, 0%, 45%);">:</span><span style="color:hsl(214, 93%, 41%);">11</span> consists of:
@@ -275,8 +275,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<ul>
 				<li>Type <code>!sheet</code> to match <code>spreadsheet1</code> and <code>spreadsheet2</code> but not <code>custom-data1</code>.</li>
 				<li>Type <code>$!</code>... to take all spreadsheet instances in the content into account.</li>
-				<li>Type <code>$!Sy</code> to match the <code>Symbol</code> and <code>System</code> columns in all available spreadsheet instances.</li>
-				<li>Type <code>$sheet1!Sy</code> to match the same columns but only for spreadsheet instances whose names contain the <code>sheet1</code> text.</li>
+				<li>Type <code>$!ch</code> to match the all the columns showing the <code>change</code> in all available spreadsheet instances.</li>
+				<li>Type <code>$sheet1!ch</code> to match the same columns but only for spreadsheet instances whose names contain the <code>sheet1</code> text.</li>
 			</ul>
 		</div>
 
@@ -287,25 +287,25 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">China</span>
 				&nbsp;that produced
 				<span class="cell-reference" data-column="5" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">21,360.19</span>
-				&nbsp;thousands cars in 2019. This number is even more impressive when comparing to the total yearly production from year 2000 which was only
+				&nbsp;thousand cars in 2019. This number is even more impressive when compared to the total yearly production from 2000 which was only
 				<span class="cell-reference" data-column="1" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">604.68</span>
-				&nbsp;thousands cars.
+				&nbsp;thousand cars.
 				<strong>
 					This means a whopping
 					<span class="cell-reference" data-column="8" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="0">3,432.48%</span>
-					&nbsp;increase in the production number from year 2000 to 2019
-				</strong>.
+					&nbsp;increase in the production number from year 2000 to 2019.
+				</strong>
 			</p>
 
 			<p>Another country with a significant growth in recent years is
-				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">India</span> with
+				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">India</span> with a
 				<span class="cell-reference" data-column="6" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">7.26%</span>,&nbsp;
 				<span class="cell-reference" data-column="7" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">27.96%</span>&nbsp;and
 				<span class="cell-reference" data-column="8" data-id="e5b10114a6564c5728548c422e48c3c48" data-row="3">599.54%</span>
-				&nbsp;increase in the last 4, 9 and 19 years, respectively.
+				&nbsp;increase in the last 5, 10 and 19 years, respectively.
 			</p>
 
-			<p>Below table presents ten biggest passenger car producers worldwide (<em>all numbers in thousands</em>).</p>
+			<p>The table below presents ten biggest passenger car producers worldwide (<em>all numbers in thousands</em>).</p>
 
 			<table data-cke-spreadsheet-id="e5b10114a6564c5728548c422e48c3c48" data-cke-spreadsheet-name="spreadsheet1" data-cke-spreadsheet-widget="1">
 				<thead>
@@ -317,8 +317,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						<th>2010</th>
 						<th>2015</th>
 						<th>2019</th>
-						<th>4y change (%)</th>
-						<th>9y change (%)</th>
+						<th>5y change (%)</th>
+						<th>10y change (%)</th>
 						<th>19y change (%)</th>
 					</tr>
 				</thead>
@@ -458,19 +458,18 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				</tbody>
 			</table>
 
-			<p>On the other hand, countries like
+			<p>On the other hand, countries like the
 				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">USA</span>​​,&nbsp;
 				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="1">France</span>&nbsp;and
-				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="2">Spain</span>&nbsp;noted a visible decrease in the production number
-				in the recent years and even comparing to year 2000 where, for example,
+				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="2">Spain</span>&nbsp;in recent years noted a visible decrease in the production number. For example, the
 				<span class="cell-reference" data-column="0" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">USA</span>
 				&nbsp;produced&nbsp;
 				<span class="cell-reference" data-column="1" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">5,542.22</span>
-				&nbsp;thousand cars and only&nbsp;
+				&nbsp;thousand cars in 2000 and only&nbsp;
 				<span class="cell-reference" data-column="2" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">2,512.78</span>
-				&nbsp;thousand cars in 2019 cars is a
+				&nbsp;thousand cars in 2019, which constitutes a
 				<span class="cell-reference" data-column="3" data-id="e5b10114a6564c5728548c422e48c3c48part" data-row="0">-54.66%</span>
-				&nbsp;change. See table below (<em>all numbers in thousands</em>).
+				&nbsp;change. Refer to the table below for more details (<em>all numbers in thousands</em>).
 			</p>
 
 			<table data-cke-spreadsheet-id="e5b10114a6564c5728548c422e48c3c48part" data-cke-spreadsheet-name="spreadsheet2" data-cke-spreadsheet-widget="1">

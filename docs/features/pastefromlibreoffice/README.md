@@ -70,7 +70,7 @@ HTML exposed by LibreOffice Writer does not fully comply to rules of valid and s
 
 ## Paste from LibreOffice Demo
 
-See the {@linksdk pastefromlibreoffice working "Pasting content from LibreOffice" sample} that showcases the Paste from LibreOffice plugin.
+See the {@linkexample pastefromlibreoffice working "Pasting content from LibreOffice" sample} that showcases the Paste from LibreOffice plugin.
 
 ## Related Features
 

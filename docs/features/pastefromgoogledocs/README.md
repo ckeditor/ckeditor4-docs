@@ -70,7 +70,7 @@ HTML exposed by Google Docs does not comply to rules of valid and semantic HTML.
 
 ## Paste from Google Docs Demo
 
-See the {@linksdk pastefromgoogledocs working "Pasting content from Google Docs" sample} that showcases the Paste from Google Docs plugin.
+See the {@linkexample pastefromgoogledocs working "Pasting content from Google Docs" sample} that showcases the Paste from Google Docs plugin.
 
 ## Related Features
 

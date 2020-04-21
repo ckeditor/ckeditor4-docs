@@ -113,7 +113,7 @@ Numerous {@link guide/dev/configuration/README configuration options} let you tw
 
 ## HTML Output Formatting Demo
 
-See the {@linksdk htmlformatting working "HTML Output Formatting" sample} that showcases how to control HTML output produced by CKEditor.
+See the {@linkexample htmlformatting working "HTML Output Formatting" sample} that showcases how to control HTML output produced by CKEditor.
 
 ## Related Features
 

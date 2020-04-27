@@ -61,13 +61,13 @@ Each suggestion consists of six parts. For example, a suggestion like <span styl
 	<li>The row name (<span style="color:hsl(214, 93%, 41%);">11</span>) &ndash; Filters suggestions by row names.</li>
 </ol>
 
-You can try out this feature in the {@linksdk spreadsheets#cell-referencing dedicated sample}.
+You can try out this feature in the {@linkexample spreadsheets#cell-referencing dedicated sample}.
 
 ## Conditional Formatting
 
 Do you need to add some colors to your data? Conditional formatting allows formatting data (any cell, column or entire data grid) based on its content. For example, you can mark cells red when they are empty, make them green when their value is above some threshold or blue if the cell value contains a specific text.
 
-Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linksdk spreadsheets working Spreadsheets demo}.
+Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linkexample spreadsheets working Spreadsheets demo}.
 
 {@img assets/img/spreadsheet_10.png Spreadsheet plugin with the Conditional Formatting dialog.}
 
@@ -182,7 +182,7 @@ One of the main features of a WYSIWYG editor is the ability to show the created 
 
 ## Spreadsheets Demo
 
-See the {@linksdk spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample} that showcases the most important features like data styling, sorting, conditional formatting, formulas and more.
+See the {@linkexample spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample} that showcases the most important features like data styling, sorting, conditional formatting, formulas and more.
 
 ## Related Features
 

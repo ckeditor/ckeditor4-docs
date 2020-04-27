@@ -28,7 +28,7 @@ Please note that this option is only applicable to {@link guide/dev/framed/READM
 
 ## Toolbar Location Demo
 
-See the {@linksdk toolbarlocation working "Toolbar Location Adjustment" sample} that showcases how to place the editor toolbar at the bottom of its interface.
+See the {@linkexample toolbarlocation working "Toolbar Location Adjustment" sample} that showcases how to place the editor toolbar at the bottom of its interface.
 
 ## Related Features
 

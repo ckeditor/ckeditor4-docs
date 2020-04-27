@@ -341,4 +341,4 @@ Please note that this property is initialised asynchronously, after mounting the
 
 ## CKEditor 4 Vue Integration Demo
 
-See the {@linksdk vue working "CKEditor 4 Vue Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.
+See the {@linkexample vue working "CKEditor 4 Vue Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

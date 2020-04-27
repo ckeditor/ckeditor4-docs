@@ -244,4 +244,4 @@ CKEditor types can be installed from [@types/ckeditor](https://www.npmjs.com/pac
 
 ## CKEditor 4 Angular Integration Demo
 
-See the {@linksdk angular working "CKEditor 4 Angular Integration" sample} that showcases the most iomportant features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.
+See the {@linkexample angular working "CKEditor 4 Angular Integration" sample} that showcases the most iomportant features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

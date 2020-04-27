@@ -151,7 +151,7 @@ In order to display mathematical formulas on the target page, i.e. the page wher
 
 ## Mathematical and Chemical Formulas Demo
 
-See the {@linksdk mathtype working "Creating Mathematical and Chemical Formulas with MathType" sample} that showcases the plugin.
+See the {@linkexample mathtype working "Creating Mathematical and Chemical Formulas with MathType" sample} that showcases the plugin.
 
 ## Related Features
 

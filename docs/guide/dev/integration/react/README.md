@@ -217,4 +217,4 @@ Please note that this property is initialised asynchronously, after mounting the
 
 ## CKEditor 4 React Integration Demo
 
-See the {@linksdk react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.
+See the {@linkexample react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

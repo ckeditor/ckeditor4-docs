@@ -101,7 +101,7 @@ module.exports = function( grunt ) {
 				'docs/sdk/examples/assets/plugins/autotag',
 				'docs/sdk/examples/assets/plugins/simplebox',
 				'docs/sdk/examples/assets/plugins/timestamp'
-			 ]
+			]
 		},
 		copy: {
 			main: {

@@ -46,9 +46,9 @@ Do remember to use the [online builder](https://ckeditor.com/cke4/builder) to do
 
 {@linkexample index CKEditor Examples} was created to present a broad range of existing features, usage scenarios and customization options for CKEditor. Each example contains a short description and references as well as one or more CKEditor instances to play with. Scroll down to the "Get Sample Source Code" of each sample to view the source code ready to copy and implement in your own solution.
 
-The figure below presents one of the CKEditor samples, {@linkexample mathjax Creating Mathematical Formulas}, opened in a browser.
+The figure below presents one of the CKEditor samples, {@linkexample mathjax Creating Mathematical Formulas with MathJax}, opened in a browser.
 
-<img src="%BASE_PATH%/assets/img/ckeditor-SDK-sample.png" width="918" height="763" alt="One of the CKEditor samples as viewed in Firefox">
+<img src="%BASE_PATH%/assets/img/CKEditor_example.png" width="918" alt="One of the CKEditor samples as viewed in Chrome">
 
 ## Further Reading
 

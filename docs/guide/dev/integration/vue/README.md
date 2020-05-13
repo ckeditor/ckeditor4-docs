@@ -159,14 +159,14 @@ If you do not want the CKEditor 4 component to be enabled globally, you can skip
 
 ## Component Directives
 
-### `editorUrl`
+### `editor-url`
 
-By default, the CKEditor 4 Vue component loads the [standard-all preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `editorUrl` directive to point to the desired CKEditor 4 script location:
+By default, the CKEditor 4 Vue component loads the [standard-all preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `editor-url` directive to point to the desired CKEditor 4 script location:
 
 ```html
 <template>
 	<div id="app">
-		<ckeditor :editorUrl="editorUrl"></ckeditor>
+		<ckeditor :editor-url="editorUrl"></ckeditor>
 	</div>
 </template>
 
@@ -290,7 +290,7 @@ If you only want to execute an action when the editor data changes, use the [`in
 This directive controls the {@linkapi CKEDITOR.editor#readOnly `readOnly`} property of the editor. It sets the initial read–only state of the editor and changes it during its lifecycle.
 
 ```html
-<ckeditor readOnly="true"></ckeditor>
+<ckeditor read-only="true"></ckeditor>
 ```
 
 Note that you can still pass `readOnly` property as a [`config`](#config) directive, however, the [`read-only`](#read-only) directive will take precedence over the configuration property if set.

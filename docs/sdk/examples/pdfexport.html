@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="PDF Export">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, ckeditor4, ckeditor 4, ckeditor, fckeditor, pdf, export, pdf export, export to file, file, editor, wysiwyg, html, richtext, text, javascript">
+	<meta name="sdk-samples" content="Saving editor content to PDF">
+	<meta name="sdk-category" content="sdk-user-interface">
+	<meta name="sdk-order" content="8">
+	<title>Export to PDF</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script src="assets/sample.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+<header class="sdk-header">
+</header>
+<section class="sdk-container">
+	<nav class="sdk-sidebar">
+	</nav>
+	<section class="sdk-contents">
+		<style>
+			#browserSupportInfo, #browserSupportInfo .ie11, #browserSupportInfo .edge {
+				display: none;
+			}
+		</style>
+
+		<h1>Saving editor's content as a PDF file <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/pdfexport.html">Documentation</a></h1>
+
+		<textarea id="editor1">
+			<p>
+				Hello!
+			</p>
+		</textarea>
+
+		<h2 id="related-features">Related Features</h2>
+		<ul>
+			<li><a href="./"></a></li>
+			<li><a href="./"></a></li>
+		</ul>
+
+		<script>
+			// CKEDITOR.plugins.addExternal( 'pdfexport', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/pdfexport/', 'plugin.js' );
+
+			// if ( CKEDITOR.env.ie && !CKEDITOR.env.edge ) {
+			// 	var supportInfoEl = document.querySelector( '#browserSupportInfo' );
+			// 	supportInfoEl.style.display = 'block';
+			// 	supportInfoEl.setAttribute( 'aria-hidden', false );
+			// 	supportInfoEl.querySelector( '.ie11' ).style.display = 'block';
+			// }
+		</script>
+
+		<script data-sample="1">
+			CKEDITOR.replace( 'editor1', {
+				width: 'auto',
+				height: 550,
+
+				plugins:
+					// 'pdfexport,' +
+					'ajax,' +
+					'link,' +
+					'undo,' +
+					'justify,' +
+					'enterkey,' +
+					'about,' +
+					'basicstyles,' +
+					'clipboard,' +
+					'elementspath,' +
+					'floatingspace,' +
+					'htmlwriter,' +
+					'removeformat,' +
+					'sourcedialog,' +
+					'tab,' +
+					'toolbar,' +
+					'undo,' +
+					'resize,' +
+					'wysiwygarea,' +
+					'contextmenu,' +
+					'colorbutton,' +
+					'pastefromword,' +
+					'pastefromgdocs,' +
+					'image,' +
+					'format,' +
+					'font,' +
+					'list,' +
+					'magicline,' +
+					'maximize,' +
+					'table',
+
+					toolbar: [
+						{ name: 'insert', items: [ 'Table', 'Image' ] },
+						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat' ] },
+						{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+						{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+						{ name: 'links', items: [ 'Link', 'Unlink' ] },
+						{ name: 'styles', items: [ 'Font', 'FontSize' ] },
+						{ name: 'document', items: [ 'PDFExport' ] },
+						{ name: 'tools', items: [ 'Maximize' ] }
+					]
+			} );
+		</script>
+	</section>
+</section>
+
+<footer class="sdk-footer">
+</footer>
+</body>
+</html>

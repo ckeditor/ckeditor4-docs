@@ -10,9 +10,9 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor Quick Start Guide
+# CKEditor 4 Quick Start Guide
 
-The aim of this article is to get you up and running with CKEditor in two minutes.
+The aim of this article is to get you up and running with CKEditor 4 in two minutes.
 
 ## Install from the npm Registry
 
@@ -86,14 +86,14 @@ When using the npm package open the following:
 
 Additionally, you can click the Toolbar Configurator button on the editor sample page to open a handy tool that will let you {@link features/toolbar/README adjust the toolbar} to your needs.
 
-## Adding CKEditor to Your Page
+## Adding CKEditor 4 to Your Page
 
-If the sample works correctly, you are ready to build your own site with CKEditor included.
+If the sample works correctly, you are ready to build your own site with CKEditor 4 included.
 
 To start, create a simple HTML page with a `<textarea>` element in it. You will then need to do two things:
 
 1. Include the `<script>` element loading CKEditor 4 in your page.
-2. Use the {@linkapi CKEDITOR#replace `CKEDITOR.replace()`} method to replace the existing `<textarea>` element with CKEditor.
+2. Use the {@linkapi CKEDITOR#replace `CKEDITOR.replace()`} method to replace the existing `<textarea>` element with CKEditor 4.
 
 See the following example:
 
@@ -102,17 +102,17 @@ See the following example:
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>A Simple Page with CKEditor</title>
+        <title>A Simple Page with CKEditor 4</title>
         <!-- Make sure the path to CKEditor is correct. -->
         <script src="../ckeditor.js"></script>
     </head>
     <body>
         <form>
             <textarea name="editor1" id="editor1" rows="10" cols="80">
-                This is my textarea to be replaced with CKEditor.
+                This is my textarea to be replaced with CKEditor 4.
             </textarea>
             <script>
-                // Replace the <textarea id="editor1"> with a CKEditor
+                // Replace the <textarea id="editor1"> with a CKEditor 4
                 // instance, using default configuration.
                 {@linkapi CKEDITOR.replace CKEDITOR.replace}( 'editor1' );
             </script>
@@ -125,7 +125,7 @@ When you are done, open your test page in the browser.
 
 **Congratulations! You have just installed and used CKEditor 4 on your own page in virtually no time!**
 
-{@img assets/img/ckeditor_on_page.png CKEditor added to your sample page}
+{@img assets/img/ckeditor_on_page.png CKEditor 4 added to your sample page}
 
 ## Next Steps
 
@@ -135,7 +135,7 @@ Go ahead and play a bit more with the sample; try to change your configuration a
 1. Get familiar with {@link guide/dev/acf/README Advanced Content Filter}. This is a useful tool that adjusts the content inserted into CKEditor 4 to the features that are enabled and filters out disallowed content.
 1. {@link features/toolbar/README Modify your toolbar} to only include the features that you need. You can find the useful visual toolbar configurator directly in your editor sample.
 1. Learn about CKEditor 4 features in the {@link features/index Features Overview} section.
-1. Visit the {@linkexample index CKEditor Examples} to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.
+1. Visit the {@linkexample index CKEditor 4 Examples} to see the **huge collection of working editor samples** showcasing its features, with source code readily available to see and download.
 1. Browse the [Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) for some additional plugins or skins.
 1. Use [online builder](https://ckeditor.com/cke4/builder) to create your custom CKEditor 4 build.
 1. Browse the {@link guide/index Developer's Guide} for some further ideas on what to do with CKEditor 4 and join the CKEditor community at [Stack Overflow](http://stackoverflow.com/questions/tagged/ckeditor) to discuss all CKEditor things with fellow developers!

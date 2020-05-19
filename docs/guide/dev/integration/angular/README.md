@@ -224,6 +224,34 @@ Fires when the editor's editable is focused. It corresponds with the {@linkapi C
 
 Fires when the editing view of the editor is blurred. It corresponds with the {@linkapi CKEDITOR.editor#blur `editor#blur`} event.
 
+### `paste`
+
+Fires when the user initiates a paste action, but before the data is inserted into the editor. It corresponds with the {@linkapi CKEDITOR.editor#paste `editor#paste`} event.
+
+### `afterPaste`
+
+Fires after the {@link guide/dev/integration/angular/README#paste paste} event if editor content was modified by paste action. It corresponds with the {@linkapi CKEDITOR.editor#afterPaste `editor#afterPaste`} event.
+
+### `dragStart`
+
+Facade for the native `dragstart` event. Fires when the native `dragstart` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#dragstart `editor#dragstart`} event.
+
+### `dragEnd`
+
+Facade for the native `dragend` event. Fires when the native `dragend` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#dragend `editor#dragend`} event.
+
+### `drop`
+
+Facade for the native `drop` event. Fires when the native `drop` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#drop `editor#drop`} event.
+
+### `fileUploadRequest`
+
+Fires when the file loader should send XHR. If the event is not stopped or canceled, the default request will be sent. It corresponds with the {@linkapi CKEDITOR.editor#fileUploadRequest `editor#fileUploadRequest`} event.
+
+### `fileUploadResponse`
+
+Fires when the {@linkapi CKEDITOR.fileTools.fileLoader file upload} response is received and needs to be parsed. If the event is not stopped or canceled, the default response handler will be used. It corresponds with the {@linkapi CKEDITOR.editor#fileUploadResponse `editor#fileUploadResponse`} event.
+
 ### Note
 
 Callbacks bound to each of the events are called with {@linkapi CKEDITOR.eventInfo `eventInfo`}. For importing and usage of the `EventInfo` interface see the [`change` example](#change).

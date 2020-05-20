@@ -1,6 +1,6 @@
 ---
-category: user-interface
-order: 10
+category: working-with-document
+order: 25
 url: features/exportpdf
 menu-title: Export to PDF
 meta-title-short: Export to PDF

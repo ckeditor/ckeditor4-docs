@@ -6,9 +6,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="PDF Export">
-	<meta name="keywords" content="ckeditor, editor, wysiwyg, ckeditor4, ckeditor 4, ckeditor, fckeditor, pdf, export, pdf export, export to file, file, editor, wysiwyg, html, richtext, text, javascript">
-	<meta name="sdk-samples" content="Saving editor content to PDF">
+	<meta name="description" content="Export to PDF">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, ckeditor4, ckeditor 4, ckeditor, fckeditor, pdf, export, export to pdf, export to file, file, editor, wysiwyg, html, richtext, text, javascript">
+	<meta name="sdk-samples" content="Exporting editor content to PDF">
 	<meta name="sdk-category" content="sdk-user-interface">
 	<meta name="sdk-order" content="8">
 	<title>Export to PDF</title>
@@ -38,9 +38,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			}
 		</style>
 
-		<h1>Saving editor's content as a PDF file <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/pdfexport.html">Documentation</a></h1>
+		<h1>Exporting editor's content to a PDF file <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/exportpdf.html">Documentation</a></h1>
 
-		<textarea id="editor1">
+		<textarea id="editor">
 			<p>
 				Hello!
 			</p>
@@ -64,12 +64,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		</script>
 
 		<script data-sample="1">
-			CKEDITOR.replace( 'editor1', {
+			CKEDITOR.replace( 'editor', {
 				width: 'auto',
 				height: 550,
 
 				plugins:
-					// 'pdfexport,' +
+					// 'exportpdf,' +
 					'ajax,' +
 					'link,' +
 					'undo,' +

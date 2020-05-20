@@ -1,7 +1,7 @@
 ---
 category: user-interface
 order: 10
-url: features/pdfexport
+url: features/exportpdf
 menu-title: Export to PDF
 meta-title-short: Export to PDF
 ---

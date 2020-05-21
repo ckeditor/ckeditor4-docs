@@ -38,14 +38,14 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			}
 		</style>
 
-		<h1>Exporting editor's content to a PDF file <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/exportpdf.html">Documentation</a></h1>
+		<h1>Exporting content to a PDF file <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/exportpdf.html">Documentation</a></h1>
 
 		<p>
 			Despite CKEditor 4 operates on HTML and is basically a web tool, you are able to save it's content to a file and use it elsewhere. This is possible thanks to the optional
 			<a href="https://ckeditor.com/cke4/addon/exportpdf">Export to PDF</a> plugin which allows saving the editor content as PDF.
 		</p>
 		<p>
-			It introduces a <b>new toolbar button</b>. When it's clicked, data from editor is sent to the service maintained by CKSource team. The editor takes care of the received responce
+			It introduces a <span class="button_icon" data-icon="exportpdf" title="Export to PDF">&nbsp;</span><b>new toolbar button</b>. When it's clicked, data from editor is sent to the service maintained by <a href="https://ckeditor.com/ckeditor-cloud-services/">CKEditor Cloud Services</a>. The editor takes care of the received responce
 			and saves it as a file.
 		</p>
 
@@ -67,9 +67,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<p>Please find attached the full schedule of the event.</p>
 
 			<blockquote>
-			<p>The annual Flavorful Tuscany meetups are always a culinary discovery. You get the best of Tuscan flavors during an intense one-day stay at one of the top hotels of the region. All the sessions are lead by top chefs passionate about their profession. I would certainly recommend to save the date in your calendar for this one!</p>
+				<p>The annual Flavorful Tuscany meetups are always a culinary discovery. You get the best of Tuscan flavors during an intense one-day stay at one of the top hotels of the region. All the sessions are lead by top chefs passionate about their profession. I would certainly recommend to save the date in your calendar for this one!</p>
 
-			<p>Angelina Calvino, food journalist</p>
+				<p>Angelina Calvino, food journalist</p>
 			</blockquote>
 
 			<p>Please arrive at the <a href="https://ckeditor.com">Bilancino Hotel</a> reception desk at least <strong>half an hour earlier</strong> to make sure that the registration process goes as smoothly as possible.</p>
@@ -101,29 +101,29 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					<tr>
 						<td style="background-color:#e6e6e6; text-align:center">9:30 AM - 11:30 AM</td>
 						<td>
-						<p><strong>Americano vs. Brewed - &ldquo;know your coffee&rdquo;</strong> with:&nbsp;</p>
+							<p><strong>Americano vs. Brewed - &ldquo;know your coffee&rdquo;</strong> with:&nbsp;</p>
 
-						<ul>
-							<li>Giulia Bianchi</li>
-							<li>Stefano Garau</li>
-							<li>Giuseppe Russo</li>
-						</ul>
+							<ul>
+								<li>Giulia Bianchi</li>
+								<li>Stefano Garau</li>
+								<li>Giuseppe Russo</li>
+							</ul>
 						</td>
 					</tr>
 					<tr>
 						<td style="background-color:#e6e6e6; text-align:center">1:00 PM - 3:00 PM</td>
 						<td>
-						<p><strong>Pappardelle al pomodoro</strong> - live cooking&nbsp;<sup>1</sup></p>
+							<p><strong>Pappardelle al pomodoro</strong> - live cooking</p>
 
-						<p>Incorporate the freshest ingredients&nbsp;<br />
+							<p>Incorporate the freshest ingredients&nbsp;<br />
 						with Rita Fresco</p>
 						</td>
 					</tr>
 					<tr>
 						<td style="background-color:#e6e6e6; text-align:center">5:00 PM - 8:00 PM</td>
 						<td>
-						<p><strong>Tuscan vineyards at a glance</strong> - wine-tasting&nbsp;<br />
-						with Frederico Riscoli</p>
+							<p><strong>Tuscan vineyards at a glance</strong> - wine-tasting&nbsp;<br />
+							with Frederico Riscoli</p>
 						</td>
 					</tr>
 				</tbody>
@@ -149,8 +149,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<script data-sample="1">
 			CKEDITOR.replace( 'editor', {
-				width: 'auto',
-				height: 550,
+				width: 840,
+				height: 500,
+				extraPlugins: 'colorbutton,font,justify,print,tableresize,liststyle,pagebreak',
 				// extraPlugins: 'exportpdf',
 				toolbar: [
 					{ name: 'clipboard', items: [ 'PasteFromWord', '-', 'Undo', 'Redo' ] },
@@ -160,7 +161,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'insert', items: [ 'Image', 'Table' ] },
 					{ name: 'editing', items: [ 'Scayt' ] },
 					'/',
-
 					{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
 					{ name: 'colors', items: [ 'TextColor', 'BGColor', 'CopyFormatting' ] },
 					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },

@@ -33,7 +33,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	</nav>
 	<section class="sdk-contents">
 		<style>
-			#browserSupportInfo, #browserSupportInfo .ie11, #browserSupportInfo .edge {
+			#browserSupportInfo, #browserSupportInfo .ie {
 				display: none;
 			}
 		</style>
@@ -47,6 +47,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<p>
 			It introduces a <b>new toolbar button</b>. When it's clicked, data from editor is sent to the service maintained by CKSource team. The editor takes care of the received responce
 			and saves it as a file.
+		</p>
+
+		<p class="tip" id="browserSupportInfo" aria-hidden="true">
+			<span class="ie">
+				<strong>Internet Explorer</strong> browser support is limited: the plugin is only available for version 11. If you need to use the plugin in the older version, please <a href="https://ckeditor.com/contact/">contact us</a>.
+			</span>
 		</p>
 
 		<textarea id="editor">
@@ -133,12 +139,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<script>
 			// CKEDITOR.plugins.addExternal( 'pdfexport', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/pdfexport/', 'plugin.js' );
 
-			// if ( CKEDITOR.env.ie && !CKEDITOR.env.edge ) {
-			// 	var supportInfoEl = document.querySelector( '#browserSupportInfo' );
-			// 	supportInfoEl.style.display = 'block';
-			// 	supportInfoEl.setAttribute( 'aria-hidden', false );
-			// 	supportInfoEl.querySelector( '.ie11' ).style.display = 'block';
-			// }
+			if ( CKEDITOR.env.ie && !CKEDITOR.env.version < 11 ) {
+				var supportInfoEl = document.querySelector( '#browserSupportInfo' );
+				supportInfoEl.style.display = 'block';
+				supportInfoEl.setAttribute( 'aria-hidden', false );
+				supportInfoEl.querySelector( '.ie' ).style.display = 'block';
+			}
 		</script>
 
 		<script data-sample="1">

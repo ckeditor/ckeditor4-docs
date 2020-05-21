@@ -14,7 +14,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	<title>Export to PDF</title>
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
-	<script src="../../ckeditor-dev/ckeditor.js"></script>
+	<script src="../../ckeditor4/ckeditor.js"></script>
 	<script src="assets/picoModal-2.0.1.min.js"></script>
 	<script src="assets/contentloaded.js"></script>
 	<script src="assets/simplesample.js"></script>
@@ -145,49 +145,21 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			CKEDITOR.replace( 'editor', {
 				width: 'auto',
 				height: 550,
+				// extraPlugins: 'exportpdf',
+				toolbar: [
+					{ name: 'clipboard', items: [ 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+					{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'Subscript', 'Superscript' ] },
+					{ name: 'links', items: [ 'Link', 'Unlink' ] },
+					{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
+					{ name: 'insert', items: [ 'Image', 'Table' ] },
+					{ name: 'editing', items: [ 'Scayt' ] },
+					'/',
 
-				plugins:
-					// 'exportpdf,' +
-					'ajax,' +
-					'link,' +
-					'undo,' +
-					'justify,' +
-					'enterkey,' +
-					'about,' +
-					'basicstyles,' +
-					'clipboard,' +
-					'elementspath,' +
-					'floatingspace,' +
-					'htmlwriter,' +
-					'removeformat,' +
-					'sourcedialog,' +
-					'tab,' +
-					'toolbar,' +
-					'undo,' +
-					'resize,' +
-					'wysiwygarea,' +
-					'contextmenu,' +
-					'colorbutton,' +
-					'pastefromword,' +
-					'pastefromgdocs,' +
-					'image,' +
-					'format,' +
-					'font,' +
-					'list,' +
-					'magicline,' +
-					'maximize,' +
-					'table',
-
-					toolbar: [
-						{ name: 'insert', items: [ 'Table', 'Image' ] },
-						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat' ] },
-						{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
-						{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-						{ name: 'links', items: [ 'Link', 'Unlink' ] },
-						{ name: 'styles', items: [ 'Font', 'FontSize' ] },
-						{ name: 'document', items: [ 'PDFExport' ] },
-						{ name: 'tools', items: [ 'Maximize' ] }
-					]
+					{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+					{ name: 'colors', items: [ 'TextColor', 'BGColor', 'CopyFormatting' ] },
+					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+					{ name: 'document', items: [ 'Print', 'PageBreak', 'Source' ] }
+				]
 			} );
 		</script>
 	</section>

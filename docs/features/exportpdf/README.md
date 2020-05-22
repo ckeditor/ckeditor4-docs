@@ -90,12 +90,6 @@ Using {@linkapi CKEDITOR.config.exportPdf_fileName CKEDITOR.config.exportPdf_fil
 
 The value is then calculated right before saving the file.
 
-
-	1.  Best projection (setting editor width - #14).
-	4.  Reference [endpoint docs](https://pdf-converter.cke-cs.com/docs).
-	2.  Sync and async data processing (`pdfExport` event).
-	3.  Dynamic file naming (#13).
-
 ## Export to PDF demo
 
 See the {@linkexample exportpdf working "Export to PDF" sample} that showcases the export to PDF process.

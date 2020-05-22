@@ -38,7 +38,7 @@ As for the compatibility, plugin works on all the browsers {@link guide/dev/brow
 
 Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in editor and PDF. However a lot can be done to ensure the differences will be hardly noticable.
 
-For example, make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins; if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor. To take things a step further you may experiment with {@link guide/dev/example_setups#document-editor Document Editor setup}.
+For example, make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins; if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor. To take things a step further you may experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
 
 ### Custom CSS rules
 
@@ -100,5 +100,5 @@ See the {@linkexample exportpdf working "Export to PDF" sample} that showcases t
 
 Refer to the following resources for more information about working with document in CKEditor 4:
 
-* {@link features/size/README Setting editor size} will allow you to obtain the closest to 1:1 projection.
-* See the {@link guide/dev/acf/README content filtering} article to make editor work also with custom plugins.
+* The {@link features/size/README Setting editor size} article will help reaching the best projection.
+* The {@link guide/dev/acf/README content filtering} article explains how to make editor work also with custom plugins.

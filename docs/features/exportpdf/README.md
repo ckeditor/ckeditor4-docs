@@ -51,4 +51,5 @@ See the {@linkexample exportpdf working "Export to PDF" sample} that showcases t
 
 Refer to the following resources for more information about working with document in CKEditor 4:
 
-* 
+* {@link features/size/README Setting editor size} will allow you to obtain the closest to 1:1 projection.
+* See the {@link guide/dev/acf/README content filtering} article to make editor work also with custom plugins.

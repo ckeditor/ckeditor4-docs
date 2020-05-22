@@ -186,12 +186,13 @@ Fires when the editor is ready. It corresponds with the {@linkapi CKEDITOR.edito
 
 ### `dataReady`
 
-Fires when the editor data is loaded, e.g. after switching from WYSIWYG mode or using {@linkapi CKEDITOR.editor#setData `editor#setData()`} method. It corresponds with the {@linkapi CKEDITOR.editor#dataReady `editor#dataReady`} event.
+Fires when the editor data is loaded, for example after switching from WYSIWYG mode or using the {@linkapi CKEDITOR.editor#setData `editor#setData()`} method. It corresponds with the {@linkapi CKEDITOR.editor#dataReady `editor#dataReady`} event.
 
 ### `change`
 
 Fires when the content of the editor has changed. It corresponds with the {@linkapi CKEDITOR.editor#change `editor#change`} event. For performance reasons this event may be called even when data has not really changed.
-Please note that this event will only be fired when [`Undo`](https://ckeditor.com/cke4/addon/undo) plugin is loaded. If you need to listen for editor changes (e.g. for two-way data binding), use [`dataChange` event](#datachange) instead.
+
+Please note that this event will only be fired when the [Undo](https://ckeditor.com/cke4/addon/undo) plugin is loaded. If you need to listen for editor changes (e.g. for two-way data binding), use the [`dataChange` event](#datachange) instead.
 
 ```html
 <ckeditor (change)="onChange($event)"></ckeditor>
@@ -214,7 +215,7 @@ export class MyComponent {
 
 ### `dataChange`
 
-Fires when the content of the editor has changed. In contrast to `change`, it only emits when the data really changed thus can be successfully used with `[data]` and the two-way `[(data)]` binding.
+Fires when the content of the editor has changed. In contrast to `change`, it only emits when the data has really changed and thus it can be successfully used with `[data]` and two-way `[(data)]` binding.
 
 ### `focus`
 
@@ -230,23 +231,23 @@ Fires when the user initiates a paste action, but before the data is inserted in
 
 ### `afterPaste`
 
-Fires after the {@link guide/dev/integration/angular/README#paste paste} event if editor content was modified by paste action. It corresponds with the {@linkapi CKEDITOR.editor#afterPaste `editor#afterPaste`} event.
+Fires after the {@link guide/dev/integration/angular/README#paste `paste`} event if the editor content was modified by a paste action. It corresponds with the {@linkapi CKEDITOR.editor#afterPaste `editor#afterPaste`} event.
 
 ### `dragStart`
 
-Facade for the native `dragstart` event. Fires when the native `dragstart` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#dragstart `editor#dragstart`} event.
+A facade for the native `dragstart` event. Fires when the native `dragstart` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#dragstart `editor#dragstart`} event.
 
 ### `dragEnd`
 
-Facade for the native `dragend` event. Fires when the native `dragend` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#dragend `editor#dragend`} event.
+A facade for the native `dragend` event. Fires when the native `dragend` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#dragend `editor#dragend`} event.
 
 ### `drop`
 
-Facade for the native `drop` event. Fires when the native `drop` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#drop `editor#drop`} event.
+A facade for the native `drop` event. Fires when the native `drop` event occurs. It corresponds with the {@linkapi CKEDITOR.editor#drop `editor#drop`} event.
 
 ### `fileUploadRequest`
 
-Fires when the file loader should send XHR. If the event is not stopped or canceled, the default request will be sent. It corresponds with the {@linkapi CKEDITOR.editor#fileUploadRequest `editor#fileUploadRequest`} event.
+Fires when the file loader should send an XHR request. If the event is not stopped or canceled, the default request will be sent. It corresponds with the {@linkapi CKEDITOR.editor#fileUploadRequest `editor#fileUploadRequest`} event.
 
 ### `fileUploadResponse`
 

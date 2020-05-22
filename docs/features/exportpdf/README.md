@@ -28,7 +28,7 @@ Although CKEditor 4 is basically a web tool, sometimes you may want (or *need*) 
 
 ## Supported features
 
-All the formatting and content structure you create using the editor is maintained in the output file. See the tips for {@link features/exportpdf/README#optimal-projection obtaining the optimal projection} to learn how to configure the plugin to best suite your needs.
+All the formatting and content structure you create using the editor is maintained in the output file. See the tips for {@link features/exportpdf/README#reaching-the-best-projection reaching the optimal projection} to learn how to configure the plugin and editor to best suite your needs.
 
 As for the compatibility, plugin works on all the browsers {@link guide/dev/browsers/README supported for CKEditor 4} except for Internet Explorers older than version 11.
 
@@ -38,7 +38,7 @@ As for the compatibility, plugin works on all the browsers {@link guide/dev/brow
 
 Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in editor and PDF. However a lot can be done to ensure the differences will be hardly noticable.
 
-For example, make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins; if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor. To take things a step further you may experiment with {link guide/dev/example_setups#document-editor Document Editor setup}.
+For example, make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins; if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor. To take things a step further you may experiment with {@link guide/dev/example_setups#document-editor Document Editor setup}.
 
 ### Custom CSS rules
 

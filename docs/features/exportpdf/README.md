@@ -18,19 +18,22 @@ For licensing, see LICENSE.md.
 
 The [Export to PDF](https://ckeditor.com/cke4/addon/pastefromword) plugin allows you to export the content from editor to a PDF file.
 
-When enabled, it adds the **<img class="inline" src="%BASE_PATH%/assets/img/exportpdf-button.png" alt="Export to PDF toolbar button">Export to PDF** toolbar button. It sends data from editor to the endpoint maintained by [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) and handles the response, saving it as a PDF file.
+{@img assets/img/exportpdf_01.png Export to PDF button.}
 
+When enabled, it adds the **<img class="inline" src="%BASE_PATH%/assets/img/exportpdf-button.png" alt="Export to PDF toolbar button">Export to PDF** toolbar button. It sends data from editor to the endpoint maintained by [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) and handles the response, saving it as a PDF file.
 
 ## Feature overview
 
+Although CKEditor 4 is basically a web tool, sometimes you may want (or *need*) to use the content it generated somewhere else. While simple copy and paste may work in some cases, most probably it will not allow you to use some more advanced editor features like styled tables or lists. Thanks to the [Export to PDF](https://ckeditor.com/cke4/addon/pastefromword) plugin you can save the document you created to a downloadable file, preserving all the styles and structure in nearly 1:1 projection.
+
 1.  Browser support (like CKE4 but without IE\<11 - to be checked before release (for now it works well at least on IE10 too).
-2.  How does it work (sending HTML to CS endpoint and getting binary file).
-3.  Not part of any preset for now.
-4.  Reference to endpoint docs.
+	2.  How does it work (sending HTML to CS endpoint and getting binary file).
+	3.  Not part of any preset for now.
+4.  Reference [endpoint docs](https://pdf-converter.cke-cs.com/docs).
 
 ## Supported features
 
-Plugin maintains all the formatting and content structure you create using the editor. See the tips for {@link features/exportpdf/README#optimal-projection obtaining the optimal projection } to learn how to configure the plugin.
+Plugin maintains all the formatting and content structure you create using the editor. See the tips for {@link features/exportpdf/README#optimal-projection obtaining the optimal projection} to learn how to configure the plugin to best suite your needs.
 
 ## A few "How to" guides
 

@@ -36,13 +36,13 @@ As for the compatibility, plugin works on all the browsers {@link guide/dev/brow
 
 ### Reaching the best projection
 
-Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in editor and PDF. However a lot can be done to ensure the differences will be hardly noticable.
+Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in the editor and PDF. However, a lot can be done to ensure the differences will be hardly noticeable.
 
-For example, make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins; if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor. To take things a step further you may experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
+For example, make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor. To take things a step further you may experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
 
 ### Custom CSS rules
 
-Besides the inline styles, in order to mimic the editor content all the CKEditor 4 CSS rules are sent to the service. But let's say your company has a strict heading color policy: it has to be <span style="color:#4B0082">indigo</span> (`#4B0082`), definitely not <span style="color:#483D8B">dark slate blue</span> (`#483D8B`)! Fortunately you do not have to remember to change it every time. It is possible to attach your own custom CSS stylesheet via {@linkapi CKEDITOR.config.exportPdf_stylesheet CKEDITOR.config.exportPdf_stylesheet} configuration option or just add some styles with {@linkapi CKEDITOR.addCss} method.
+Besides the inline styles, in order to mimic the editor content, all the CKEditor 4 CSS rules are sent to the service. But let's say your company has a strict heading color policy: it has to be <span style="color:#4B0082">indigo</span> (`#4B0082`), definitely not <span style="color:#483D8B">dark slate blue</span> (`#483D8B`)! Fortunately you do not have to remember to change it every time. It is possible to attach your own custom CSS stylesheet via {@linkapi CKEDITOR.config.exportPdf_stylesheet CKEDITOR.config.exportPdf_stylesheet} configuration option or just add some styles with {@linkapi CKEDITOR.addCss} method.
 
 ### Output file configuration
 
@@ -84,7 +84,7 @@ Assets like images can be attached using relative URLs, but before data is sent 
 
 ### Setting dynamic file name
 
-Using {@linkapi CKEDITOR.config.exportPdf_fileName CKEDITOR.config.exportPdf_fileName} option the name of generated file maybe be set either statically (e.g. `ckeditor4.pdf`) or dynamically, e.g. to match the text in `h1` element in editor:
+Using {@linkapi CKEDITOR.config.exportPdf_fileName CKEDITOR.config.exportPdf_fileName} option the name of generated file may be set to a fixed name upon editor initialization (e.g. `ckeditor4.pdf`) or changed dynamically every time editor content is exported to PDF. For example it can match the text in `h1` element from editor content:
 
 	config.exportPdf_fileName = function( editor ) {
 		return editor.editable().findOne( 'h1' ).getText() + '.pdf';

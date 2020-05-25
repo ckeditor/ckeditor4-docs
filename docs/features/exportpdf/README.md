@@ -80,7 +80,7 @@ It is even possible to run some asynchronous tasks before sending data to the se
 
 ### Relative vs absolute URLs
 
-Assets like images can be attached using relative URLs, but before data is sent to the service, relative links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the infranet) - remember to expose such assets globally.
+Assets like images can be attached using relative URLs, but before data is sent to the service, relative links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the infranet) - remember to expose such assets publicly or use absolut URLs to publicly available assets.
 
 ### Setting dynamic file name
 

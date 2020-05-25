@@ -53,7 +53,7 @@ A number of options like output file format or margins can be set in the {@linka
 Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. It can be used for custom data processing (e.g. to ensure the output text will be black, not <span style="color:pink;background-color:yellow">pink on yellow background</span>). Editor uses it too, so just remember to add the right priority to the listener:
 
 * 1-14: Data is available in the original string format.
-* 15: Data is processed by the plugin.
+* 15: Data is preprocessed by the plugin.
 * 16-19: Data that will be sent to the service can be modified.
 * 20: Data is sent to the service.
 

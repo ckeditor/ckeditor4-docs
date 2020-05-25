@@ -36,9 +36,9 @@ As for the compatibility, plugin works on all the browsers {@link guide/dev/brow
 
 ### Reaching the best projection
 
-Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in the editor and PDF. However, a lot can be done to ensure the differences will be hardly noticeable.
+Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in the editor and PDF. However, thanks to flexible configuration, adjusting couple of configuration options can make the difference hardly noticeable.
 
-For example, make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor. To take things a step further you may experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
+Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor using {@linkapi CKEDITOR.addCss} method. To take things a step further you may experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
 
 ### Custom CSS rules
 
@@ -53,8 +53,8 @@ A number of options like output file format or margins can be set in the {@linka
 Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. It can be used for custom data processing (e.g. to ensure the output text will be black, not <span style="color:pink;background-color:yellow">pink on yellow background</span>). Editor uses it too, so just remember to add the right priority to the listener:
 
 * 1-14: Data is available in the original string format.
-* 15: Data is preprocessed by the plugin.
-* 16-19: Data that will be sent to the service can be modified.
+* 15: Data is preprocessed by the plugin: image relative paths are changed to absolute ones and editor's content is wrapped into a container with appropriate classes for styling.
+* 16-19: Data is in the form in which it will be sent to the service. It can still be modified.
 * 20: Data is sent to the service.
 
 ### Asynchronous preprocessing
@@ -62,21 +62,22 @@ Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. I
 It is even possible to run some asynchronous tasks before sending data to the server. To do this simply stop the event and set the flag telling that process is not finished yet. After it is done, remove flag and refire the `exportPdf` event:
 
 	editor.on( 'exportPdf', function( evt ) {
+		// Let's call some asynchronous function here, like an Ajax request. Flag processing as 'in progress'.
+		evt.data.asyncDone = false;
+
+		ajaxRequestForAdditionalData( evt.editor, function() {
+			// Ajax call is done, let's mark processing as done and refire 'exportPdf` event.
+			evt.data.asyncDone = true;
+			editor.fire( 'exportPdf', evt.data );
+		} );
+	}, null, null, 1 );
+
+	editor.on( 'exportPdf', function( evt ) {
 		// Stop the event if the async process is still on.
 		if ( !evt.data.asyncDone ) {
 			evt.cancel();
-		} else {
-			delete evt.data.asyncDone;
 		}
 	} );
-
-	editor.on( 'exportPdf', function( evt ) {
-		// Here e.g. some AJAX request can be sent; after it is done set the flag to `true`:
-		evt.data.asyncDone = true;
-
-		// Refire the event.
-		editor.fire( 'exportPdf', evt.data );
-	}, null, null, 1 );
 
 ### Relative vs absolute URLs
 

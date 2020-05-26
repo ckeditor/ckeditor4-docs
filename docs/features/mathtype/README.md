@@ -14,7 +14,7 @@ For licensing, see LICENSE.md.
 
 <info-box info="">
 	This feature is provided as a commercial solution called MathType delivered by our partner, [Wiris](http://www.wiris.com).
-	The integration with MathType is in beta version and you can report any issues in the official CKEditor 4 [GitHub repository](https://github.com/ckeditor/ckeditor5/issues). A license can be purchased [here](https://ckeditor.com/contact/).
+	The integration with MathType is in beta version and you can report any issues in the official CKEditor 4 [GitHub repository](https://github.com/ckeditor/ckeditor4/issues). A license can be purchased [here](https://ckeditor.com/contact/).
 </info-box>
 
 [MathType](http://www.wiris.com/en/mathtype) is a popular mathematical and science formula editor with classical and handwriting input modes. You can use it to create math equations or chemical formulas right inside the CKEditor 4 content.

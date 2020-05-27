@@ -26,11 +26,11 @@ When enabled, it adds the **<img class="inline" src="%BASE_PATH%/assets/img/expo
 
 Although CKEditor 4 is basically a web tool, sometimes you may want (or *need*) to use the content it generated somewhere else. While simple copy and paste may work in some cases, most probably it will not allow you to use some more advanced editor features like styled tables or lists. Thanks to the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin you can save the document you created to a downloadable file, preserving all the styles and structure in nearly 1:1 projection.
 
-## Supported features
+## Supported features and compatibility
 
 All the formatting and content structure you create using the editor is maintained in the output file. See the tips for {@link features/exportpdf/README#reaching-the-best-projection reaching the best projection} to learn how to configure the plugin and editor to best suite your needs.
 
-As for the compatibility, plugin works on all the browsers {@link guide/dev/browsers/README supported for CKEditor 4} except for Internet Explorers older than version 11.
+As for the compatibility, Export to PDF plugin works on all the browsers {@link guide/dev/browsers/README supported by CKEditor 4} except for Internet Explorer versions older than version 11. The plugin is compatible with CKEditor 4 versions starting from `4.6.1` version.
 
 ## Configuration
 
@@ -38,7 +38,7 @@ As for the compatibility, plugin works on all the browsers {@link guide/dev/brow
 
 Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in the editor and PDF. However, thanks to flexible configuration, adjusting couple of configuration options can make the difference hardly noticeable.
 
-Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor using {@linkapi CKEDITOR.addCss} method. To take things a step further you may experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
+Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor itself providing additional styling via {@linkapi CKEDITOR.addCss} method. To take things a step further you may also experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
 
 ### Custom CSS rules
 
@@ -57,9 +57,9 @@ Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. I
 * 16-19: Data is in the form in which it will be sent to the service. It can still be modified.
 * 20: Data is sent to the service.
 
-### Asynchronous preprocessing
+### Asynchronous data preprocessing
 
-It is even possible to run some asynchronous tasks before sending data to the server. To do this simply stop the event and set the flag telling that process is not finished yet. After it is done, remove flag and refire the `exportPdf` event:
+It is even possible to run some asynchronous tasks before sending data to the server. To do this, simply stop the event and set the flag telling that process is not finished yet. After it is done, remove flag and refire the `exportPdf` event:
 
 	editor.on( 'exportPdf', function( evt ) {
 		// Let's call some asynchronous function here, like an Ajax request. Flag processing as 'in progress'.
@@ -81,11 +81,11 @@ It is even possible to run some asynchronous tasks before sending data to the se
 
 ### Relative vs absolute URLs
 
-Assets like images can be attached using relative URLs, but before data is sent to the service, relative links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the infranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Also {@linkapi CKEDITOR.config.baseHref} option may come in handy here.
+Assets like images can be attached using relative URLs, but before data is sent to the service, relative links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Also {@linkapi CKEDITOR.config.baseHref} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
 
 ### Setting dynamic file name
 
-Using {@linkapi CKEDITOR.config.exportPdf_fileName} option the name of generated file may be set to a fixed name upon editor initialization (e.g. `ckeditor4.pdf`) or changed dynamically every time editor content is exported to PDF. For example it can match the text in `h1` element from editor content:
+Using {@linkapi CKEDITOR.config.exportPdf_fileName} option, the name of the generated file may be set to a fixed value upon editor initialization (e.g. `ckeditor4.pdf`) or changed dynamically every time editor content is exported to PDF. For example it can match the text in `h1` element from editor content:
 
 	config.exportPdf_fileName = function( editor ) {
 		return editor.editable().findOne( 'h1' ).getText() + '.pdf';

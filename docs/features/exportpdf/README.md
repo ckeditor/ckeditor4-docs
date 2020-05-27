@@ -66,7 +66,7 @@ It is even possible to run some asynchronous tasks before sending data to the se
 		evt.data.asyncDone = false;
 
 		ajaxRequestForAdditionalData( evt.editor, function() {
-			// Ajax call is done, let's mark processing as done and refire 'exportPdf` event.
+			// Ajax call is done, let's mark processing as done and refire 'exportPdf' event.
 			evt.data.asyncDone = true;
 			editor.fire( 'exportPdf', evt.data );
 		} );

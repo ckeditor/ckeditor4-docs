@@ -40,13 +40,27 @@ Due to the differences between browsers and operating systems it is not always p
 
 Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor itself providing additional styling via {@linkapi CKEDITOR.addCss} method. To take things a step further you may also experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
 
-### Custom CSS rules
+### Setting dynamic file name
 
-Besides the inline styles, in order to mimic the editor content, all the CKEditor 4 CSS rules are sent to the service. But let's say your company has a strict heading color policy: it has to be <span style="color:#4B0082">indigo</span> (`#4B0082`), definitely not <span style="color:#483D8B">dark slate blue</span> (`#483D8B`)! Fortunately you do not have to remember to change it every time. It is possible to attach your own custom CSS stylesheet via {@linkapi CKEDITOR.config.exportPdf_stylesheet} configuration option or just add some styles with {@linkapi CKEDITOR.addCss} method.
+Using {@linkapi CKEDITOR.config.exportPdf_fileName} option, the name of the generated file may be set to a fixed value upon editor initialization (e.g. `ckeditor4.pdf`) or changed dynamically every time editor content is exported to PDF. For example it can match the text in `h1` element from editor content:
+
+	config.exportPdf_fileName = function( editor ) {
+		return editor.editable().findOne( 'h1' ).getText() + '.pdf';
+	}
+
+The value is then calculated right before saving the file.
 
 ### Output file configuration
 
 A number of options like output file format or margins can be set in the {@linkapi CKEDITOR.config.exportPdf_options} object. It is sent to the service along with the HTML and CSS and processed on the server side. To check out the possible configurations, visit the [service documentation](https://pdf-converter.cke-cs.com/docs).
+
+### Relative vs absolute URLs
+
+Assets like images can be attached using relative URLs, but before data is sent to the service, relative links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Also {@linkapi CKEDITOR.config.baseHref} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
+
+### Custom CSS rules
+
+Besides the inline styles, in order to mimic the editor content, all the CKEditor 4 CSS rules are sent to the service. But let's say your company has a strict heading color policy: it has to be <span style="color:#4B0082">indigo</span> (`#4B0082`), definitely not <span style="color:#483D8B">dark slate blue</span> (`#483D8B`)! Fortunately you do not have to remember to change it every time. It is possible to attach your own custom CSS stylesheet via {@linkapi CKEDITOR.config.exportPdf_stylesheet} configuration option or just add some styles with {@linkapi CKEDITOR.addCss} method.
 
 ### Data preprocessing
 
@@ -78,20 +92,6 @@ It is even possible to run some asynchronous tasks before sending data to the se
 			evt.cancel();
 		}
 	} );
-
-### Relative vs absolute URLs
-
-Assets like images can be attached using relative URLs, but before data is sent to the service, relative links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Also {@linkapi CKEDITOR.config.baseHref} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
-
-### Setting dynamic file name
-
-Using {@linkapi CKEDITOR.config.exportPdf_fileName} option, the name of the generated file may be set to a fixed value upon editor initialization (e.g. `ckeditor4.pdf`) or changed dynamically every time editor content is exported to PDF. For example it can match the text in `h1` element from editor content:
-
-	config.exportPdf_fileName = function( editor ) {
-		return editor.editable().findOne( 'h1' ).getText() + '.pdf';
-	}
-
-The value is then calculated right before saving the file.
 
 ## Export to PDF demo
 

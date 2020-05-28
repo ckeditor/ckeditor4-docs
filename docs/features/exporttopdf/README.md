@@ -54,9 +54,9 @@ The value is then calculated right before saving the file.
 
 A number of options like output file format or margins can be set in the {@linkapi CKEDITOR.config.exportPdf_options} object. It is sent to the service along with the HTML and CSS and processed on the server side. To check out the possible configurations, visit the [service documentation](https://pdf-converter.cke-cs.com/docs).
 
-### Relative vs absolute URLs
+### Relative vs absolute image URLs
 
-Assets like images can be attached using relative URLs, but before data is sent to the service, relative links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Also {@linkapi CKEDITOR.config.baseHref} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
+Images can be attached to the editor using relative URLs, but before data is sent to the service, such links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Other possibility is to use [base64 encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image). Also {@linkapi CKEDITOR.config.baseHref} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
 
 ### Custom CSS rules
 
@@ -64,7 +64,7 @@ Besides the inline styles, in order to mimic the editor content, all the CKEdito
 
 ### Data preprocessing
 
-Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. It can be used for custom data processing (e.g. to ensure the output text will be black, not <span style="color:pink;background-color:yellow">pink on yellow background</span>). Editor uses it too, so just remember to add the {@linkapi CKEDITOR.editor.on right priority to the event listener}:
+Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. It can be used for custom data processing (e.g. to ensure the output text will be black, not <span style="color:pink;background-color:yellow">pink on yellow background</span>). Editor uses it too, so just remember to add the right priority to the {@linkapi CKEDITOR.editor.on event listener}:
 
 * 1-14: Data is available in the original string format (it is extracted using {@linkapi CKEDITOR.editor.getData() editor.getData() method}).
 * 15: Data is preprocessed by the plugin: image relative paths are changed to absolute ones and editor's content is wrapped into a container with appropriate classes for styling.

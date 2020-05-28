@@ -102,5 +102,8 @@ See the {@linkexample exporttopdf working "Export to PDF" sample} that showcases
 Refer to the following resources for more information about working with document in CKEditor 4:
 
 * The {@link features/pastefromword/README Pasting content from Microsoft Word} article contains information about the Paste from Word plugin and its features.
+* The {@link features/pastefromexcel/README Pasting content from Microsoft Excel} article contains information about the Paste from Excel plugin and its features.
+* The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains information about the Paste from Google Docs plugin and its features.
+* The {@link features/pastefromlibreoffice/README Pasting content from LibreOffice} article contains information about the Paste from LibreOffice plugin and its features.
 * The {@link features/size/README Setting editor size} article will help reaching the best projection.
 * The {@link guide/dev/acf/README content filtering} article explains how to make editor work also with custom plugins.

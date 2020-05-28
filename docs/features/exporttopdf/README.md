@@ -1,7 +1,7 @@
 ---
 category: working-with-document
 order: 25
-url: features/exportpdf
+url: features/exporttopdf
 menu-title: Export to PDF
 meta-title-short: Export to PDF
 ---
@@ -28,7 +28,7 @@ Although CKEditor 4 is basically a web tool, sometimes you may want (or *need*) 
 
 ## Supported features and compatibility
 
-All the formatting and content structure you create using the editor is maintained in the output file. See the tips for {@link features/exportpdf/README#reaching-the-best-projection reaching the best projection} to learn how to configure the plugin and editor to best suite your needs.
+All the formatting and content structure you create using the editor is maintained in the output file. See the tips for {@link features/exporttopdf/README#reaching-the-best-projection reaching the best projection} to learn how to configure the plugin and editor to best suite your needs.
 
 As for the compatibility, Export to PDF plugin works on all the browsers {@link guide/dev/browsers/README supported by CKEditor 4} except for Internet Explorer versions older than version 11. The plugin is compatible with CKEditor 4 versions starting from `4.6.1` version.
 
@@ -95,7 +95,7 @@ The value is then calculated right before saving the file.
 
 ## Export to PDF demo
 
-See the {@linkexample exportpdf working "Export to PDF" sample} that showcases the export to PDF process.
+See the {@linkexample exporttopdf working "Export to PDF" sample} that showcases the export to PDF process.
 
 ## Related Features
 

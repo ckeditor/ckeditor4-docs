@@ -64,7 +64,7 @@ Besides the inline styles, in order to mimic the editor content, all the CKEdito
 
 ### Data preprocessing
 
-Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. It can be used for custom data processing (e.g. to ensure the output text will be black, not <span style="color:pink;background-color:yellow">pink on yellow background</span>). Editor uses it too, so just remember to add the right priority to the listener:
+Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. It can be used for custom data processing (e.g. to ensure the output text will be black, not <span style="color:pink;background-color:yellow">pink on yellow background</span>). Editor uses it too, so just remember to add the {@linkapi CKEDITOR.editor.on right priority to the event listener}:
 
 * 1-14: Data is available in the original string format.
 * 15: Data is preprocessed by the plugin: image relative paths are changed to absolute ones and editor's content is wrapped into a container with appropriate classes for styling.

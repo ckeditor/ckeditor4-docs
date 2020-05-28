@@ -24,7 +24,7 @@ When enabled, it adds the **<img class="inline" src="%BASE_PATH%/assets/img/expo
 
 ## Feature overview
 
-Although CKEditor 4 is basically a web tool, sometimes you may want (or *need*) to use the content it generated somewhere else. While simple copy and paste may work in some cases, most probably it will not allow you to use some more advanced editor features like styled tables or lists. Thanks to the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin you can save the document you created to a downloadable file, preserving all the styles and structure in nearly 1:1 projection.
+CKEditor 4 is a feature rich WYSIWYG editor where you operate mostly on rich text and HTML markup. In many cases pure HTML output is enough, however you may also need to preserve the document in other formats which can be easily shared and presented in different environments. Thanks to the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin you can save the document you created to a downloadable file, preserving all the styles and structure in nearly 1:1 projection.
 
 ## Supported features and compatibility
 

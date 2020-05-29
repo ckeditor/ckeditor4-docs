@@ -60,7 +60,15 @@ Images can be attached to the editor using relative URLs, but before data is sen
 
 ### Custom CSS rules
 
-Besides the inline styles, in order to mimic the editor content, all the CKEditor 4 CSS rules are sent to the service. But let's say your company has a strict heading color policy: it has to be <span style="color:#4B0082">indigo</span> (`#4B0082`), definitely not <span style="color:#483D8B">dark slate blue</span> (`#483D8B`)! Fortunately you do not have to remember to change it every time. It is possible to attach your own custom CSS stylesheet via {@linkapi CKEDITOR.config.exportPdf_stylesheet} configuration option or just add some styles with {@linkapi CKEDITOR.addCss} method.
+Irrespectively from the editor type, inline rules are always preserved. There is however a difference in the behaviour according to the global editor styles.
+
+#### Classic editor
+
+Besides the inline styles, in order to mimic the editor content, all the default CKEditor 4 CSS rules are sent to the service. They can be overriden by {@linkapi CKEDITOR.config.contentsCss} option or extended by {@linkapi CKEDITOR.addCss} method.
+
+#### Divarea and Inline editor
+
+Here, due to the nature of these editors (meaning they use the styles of the webpage they are embedded in instead of editor's own rules), you should attach the additional stylesheet (one or more) using {@linkapi CKEDITOR.config.exportPdf_stylesheet} configuration option. In such case these are the only non-inline styles that are sent.
 
 ### Data preprocessing
 

@@ -81,7 +81,7 @@ Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. I
 
 ### Asynchronous data preprocessing
 
-It is even possible to run some asynchronous tasks before sending data to the server. To do this, simply stop the event and set the flag telling that process is not finished yet. After it is done, remove flag and refire the `exportPdf` event:
+It is even possible to run some asynchronous tasks before sending data to the server. To do this, simply stop the event and set the flag telling that process is not finished yet. After it is done, remove flag and refire the {@linkapi CKEDITOR.editor#exportPdf exportPdf event}:
 
 	editor.on( 'exportPdf', function( evt ) {
 		// Let's call some asynchronous function here, like an Ajax request. Flag processing as 'in progress'.

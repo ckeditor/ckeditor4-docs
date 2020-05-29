@@ -36,7 +36,7 @@ The Article Editor is based on the [Standard package](https://ckeditor.com/ckedi
 
 ## Document Editor
 
-The Document Editor demo showcases a more robust editor designed for creating documents which can later be {@link features/exportpdf/README exported to PDF} using the official [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin.
+The Document Editor demo showcases a more robust editor designed for creating documents which can later be {@link features/exporttopdf/README exported to PDF} using the official [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin.
 
 <info-box hint="">
   Visit the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/editors">ckeditor4-docs-samples</a> GitHub repository to learn more about this configuration.

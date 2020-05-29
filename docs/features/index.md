@@ -57,7 +57,7 @@ This part describes features that are targeted at end users and affect their ove
     * {@link features/colorbutton/README Setting Text and Background Color}
 * **Working with Document** &ndash; Editing content source code or using document-related features such as magic line or spell checker.
     * {@link features/spellcheck/README Proofreading, Spelling and Grammar Checking}
-    * {@link features/exportpdf/README Exporting content to PDF}
+    * {@link features/exporttopdf/README Exporting content to PDF}
     * {@link features/autocomplete/README Autocomplete}
     * {@link features/mentions/README Mentions and Tags}
     * {@link features/emoji/README Emoji}

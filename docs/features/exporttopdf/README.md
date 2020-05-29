@@ -68,7 +68,7 @@ Besides the inline styles, in order to mimic the editor content, all the default
 
 #### Divarea and Inline editor
 
-Here, due to the nature of these editors (meaning they use the styles of the webpage they are embedded in instead of editor's own rules), you should attach the additional stylesheet (one or more) using {@linkapi CKEDITOR.config.exportPdf_stylesheet} configuration option. In such case these are the only non-inline styles that are sent.
+Here, due to the nature of these editors (as they use the styles of the webpage they are embedded in instead of editor's own rules), you should attach the additional stylesheet (one or more) using {@linkapi CKEDITOR.config.exportPdf_stylesheet} configuration option. In such case these are the only non-inline styles that are sent.
 
 ### Data preprocessing
 

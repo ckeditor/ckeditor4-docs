@@ -103,7 +103,7 @@ It is even possible to run some asynchronous tasks before sending data to the se
 
 ## Export to PDF demo
 
-See the {@linkexample exporttopdf working "Export to PDF" sample} that showcases the export to PDF process.
+See the {@linkexample exporttopdf working "Exporting content to a PDF" sample} that showcases the export to PDF process.
 
 ## Related Features
 

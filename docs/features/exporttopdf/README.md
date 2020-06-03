@@ -60,7 +60,7 @@ Images can be attached to the editor using relative URLs, but before data is sen
 
 ### Custom CSS rules
 
-Irrespectively from the editor type, inline rules are always preserved. There is however a difference in the behaviour according to the global editor styles.
+Irrespectively from the editor type, inline rules are always preserved. During preprocessing data from editor is also wrapped into a `div` container with two classes defined: `cke_editable` and, depending on {@linkapi CKEDITOR.dom.element.getDirection the content direction}, `cke_contents_rlt` or `cke_contents_ltr` - they can be used for better targeting of custom CSS rules (see details below). The editor type determines the behaviour according to the global editor styles.
 
 #### Classic editor
 

@@ -20,7 +20,7 @@ The [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin allows you
 
 {@img assets/img/exportpdf_01.png Export to PDF button.}
 
-When enabled, it adds the **<img class="inline" src="%BASE_PATH%/assets/img/exportpdf-button.png" alt="Export to PDF toolbar button">Export to PDF** toolbar button. It sends data from editor to the endpoint maintained by [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) and handles the response, saving it as a PDF file.
+When enabled, it adds the **<img class="inline" src="%BASE_PATH%/assets/img/exportpdf-button.png" alt="Export to PDF toolbar button">Export to PDF** toolbar button. It sends data from editor to the PDF service maintained by [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) and handles the response, saving it as a PDF file.
 
 ## Feature overview
 
@@ -38,7 +38,7 @@ As for the compatibility, Export to PDF plugin works on all the browsers {@link 
 
 Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in the editor and PDF. However, thanks to flexible configuration, adjusting couple of configuration options can make the difference hardly noticeable.
 
-Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor itself providing additional styling via {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method. To take things a step further you may also experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
+Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the PDF service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor itself providing additional styling via {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method. To take things a step further you may also experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
 
 ### Setting dynamic file name
 
@@ -52,11 +52,11 @@ The value is then calculated right before saving the file.
 
 ### Output file configuration
 
-A number of options like output file format or margins can be set in the {@linkapi CKEDITOR.config.exportPdf_options `CKEDITOR.config.exportPdf_options`} object. It is sent to the service along with the HTML and CSS and processed on the server side. To check out the possible configurations, visit the [service documentation](https://pdf-converter.cke-cs.com/docs).
+A number of options like output file format or margins can be set in the {@linkapi CKEDITOR.config.exportPdf_options `CKEDITOR.config.exportPdf_options`} object. It is sent to the PDF service along with the HTML and CSS and processed on the server side. To check out the possible configurations, visit the [PDF service documentation](https://pdf-converter.cke-cs.com/docs).
 
 ### Relative vs absolute image URLs
 
-Images can be attached to the editor using relative URLs, but before data is sent to the service, such links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Other possibility is to use [base64 encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image). Also {@linkapi CKEDITOR.config.baseHref `CKEDITOR.config.baseHref`} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
+Images can be attached to the editor using relative URLs, but before data is sent to the PDF service, such links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Other possibility is to use [base64 encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image). Also {@linkapi CKEDITOR.config.baseHref `CKEDITOR.config.baseHref`} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
 
 ### Custom CSS rules
 
@@ -64,7 +64,7 @@ Irrespectively from the editor type, inline rules are always preserved. During p
 
 #### Classic editor
 
-Besides the inline styles, in order to recreate the editor content, all the default CKEditor 4 CSS rules are sent to the service. They can be overriden by {@linkapi CKEDITOR.config.contentsCss `CKEDITOR.config.contentsCss`} option or extended by {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method.
+Besides the inline styles, in order to recreate the editor content, all the default CKEditor 4 CSS rules are sent to the PDF service. They can be overriden by {@linkapi CKEDITOR.config.contentsCss `CKEDITOR.config.contentsCss`} option or extended by {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method.
 
 #### Divarea and Inline editor
 
@@ -76,8 +76,8 @@ Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf `exportPdf` event}.
 
 * 1-14: Data is available in the original string format (it is extracted using {@linkapi CKEDITOR.editor.getData `CKEDITOR.editor.getData()`} method).
 * 15: Data is preprocessed by the plugin: image relative paths are changed to absolute ones and editor's content is wrapped into a container with appropriate classes for styling.
-* 16-19: Data is in the form in which it will be sent to the service. It can still be modified.
-* 20: Data is sent to the service.
+* 16-19: Data is in the form in which it will be sent to the PDF service. It can still be modified.
+* 20: Data is sent to the PDF service.
 
 ### Asynchronous data preprocessing
 

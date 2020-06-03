@@ -56,7 +56,7 @@ A number of options like output file format or margins can be set in the {@linka
 
 ### Relative vs absolute image URLs
 
-Images can be attached to the editor using relative URLs, but before data is sent to the service, such links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Other possibility is to use [base64 encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image) - see the community plugin called [Base64 image](https://ckeditor.com/cke4/addon/base64image). Also {@linkapi CKEDITOR.config.baseHref CKEDITOR.config.baseHref} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
+Images can be attached to the editor using relative URLs, but before data is sent to the service, such links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Other possibility is to use [base64 encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image). Also {@linkapi CKEDITOR.config.baseHref CKEDITOR.config.baseHref} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
 
 ### Custom CSS rules
 

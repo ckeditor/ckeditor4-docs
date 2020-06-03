@@ -36,8 +36,6 @@ The Export to PDF plugin for CKEditor 4 is available through [npm](https://www.n
 npm install ckeditor4-plugin-exportpdf
 ```
 
-If CKEditor 4 was also installed through npm (using the `ckeditor4` package) in your project, the plugin will create a symbolic link itself in the CKEditor 4 `plugins/` directory so you do not need to move or copy any files.
-
 If you chose another method to install CKEditor 4, copy or link the `exportpdf` folder from the `ckeditor4-plugin-exportpdf` package to the CKEditor 4 `plugins/` directory.
 
 If you prefer not to touch any files, you may use the [`CKEDITOR.plugins.addExternal()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins.html#method-addExternal) API instead to load the Export to PDF plugin directly from the `node_modules/` directory:

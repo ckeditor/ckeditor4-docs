@@ -64,7 +64,7 @@ Irrespectively from the editor type, inline rules are always preserved. There is
 
 #### Classic editor
 
-Besides the inline styles, in order to mimic the editor content, all the default CKEditor 4 CSS rules are sent to the service. They can be overriden by {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option or extended by {@linkapi CKEDITOR.addCss CKEDITOR.addCss} method.
+Besides the inline styles, in order to recreate the editor content, all the default CKEditor 4 CSS rules are sent to the service. They can be overriden by {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option or extended by {@linkapi CKEDITOR.addCss CKEDITOR.addCss} method.
 
 #### Divarea and Inline editor
 

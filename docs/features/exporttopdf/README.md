@@ -26,6 +26,34 @@ When enabled, it adds the **<img class="inline" src="%BASE_PATH%/assets/img/expo
 
 CKEditor 4 is a feature rich WYSIWYG editor where you operate mostly on rich text and HTML markup. In many cases pure HTML output is enough, however you may also need to preserve the document in other formats which can be easily shared and presented in different environments. Thanks to the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin you can save the document you created to a downloadable file, preserving all the styles and structure in nearly 1:1 projection.
 
+## Plugin setup
+
+### Installation with npm
+
+The Export to PDF plugin for CKEditor 4 is available through [npm](https://www.npmjs.com/package/ckeditor4-plugin-exportpdf). To use it, install the `ckeditor4-plugin-exportpdf` npm package as a dependency of your project:
+
+```plaintext
+npm install ckeditor4-plugin-exportpdf
+```
+
+If CKEditor 4 was also installed through npm (using the `ckeditor4` package) in your project, the plugin will create a symbolic link itself in the CKEditor 4 `plugins/` directory so you do not need to move or copy any files.
+
+If you chose another method to install CKEditor 4, copy or link the `exportpdf` folder from the `ckeditor4-plugin-exportpdf` package to the CKEditor 4 `plugins/` directory.
+
+If you prefer not to touch any files, you may use the [`CKEDITOR.plugins.addExternal()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins.html#method-addExternal) API instead to load the Export to PDF plugin directly from the `node_modules/` directory:
+
+```js
+CKEDITOR.plugins.addExternal( 'exportpdf', './node-modules/ckeditor4-plugin-exportpdf/exportpdf/' );
+```
+
+### Custom Build with Online Builder
+
+The Export to PDF plugin is also available in the [official CKEditor 4 Add-ons Repository](https://ckeditor.com/cke4/addon/exportpdf). This allows you to automatically include it in any custom build which is created with the [online builder](https://ckeditor.com/cke4/builder).
+
+### Download Manually from the Add-ons Repository
+
+If you prefer to download the plugin code manually, you can do this via the Add-ons Repository. Simply download the [Export to PDF plugin](https://ckeditor.com/cke4/addon/exportpdf) and place it in the CKEditor 4 `plugins/` directory.
+
 ## Supported features and compatibility
 
 All the formatting and content structure you create using the editor is maintained in the output file. See the tips for {@link features/exporttopdf/README#reaching-the-best-projection reaching the best projection} to learn how to configure the plugin and editor to best suite your needs.

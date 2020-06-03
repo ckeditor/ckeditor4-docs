@@ -38,11 +38,11 @@ As for the compatibility, Export to PDF plugin works on all the browsers {@link 
 
 Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in the editor and PDF. However, thanks to flexible configuration, adjusting couple of configuration options can make the difference hardly noticeable.
 
-Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor itself providing additional styling via {@linkapi CKEDITOR.addCss CKEDITOR.addCss} method. To take things a step further you may also experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
+Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the export service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor itself providing additional styling via {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method. To take things a step further you may also experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
 
 ### Setting dynamic file name
 
-Using {@linkapi CKEDITOR.config.exportPdf_fileName CKEDITOR.config.exportPdf_fileName} option, the name of the generated file may be set to a fixed value upon editor initialization (e.g. `ckeditor4.pdf`) or changed dynamically every time editor content is exported to PDF. For example it can match the text in `h1` element from editor content:
+Using {@linkapi CKEDITOR.config.exportPdf_fileName `CKEDITOR.config.exportPdf_fileName`} option, the name of the generated file may be set to a fixed value upon editor initialization (e.g. `ckeditor4.pdf`) or changed dynamically every time editor content is exported to PDF. For example it can match the text in `h1` element from editor content:
 
 	config.exportPdf_fileName = function( editor ) {
 		return editor.editable().findOne( 'h1' ).getText() + '.pdf';
@@ -52,11 +52,11 @@ The value is then calculated right before saving the file.
 
 ### Output file configuration
 
-A number of options like output file format or margins can be set in the {@linkapi CKEDITOR.config.exportPdf_options CKEDITOR.config.exportPdf_options} object. It is sent to the service along with the HTML and CSS and processed on the server side. To check out the possible configurations, visit the [service documentation](https://pdf-converter.cke-cs.com/docs).
+A number of options like output file format or margins can be set in the {@linkapi CKEDITOR.config.exportPdf_options `CKEDITOR.config.exportPdf_options`} object. It is sent to the service along with the HTML and CSS and processed on the server side. To check out the possible configurations, visit the [service documentation](https://pdf-converter.cke-cs.com/docs).
 
 ### Relative vs absolute image URLs
 
-Images can be attached to the editor using relative URLs, but before data is sent to the service, such links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Other possibility is to use [base64 encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image). Also {@linkapi CKEDITOR.config.baseHref CKEDITOR.config.baseHref} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
+Images can be attached to the editor using relative URLs, but before data is sent to the service, such links are converted to absolute ones. In some cases it will mean that data will not be accessible by the server (e.g. if it is referenced locally or through the intranet) - remember to expose such assets publicly or use absolute URLs to publicly available assets. Other possibility is to use [base64 encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image). Also {@linkapi CKEDITOR.config.baseHref `CKEDITOR.config.baseHref`} option may come in handy here to set the base path for editor assets to a different URL than editor itself.
 
 ### Custom CSS rules
 
@@ -64,24 +64,24 @@ Irrespectively from the editor type, inline rules are always preserved. There is
 
 #### Classic editor
 
-Besides the inline styles, in order to recreate the editor content, all the default CKEditor 4 CSS rules are sent to the service. They can be overriden by {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option or extended by {@linkapi CKEDITOR.addCss CKEDITOR.addCss} method.
+Besides the inline styles, in order to recreate the editor content, all the default CKEditor 4 CSS rules are sent to the service. They can be overriden by {@linkapi CKEDITOR.config.contentsCss `CKEDITOR.config.contentsCss`} option or extended by {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method.
 
 #### Divarea and Inline editor
 
-For these editors (note that they use the styles of the webpage they are embedded on top of their own rules), only inline and browser styles are sent by default. If more is needed, attach the additional stylesheet (one or more) using {@linkapi CKEDITOR.config.exportPdf_stylesheet CKEDITOR.config.exportPdf_stylesheet} configuration option.
+For these editors (note that they use the styles of the webpage they are embedded on top of their own rules), only inline and browser styles are sent by default. If more is needed, attach the additional stylesheet (one or more) using {@linkapi CKEDITOR.config.exportPdf_stylesheet `CKEDITOR.config.exportPdf_stylesheet`} configuration option.
 
 ### Data preprocessing
 
-Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf exportPdf event}. It can be used for custom data processing (e.g. to ensure the output text will be black, not <span style="color:pink;background-color:yellow">pink on yellow background</span>). Editor uses it too, so just remember to add the right priority to the {@linkapi CKEDITOR.editor.on event listener}:
+Plugin provides a custom {@linkapi CKEDITOR.editor#exportPdf `exportPdf` event}. It can be used for custom data processing (e.g. to ensure the output text will be black, not <span style="color:pink;background-color:yellow">pink on yellow background</span>). Editor uses it too, so just remember to add the right priority to the {@linkapi CKEDITOR.editor.on event listener}:
 
-* 1-14: Data is available in the original string format (it is extracted using {@linkapi CKEDITOR.editor.getData CKEDITOR.editor.getData} method).
+* 1-14: Data is available in the original string format (it is extracted using {@linkapi CKEDITOR.editor.getData `CKEDITOR.editor.getData()`} method).
 * 15: Data is preprocessed by the plugin: image relative paths are changed to absolute ones and editor's content is wrapped into a container with appropriate classes for styling.
 * 16-19: Data is in the form in which it will be sent to the service. It can still be modified.
 * 20: Data is sent to the service.
 
 ### Asynchronous data preprocessing
 
-It is even possible to run some asynchronous tasks before sending data to the server. To do this, simply stop the event and set the flag telling that process is not finished yet. After it is done, remove flag and refire the {@linkapi CKEDITOR.editor#exportPdf exportPdf event}:
+It is even possible to run some asynchronous tasks before sending data to the server. To do this, simply stop the event and set the flag telling that process is not finished yet. After it is done, remove flag and refire the {@linkapi CKEDITOR.editor#exportPdf `exportPdf` event}:
 
 	editor.on( 'exportPdf', function( evt ) {
 		// Let's call some asynchronous function here, like an Ajax request. Flag processing as 'in progress'.

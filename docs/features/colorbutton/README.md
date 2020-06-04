@@ -72,28 +72,32 @@ CKEditor will then output the color definition as `<font>` elements with `color`
 	<p><font color="#800080">This is my text color.</font><br/>
 	<font style="background-color:#FFFF00;">This is my background color</font></p>
 
-Since CKEditor 4.15.0 it is possible to use `class` instead of `style` to set more advanced styles to text.
+In CKEditor 4.15.0 we introduced `colorName` property which uses color name instead of color code, which allows creating descriptive class names.
 
-You need to set {@linkapi CKEDITOR.config.colorButton_colors custom color names}.
-
-You can set `colorName` to {@linkapi CKEDITOR.config.colorButton_foreStyle CKEDITOR.config.colorButton_foreStyle} or {@linkapi CKEDITOR.config.colorButton_backStyle CKEDITOR.config.colorButton_backStyle} configuration options:
+You can use `colorName` with {@linkapi CKEDITOR.config.colorButton_foreStyle CKEDITOR.config.colorButton_foreStyle} or {@linkapi CKEDITOR.config.colorButton_backStyle CKEDITOR.config.colorButton_backStyle} configuration options:
 
 ```javascript
 config.colorButton_foreStyle = {
 	element: 'span',
-	attributes: { 'class': '#(colorName)' }
+	attributes: { 'class': 'text-#(colorName)' }
 };
 
 config.colorButton_backStyle = {
 	element: 'span',
-	attributes: { 'class': '#(colorName)' }
+	attributes: { 'class': 'text-#(colorName)' }
 };
 ```
 
 CKEditor 4 will then output the color definition as `span` with class:
 
 ```html
-<span class="subtext">Text</span>
+<span class="text-skyblue">Text</span>
+```
+
+You customize color names to more friendly names by setting {@linkapi CKEDITOR.config.colorButton_colors custom color names}.
+
+```javascript
+config.colorButton_colors = 'skyblue/87CEEB,crimson/DC143C';
 ```
 
 ## Text and Background Color Demo

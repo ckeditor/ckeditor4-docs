@@ -41,7 +41,7 @@ If you chose another method to install CKEditor 4, copy or link the `exportpdf` 
 If you prefer not to touch any files, you may use the [`CKEDITOR.plugins.addExternal()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins.html#method-addExternal) API instead to load the Export to PDF plugin directly from the `node_modules/` directory:
 
 ```js
-CKEDITOR.plugins.addExternal( 'exportpdf', './node-modules/ckeditor4-plugin-exportpdf/' );
+CKEDITOR.plugins.addExternal( 'exportpdf', './node_modules/ckeditor4-plugin-exportpdf/' );
 ```
 
 ### Custom Build with Online Builder

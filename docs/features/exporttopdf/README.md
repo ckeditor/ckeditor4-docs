@@ -64,7 +64,7 @@ As for the compatibility, Export to PDF plugin works on all the browsers {@link 
 
 Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between content in the editor and PDF. However, thanks to flexible configuration, adjusting couple of configuration options can make the difference hardly noticeable.
 
-Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the PDF service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `840px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor itself providing additional styling via {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method. To take things a step further you may also experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
+Make the editor width correspond with the chosen paper format for output file - e.g. for the `A4` format (which is used by the PDF service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)) the editor width should be equal to `805px`. Then mind the margins - if they are changed for the PDF using [custom config](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for editor itself providing additional styling via {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method. To take things a step further you may also experiment with {@link guide/dev/example_setups/README#document-editor Document Editor setup}.
 
 ### Setting dynamic file name
 

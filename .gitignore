@@ -8,6 +8,7 @@ docs/sdk/examples/assets/plugins/simplebox
 docs/sdk/examples/assets/plugins/timestamp
 docs/sdk/examples/assets/plugins/ckeditor_wiris
 docs/sdk/examples/assets/plugins/spreadsheet
+docs/sdk/examples/assets/plugins/exportpdf
 docs/sdk/examples/assets/react/main.js*
 docs/sdk/examples/assets/vue/main.js*
 docs/sdk/examples/assets/angular/main.js*

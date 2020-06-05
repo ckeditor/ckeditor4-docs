@@ -115,6 +115,11 @@ module.exports = function( grunt ) {
 					cwd: 'node_modules/ckeditor4-plugin-spreadsheet/spreadsheet',
 					src: '**',
 					dest: 'docs/sdk/examples/assets/plugins/spreadsheet'
+				}, {
+					expand: true,
+					cwd: 'node_modules/ckeditor4-plugin-exportpdf',
+					src: '**',
+					dest: 'docs/sdk/examples/assets/plugins/exportpdf'
 				} ]
 			},
 			'docs-samples': {

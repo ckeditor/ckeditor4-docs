@@ -154,6 +154,7 @@ module.exports = function( grunt ) {
 					'<%= path %>/adapters',
 					'<%= path %>/ckeditor.js',
 
+					'docs/sdk/examples/assets/plugins/exportpdf',
 					'repos/ckeditor-presets/plugins/scayt',
 					'repos/ckeditor-presets/plugins/wsc'
 				],

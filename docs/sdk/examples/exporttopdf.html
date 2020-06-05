@@ -142,7 +142,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		</ul>
 
 		<script>
-			// CKEDITOR.plugins.addExternal( 'pdfexport', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/pdfexport/', 'plugin.js' );
+			CKEDITOR.plugins.addExternal( 'exportpdf', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/exportpdf/', 'plugin.js' );
 
 			if ( CKEDITOR.env.ie && CKEDITOR.env.version < 11 ) {
 				var supportInfoEl = document.querySelector( '#browserSupportInfo' );
@@ -156,8 +156,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			CKEDITOR.replace( 'editor', {
 				width: 840,
 				height: 400,
-				extraPlugins: 'colorbutton,font,justify,print,tableresize,liststyle,pagebreak',
-				// extraPlugins: 'exportpdf',
+				extraPlugins: 'colorbutton,font,justify,print,tableresize,liststyle,pagebreak,exportpdf',
 				toolbar: [
 					{ name: 'clipboard', items: [ 'PasteFromWord', '-', 'Undo', 'Redo' ] },
 					{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'Subscript', 'Superscript' ] },
@@ -169,7 +168,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
 					{ name: 'colors', items: [ 'TextColor', 'BGColor', 'CopyFormatting' ] },
 					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-					{ name: 'document', items: [ 'Print', 'PageBreak', 'Source' ] }
+					{ name: 'document', items: [ 'exportPdf', 'PageBreak', 'Source' ] }
 				]
 			} );
 		</script>

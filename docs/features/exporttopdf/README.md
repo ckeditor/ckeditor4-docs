@@ -140,4 +140,4 @@ Refer to the following resources for more information about working with documen
 * The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains information about the Paste from Google Docs plugin and its features.
 * The {@link features/pastefromlibreoffice/README Pasting content from LibreOffice} article contains information about the Paste from LibreOffice plugin and its features.
 * The {@link features/size/README Setting editor size} article will help reaching the best projection.
-* The {@link guide/dev/acf/README content filtering} article explains how to make editor work also with custom plugins.
+* The {@link guide/dev/acf/README Content filtering with ACF} article explains how to make editor work also with custom plugins.

@@ -42,21 +42,28 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			}
 		</style>
 
-		<h1>Exporting content to a PDF<a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/exporttopdf.html">Documentation</a></h1>
+		<h1>Exporting editor content to PDF<a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/exporttopdf.html">Documentation</a></h1>
 
 		<p>
-			CKEditor 4 operates mostly on rich text and HTML markup, which already gives tons of possible uses. And even if you need the content it created outside of the web environment, you are still able to save it to a file and use it elsewhere. This is possible thanks to the optional
-			<a href="https://ckeditor.com/cke4/addon/exportpdf">Export to PDF</a> plugin which allows saving the editor content to a PDF file.
+			The optional <a href="https://ckeditor.com/cke4/addon/exportpdf">Export to PDF</a> plugin allows you to easily print the WYSIWYG editor content to a PDF file.
 		</p>
+
 		<p>
-			It introduces a <span class="button_icon" data-icon="exportpdf" title="Export to PDF">&nbsp;</span><b>new toolbar button</b>.
-			When it's clicked, data from the editor is sent to the PDF service maintained by <a href="https://ckeditor.com/ckeditor-cloud-services/">CKEditor Cloud Services</a>.
-			There the received HTML is transformed into a binary file which is sent back to editor and saved as a PDF file.
+			When enabled, the plugin adds the <span class="button_icon" data-icon="exportpdf" title="Export to PDF">&nbsp;</span> (<strong>Export to PDF</strong>) button to your CKEditor 4 toolbar. When the button is clicked, the plugin sends the content of the editor together with the styles that are used to display it to the <a href="https://ckeditor.com/ckeditor-cloud-services/">CKEditor Cloud Services</a> HTML to PDF converter service. The service then generates a PDF document that can be downloaded by the user.
+		</p>
+
+		<div class="tip">
+			<p><strong>This feature is in beta version. It is free to use while in the beta phase.</strong></p>
+			<p>This is a premium feature. Please <a href="https://ckeditor.com/contact/">contact us</a> if you would like to purchase a license. Let us know if you have any feedback or questions!</p>
+		</div>
+		
+		<p>
+			PDF is a universal format that can be read and shared in many environments and applications. Use the editor below to create your content and click the <strong>Export to PDF</strong> toolbar button to generate a PDF document that you can save on your device. The plugin will export not only the rich-text content that you create but also its structure and styling, generating an output PDF file that looks as close as possible to your HTML content.
 		</p>
 
 		<p class="tip" id="browserSupportInfo" aria-hidden="true">
 			<span class="ie">
-				<strong>Internet Explorer</strong> browser support is limited: the plugin is only available for version 11. If you need to use it in the older one, please <a href="https://ckeditor.com/contact/">contact us</a>.
+				Support for <strong>Internet Explorer</strong> is limited to version 11. If you need to use it in an older version, please <a href="https://ckeditor.com/contact/">contact us</a>.
 			</span>
 		</p>
 
@@ -108,7 +115,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 							<tr>
 								<td style="background-color:#e6e6e6; text-align:center">9:30 AM - 11:30 AM</td>
 								<td>
-									<p style="text-align:center"><strong>Americano vs. Brewed - “know your coffee”</strong> with:&nbsp;</p>
+									<p style="text-align:left"><strong>Americano vs. Brewed - “know your coffee”</strong> with:&nbsp;</p>
 
 									<ul>
 										<li>Giulia Bianchi</li>
@@ -120,17 +127,18 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 							<tr>
 								<td style="background-color:#e6e6e6; text-align:center">1:00 PM - 3:00 PM</td>
 								<td>
-									<p style="text-align:center"><strong>Pappardelle al pomodoro</strong> - live cooking&nbsp;<sup>1</sup></p>
+									<p style="text-align:left"><strong>Pappardelle al pomodoro</strong> - live cooking</p>
 
-									<p style="text-align:center">Incorporate the freshest ingredients&nbsp;<br />
+									<p style="text-align:left">Incorporate the freshest ingredients&nbsp;<br />
 									with Rita Fresco</p>
 								</td>
 							</tr>
 							<tr>
 								<td style="background-color:#e6e6e6; text-align:center">5:00 PM - 8:00 PM</td>
 								<td>
-									<p style="text-align:center"><strong>Tuscan vineyards at a glance</strong> - wine-tasting&nbsp;<br />
-									with Frederico Riscoli</p>
+									<p style="text-align:left"><strong>Tuscan vineyards at a glance</strong></p>
+
+									<p style="text-align:left">Wine-tasting with Frederico Riscoli</p>
 								</td>
 							</tr>
 						</tbody>
@@ -139,10 +147,13 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			</div>
 		</div>
 
+		<p>
+			The crucial aspect of this feature is its configuration. In order to ensure that the generated PDF looks as close as possible to the same content when it is displayed in the WYSIWYG editor, the feature should be carefully configured. Refer to the <a href="https://ckeditor.com/docs/ckeditor4/latest/features/exporttopdf.html#configuration">documentation</a> for an overview of the configuration options available in both the plugin and the HTML to PDF converter.
+		</p>
+
 		<h2 id="related-features">Related Features</h2>
 		<ul>
 			<li><a href="./pastefromword.html">Inserting Content &ndash; Pasting Content from Microsoft Word</a></li>
-			<li><a href="./pastefromexcel.html">Inserting Content &ndash; Pasting Content from Microsoft Excel</a></li>
 			<li><a href="./pastefromgoogledocs.html">Inserting Content &ndash; Pasting Content from Google Docs</a></li>
 			<li><a href="./pastefromlibreoffice.html">Inserting Content &ndash; Pasting Content from LibreOffice</a></li>
 			<li><a href="./size.html">Editor Resizing &ndash; Setting Editor Size</a></li>

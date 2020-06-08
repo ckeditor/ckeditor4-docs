@@ -33,13 +33,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	</nav>
 	<section class="sdk-contents">
 		<style>
-			.container {
-				padding: 30px;
-				display: flex;
-				align-items: center;
-				text-align: center;
-			}
-
 			.inner-container {
 				margin: 0 auto;
 			}
@@ -152,12 +145,14 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<li><a href="./pastefromexcel.html">Inserting Content &ndash; Pasting Content from Microsoft Excel</a></li>
 			<li><a href="./pastefromgoogledocs.html">Inserting Content &ndash; Pasting Content from Google Docs</a></li>
 			<li><a href="./pastefromlibreoffice.html">Inserting Content &ndash; Pasting Content from LibreOffice</a></li>
-			<li><a href="./size.html">Editor Resizing - Setting Editor Size</a></li>
-			<li><a href="./acf.html">Content Filtering – Advanced Content Filter - Automatic Mode</a></li>
+			<li><a href="./size.html">Editor Resizing &ndash; Setting Editor Size</a></li>
+			<li><a href="./acf.html">Content Filtering &ndash; Advanced Content Filter &ndash; Automatic Mode</a></li>
 		</ul>
 
 		<script>
 			CKEDITOR.plugins.addExternal( 'exportpdf', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/exportpdf/', 'plugin.js' );
+
+			CKEDITOR.addCss( 'body.document-editor, div.cke_editable { width: 700px; padding: 1cm 2cm 2cm; } blockquote { font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }' );
 
 			if ( CKEDITOR.env.ie && CKEDITOR.env.version < 11 ) {
 				var supportInfoEl = document.querySelector( '#browserSupportInfo' );
@@ -173,8 +168,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				height: 700,
 				extraPlugins: 'colorbutton,font,justify,print,tableresize,liststyle,pagebreak,exportpdf',
 				toolbar: [
-					{ name: 'document', items: [ 'exportPdf', 'PageBreak', 'Source' ] },
-					{ name: 'clipboard', items: [ 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+					{ name: 'various', items: [ 'ExportPdf', '-', 'Undo', 'Redo' ] },
 					{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'Subscript', 'Superscript' ] },
 					{ name: 'links', items: [ 'Link', 'Unlink' ] },
 					{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
@@ -183,7 +177,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					'/',
 					{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
 					{ name: 'colors', items: [ 'TextColor', 'BGColor', 'CopyFormatting' ] },
-					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] }
+					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+					{ name: 'document', items: [ 'PageBreak', 'Source' ] }
 				],
 				contentsCss: [
 					CKEDITOR.basePath + 'contents.css',

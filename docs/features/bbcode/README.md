@@ -32,7 +32,7 @@ This feature is aimed at developers who would like to integrate CKEditor with po
 
 ## BBCode Output Demo
 
-See the {@linksdk bbcode working "BBCode Editing" sample} that showcases a CKEditor instance configured to output BBCode and customized to be a better fit for a typical BBCode environment.
+See the {@linkexample bbcode working "BBCode Editing" sample} that showcases a CKEditor instance configured to output BBCode and customized to be a better fit for a typical BBCode environment.
 
 ## Related Features
 

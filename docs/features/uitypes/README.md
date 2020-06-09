@@ -73,8 +73,8 @@ Due to the dynamic nature of floating UI, **some editor features are unavailable
 
 The following samples are available for two CKEditor user interface types:
 
-* The {@linksdk fixedui Fixed User Interface} sample shows the implementation of fixed UI with both classic and inline editor.
-* The {@linksdk floatingui Floating User Interface} sample shows an inline editor instance with its default floating UI.
+* The {@linkexample fixedui Fixed User Interface} sample shows the implementation of fixed UI with both classic and inline editor.
+* The {@linkexample floatingui Floating User Interface} sample shows an inline editor instance with its default floating UI.
 
 ## Related Features
 

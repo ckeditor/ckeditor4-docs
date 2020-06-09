@@ -124,7 +124,7 @@ Please refer to the {@link features/accessibility_checker/README#keyboard-shortc
 
 ## Accessibility and Keyboard Shortcuts Demo
 
-See the {@linksdk accessibility working "Accessibility Support and Keyboard Shortcuts" sample} that showcases the usage of some accessibility-related features.
+See the {@linkexample accessibility working "Accessibility Support and Keyboard Shortcuts" sample} that showcases the usage of some accessibility-related features.
 
 ## Related Features
 

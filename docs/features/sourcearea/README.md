@@ -68,7 +68,7 @@ Please note this is an experimental CSS property which may not be supported in a
 
 ## Source Code Editing Demo
 
-See the {@linksdk sourcearea working "Source Code Editing" sample} that showcases both source editing plugins combined with classic and inline editor instances.
+See the {@linkexample sourcearea working "Source Code Editing" sample} that showcases both source editing plugins combined with classic and inline editor instances.
 
 ## Related Features
 

@@ -72,7 +72,7 @@ The crucial aspect of this feature is its configuration. In order to ensure that
 
 ### Achieving the Best Results
 
-Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between the content in the editor and in a generated PDF file. However, thanks to flexible configuration, adjusting a few configuration options can make the difference hardly noticeable.
+Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between the content in the editor and in the generated PDF file. However, thanks to flexible configuration, adjusting a few configuration options can make the difference hardly noticeable.
 
 Here are a few configuration tips that will make it easier to achieve a close to 1:1 rendering between the editor content and the output PDF document:
 
@@ -99,23 +99,23 @@ The value is then calculated right before saving the PDF file.
 
 A number of options like output file format or margins can be set in the {@linkapi CKEDITOR.config.exportPdf_options `CKEDITOR.config.exportPdf_options`} object.
 
-This object is sent to the CKEditor Cloud Services HTML to PDF converter service along with the HTML and CSS and processed on the server side. To learn about the possible configurations, visit the [HTML to PDF converter service documentation](https://pdf-converter.cke-cs.com/docs).
+This object is sent to the CKEditor Cloud Services HTML to PDF converter service along with the HTML and CSS. It is then processed on the server side. To learn about the possible configurations, visit the [HTML to PDF converter service documentation](https://pdf-converter.cke-cs.com/docs).
 
 Among the features that you can set up for your PDF document are:
 
 * Page margins.
 * Page format.
 * Page orientation.
-* Custom {@link features/exporttopdf/README#adding-headers-and-footers header and footer}, with support for adding the page number.
+* Custom {@link features/exporttopdf/README#adding-header-and-footer header and footer}, with support for adding the page number.
 
-There are also default settings to keep generated document consistent with editor content:
+There are also some default settings to keep the generated PDF document consistent with the editor content:
 
 * The generated PDF file is encoded with `UTF-8`.
-* The plugin uses `color-adjust: exact;` styles, which means that generated PDF document will preserve colors, images, and styles the same way as displayed in the editor.
+* The plugin uses `color-adjust: exact;` styles, which means that the generated PDF document will preserve colors, images, and styles the same way as displayed in the editor.
 
-### Adding Headers and Footers
+### Adding Header and Footer
 
-Export to PDF plugin allows to set the document’s header and footer in a similar way to Microsoft Word or Google Docs files. It can be achieved via {@linkapi CKEDITOR.config.exportPdf_options `CKEDITOR.config.exportPdf_options`} configuration option:
+The PDF export feature allows to set the document’s header and footer in a similar way to Microsoft Word or Google Docs files. It can be achieved via the {@linkapi CKEDITOR.config.exportPdf_options `CKEDITOR.config.exportPdf_options`} configuration option:
 
 ```js
 config.exportPdf_options = {
@@ -125,7 +125,7 @@ config.exportPdf_options = {
 }
 ```
 
-To ensure the header or footer is displayed, the margin must be big enough to accommodate it.
+To ensure that the header or footer is displayed, the margin must be big enough to accommodate it.
 
 It is possible to use predefined elements like `pageNumber` in the example above &mdash; for more details, refer to the [converter’s documentation](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Header-and-footer).
 
@@ -133,9 +133,9 @@ It is possible to use predefined elements like `pageNumber` in the example above
 
 Images and {@linkapi CKEDITOR.config.exportPdf_stylesheets stylesheets} can be attached to the editor using relative URLs, but before the data is sent to the HTML to PDF converter service, such links are converted to absolute ones.
 
-In some cases it will mean that the data will not be accessible by the server (e.g. if it is referenced locally or through the intranet). You should remember to expose such assets publicly or use absolute URLs to publicly available assets.
+In some cases it can mean that the data will not be accessible by the server (e.g. if it is referenced locally or through the intranet). You should remember to expose such assets publicly or use absolute URLs to publicly available assets.
 
-For images it is possible to use [Base64-encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image) instead. Also the {@linkapi CKEDITOR.config.baseHref `CKEDITOR.config.baseHref`} option may come in handy here to set the base path for editor assets to a different URL than the editor itself.
+For images, it is possible to use [Base64-encoded images](https://pdf-converter.cke-cs.com/docs#section/Images/Insert-base64-encoded-image) instead. Also the {@linkapi CKEDITOR.config.baseHref `CKEDITOR.config.baseHref`} option may come in handy here to set the base path for editor assets to a different URL than the editor itself.
 
 ### Custom CSS Rules
 
@@ -160,9 +160,11 @@ Inline and div-editing area editors use the styles of the web page they are embe
 
 If more styles are needed for the PDF output, attach additional stylesheet(s) using the {@linkapi CKEDITOR.config.exportPdf_stylesheets `CKEDITOR.config.exportPdf_stylesheets`} configuration option.
 
-#### Web fonts
+#### Web Fonts
 
-Additional stylesheets attached via {@linkapi CKEDITOR.config.exportPdf_stylesheets `CKEDITOR.config.exportPdf_stylesheets`} configuration option could also contain web fonts added via an `@import` or `@font-face` declaration. In such cases the order of the provided paths matters &mdash; stylesheets with web font declarations should be listed first and font declarations should use absolute paths to allow PDF converter service to correctly fetched font files. For more technical details, please check the API documentation and [PDF converter service documentation](https://pdf-converter.cke-cs.com/docs#section/General).
+Additional stylesheets attached with the {@linkapi CKEDITOR.config.exportPdf_stylesheets `CKEDITOR.config.exportPdf_stylesheets`} configuration option can also contain web fonts added via an `@import` or `@font-face` declaration.
+
+In such cases the order of the provided paths matters &mdash; stylesheets with web font declarations should be listed first and font declarations should use absolute paths to allow the HTML to PDF converter service to correctly fetch font files. For more technical details, please check the API documentation and the [HTML to PDF converter service documentation](https://pdf-converter.cke-cs.com/docs#section/General).
 
 ### Data Preprocessing
 
@@ -206,8 +208,7 @@ See the {@linkexample exporttopdf working "Exporting editor content to PDF" samp
 Refer to the following resources for more information about working with document in CKEditor 4:
 
 * The {@link features/pastefromword/README Pasting content from Microsoft Word} article contains information about the Paste from Word plugin and its features.
-* The {@link features/pastefromexcel/README Pasting content from Microsoft Excel} article contains information about the Paste from Excel plugin and its features.
 * The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains information about the Paste from Google Docs plugin and its features.
 * The {@link features/pastefromlibreoffice/README Pasting content from LibreOffice} article contains information about the Paste from LibreOffice plugin and its features.
-* The {@link features/size/README Setting editor size} article will help reaching the best projection.
-* The {@link guide/dev/acf/README Content filtering with ACF} article explains how to make editor work also with custom plugins.
+* The {@link features/size/README Setting editor size} article will help you set up the editor for the best projection.
+* The {@link guide/dev/acf/README Content filtering with ACF} is an introduction to CKEditor’s unique content filtering system.

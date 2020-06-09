@@ -77,7 +77,7 @@ Due to the differences between browsers and operating systems it is not always p
 Here are a few configuration tips that will make it easier to achieve a close to 1:1 rendering between the editor content and the output PDF document:
 
 * **Editor width.**
-  Make the editor width correspond with the chosen paper format for output file. For example, for the `A4` format (which is used by the PDF converter service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)), the editor width should be equal to `805px`, but for `Letter` format - `830px`.
+  Make the editor width correspond with the chosen paper format for output file. For example, for the `A4` format (which is used by the PDF converter service [by default](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Page-format)), the editor width should be equal to `805px`. For the US `Letter` format, set it to `830px`.
 * **Margins.**
   If they are changed for the PDF document using a [custom configuration](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Margins), also update them for the editor by providing additional styling via the {@linkapi CKEDITOR.addCss `CKEDITOR.addCss()`} method.
 * **Document editor setup.**

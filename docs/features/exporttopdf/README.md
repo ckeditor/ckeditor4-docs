@@ -24,7 +24,7 @@ The optional [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin a
 
 When enabled, the plugin adds the <img class="inline" src="%BASE_PATH%/assets/img/exportpdf-button.png" alt="Export to PDF toolbar button"> (**Export to PDF**) button to your CKEditor 4 toolbar. When the button is clicked, the plugin sends the content of your editor together with the styles that are used to display it to the [CKEditor Cloud Services](https://ckeditor.com/ckeditor-cloud-services/) HTML to PDF converter service. The service then generates a PDF document that can be downloaded by the user.
 
-{@img assets/img/exportpdf_01.png CKEditor 4 WYSIWYG editor with the Export to PDF feature enabled.}
+{@img assets/img/exportpdf_01.gif Creating a PDF file from CKEditor 4 WYSIWYG editor content.}
 
 ## Feature Overview
 

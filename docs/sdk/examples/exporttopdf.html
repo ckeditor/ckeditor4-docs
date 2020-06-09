@@ -56,7 +56,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<p><strong>This feature is in beta version. It is free to use while in the beta phase.</strong></p>
 			<p>This is a premium feature. Please <a href="https://ckeditor.com/contact/">contact us</a> if you would like to purchase a license. Let us know if you have any feedback or questions!</p>
 		</div>
-		
+
 		<p>
 			PDF is a universal format that can be read and shared in many environments and applications. Use the editor below to create your content and click the <strong>Export to PDF</strong> toolbar button to generate a PDF document that you can save on your device. The plugin will export not only the rich-text content that you create but also its structure and styling, generating an output PDF file that looks as close as possible to your HTML content.
 		</p>
@@ -163,7 +163,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<script>
 			CKEDITOR.plugins.addExternal( 'exportpdf', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/exportpdf/', 'plugin.js' );
 
-			CKEDITOR.addCss( 'body.document-editor, div.cke_editable { width: 700px; padding: 1cm 2cm 2cm; } blockquote { font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }' );
+			CKEDITOR.addCss(
+				'body.document-editor, div.cke_editable { width: 700px; padding: 1cm 2cm 2cm; } ' +
+				'blockquote { font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; } ' +
+				'body.document-editor table td > p, div.cke_editable table td > p { margin-top: 0; margin-bottom: 0; padding: 4px 0 3px 5px;} ' );
 
 			if ( CKEDITOR.env.ie && CKEDITOR.env.version < 11 ) {
 				var supportInfoEl = document.querySelector( '#browserSupportInfo' );

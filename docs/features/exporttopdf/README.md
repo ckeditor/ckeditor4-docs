@@ -106,11 +106,32 @@ Among the features that you can set up for your PDF document are:
 * Page margins.
 * Page format.
 * Page orientation.
-* Custom header and footer, with support for adding the page number.
+* Custom {@link features/exporttopdf/README#adding-headers-and-footers header and footer}, with support for adding the page number.
+
+There are also default settings to keep generated document consistent with editor content:
+
+* The generated PDF file is encoded with `UTF-8`.
+* The plugin uses `color-adjust: exact;` styles, which means that generated PDF document will preserve colors, images, and styles the same way as displayed in the editor.
+
+### Adding Headers and Footers
+
+Export to PDF plugin allows to set the document’s header and footer in a similar way to Microsoft Word or Google Docs files. It can be achieved via {@linkapi CKEDITOR.config.exportPdf_options `CKEDITOR.config.exportPdf_options`} configuration option:
+
+```js
+config.exportPdf_options = {
+	header_html: '<div class="styled">Header content</div>',
+	footer_html: '<div class="styled-counter"><span class="pageNumber"></span></div>',
+	header_and_footer_css: '.styled { font-weight: bold; padding: 10px; } .styled-counter { font-size: 1em; color: hsl(0, 0%, 60%); }',
+}
+```
+
+To ensure the header or footer is displayed, the margin must be big enough to accommodate it.
+
+It is possible to use predefined elements like `pageNumber` in the example above &mdash; for more details, refer to the [converter’s documentation](https://pdf-converter.cke-cs.com/docs#section/PDF-options/Header-and-footer).
 
 ### Relative vs Absolute URLs
 
-Images and {@linkapi CKEDITOR.config.exportPdf_stylesheets stylesheets} can be attached to the editor using relative URLs, but before the data is sent to the HTMNL to PDF converter service, such links are converted to absolute ones.
+Images and {@linkapi CKEDITOR.config.exportPdf_stylesheets stylesheets} can be attached to the editor using relative URLs, but before the data is sent to the HTML to PDF converter service, such links are converted to absolute ones.
 
 In some cases it will mean that the data will not be accessible by the server (e.g. if it is referenced locally or through the intranet). You should remember to expose such assets publicly or use absolute URLs to publicly available assets.
 
@@ -138,6 +159,10 @@ Besides the inline styles, in order to recreate the editor content, all the defa
 Inline and div-editing area editors use the styles of the web page they are embedded in, on top of their own rules. For these editors, only inline and browser styles are sent by default.
 
 If more styles are needed for the PDF output, attach additional stylesheet(s) using the {@linkapi CKEDITOR.config.exportPdf_stylesheets `CKEDITOR.config.exportPdf_stylesheets`} configuration option.
+
+#### Web fonts
+
+Additional stylesheets attached via {@linkapi CKEDITOR.config.exportPdf_stylesheets `CKEDITOR.config.exportPdf_stylesheets`} configuration option could also contain web fonts added via an `@import` or `@font-face` declaration. In such cases the order of the provided paths matters &mdash; stylesheets with web font declarations should be listed first and font declarations should use absolute paths to allow PDF converter service to correctly fetched font files. For more technical details, please check the API documentation and [PDF converter service documentation](https://pdf-converter.cke-cs.com/docs#section/General).
 
 ### Data Preprocessing
 

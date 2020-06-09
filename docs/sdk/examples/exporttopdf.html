@@ -177,7 +177,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		</script>
 
 		<script data-sample="1">
-			CKEDITOR.replace( 'editor', {
+			var editor = CKEDITOR.replace( 'editor', {
 				width: 940,
 				height: 700,
 				extraPlugins: 'colorbutton,font,justify,print,tableresize,liststyle,pagebreak,exportpdf',
@@ -200,6 +200,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				],
 				bodyClass: 'document-editor'
 			} );
+		</script>
+
+		<script>
+			editor.config.exportPdf_appId = 'cke4-demo-docs';
 		</script>
 	</section>
 </section>

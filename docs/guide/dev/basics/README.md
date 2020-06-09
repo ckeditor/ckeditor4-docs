@@ -46,8 +46,6 @@ There are a few scenarios where CKEditor seems to be just the tool that you need
 
 * CKEditor working out of the box in its default implementation is **not a tool like Google Docs**, where multiple users can edit the same article online in real time, track changes, and add comments. You can however try to find some plugins or tools that will help you expand its possibilities.
 
-* CKEditor is not an application that can **convert or save documents to any specific file format**, like `.docx` or PDF, although it can be integrated with additional tools to achieve this result. Its input and output format is HTML.
-
 * CKEditor is not a tool that will let you input invalid HTML code. CKEditor abides by W3C standards so it will modify code if it is invalid.
 
 At the end of the day, **CKEditor is an editor &mdash; nothing more, nothing less**. Go to the {@linkexample index CKEditor Examples} section to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!

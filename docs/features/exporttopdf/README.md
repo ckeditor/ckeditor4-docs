@@ -122,6 +122,8 @@ config.exportPdf_options = {
 	header_html: '<div class="styled">Header content</div>',
 	footer_html: '<div class="styled-counter"><span class="pageNumber"></span></div>',
 	header_and_footer_css: '.styled { font-weight: bold; padding: 10px; } .styled-counter { font-size: 1em; color: hsl(0, 0%, 60%); }',
+	margin_top: '2cm',
+	margin_bottom: '2cm'
 }
 ```
 
@@ -181,22 +183,18 @@ It is even possible to run some asynchronous tasks before sending the data to th
 
 ```js
 editor.on( 'exportPdf', function( evt ) {
-	// Let's call some asynchronous function here, like an Ajax request. Flag processing as 'in progress'.
-	evt.data.asyncDone = false;
-
-	ajaxRequestForAdditionalData( evt.editor, function() {
-		// Ajax call is done, let's mark processing as done and refire the 'exportPdf' event.
-		evt.data.asyncDone = true;
-		editor.fire( 'exportPdf', evt.data );
-	} );
-}, null, null, 1 );
-
-editor.on( 'exportPdf', function( evt ) {
-	// Stop the event if the asynchronous process is still on.
+	// Stop the event if the asynchronous process was not carried out yet.
 	if ( !evt.data.asyncDone ) {
 		evt.cancel();
+
+		// Let's call some asynchronous function here, like an Ajax request.
+		ajaxRequestForAdditionalData( evt.editor, function() {
+			// When Ajax call is done, mark processing as 'done' and refire the 'exportPdf' event.
+			evt.data.asyncDone = true;
+			editor.fire( 'exportPdf', evt.data );
+		} );
 	}
-} );
+}, null, null, 1 );
 ```
 
 ## Export to PDF Demo

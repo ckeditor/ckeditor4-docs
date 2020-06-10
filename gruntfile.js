@@ -100,7 +100,10 @@ module.exports = function( grunt ) {
 				'docs/sdk/examples/assets/plugins/abbr',
 				'docs/sdk/examples/assets/plugins/autotag',
 				'docs/sdk/examples/assets/plugins/simplebox',
-				'docs/sdk/examples/assets/plugins/timestamp'
+				'docs/sdk/examples/assets/plugins/timestamp',
+				'docs/sdk/examples/assets/plugins/ckeditor_wiris',
+				'docs/sdk/examples/assets/plugins/spreadsheet',
+				'docs/sdk/examples/assets/plugins/exportpdf'
 			]
 		},
 		copy: {

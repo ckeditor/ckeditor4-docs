@@ -54,7 +54,7 @@ CKEDITOR.plugins.addExternal( 'exportpdf', './node_modules/ckeditor4-plugin-expo
 
 ### Custom Build with Online Builder
 
-The Export to PDF plugin is also available in the [official CKEditor 4 Add-ons Repository](https://ckeditor.com/cke4/addon/exportpdf). This allows you to automatically include it in any custom build which is created with the [online builder](https://ckeditor.com/cke4/builder).
+The Export to PDF plugin is also available in the [official CKEditor 4 Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all). This allows you to automatically include it in any custom build which is created with the [online builder](https://ckeditor.com/cke4/builder).
 
 ### Manual Download
 

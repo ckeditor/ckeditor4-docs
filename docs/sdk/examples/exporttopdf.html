@@ -166,7 +166,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			CKEDITOR.addCss(
 				'body.document-editor, div.cke_editable { width: 700px; padding: 1cm 2cm 2cm; } ' +
 				'blockquote { font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; } ' +
-				'body.document-editor table td > p, div.cke_editable table td > p { margin-top: 0; margin-bottom: 0; padding: 4px 0 3px 5px;} ' );
+				'body.document-editor table td > p, div.cke_editable table td > p { margin-top: 0; margin-bottom: 0; padding: 4px 0 3px 5px;} ' +
+				'body.document-editor { width: 750px; padding: 20px; margin: 0.5cm auto; border: 1px #D3D3D3 solid; border-radius: 5px; background: white; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }' );
 
 			if ( CKEDITOR.env.ie && CKEDITOR.env.version < 11 ) {
 				var supportInfoEl = document.querySelector( '#browserSupportInfo' );
@@ -195,8 +196,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'document', items: [ 'PageBreak', 'Source' ] }
 				],
 				contentsCss: [
-					CKEDITOR.basePath + 'contents.css',
-					'assets/css/exportpdf.css'
+					CKEDITOR.basePath + 'contents.css'
 				],
 				bodyClass: 'document-editor'
 			} );

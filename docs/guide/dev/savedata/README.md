@@ -41,7 +41,7 @@ When CKEditor functions as a replacement for a `<textarea>` element, the integra
 
 This means that when submitting a form containing an editor instance, its data will simply be posted to the server, using the `<textarea>` element name as the key to retrieve it.
 
-For example, for the `<textarea>` element with an ID of `editor1`, as used in our {@link guide/dev/installation/README#adding-ckeditor-to-your-page Quick Start Guide example}, you could create this PHP code:
+For example, for the `<textarea>` element with an ID of `editor1`, as used in our {@link guide/dev/installation/README#adding-ckeditor-4-to-your-page Quick Start Guide example}, you could create this PHP code:
 
 ``` php
 <?php

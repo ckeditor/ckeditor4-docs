@@ -65,7 +65,7 @@ The default styles included in the `styles.js` file are just examples which will
 ## Integration
 
 ### Input clean HTML code
-You should only ever input clean, standards-compliant HTML code into CKEditor. {@link guide/dev/basics/README#how-ckeditor-works Incorrect markup will be modified by CKEditor} which may lead to unexpected results.
+You should only ever input clean, standards-compliant HTML code into CKEditor. {@link guide/dev/basics/README#how-ckeditor-4-works Incorrect markup will be modified by CKEditor} which may lead to unexpected results.
 
 ### Use UTF-8
 To avoid problems with character encoding, use UTF-8 for your websites and your database. Just set the `<meta>` element for your pages to:
@@ -81,7 +81,7 @@ or, if you are using the HTML5 `DOCTYPE`, to:
 ```
 
 ### Use CKEditor for what it was made for
-Last but not least, {@link guide/dev/basics/README#what-ckeditor-is use CKEditor for what it was designed for}. Learn from the best: Visit the {@linkexample index CKEditor Examples} to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
+Last but not least, {@link guide/dev/basics/README#what-ckeditor-4-is use CKEditor for what it was designed for}. Learn from the best: Visit the {@linkexample index CKEditor Examples} to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
 
 ## Security
 

@@ -42,11 +42,11 @@ There are a few scenarios where CKEditor 4 seems to be just the tool that you ne
 
 * CKEditor 4 is not a **content management system (CMS)**. It does not contain any sort of database to store your posts, logging system for user management, or administration panel where you can tweak the options for your website.
 
-* CKEditor 4 is not **desktop publishing software** (it is not MS Word!) and is not a recommended tool to use when creating paged content with fixed layout and styling that is intended for printing.
+* CKEditor 4 is not **desktop publishing software** and is not a recommended tool to use when creating paged content with fixed layout and styling that is intended for printing.
 
-* CKEditor 4 working out of the box in its default implementation is **not a tool like Google Docs**, where multiple users can edit the same article online in real time, track changes, and add comments. However, **if you need those features we have a good news for you - all of those are available in [CKEditor 5](https://ckeditor.com/docs/ckeditor5/latest/features/index.html)!**
+* CKEditor 4 working out of the box in its default implementation is **not a tool like Google Docs**, where multiple users can edit the same article online in real time, track changes, and add comments. However, **if you need these features, we have a good news for you &mdash; they are available in [CKEditor 5](https://ckeditor.com/docs/ckeditor5/latest/features/index.html)!**
 
-* CKEditor 4 is not a tool that will let you input invalid HTML code. CKEditor abides by W3C standards so it will modify code if it is invalid.
+* CKEditor 4 is not a tool that will let you **input invalid HTML code**. CKEditor 4 abides by W3C standards so it will modify HTML code if it is invalid.
 
 At the end of the day, **CKEditor 4 is an editor &mdash; nothing more, nothing less**. Go to the {@linkexample index CKEditor 4 Examples} section to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
 
@@ -56,4 +56,4 @@ Web content is created in HTML, a markup language that includes both text and sp
 
 This has some consequences, though. **CKEditor 4 works on HTML code and to do it well, it needs to get proper HTML code as input.** If the source document is incorrect, CKEditor 4 will attempt to fix it in order to be able to apply its content transformations.
 
-CKEditor 4 is not a human-being, though, so it is unable to guess your intentions when you created incorrect HTML code which may lead to some unexpected consequences. In order to avoid problems the input provider (you!) needs to make sure that what CKEditor 4 gets is clean, standards-compliant HTML code. If this is the case, CKEditor 4 will work as intended and output clean, standards-compliant HTML code in return.
+CKEditor 4 is not a human-being, though, so it is unable to guess your intentions when you created incorrect HTML code which may lead to some unexpected consequences. In order to avoid problems, the input provider (you!) needs to make sure that what CKEditor 4 gets is clean, standards-compliant HTML code. If this is the case, CKEditor 4 will work as intended and output clean, standards-compliant HTML code in return.

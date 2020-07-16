@@ -334,14 +334,20 @@ elements: [
 
 ## DTD Configuration
 
-If your element is to be an empty element or a block-level element, the DTD needs to be configured.
+If your custom plugin introduces a new element, it should be added to the {@linkapi CKEDITOR.dtd CKEDITOR.dtd object} to ensure it is handled correctly e.g. in terms of nesting or positioning. For example, you can define it as a block element, which can be empty:
 
-```
-CKEDITOR.dtd.element_name = {};
-// Define element as block level.
-CKEDITOR.dtd.$block.element_name = 1;
-// Define element as empty.
-CKEDITOR.dtd.$empty.element_name = 1;
+```js
+// Let's add a DTD for a new element - <signature> - and specify it can contain <p> and <img> elements:
+CKEDITOR.dtd[ 'signature' ] = {
+	span: 1,
+	img: 1
+};
+
+// Define <signature> as block element.
+CKEDITOR.dtd.$block[ 'signature' ] = 1;
+
+// Allow <signature> element to be empty.
+CKEDITOR.dtd.$empty[ 'signature' ] = 1;
 ```
 
 ## Full Source Code

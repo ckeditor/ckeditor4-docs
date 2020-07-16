@@ -341,7 +341,7 @@ CKEDITOR.dtd.element_name = {};
 // Define element as block level.
 CKEDITOR.dtd.$block.element_name = 1;
 // Define element as empty.
-CKEDITOR.dtd.$empty.element_name = 1; 
+CKEDITOR.dtd.$empty.element_name = 1;
 ```
 
 ## Full Source Code

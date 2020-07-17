@@ -289,6 +289,8 @@ CKEDITOR.dtd.$block[ 'signature' ] = 1;
 CKEDITOR.dtd.$empty[ 'signature' ] = 1;
 ```
 
+**Note**: Editing the properties of the existing elements is also possible this way, but may cause a lot of unexpected outcome, so **it is not recommended**.
+
 ## Full Source Code
 
 The complete content of the `plugin.js` file is as follows:

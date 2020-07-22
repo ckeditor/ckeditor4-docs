@@ -2,8 +2,8 @@
 category: inserting-images
 order: 30
 url: features/image2
-menu-title: Enhanced Image
-meta-title-short: Enhanced Image
+menu-title: Enhanced Image Plugin
+meta-title-short: Enhanced Image Plugin
 ---
 <!--
 Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.

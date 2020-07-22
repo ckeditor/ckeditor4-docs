@@ -117,7 +117,7 @@ See the {@linkexample copyformatting working "Using the Copy Formatting Feature"
 
 Refer to the following resources for more information about text styling and formatting:
 
-* The {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filer} article contains more in-depth technical details about ACF.
+* The {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} article contains more in-depth technical details about ACF.
 * The {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README Allowed Content Rules} article explains the allowed and disallowed content rules format.
 * The {@link features/basicstyles/README Basic Text Styles: Bold, Italic and More} article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting to text selections.
 * The {@link features/removeformat/README Removing Text Formatting} article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.

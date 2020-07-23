@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # Installing CKEditor with Package Managers
 
-<info-box info=""> Support for <a href="http://bower.io/">Bower</a> and <a href="https://getcomposer.org/">Composer</a> was introduced in <strong>CKEditor 4.3.3</strong> and for <a href="https://www.npmjs.com/">npm</a> in <strong>CKEditor 4.5.7</strong>. Official NuGet packages are available since <strong>CKEditor 4.7.3</strong>.
+<info-box info="">
+    Support for <a href="http://bower.io/">Bower</a> and <a href="https://getcomposer.org/">Composer</a> was introduced in <strong>CKEditor 4.3.3</strong> and for <a href="https://www.npmjs.com/">npm</a> in <strong>CKEditor 4.5.7</strong>. Official NuGet packages are available since <strong>CKEditor 4.7.3</strong>.
 </info-box>
 
 With the exception of NuGet, by default the package managers will install the `standard-all` CKEditor preset that includes all official CKSource plugins with only those from the Standard installation preset compiled into the `ckeditor.js` file and enabled. [See here](https://ckeditor.com/cke4/presets) for a comparison of editor presets.
@@ -158,7 +159,8 @@ For example, let us consider that we want to include the `full` preset of the mo
 }
 ```
 
-<info-box hint=""> Only branches starting from CKEditor version <strong>4.3.x</strong> and higher are supported in this way.
+<info-box hint="">
+    Only branches starting from CKEditor version <strong>4.3.x</strong> and higher are supported in this way.
 </info-box>
 
 ## NuGet

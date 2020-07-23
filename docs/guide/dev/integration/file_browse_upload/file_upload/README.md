@@ -29,7 +29,8 @@ The sample below shows basic configuration code that can be used to configure pa
 	config.extraPlugins = 'uploadimage';
 	config.uploadUrl = '/uploader/upload.php';
 
-<info-box hint=""> As a fallback solution, if {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl} is not set and {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} is provided for the File Browser plugin, the Upload Image plugin will try to use {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} instead and send the dragged and pasted images there.
+<info-box hint="">
+	As a fallback solution, if {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl} is not set and {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} is provided for the File Browser plugin, the Upload Image plugin will try to use {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} instead and send the dragged and pasted images there.
 </info-box>
 
 It is also possible to set a specific URL for a specific upload plugin. For example if you want to use [Upload Image](https://ckeditor.com/cke4/addon/uploadimage), you can set {@linkapi CKEDITOR.config.imageUploadUrl CKEDITOR.config.imageUploadUrl} which will be used instead of {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl}

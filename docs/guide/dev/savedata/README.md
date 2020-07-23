@@ -30,7 +30,8 @@ To retrieve the editor data, call the {@linkapi CKEDITOR.editor.getData CKEDITOR
 </script>
 ```
 
-<info-box hint=""> If you do not save your data with a library that already encodes it by using the JavaScript <code>encodeURIComponent</code> method, but do it manually instead, you will have to remember to use <code>encodeURIComponent</code> to properly encode the data that is being sent.
+<info-box hint="">
+    If you do not save your data with a library that already encodes it by using the JavaScript <code>encodeURIComponent</code> method, but do it manually instead, you will have to remember to use <code>encodeURIComponent</code> to properly encode the data that is being sent.
 </info-box>
 
 Note that the ID of the original element that is replaced with CKEditor was passed to the {@linkapi CKEDITOR#instances } object to make it possible to retrieve the editor instance.
@@ -51,7 +52,8 @@ For example, for the `<textarea>` element with an ID of `editor1`, as used in ou
 
 This method works for any CKEditor instance that replaces a `<textarea>` in a `<form>` element, both {@link guide/dev/framed/README#creating-a-classic-editor-with-a-textarea classic} and {@link guide/dev/inline/README#inline-editing-for-textarea inline}.
 
-<info-box hint=""> <p>Please note that the replaced <code>&lt;textarea&gt;</code> element is updated automatically by CKEditor straight before submission. If you need to access the <code>&lt;textarea&gt;</code> value programatically with JavaScript (e.g. in the <code>onsubmit</code> handler to validate the entered data), there is a chance that the <code>&lt;textarea&gt;</code> element would still store the original data. In order to update the value of replaced <code>&lt;textarea&gt;</code> use the <code>{@linkapi CKEDITOR.editor#updateElement editor.updateElement()}</code> method.</p> <p>In rare cases it may happen that the server or application configuration will reject submitted HTML content if it is not encoded first (e.g. ASP.NET <code>ValidateRequest</code>). In such case check the {@linkapi CKEDITOR.config#htmlEncodeOutput config.htmlEncodeOutput} option.</p> <p>If you need to get the actual data from CKEditor at any moment using JavaScript, use the <code>{@linkapi CKEDITOR.editor#getData editor.getData()}</code> method as described above.</p>
+<info-box hint="">
+    <p>Please note that the replaced <code>&lt;textarea&gt;</code> element is updated automatically by CKEditor straight before submission. If you need to access the <code>&lt;textarea&gt;</code> value programatically with JavaScript (e.g. in the <code>onsubmit</code> handler to validate the entered data), there is a chance that the <code>&lt;textarea&gt;</code> element would still store the original data. In order to update the value of replaced <code>&lt;textarea&gt;</code> use the <code>{@linkapi CKEDITOR.editor#updateElement editor.updateElement()}</code> method.</p> <p>In rare cases it may happen that the server or application configuration will reject submitted HTML content if it is not encoded first (e.g. ASP.NET <code>ValidateRequest</code>). In such case check the {@linkapi CKEDITOR.config#htmlEncodeOutput config.htmlEncodeOutput} option.</p> <p>If you need to get the actual data from CKEditor at any moment using JavaScript, use the <code>{@linkapi CKEDITOR.editor#getData editor.getData()}</code> method as described above.</p>
 </info-box>
 
 ## Observing Changes in CKEditor

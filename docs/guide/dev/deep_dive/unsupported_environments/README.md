@@ -17,7 +17,8 @@ By default, CKEditor **4.0 - 4.4.8** is disabled in all unsupported environments
 ## Why Is CKEditor Disabled in Some Environments?
 
 <info-box hint="">
-	Since version 4.5 CKEditor is only disabled in environments that are known to be incompatible. Therefore, <strong>this guide applies mostly to versions &lt;4.4.8</strong> where CKEditor was disabled in environments which were not explicitly whitelisted.</info-box>
+	Since version 4.5 CKEditor is only disabled in environments that are known to be incompatible. Therefore, <strong>this guide applies mostly to versions &lt;4.4.8</strong> where CKEditor was disabled in environments which were not explicitly whitelisted.
+</info-box>
 
 There are usually two main reasons for that:
 

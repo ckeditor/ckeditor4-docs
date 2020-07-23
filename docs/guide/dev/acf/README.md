@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # Content Filtering (ACF)
 
-<info-box info=""> This article provides basic information about editor content filtering feature which was introduced in <strong>CKEditor 4.1</strong>. For detailed documentation about this feature check the {@link guide/dev/deep_dive/advanced_content_filter/README CKEditor Deep Dive} section.
+<info-box info="">
+    This article provides basic information about editor content filtering feature which was introduced in <strong>CKEditor 4.1</strong>. For detailed documentation about this feature check the {@link guide/dev/deep_dive/advanced_content_filter/README CKEditor Deep Dive} section.
 </info-box>
 
 Advanced Content Filter (ACF) is a CKEditor core feature that **filters incoming HTML content** by transforming and deleting disallowed elements, attributes, classes and styles. If you paste content into CKEditor and notice that some elements are removed, then chances are high that it was removed by ACF.

@@ -12,7 +12,8 @@ For licensing, see LICENSE.md.
 
 # The jQuery Adapter
 
-<info-box info=""> This feature was introduced in <strong>CKEditor 4.2</strong>. It is provided through the <code>adapters/jquery.js</code> script file which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
+<info-box info="">
+	This feature was introduced in <strong>CKEditor 4.2</strong>. It is provided through the <code>adapters/jquery.js</code> script file which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </info-box>
 
 CKEditor offers native jQuery integration through its jQuery Adapter (a jQuery plugin basically). It provides deep integration of CKEditor and jQuery that lets you use the native features of jQuery when using CKEditor. The jQuery Adapter is compatible with jQuery versions 1.7+ and 2.0+.

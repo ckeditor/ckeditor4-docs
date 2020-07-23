@@ -14,7 +14,8 @@ For licensing, see LICENSE.md.
 
 It may happen that upgrading your project to use the latest CKEditor version is not an option, although the situation requires it, for example if your application is running on a production environment and you are not allowed to perform major upgrades without prior testing of the entire application by the QA team.
 
-<info-box hint=""> Please note that this article describes a method that is unrecommended and requires deep understanding of the code you are porting as well as the build process. It also comes with no guarantee that it will work in all scenarios. {@link guide/dev/upgrade/README Full upgrade} is always a recommended soultion.
+<info-box hint="">
+    Please note that this article describes a method that is unrecommended and requires deep understanding of the code you are porting as well as the build process. It also comes with no guarantee that it will work in all scenarios. {@link guide/dev/upgrade/README Full upgrade} is always a recommended soultion.
 </info-box>
 
 It is possible to keep using the old version of CKEditor with selected patches applied, although keep in mind that you should be really careful when doing it.

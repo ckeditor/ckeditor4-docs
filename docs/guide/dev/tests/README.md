@@ -82,7 +82,8 @@ In order to run the tests, open the console and type:
 
 This will start the server in the verbose mode.
 
-<info-box hint=""> If you want to run tests from other hosts, like virtual machines, you may need to use the <code>-H 0.0.0.0</code> option.
+<info-box hint="">
+    If you want to run tests from other hosts, like virtual machines, you may need to use the <code>-H 0.0.0.0</code> option.
 </info-box>
 
 Now open a web browser. Bender.js dashboard is available under:
@@ -104,7 +105,8 @@ If you want, you can specify a port or a hostname where Bender.js runs:
 	-p, --port		The port on which the server will run (default: 1030).
 	-H, --hostname	The hostname used to run the server (default: localhost).
 
-<info-box hint=""> Some tests require the browser to be in focus. This means that you can not use other applications when running them.
+<info-box hint="">
+    Some tests require the browser to be in focus. This means that you can not use other applications when running them.
 </info-box>
 
 Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again (when opened directly), they should pass. If a test fails a few times in a row, it is a sign that something went wrong. {@link guide/dev/issues_readme/README Report a CKEditor issue} on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues) in such case. Remember to include a link to the failing test and information about the browser in which it fails.
@@ -136,7 +138,8 @@ tests/
 		...
 ```
 
-<info-box hint=""> As long as a test is related to a particular feature or a plugin, it should be put into the <code>adapters/</code>, <code>core/</code>, or <code>plugins/</code> directory. Ticket tests are most difficult to manage so the <code>tickets/</code> directory should only contain the tests that do not match any of these primary locations.
+<info-box hint="">
+    As long as a test is related to a particular feature or a plugin, it should be put into the <code>adapters/</code>, <code>core/</code>, or <code>plugins/</code> directory. Ticket tests are most difficult to manage so the <code>tickets/</code> directory should only contain the tests that do not match any of these primary locations.
 </info-box>
 
 Apart from the directories mentioned above, the main `tests/` directory or any subdirectory may contain three special folders:

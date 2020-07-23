@@ -32,7 +32,8 @@ The widget plugin will be named `simplebox`.
 
 Firstly, we will need to create the `simplebox` directory inside the `plugins` directory of the CKEditor installation.
 
-<info-box hint=""> Remember that for CKEditor the name of the plugin directory is important and has to be the same as the name of the plugin, otherwise the editor will not be able to recognize it.
+<info-box hint="">
+	Remember that for CKEditor the name of the plugin directory is important and has to be the same as the name of the plugin, otherwise the editor will not be able to recognize it.
 </info-box>
 
 Inside the newly created `simplebox` directory we are going to place the `plugin.js` file that will contain the widget logic. Apart from that, since we will also need a toolbar icon for our widget, we are going to add an `icons` directory and subsequently place the `simplebox.png` file inside.
@@ -60,7 +61,8 @@ The `simplebox` plugin is going to define the `simplebox` widget. To do this, th
 
 Additionally, as we are going to define a toolbar button, the `icons` property needs to be set and include the name of the icon file.
 
-<info-box hint=""> Please note the special naming convention for widget toolbar buttons. The Widget API will only be able to automatically add the button to the toolbar if the name of the icon is the same as the widget. In this case this will be <code>simplebox</code>. Do remember that the <code>icons</code> property <strong>accepts a PNG icon file name without an extension</strong>.
+<info-box hint="">
+	Please note the special naming convention for widget toolbar buttons. The Widget API will only be able to automatically add the button to the toolbar if the name of the icon is the same as the widget. In this case this will be <code>simplebox</code>. Do remember that the <code>icons</code> property <strong>accepts a PNG icon file name without an extension</strong>.
 </info-box>
 
 	CKEDITOR.plugins.add( 'simplebox', {
@@ -145,10 +147,12 @@ Note, however, that at the moment Simple Box is of no real use for the user beca
 
 To change this and allow for some user input, we will need to define the `{@linkapi CKEDITOR.plugins.widget.definition#editables editables}` property of the widget definition. This property uses the `{@linkapi CKEDITOR.plugins.widget.nestedEditable.definition#selector selector}` parameter to define a CSS selector to be used for finding the particular editable element inside the widget element. In this case the selectors will use the classes that we assigned to the widget fields in the template definition.
 
-<info-box hint=""> Please note that only elements defined in <code>{@linkapi CKEDITOR.dtd#s-editable CKEDITOR.dtd.$editable}</code> can be converted into editable widget elements.
+<info-box hint="">
+	Please note that only elements defined in <code>{@linkapi CKEDITOR.dtd#s-editable CKEDITOR.dtd.$editable}</code> can be converted into editable widget elements.
 </info-box>
 
-<info-box info=""> Please note that editables <strong>have to</strong> be defined in the same order as the corresponding elements are placed in DOM. Otherwise, errors may occur when nesting widgets.
+<info-box info="">
+	Please note that editables <strong>have to</strong> be defined in the same order as the corresponding elements are placed in DOM. Otherwise, errors may occur when nesting widgets.
 </info-box>
 
 	editor.widgets.add( 'simplebox', {
@@ -282,7 +286,8 @@ Content filter adjustments for editable widget parts are done straight in their 
 
 In this case we allowed just bold, italic, and line breaks in both fields and additionally lists and paragraphs in the content field.
 
-<info-box hint=""> Please note that thanks to {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations content transformations} with the configuration used above the editor will allow all forms of bold and italic formatting (so for example <code>&lt;strong&gt</code>, <code>&lt;b&gt</code> and <code>&lt;span style="font-weight:700|800|900|bold"&gt</code>). It is enough to list just one of the forms and others will get transformed automatically to the allowed form.
+<info-box hint="">
+	Please note that thanks to {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations content transformations} with the configuration used above the editor will allow all forms of bold and italic formatting (so for example <code>&lt;strong&gt</code>, <code>&lt;b&gt</code> and <code>&lt;span style="font-weight:700|800|900|bold"&gt</code>). It is enough to list just one of the forms and others will get transformed automatically to the allowed form.
 </info-box>
 
 When you reload the page now, you will see that when you try to edit the widget fields, some toolbar items become greyed out (meaning they are not available in this context) and you will be unable to use them. Likewise, if you used them in Source mode, the editor would cut them out when switching to WYSIWYG view or saving the document.

@@ -14,7 +14,8 @@ For licensing, see LICENSE.md.
 
 Every plugin may require including some additional stylesheet files. For instance, the [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin uses the [highlight.js](https://highlightjs.org/) library that stores color schemes in separate CSS files. The markup created by highlight.js contains only classes (no inline styles), so in order to implement code highlighting, one of the scheme CSS files needs to be loaded.
 
-<info-box hint=""> Unless stylesheets are a part of some external library (like highlight.js), the recommended place to keep them is inside the <code>styles</code> directory in your plugin's folder.
+<info-box hint="">
+	Unless stylesheets are a part of some external library (like highlight.js), the recommended place to keep them is inside the <code>styles</code> directory in your plugin's folder.
 </info-box>
 
 Depending on the mode in which the editor is used (classic or inline), custom styles may be loaded by the plugin itself (this does not apply to target HTML pages, though) or they may require some additional handling by the developer who integrates CKEditor with his or her page.
@@ -32,7 +33,8 @@ The most convenient way is to use the the {@linkapi CKEDITOR.editor.addContentsC
 		}
 	} );
 
-<info-box hint=""> The <code>editor.addContentsCss()</code> method can only be executed before the editor is ready &mdash; otherwise it will not take any effect until the data is reloaded or the user switches between the WYSIWYG and Source modes.
+<info-box hint="">
+	The <code>editor.addContentsCss()</code> method can only be executed before the editor is ready &mdash; otherwise it will not take any effect until the data is reloaded or the user switches between the WYSIWYG and Source modes.
 </info-box>
 
 ## Inline Editor
@@ -84,6 +86,6 @@ It may happen that some classes, styles or attributes were removed from the cont
 Refer to the following resources for more information about creating CKEditor plugins:
 
 * {@link guide/plugin_sdk/sample/README Creating a CKEditor Plugin in 20 Lines of Code} &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
-* {@link guide/plugin_sdk/sample_1/README Simple Plugin, Part 1} &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
+* {@link guide/plugin_sdk/sample_1/README Simple Plugin, Part 1} &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert an abbreviation element into the document.
 * {@link guide/plugin_sdk/sample_2/README Simple Plugin, Part 2} &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
 * {@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter} &ndash; Learn how to implement Advanced Content Filter support in your plugins.

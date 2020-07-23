@@ -14,14 +14,17 @@ For licensing, see LICENSE.md.
 
 If you are working with the CKEditor source code on your computer or in a local network, at some stage you will want to distribute it to your test or production environment.
 
-<info-box hint=""> <strong>Never distribute the source version of CKEditor to production websites</strong>. There are serious {@link guide/dev/source/README#performance performance implications} of doing this.
+<info-box hint="">
+	<strong>Never distribute the source version of CKEditor to production websites</strong>. There are serious {@link guide/dev/source/README#performance performance implications} of doing this.
 </info-box>
 
 Instead, you must create a CKEditor "build" or "release version" (in contrast to the "source version"). It is an optimized, production-ready CKEditor distribution.
 
 ## The `dev/builder` Folder
 
-<info-box info="">The builder will only work on the source version of CKEditor cloned from the a Git repository (for example from the <a href="https://github.com/ckeditor/ckeditor4">official CKEditor development repository</a>). It will not work on the project downloaded as a <code>.zip</code> package.</info-box>
+<info-box info="">
+	The builder will only work on the source version of CKEditor cloned from the a Git repository (for example from the <a href="https://github.com/ckeditor/ckeditor4">official CKEditor development repository</a>). It will not work on the project downloaded as a <code>.zip</code> package.
+</info-box>
 
 The source code of CKEditor contains a pre-configured environment that allows you to easily create editor builds.
 

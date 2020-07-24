@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Basic Text Styles: Bold, Italic and More
 
 <info-box info="">
- This feature is provided through a plugin that is included in all official CKEditor distributions (Basic, Standard, Full) available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
+ This feature is provided through a plugin that is included in all official CKEditor 4 distributions (Basic, Standard, Full) available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text style buttons are disabled in the Basic and Standard preset.
 </info-box>
 
 The [Basic Styles](https://ckeditor.com/cke4/addon/basicstyles) plugin provides the ability to add some basic text formatting to your document. When enabled, it adds the **Bold**, **Italic**, **Underline**, **Strikethrough**, **Subscript** and **Superscript** toolbar buttons that apply these styles. If you want to quickly {@link features/removeformat/README remove basic styles} from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
@@ -39,15 +39,15 @@ Open the `config.js` file available in your `ckeditor` directory, and edit the `
 
 **Advantages**
 
-This will apply to all CKEditor instances that you create, so you will not need to remember to change it for each one separately.
+This will apply to all CKEditor 4 instances that you create, so you will not need to remember to change it for each one separately.
 
 **Disadvantages**
 
-You will need to remember not to overwrite this file when {@link guide/dev/upgrade/README upgrading} to a newer CKEditor version. **Solution**: Provide a {@link guide/dev/configuration/README#using-a-custom-configuration-file custom configuration file} overriding the default configuration.
+You will need to remember not to overwrite this file when {@link guide/dev/upgrade/README upgrading} to a newer CKEditor 4 version. **Solution**: Provide a {@link guide/dev/configuration/README#using-a-custom-configuration-file custom configuration file} overriding the default configuration.
 
 ### Enable All Basic Styles for a Single Editor Instance
 
-If you want to change the default settings for a particular editor instance, provide the modified `config.removeButtons` value in the {@link guide/dev/configuration/README#defining-configuration-in-page in-page configuration} when creating a CKEditor instance, for example:
+If you want to change the default settings for a particular editor instance, provide the modified `config.removeButtons` value in the {@link guide/dev/configuration/README#defining-configuration-in-page in-page configuration} when creating a CKEditor 4 instance, for example:
 
 ``` js
 // For the Basic preset:
@@ -63,11 +63,11 @@ CKEDITOR.replace( 'editor1', {
 
 **Advantages**
 
-This will only apply to a selected CKEditor instance that you create, without affecting your global configuration.
+This will only apply to a selected CKEditor 4 instance that you create, without affecting your global configuration.
 
 **Disadvantages**
 
-You will need to provide the in-page configuration for all other CKEditor instances that you want to use it with.
+You will need to provide the in-page configuration for all other CKEditor 4 instances that you want to use it with.
 
 ## Custom Basic Text Style Definition
 
@@ -80,7 +80,7 @@ Basic text styles can be output in HTML in different ways. For example, the **Bo
 * {@linkapi CKEDITOR.config.coreStyles_subscript CKEDITOR.config.coreStyles_subscript}
 * {@linkapi CKEDITOR.config.coreStyles_superscript CKEDITOR.config.coreStyles_superscript}
 
-The following example configures CKEditor to output bold with an inline CSS style, italic with the `<i>` element, and subscript and superscript with CSS classes.
+The following example configures CKEditor 4 to output bold with an inline CSS style, italic with the `<i>` element, and subscript and superscript with CSS classes.
 
 ``` js
 config.coreStyles_bold = {
@@ -103,7 +103,7 @@ config.coreStyles_superscript = {
 };
 ```
 
-You can use the `overrides` parameter to define an alternative that CKEditor will convert into your desired form.
+You can use the `overrides` parameter to define an alternative that CKEditor 4 will convert into your desired form.
 
 Remember that depending on your use case, the CSS classes for basic text styles need to be defined accordingly. For {@link guide/dev/framed/README classic editor} they should be defined in an external CSS file added to the editor configuration with the {@linkapi CKEDITOR.config.contentsCss CKEDITOR.config.contentsCss} option. For {@link guide/dev/inline/README inline editor} they need to be added directly to the page stylesheet.
 

@@ -18,17 +18,17 @@ The most crucial element of the API is the {@linkapi CKEDITOR.editor#setReadOnly
 
 When the editor goes from the editable into the read-only state, its {@linkapi CKEDITOR.editor#readOnly readOnly} property is being set to `true` (for read-only mode) or `false` (for editable mode). The {@linkapi CKEDITOR.editor#readOnly readOnly} event is also fired after each change of the `readOnly` property.
 
-This is what CKEditor looks like when it is in read-only mode.
+This is what CKEditor 4 looks like when it is in read-only mode.
 
 {@img assets/img/readonly_01.png}
 
 ## Read-Only Mode on Startup
 
-CKEditor can be configured to open in the read-only mode on startup by setting the {@linkapi CKEDITOR.config.readOnly CKEDITOR.config.readOnly} configuration option to `true`. For example:
+CKEditor 4 can be configured to open in the read-only mode on startup by setting the {@linkapi CKEDITOR.config.readOnly CKEDITOR.config.readOnly} configuration option to `true`. For example:
 
     config.readOnly = true;
 
-The same can be achieved by setting the `disabled` attribute for the `<textarea>` element that CKEditor replaces.
+The same can be achieved by setting the `disabled` attribute for the `<textarea>` element that CKEditor 4 replaces.
 
 ## Read-Only Mode Demo
 

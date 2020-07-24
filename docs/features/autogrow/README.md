@@ -13,10 +13,10 @@ For licensing, see LICENSE.md.
 # Automatic Editor Height Adjustment to Content
 
 <info-box info="">
- This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ This feature is provided through an optional plugin that is not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-The optional [Auto Grow](https://ckeditor.com/cke4/addon/autogrow) plugin makes it possible to configure CKEditor to automatically expand and shrink vertically depending on the amount and size of content entered in its editing area.
+The optional [Auto Grow](https://ckeditor.com/cke4/addon/autogrow) plugin makes it possible to configure CKEditor 4 to automatically expand and shrink vertically depending on the amount and size of content entered in its editing area.
 
 ## Minimum and Maximum Height
 

@@ -38,7 +38,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		</style>
 		<h1>Advanced Content Filter &ndash; Automatic Mode<a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html#automatic-mode">Documentation</a></h1>
 		<p>
-			Advanced Content Filter (ACF) is an important CKEditor core feature that <strong>filters incoming HTML content</strong> by transforming and deleting disallowed elements, attributes, classes and styles.
+			Advanced Content Filter (ACF) is an important CKEditor 4 core feature that <strong>filters incoming HTML content</strong> by transforming and deleting disallowed elements, attributes, classes and styles.
 			By default it is enabled and works in <strong><a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter.html#automatic-mode">automatic mode</a></strong>, which means that CKEditor will only accept content that was defined as allowed by enabled CKEditor features (such as plugins or buttons).
 		</p>
 		<p>
@@ -81,7 +81,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<h2>Automatic ACF Mode</h2>
 		<p>
-			In the sample below CKEditor works in automatic ACF mode (default behavior, requires no configuration):
+			In the sample below CKEditor 4 works in automatic ACF mode (default behavior, requires no configuration):
 		</p>
 		<ul>
 			<li>Underline and color buttons are unavailable and there are no buttons to set font size or family. As a result CKEditor will not accept such content.</li>
@@ -95,7 +95,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<h2>Adjusting Automatic ACF Mode</h2>
 		<p>
-			It is possible to allow or disallow additional elements or properties in CKEditor by passing special configuration options: <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-extraAllowedContent">config.extraAllowedContent</a></code> and <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-disallowedContent">config.disallowedContent</a></code>.
+			It is possible to allow or disallow additional elements or properties in CKEditor 4 by passing special configuration options: <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-extraAllowedContent">config.extraAllowedContent</a></code> and <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-disallowedContent">config.disallowedContent</a></code>.
 		</p>
 		<p>
 			In this example <code>config.extraAllowedContent = 'u;span{color}'</code> has the following consequences:
@@ -117,7 +117,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<h2>Disabling ACF</h2>
 		<p>
-			Turning ACF off is very simple and requires setting a simple configuration option: <code>config.allowedContent = true</code>. As a consequence, CKEditor will not filter entered content, including during paste operations.
+			Turning ACF off is very simple and requires setting a simple configuration option: <code>config.allowedContent = true</code>. As a consequence, CKEditor 4 will not filter entered content, including during paste operations.
 		</p>
 		<p>
 			Experiment by pasting content from various sources into the editor below and into the first one (with automatic mode on). Compare the results.

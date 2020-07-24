@@ -102,7 +102,7 @@ The sample configuration of CKEditor 4 with MathType included can look like this
 
 	CKEDITOR.replace( 'editor1', {
 		extraPlugins: 'ckeditor_wiris',
-		// For now, MathType is incompatible with CKEditor file upload plugins.
+		// For now, MathType is incompatible with CKEditor 4 file upload plugins.
 		removePlugins: 'filetools,uploadimage,uploadwidget,uploadfile,filebrowser,easyimage',
 		height: 320,
 		// Update the ACF configuration with MathML syntax.
@@ -143,7 +143,7 @@ Equations and chemical formulas are displayed in the editor as {@link features/i
 
 ## Displaying on Target Page
 
-In order to display mathematical formulas on the target page, i.e. the page where content produced by CKEditor will be visible, the target page needs to [include the MathType script](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/mathml-mode#add_a_script_to_head). For example for the default setting this would be:
+In order to display mathematical formulas on the target page, i.e. the page where content produced by CKEditor 4 will be visible, the target page needs to [include the MathType script](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/mathml-mode#add_a_script_to_head). For example for the default setting this would be:
 
 ```html
 <script src="<path-to-your-ckeditor4>/plugins/ckeditor_wiris/integration/WIRISplugins.js?viewer=image"></script>

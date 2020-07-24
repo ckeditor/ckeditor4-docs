@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Pasting Content from LibreOffice
 
 <info-box info="">
-    This feature is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromlibreoffice">Paste from LibreOffice</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+    This feature is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromlibreoffice">Paste from LibreOffice</a> plugin that is included in the Standard and Full presets available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugin allows you to paste content from LibreOffice Writer and maintain original content structure and formatting.
@@ -52,7 +52,7 @@ The following sample content from a LibreOffice Writer document:
 
 {@img assets/img/pastefromlibreoffice_01.png 599 A sample LibreOffice Writer document.}
 
-will look like below after pasting to CKEditor with the [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugin enabled:
+will look like below after pasting to CKEditor 4 with the [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugin enabled:
 
 {@img assets/img/pastefromlibreoffice_02.png 956 LibreOffice Writer content pasted into CKEditor 4 WYSIWYG editor.}
 
@@ -60,7 +60,7 @@ Here is another sample with some more complicated formatting and styling as well
 
 {@img assets/img/pastefromlibreoffice_03.png 599 A sample LibreOffice Writer document with complex formatting and image.}
 
-It will look like this after pasting into CKEditor:
+It will look like this after pasting into CKEditor 4:
 
 {@img assets/img/pastefromlibreoffice_04.png 954 Complex LibreOffice Writer content pasted into CKEditor 4 WYSIWYG editor.}
 
@@ -79,7 +79,7 @@ Refer to the following resources for more information about pasting content:
 * The {@link features/pastefromword/README Pasting content from Microsoft Word} article contains more information about the Paste from Word feature.
 * The {@link features/pastefromexcel/README Pasting content from Microsoft Excel} article contains more information about the Paste from Excel feature.
 * The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains more information about the Paste from Google Docs feature.
-* The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.
-* The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
+* The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor 4.
+* The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor 4.
 * The {@link guide/dev/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.
 * The {@link features/styles/README Applying Styles to Editor Content} article discusses creating more semantically correct text styles.

@@ -13,10 +13,10 @@ For licensing, see LICENSE.md.
 # Creating Mathematical Formulas with MathJax
 
 <info-box info="">
- This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>. In order to enable the plugin you need to {@link features/mathjax/README#setting-the-path-to-mathjax-library set the path to the MathJax library} first.
+ This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>. In order to enable the plugin you need to {@link features/mathjax/README#setting-the-path-to-mathjax-library set the path to the MathJax library} first.
 </info-box>
 
-The optional [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax) plugin allows you to create and modify mathematical equations written in TeX directly in CKEditor. TeX content will be automatically replaced by a mathematical formulas widget when you put it in a `<span class="math-tex">` element.
+The optional [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax) plugin allows you to create and modify mathematical equations written in TeX directly in CKEditor 4. TeX content will be automatically replaced by a mathematical formulas widget when you put it in a `<span class="math-tex">` element.
 
 New equations can also be inserted into the editor content by using the **Math** toolbar button and entering TeX code in the plugin dialog window. After you click the **OK** button, a mathematical formulas widget will be inserted into the editor content.
 
@@ -42,7 +42,7 @@ You can also use a different path, either a local resource or a different web re
 
 ## Displaying on Target Page
 
-In order to display mathematical formulas on a target page, i.e. the page where content produced by CKEditor will be visible, the target page needs to [include the MathJax script](https://docs.mathjax.org/en/latest/). It is advisable to use the same MathJax library version as set in the {@linkapi CKEDITOR.config.mathJaxLib CKEDITOR.config.mathJaxLib} configuration option. For example for the default setting this would be:
+In order to display mathematical formulas on a target page, i.e. the page where content produced by CKEditor 4 will be visible, the target page needs to [include the MathJax script](https://docs.mathjax.org/en/latest/). It is advisable to use the same MathJax library version as set in the {@linkapi CKEDITOR.config.mathJaxLib CKEDITOR.config.mathJaxLib} configuration option. For example for the default setting this would be:
 
 ``` html
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML"></script>

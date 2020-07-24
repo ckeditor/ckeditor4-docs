@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Applying Block-Level Text Formats
 
 <info-box info="">
- This feature is provided through a plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text formats are disabled in the Standard preset.
+ This feature is provided through a plugin that is included in the Standard and Full presets available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site, although some text formats are disabled in the Standard preset.
 </info-box>
 
 The [Format](https://ckeditor.com/cke4/addon/format) plugin provides the ability to add block-level text formatting to your document. When enabled, it introduces the <img class="inline" src="%BASE_PATH%/assets/img/format_01.png" alt="Paragraph Format" title="Paragraph Format"> toolbar button that applies these text formats. The formats work on block level which means that you do not need to select any text in order to apply them and entire blocks will be affected by your choice.
@@ -38,15 +38,15 @@ Open the `config.js` file available in your `ckeditor` directory, and edit the `
 
 **Advantages**
 
-This will apply to all CKEditor instances that you create, so you will not need to remember to change it for each one separately.
+This will apply to all CKEditor 4 instances that you create, so you will not need to remember to change it for each one separately.
 
 **Disadvantages**
 
-You will need to remember not to overwrite this file when {@link guide/dev/upgrade/README upgrading} to a newer CKEditor version. **Solution**: Provide a {@link guide/dev/configuration/README#using-a-custom-configuration-file custom configuration file} overriding the default configuration.
+You will need to remember not to overwrite this file when {@link guide/dev/upgrade/README upgrading} to a newer CKEditor 4 version. **Solution**: Provide a {@link guide/dev/configuration/README#using-a-custom-configuration-file custom configuration file} overriding the default configuration.
 
 ### Enable All Block-Level Text Formats for a Single Editor Instance
 
-If you want to change the default settings for a particular editor instance, provide the modified `config.format_tags` value in the {@link guide/dev/configuration/README#defining-configuration-in-page in-page configuration} when creating a CKEditor instance, for example:
+If you want to change the default settings for a particular editor instance, provide the modified `config.format_tags` value in the {@link guide/dev/configuration/README#defining-configuration-in-page in-page configuration} when creating a CKEditor 4 instance, for example:
 
 	// Enable all default text formats:
 	CKEDITOR.replace( 'editor1', {
@@ -60,11 +60,11 @@ If you want to change the default settings for a particular editor instance, pro
 
 **Advantages**
 
-This will only apply to a selected CKEditor instance that you create, without affecting your global configuration.
+This will only apply to a selected CKEditor 4 instance that you create, without affecting your global configuration.
 
 **Disadvantages**
 
-You will need to provide the in-page configuration for all other CKEditor instances that you want to use it with.
+You will need to provide the in-page configuration for all other CKEditor 4 instances that you want to use it with.
 
 ## Custom Block-Level Text Formats Definition
 

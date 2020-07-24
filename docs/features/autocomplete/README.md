@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Autocomplete
 
 <info-box info="">
-    This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+    This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The Autocomplete feature provides contextual completion functionality for custom text matches based on user input. Every time the user types a pre-configured marker, such as `@` or `#`, they get information about available autocomplete options displayed in a dedicated dropdown. The provided suggestion can be quickly selected and inserted into content.

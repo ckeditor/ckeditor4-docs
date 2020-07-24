@@ -83,8 +83,7 @@ It is time to work on the selection logic so that editing an inserted element wo
 
 ## Dialog Window Logic
 
-The editing behavior for a previously inserted element will use the {@linkapi CKEDITOR.dialog.definition#onShow onShow} function that is defined for the plugin dialog window and is executed when
-the dialog window is opened. This function will be defined above the `onOk` function that we will also need to refactor later.
+The editing behavior for a previously inserted element will use the {@linkapi CKEDITOR.dialog.definition#onShow onShow} function that is defined for the plugin dialog window and is executed when the dialog window is opened. This function will be defined above the `onOk` function that we will also need to refactor later.
 
 	onShow: function() {
 		// The code that will be executed when a dialog window is loaded.

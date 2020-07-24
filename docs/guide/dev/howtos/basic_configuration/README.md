@@ -32,7 +32,7 @@ CKEditor 4 is a truly flexible tool with a modular structure — most editor fun
 
 Remember that one of the most important {@link guide/dev/best_practices/README CKEditor best practices} is to customize your editor build with online builder and remove unneeded functionality before it makes it to your package. It is a bad practice to download the Full package and then remove plugins or buttons in your configuration. You will only be loading unnecessary stuff without any good reason. Check out the [4 Common CKEditor Installation Mistakes And How To Avoid Them](https://ckeditor.com/blog/4-Common-CKEditor-Installation-Mistakes-And-How-To-Avoid-Them) for a more thorough explanation of this practice.
 
-If you, however, want to disable some functionality that comes from a CKEditor 4 plugin and is still in your build, you can use the {@linkapi CKEDITOR.config#removePlugins } setting to prevent the plugin from loading.
+If you, however, want to disable some functionality that comes from a CKEditor 4 plugin and is still in your build, you can use the {@linkapi CKEDITOR.config#removePlugins} setting to prevent the plugin from loading.
 
 	// Remove one plugin.
 	config.removePlugins = 'elementspath';

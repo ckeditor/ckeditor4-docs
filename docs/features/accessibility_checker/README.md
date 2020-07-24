@@ -9,7 +9,7 @@ meta-title-short: Accessibility Checker
 
 <info-box info="">
 <p>
-	This feature is provided through optional plugins (<a href="https://ckeditor.com/cke4/addon/a11ychecker">Accessibility Checker</a> and <a href="https://ckeditor.com/cke4/addon/balloonpanel">Balloon Panel</a>) that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+	This feature is provided through optional plugins (<a href="https://ckeditor.com/cke4/addon/a11ychecker">Accessibility Checker</a> and <a href="https://ckeditor.com/cke4/addon/balloonpanel">Balloon Panel</a>) that are not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </p>
 <p>
 	Accessibility Checker is available under a <a href="http://www.gnu.org/licenses/gpl.html">GPL</a> or commercial license. <a href="https://cksource.com/contact">Contact</a> us for more details.
@@ -19,7 +19,7 @@ meta-title-short: Accessibility Checker
 </p>
 </info-box>
 
-Accessibility Checker is an innovative solution that lets you **inspect the accessibility level** of content created in CKEditor and **immediately solve** any accessibility issues that are found.
+Accessibility Checker is an innovative solution that lets you **inspect the accessibility level** of content created in CKEditor 4 and **immediately solve** any accessibility issues that are found.
 
 It is built upon three key elements:
 
@@ -180,7 +180,7 @@ When you wish to introduce some manual changes to your content, Accessibility Ch
 
 There are two ways of switching Accessibility Checker to listening mode after its initial activation:
 
-* Clicking anywhere in the CKEditor content area.
+* Clicking anywhere in the CKEditor 4 content area.
 * Pressing the listening mode {@link features/accessibility_checker/README#keyboard-shortcuts keyboard shortcut}.
 
 ## Listening Mode
@@ -293,11 +293,11 @@ See the {@linkexample accessibilitychecker working "Accessibility Checker" sampl
 
 ## Related Features
 
-Refer to the following resources for more information about accessibility in CKEditor:
+Refer to the following resources for more information about accessibility in CKEditor 4:
 
-* The {@link guide/dev/a11y/README Accessibility Support in CKEditor} article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
-* The {@link features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
-* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
+* The {@link guide/dev/a11y/README Accessibility Support in CKEditor} article explains CKEditor 4 compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The {@link features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor 4.
+* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor 4 participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/section508/README CKEditor Section 508 Compliance} article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
 * The {@link guide/dev/wcag/README CKEditor WCAG 2.0 Compliance} article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.
 * The {@link guide/dev/integration/a11ychecker/custom_issue_types/README Custom Issue Types in Accessibility Checker} article shows how to add custom issue types.

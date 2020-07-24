@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Editor User Interface Types
 
-Due to inherent differences between two editor types (classic and inline) dedicated solutions for the editor user interface are required. CKEditor thus comes with two UI versions:
+Due to inherent differences between two editor types (classic and inline) dedicated solutions for the editor user interface are required. CKEditor 4 thus comes with two UI versions:
 
 * **Fixed UI** &ndash; a static user interface used by default in {@link guide/dev/framed/README classic editor}.
 * **Floating UI** &ndash; a dynamic user interface used by default by {@link guide/dev/inline/README inline editor}.
@@ -36,12 +36,12 @@ The **default behavior of an editor with fixed UI can be customized**, though:
 ### Fixed UI for Inline Editor
 
 <info-box info="">
- This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ This feature is provided through an optional plugin that is not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 Although fixed UI is mostly used in conjunction with classic editor, it is also possible to implement it with inline editor. This is done through the optional [Div Editing Area](https://ckeditor.com/cke4/addon/divarea) plugin. **Using this plugin has a few of drawbacks**, though:
 
-* Under the hood, the element replaced by CKEditor is hidden automatically and a `<div>`-based editor is created next to it. This might affect the styles of content inside the editor, e.g. because of the lack of original element ID attribute used by CSS selectors.
+* Under the hood, the element replaced by CKEditor 4 is hidden automatically and a `<div>`-based editor is created next to it. This might affect the styles of content inside the editor, e.g. because of the lack of original element ID attribute used by CSS selectors.
 * The `<div>`-based editor is rendered using multiple nested `<div>` elements. This might affect editor content styles, too.
 * Last but not least, the {@link features/autogrow/README Auto Grow} feature is not fully supported in this scenario &mdash; the value of the {@linkapi CKEDITOR.config.autoGrow_minHeight CKEDITOR.config.autoGrow_minHeight} option is ignored.
 
@@ -71,7 +71,7 @@ Due to the dynamic nature of floating UI, **some editor features are unavailable
 
 ## User Interface Types Demo
 
-The following samples are available for two CKEditor user interface types:
+The following samples are available for two CKEditor 4 user interface types:
 
 * The {@linkexample fixedui Fixed User Interface} sample shows the implementation of fixed UI with both classic and inline editor.
 * The {@linkexample floatingui Floating User Interface} sample shows an inline editor instance with its default floating UI.

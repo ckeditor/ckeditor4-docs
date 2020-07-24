@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Pasting Content from Microsoft Word
 
 <info-box info="">
-    This feature is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+    This feature is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> plugin that is included in the Standard and Full presets available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin allows you to paste content from Microsoft Word and maintain original content structure and formatting.
@@ -53,9 +53,9 @@ The Paste from Word plugin maintains most of Microsoft Word text formatting feat
 
 ## Advanced Paste from Word &mdash; CKEditor 4.6+
 
-Pasting from Word is, in general, as tricky as it can get. With plenty of possible combinations of Microsoft Word, operating system and browser versions Word output that comes through clipboard to CKEditor can significantly differ. This makes it extremely hard to support some of the more complicated content formatting cases that include text, images, lists, tables, nested objects, plenty of colors, styles and so on.
+Pasting from Word is, in general, as tricky as it can get. With plenty of possible combinations of Microsoft Word, operating system and browser versions Word output that comes through clipboard to CKEditor 4 can significantly differ. This makes it extremely hard to support some of the more complicated content formatting cases that include text, images, lists, tables, nested objects, plenty of colors, styles and so on.
 
-CKEditor has always been a market leader in parsing Word content and transforming it to valid HTML, but handling some of the more complex cases and working around vendor bugs takes a lot of time, effort and experience. With some new tools available, such as {@link guide/dev/acf/README Advanced Content Filter} or {@link features/drop_paste/README Clipboard API}, we have decided to rewrite the Paste from Word feature from scratch.
+CKEditor 4 has always been a market leader in parsing Word content and transforming it to valid HTML, but handling some of the more complex cases and working around vendor bugs takes a lot of time, effort and experience. With some new tools available, such as {@link guide/dev/acf/README Advanced Content Filter} or {@link features/drop_paste/README Clipboard API}, we have decided to rewrite the Paste from Word feature from scratch.
 
 Here are some areas where the new, Advanced Paste from Word really shines:
 
@@ -74,7 +74,7 @@ The following sample content from a Microsoft Word document:
 
 {@img assets/img/pastefromword_01.png 683 A sample Microsoft Word document.}
 
-will look like below after pasting to CKEditor with the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin enabled:
+will look like below after pasting to CKEditor 4 with the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) plugin enabled:
 
 {@img assets/img/pastefromword_02.png 951 Microsoft Word content pasted into CKEditor 4 WYSIWYG editor.}
 
@@ -82,11 +82,11 @@ Here is another sample with some more complicated formatting and styling as well
 
 {@img assets/img/pastefromword_03.png 628 A sample Microsoft Word document with complex formatting and image.}
 
-It will look like this after pasting into CKEditor:
+It will look like this after pasting into CKEditor 4:
 
 {@img assets/img/pastefromword_04.png 953 Complex Word content pasted into CKEditor 4 WYSIWYG editor.}
 
-In the example above you can see that after pasting into CKEditor, the first list has different list item markers than in the Word document. Although pasting lists with different markers is supported in CKEditor 4 (check the second and third list in the example above), this is a specific case. Such list style is not natively supported by the browser. However, it can be adjusted by using extra CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
+In the example above you can see that after pasting into CKEditor 4, the first list has different list item markers than in the Word document. Although pasting lists with different markers is supported in CKEditor 4 (check the second and third list in the example above), this is a specific case. Such list style is not natively supported by the browser. However, it can be adjusted by using extra CSS rules (see a [related StackOverflow thread](http://stackoverflow.com/questions/4098195/can-ordered-list-produce-result-that-looks-like-1-1-1-2-1-3-instead-of-just-1) how to style it properly).
 
 ## Filters
 
@@ -115,7 +115,7 @@ Refer to the following resources for more information about pasting content:
 * The {@link features/pastefromgoogledocs/README Pasting content from Google Docs} article contains more information about the Paste from Google Docs feature.
 * The {@link features/pastefromexcel/README Pasting content from Microsoft Excel} article contains more information about the Paste from Excel feature.
 * The {@link features/pastefromlibreoffice/README Pasting content from LibreOffice Writer} article contains more information about the Paste from LibreOffice feature.
-* The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor.
-* The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor.
+* The {@link guide/dev/deep_dive/clipboard/README Clipboard Integration} article explains how Clipboard API is implemented in CKEditor 4.
+* The {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article describes drag&drop in CKEditor 4.
 * The {@link guide/dev/acf/README Content Filtering (ACF)} is an introduction to CKEditor's unique content filtering system.
 * The {@link features/styles/README Applying Styles to Editor Content} article discusses creating more semantically correct text styles.

@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Proofreading, Spelling and Grammar Checking
 
 <info-box info="">
-    The out-of-the-box spelling and grammar checking functionality is provided through plugins that are included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+    The out-of-the-box spelling and grammar checking functionality is provided through plugins that are included in the Standard and Full presets available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 CKEditor 4 can be configured to use either native spell checking capabilities provided by the browser or to use an external spell checking web service.
@@ -34,7 +34,7 @@ After reloading the editor you should be able to see the spelling corrections un
 
 ## Spell Check As You Type (SCAYT)
 
-The [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) plugin provides inline spelling and grammar checking, much like the native browser spell checker, well-integrated with the CKEditor context menu.
+The [SpellCheckAsYouType (SCAYT)](https://ckeditor.com/cke4/addon/scayt) plugin provides inline spelling and grammar checking, much like the native browser spell checker, well-integrated with the CKEditor 4 context menu.
 
 It is provided by [WebSpellChecker](https://webspellchecker.com/wsc-scayt-ckeditor4/). It uses the WebSpellChecker web services, transferring the text to their servers and performing spelling and grammar checking. This is a cross-browser solution.
 

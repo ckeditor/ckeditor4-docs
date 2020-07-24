@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Balloon Toolbar
 
-<info-box info=""> This feature was introduced in <strong>CKEditor 4.8</strong>. It is provided through the <a href="https://ckeditor.com/cke4/addon/balloontoolbar">Balloon Toolbar</a> plugin that is not included in any CKEditor preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+<info-box info=""> This feature was introduced in <strong>CKEditor 4.8</strong>. It is provided through the <a href="https://ckeditor.com/cke4/addon/balloontoolbar">Balloon Toolbar</a> plugin that is not included in any CKEditor 4 preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 This plugin adds a possibility to display a toolbar, pointing at a particular element in the editor content.

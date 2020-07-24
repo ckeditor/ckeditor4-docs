@@ -10,13 +10,13 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor Testing Environment (Bender.js)
+# CKEditor 4 Testing Environment (Bender.js)
 
-An advanced project like CKEditor could not exist without a set of automated tests. CKEditor uses [Bender.js](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can, we always implement tests. We encourage you to do the same when you create a pull request on [GitHub](https://github.com/ckeditor/ckeditor4) or fork the CKEditor repository in order to customize some editor behavior.
+An advanced project like CKEditor 4 could not exist without a set of automated tests. CKEditor 4 uses [Bender.js](https://github.com/benderjs/benderjs), our in-house JavaScript Test Framework, to cover code with tests. Not every feature can be tested automatically, but for those that can, we always implement tests. We encourage you to do the same when you create a pull request on [GitHub](https://github.com/ckeditor/ckeditor4) or fork the CKEditor 4 repository in order to customize some editor behavior.
 
 ## Setting up Bender.js
 
-To run CKEditor tests you will need [Bender.js](https://github.com/benderjs/benderjs). Before you start installing Bender.js make sure that:
+To run CKEditor 4 tests you will need [Bender.js](https://github.com/benderjs/benderjs). Before you start installing Bender.js make sure that:
 
 * you installed [Git](http://git-scm.com/),
 * you installed the latest version of [Node.js](http://nodejs.org/),
@@ -40,9 +40,9 @@ you should see the following message:
 
 	Local Bender.js installation not found.
 
-## Setting up CKEditor Tests
+## Setting up CKEditor 4 Tests
 
-When Bender.js is installed you need to set up the CKEditor tests project.
+When Bender.js is installed you need to set up the CKEditor 4 tests project.
 
 First of all, you need to {@link guide/dev/source/README clone the CKEditor development} repository hosted at [GitHub](https://github.com/ckeditor/ckeditor4):
 
@@ -50,7 +50,7 @@ First of all, you need to {@link guide/dev/source/README clone the CKEditor deve
 > git clone https://github.com/ckeditor/ckeditor4.git
 ```
 
-Go to the main CKEditor directory (it should contain the `bender.js`, `package.json` files, among others, and the `tests/` directory):
+Go to the main CKEditor 4 directory (it should contain the `bender.js`, `package.json` files, among others, and the `tests/` directory):
 
 ```sh
 > cd ckeditor4
@@ -72,7 +72,7 @@ This command will create the `.bender/` directory which contains Bender.js's cac
 
 You do not need to perform any additional configuration steps as `bender.js` is a configuration file. It contains information about which tests should be run and where they are located.
 
-## Running CKEditor Tests
+## Running CKEditor 4 Tests
 
 In order to run the tests, open the console and type:
 
@@ -111,9 +111,9 @@ If you want, you can specify a port or a hostname where Bender.js runs:
 
 Please note that at the moment some random tests may fail in Internet Explorer. This is a known issue; however, if you run them again (when opened directly), they should pass. If a test fails a few times in a row, it is a sign that something went wrong. {@link guide/dev/issues_readme/README Report a CKEditor issue} on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues) in such case. Remember to include a link to the failing test and information about the browser in which it fails.
 
-## CKEditor Tests Structure
+## CKEditor 4 Tests Structure
 
-In the Bender.js dashboard you can run all (or part) of the tests located in the CKEditor `tests/` directory. These tests are organized into subdirectories based on what they are testing:
+In the Bender.js dashboard you can run all (or part) of the tests located in the CKEditor 4 `tests/` directory. These tests are organized into subdirectories based on what they are testing:
 
 ```html
 tests/
@@ -152,7 +152,7 @@ Every file which is not placed in any of these special directories is considered
 
 ## Creating Your Own Test
 
-To create a new CKEditor test, you need to put a JavaScript file into any of the CKEditor `tests/` subdirectories (`adapters/`, `core/`, `plugins/` or `tickets/`). Such file will be automatically added to the list of tests.
+To create a new CKEditor 4 test, you need to put a JavaScript file into any of the CKEditor 4 `tests/` subdirectories (`adapters/`, `core/`, `plugins/` or `tickets/`). Such file will be automatically added to the list of tests.
 
 To improve test filtering, a test file may start with a list of tags, marked by using the `bender-tags` meta comment. Additionally, every folder in the test's path is automatically added as a filter, so for example if you created a test for the jQuery adapter and placed it in the `tests/adapters/jquery` directory, you do not need to add `adapters` and `jquery` to the tags list.
 
@@ -160,7 +160,7 @@ To improve test filtering, a test file may start with a list of tags, marked by 
 
 In every test you can specify the list of plugins which will be loaded by using the `bender-ckeditor-plugins` meta comment. Remember that loading redundant plugins will increase the time consumed by the test.
 
-Please note that some CKEditor plugins are needed for reasons that might not be immediately obvious, for example:
+Please note that some CKEditor 4 plugins are needed for reasons that might not be immediately obvious, for example:
 
 * [IFrame Editing Area](https://ckeditor.com/cke4/addon/wysiwygarea) (`wysiwygarea`) &ndash; Skipping this plugin will prevent the editor from firing the {@linkapi CKEDITOR.editor#instanceReady instanceReady} event and many others. However, this plugin is loaded automatically when using the Editor Bot.
 * [Editor Toolbar](https://ckeditor.com/cke4/addon/toolbar) (`toolbar`) &ndash; Needed for enabling features that rely on {@link guide/plugin_sdk/integration_with_acf/README Advanced Content Filter}.
@@ -216,7 +216,7 @@ The testing environment provides a bunch of [tools](https://github.com/ckeditor/
 
 ### Sample Test File
 
-A sample CKEditor test file might look like this:
+A sample CKEditor 4 test file might look like this:
 
 ``` js
 /* bender-tags: editor */

@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Installing Widgets
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through optional plugins that are not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and need to be added to your custom build with <a href="https://ckeditor.com/cke4/builder">online builder</a>, as explained below.
+    This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through optional plugins that are not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and need to be added to your custom build with <a href="https://ckeditor.com/cke4/builder">online builder</a>, as explained below.
 </info-box>
 
 ## Online Builder Installation
@@ -39,7 +39,7 @@ The easiest method is to visit the [online builder](https://ckeditor.com/cke4/bu
 
 Drag the widget plugin that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are happy with your configuration, click the **Download** button at the bottom of the online builder page to download your custom build with widget plugins included.
 
-When you install your custom build, you will see that the additional widget plugins (in this example: [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax)) are available in your CKEditor.
+When you install your custom build, you will see that the additional widget plugins (in this example: [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax)) are available in your CKEditor 4.
 
 {@img assets/img/add_widget_ckbuilder_4.png A custom CKEditor build with the Mathematical Formulas widget}
 

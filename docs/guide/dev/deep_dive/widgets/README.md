@@ -13,12 +13,12 @@ For licensing, see LICENSE.md.
 # Introduction to Widgets
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+    This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 Widgets are **special rich content units** in that they are **groups of elements** which are **treated as a single entity** inside the editor.
 
-Once developed, their structure (but not necessarily their content) is immutable and enforced by the CKEditor instance they are used in. These entities can thus be selected and deleted or moved freely as a whole around the editing area, keeping their predefined structure intact. At the same time all the individual parts of the widget (its "building blocks") can be edited or configured separately, again, without affecting the whole widget entity and its structure in the process.
+Once developed, their structure (but not necessarily their content) is immutable and enforced by the CKEditor 4 instance they are used in. These entities can thus be selected and deleted or moved freely as a whole around the editing area, keeping their predefined structure intact. At the same time all the individual parts of the widget (its "building blocks") can be edited or configured separately, again, without affecting the whole widget entity and its structure in the process.
 
 ## Benefits
 
@@ -51,11 +51,11 @@ Widgets are useful in all situations where you need to build a **predefined stru
 
 {@img assets/img/ckeditor_widgets.png Multiple CKEditor widgets}
 
-The screenshot above shows a customized CKEditor instance that uses a few sample widgets: a captioned image ("Saturn V carrying Apollo 11"), a captioned quotation (Neil Armstrong's words), a simple box template (listing the mission crew), mathematical formula (orbit equation) as well as the dates inserted inline in the first paragraph.
+The screenshot above shows a customized CKEditor 4 instance that uses a few sample widgets: a captioned image ("Saturn V carrying Apollo 11"), a captioned quotation (Neil Armstrong's words), a simple box template (listing the mission crew), mathematical formula (orbit equation) as well as the dates inserted inline in the first paragraph.
 
 ## Technical Background
 
-Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic [Widget plugin](https://ckeditor.com/cke4/addon/widget)**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all), and can be added to your editor installation as described in the {@link guide/dev/widget_installation/README Widget Installation} article.
+Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic [Widget plugin](https://ckeditor.com/cke4/addon/widget)**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in [CKEditor 4 Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all), and can be added to your editor installation as described in the {@link guide/dev/widget_installation/README Widget Installation} article.
 
 ## Further Reading
 

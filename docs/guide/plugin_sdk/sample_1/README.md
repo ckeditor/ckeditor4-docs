@@ -10,9 +10,9 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Creating a Simple CKEditor Plugin (Part 1)
+# Creating a Simple CKEditor 4 Plugin (Part 1)
 
-The aim of this tutorial is to demonstrate how to create a basic CKEditor plugin.
+The aim of this tutorial is to demonstrate how to create a basic CKEditor 4 plugin.
 
 We are going to develop an **abbreviation plugin** that lets the users insert abbreviations into their documents. The abbreviations will be using the `<abbr>` HTML element and will be added through a dialog window that is opened after clicking a dedicated toolbar button.
 
@@ -20,10 +20,10 @@ The plugin will be named **abbr**, just like the name of the corresponding HTML 
 
 ## Plugin Files
 
-Firstly, we will need to create the `abbr` folder inside the `plugins` directory of the CKEditor installation.
+Firstly, we will need to create the `abbr` folder inside the `plugins` directory of the CKEditor 4 installation.
 
 <info-box hint="">
-	Remember that for CKEditor the name of the plugin folder is important and has to be the same as the name of the plugin, otherwise the editor will not be able to recognize it.
+	Remember that for CKEditor 4 the name of the plugin folder is important and has to be the same as the name of the plugin, otherwise the editor will not be able to recognize it.
 </info-box>
 
 Inside the newly created `abbr` folder we are going to place the `plugin.js` file that will contain the plugin logic. Apart from that, since we will also need a toolbar icon for our plugin, we are going to add an `icons` folder and subsequently place the `abbr.png` file inside. Finally, we will create the `dialogs` folder with the `abbr.js` file, which will store the definition for the dialog we will use in our plugin.
@@ -50,7 +50,7 @@ With the following structure ready, it is time to open the `plugin.js` file in a
 		}
 	});
 
-All CKEditor plugins are created by using the {@linkapi CKEDITOR.plugins.add CKEDITOR.plugins.add} function.
+All CKEditor 4 plugins are created by using the {@linkapi CKEDITOR.plugins.add CKEDITOR.plugins.add} function.
 This function should contain the plugin name &mdash; `'abbr'` &mdash; and the plugin logic placed inside the {@linkapi CKEDITOR.pluginDefinition.init CKEDITOR.pluginDefinition.init} function that is called upon the initialization of the editor instance.
 
 Additionally, as we are going to define a toolbar button, the `icons` property is set, including the name of the icon file (important: matching the **button name**, in lowercase).
@@ -90,9 +90,9 @@ Please note that you can influence the position of the button in the toolbar gro
 
 Note: The exact position depends on the indexes defined by other buttons available in your toolbar, so it may take some experimenting with index values to create a perfect button sequence within a group.
 
-## CKEditor Initialization
+## CKEditor 4 Initialization
 
-It is now time to tell CKEditor to load our plugin. To do so we have to add its name to the CKEDITOR.config.extraPlugins configuration option:
+It is now time to tell CKEditor 4 to load our plugin. To do so we have to add its name to the CKEDITOR.config.extraPlugins configuration option:
 
 	config.extraPlugins = 'abbr';
 
@@ -101,7 +101,7 @@ It is now time to tell CKEditor to load our plugin. To do so we have to add its 
 	To follow this guide and at the same time comply with the new CKEditor 4.1 requirements you need to either set <code>config.allowedContent = true;</code> in order to disable {@link guide/dev/deep_dive/advanced_content_filter/README content filtering} or {@link guide/plugin_sdk/integration_with_acf/README integrate your plugin with ACF}. For more information, please refer to the official {@link guide/plugin_sdk/integration_with_acf/README Advanced Content Filter integration guide}.
 </info-box>
 
-Now load a CKEditor sample page. You should be able to see the new plugin toolbar button in the toolbar. For example:
+Now load a CKEditor 4 sample page. You should be able to see the new plugin toolbar button in the toolbar. For example:
 
 {@img assets/img/abbr1PluginLoaded.png Abbreviation plugin has been loaded}
 
@@ -253,7 +253,7 @@ onOk: function() {
 ```
 
 <info-box hint="">
-	Please note that another way to insert HTML code into CKEditor is by using the {@linkapi CKEDITOR.editor#insertHtml insertHtml} function that adds HTML code at the location of the cursor in the document: <code>editor.insertHtml( '&lt;h2>This is a sample header&lt;/h2>&lt;p>This is a sample paragraph.&lt;/p>' );</code>
+	Please note that another way to insert HTML code into CKEditor 4 is by using the {@linkapi CKEDITOR.editor#insertHtml insertHtml} function that adds HTML code at the location of the cursor in the document: <code>editor.insertHtml( '&lt;h2>This is a sample header&lt;/h2>&lt;p>This is a sample paragraph.&lt;/p>' );</code>
 </info-box>
 
 ## Full Source Code
@@ -348,9 +348,9 @@ The Abbreviation plugin is now able to add a new `<abbr>` element to the documen
 
 ## Further Reading
 
-Refer to the following resources for more information about creating CKEditor plugins:
+Refer to the following resources for more information about creating CKEditor 4 plugins:
 
-* {@link guide/plugin_sdk/sample/README Creating a CKEditor Plugin in 20 Lines of Code} &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
+* {@link guide/plugin_sdk/sample/README Creating a CKEditor 4 Plugin in 20 Lines of Code} &ndash; Create your first CKEditor 4 plugin that inserts a piece of HTML code into the document.
 * {@link guide/plugin_sdk/sample_2/README Simple Plugin, Part 2} &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
 * {@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter} &ndash; Learn how to implement Advanced Content Filter support in your plugins.
-* {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
+* {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor 4.

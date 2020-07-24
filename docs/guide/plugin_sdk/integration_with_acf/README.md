@@ -16,9 +16,9 @@ For licensing, see LICENSE.md.
 	Advanced Content Filter was introduced in <strong>CKEditor 4.1</strong>.
 </info-box>
 
-CKEditor consists of a number of {@linkapi CKEDITOR.feature editor features} like commands, buttons, drop-down lists, or dialog windows. The role of plugins is to extend the set of available features. However, **since the introduction of {@link guide/dev/acf/README Advanced Content Filter}, features, and the content they generate, are subject to filtering**.
+CKEditor 4 consists of a number of {@linkapi CKEDITOR.feature editor features} like commands, buttons, drop-down lists, or dialog windows. The role of plugins is to extend the set of available features. However, **since the introduction of {@link guide/dev/acf/README Advanced Content Filter}, features, and the content they generate, are subject to filtering**.
 
-The introduction of Advanced Content Filter (ACF) have impacted the plugin development process and slightly changed the data processing model of CKEditor. With Advanced Content Filter plugins can take control over the content available in the editor and adaptively adjust the user interface when allowed content changes. Of all the feature properties the following are crucial for correct plugin integration
+The introduction of Advanced Content Filter (ACF) have impacted the plugin development process and slightly changed the data processing model of CKEditor 4. With Advanced Content Filter plugins can take control over the content available in the editor and adaptively adjust the user interface when allowed content changes. Of all the feature properties the following are crucial for correct plugin integration
 with ACF:
 
 * {@linkapi CKEDITOR.feature#property-allowedContent } &ndash; determines the type of content that is allowed by the feature to enter the editor. In most cases this is the content that this feature generates.
@@ -169,7 +169,7 @@ This configuration causes the following code transformation:
 
 The editor will automatically convert `<acronym>` tags into `<abbr>` tags when pasting content and editing source code.
 
-Read more about {@linkapi CKEDITOR.feature#contentForms contentForms} in CKEditor JavaScript API.
+Read more about {@linkapi CKEDITOR.feature#contentForms contentForms} in CKEditor 4 JavaScript API.
 
 <info-box hint="">
 	You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-abbr-acf">download the entire modified plugin folder</a> inluding the icon and the fully commented source code.
@@ -181,12 +181,12 @@ See the {@linkexample abbr working "Abbreviation (Custom Plugin with Dialog, Con
 
 ## Further Reading
 
-Refer to the following resources for more information about creating CKEditor plugins:
+Refer to the following resources for more information about creating CKEditor 4 plugins:
 
-* {@link guide/plugin_sdk/sample/README Creating a CKEditor Plugin in 20 Lines of Code} &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
+* {@link guide/plugin_sdk/sample/README Creating a CKEditor 4 Plugin in 20 Lines of Code} &ndash; Create your first CKEditor 4 plugin that inserts a piece of HTML code into the document.
 * {@link guide/plugin_sdk/sample_1/README Simple Plugin, Part 1} &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
 * {@link guide/plugin_sdk/sample_2/README Simple Plugin, Part 2} &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
-* {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
+* {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor 4.
 
 Refer to the following resources for more information about content filtering:
 

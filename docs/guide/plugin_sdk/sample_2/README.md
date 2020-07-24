@@ -10,9 +10,9 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Creating a Simple CKEditor Plugin (Part 2)
+# Creating a Simple CKEditor 4 Plugin (Part 2)
 
-The aim of this tutorial is to demonstrate how to extend an existing CKEditor plugin with context menu support as well as the possibility to edit a previously inserted element.
+The aim of this tutorial is to demonstrate how to extend an existing CKEditor 4 plugin with context menu support as well as the possibility to edit a previously inserted element.
 
 Instead of creating a new plugin, this time we are going to expand on the functionality of the **Abbreviation** plugin created in the {@link guide/plugin_sdk/sample_1/README previous installment} of the tutorial series.
 
@@ -20,7 +20,7 @@ Instead of creating a new plugin, this time we are going to expand on the functi
 	We need to start where we previously left off. You can download the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-abbr-1">entire plugin folder</a> including the icon and the fully commented source code.
 </info-box>
 
-If you have any doubts about the content of the plugin and its configuration, refer to the {@link guide/plugin_sdk/sample_1/README Creating a Simple CKEditor Plugin (Part 1)} tutorial.
+If you have any doubts about the content of the plugin and its configuration, refer to the {@link guide/plugin_sdk/sample_1/README Creating a Simple CKEditor 4 Plugin (Part 1)} tutorial.
 
 <info-box info="">
 	Please note that <strong>since CKEditor 4.1 all editor plugins that create content should be integrated with {@link guide/dev/acf/README Advanced Content Filter} (ACF)</strong>. 
@@ -29,7 +29,7 @@ If you have any doubts about the content of the plugin and its configuration, re
 
 ## Context Menu Support
 
-Context menu support in CKEditor is implemented by the [Context Menu plugin](https://ckeditor.com/cke4/addon/contextmenu).
+Context menu support in CKEditor 4 is implemented by the [Context Menu plugin](https://ckeditor.com/cke4/addon/contextmenu).
 
 The context menu implementation should be placed inside the {@linkapi CKEDITOR.pluginDefinition#init init} function in the plugin file, following the command and button definitions:
 
@@ -51,7 +51,7 @@ Using the {@linkapi CKEDITOR.editor#addMenuItem editor.addMenuItem} function we 
 
 ### Showing the Menu Option "In Context"
 
-However, when we reload the CKEditor instance and add an abbreviation, the context menu does not contain the newly created **Edit Abbreviation** item. We now need to enable the Abbreviation context menu for each selected `<abbr>` element:
+However, when we reload the CKEditor 4 instance and add an abbreviation, the context menu does not contain the newly created **Edit Abbreviation** item. We now need to enable the Abbreviation context menu for each selected `<abbr>` element:
 
 	if ( editor.contextMenu ) {
 		... the previous context menu creation code ...
@@ -425,10 +425,10 @@ Voilà! The abbreviation was updated and its content was replaced with texts ent
 
 ## Further Reading
 
-Refer to the following resources for more information about creating CKEditor plugins:
+Refer to the following resources for more information about creating CKEditor 4 plugins:
 
-* {@link guide/plugin_sdk/sample/README Creating a CKEditor Plugin in 20 Lines of Code} &ndash; Create your first CKEditor plugin that inserts a piece of HTML code into the document.
+* {@link guide/plugin_sdk/sample/README Creating a CKEditor 4 Plugin in 20 Lines of Code} &ndash; Create your first CKEditor 4 plugin that inserts a piece of HTML code into the document.
 * {@link guide/plugin_sdk/sample_1/README Simple Plugin, Part 1} &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
 * {@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter} &ndash; Learn how to implement Advanced Content Filter support in your plugins.
-* {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
+* {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor 4.
 * {@linkapi CKEDITOR.pluginDefinition Plugin Definition API} &ndash; Detailed description of the plugin definition.

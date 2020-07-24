@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Licensing and Support
 
-The following article contains tips about the resources that you can refer to when you need some help with CKEditor.
+The following article contains tips about the resources that you can refer to when you need some help with CKEditor 4.
 
 ## Long Term Support (LTS)
 
@@ -20,23 +20,23 @@ CKEditor 4 is a stable and mature application, backed by 15 years of our experie
 
 ## How Do I Get Support?
 
-If you are having trouble installing, configuring, or integrating CKEditor to your application, there are a few solutions that you can try.
+If you are having trouble installing, configuring, or integrating CKEditor 4 to your application, there are a few solutions that you can try.
 
 ### Documentation
 
-First of all, CKEditor comes with really extensive {@link guide/index documentation} that you should read and {@linkexample index plenty of samples} that you can try out and even download to copy and implement in your own environment.
+First of all, CKEditor 4 comes with really extensive {@link guide/index documentation} that you should read and {@linkexample index plenty of samples} that you can try out and even download to copy and implement in your own environment.
 
 ### Stack Overflow
 
-The ["ckeditor"](http://stackoverflow.com/questions/tagged/ckeditor) and ["ckeditor4.x"](http://stackoverflow.com/questions/tagged/ckeditor4.x) tags at Stack Overflow are where CKEditor developers and integrators can share their problems and solutions. CKEditor has grown as an Open Source product, thanks to the amazing community of developers and users. The `ckeditor` and `ckeditor4.x` tags at Stack Overflow work in an Open Source way, too, so you are encouraged to not only ask questions, but also answer them and help fellow developers. It will be much appreciated!
+The ["ckeditor"](http://stackoverflow.com/questions/tagged/ckeditor) and ["ckeditor4.x"](http://stackoverflow.com/questions/tagged/ckeditor4.x) tags at Stack Overflow are where CKEditor developers and integrators can share their problems and solutions. CKEditor 4 has grown as an Open Source product, thanks to the amazing community of developers and users. The `ckeditor` and `ckeditor4.x` tags at Stack Overflow work in an Open Source way, too, so you are encouraged to not only ask questions, but also answer them and help fellow developers. It will be much appreciated!
 
 ### Professional Support Channel
 
-There are times and situations, however, when you are unable to get going by yourself. If this is a case, you will be happy to know that you can [purchase a commercial CKEditor license](https://ckeditor.com/ckeditor-4/pricing/) which includes professional assistance directly from CKEditor core developers. The dedicated support channel is available for you and responses to your inquiries come in one business day, or even in the same day. [CKSource](https://cksource.com/), the company behind CKEditor, also offers some Enterprise solutions such as Assistance Package and Custom Development for more advanced needs. [Contact us for more information](https://ckeditor.com/contact/)!
+There are times and situations, however, when you are unable to get going by yourself. If this is a case, you will be happy to know that you can [purchase a commercial CKEditor license](https://ckeditor.com/ckeditor-4/pricing/) which includes professional assistance directly from CKEditor 4 core developers. The dedicated support channel is available for you and responses to your inquiries come in one business day, or even in the same day. [CKSource](https://cksource.com/), the company behind CKEditor, also offers some Enterprise solutions such as Assistance Package and Custom Development for more advanced needs. [Contact us for more information](https://ckeditor.com/contact/)!
 
-## How Do I Support the Development of CKEditor?
+## How Do I Support the Development of CKEditor 4?
 
-CKEditor is and has always been an Open Source product. We are proud to be a part of the [Open Source](http://en.wikipedia.org/wiki/Open_source) movement and are happy that we can offer the result of long hours of work and dedicated contribution **completely for free** to everyone who wants to use the editor.
+CKEditor 4 is and has always been an Open Source product. We are proud to be a part of the [Open Source](http://en.wikipedia.org/wiki/Open_source) movement and are happy that we can offer the result of long hours of work and dedicated contribution **completely for free** to everyone who wants to use the editor.
 
 If you also want to support the development of CKEditor, it will be most welcome. Here are a couple of things that you can do:
 
@@ -55,6 +55,6 @@ If you also want to support the development of CKEditor, it will be most welcome
 **Thank you for your support and for helping us make CKEditor better every day!**
 
 
-## How Does a Commercial CKEditor License Work?
+## How Does a Commercial CKEditor 4 License Work?
 
 [Contact us directly](https://ckeditor.com/contact/) if you want to learn more about our Enterprise offer or if you are interested in services such as custom development.

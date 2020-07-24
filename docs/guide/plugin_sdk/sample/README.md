@@ -10,21 +10,21 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Creating a CKEditor Plugin in 20 Lines of Code
+# Creating a CKEditor 4 Plugin in 20 Lines of Code
 
-The aim of this tutorial is to demonstrate how to create a most basic CKEditor plugin.
+The aim of this tutorial is to demonstrate how to create a most basic CKEditor 4 plugin.
 
 ## Developing a Custom Plugin
 
-Learn by coding! We are going to develop a **timestamp** plugin that inserts current date and time into the editing area of CKEditor at the caret position. The timestamp will be added after the user clicks a dedicated toolbar button.
+Learn by coding! We are going to develop a **timestamp** plugin that inserts current date and time into the editing area of CKEditor 4 at the caret position. The timestamp will be added after the user clicks a dedicated toolbar button.
 
 Since the plugin implementation makes use of the {@linkapi CKEDITOR.editor.insertHtml CKEDITOR.editor.insertHtml} function, this example can be easily adjusted to insert any other HTML element.
 
-The plugin will be code-named `timestamp` and according to CKEditor naming conventions, this name will also be given to the plugin folder.
+The plugin will be code-named `timestamp` and according to CKEditor 4 naming conventions, this name will also be given to the plugin folder.
 
 ## Plugin Files
 
-Firstly, we will need to create the `timestamp` folder inside the `plugins` directory of the CKEditor installation.
+Firstly, we will need to create the `timestamp` folder inside the `plugins` directory of the CKEditor 4 installation.
 
 <info-box hint="">
 	Remember that for CKEditor the name of the plugin folder is important and has to be the same as the name of the plugin, otherwise the editor will not be able to recognize it.
@@ -52,15 +52,15 @@ With the following structure ready, it is time to open the `plugin.js` file in a
 		}
 	});
 
-All CKEditor plugins are created by using the {@linkapi CKEDITOR.plugins.add CKEDITOR.plugins.add} method. This method should contain the plugin name &mdash; `'timestamp'` &mdash; and the plugin logic placed inside the {@linkapi CKEDITOR.pluginDefinition#init init} function that is called upon the initialization of the editor instance.
+All CKEditor 4 plugins are created by using the {@linkapi CKEDITOR.plugins.add CKEDITOR.plugins.add} method. This method should contain the plugin name &mdash; `'timestamp'` &mdash; and the plugin logic placed inside the {@linkapi CKEDITOR.pluginDefinition#init init} function that is called upon the initialization of the editor instance.
 
 Additionally, since we are going to define a toolbar button, the `icons` property is set, including the name of the icon file (important: matching the **button name**, in lowercase).
 
 ## Creating an Editor Command
 
-It is customary for CKEditor plugins to define an editor command that performs an action associated with them. The command should be defined inside the `init` function in order to be created upon the initialization of a CKEditor instance.
+It is customary for CKEditor 4 plugins to define an editor command that performs an action associated with them. The command should be defined inside the `init` function in order to be created upon the initialization of a CKEditor 4 instance.
 
-In this case we are going to use the {@linkapi CKEDITOR.editor.addCommand CKEDITOR.editor.addCommand} method to define the `insertTimestamp` command that will insert the current date and time into CKEditor:
+In this case we are going to use the {@linkapi CKEDITOR.editor.addCommand CKEDITOR.editor.addCommand} method to define the `insertTimestamp` command that will insert the current date and time into CKEditor 4:
 
 	editor.addCommand( 'insertTimestamp', {
 		exec: function( editor ) {
@@ -76,7 +76,7 @@ The most important part of the plugin functionality is to insert the HTML code i
 we will use the {@linkapi CKEDITOR.editor#method-insertHtml editor.insertHtml} method. This method
 can be used to insert arbitrary HTML code into the document, so with a bit of tweaking
 you can customize the timestamp plugin code to add other HTML elements into the
-CKEditor editing area.
+CKEditor 4 editing area.
 
 ## Creating the Toolbar Button
 
@@ -108,7 +108,7 @@ Note: The exact position depends on the indexes defined by other buttons availab
 
 ## Plugin Loading
 
-It is now time to tell CKEditor to load our plugin. To do so we have to add its name to the CKEDITOR.config.extraPlugins configuration option:
+It is now time to tell CKEditor 4 to load our plugin. To do so we have to add its name to the CKEDITOR.config.extraPlugins configuration option:
 
 	config.extraPlugins = 'timestamp';
 
@@ -116,7 +116,7 @@ It is now time to tell CKEditor to load our plugin. To do so we have to add its 
 	Please note that <strong>since CKEditor 4.1 all editor plugins that create content should be integrated with {@link guide/dev/acf/README Advanced Content Filter} (ACF)</strong>. <br> In this case the plugin only inserts content that is usually allowed in default editor installations (the <code>&lt;em&gt;</code> element), but if you want to customize it and insert elements that are not allowed by the configuration, you need to either set <code>config.allowedContent = true;</code> in order to disable {@link guide/dev/deep_dive/advanced_content_filter/README content filtering} or {@link guide/plugin_sdk/integration_with_acf/README integrate your plugin with ACF}. For more information, please refer to the official {@link guide/plugin_sdk/integration_with_acf/README Advanced Content Filter integration guide}.
 </info-box>
 
-Now load a CKEditor sample page. You should be able to see the new plugin button in the toolbar. For example:
+Now load a CKEditor 4 sample page. You should be able to see the new plugin button in the toolbar. For example:
 
 {@img assets/img/timestampPluginLoaded.png Timestamp plugin button available in the editor toolbar}
 
@@ -154,17 +154,17 @@ Note that the timestamp format may vary for different platforms and browsers. If
 
 {@img assets/img/timestampPluginWorkingExample.png Date and time added to the document in CKEditor}
 
-Congratulations! You have just created a valid CKEditor plugin in under 20 lines of code! Since the `editor.insertHtml` method can be used to add arbitrary HTML code to the document, you can replace the timestamp logic with your own customized code in order to insert other types of content into your document.
+Congratulations! You have just created a valid CKEditor 4 plugin in under 20 lines of code! Since the `editor.insertHtml` method can be used to add arbitrary HTML code to the document, you can replace the timestamp logic with your own customized code in order to insert other types of content into your document.
 
 ## Timestamp Plugin Demo
 
-See the {@linkexample timestamp working "Timestamp (Creating a Most Basic CKEditor Plugin)" sample} that shows the Timestamp plugin integrated with an editor instance.
+See the {@linkexample timestamp working "Timestamp (Creating a Most Basic CKEditor 4 Plugin)" sample} that shows the Timestamp plugin integrated with an editor instance.
 
 ## Further Reading
 
-Refer to the following resources for more information about creating CKEditor plugins:
+Refer to the following resources for more information about creating CKEditor 4 plugins:
 
 * {@link guide/plugin_sdk/sample_1/README Simple Plugin, Part 1} &ndash; Develop a basic Abbreviation plugin with a dialog window that lets the user insert a an abbreviation element into the document.
 * {@link guide/plugin_sdk/sample_2/README Simple Plugin, Part 2} &ndash; Modify the Abbreviation plugin by adding a custom context menu and abbreviation editing capabilities.
 * {@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter} &ndash; Learn how to implement Advanced Content Filter support in your plugins.
-* {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor.
+* {@link guide/plugin_sdk/styles/README Plugin Stylesheets} &ndash; Tips on how to integrate custom plugin stylesheets with CKEditor 4.

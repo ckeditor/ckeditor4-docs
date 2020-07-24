@@ -16,7 +16,7 @@ So far, you've worked on the "source version" of your skin. Now that your skin i
 
 To do so you'll need CKBuilder a Java application that makes this magic happen. It can be downloaded here: [http://download.cksource.com/CKBuilder/](http://download.cksource.com/CKBuilder/).
 
-[Java](http://java.com/en/download/) must be available on your command line. To run the builder, simply copy `ckbuilder.jar` into the `skins` folder of CKEditor (where your skin custom folder is available) and execute this command:
+[Java](http://java.com/en/download/) must be available on your command line. To run the builder, simply copy `ckbuilder.jar` into the `skins` folder of CKEditor 4 (where your skin custom folder is available) and execute this command:
 
 ```sh
 > java -jar ckbuilder.jar --build-skin myskin myskin-release

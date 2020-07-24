@@ -10,9 +10,9 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Creating a Simple CKEditor Widget (Part 2)
+# Creating a Simple CKEditor 4 Widget (Part 2)
 
-The aim of this tutorial is to demonstrate **how to extend an existing CKEditor widget with a dialog window**. This dialog window will be used to insert a new widget into the editor or modify an existing one and set some basic properties (width, alignment) for it.
+The aim of this tutorial is to demonstrate **how to extend an existing CKEditor 4 widget with a dialog window**. This dialog window will be used to insert a new widget into the editor or modify an existing one and set some basic properties (width, alignment) for it.
 
 ## Prerequisites
 {@link guide/dev/deep_dive/widgets/README Widgets are an innovative feature} that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
@@ -28,13 +28,13 @@ Instead of creating a new plugin, this time we are going to expand on the functi
 	We need to start where we previously left off. You can <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-simplebox-1">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/blob/master/README.md">instructions</a>.
 </info-box>
 
-Should you have any questions about the content of the existing plugin and its configuration, refer to the {@link guide/widget_sdk/tutorial_1/README Creating a Simple CKEditor Widget (Part 1)} tutorial.
+Should you have any questions about the content of the existing plugin and its configuration, refer to the {@link guide/widget_sdk/tutorial_1/README Creating a Simple CKEditor 4 Widget (Part 1)} tutorial.
 
 ## Widget Plugin Files
 
 We continue our work on the file structure that we created for the Simple Box widget plugin in the previous installment of the tutorial.
 
-CKEditor dialog windows can be defined in separate files and then loaded on demand, which improves the overall editor performance. We will name the dialog window file `simplebox.js` and place it in a newly added `dialogs` directory, creating the following directory structure for the widget:
+CKEditor 4 dialog windows can be defined in separate files and then loaded on demand, which improves the overall editor performance. We will name the dialog window file `simplebox.js` and place it in a newly added `dialogs` directory, creating the following directory structure for the widget:
 
 * `ckeditor root/`
 	* `plugins/`
@@ -99,7 +99,7 @@ In our case we will give the dialog window a name (`simplebox`) and use the `{@l
 
 ## Dialog Window Contents
 
-The dialog window should also contain some content, but in our case one page (tab) with `{@linkapi CKEDITOR.dialog.definition.content#id id}` of `info` will be enough. This is added through the `{@linkapi CKEDITOR.dialog.definition#contents contents}` parameter of the dialog window definition. Note that by default CKEditor also adds the standard "OK" and "Cancel" buttons.
+The dialog window should also contain some content, but in our case one page (tab) with `{@linkapi CKEDITOR.dialog.definition.content#id id}` of `info` will be enough. This is added through the `{@linkapi CKEDITOR.dialog.definition#contents contents}` parameter of the dialog window definition. Note that by default CKEditor 4 also adds the standard "OK" and "Cancel" buttons.
 
 	CKEDITOR.dialog.add( 'simplebox', function( editor ) {
 		return {

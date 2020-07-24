@@ -139,7 +139,7 @@ After you reload the page and click the widget toolbar button, you will insert t
 
 {@img assets/img/simplebox1_template_defined.png Simple Box widget template inserted into the editor}
 
-Note the small gray handle (<img class="inline" src="%BASE_PATH%/assets/img/drag.png" alt="Drag handle">) in the top left-hand corner of a widget that appears when you hover over or select the widget. If you hover over it with your mouse, a "move" cursor will appear. All widgets can be dragged inside the editing area of CKEditor and dropped wherever you want to place them. And since the widget structure is immutable, there is no chance that the widget will become corrupted in the process or otherwise fall apart!
+Note the small gray handle (<img class="inline" src="%BASE_PATH%/assets/img/drag.png" alt="Drag handle">) in the top left-hand corner of a widget that appears when you hover over or select the widget. If you hover over it with your mouse, a "move" cursor will appear. All widgets can be dragged inside the editing area of CKEditor 4 and dropped wherever you want to place them. And since the widget structure is immutable, there is no chance that the widget will become corrupted in the process or otherwise fall apart!
 
 ## Adding Editable Parts
 
@@ -182,7 +182,7 @@ Note that due to limitations of Internet Explorer 8 nested widgets may not be fu
 
 Currently the widget does not look very impressive and does not stand out in the editor content. Let us add some styling to the structure it generates to make it more obvious that it constitutes a special unit of content.
 
-Each CKEditor plugin, included widgets, can add its own styles for editor content. Depending on your CKEditor usage scenario (classic vs inline editor) the styles will need to be added to the {@linkapi CKEDITOR.config#contentsCss contentsCss} setting or added to the page styles.
+Each CKEditor 4 plugin, included widgets, can add its own styles for editor content. Depending on your CKEditor 4 usage scenario (classic vs inline editor) the styles will need to be added to the {@linkapi CKEDITOR.config#contentsCss contentsCss} setting or added to the page styles.
 
 To simplify the tutorial, let us assume you are using the {@link guide/dev/framed/README classic editor}. The styling of classic editor content is done by using the `contents.css` file. Add the styles below to your default `contents.css` file:
 
@@ -218,7 +218,7 @@ After you reload the page and insert the widget again, you will see that thanks 
 
 ## Adjusting Advanced Content Filter
 
-You might remember that since the {@link guide/dev/deep_dive/advanced_content_filter/README introduction of content filtering} in CKEditor {@link guide/plugin_sdk/integration_with_acf/README each plugin that adds editor content must define a list of HTML elements, classes, and styles} that need to be added to the filter for the editor to allow them. Additionally, you should also define the {@linkapi CKEDITOR.feature#requiredContent minimum HTML code} that is required for the feature to work which will cause the widget to be disabled if the user configuration overwrites the filtering rules added to the filter by this feature.
+You might remember that since the {@link guide/dev/deep_dive/advanced_content_filter/README introduction of content filtering} in CKEditor 4 {@link guide/plugin_sdk/integration_with_acf/README each plugin that adds editor content must define a list of HTML elements, classes, and styles} that need to be added to the filter for the editor to allow them. Additionally, you should also define the {@linkapi CKEDITOR.feature#requiredContent minimum HTML code} that is required for the feature to work which will cause the widget to be disabled if the user configuration overwrites the filtering rules added to the filter by this feature.
 
 The need for these changes might not have been immediately visible so far in our sample since we just kept on reloading the same page and did not try to load the data back into the editor. Let us simulate this scenario now by inserting the widget again, going to Source view and back to WYSIWYG view.
 
@@ -296,7 +296,7 @@ When you reload the page now, you will see that when you try to edit the widget 
 
 ## How Does a Widget Become a Widget?
 
-A final, but perhaps most important issue is: **How does CKEditor know that a piece of code is actually a widget and needs to be treated accordingly?** After all you could easily insert the same structure that we used as our template straight into the document &mdash; would it become a widget, too?
+A final, but perhaps most important issue is: **How does CKEditor 4 know that a piece of code is actually a widget and needs to be treated accordingly?** After all you could easily insert the same structure that we used as our template straight into the document &mdash; would it become a widget, too?
 
 This can actually be tested in Source mode again. Try pasting our widget template into the Source and switch to WYSIWYG or insert a widget, go to Source and back to WYSIWYG. The structure that you defined in the template is there, but the entire unit is no longer a widget &mdash; the drag icon is gone and you cannot select, move, or delete the entire entity like before.
 

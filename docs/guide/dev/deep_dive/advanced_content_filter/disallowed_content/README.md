@@ -16,7 +16,7 @@ For licensing, see LICENSE.md.
 	The Disallowed Content feature was introduced in <strong>CKEditor 4.4</strong> as a part of the {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} system which was introduced in <strong>CKEditor 4.1</strong>.
 </info-box>
 
-The Disallowed Content feature complements the existing Allowed Content feature in that it lets you explicitly blacklist elements that you do not want to have in your CKEditor content. You can use it to limit the features that would otherwise be available in the fully automatic Advanced Content Filter mode.
+The Disallowed Content feature complements the existing Allowed Content feature in that it lets you explicitly blacklist elements that you do not want to have in your CKEditor 4 content. You can use it to limit the features that would otherwise be available in the fully automatic Advanced Content Filter mode.
 
 Disallowed content can be defined in the {@linkapi CKEDITOR.config.disallowedContent CKEDITOR.config.disallowedContent} setting or may be dynamically added with the {@linkapi CKEDITOR.filter.disallow CKEDITOR.filter.disallow} method. It has a higher priority than content allowed automatically or by the {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} setting, hence it is possible to correct automatic settings or achieve more complex results like "allow all attributes except those starting with `on*`".
 

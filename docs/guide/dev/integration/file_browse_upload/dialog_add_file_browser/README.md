@@ -12,22 +12,22 @@ For licensing, see LICENSE.md.
 
 # Adding File Manager to a Dialog Window
 
-The aim of this article is to explain to plugin authors how to create CKEditor dialog windows that integrate seamlessly with a file manager.
+The aim of this article is to explain to plugin authors how to create CKEditor 4 dialog windows that integrate seamlessly with a file manager.
 
 <info-box info="">
-	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+	CKEditor 4 can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </info-box>
 
-To connect a file browser/uploader that is already compatible with CKEditor, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
+To connect a file browser/uploader that is already compatible with CKEditor 4, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](http://cksource.com/ckfinder/),
 check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
 
 ## Dialog Windows
 
-Please refer to the CKEditor {@linkapi CKEDITOR.dialog.definition dialog definition API} for general information on how to create a dialog window.
+Please refer to the CKEditor 4 {@linkapi CKEDITOR.dialog.definition dialog definition API} for general information on how to create a dialog window.
 
 ## The File Browser Plugin
 
-The [File Browser](https://ckeditor.com/cke4/addon/filebrowser) plugin is built-in into CKEditor. Its only purpose is to provide an API inside CKEditor to easily integrate any external file manager and to add file browser/uploader features to various CKEditor components (usually to dialog windows).
+The [File Browser](https://ckeditor.com/cke4/addon/filebrowser) plugin is built-in into CKEditor 4. Its only purpose is to provide an API inside CKEditor 4 to easily integrate any external file manager and to add file browser/uploader features to various CKEditor 4 components (usually to dialog windows).
 
 ### Adding the "Browse Server" Button
 
@@ -54,7 +54,7 @@ The `'info:txtUrl'` value instructs the plugin to update an element with the ID 
 
 ### Adding "Quick Upload" Support
 
-Again, to see how file uploads can be handled in a dialog window, the following working example from CKEditor will be used. In the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor4/blob/master/plugins/image/dialogs/image.js) you can find the following definition of the `Upload` tab:
+Again, to see how file uploads can be handled in a dialog window, the following working example from CKEditor 4 will be used. In the [Image plugin dialog window source](https://github.com/ckeditor/ckeditor4/blob/master/plugins/image/dialogs/image.js) you can find the following definition of the `Upload` tab:
 
 ```js
 {
@@ -90,7 +90,7 @@ The `file` element is just an input element that will store the name of the file
 
 The `fileButton` element is more interesting. The `'info:txtUrl'` value instructs the File Browser plugin to update an element with the ID of `txtUrl` inside the `info` tab when {@linkapi CKEDITOR.tools.callFunction CKEDITOR.tools.callFunction} is called (see {@link guide/dev/integration/file_browse_upload/file_browser_api/README File Browser API - Creating a Custom File Manager}).
 
-The `'for': [ 'Upload', 'upload'   ]` line is used to connect `fileButton` with the `file` element. It is an instruction for CKEditor to upload the file using the `'file'` element with the ID of `'upload'` (second value) inside the `'Upload'` tab (first value).
+The `'for': [ 'Upload', 'upload'   ]` line is used to connect `fileButton` with the `file` element. It is an instruction for CKEditor 4 to upload the file using the `'file'` element with the ID of `'upload'` (second value) inside the `'Upload'` tab (first value).
 
 ### Advanced Configuration - Browsing
 
@@ -160,7 +160,7 @@ Additional arguments to be passed in the query string to the external file manag
 
 ## Further Reading
 
-For more information on integrating CKEditor with a file manager refer to the following articles:
+For more information on integrating CKEditor 4 with a file manager refer to the following articles:
 
 * {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
 * {@link guide/dev/integration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}

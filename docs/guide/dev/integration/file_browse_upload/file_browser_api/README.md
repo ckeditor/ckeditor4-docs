@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # File Browser API - Creating a Custom File Manager
 
 <info-box info="">
-	CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in the {@linkexample standardpreset Standard} and {@linkexample fullpreset Full} presets.
+	CKEditor 4 can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in the {@linkexample standardpreset Standard} and {@linkexample fullpreset Full} presets.
 </info-box>
 
 <info-box info="">
@@ -22,11 +22,11 @@ For licensing, see LICENSE.md.
         config.filebrowserUploadMethod = 'form';
 </info-box>
 
-To connect a file browser/uploader that is already compatible with CKEditor, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](https://ckeditor.com/ckfinder/), check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
+To connect a file browser/uploader that is already compatible with CKEditor 4, refer to the {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article. If you want to integrate with [CKFinder](https://ckeditor.com/ckfinder/), check the {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} article.
 
-## Interaction Between CKEditor and File Manager
+## Interaction between CKEditor 4 and File Manager
 
-CKEditor automatically sends some additional arguments to the file manager:
+CKEditor 4 automatically sends some additional arguments to the file manager:
 
 * {@linkapi CKEDITOR.editor#name `CKEditor`} &ndash; The name of the CKEditor instance.
 * {@linkapi CKEDITOR.editor#langCode `langCode`} &ndash; CKEditor language (`en` for English).
@@ -40,7 +40,7 @@ CKEditor=editor1&CKEditorFuncNum=1&langCode=en
 
 ### Example 1
 
-Suppose that CKEditor was created using the following JavaScript call:
+Suppose that CKEditor 4 was created using the following JavaScript call:
 
 ```js
 CKEDITOR.replace( 'editor2', {
@@ -51,7 +51,7 @@ CKEDITOR.replace( 'editor2', {
 
 **Note:** As mentioned before, since **CKEditor 4.9.0** you may also need to add the {@linkapi CKEDITOR.config#filebrowserUploadMethod `filebrowserUploadMethod: 'form'`} configuration option.
 
-In order to browse files, CKEditor will call:
+In order to browse files, CKEditor 4 will call:
 
 ```
 /browser/browse.php?type=Files&CKEditor=editor2&CKEditorFuncNum=2&langCode=de
@@ -75,7 +75,7 @@ To send back the file URL from an external file manager, call {@linkapi CKEDITOR
 window.opener.CKEDITOR.tools.callFunction( funcNum, fileUrl [, data] );
 ```
 
-If `data` (the third argument) is a string, it will be displayed by CKEditor. This parameter is usually used to display an error message if a problem occurs during the file upload.
+If `data` (the third argument) is a string, it will be displayed by CKEditor 4. This parameter is usually used to display an error message if a problem occurs during the file upload.
 
 ### Example 2
 
@@ -113,7 +113,7 @@ The following example shows how to send the URL from a file manager using JavaSc
 
 ### Example 3
 
-If `data` is a function, it will be executed in the scope of the button that called the file manager. It means that the server connector can have direct access to CKEditor and the dialog window to which the button belongs.
+If `data` is a function, it will be executed in the scope of the button that called the file manager. It means that the server connector can have direct access to CKEditor 4 and the dialog window to which the button belongs.
 
 Suppose that apart from passing the `fileUrl` value that is assigned to an appropriate field automatically based on the dialog window definition you also want to set the `alt` attribute, if the file manager was opened in the **Image Properties** dialog window. In order to do this, pass an anonymous function as a third argument:
 
@@ -197,7 +197,7 @@ echo "<script type='text/javascript'>window.parent.CKEDITOR.tools.callFunction($
 
 ## Further Reading
 
-For more information on integrating CKEditor with a file manager refer to the following articles:
+For more information on integrating CKEditor 4 with a file manager refer to the following articles:
 
 * {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
 * {@link guide/dev/integration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}

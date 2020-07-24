@@ -10,9 +10,9 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Creating a Simple CKEditor Widget (Part 2)
+# Creating a Simple CKEditor 4 Widget (Part 2)
 
-The aim of this tutorial is to demonstrate **how to extend an existing CKEditor widget with a dialog window**. This dialog window will be used to insert a new widget into the editor or modify an existing one and set some basic properties (width, alignment) for it.
+The aim of this tutorial is to demonstrate **how to extend an existing CKEditor 4 widget with a dialog window**. This dialog window will be used to insert a new widget into the editor or modify an existing one and set some basic properties (width, alignment) for it.
 
 ## Prerequisites
 {@link guide/dev/deep_dive/widgets/README Widgets are an innovative feature} that is available since **CKEditor 4.3**. In order to proceed with this tutorial and create your own widget you need the following:
@@ -24,16 +24,17 @@ The aim of this tutorial is to demonstrate **how to extend an existing CKEditor 
 
 Instead of creating a new plugin, this time we are going to expand on the functionality of the {@link guide/widget_sdk/tutorial_1/README Simple Box widget plugin created in the previous installment} of the widget tutorial series.
 
-<info-box hint=""> We need to start where we previously left off. You can <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-simplebox-1">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/blob/master/README.md">instructions</a>.
+<info-box hint="">
+	We need to start where we previously left off. You can <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-simplebox-1">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/blob/master/README.md">instructions</a>.
 </info-box>
 
-Should you have any questions about the content of the existing plugin and its configuration, refer to the {@link guide/widget_sdk/tutorial_1/README Creating a Simple CKEditor Widget (Part 1)} tutorial.
+Should you have any questions about the content of the existing plugin and its configuration, refer to the {@link guide/widget_sdk/tutorial_1/README Creating a Simple CKEditor 4 Widget (Part 1)} tutorial.
 
 ## Widget Plugin Files
 
 We continue our work on the file structure that we created for the Simple Box widget plugin in the previous installment of the tutorial.
 
-CKEditor dialog windows can be defined in separate files and then loaded on demand, which improves the overall editor performance. We will name the dialog window file `simplebox.js` and place it in a newly added `dialogs` directory, creating the following directory structure for the widget:
+CKEditor 4 dialog windows can be defined in separate files and then loaded on demand, which improves the overall editor performance. We will name the dialog window file `simplebox.js` and place it in a newly added `dialogs` directory, creating the following directory structure for the widget:
 
 * `ckeditor root/`
 	* `plugins/`
@@ -82,7 +83,8 @@ Open the `dialogs/simplebox.js` file in a text editor now. For a start, we will 
 		};
 	} );
 
-<info-box hint=""> See the {@linkapi CKEDITOR.dialog.definition CKEDITOR.dialog.definition} documentation for a full reference on defining editor dialog windows.
+<info-box hint="">
+	See the {@linkapi CKEDITOR.dialog.definition CKEDITOR.dialog.definition} documentation for a full reference on defining editor dialog windows.
 </info-box>
 
 In our case we will give the dialog window a name (`simplebox`) and use the `{@linkapi CKEDITOR.dialog.definition#title title}`, `{@linkapi CKEDITOR.dialog.definition#minWidth minWidth}`, and `{@linkapi CKEDITOR.dialog.definition#minHeight minHeight}` parameters to define its title and minimum dimensions, respectively.
@@ -97,7 +99,7 @@ In our case we will give the dialog window a name (`simplebox`) and use the `{@l
 
 ## Dialog Window Contents
 
-The dialog window should also contain some content, but in our case one page (tab) with `{@linkapi CKEDITOR.dialog.definition.content#id id}` of `info` will be enough. This is added through the `{@linkapi CKEDITOR.dialog.definition#contents contents}` parameter of the dialog window definition. Note that by default CKEditor also adds the standard "OK" and "Cancel" buttons.
+The dialog window should also contain some content, but in our case one page (tab) with `{@linkapi CKEDITOR.dialog.definition.content#id id}` of `info` will be enough. This is added through the `{@linkapi CKEDITOR.dialog.definition#contents contents}` parameter of the dialog window definition. Note that by default CKEditor 4 also adds the standard "OK" and "Cancel" buttons.
 
 	CKEDITOR.dialog.add( 'simplebox', function( editor ) {
 		return {
@@ -129,7 +131,8 @@ Since it might be useful to control the widget alignment in the document, we wil
 
 Another UI element will be a text field where you will be able to define the width of the widget.
 
-<info-box hint=""> Since the width field will be using the <code>width</code> style property, you can use all CSS-allowed measurement units here: <code>px</code>, <code>%</code>, <code>in</code>, <code>cm</code>, <code>mm</code>, <code>em</code>, <code>ex</code>, <code>pt</code>, or <code>pc</code>.
+<info-box hint="">
+	Since the width field will be using the <code>width</code> style property, you can use all CSS-allowed measurement units here: <code>px</code>, <code>%</code>, <code>in</code>, <code>cm</code>, <code>mm</code>, <code>em</code>, <code>ex</code>, <code>pt</code>, or <code>pc</code>.
 </info-box>
 
 	elements: [
@@ -170,7 +173,8 @@ Let us start with the dialog window. We will need to define the `setup` and `com
 
 The `{@linkapi CKEDITOR.dialog.definition.uiElement#commit commit}` function is called when setting or changing the data in the widget, when a dialog window is being closed and the changes are confirmed by using the "OK" button. It uses the `{@linkapi CKEDITOR.plugins.widget#setData widget.setData()}` method to set the widget data to the value given in a dialog window field.
 
-<info-box hint=""> Note that the dialog window and the widget definition must use the same data properties (in this case, <code>width</code> and <code>align</code> with the exact same values, i.e. <code>left</code>, <code>right</code>, and <code>center</code>)!
+<info-box hint="">
+	Note that the dialog window and the widget definition must use the same data properties (in this case, <code>width</code> and <code>align</code> with the exact same values, i.e. <code>left</code>, <code>right</code>, and <code>center</code>)!
 </info-box>
 
 	elements: [
@@ -205,7 +209,8 @@ The `{@linkapi CKEDITOR.dialog.definition.uiElement#commit commit}` function is 
 		}
 	]
 
-<info-box hint=""> You might notice that the Dialog Window API states that setup and commit functions need to be complemented by <code>setupContent</code> and <code>commitContent</code> dialog window methods. However, you do not need to add these manually to your code as the Widget API does that for you.
+<info-box hint="">
+	You might notice that the Dialog Window API states that setup and commit functions need to be complemented by <code>setupContent</code> and <code>commitContent</code> dialog window methods. However, you do not need to add these manually to your code as the Widget API does that for you.
 </info-box>
 
 The dialog window definition is now complete, so let us go back to the `plugin.js` file. Even though the values are not used by the widget after you insert it, when you double click it, the dialog window will show that the values were indeed saved.
@@ -446,7 +451,8 @@ The following are all styles needed by the widget that should be added to your `
 }
 ```
 
-<info-box hint=""> You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-simplebox-2">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/blob/master/README.md">instructions</a>.
+<info-box hint="">
+	You can also <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/tutorial-simplebox-2">download the entire plugin folder</a> including the icon, the fully commented source code, and a working sample. If you have any doubts about the installation process, see the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/blob/master/README.md">instructions</a>.
 </info-box>
 
 ## Working Example

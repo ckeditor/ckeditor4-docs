@@ -12,17 +12,18 @@ For licensing, see LICENSE.md.
 
 # The jQuery Adapter
 
-<info-box info=""> This feature was introduced in <strong>CKEditor 4.2</strong>. It is provided through the <code>adapters/jquery.js</code> script file which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
+<info-box info="">
+	This feature was introduced in <strong>CKEditor 4.2</strong>. It is provided through the <code>adapters/jquery.js</code> script file which is included in all CKEditor 4 packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </info-box>
 
-CKEditor offers native jQuery integration through its jQuery Adapter (a jQuery plugin basically). It provides deep integration of CKEditor and jQuery that lets you use the native features of jQuery when using CKEditor. The jQuery Adapter is compatible with jQuery versions 1.7+ and 2.0+.
+CKEditor 4 offers native jQuery integration through its jQuery Adapter (a jQuery plugin basically). It provides deep integration of CKEditor 4 and jQuery that lets you use the native features of jQuery when using CKEditor 4. The jQuery Adapter is compatible with jQuery versions 1.7+ and 2.0+.
 
 Thanks to the jQuery Adapter every `textarea` element can be converted into a {@link guide/dev/framed/README classic editor}, while  any other {@linkapi CKEDITOR.dtd#s-editable editable} element can be changed into an {@link guide/dev/inline/README inline editor}.
 
 
 ## Creating Editor Instances
 
-In order to create editor instances, load the jQuery script file, the CKEditor core script file as well as the jQuery Adapter file, in the following order:
+In order to create editor instances, load the jQuery script file, the CKEditor 4 core script file as well as the jQuery Adapter file, in the following order:
 
 	<script src="jquery.js"></script>
 	<script src="ckeditor.js"></script>
@@ -95,7 +96,7 @@ Because setting and retrieving the editor data is a common operation, the jQuery
 	// Set the editor data.
 	$( 'textarea.editor' ).val( 'My new content' );
 
-Because {@linkapi CKEDITOR.editor#method-setData setting data} in CKEditor is an asynchronous operation , `val( 'some data' )` will return a [jQuery Promise object](http://api.jquery.com/promise/) if any of the elements is an editor. You can use it with jQuery helpers:
+Because {@linkapi CKEDITOR.editor#method-setData setting data} in CKEditor 4 is an asynchronous operation , `val( 'some data' )` will return a [jQuery Promise object](http://api.jquery.com/promise/) if any of the elements is an editor. You can use it with jQuery helpers:
 
 	$.when( $( '#editor' ).val( 'foo' ) ).then( function() {
 		// Now you are sure that the data is set.
@@ -120,7 +121,7 @@ First of all, the jQuery Adapter overwrites the CKEditor {@linkapi CKEDITOR.edit
 
 Moreover for `<textarea>` elements the editor will also automatically return its contents back to the form when it is submitted.
 
-Thanks to these changes CKEditor automatically works with the official jQuery Form Plugin for Ajax-based forms. It does not require any action from the developer's side to support it.
+Thanks to these changes CKEditor 4 automatically works with the official jQuery Form Plugin for Ajax-based forms. It does not require any action from the developer's side to support it.
 
 For example you can write the following HTML code:
 
@@ -144,7 +145,7 @@ And some JavaScript code:
 
 ## Event Handling
 
-Although CKEditor uses its own event system, there are five events which are being exposed to the jQuery event system. All events use the common event namespace, which is simply called `ckeditor`.
+Although CKEditor 4 uses its own event system, there are five events which are being exposed to the jQuery event system. All events use the common event namespace, which is simply called `ckeditor`.
 
 The following events are available:
 

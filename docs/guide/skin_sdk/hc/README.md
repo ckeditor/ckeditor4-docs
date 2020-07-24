@@ -18,6 +18,6 @@ In High Contrast, all colors go away. Most of the applications UIs because just 
 
 To quickly enable High Contrast easily on Windows, just use <kbd>SHIFT+ALT+PRINT_SCREEN</kbd>. Do that now! Additional settings can be controlled in the Windows Control Panel.
 
-CKEditor offers great support for High Contrast, limited to Firefox and Internet Explorer (other browsers don't support High Contrast).  When enabled, the editor is rendered as clear lines and the toolbar buttons present text labels, instead of icon images.
+CKEditor 4 offers great support for High Contrast, limited to Firefox and Internet Explorer (other browsers don't support High Contrast).  When enabled, the editor is rendered as clear lines and the toolbar buttons present text labels, instead of icon images.
 
 Skin developers must take this in consideration and make the necessary CSS styling to support High Contrast. This can be easily done by using the `.cke_hc` class name, which is set at the outer element of the editor UI. Usage examples can be find in the {@link guide/skin_sdk/intro/README#the-moono-skin Moono skin} files.

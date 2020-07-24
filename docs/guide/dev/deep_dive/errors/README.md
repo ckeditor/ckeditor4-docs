@@ -10,13 +10,13 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor Error Code Reference
+# CKEditor 4 Error Code Reference
 
 <info-box info="">
-	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
+	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor 4 packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </info-box>
 
-This article contains the list of CKEditor error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
+This article contains the list of CKEditor 4 error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
 
 ## autoembed-no-widget-def
 

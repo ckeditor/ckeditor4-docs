@@ -13,12 +13,12 @@ For licensing, see LICENSE.md.
 # Clipboard Integration
 
 <info-box info="">
-	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a> plugin that is included in all CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
+	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/clipboard">Clipboard</a> plugin that is included in all CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </info-box>
 
-One of the most important CKEditor features is the integration with the operating system's clipboard. The main role of this feature is to intercept any content that is being pasted, dropped, cut, copied or dragged from or to the editor. This allows to apply certain rules to this content, for instance with {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}.
+One of the most important CKEditor 4 features is the integration with the operating system's clipboard. The main role of this feature is to intercept any content that is being pasted, dropped, cut, copied or dragged from or to the editor. This allows to apply certain rules to this content, for instance with {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}.
 
-This feature is provided by the Clipboard plugin and, because of incomplete, broken or totally missing native support for this type of operations across browsers, it is very complex. The aim of this article is to explain how CKEditor integration with clipboard works under the hood. We recommend reading the {@link features/drop_paste/README Drop and Paste Feature Overview} article first.
+This feature is provided by the Clipboard plugin and, because of incomplete, broken or totally missing native support for this type of operations across browsers, it is very complex. The aim of this article is to explain how CKEditor 4 integration with clipboard works under the hood. We recommend reading the {@link features/drop_paste/README Drop and Paste Feature Overview} article first.
 
 ## Why Is Custom Clipboard Integration Needed?
 
@@ -63,7 +63,7 @@ editor.on( 'paste', function( evt ) {
 } );
 ```
 
-CKEditor performs its input data transformations (like cleanup, type recognition, formating a document from Word or Google Docs, file upload) the same way, using paste listeners.
+CKEditor 4 performs its input data transformations (like cleanup, type recognition, formating a document from Word or Google Docs, file upload) the same way, using paste listeners.
 
 The `evt.data.dataValue` is the most important property as this is the HTML which will be passed to the {@linkapi CKEDITOR.editor#insertHtml} method in the last {@linkapi CKEDITOR.editor#paste `paste`} listener.
 
@@ -98,7 +98,7 @@ Note that in both cases the pasted `dataValue` is an HTML string. If a plain tex
 
 ### Content Type Recognition
 
-In many cases everything that the editor gets from the clipboard is an HTML string (see the {@link guide/dev/deep_dive/clipboard/README#paste-bin Paste Bin} section below), so CKEditor is not able to guess the type of the pasted content. For instance, when `dataValue` equals `'foo'`, then was it possibly copied from a website or from a text editor? At the time of writing this article it is only possible to recognize the real content type in Chrome, Firefox and Opera, so in other browsers the type depends on {@linkapi CKEDITOR.config#clipboard_defaultContentType } (hence, most of the time it is `'html'` regardless of what was pasted).
+In many cases everything that the editor gets from the clipboard is an HTML string (see the {@link guide/dev/deep_dive/clipboard/README#paste-bin Paste Bin} section below), so CKEditor 4 is not able to guess the type of the pasted content. For instance, when `dataValue` equals `'foo'`, then was it possibly copied from a website or from a text editor? At the time of writing this article it is only possible to recognize the real content type in Chrome, Firefox and Opera, so in other browsers the type depends on {@linkapi CKEDITOR.config#clipboard_defaultContentType } (hence, most of the time it is `'html'` regardless of what was pasted).
 
 This recognition is also done in the {@linkapi CKEDITOR.editor#paste `paste` event} listener, with a priority of `6`, so listeners with higher priorities may see the `type == 'auto'` which means that the type is not yet recognized.
 
@@ -113,7 +113,7 @@ Limited browser capabilities related to clipboard support required implementing 
 
 ### Handling Various Data Types with Clipboard API
 
-By default CKEditor handles only `text/html` and `text/plain` data types. If Clipboard APIs are available, in a `paste` event listener with a priority of `1` the editor checks if the `text/html` data is available in the {@linkapi CKEDITOR.plugins.clipboard.dataTransfer} object and if so, copies it to `dataValue` and sets the `type` to be `'html'`. If it is unavailable, the editor checks `text/plain` and does the same after "HTMLifying" it. If both types are empty, it means that `dataTransfer` contains files or data in some other format. If the `dataValue` property is not set in any listener, {@linkapi CKEDITOR.editor#insertHtml} will not be called.
+By default CKEditor 4 handles only `text/html` and `text/plain` data types. If Clipboard APIs are available, in a `paste` event listener with a priority of `1` the editor checks if the `text/html` data is available in the {@linkapi CKEDITOR.plugins.clipboard.dataTransfer} object and if so, copies it to `dataValue` and sets the `type` to be `'html'`. If it is unavailable, the editor checks `text/plain` and does the same after "HTMLifying" it. If both types are empty, it means that `dataTransfer` contains files or data in some other format. If the `dataValue` property is not set in any listener, {@linkapi CKEDITOR.editor#insertHtml} will not be called.
 
 If you want to add support for some data format, use the `paste` event listener. For example, if you want to handle Rich Text Format and you created the `rtfToHtml()` converter, you can do the following:
 
@@ -137,41 +137,41 @@ To learn more about pasting and dropping files see the [file handling guide](#!/
 
 ## Copy, Cut and Paste
 
-CKEditor wants to intercept pasted data in every browser. Unfortunately, the Clipboard API is not yet available in all browsers, so CKEditor uses a hybrid solution to get the data using the Clipboard API and a paste bin.
+CKEditor 4 wants to intercept pasted data in every browser. Unfortunately, the Clipboard API is not yet available in all browsers, so CKEditor 4 uses a hybrid solution to get the data using the Clipboard API and a paste bin.
 
 ### Clipboard API
 
 It would be perfect if getting data from clipboard when the Clipboard API was available was as simple as accessing the [`clipboardData`](http://www.w3.org/TR/clipboard-apis/#widl-ClipboardEvent-clipboardData) from the native `paste` event and using a backup solution if Clipboard API is not available. Unfortunately, at the moment of writing this article, we know about cases in most browsers where the data is pasted when allowing the browser to perform a native `paste`, but is not available through the browser Clipboard API.
 
-If the data is available through the [Clipboard API](http://www.w3.org/TR/clipboard-apis/), CKEditor fires the {@linkapi CKEDITOR.editor#paste `paste` event} with the data available in the {@linkapi CKEDITOR.plugins.clipboard.dataTransfer} and an empty `dataValue`. If it is not possible, CKEditor uses the paste bin.
+If the data is available through the [Clipboard API](http://www.w3.org/TR/clipboard-apis/), CKEditor 4 fires the {@linkapi CKEDITOR.editor#paste `paste` event} with the data available in the {@linkapi CKEDITOR.plugins.clipboard.dataTransfer} and an empty `dataValue`. If it is not possible, CKEditor 4 uses the paste bin.
 
 ### Paste Bin
 
-A paste bin is a CKEditor mechanism to capture native paste. The mechanism works in the following steps:
+A paste bin is a CKEditor 4 mechanism to capture native paste. The mechanism works in the following steps:
 
-* When an attempt to paste the data is discovered, a moment before the paste really happens, CKEditor moves the selection to a special hidden container called the "paste bin".
-* Next, CKEditor waits to let the browser do the native paste into that paste bin.
-* After a short timeout CKEditor gets the content of this container.
-* Then, CKEditor moves the selection back to the {@linkapi CKEDITOR.editable} and removes the paste bin.
-* Finally, CKEditor fires the `paste` event with captured data as the `dataValue`.
+* When an attempt to paste the data is discovered, a moment before the paste really happens, CKEditor 4 moves the selection to a special hidden container called the "paste bin".
+* Next, CKEditor 4 waits to let the browser do the native paste into that paste bin.
+* After a short timeout CKEditor 4 gets the content of this container.
+* Then, CKEditor 4 moves the selection back to the {@linkapi CKEDITOR.editable} and removes the paste bin.
+* Finally, CKEditor 4 fires the `paste` event with captured data as the `dataValue`.
 
 It is very tricky to prevent the browser from blinking and scrolling. Up to version 4.5 this was the main mechanism for pasting and many bugs were reported and needed our patches. Now this is a backup solution when the Clipboard API is not supported properly. It is used in Internet Explorer, Edge and Chrome for Android.
 
 ### Cut and Copy
 
-Since version 4.5 CKEditor has a custom cut and copy handling mechanism, which means that it copies or cuts selected HTML using the {@linkapi CKEDITOR.editor#getSelectedHtml} and {@linkapi CKEDITOR.editor#extractSelectedHtml} methods and puts that data into the {@linkapi CKEDITOR.plugins.clipboard.dataTransfer} object as `text/html`. By using these methods instead of letting the browser handle copy and cut natively, CKEditor is able to handle these operations in the same way in all browsers, and to focus on what the user expected.
+Since version 4.5 CKEditor has a custom cut and copy handling mechanism, which means that it copies or cuts selected HTML using the {@linkapi CKEDITOR.editor#getSelectedHtml} and {@linkapi CKEDITOR.editor#extractSelectedHtml} methods and puts that data into the {@linkapi CKEDITOR.plugins.clipboard.dataTransfer} object as `text/html`. By using these methods instead of letting the browser handle copy and cut natively, CKEditor 4 is able to handle these operations in the same way in all browsers, and to focus on what the user expected.
 
 To avoid the security alerts in Internet Explorer when the user copies or cuts content using keyboard shortcuts, the editor does not use custom methods and lets the browser get or extract selected data.
 
 ## Drag and Drop
 
-Since version 4.5 CKEditor handles dragging and dropping manually. CKEditor uses the native browser drag and drop mechanism and listens for `dragstart`, `dragend`, `dragover` and `drop` events on the {@linkapi CKEDITOR.editable } area and fires the editor's events:
+Since version 4.5 CKEditor handles dragging and dropping manually. CKEditor 4 uses the native browser drag and drop mechanism and listens for `dragstart`, `dragend`, `dragover` and `drop` events on the {@linkapi CKEDITOR.editable } area and fires the editor's events:
 
 * {@linkapi CKEDITOR.editor#dragstart },
 * {@linkapi CKEDITOR.editor#dragend },
 * {@linkapi CKEDITOR.editor#drop }.
 
-Listeners for these events perform the entire drag and drop operation, which means that CKEditor puts dragged content into the {@linkapi CKEDITOR.plugins.clipboard.dataTransfer} object (if `dragstart` is inside it), gets dragged content, finds a range at the drop position and fires the `paste` event. Note that these events do not need to be based on native events. For example, the drag and drop of the block widgets uses [Line Utilities](https://ckeditor.com/cke4/addon/lineutils) and listens for mouse events, but fires the {@linkapi CKEDITOR.editor#dragstart }, {@linkapi CKEDITOR.editor#dragend } and {@linkapi CKEDITOR.editor#drop } events so the drag and drop is handled by the same code and hence can be processed in the same way.
+Listeners for these events perform the entire drag and drop operation, which means that CKEditor 4 puts dragged content into the {@linkapi CKEDITOR.plugins.clipboard.dataTransfer} object (if `dragstart` is inside it), gets dragged content, finds a range at the drop position and fires the `paste` event. Note that these events do not need to be based on native events. For example, the drag and drop of the block widgets uses [Line Utilities](https://ckeditor.com/cke4/addon/lineutils) and listens for mouse events, but fires the {@linkapi CKEDITOR.editor#dragstart }, {@linkapi CKEDITOR.editor#dragend } and {@linkapi CKEDITOR.editor#drop } events so the drag and drop is handled by the same code and hence can be processed in the same way.
 
 Note that the {@linkapi CKEDITOR.editor#drop `drop` event} fires the {@linkapi CKEDITOR.editor#paste `paste` event} which is the one which should be used for data transformations such as filtering or uploading files.
 
@@ -245,7 +245,7 @@ editor.on( 'paste', function( evt ) {
 
 ## Further Reading
 
-For more information on pasting, dropping and uploading files with CKEditor refer to the following articles:
+For more information on pasting, dropping and uploading files with CKEditor 4 refer to the following articles:
 
 * {@link features/drop_paste/README Dropping and Pasting into Editor Content}
 * {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files}

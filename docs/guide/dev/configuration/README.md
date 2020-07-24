@@ -10,9 +10,9 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Setting CKEditor Configuration
+# Setting CKEditor 4 Configuration
 
-CKEditor comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. The main configuration file is named `config.js`. This file can be found in the root of the CKEditor installation folder.
+CKEditor 4 comes with a rich set of configuration options that make it possible to customize its appearance, features, and behavior. The main configuration file is named `config.js`. This file can be found in the root of the CKEditor 4 installation folder.
 
 ## Available Configuration Options
 
@@ -20,7 +20,7 @@ All available configuration options can be found in the API documentation. Refer
 
 ## Defining Configuration In-Page
 
-The best way to set the CKEditor configuration is in-page, when creating editor instances. This method lets you avoid modifying the original distribution files in the CKEditor installation folder, making the upgrade task easier.
+The best way to set the CKEditor 4 configuration is in-page, when creating editor instances. This method lets you avoid modifying the original distribution files in the CKEditor 4 installation folder, making the upgrade task easier.
 
 In-page settings can be passed to any of the editor instance creation functions, namely {@linkapi CKEDITOR#replace} and {@linkapi CKEDITOR#appendTo}. For example:
 
@@ -35,7 +35,7 @@ Note that the configuration options are passed through a literal object definiti
 
 ## Using the config.js File
 
-CKEditor settings can also be configured by using the `config.js` file. By default this file is mostly empty. To change CKEditor configuration, add the settings that you want to modify to the `config.js` file. For example:
+CKEditor 4 settings can also be configured by using the `config.js` file. By default this file is mostly empty. To change CKEditor configuration, add the settings that you want to modify to the `config.js` file. For example:
 
 ``` js
 CKEDITOR.editorConfig = function( config ) {
@@ -48,7 +48,7 @@ In order to apply the configuration settings, the {@linkapi CKEDITOR.editorConfi
 
 ## Using a Custom Configuration File
 
-Using a custom configuration file is another recommended method of setting CKEditor configuration. Instead of using the default `config.js` file, you can create a copy of that file anywhere in your website and simply point the editor instances to load it. The advantage of this approach is that in this way you can avoid changing the original file, which makes it easier to upgrade CKEditor later by simply overwriting all files.
+Using a custom configuration file is another recommended method of setting CKEditor 4 configuration. Instead of using the default `config.js` file, you can create a copy of that file anywhere in your website and simply point the editor instances to load it. The advantage of this approach is that in this way you can avoid changing the original file, which makes it easier to upgrade CKEditor later by simply overwriting all files.
 
 Suppose you copied the `config.js` file to a folder named `custom` in the root of your website. You also renamed the file to `ckeditor_config.js`. At that point it is enough to only set the {@linkapi CKEDITOR.config#customConfig customConfig} configuration option when creating the editor instances to use the customized settings defined in the file. For example:
 
@@ -83,6 +83,6 @@ This setting is definitely recommended, if you are not setting the configuration
 
 ## Editor Features
 
-If you are wondering what CKEditor features are available, head to the {@link features/index Features Overview} section. You will find a many editor features categorized and explained there, along with references to configuration options that let you customize them.
+If you are wondering what CKEditor 4 features are available, head to the {@link features/index Features Overview} section. You will find a many editor features categorized and explained there, along with references to configuration options that let you customize them.
 
-The Features Overview section is complemented by {@linkexample index CKEditor Examples}, an awesome collection of **working editor samples** that present all concepts discussed there and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!
+The Features Overview section is complemented by {@linkexample index CKEditor Examples}, an awesome collection of **working editor samples** that present all concepts discussed there and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor 4 implementation!

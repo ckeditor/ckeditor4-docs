@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Reset and External CSS
 
-As we know, CKEditor is used inside webpages. In fact, the CKEditor UI and the skin CSS files are all loaded inside a page that is out of the editor and skin control. This means that the skin can have interference from external CSS present on the page.
+As we know, CKEditor is used inside webpages. In fact, the CKEditor 4 UI and the skin CSS files are all loaded inside a page that is out of the editor and skin control. This means that the skin can have interference from external CSS present on the page.
 
 Let's suppose a site likes red links. By simply adding `a { color: red; }` in a CSS file would be enough to make the toolbar labels or dialog tabs of the editor red.
 

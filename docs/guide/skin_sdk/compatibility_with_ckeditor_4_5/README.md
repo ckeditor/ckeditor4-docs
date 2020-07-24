@@ -7,7 +7,8 @@ meta-title-short: Compatibility with CKEditor 4.5
 ---
 # Skin Compatibility with CKEditor 4.5
 
-<info-box info=""> The features described in this article were introduced in <strong>CKEditor 4.5</strong>.
+<info-box info="">
+    The features described in this article were introduced in <strong>CKEditor 4.5</strong>.
 </info-box>
 
 Two of the new features introduced in [CKEditor 4.5](https://ckeditor.com/blog/CKEditor-4.4-Released) require additional styles to be added to the skin's CSS. These two features are:

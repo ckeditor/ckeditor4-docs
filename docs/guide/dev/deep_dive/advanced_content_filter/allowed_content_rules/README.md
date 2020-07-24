@@ -18,7 +18,7 @@ For licensing, see LICENSE.md.
 
 ## Introduction
 
-Allowed Content Rules define which HTML elements, attributes, styles, and classes are allowed. When configuring CKEditor you will be mostly interested in setting the {@linkapi CKEDITOR.config#allowedContent } and {@linkapi CKEDITOR.config#disallowedContent } options. Plugin developers will also need to set {@linkapi CKEDITOR.feature#allowedContent } properties which tell the editor what kind of content a feature allows in {@link guide/dev/deep_dive/advanced_content_filter/README#automatic-mode automatic mode}.
+Allowed Content Rules define which HTML elements, attributes, styles, and classes are allowed. When configuring CKEditor 4 you will be mostly interested in setting the {@linkapi CKEDITOR.config#allowedContent } and {@linkapi CKEDITOR.config#disallowedContent } options. Plugin developers will also need to set {@linkapi CKEDITOR.feature#allowedContent } properties which tell the editor what kind of content a feature allows in {@link guide/dev/deep_dive/advanced_content_filter/README#automatic-mode automatic mode}.
 
 Allowed Content Rule usually consists of four main parts:
 

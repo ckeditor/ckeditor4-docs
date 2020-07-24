@@ -12,19 +12,20 @@ For licensing, see LICENSE.md.
 
 # Content Filtering (ACF)
 
-<info-box info=""> This article provides basic information about editor content filtering feature which was introduced in <strong>CKEditor 4.1</strong>. For detailed documentation about this feature check the {@link guide/dev/deep_dive/advanced_content_filter/README CKEditor Deep Dive} section.
+<info-box info="">
+    This article provides basic information about editor content filtering feature which was introduced in <strong>CKEditor 4.1</strong>. For detailed documentation about this feature check the {@link guide/dev/deep_dive/advanced_content_filter/README CKEditor Deep Dive} section.
 </info-box>
 
-Advanced Content Filter (ACF) is a CKEditor core feature that **filters incoming HTML content** by transforming and deleting disallowed elements, attributes, classes and styles. If you paste content into CKEditor and notice that some elements are removed, then chances are high that it was removed by ACF.
+Advanced Content Filter (ACF) is a CKEditor core feature that **filters incoming HTML content** by transforming and deleting disallowed elements, attributes, classes and styles. If you paste content into CKEditor 4 and notice that some elements are removed, then chances are high that it was removed by ACF.
 
-By default, ACF works in **automatic mode**. It means that out-of-the-box CKEditor will only allow content that was *defined as allowed* by enabled editor features (buttons, plugins). For example if the **Image** button is enabled, CKEditor will allow `<img>` tags and so on. This default behavior makes sense as otherwise the user would not be able to easily work with elements that cannot be recognized by any of available plugins without editing the HTML source code manually.
+By default, ACF works in **automatic mode**. It means that out-of-the-box CKEditor 4 will only allow content that was *defined as allowed* by enabled editor features (buttons, plugins). For example if the **Image** button is enabled, CKEditor 4 will allow `<img>` tags and so on. This default behavior makes sense as otherwise the user would not be able to easily work with elements that cannot be recognized by any of available plugins without editing the HTML source code manually.
 
 <info-box hint="">
     <p>
         <strong>ACF does not replace a security filter for your website content.</strong> If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
     </p>
     <p>
-        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities. For example, if you decide to allow all attributes in HTML elements, you will allow users to enter <code>onclick</code>, <code>onload</code>, <code>onerror</code> handlers. Although ACF is not a security filter, leaving it in default, automatic mode should minimise the risk of XSS issues.
+        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor 4 features may result in XSS vulnerabilities. For example, if you decide to allow all attributes in HTML elements, you will allow users to enter <code>onclick</code>, <code>onload</code>, <code>onerror</code> handlers. Although ACF is not a security filter, leaving it in default, automatic mode should minimise the risk of XSS issues.
     </p>
 </info-box>
 
@@ -48,13 +49,13 @@ Common use case: An alternative to allowing just everything, which helps, for ex
 
 Automatic mode is **enabled by default**.
 
-Common use case: Any website where users are expected to enter content that matches CKEditor configuration set by the website developer.
+Common use case: Any website where users are expected to enter content that matches CKEditor 4 configuration set by the website developer.
 
 ### Automatic mode and allow additional tags/properties
 
 Available through {@linkapi CKEDITOR.config.extraAllowedContent CKEDITOR.config.extraAllowedContent}.
 
-Common use case: Any website where users are expected to enter content that matches CKEditor configuration along with a predefined list of additional tags that the users should be able to enter, but for which no supporting CKEditor feature is available (e.g `<dl>`, `<dt>`, `<dd>`).
+Common use case: Any website where users are expected to enter content that matches CKEditor 4 configuration along with a predefined list of additional tags that the users should be able to enter, but for which no supporting CKEditor 4 feature is available (e.g `<dl>`, `<dt>`, `<dd>`).
 
 ``` js
 // Allow <dl>, <dt>, <dd>.
@@ -65,7 +66,7 @@ config.extraAllowedContent = 'dl dt dd';
 
 Available through {@linkapi CKEDITOR.config.disallowedContent CKEDITOR.config.disallowedContent}.
 
-Common use case: Any website where users are expected to enter content that matches CKEditor configuration, but the automatic configuration needs minor adjustments.
+Common use case: Any website where users are expected to enter content that matches CKEditor 4 configuration, but the automatic configuration needs minor adjustments.
 
 #### Example: Disallow inline styles
     // Disallow setting borders for images. '*' is used as a wildcard.
@@ -80,7 +81,7 @@ Common use case: Any website where users are expected to enter content that matc
     config.disallowedContent = 'a';
 
 #### Example: Disallow inline styles and use attributes instead
-    // In case of disallowing width and height styles, CKEditor will use attributes instead.
+    // In case of disallowing width and height styles, CKEditor 4 will use attributes instead.
     config.disallowedContent = 'img{width,height}';
 
 **Hint:** In automatic mode {@linkapi CKEDITOR.config.disallowedContent CKEDITOR.config.disallowedContent} and {@linkapi CKEDITOR.config.extraAllowedContent CKEDITOR.config.extraAllowedContent} can be provided together.
@@ -89,7 +90,7 @@ Common use case: Any website where users are expected to enter content that matc
 
 It is possible to manually specify allowed tags or properties through {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} To do this right, it is recommended you get familiar with the section about ACF in the {@link guide/dev/deep_dive/advanced_content_filter/README CKEditor Deep Dive} section.
 
-If allowed content is specified manually, CKEditor will hide features that require elements which are not allowed.
+If allowed content is specified manually, CKEditor 4 will hide features that require elements which are not allowed.
 For example, if the `<table>` tag is not included in the manual ACF configuration, the **Table** button will not be available in the toolbar, even if the Table plugin is enabled.
 
 ``` js
@@ -108,7 +109,7 @@ ACF is a feature which is not that easy to configure (when the automatic mode is
 
 ACF should not be used as a replacement to server-side security filtering that sanitizes entered data. If, however, a server-side filter exists, ACF will be its perfect companion that ensures the users will see exactly the same content in the editor as after saving it.
 
-Suppose that server-side filter does not allow the `<iframe>` tag. If users would be able to paste it into CKEditor and see the iframe inside the WYSIWYG area, would that not be confusing?
+Suppose that server-side filter does not allow the `<iframe>` tag. If users would be able to paste it into CKEditor 4 and see the iframe inside the WYSIWYG area, would that not be confusing?
 
 ### Save time
 
@@ -140,7 +141,7 @@ The result of pasting the same content in the Standard preset, with ACF enabled.
 
 ### Keep the content concise
 
-Bold text can be represented on websites by `<strong>`, `<b>`, or `<span style="font-weight:bold">` elements. All these tags might be copied into CKEditor by content creators. What if your website has a special CSS rule defined for the `<strong>` tag, but not for `<span style="font-weight:bold">`? If ACF is enabled, it will {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations transform pasted content} into a consistent form.
+Bold text can be represented on websites by `<strong>`, `<b>`, or `<span style="font-weight:bold">` elements. All these tags might be copied into CKEditor 4 by content creators. What if your website has a special CSS rule defined for the `<strong>` tag, but not for `<span style="font-weight:bold">`? If ACF is enabled, it will {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations transform pasted content} into a consistent form.
 
 ## Advanced Content Filter Demos
 

@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Getting the Source Code
 
-Working with the source code of CKEditor may be useful. These are some possible situations that you may face:
+Working with the source code of CKEditor 4 may be useful. These are some possible situations that you may face:
 
  * You are developing plugins or skins, so you want to build your own distributions.
  * You are assembling the editor by yourself, by adding plugins and skins to it manually.
@@ -23,7 +23,7 @@ Working with the source code of CKEditor may be useful. These are some possible 
 
 ## Cloning from GitHub
 
-The CKEditor source code is available in the [ckeditor4](https://github.com/ckeditor/ckeditor4) Git repository hosted at GitHub.
+The CKEditor 4 source code is available in the [ckeditor4](https://github.com/ckeditor/ckeditor4) Git repository hosted at GitHub.
 
 If you have Git installed in your system, use the following command line call to create your local copy:
 
@@ -31,12 +31,12 @@ If you have Git installed in your system, use the following command line call to
 git clone https://github.com/ckeditor/ckeditor4.git
 ```
 
-This will download the full CKEditor development code into the `ckeditor4` folder.
+This will download the full CKEditor 4 development code into the `ckeditor4` folder.
 
 ## Performance
 
-Note that the source code version of CKEditor is not optimized for production websites. It works flawlessly on a local computer or network, but if you include it in your production website, it may need to do more than two hundred HTTP requests to download more than a megabyte of code.
+Note that the source code version of CKEditor 4 is not optimized for production websites. It works flawlessly on a local computer or network, but if you include it in your production website, it may need to do more than two hundred HTTP requests to download more than a megabyte of code.
 
-Because of this **do not use the source code version of CKEditor in production websites**!
+Because of this **do not use the source code version of CKEditor 4 in production websites**!
 
 Once your local development is completed, {@link guide/dev/build/README create a CKEditor build} that will be distribution-ready.

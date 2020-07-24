@@ -53,7 +53,7 @@ Do remember that if the DOM element for which inline editing is being enabled do
 </script>
 ```
 
-When you click inside the content of this `<div>` element, the CKEditor toolbar will appear.
+When you click inside the content of this `<div>` element, the CKEditor 4 toolbar will appear.
 
 <info-box hint="">
 	The list of elements that support inline editing is available in the {@linkapi CKEDITOR.dtd.s-editable CKEDITOR.dtd.$editable} property.

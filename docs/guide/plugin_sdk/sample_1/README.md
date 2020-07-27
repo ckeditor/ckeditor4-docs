@@ -92,7 +92,7 @@ Note: The exact position depends on the indexes defined by other buttons availab
 
 ## CKEditor 4 Initialization
 
-It is now time to tell CKEditor 4 to load our plugin. To do so we have to add its name to the CKEDITOR.config.extraPlugins configuration option:
+It is now time to tell CKEditor 4 to load our plugin. To do so we have to add its name to the {@linkapi CKEDITOR.config.extraPlugins CKEDITOR.config.extraPlugins} configuration option:
 
 	config.extraPlugins = 'abbr';
 

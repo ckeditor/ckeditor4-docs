@@ -1,5 +1,5 @@
 ---
-category: inserting-content
+category: user-interface
 order: 181
 url: features/editorplaceholder
 menu-title: Editor Placeholder

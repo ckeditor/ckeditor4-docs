@@ -1,6 +1,6 @@
 ---
 category: user-interface
-order: 181
+order: 60
 url: features/editorplaceholder
 menu-title: Editor Placeholder
 meta-title-short: Editor Placeholder

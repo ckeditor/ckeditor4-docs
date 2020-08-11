@@ -18,11 +18,7 @@ For licensing, see LICENSE.md.
 
 The Editor Placeholder plugin allows you to display a placeholder text when the editor content is empty.
 
-The sample configuration of Editor Placeholder plugin can look like this:
-
-```js
-config.editorplaceholder = 'Type your comment…';
-```
+{@img assets/img/editorplaceholder_01.png}
 
 ## Editor Placeholder Demo
 

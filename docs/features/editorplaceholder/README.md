@@ -12,6 +12,10 @@ For licensing, see LICENSE.md.
 
 # Using Editor Placeholder
 
+<info-box info="">
+	This feature was introduced in CKEditor 4.15 and is provided through the <a href="https://ckeditor.com/cke4/addon/editorplaceholder">Editor Placeholder</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+</info-box>
+
 The Editor Placeholder plugin allows you to display a placeholder text when the editor content is empty.
 
 The sample configuration of Editor Placeholder plugin can look like this:

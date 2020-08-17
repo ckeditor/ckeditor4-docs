@@ -26,7 +26,7 @@
     "ckeditor4-react": "^1.0.0",
     "ckeditor4-vue": "^0.1.0",
     "classlist.js": "^1.1.20150312",
-    "core-js": "^3.6.5",
+    "core-js": "^2.6.11",
     "dargs": "~4.0.0",
     "fs-extra": "^7.0.1",
     "glob": "^7.1.2",

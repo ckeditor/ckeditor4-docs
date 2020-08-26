@@ -72,7 +72,7 @@ As for browser compatibility, the Export to PDF plugin works in all browsers {@l
 
 The crucial aspect of this feature is its configuration. In order to ensure that the generated PDF looks as close as possible to the same content when it is displayed in the WYSIWYG editor, the feature should be carefully configured. The configuration options available both in the plugin and the HTML to PDF converter allow you to create PDF documents that will fulfill the needs of your application and your end-users.
 
-### Setting up a licence key
+### Setting up a license key
 
 <info-box info="">
 	The Export to PDF plugin is a commercial product and a license can be purchased [here](https://ckeditor.com/contact/). You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).

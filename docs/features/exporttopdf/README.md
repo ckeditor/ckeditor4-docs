@@ -13,9 +13,13 @@ For licensing, see LICENSE.md.
 # Exporting editor content to PDF
 
 <info-box info="">
-	This feature is provided through the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin that is not included in any official CKEditor 4 preset. You can {@link guide/dev/plugins/README add it to your custom build} with [online builder](https://ckeditor.com/cke4/builder) or download as an [npm package](https://www.npmjs.com/package/ckeditor4-plugin-exportpdf).
+	This feature is provided through the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin that is included in `standard` and `full` official CKEditor 4 presets. You can also {@link guide/dev/plugins/README add it to your custom build} with [online builder](https://ckeditor.com/cke4/builder) or download as an [npm package](https://www.npmjs.com/package/ckeditor4-plugin-exportpdf).
 
 	This is a premium feature. Please [contact us](https://ckeditor.com/contact/) if you would like to purchase a license. Let us know if you have any feedback or questions!
+
+	You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).
+
+	If this feature is used without authentication, the resulting document will be watermarked.
 </info-box>
 
 The optional [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin allows you to easily print the WYSIWYG editor content to a PDF file.
@@ -71,7 +75,9 @@ The crucial aspect of this feature is its configuration. In order to ensure that
 ### Setting up a licence key
 
 <info-box info="">
-	The Export to PDF plugin is a commercial product and a license can be purchased [here](https://ckeditor.com/contact/). You can request a <a href="https://orders.ckeditor.com/trial/exportpdf">free trial license key</a> in order to start using it.
+	The Export to PDF plugin is a commercial product and a license can be purchased [here](https://ckeditor.com/contact/). You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).
+
+	If this feature is used without authentication, the resulting document will be watermarked.
 </info-box>
 
 There is just one thing you have to do to activate plugin - set a `exportPdf_tokenUrl` configuration option:
@@ -85,8 +91,6 @@ CKEDITOR.replace( 'editor', {
 This value is unique for each customer and can be found in the [CKEditor Ecosystem dashboard](https://dashboard.ckeditor.com).
 
 This is all. If you are having trouble in setting up Easy Image, please [contact us](https://ckeditor.com/contact/).
-
-**Note:** Export to PDF plugin can also be tested for free as it is included in `standard` and `full` builds - in such case it is attaching a kind footnote to each generated document.
 
 ### Achieving the Best Results
 

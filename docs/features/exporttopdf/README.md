@@ -70,6 +70,26 @@ As for browser compatibility, the Export to PDF plugin works in all browsers {@l
 
 The crucial aspect of this feature is its configuration. In order to ensure that the generated PDF looks as close as possible to the same content when it is displayed in the WYSIWYG editor, the feature should be carefully configured. The configuration options available both in the plugin and the HTML to PDF converter allow you to create PDF documents that will fulfill the needs of your application and your end-users.
 
+### Setting up a licence key
+
+<info-box info="">
+	The Export to PDF plugin is a commercial product and a license can be purchased [here](https://ckeditor.com/contact/). You can request a <a href="https://orders.ckeditor.com/trial/exportpdf">free trial license key</a> in order to start using it.
+</info-box>
+
+There is just one thing you have to do to activate plugin - set a `exportPdf_tokenUrl` configuration option:
+
+```js
+CKEDITOR.replace( 'editor', {
+	exportPdf_tokenUrl: 'https://example.com/cs-token-endpoint'
+} )
+```
+
+This value is unique for each customer and can be found in the [CKEditor Ecosystem dashboard](https://dashboard.ckeditor.com).
+
+This is all. If you are having trouble in setting up Easy Image, please [contact us](https://ckeditor.com/contact/).
+
+**Note:** Export to PDF plugin can also be tested for free as it is included in `standard` and `full` builds - in such case it is attaching a kind footnote to each generated document.
+
 ### Achieving the Best Results
 
 Due to the differences between browsers and operating systems it is not always possible to reach a perfect match between the content in the editor and in the generated PDF file. However, thanks to flexible configuration, adjusting a few configuration options can make the difference hardly noticeable.

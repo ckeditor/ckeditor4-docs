@@ -15,9 +15,7 @@ For licensing, see LICENSE.md.
 <info-box info="">
 	This feature is provided through the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin that is included in `standard` and `full` official CKEditor 4 presets. You can also {@link guide/dev/plugins/README add it to your custom build} with [online builder](https://ckeditor.com/cke4/builder) or download as an [npm package](https://www.npmjs.com/package/ckeditor4-plugin-exportpdf).
 
-	This is a premium feature. Please [contact us](https://ckeditor.com/contact/) if you would like to purchase a license. Let us know if you have any feedback or questions!
-
-	You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).
+	This is a premium feature. Please [contact us](https://ckeditor.com/contact/) if you would like to purchase a license. Let us know if you have any feedback or questions! You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).
 
 	If this feature is used without authentication, the resulting document will be watermarked.
 </info-box>
@@ -73,12 +71,6 @@ As for browser compatibility, the Export to PDF plugin works in all browsers {@l
 The crucial aspect of this feature is its configuration. In order to ensure that the generated PDF looks as close as possible to the same content when it is displayed in the WYSIWYG editor, the feature should be carefully configured. The configuration options available both in the plugin and the HTML to PDF converter allow you to create PDF documents that will fulfill the needs of your application and your end-users.
 
 ### Setting up a license key
-
-<info-box info="">
-	The Export to PDF plugin is a commercial product and a license can be purchased [here](https://ckeditor.com/contact/). You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).
-
-	If this feature is used without authentication, the resulting document will be watermarked.
-</info-box>
 
 There is just one thing you have to do to activate plugin - set a `exportPdf_tokenUrl` configuration option:
 

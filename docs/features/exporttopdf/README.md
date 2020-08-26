@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Exporting editor content to PDF
 
 <info-box info="">
-	This feature is provided through the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin that is included in `standard` and `full` official CKEditor 4 presets. You can also {@link guide/dev/plugins/README add it to your custom build} with [online builder](https://ckeditor.com/cke4/builder) or download as an [npm package](https://www.npmjs.com/package/ckeditor4-plugin-exportpdf).
+	This feature is provided through the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin that is included in `standard-all` and `full-all` official CKEditor 4 presets. You can also {@link guide/dev/plugins/README add it to your custom build} with [online builder](https://ckeditor.com/cke4/builder) or download as an [npm package](https://www.npmjs.com/package/ckeditor4-plugin-exportpdf).
 
 	This is a premium feature. Please [contact us](https://ckeditor.com/contact/) if you would like to purchase a license. Let us know if you have any feedback or questions! You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).
 
@@ -72,7 +72,7 @@ The crucial aspect of this feature is its configuration. In order to ensure that
 
 ### Setting up a license key
 
-There is just one thing you have to do to activate plugin - set a `exportPdf_tokenUrl` configuration option:
+There is just one thing you have to do to activate Export to PDF plugin - set a `exportPdf_tokenUrl` configuration option:
 
 ```js
 CKEDITOR.replace( 'editor', {
@@ -82,7 +82,7 @@ CKEDITOR.replace( 'editor', {
 
 This value is unique for each customer and can be found in the [CKEditor Ecosystem dashboard](https://dashboard.ckeditor.com).
 
-This is all. If you are having trouble in setting up Easy Image, please [contact us](https://ckeditor.com/contact/).
+This is all. If you are having trouble in setting up Export to PDF, please [contact us](https://ckeditor.com/contact/).
 
 ### Achieving the Best Results
 

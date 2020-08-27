@@ -27,7 +27,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## cloudservices-no-token
 
 * Location: `plugins/cloudservices/plugin.js`
-* Description: Authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.cloudServices_tokenUrl token URL} returned an empty response.
+* Description: The authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.cloudServices_tokenUrl token URL} returned an empty response.
 * Additional data: None.
 
 ## cloudservices-no-token-url

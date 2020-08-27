@@ -98,7 +98,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## exportpdf-no-token
 
 * Location: `plugins/exportpdf/plugin.js`
-* Description: Authentication token for the [CKEditor Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.exportPdf_tokenUrl token URL} returned an empty response.
+* Description: The authentication token for the [CKEditor Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.exportPdf_tokenUrl token URL} returned an empty response.
 * Additional data: None.
 
 ## exportpdf-no-token-url

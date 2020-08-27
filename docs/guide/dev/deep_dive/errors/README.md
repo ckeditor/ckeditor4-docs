@@ -95,6 +95,18 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 * Description: A widget no longer belongs to the current editor's widgets list and is no longer valid.
 * Additional data: None.
 
+## exportpdf-no-token-url
+
+* Location: `plugins/exportpdf/plugin.js`
+* Description: {@linkapi CKEDITOR.config.exportPdf_tokenUrl} configuration variable for the [CKEditor Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin was not specified.
+* Additional data: None.
+
+## exportpdf-no-token
+
+* Location: `plugins/exportpdf/plugin.js`
+* Description: Authentication token for the [CKEditor Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.exportPdf_tokenUrl token URL} returned an empty response.
+* Additional data: None.
+
 ## filetools-response-error
 
 * Location: `plugins/filetools/plugin.js`

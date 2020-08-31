@@ -36,4 +36,22 @@ module JsDuck::Tag
 			@repeatable = true
 		end
 	end
+
+	class SkipSource < Tag
+		def initialize
+			@tagname = :skipSource
+			@pattern = "skipsource"
+			@repeatable = true
+		end
+
+		def parse_doc(p, pos)
+			{
+				:tagname => :skipSource
+			}
+		end
+
+		def process_doc(h, tags, pos)
+			h[:skipSource] = true
+		end
+	end
 end

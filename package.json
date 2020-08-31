@@ -21,7 +21,7 @@
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",
     "ckeditor4-angular": "^1.0.0",
-    "ckeditor4-plugin-exportpdf": "^0.1.2",
+    "ckeditor4-plugin-exportpdf": "^1.0.0",
     "ckeditor4-plugin-spreadsheet": "^1.2.0",
     "ckeditor4-react": "^1.0.0",
     "ckeditor4-vue": "^0.1.0",

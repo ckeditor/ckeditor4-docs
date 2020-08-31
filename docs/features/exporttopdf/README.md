@@ -17,7 +17,7 @@ For licensing, see LICENSE.md.
 
 	This is a premium feature. Please [contact us](https://ckeditor.com/contact/) if you would like to purchase a license. Let us know if you have any feedback or questions! You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).
 
-	If this feature is used without authentication, the resulting document will be watermarked.
+	If this feature is used without authorization, the resulting document will be watermarked.
 </info-box>
 
 The optional [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin allows you to easily print the WYSIWYG editor content to a PDF file.
@@ -72,7 +72,7 @@ The crucial aspect of this feature is its configuration. In order to ensure that
 
 ### Setting up a license key
 
-There is just one thing you have to do to activate Export to PDF plugin - set a `exportPdf_tokenUrl` configuration option:
+If you have a commercial license for Export to PDF plugin, [exportPdf_tokenUrl](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-exportPdf_tokenUrl) configuration option should be set to remove watermark from generated documents:
 
 ```js
 CKEDITOR.replace( 'editor', {

@@ -31,7 +31,7 @@ This will cause the editor UI to assume the provided color, as visible below.
 
 ## User Interface Color Demo
 
-The {@linksdk uicolor "Setting Editor UI Color" sample} shows how the editor user interface color can be changed by using the configuration option.
+The {@linkexample uicolor "Setting Editor UI Color" sample} shows how the editor user interface color can be changed by using the configuration option.
 
 ## Related Features
 

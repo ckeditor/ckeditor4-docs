@@ -90,7 +90,7 @@ If you want to allow both vertical and horizontal resizing, you need to set the 
 
 ## Editor Resizing Customization Demo
 
-See the {@linksdk resize working "Editor Resizing Customization" sample} that showcases an editor instance with modified resizing settings.
+See the {@linkexample resize working "Editor Resizing Customization" sample} that showcases an editor instance with modified resizing settings.
 
 ## Related Features
 

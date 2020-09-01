@@ -39,7 +39,7 @@ If you chose another method to install CKEditor 4, copy or link the `spreadsheet
 If you prefer not to touch any files, you may use the [`CKEDITOR.plugins.addExternal()`](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_plugins.html#method-addExternal) API instead to load the Spreadsheet plugin directly from the `node_modules/` directory:
 
 ```js
-CKEDITOR.plugins.addExternal( 'spreadsheet', './node-modules/ckeditor4-plugin-spreadsheet/spreadsheet/' );
+CKEDITOR.plugins.addExternal( 'spreadsheet', './node_modules/ckeditor4-plugin-spreadsheet/spreadsheet/' );
 ```
 
 ### Custom Build with Online Builder
@@ -245,7 +245,7 @@ CKEDITOR.addTemplates( 'spreadsheets', {
 } );
 ```
 
-The above template will allow inserting a 2x2 spreadsheet widget with the default ascending sorting order (in the first column) and the numeric data type (in the second column) with just two clicks. See it in action in the {@linksdk spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample}.
+The above template will allow inserting a 2x2 spreadsheet widget with the default ascending sorting order (in the first column) and the numeric data type (in the second column) with just two clicks. See it in action in the {@linkexample spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample}.
 
 ## Manipulating the Spreadsheet Widget Data via API
 
@@ -314,4 +314,4 @@ Refer to the {@link features/spreadsheets/README Creating Data Grids with Spread
 
 ## Demo
 
-See the {@linksdk spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample} that showcases the most important features like styling, sorting, conditional formatting, formulas and more.
+See the {@linkexample spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample} that showcases the most important features like styling, sorting, conditional formatting, formulas and more.

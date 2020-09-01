@@ -223,7 +223,7 @@ If for any reason you need to do this, note that the path to the connector must 
 
 ## Dropping and Pasting Upload Demo
 
-See the {@linksdk fileupload#uploading-dropped-and-pasted-images working "Uploading Dropped and Pasted Images" sample} for an example of the Upload Image plugin integration with CKEditor and CKFinder.
+See the {@linkexample fileupload#uploading-dropped-and-pasted-images working "Uploading Dropped and Pasted Images" sample} for an example of the Upload Image plugin integration with CKEditor and CKFinder.
 
 ## Further Reading
 

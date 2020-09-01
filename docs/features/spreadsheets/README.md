@@ -43,15 +43,31 @@ The Spreadsheet plugin allows you to create intelligent, data-driven documents r
 
 ## Cell Referencing
 
-What makes Spreadsheets special? First-class integration with content editing! You can start typing `$` to see cell suggestions from the spreadsheets inside your document. Cell references are a living part of your document, which means that editing the spreadsheet cell value will also update all the references automatically. What is even more convenient, you do not even need to see the spreadsheet instance in a long document. Smart suggestions and fuzzy matching will simplify connecting the data from any spreadsheet present in the editor with the editor content.
+What makes Spreadsheets special? First-class integration with content editing! You can start typing `$` to see cell suggestions from the spreadsheets inside your document. Cell references are a living part of your document, which means that editing the spreadsheet cell value, including via the API, will also update all the references automatically. What is even more convenient, you do not need to see the spreadsheet instance in a long document. Smart suggestions and fuzzy matching will simplify connecting the data from any spreadsheet present in the editor with the editor content.
 
 {@img assets/img/spreadsheet_14.png Spreadsheet plugin widget with cell references.}
+
+To display the cell referencing suggestion panel, just type the `$` sign (see {@link guide/dev/integration/spreadsheets/README#customizing-the-matching-pattern how to reconfigure the default matching pattern}). By default, the suggestion panel will show up to 10 items ({@link guide/dev/integration/spreadsheets/README#limiting-or-increasing-the-number-of-suggestions the number of suggestions is configurable}), narrowed down based on the closest pattern match and the spreadsheet cell order, starting from the top-left corner.
+
+
+Each suggestion consists of six parts. For example, a suggestion like <span style="color:hsl(0, 0%, 45%);">$</span><span style="color:hsl(113, 69%, 26%);">spreadsheet1</span><span style="color:hsl(0, 0%, 45%);">!</span><span style="color:hsl(286, 44%, 47%);">Symbol</span><span style="color:hsl(0, 0%, 45%);">:</span><span style="color:hsl(214, 93%, 41%);">11</span> consists of:
+
+<ol>
+	<li>The suggestion prefix (<span style="color:hsl(0, 0%, 45%);">$</span>) &ndash; Opens the suggestions panel.</li>
+	<li>The spreadsheet name (<span style="color:hsl(113, 69%, 26%);">spreadsheet1</span>) &ndash; Filters suggestions by spreadsheet names (which can be set via the dialog during the spreadsheet insertion).</li>
+	<li>The cell prefix (<span style="color:hsl(0, 0%, 45%);">!</span>) &ndash; Separates the spreadsheet name from the column and row names.</li>
+	<li>The column name (<span style="color:hsl(286, 44%, 47%);">Symbol</span>) &ndash; Filters suggestions by column names.</li>
+	<li>The column and row name separator (<span style="color:hsl(0, 0%, 45%);">:</span>) &ndash; Separates the column name from the row name.</li>
+	<li>The row name (<span style="color:hsl(214, 93%, 41%);">11</span>) &ndash; Filters suggestions by row names.</li>
+</ol>
+
+You can try out this feature in the {@linkexample spreadsheets#cell-referencing dedicated sample}.
 
 ## Conditional Formatting
 
 Do you need to add some colors to your data? Conditional formatting allows formatting data (any cell, column or entire data grid) based on its content. For example, you can mark cells red when they are empty, make them green when their value is above some threshold or blue if the cell value contains a specific text.
 
-Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linksdk spreadsheets working Spreadsheets demo}.
+Conditional formatting comes with a dozen of predefined rules. Any number of rules can be set up for each cell, which allows for complex formatting and handling advanced cases. You can even drag and drop conditional formatting rules, changing their priority to easily create features like a color scale. Put your hands on the color scale example in the {@linkexample spreadsheets working Spreadsheets demo}.
 
 {@img assets/img/spreadsheet_10.png Spreadsheet plugin with the Conditional Formatting dialog.}
 
@@ -166,7 +182,7 @@ One of the main features of a WYSIWYG editor is the ability to show the created 
 
 ## Spreadsheets Demo
 
-See the {@linksdk spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample} that showcases the most important features like data styling, sorting, conditional formatting, formulas and more.
+See the {@linkexample spreadsheets working "Creating Data Grids with Spreadsheet Plugin" sample} that showcases the most important features like data styling, sorting, conditional formatting, formulas and more.
 
 ## Related Features
 

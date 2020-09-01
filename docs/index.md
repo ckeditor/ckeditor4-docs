@@ -30,7 +30,7 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 
 {@link features/accessibility_checker/README Accessibility Checker documentation}
 
-{@linksdk accessibilitychecker Accessibility Checker SDK sample}
+{@linkexample accessibilitychecker Accessibility Checker sample}
 
 ## Contribute
 

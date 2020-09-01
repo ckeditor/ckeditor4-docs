@@ -40,7 +40,7 @@ The Developer Tools plugin provides two configuration options:
 
 ## Developer Tools Demo
 
-See the {@linksdk devtools working "Developer Tools" sample} that showcases how easy it can be to get information about editor dialog windows and their elements.
+See the {@linkexample devtools working "Developer Tools" sample} that showcases how easy it can be to get information about editor dialog windows and their elements.
 
 ## Related Features
 

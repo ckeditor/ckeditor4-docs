@@ -102,7 +102,7 @@ config.colorButton_colors = 'skyblue/87CEEB,crimson/DC143C';
 
 ## Text and Background Color Demo
 
-See the {@linksdk colorbutton working "Setting Text and Background Color" sample} that showcases the usage and customization of the text and background color features.
+See the {@linkexample colorbutton working "Setting Text and Background Color" sample} that showcases the usage and customization of the text and background color features.
 
 ## Related Features
 

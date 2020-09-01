@@ -36,7 +36,7 @@ The Article Editor is based on the [Standard package](https://ckeditor.com/ckedi
 
 ## Document Editor
 
-The Document Editor demo showcases a more robust editor designed for creating documents which are usually later printed or exported to PDF files using tools like [wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf) or [PhantomJS](https://github.com/ariya/phantomjs) (note: PhantomJS 2.x currently has a [known zoom issue](https://github.com/ariya/phantomjs/issues/13997)).
+The Document Editor demo showcases a more robust editor designed for creating documents which can later be {@link features/exporttopdf/README exported to PDF} using the official [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin.
 
 <info-box hint="">
   Visit the <a href="https://github.com/ckeditor/ckeditor4-docs-samples/tree/master/editors">ckeditor4-docs-samples</a> GitHub repository to learn more about this configuration.
@@ -75,7 +75,7 @@ Inline editor provides a real WYSIWYG experience "out of the box" because unlike
 This demo showcases the <strong>Accessibility Checker</strong> plugin &mdash; an innovative solution that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
 
 <info-box hint="">
-  Visit the {@linksdk accessibilitychecker CKEditor Examples} website to try out this configuration.
+  Visit the {@linkexample accessibilitychecker CKEditor Examples} website to try out this configuration.
 </info-box>
 
 <div class="responsive">

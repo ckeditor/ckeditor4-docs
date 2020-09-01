@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # CKEditor Features Overview
 
-This section presents a whole variety of features that CKEditor has to offer. It is complemented by {@linksdk index **CKEditor Examples**}, an awesome collection of **working editor samples** that present all concepts discussed here and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!
+This section presents a whole variety of features that CKEditor has to offer. It is complemented by {@linkexample index **CKEditor Examples**}, an awesome collection of **working editor samples** that present all concepts discussed here and what is even more compelling, let you **download the source code** of each example with just one button click, ready to copy and paste into your own CKEditor implementation!
 
 The Features Overview section is divided into two parts, **End-user Features** and **Integration Features**.
 
@@ -57,6 +57,7 @@ This part describes features that are targeted at end users and affect their ove
     * {@link features/colorbutton/README Setting Text and Background Color}
 * **Working with Document** &ndash; Editing content source code or using document-related features such as magic line or spell checker.
     * {@link features/spellcheck/README Proofreading, Spelling and Grammar Checking}
+    * {@link features/exporttopdf/README Exporting content to PDF}
     * {@link features/autocomplete/README Autocomplete}
     * {@link features/mentions/README Mentions and Tags}
     * {@link features/emoji/README Emoji}

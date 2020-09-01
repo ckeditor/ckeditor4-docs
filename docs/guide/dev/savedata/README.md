@@ -41,7 +41,7 @@ When CKEditor functions as a replacement for a `<textarea>` element, the integra
 
 This means that when submitting a form containing an editor instance, its data will simply be posted to the server, using the `<textarea>` element name as the key to retrieve it.
 
-For example, for the `<textarea>` element with an ID of `editor1`, as used in our {@link guide/dev/installation/README#adding-ckeditor-to-your-page Quick Start Guide example}, you could create this PHP code:
+For example, for the `<textarea>` element with an ID of `editor1`, as used in our {@link guide/dev/installation/README#adding-ckeditor-4-to-your-page Quick Start Guide example}, you could create this PHP code:
 
 ``` php
 <?php
@@ -78,5 +78,5 @@ A dedicated **[Save](https://ckeditor.com/cke4/addon/save)** plugin for CKEditor
 
 The following samples are available for getting and saving data in CKEditor:
 
-* The {@linksdk savetextarea Saving Data in CKEditor Replacing a Textarea} sample shows how to save data for classic and inline editor replacing a `<textarea>` element.
-* The {@linksdk saveajax CKEditor in Ajax Applications} sample shows how to dynamically create and destroy the editor and how to use the {@linkapi CKEDITOR.editor#change change} event.
+* The {@linkexample savetextarea Saving Data in CKEditor Replacing a Textarea} sample shows how to save data for classic and inline editor replacing a `<textarea>` element.
+* The {@linkexample saveajax CKEditor in Ajax Applications} sample shows how to dynamically create and destroy the editor and how to use the {@linkapi CKEDITOR.editor#change change} event.

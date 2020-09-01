@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Export to PDF">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, ckeditor4, ckeditor 4, ckeditor, fckeditor, pdf, export, export to pdf, export to file, file, editor, wysiwyg, html, richtext, text, javascript">
+	<meta name="sdk-samples" content="Exporting content to PDF">
+	<meta name="sdk-category" content="sdk-working-with-document">
+	<meta name="sdk-order" content="15">
+	<title>Export to PDF</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor4/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<script src="assets/sample.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+<header class="sdk-header">
+</header>
+<section class="sdk-container">
+	<nav class="sdk-sidebar">
+	</nav>
+	<section class="sdk-contents">
+		<style>
+			.inner-container {
+				margin: 0 auto;
+			}
+
+			#browserSupportInfo, #browserSupportInfo .ie {
+				display: none;
+			}
+		</style>
+
+		<h1>Exporting editor content to PDF<a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/exporttopdf.html">Documentation</a></h1>
+
+		<p>
+			The optional <a href="https://ckeditor.com/cke4/addon/exportpdf">Export to PDF</a> plugin allows you to easily print the WYSIWYG editor content to a PDF file.
+		</p>
+
+		<p>
+			When enabled, the plugin adds the <span class="button_icon" data-icon="exportpdf" title="Export to PDF">&nbsp;</span> (<strong>Export to PDF</strong>) button to your CKEditor 4 toolbar. When the button is clicked, the plugin sends the content of the editor together with the styles that are used to display it to the <a href="https://ckeditor.com/ckeditor-cloud-services/">CKEditor Cloud Services</a> HTML to PDF converter service. The service then generates a PDF document that can be downloaded by the user.
+		</p>
+
+		<div class="tip">
+			<p><strong>This feature is in beta version. It is free to use while in the beta phase.</strong></p>
+			<p>This is a premium feature. Please <a href="https://ckeditor.com/contact/">contact us</a> if you would like to purchase a license. Let us know if you have any feedback or questions!</p>
+		</div>
+
+		<p>
+			PDF is a universal format that can be read and shared in many environments and applications. Use the editor below to create your content and click the <strong>Export to PDF</strong> toolbar button to generate a PDF document that you can save on your device. The plugin will export not only the rich-text content that you create but also its structure and styling, generating an output PDF file that looks as close as possible to your HTML content.
+		</p>
+
+		<p class="tip" id="browserSupportInfo" aria-hidden="true">
+			<span class="ie">
+				Support for <strong>Internet Explorer</strong> is limited to version 11. If you need to use it in an older version, please <a href="https://ckeditor.com/contact/">contact us</a>.
+			</span>
+		</p>
+
+		<textarea id="editor" data-sample="1" data-sample-short>
+			<h1 style="text-align:center"><img alt="Bilancino Hotel logo" src="https://ckeditor.com/docs/ckeditor4/latest/examples/assets/image/bilancino-logo.png" style="float:right;height:75px;width:75px;" /><span style="font-family:Georgia,serif">The Flavorful Tuscany Meetup</span></h1>
+
+			<h2 style="text-align:center"><span style="font-family:Georgia,serif"><span style="color:#2980b9">Welcome letter</span></span></h2>
+
+			<p>Dear Guest,</p>
+
+			<p>We are delighted to welcome you to the annual <em>Flavorful Tuscany Meetup</em> and hope you will enjoy the programme as well as your stay at the <a href="https://ckeditor.com">Bilancino Hotel</a>.</p>
+
+			<p>Please find attached the full schedule of the event.</p>
+
+			<blockquote>
+				<p>The annual Flavorful Tuscany meetups are always a culinary discovery. You get the best of Tuscan flavors during an intense one-day stay at one of the top hotels of the region. All the sessions are lead by top chefs passionate about their profession. I would certainly recommend to save the date in your calendar for this one!</p>
+
+				<p>Angelina Calvino, food journalist</p>
+			</blockquote>
+
+			<p>Please arrive at the <a href="https://ckeditor.com">Bilancino Hotel</a> reception desk at least <strong>half an hour earlier</strong> to make sure that the registration process goes as smoothly as possible.</p>
+
+			<p>We look forward to welcoming you to the event.</p>
+
+			<p><img alt="Victoria Valc signature" src="https://ckeditor.com/docs/ckeditor4/latest/examples/assets/image/signature.png" style="height:101px;width:180px" /></p>
+
+			<p><span style="font-size:16px"><strong>Victoria Valc</strong></span></p>
+
+			<p><strong>Event Manager<br />
+			Bilancino Hotel</strong></p>
+
+			<p>&nbsp;</p>
+
+			<div style="page-break-after: always"><span style="display:none">&nbsp;</span></div>
+
+			<p>&nbsp;</p>
+
+			<h2 style="text-align:center"><span style="font-family:Georgia,serif"><span style="color:#2980b9">The Flavorful Tuscany Meetup Schedule</span></span></h2>
+
+			<table align="center" border="1" cellspacing="0" style="border-collapse:collapse; width:597px">
+				<thead>
+					<tr>
+						<th colspan="2" style="background-color: rgb(153, 153, 153);"><span style="color:#ffffff">Saturday, July 14</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="background-color:#e6e6e6; text-align:center">9:30 AM - 11:30 AM</td>
+						<td>
+							<p style="text-align:left"><strong>Americano vs. Brewed - “know your coffee”</strong> with:&nbsp;</p>
+
+							<ul>
+								<li>Giulia Bianchi</li>
+								<li>Stefano Garau</li>
+								<li>Giuseppe Russo</li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td style="background-color:#e6e6e6; text-align:center">1:00 PM - 3:00 PM</td>
+						<td>
+							<p style="text-align:left"><strong>Pappardelle al pomodoro</strong> - live cooking</p>
+
+							<p style="text-align:left">Incorporate the freshest ingredients&nbsp;<br />
+							with Rita Fresco</p>
+						</td>
+					</tr>
+					<tr>
+						<td style="background-color:#e6e6e6; text-align:center">5:00 PM - 8:00 PM</td>
+						<td>
+							<p style="text-align:left"><strong>Tuscan vineyards at a glance</strong></p>
+
+							<p style="text-align:left">Wine-tasting with Frederico Riscoli</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</textarea>
+
+		<p>
+			The crucial aspect of this feature is its configuration. In order to ensure that the generated PDF looks as close as possible to the same content when it is displayed in the WYSIWYG editor, the feature should be carefully configured. Refer to the <a href="https://ckeditor.com/docs/ckeditor4/latest/features/exporttopdf.html#configuration">documentation</a> for an overview of the configuration options available in both the plugin and the HTML to PDF converter.
+		</p>
+
+		<h2 id="related-features">Related Features</h2>
+		<ul>
+			<li><a href="./pastefromword.html">Inserting Content &ndash; Pasting Content from Microsoft Word</a></li>
+			<li><a href="./pastefromgoogledocs.html">Inserting Content &ndash; Pasting Content from Google Docs</a></li>
+			<li><a href="./pastefromlibreoffice.html">Inserting Content &ndash; Pasting Content from LibreOffice</a></li>
+			<li><a href="./size.html">Editor Resizing &ndash; Setting Editor Size</a></li>
+			<li><a href="./acf.html">Content Filtering &ndash; Advanced Content Filter &ndash; Automatic Mode</a></li>
+		</ul>
+
+		<script>
+			CKEDITOR.plugins.addExternal( 'exportpdf', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/exportpdf/', 'plugin.js' );
+
+			if ( CKEDITOR.env.ie && CKEDITOR.env.version < 11 ) {
+				var supportInfoEl = document.querySelector( '#browserSupportInfo' );
+				supportInfoEl.style.display = 'block';
+				supportInfoEl.setAttribute( 'aria-hidden', false );
+				supportInfoEl.querySelector( '.ie' ).style.display = 'block';
+			}
+		</script>
+
+		<script data-sample="1">
+			// These styles are used to provide the "page view" display style like in the demo and matching styles for export to PDF.
+			CKEDITOR.addCss(
+				'body.document-editor { margin: 0.5cm auto; border: 1px #D3D3D3 solid; border-radius: 5px; background: white; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); }' +
+				'body.document-editor, div.cke_editable { width: 700px; padding: 1cm 2cm 2cm; } ' +
+				'body.document-editor table td > p, div.cke_editable table td > p { margin-top: 0; margin-bottom: 0; padding: 4px 0 3px 5px;} ' +
+				'blockquote { font-family: sans-serif, Arial, Verdana, "Trebuchet MS", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; } ' );
+
+			var editor = CKEDITOR.replace( 'editor', {
+				width: 940,
+				height: 700,
+				extraPlugins: 'colorbutton,font,justify,print,tableresize,liststyle,pagebreak,exportpdf',
+				toolbar: [
+					{ name: 'various', items: [ 'ExportPdf', '-', 'Undo', 'Redo' ] },
+					{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'Subscript', 'Superscript' ] },
+					{ name: 'links', items: [ 'Link', 'Unlink' ] },
+					{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
+					{ name: 'insert', items: [ 'Image', 'Table' ] },
+					{ name: 'editing', items: [ 'Scayt' ] },
+					'/',
+					{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+					{ name: 'colors', items: [ 'TextColor', 'BGColor', 'CopyFormatting' ] },
+					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+					{ name: 'document', items: [ 'PageBreak', 'Source' ] }
+				],
+				bodyClass: 'document-editor'
+			} );
+		</script>
+
+		<script>
+			editor.config.exportPdf_appId = 'cke4-demo-docs';
+		</script>
+	</section>
+</section>
+
+<footer class="sdk-footer">
+</footer>
+</body>
+</html>

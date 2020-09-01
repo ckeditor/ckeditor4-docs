@@ -71,8 +71,11 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'build-react', buildIntegrationTask( 'react' ) );
 	grunt.registerTask( 'build-vue', buildIntegrationTask( 'vue' ) );
 
+	// Install NPM dependencies in ckeditor4-presets submodule.
+	grunt.registerTask( 'presets-npm-install', buildNpmTask( 'presets-npm-install' ) );
+
 	// Build docs for production/multidocs. It assumes Umberto is run by external process - useful when building as part of projects bundle.
-	grunt.registerTask( 'before-build', [ 'clean', 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'build-vue' ] );
+	grunt.registerTask( 'before-build', [ 'clean', 'presets-npm-install', 'copy', 'api', 'fix-scayt-docs', 'prepare-examples', 'build-angular', 'build-react', 'build-vue' ] );
 
 	grunt.registerTask( 'build', [ 'before-build', 'umberto' ] );
 	grunt.registerTask( 'build-serve', [ 'build', 'connect' ] );
@@ -120,7 +123,7 @@ module.exports = function( grunt ) {
 					dest: 'docs/sdk/examples/assets/plugins/spreadsheet'
 				}, {
 					expand: true,
-					cwd: 'node_modules/ckeditor4-plugin-exportpdf',
+					cwd: 'repos/ckeditor-presets/node_modules/ckeditor4-plugin-exportpdf',
 					src: '**',
 					dest: 'docs/sdk/examples/assets/plugins/exportpdf'
 				} ]
@@ -242,12 +245,16 @@ module.exports = function( grunt ) {
 	}
 
 	function buildIntegrationTask( name ) {
+		return buildNpmTask( 'build-' + name );
+	}
+
+	function buildNpmTask( taskName ) {
 		return function() {
 			const done = this.async();
 
 			grunt.util.spawn( {
 				cmd: 'npm',
-				args: [ 'run', 'build-' + name ],
+				args: [ 'run', taskName ],
 				opts: { stdio: 'inherit' } // This option is necessary for grunt to display commands output.
 			}, done );
 		};

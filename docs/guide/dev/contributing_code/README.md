@@ -10,7 +10,7 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Contributing Code and Providing Patches to CKEditor
+# Contributing Code and Providing Patches to CKEditor 4
 
 To propose a bug fix or a new functionality you need to create a pull request in the [CKEditor GitHub repository](https://github.com/ckeditor/ckeditor4) (you can read more about [pull requests](https://help.github.com/articles/using-pull-requests/) and [how to create them](https://help.github.com/articles/creating-a-pull-request/) first).
 
@@ -66,7 +66,7 @@ Some types of features or bugs cannot be tested automatically. In such cases, cr
 
 ## Creating a Pull Request
 
-Once your patch is ready, tested and committed, push your branch to your CKEditor fork:
+Once your patch is ready, tested and committed, push your branch to your CKEditor 4 fork:
 
 	git push origin t/12345
 
@@ -74,7 +74,7 @@ And [create a pull request](https://help.github.com/articles/creating-a-pull-req
 
 ## Review
 
-A CKEditor core developer will review your patch. We will check things like:
+A CKEditor 4 core developer will review your patch. We will check things like:
 
 * Is it clear what the patch is meant to do?
 * Does the patch have tests?

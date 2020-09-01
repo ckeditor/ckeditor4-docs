@@ -10,9 +10,9 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Accessibility Support in CKEditor
+# Accessibility Support in CKEditor 4
 
-Accessibility support is a priority issue in CKEditor. CKEditor complies with most important industry standards, recommendations and checklists, including:
+Accessibility support is a priority issue in CKEditor. CKEditor 4 complies with most important industry standards, recommendations and checklists, including:
 
 * [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm)
 * [Web Content Accessibility Guidelines (WCAG 2.0)](http://www.w3.org/WAI/intro/wcag.php)
@@ -29,15 +29,15 @@ Accessibility support in CKEditor goes back to early CKEditor 3.x releases; its 
 
 In our accessibility testing we use the **latest Firefox** version with **latest JAWS** version as our reference environment and officially supported platform. This is because we have found this combination to be most reliable and standards-compliant.
 
-This does not mean, however, that CKEditor has any major issues with other modern, standards-compliant browsers (including latest Internet Explorer versions) and alternative screen reader solutions like VoiceOver, NonVisual Desktop Access (NVDA) or ChromeVox. On the contrary: we assume that since we test in the most standards-compliant solution, other standards-compliant environments should also work correctly.
+This does not mean, however, that CKEditor 4 has any major issues with other modern, standards-compliant browsers (including latest Internet Explorer versions) and alternative screen reader solutions like VoiceOver, NonVisual Desktop Access (NVDA) or ChromeVox. On the contrary: we assume that since we test in the most standards-compliant solution, other standards-compliant environments should also work correctly.
 
-In any case, if you encounter any accessibility-related issue while using CKEditor, please let us know by {@link guide/dev/issues_tracker/README creating an issue} on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues). We treat all accessibility issues with utmost attention and will be happy to solve them and further improve CKEditor compliance with accessibility standards.
+In any case, if you encounter any accessibility-related issue while using CKEditor 4, please let us know by {@link guide/dev/issues_tracker/README creating an issue} on our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues). We treat all accessibility issues with utmost attention and will be happy to solve them and further improve CKEditor 4 compliance with accessibility standards.
 
 ## Assisting Users with Special Needs
 
-CKEditor compliance with numerous accessibility standards means that it can cater to the needs of users with disabilities.
+CKEditor 4 compliance with numerous accessibility standards means that it can cater to the needs of users with disabilities.
 
-The following features will make it possible for people with special needs to use CKEditor:
+The following features will make it possible for people with special needs to use CKEditor 4:
 
 ### Visual Impairment
 
@@ -52,15 +52,15 @@ The following features will make it possible for people with special needs to us
 
 ## Accessibility Features Overview
 
-The following section describes some of the most important accessibility-related features that are available in CKEditor. You can try them out on the {@linkexample accessibility working "Accessibility Support and Keyboard Shortcuts" sample} or any other applicable demos listed below.
+The following section describes some of the most important accessibility-related features that are available in CKEditor 4. You can try them out on the {@linkexample accessibility working "Accessibility Support and Keyboard Shortcuts" sample} or any other applicable demos listed below.
 
 ### Keyboard Access
 
-The following features make working with CKEditor through standard keyboard easy.
+The following features make working with CKEditor 4 through standard keyboard easy.
 
 #### Reaching the Editor on the Page
 
-CKEditor takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. It can be reached and exited by using the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keyboard shortcuts that are commonly used for navigating between page elements. Read more {@link features/tabindex/README here} and see the {@linkexample tabindex working demo} here.
+CKEditor 4 takes part in the <kbd>Tab</kbd> order of a web page that it is embedded in. It can be reached and exited by using the <kbd>Tab</kbd> and <kbd>Shift+Tab</kbd> keyboard shortcuts that are commonly used for navigating between page elements. Read more {@link features/tabindex/README here} and see the {@linkexample tabindex working demo} here.
 
 #### Keyboard Navigation
 
@@ -80,7 +80,7 @@ You can also try out the {@linkexample accessibility working demo}. The editor u
 
 ### Assistive Technology Support
 
-The following features support using CKEditor with assistive technologies such as screen readers.
+The following features support using CKEditor 4 with assistive technologies such as screen readers.
 
 #### Announcing the Editor on the Page
 
@@ -94,17 +94,17 @@ The `editor1` part of the text is simply the {@linkapi CKEDITOR.config#title nam
 
 #### WAI-ARIA Support in Editor Interface
 
-The entire CKEditor user interface is ARIA-supported. As explained on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets#ARIA):
+The entire CKEditor 4 user interface is ARIA-supported. As explained on [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets#ARIA):
 
 <blockquote>
 	<a href="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a>, the Accessible Rich Internet Applications specification from the W3C's Web Accessibility Initiative, provides a way to add the missing semantics needed by assistive technologies such as screen readers. ARIA enables developers to describe their widgets in more detail by adding special attributes to the markup. Designed to fill the gap between standard HTML tags and the desktop-style controls found in dynamic web applications, ARIA provides roles and states that describe the behaviour of most familiar UI widgets.
 </blockquote>
 
-In CKEditor this includes the toolbar and bottom bar, panels and drop-down lists, context menus and dialog windows. Thanks to this feature the editor can be used with screen readers and other assistive technologies.
+In CKEditor 4 this includes the toolbar and bottom bar, panels and drop-down lists, context menus and dialog windows. Thanks to this feature the editor can be used with screen readers and other assistive technologies.
 
 #### Accessibility Instructions Dialog Window
 
-Instead of bothering the user and forcing to hear lots of instructions every time an editor instance is reached, in CKEditor we simply remind the keyboard shortcut required to get help. When a user presses the <kbd>Alt+0</kbd> keyboard shortcut, the **Accessibility Instructions** dialog window is opened. It contains some detailed information about the accessibility features of CKEditor, including all keyboard shortcuts needed to navigate the editor and use its features.
+Instead of bothering the user and forcing to hear lots of instructions every time an editor instance is reached, in CKEditor 4 we simply remind the keyboard shortcut required to get help. When a user presses the <kbd>Alt+0</kbd> keyboard shortcut, the **Accessibility Instructions** dialog window is opened. It contains some detailed information about the accessibility features of CKEditor 4, including all keyboard shortcuts needed to navigate the editor and use its features.
 
 {@img assets/img/a11yhelp_01.png Accessibility Instructions dialog window}
 
@@ -112,7 +112,7 @@ Thanks to this feature users do not need to be trained or pointed to documentati
 
 ### Visual Aids
 
-The following features make working with CKEditor easier for people with visual impairment.
+The following features make working with CKEditor 4 easier for people with visual impairment.
 
 #### High Contrast Mode
 
@@ -120,7 +120,7 @@ One less commonly considered accessibility feature is the compatibility with the
 
 In High Contrast Mode all images and colors are discarded. A predominant color pair is then used to display the entire operating system interface (usually white or yellow on black, or vice versa).
 
-The image below shows a standard CKEditor instance loaded in Windows 8 High Contrast Mode in Firefox.
+The image below shows a standard CKEditor 4 instance loaded in Windows 8 High Contrast Mode in Firefox.
 
 {@img assets/img/a11y_02.png CKEditor in High Contrast Mode loaded in Firefox}
 
@@ -128,11 +128,11 @@ Note that not all browsers support High Contrast Mode. Some of them may simply s
 
 #### Textual Labels for Color Information
 
-Color blind users may have trouble accessing information that is conveyed with color. In CKEditor all information conveyed with color (including the color selector) is also available without color (e.g. through textual labels).
+Color blind users may have trouble accessing information that is conveyed with color. In CKEditor 4 all information conveyed with color (including the color selector) is also available without color (e.g. through textual labels).
 
 ### Creating Accessible Content
 
-The following features can be used by developers to ensure that content created with CKEditor is accessible.
+The following features can be used by developers to ensure that content created with CKEditor 4 is accessible.
 
 #### Accessibility Checker
 
@@ -144,17 +144,17 @@ The optional Language plugin, introduced in CKEditor 4.3, implements the [WCAG 3
 
 ## Accessibility Features Demos
 
-See the following working samples to check some accessibility-related features of CKEditor:
+See the following working samples to check some accessibility-related features of CKEditor 4:
 
 * The {@linkexample accessibility "Accessibility Support and Keyboard Shortcuts" sample} showcases such features as the Accessibility Help dialog or the usage of keyboard shortcuts.
 * The {@linkexample accessibilitychecker "Accessibility Checker" sample} shows how to detect and fix accessibility issues in your editor content.
 
 ## Related Features
 
-Refer to the following resources for more information about accessibility in CKEditor:
+Refer to the following resources for more information about accessibility in CKEditor 4:
 
-* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor and immediately solve any issues that are found.
-* The {@link features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor.
-* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
+* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker tool that lets you inspect the accessibility level of content created in CKEditor 4 and immediately solve any issues that are found.
+* The {@link features/shortcuts/README Keyboard Shortcuts} article lists all keyboard shortcuts supported in CKEditor 4.
+* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor 4 participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/section508/README CKEditor Section 508 Compliance} article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
 * The {@link guide/dev/wcag/README CKEditor WCAG 2.0 Compliance} article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.

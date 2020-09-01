@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Inserting Code Snippets
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+    This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through an optional plugin that is not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The optional [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin allows you to insert rich code fragments and see a live preview with highlighted syntax. Its original implementation uses the [highlight.js](https://highlightjs.org) library, but the plugin exposes a convenient {@linkapi CKEDITOR.plugins.codesnippet.highlighter interface} for hooking any other library, even a server-side one.
@@ -22,7 +22,7 @@ The optional [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin 
 
 ## Enabling Syntax Highlighting
 
-If you are using the {@link guide/dev/framed/README classic editor}, you do not need to perform any additional steps other than {@link guide/dev/plugins/README adding} the optional [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin to your build to enable syntax highlighting inside CKEditor.
+If you are using the {@link guide/dev/framed/README classic editor}, you do not need to perform any additional steps other than {@link guide/dev/plugins/README adding} the optional [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet) plugin to your build to enable syntax highlighting inside CKEditor 4.
 
 ### Inline and div-based Editors
 
@@ -41,7 +41,7 @@ If you use the {@link guide/dev/inline/README inline} or [div-based](https://cke
 
 ### Target Page
 
-To see the highlighter styles on the target page where CKEditor content is displayed, you will need to load the `highlight.js` script and theme's stylesheet on this page. You can either reuse a copy of `highlight.js` placed in the `ckeditor/plugins/codesnippet/lib/highlight` directory or download your own copy from the [highlight.js download page](https://highlightjs.org/download/).
+To see the highlighter styles on the target page where CKEditor 4 content is displayed, you will need to load the `highlight.js` script and theme's stylesheet on this page. You can either reuse a copy of `highlight.js` placed in the `ckeditor/plugins/codesnippet/lib/highlight` directory or download your own copy from the [highlight.js download page](https://highlightjs.org/download/).
 
 Attach it to the `<head>` section of your page. The following code will load the `highlight.js` library and the stylesheet for the default theme:
 
@@ -62,7 +62,7 @@ Inititalize `highlight.js` on all `<pre><code> .. </code></pre>` elements with t
 <info-box hint="">
     You might also want to initialize the highlighter only on selected elements. In this case you will need to use the <code>hljs.highlightBlock()</code> method on each DOM element containing the code to highlight. See the "Custom Initialization" section on the <a href="https://highlightjs.org/usage/">highlight.js Usage</a> page for more information.</info-box>
 
-After performing the steps described above, all the code snippets created with CKEditor will be highlighted.
+After performing the steps described above, all the code snippets created with CKEditor 4 will be highlighted.
 
 ## Changing Highlighter Theme
 
@@ -74,7 +74,7 @@ For a complete list of available themes see the {@linkexample codesnippet Insert
 
 {@img assets/img/codesnippet_05.png}
 
-In {@link guide/dev/inline/README inline} or [div-based](https://ckeditor.com/cke4/addon/divarea) editor and on the target page that displays content created with CKEditor you can switch between themes by loading the different theme's stylesheets. See the {@link features/codesnippet/README#enabling-syntax-highlighting Enabling Syntax Highlighting} section for more information.
+In {@link guide/dev/inline/README inline} or [div-based](https://ckeditor.com/cke4/addon/divarea) editor and on the target page that displays content created with CKEditor 4 you can switch between themes by loading the different theme's stylesheets. See the {@link features/codesnippet/README#enabling-syntax-highlighting Enabling Syntax Highlighting} section for more information.
 
 ## Changing Supported Languages
 

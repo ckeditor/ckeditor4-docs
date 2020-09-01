@@ -14,7 +14,7 @@ For licensing, see LICENSE.md.
 
 Most of us are used to read text from the left side of the page to the right, just like this text in English. This sounds obvious, but on several languages used around the world this is not true. They are read starting at the right to the left. This is known as the "RTL" reading (or writing) direction. Some of these languages are Arabic, Hebrew, Persian and Uyghur.
 
-On software, RTL is an important aspect and it is well supported by Operating System and their applications. CKEditor is not an exception and offers exceptional support for RTL user interfaces.
+On software, RTL is an important aspect and it is well supported by Operating System and their applications. CKEditor 4 is not an exception and offers exceptional support for RTL user interfaces.
 
 Not that, for an application, RTL means that everything that we are used to see at one side of the screen, goes to the opposite side. If the close button is at top-right, it is moved to the top-left on RTL. A toolbar starts on the left, it will then start on the right. It is like seeing the application in a mirror.
 

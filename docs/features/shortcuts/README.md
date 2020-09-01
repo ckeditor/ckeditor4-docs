@@ -12,8 +12,7 @@ For licensing, see LICENSE.md.
 
 # Keyboard Shortcuts
 
-Many functions in CKEditor have their equivalent keyboard shortcuts. This is one of the reasons why working with the editor is
-simple and efficient.
+Many functions in CKEditor 4 have their equivalent keyboard shortcuts. This is one of the reasons why working with the editor is simple and efficient.
 
 The list below contains available keyboard shortcuts grouped by problem areas. You can also learn about keyboard shortcuts directly in the editor:
 
@@ -22,7 +21,7 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 
 <info-box info="">
  <p>
- 	The <strong>Accessibility Instructions</strong> dialog window is provided through the <a href="https://ckeditor.com/cke4/addon/a11yhelp">Accessibility Help</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ 	The <strong>Accessibility Instructions</strong> dialog window is provided through the <a href="https://ckeditor.com/cke4/addon/a11yhelp">Accessibility Help</a> plugin that is included in the Standard and Full presets available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
  </p>
  <p>
  	Note that some shortcuts only work if the functionality behind them is included in your editor build.
@@ -31,9 +30,9 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 
 ## Working with a Document
 
-* <kbd>Esc</kbd> &ndash; Closes a CKEditor dialog window, drop-down list, or context menu. Equivalent to the
+* <kbd>Esc</kbd> &ndash; Closes a CKEditor 4 dialog window, drop-down list, or context menu. Equivalent to the
 	**Cancel** button in a dialog window. Also moves from the context menu submenu to the parent option.
-* <kbd>Enter</kbd> &ndash; Selects a CKEditor function from the toolbar, drop-down list, or context menu. Equivalent to the
+* <kbd>Enter</kbd> &ndash; Selects a CKEditor 4 function from the toolbar, drop-down list, or context menu. Equivalent to the
 	**OK** button in a dialog window.
 * <kbd>Shift+F10</kbd>, <kbd>Menu/Application</kbd> key &ndash; Opens the element's context menu.
 
@@ -128,10 +127,10 @@ See the {@linkexample accessibility working "Accessibility Support and Keyboard 
 
 ## Related Features
 
-Refer to the following resources for more information about accessibility in CKEditor:
+Refer to the following resources for more information about accessibility in CKEditor 4:
 
-* The {@link guide/dev/a11y/README Accessibility Support in CKEditor} article explains CKEditor compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
-* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker plugin that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
-* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor participates in the page <kbd>Tab</kbd> order.
+* The {@link guide/dev/a11y/README Accessibility Support in CKEditor} article explains CKEditor 4 compliance with some well-known accessibility standards and gives an overview of available accessibility-related features.
+* The {@link features/accessibility_checker/README Managing Content Accessibility with Accessibility Checker} article describes an innovative Accessibility Checker plugin that lets you inspect the accessibility level of content created in CKEditor 4 and immediately solve any accessibility issues that are found.
+* The {@link features/tabindex/README Page Navigation Using the "Tab" Key} article discusses how CKEditor 4 participates in the page <kbd>Tab</kbd> order.
 * The {@link guide/dev/section508/README CKEditor Section 508 Compliance} article describes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
 * The {@link guide/dev/wcag/README CKEditor WCAG 2.0 Compliance} article describes CKEditor 4 compatibility with the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/TR/WCAG20/) standard.

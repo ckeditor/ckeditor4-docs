@@ -76,6 +76,10 @@ window.CKEDITOR_BASEPATH = '/node_modules/ckeditor4/';
 
 This variable needs to be in a separate file that has to be loaded before the `ckeditor4` package. This is needed to bypass the way in which webpack works, moving all imports before the code containing them.
 
+<info-box info="">
+	Please note that such approach requires deploying the `node_modules/ckeditor4/` directory with the rest of the application. To avoid that, you can use the <a href="https://github.com/ckeditor/ckeditor4-webpack-template"><code>ckeditor4-webpack-template</code> GitHub template repository</a> which copies all the necessary files directly to the `dist/` directory.
+</info-box>
+
 The final step is to build the application containing CKEditor 4 WYSIWYG editor:
 
 ```js

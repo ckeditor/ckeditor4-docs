@@ -13,12 +13,12 @@ For licensing, see LICENSE.md.
 # Easy Image Integration
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Read below how to to enable it.
+    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor 4 presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Read below how to to enable it.
 </info-box>
 
 ## Quick start
 
-### Download CKEditor with the Easy Image Plugin
+### Download CKEditor 4 with the Easy Image Plugin
 
 Currently the [Easy Image plugin](https://ckeditor.com/cke4/addon/easyimage) is **not** included in the CKEditor 4 presets. You {@link guide/dev/widget_installation/README need to add it to your custom CKEditor build} with [online builder](https://ckeditor.com/cke4/builder). Additionally, you need to remove the default [Image](https://ckeditor.com/cke4/addon/image) plugin from your editor, either with online builder or through the {@linkapi CKEDITOR.config.removePlugins configuration}:
 

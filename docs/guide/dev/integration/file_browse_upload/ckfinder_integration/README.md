@@ -7,7 +7,7 @@ meta-title-short: CKFinder Integration
 ---
 # CKFinder Integration
 
-The aim of this article is to explain how to integrate CKEditor with [CKFinder](https://ckeditor.com/ckfinder/), a powerful and easy to use Ajax file manager and uploader. See [the demo](https://ckeditor.com/docs/ckfinder/demo/ckfinder3/samples/ckeditor.html) for a live demonstration.
+The aim of this article is to explain how to integrate CKEditor 4 with [CKFinder](https://ckeditor.com/ckfinder/), a powerful and easy to use Ajax file manager and uploader. See [the demo](https://ckeditor.com/docs/ckfinder/demo/ckfinder3/samples/ckeditor.html) for a live demonstration.
 
 <info-box info="">
 	CKFinder is a <a href="https://ckeditor.com/ckfinder/">commercial application</a> that was designed with CKEditor compatibility in mind. It is currently available as version 3.x for PHP, ASP.NET and Java and version 2.x for ASP and ColdFusion.

@@ -2,8 +2,8 @@
 category: inserting-images
 order: 40
 url: features/easyimage
-menu-title: Easy Image
-meta-title-short: Easy Image
+menu-title: Easy Image Plugin
+meta-title-short: Easy Image Plugin
 ---
 <!--
 Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Easy Image Plugin
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Follow the {@link guide/dev/integration/easyimage/README Easy Image Integration} guide to enable it.
+    This feature was introduced in <strong>CKEditor 4.9</strong>. It is provided through an optional plugin that is not included in the CKEditor 4 presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Follow the {@link guide/dev/integration/easyimage/README Easy Image Integration} guide to enable it.
 </info-box>
 
 The optional [Easy Image](https://ckeditor.com/cke4/addon/easyimage) plugin lets you insert images which are **automatically rescaled**, **optimized**, **responsive** and delivered through a **blazing-fast CDN**. It introduces a new type of a captioned image widget that has the following capabilities:

@@ -12,20 +12,16 @@ For licensing, see LICENSE.md.
 
 # HTML Output Formatting
 
-CKEditor offers a powerful and flexible output formatting system. It
-gives developers full control over what the HTML code produced by the
-editor will look like. The system makes it possible to control all HTML
-tags and can give different results for each one of them.
+CKEditor 4 offers a powerful and flexible output formatting system. It gives developers full control over what the HTML code produced by the editor will look like. The system makes it possible to control all HTML tags and can give different results for each one of them.
 
 ## The HTML Output Writer
 
-The [HTML Output Writer plugin](https://ckeditor.com/cke4/addon/htmlwriter) makes it possible to generate advanced output formatting with CKEditor.
+The [HTML Output Writer plugin](https://ckeditor.com/cke4/addon/htmlwriter) makes it possible to generate advanced output formatting with CKEditor 4.
 
 The *writer* is used by the {@linkapi CKEDITOR.htmlDataProcessor CKEDITOR.htmlDataProcessor} class to write output data.
 The current writer for a specific editor instance can be retrieved with the {@linkapi CKEDITOR.htmlDataProcessor#writer editor.dataProcessor.writer} property.
 
-It is possible to configure several output formatting options by setting
-the writer properties. The following example summarizes the most common properties and gives their default values:
+It is possible to configure several output formatting options by setting the writer properties. The following example summarizes the most common properties and gives their default values:
 
 ```js
 var writer = editor.dataProcessor.writer;
@@ -60,12 +56,7 @@ writer.setRules( 'p', {
 
 ## Setting Writer Rules
 
-Since the writer is a property of each editor instance and also due
-to its dependency on the HTML Output Writer plugin to be loaded, the best way to
-modify it is by listening to the {@linkapi CKEDITOR#instanceReady }
-event, so it is safe to assume that the {@linkapi CKEDITOR.editor#dataProcessor } property will be
-loaded and ready for changes. The following code shows an example of
-this approach used when creating an editor instance:
+Since the writer is a property of each editor instance and also due to its dependency on the HTML Output Writer plugin to be loaded, the best way to modify it is by listening to the {@linkapi CKEDITOR#instanceReady } event, so it is safe to assume that the {@linkapi CKEDITOR.editor#dataProcessor } property will be loaded and ready for changes. The following code shows an example of this approach used when creating an editor instance:
 
 ```js
 CKEDITOR.replace( 'editor1', {
@@ -93,7 +84,7 @@ Another solution is to use the {@linkapi CKEDITOR } object which will cause all 
 
 ## Adjusting Output Formatting Through Configuration
 
-Numerous {@link guide/dev/configuration/README configuration options} let you tweak CKEditor behavior without touching the writer, including:
+Numerous {@link guide/dev/configuration/README configuration options} let you tweak CKEditor 4 behavior without touching the writer, including:
 
 * Entities support:
   * {@linkapi CKEDITOR.config#basicEntities}
@@ -113,8 +104,8 @@ Numerous {@link guide/dev/configuration/README configuration options} let you tw
 
 ## HTML Output Formatting Demo
 
-See the {@linkexample htmlformatting working "HTML Output Formatting" sample} that showcases how to control HTML output produced by CKEditor.
+See the {@linkexample htmlformatting working "HTML Output Formatting" sample} that showcases how to control HTML output produced by CKEditor 4.
 
 ## Related Features
 
-See the {@link features/sourcearea/README Source Code Editing} feature that lets the users edit raw HTML source of the editor content directly in CKEditor.
+See the {@link features/sourcearea/README Source Code Editing} feature that lets the users edit raw HTML source of the editor content directly in CKEditor 4.

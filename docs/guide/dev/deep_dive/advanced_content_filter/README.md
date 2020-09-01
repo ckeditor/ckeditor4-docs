@@ -29,10 +29,10 @@ In both modes it is possible to extend the filter configuration by using the {@l
 
 <info-box hint="">
     <p>
-        <strong>ACF does not replace a security filter for your website content.</strong> If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
+        <strong>ACF does not replace a security filter for your website content.</strong> If the content that is to be loaded into CKEditor 4 comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website.
     </p>
     <p>
-        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities. For example, if you decide to allow all attributes in HTML elements, you will allow users to enter <code>onclick</code>, <code>onload</code> or <code>onerror</code> handlers. Although ACF is not a security filter, leaving it in default, automatic mode should minimize the risk of XSS issues.
+        Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor 4 features may result in XSS vulnerabilities. For example, if you decide to allow all attributes in HTML elements, you will allow users to enter <code>onclick</code>, <code>onload</code> or <code>onerror</code> handlers. Although ACF is not a security filter, leaving it in default, automatic mode should minimize the risk of XSS issues.
     </p>
     <p>
    		If you want to disable Advanced Content Filter, set {@linkapi CKEDITOR.config#allowedContent } to <code>true</code>. All available editor features will be activated and input data will not be filtered. Note that you cannot use {@linkapi CKEDITOR.config#disallowedContent } when ACF is disabled.
@@ -43,7 +43,7 @@ In both modes it is possible to extend the filter configuration by using the {@l
 
 Advanced Content Filter works in automatic mode when the {@linkapi CKEDITOR.config#allowedContent} setting is not provided. During the editor initialization, the editor features add their rules to the filter. As a result, only the content that may be edited using the currently loaded features is allowed, and all the rest is filtered out.
 
-Please note that this means that **ACF is tightly connected with the editor configuration**. Take the official CKEditor presets (Basic, Standard and Full). Each one of them includes a different set of features (toolbar buttons, keyboard shortcuts, content styles) and as a result, the same content pasted into editor instances with these configurations {@linkexample acf will look completely different}, as CKEditor will adjust it to what is available in a particular setup.
+Please note that this means that **ACF is tightly connected with the editor configuration**. Take the official CKEditor 4 presets (Basic, Standard and Full). Each one of them includes a different set of features (toolbar buttons, keyboard shortcuts, content styles) and as a result, the same content pasted into editor instances with these configurations {@linkexample acf will look completely different}, as CKEditor 4 will adjust it to what is available in a particular setup.
 
 Whenever you adjust your editor configuration, for example by using the {@linkapi CKEDITOR.config.removePlugins} and {@linkapi CKEDITOR.config.removeButtons} methods or customizing the **Format** and **Styles** drop-down lists, these changes will affect the filter and the automatic ACF mode will make the editor remove content corresponding to disabled features.
 

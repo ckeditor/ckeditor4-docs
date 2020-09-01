@@ -14,7 +14,7 @@ For licensing, see LICENSE.md.
 
 <info-box info="">
  <p>
- 	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/resize">Editor Resize</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ 	This feature is provided through the <a href="https://ckeditor.com/cke4/addon/resize">Editor Resize</a> plugin that is included in the Standard and Full presets available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
  </p>
  <p>
  	Width and height manipulation is only supported for {@link guide/dev/framed/README classic editor} and does not work in {@link guide/dev/inline/README inline editor}.
@@ -41,7 +41,7 @@ You can also disable this feature by setting the {@linkapi CKEDITOR.config.resiz
 
 ## Changing Editor Size on the Fly
 
-Besides defining a {@link features/size/README default size} of the editor window you can also change the size of a CKEditor instance on the fly.
+Besides defining a {@link features/size/README default size} of the editor window you can also change the size of a CKEditor 4 instance on the fly.
 
 To achieve this, use the {@linkapi CKEDITOR.editor#method-resize editor.resize()} method to define the dimensions of the editor interface, assigning the window a width and height value in pixels or CSS-accepted units.
 
@@ -54,7 +54,7 @@ While setting the height value, use the `isContentHeight` parameter to decide wh
 	editor.resize( '100%', '350', true );
 
 
-## Limiting the Width and Height for CKEditor Resizing
+## Limiting the Width and Height for CKEditor 4 Resizing
 
 It is also possible to define the minimum and maximum dimensions after resizing to prevent the editor window from becoming too small or too big to handle.
 
@@ -80,7 +80,7 @@ By default CKEditor is allowed to only resize vertically. This is achieved thank
 
 	config.resize_dir = 'vertical';
 
-If you set the {@linkapi CKEDITOR.config.resize_dir CKEDITOR.config.resize_dir} configuration option to `'horizontal'`, CKEditor window will only be resizable in horizontal dimension.
+If you set the {@linkapi CKEDITOR.config.resize_dir CKEDITOR.config.resize_dir} configuration option to `'horizontal'`, CKEditor 4 window will only be resizable in horizontal dimension.
 
 	config.resize_dir = 'horizontal';
 

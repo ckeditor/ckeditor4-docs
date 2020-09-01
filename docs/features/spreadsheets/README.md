@@ -15,7 +15,7 @@ For licensing, see LICENSE.md.
 <info-box info="">
 	This feature is provided as a commercial product and provides integration with our partner solution, [Handsontable](https://handsontable.com/). A license can be purchased [here](https://ckeditor.com/contact/).
 
-	The Spreadsheet plugin is compatible with CKEditor 4 starting from version **4.13**. It is not included in the CKEditor presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Follow the {@link guide/dev/integration/spreadsheets/README Spreadsheets Integration} guide to enable it.
+	The Spreadsheet plugin is compatible with CKEditor 4 starting from version **4.13**. It is not included in the CKEditor 4 presets available from the [Download](https://ckeditor.com/ckeditor-4/download/) site. Follow the {@link guide/dev/integration/spreadsheets/README Spreadsheets Integration} guide to enable it.
 </info-box>
 
 The optional [Spreadsheet](https://ckeditor.com/cke4/addon/spreadsheet) plugin lets you insert customizable spreadsheet widgets into your WYSIWYG editor. It provides support for:

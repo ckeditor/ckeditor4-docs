@@ -12,13 +12,13 @@ For licensing, see LICENSE.md.
 
 # Installing Skins
 
-The look and feel of the CKEditor user interface can be adjusted to your taste and customized through skins. Elements like the toolbar, dialog windows, buttons, and even their icons, can be changed to match the style of your website or application.
+The look and feel of the CKEditor 4 user interface can be adjusted to your taste and customized through skins. Elements like the toolbar, dialog windows, buttons, and even their icons, can be changed to match the style of your website or application.
 
-The default installation of CKEditor comes with the [Moono-Lisa skin](https://ckeditor.com/cke4/addon/moono-lisa).
+The default installation of CKEditor 4 comes with the [Moono-Lisa skin](https://ckeditor.com/cke4/addon/moono-lisa).
 
 ## Where to Look for Skins?
 
-The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) is an online service designed to find and share editor plugins and skins. Its structure, with comprehensive descriptions and screenshots, makes it easy to understand the skin features and the comment system lets you socialize with the CKEditor community or provide instant feedback. If you are a skin designer, the repository is also the best place to showcase your skills and reach a large user base.
+The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) is an online service designed to find and share editor plugins and skins. Its structure, with comprehensive descriptions and screenshots, makes it easy to understand the skin features and the comment system lets you socialize with the CKEditor 4 community or provide instant feedback. If you are a skin designer, the repository is also the best place to showcase your skills and reach a large user base.
 
 ## Online Builder Installation
 
@@ -54,7 +54,7 @@ Using online builder is a recommended solution, however, if you have skins devel
 
 1. **Extract** the skin `.zip` archive.
 
-2. **Copy** the skin files to the `skins` folder of your CKEditor installation. Each skin must be placed in a sub-folder that matches its "technical" name.
+2. **Copy** the skin files to the `skins` folder of your CKEditor 4 installation. Each skin must be placed in a sub-folder that matches its "technical" name.
 
 	For example, the [Kama skin](https://ckeditor.com/cke4/addon/kama) would be installed into this folder: `<CKEditor folder>/skins/kama`.
 
@@ -62,7 +62,7 @@ Using online builder is a recommended solution, however, if you have skins devel
 
 		config.skin = 'kama';
 
-Your skin will now be available in your CKEditor installation.
+Your skin will now be available in your CKEditor 4 installation.
 
 <info-box hint="">
     To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/skin">submit your skins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.

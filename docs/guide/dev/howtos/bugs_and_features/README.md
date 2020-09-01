@@ -12,15 +12,15 @@ For licensing, see LICENSE.md.
 
 # Bugs and New Features
 
-The following article contains tips about reporting CKEditor issues and proposing new features.
+The following article contains tips about reporting CKEditor 4 issues and proposing new features.
 
-## How Do I Report CKEditor Bugs?
+## How Do I Report CKEditor 4 Bugs?
 
-The {@link guide/dev/issues_readme/README Reporting Issues} article contains all the information about reporting CKEditor issues.
+The {@link guide/dev/issues_readme/README Reporting Issues} article contains all the information about reporting CKEditor 4 issues.
 
-## How Do I Request New CKEditor Features?
+## How Do I Request New CKEditor 4 Features?
 
-If you feel there is an interesting feature missing in CKEditor, go to our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues) and file a new issue.
+If you feel there is an interesting feature missing in CKEditor 4, go to our [GitHub issues page](https://github.com/ckeditor/ckeditor4/issues) and file a new issue.
 
 Please make sure you read the {@link guide/dev/issues_tracker/README Issues Tracker Site} article beforehand in order to make it easier for the developers to examine the issue. It is also recommended to start from a search at the [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) to see whether the proposed functionality has not been implemented yet and offered as a plugin, either an official one or a community-provided add-on.
 

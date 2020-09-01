@@ -10,20 +10,23 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Building CKEditor from Source Code
+# Building CKEditor 4 from Source Code
 
-If you are working with the CKEditor source code on your computer or in a local network, at some stage you will want to distribute it to your test or production environment.
+If you are working with the CKEditor 4 source code on your computer or in a local network, at some stage you will want to distribute it to your test or production environment.
 
-<info-box hint=""> <strong>Never distribute the source version of CKEditor to production websites</strong>. There are serious {@link guide/dev/source/README#performance performance implications} of doing this.
+<info-box hint="">
+	<strong>Never distribute the source version of CKEditor 4 to production websites</strong>. There are serious {@link guide/dev/source/README#performance performance implications} of doing this.
 </info-box>
 
-Instead, you must create a CKEditor "build" or "release version" (in contrast to the "source version"). It is an optimized, production-ready CKEditor distribution.
+Instead, you must create a CKEditor 4 "build" or "release version" (in contrast to the "source version"). It is an optimized, production-ready CKEditor 4 distribution.
 
 ## The `dev/builder` Folder
 
-<info-box info="">The builder will only work on the source version of CKEditor cloned from the a Git repository (for example from the <a href="https://github.com/ckeditor/ckeditor4">official CKEditor development repository</a>). It will not work on the project downloaded as a <code>.zip</code> package.</info-box>
+<info-box info="">
+	The builder will only work on the source version of CKEditor cloned from the a Git repository (for example from the <a href="https://github.com/ckeditor/ckeditor4">official CKEditor 4 development repository</a>). It will not work on the project downloaded as a <code>.zip</code> package.
+</info-box>
 
-The source code of CKEditor contains a pre-configured environment that allows you to easily create editor builds.
+The source code of CKEditor 4 contains a pre-configured environment that allows you to easily create editor builds.
 
 The following are the most relevant files that you can find there:
 

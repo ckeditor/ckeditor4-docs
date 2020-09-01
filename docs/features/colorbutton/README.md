@@ -13,10 +13,10 @@ For licensing, see LICENSE.md.
 # Setting Text and Background Color
 
 <info-box info="">
- This feature is provided through optional plugins that are only included in the Full preset available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ This feature is provided through optional plugins that are only included in the Full preset available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-The optional [Color Button](https://ckeditor.com/cke4/addon/colorbutton) plugin provides the ability to define font and background color for text created in CKEditor. When enabled, it adds the **Text Color** and **Background Color** toolbar buttons that open a color selection drop-down list. If you want to quickly {@link features/removeformat/README remove colors} from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
+The optional [Color Button](https://ckeditor.com/cke4/addon/colorbutton) plugin provides the ability to define font and background color for text created in CKEditor 4. When enabled, it adds the **Text Color** and **Background Color** toolbar buttons that open a color selection drop-down list. If you want to quickly {@link features/removeformat/README remove colors} from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
 
 {@img assets/img/colorbutton_05.png The Text Color and Background Color features}
 
@@ -67,7 +67,7 @@ You can also decide how the color definition is stored by setting the {@linkapi 
     	styles: { 'background-color': '#(color)' }
 	};
 
-CKEditor will then output the color definition as `<font>` elements with `color` and `style="background-color"` attributes for text and background color, respectively:
+CKEditor 4 will then output the color definition as `<font>` elements with `color` and `style="background-color"` attributes for text and background color, respectively:
 
 	<p><font color="#800080">This is my text color.</font><br/>
 	<font style="background-color:#FFFF00;">This is my background color</font></p>

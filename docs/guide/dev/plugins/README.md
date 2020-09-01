@@ -12,13 +12,13 @@ For licensing, see LICENSE.md.
 
 # Installing Plugins
 
-CKEditor has plugin-based architecture. In fact, initially the editor core is an empty box, which is then filled with features provided by plugins. Even the editor interface, like toolbars, buttons, and the editing area, are plugins, too!
+CKEditor 4 has plugin-based architecture. In fact, initially the editor core is an empty box, which is then filled with features provided by plugins. Even the editor interface, like toolbars, buttons, and the editing area, are plugins, too!
 
-The default installation of CKEditor (that you are probably using now) includes a selection of plugins. At any moment you can enrich your editor with additional plugins and as a result, bring new useful features to your users.
+The default installation of CKEditor 4 (that you are probably using now) includes a selection of plugins. At any moment you can enrich your editor with additional plugins and as a result, bring new useful features to your users.
 
 ## Where to Look for Plugins?
 
-The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) is an online service designed to find and share editor plugins. Its structure, with plugin categories, comprehensive descriptions, and screenshots, makes it easy to understand the plugin features and the comment system lets you socialize with the CKEditor community or provide instant feedback. If you are a plugin developer, the repository is also the best place to showcase your skills and reach a large user base.
+The [CKEditor Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all) is an online service designed to find and share editor plugins. Its structure, with plugin categories, comprehensive descriptions, and screenshots, makes it easy to understand the plugin features and the comment system lets you socialize with the CKEditor 4 community or provide instant feedback. If you are a plugin developer, the repository is also the best place to showcase your skills and reach a large user base.
 
 ## Online Builder Installation
 
@@ -32,7 +32,7 @@ The easiest method is to visit the [online builder](https://ckeditor.com/cke4/bu
 
 Drag the plugins that you want to add to the **Selected Plugins** list on the left. All plugin dependencies will be resolved automatically for you and the required plugins will be added by the builder. When you are happy with your configuration, click the **Download** button at the bottom of the online builder page to download your custom build with all selected plugins included.
 
-When you install your custom build, you will see that the additional plugins (in this example: [Language](https://ckeditor.com/cke4/addon/language)) are available in your CKEditor.
+When you install your custom build, you will see that the additional plugins (in this example: [Language](https://ckeditor.com/cke4/addon/language)) are available in your CKEditor 4.
 
 {@img assets/img/add_plugin_ckbuilder_4.png A custom CKEditor build with the Language plugin}
 
@@ -54,7 +54,7 @@ Using online builder is a recommended solution, however, if you have plugins dev
 
 1. **Extract** the plugin `.zip` archive.
 
-2. **Copy** the plugin files to the `plugins` folder of your CKEditor installation. Each plugin must be placed in a sub-folder that matches its "technical" name.
+2. **Copy** the plugin files to the `plugins` folder of your CKEditor 4 installation. Each plugin must be placed in a sub-folder that matches its "technical" name.
 
 	For example, the [Language plugin](https://ckeditor.com/cke4/addon/language) would be installed into this folder: `<CKEditor folder>/plugins/language`.
 
@@ -66,7 +66,7 @@ Using online builder is a recommended solution, however, if you have plugins dev
 
 	If a plugin has any dependencies, you will need to enable these, too.
 
-Your plugin will now be available in your CKEditor installation.
+Your plugin will now be available in your CKEditor 4 installation.
 
 <info-box hint="">
     To avoid the manual installation process <a href="https://ckeditor.com/cke4/add/plugin">submit your plugins to the Add-ons Repository</a> and encourage third-party developers to do so. In this way you will be able to both give something to the community and get valuable feedback on your work.

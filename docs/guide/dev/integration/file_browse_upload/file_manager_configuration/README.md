@@ -13,10 +13,10 @@ For licensing, see LICENSE.md.
 # Advanced File Manager Configuration
 
 <info-box info="">
- CKEditor can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
+ CKEditor 4 can be easily integrated with an external file manager (file browser/uploader) thanks to the <a href="https://ckeditor.com/cke4/addon/filebrowser">File Browser</a> plugin which by default is included in every preset.
 </info-box>
 
-As mentioned in the introductory {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article, CKEditor can not only be integrated with an external application providing file browser and uploader capabilities, but the extent of this integration can be fine-tuned to your needs.
+As mentioned in the introductory {@link guide/dev/integration/file_browse_upload/README File Manager Integration} article, CKEditor 4 can not only be integrated with an external application providing file browser and uploader capabilities, but the extent of this integration can be fine-tuned to your needs.
 
 This article describes a few options available to adjust the file manager integration to your usage scenario.
 
@@ -38,17 +38,17 @@ For example to set special browse and upload URLs for the **Image Properties** d
 		filebrowserImageUploadUrl: '/uploader/upload.php?type=Images'
 	});
 
-In the example above, the {@linkapi CKEDITOR.config#filebrowserBrowseUrl config.filebrowserBrowseUrl} and {@linkapi CKEDITOR.config#filebrowserUploadUrl config.filebrowserUploadUrl} settings will be used by default. In the **Image Properties** dialog window CKEditor will use the {@linkapi CKEDITOR.config#filebrowserImageBrowseUrl config.filebrowserImageBrowseUrl} and {@linkapi CKEDITOR.config#filebrowserImageUploadUrl config.filebrowserImageUploadUrl} settings instead.
+In the example above, the {@linkapi CKEDITOR.config#filebrowserBrowseUrl config.filebrowserBrowseUrl} and {@linkapi CKEDITOR.config#filebrowserUploadUrl config.filebrowserUploadUrl} settings will be used by default. In the **Image Properties** dialog window CKEditor 4 will use the {@linkapi CKEDITOR.config#filebrowserImageBrowseUrl config.filebrowserImageBrowseUrl} and {@linkapi CKEDITOR.config#filebrowserImageUploadUrl config.filebrowserImageUploadUrl} settings instead.
 
 ## File Manager Window Size
 
-The default width of the file manager window in CKEditor is set to 80% of the screen width, while the default height is set to 70% of the screen height.
+The default width of the file manager window in CKEditor 4 is set to 80% of the screen width, while the default height is set to 70% of the screen height.
 
 If for any reasons the default values are not suitable for you, you can adjust them by using {@linkapi CKEDITOR.config#filebrowserWindowWidth config.filebrowserWindowWidth} to change the width and {@linkapi CKEDITOR.config#filebrowserWindowHeight config.filebrowserWindowHeight} to change the height of the file manager window.
 
 To specify the size of the file manager window in pixels, set it to a number (e.g. `"800"`). If you prefer to set the height and width of the window as a percentage value of the screen, do not forget to add the percent sign after the number (e.g. `"60%"`).
 
-The sample below shows some basic configuration code that can be used to insert a CKEditor instance with the file manager paths and window size configured.
+The sample below shows some basic configuration code that can be used to insert a CKEditor 4 instance with the file manager paths and window size configured.
 
 	CKEDITOR.replace( 'editor1', {
 		filebrowserBrowseUrl: '/browser/browse.php',
@@ -59,7 +59,7 @@ The sample below shows some basic configuration code that can be used to insert 
 
 ## Further Reading
 
-For more information on integrating CKEditor with a file manager refer to the following articles:
+For more information on integrating CKEditor 4 with a file manager refer to the following articles:
 
 * {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
 * {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration}

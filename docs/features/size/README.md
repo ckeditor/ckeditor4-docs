@@ -40,7 +40,7 @@ For example:
 
 ## Editor Height
 
-The {@linkapi CKEDITOR.config.height CKEDITOR.config.height} option sets the **height of the editing area** with CKEditor content &mdash; it does not include the toolbar or the bottom bar. This configuration option accepts an integer (to denote a value in pixels) or any CSS-defined length unit except percent (`%`) values which are not supported.
+The {@linkapi CKEDITOR.config.height CKEDITOR.config.height} option sets the **height of the editing area** with CKEditor 4 content &mdash; it does not include the toolbar or the bottom bar. This configuration option accepts an integer (to denote a value in pixels) or any CSS-defined length unit except percent (`%`) values which are not supported.
 
 For example:
 

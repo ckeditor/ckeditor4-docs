@@ -29,7 +29,8 @@ The sample below shows basic configuration code that can be used to configure pa
 	config.extraPlugins = 'uploadimage';
 	config.uploadUrl = '/uploader/upload.php';
 
-<info-box hint=""> As a fallback solution, if {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl} is not set and {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} is provided for the File Browser plugin, the Upload Image plugin will try to use {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} instead and send the dragged and pasted images there.
+<info-box hint="">
+	As a fallback solution, if {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl} is not set and {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} is provided for the File Browser plugin, the Upload Image plugin will try to use {@linkapi CKEDITOR.config.filebrowserUploadUrl CKEDITOR.config.filebrowserUploadUrl} instead and send the dragged and pasted images there.
 </info-box>
 
 It is also possible to set a specific URL for a specific upload plugin. For example if you want to use [Upload Image](https://ckeditor.com/cke4/addon/uploadimage), you can set {@linkapi CKEDITOR.config.imageUploadUrl CKEDITOR.config.imageUploadUrl} which will be used instead of {@linkapi CKEDITOR.config.uploadUrl CKEDITOR.config.uploadUrl}
@@ -43,7 +44,7 @@ To learn more about upload URL see the {@linkapi CKEDITOR.fileTools.getUploadUrl
 
 ## Communication between the Editor and the Server
 
-To make uploading on drop or paste work you need a server-side application that will receive the uploaded file. This application is not a part of CKEditor. You need to make sure that both the editor and the server use the same API so they can communicate with each other. You can create the server-side API to fit the editor, change the way how the editor creates the requests and handles the responses to fit the existing server API or you can use a dedicated solution which will work out of the box. All three possibilities are described below.
+To make uploading on drop or paste work you need a server-side application that will receive the uploaded file. This application is not a part of CKEditor 4. You need to make sure that both the editor and the server use the same API so they can communicate with each other. You can create the server-side API to fit the editor, change the way how the editor creates the requests and handles the responses to fit the existing server API or you can use a dedicated solution which will work out of the box. All three possibilities are described below.
 
 ### Server-Side Configuration
 
@@ -207,7 +208,7 @@ For example if the response is `fileUrl|optionalErrorMessage`:
 
 ### Integration with CKFinder
 
-CKEditor can be easily integrated with [CKFinder](http://cksource.com/ckfinder), an advanced Ajax file manager. See {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} for more information.
+CKEditor 4 can be easily integrated with [CKFinder](http://cksource.com/ckfinder), an advanced Ajax file manager. See {@link guide/dev/integration/file_browse_upload/ckfinder_integration/README CKFinder Integration} for more information.
 
 <info-box info=""> Uploading dropped or pasted files will work for CKFinder 2.5+ and CKFinder 3.x.
 </info-box>
@@ -223,11 +224,11 @@ If for any reason you need to do this, note that the path to the connector must 
 
 ## Dropping and Pasting Upload Demo
 
-See the {@linkexample fileupload#uploading-dropped-and-pasted-images working "Uploading Dropped and Pasted Images" sample} for an example of the Upload Image plugin integration with CKEditor and CKFinder.
+See the {@linkexample fileupload#uploading-dropped-and-pasted-images working "Uploading Dropped and Pasted Images" sample} for an example of the Upload Image plugin integration with CKEditor 4 and CKFinder.
 
 ## Further Reading
 
-For more information on pasting, dropping and uploading files with CKEditor refer to the following articles:
+For more information on pasting, dropping and uploading files with CKEditor 4 refer to the following articles:
 
 * {@link guide/dev/integration/file_browse_upload/README File Manager Integration}
 * {@link guide/dev/integration/file_browse_upload/file_manager_configuration/README Advanced File Manager Configuration}

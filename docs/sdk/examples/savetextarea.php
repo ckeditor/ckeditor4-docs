@@ -24,7 +24,7 @@ For licensing, see LICENSE.md.
 <body>
 	<section class="sdk-container">
 	<section class="sdk-contents">
-		<h1>CKEditor &mdash; Data Posted to the Server</h1>
+		<h1>CKEditor 4 &mdash; Data Posted to the Server</h1>
 
 		<p>The following data was submitted with a POST request:</p>
 		<table border="1" cellspacing="0" id="outputSample">

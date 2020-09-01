@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Classic Editing
 
-Classic editing is still probably the most common way to use CKEditor. In this usage scenario the editor is most often represented by a toolbar and an editing area placed in a specific position on the page, usually as a part of a form that you use to submit some content to the server. Sometimes it is also called "framed editing", because in this case the editor creates a temporary `<iframe>` element for itself.
+Classic editing is still probably the most common way to use CKEditor 4. In this usage scenario the editor is most often represented by a toolbar and an editing area placed in a specific position on the page, usually as a part of a form that you use to submit some content to the server. Sometimes it is also called "framed editing", because in this case the editor creates a temporary `<iframe>` element for itself.
 
 This method is used in the {@link guide/dev/installation/README#adding-ckeditor-4-to-your-page Quick Start Guide} example. To try it out, see also the {@linkexample classic classic editing demo}.
 
@@ -30,11 +30,11 @@ Due to focus on semantic markup and possible differences between the styles of c
 
 ## Creating a Classic Editor with a Textarea
 
-After {@link guide/dev/ckeditor_js_load/README loading the CKEditor script} you will be ready to create your classic editor instances.
+After {@link guide/dev/ckeditor_js_load/README loading the CKEditor 4 script} you will be ready to create your classic editor instances.
 
-In classic editing, CKEditor can work just like a `<textarea>` HTML element on your page. The editor offers a user interface to write, format, and work with rich text in a hassle-free manner, but the same content could be added (though not that easily) through a `<textarea>` element, requiring the user to type HTML code inside.
+In classic editing, CKEditor 4 can work just like a `<textarea>` HTML element on your page. The editor offers a user interface to write, format, and work with rich text in a hassle-free manner, but the same content could be added (though not that easily) through a `<textarea>` element, requiring the user to type HTML code inside.
 
-As a matter of fact, in this scenario CKEditor uses the `<textarea>` element to transfer its data to the server. The `<textarea>` element is invisible to the end user. In order to create an editor instance using this approach, you must first add a `<textarea>` element to the source code of your HTML page:
+As a matter of fact, in this scenario CKEditor 4 uses the `<textarea>` element to transfer its data to the server. The `<textarea>` element is invisible to the end user. In order to create an editor instance using this approach, you must first add a `<textarea>` element to the source code of your HTML page:
 
 ``` html
 <textarea name="editor1" id="editor1">&lt;p&gt;Initial editor content.&lt;/p&gt;</textarea>
@@ -62,11 +62,11 @@ Apart from the {@linkapi CKEDITOR.replace CKEDITOR.replace} method you can also 
 
 * The {@linkapi CKEDITOR.appendTo CKEDITOR.appendTo} method &ndash; Creates a new editor instance at the end of a specific DOM element.
 * The {@linkapi CKEDITOR.replaceAll CKEDITOR.replaceAll} method &ndash; Replaces all `<textarea>` elements available in the document (or just all those that match certain criteria) with editor instances.
-* The automatic replacement of all `<textarea>` elements of a `ckeditor` class in the document with CKEditor instances.
+* The automatic replacement of all `<textarea>` elements of a `ckeditor` class in the document with CKEditor 4 instances.
 
 ## Complete Sample
 
-To insert a CKEditor instance, you can use the following sample that creates a basic HTML page containing a form with a `<textarea>` element that is replaced with CKEditor.
+To insert a CKEditor 4 instance, you can use the following sample that creates a basic HTML page containing a form with a `<textarea>` element that is replaced with CKEditor.
 
 ``` html
 <!DOCTYPE html>

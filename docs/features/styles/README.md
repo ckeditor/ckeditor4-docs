@@ -12,10 +12,10 @@ For licensing, see LICENSE.md.
 
 # Applying Styles to Editor Content
 
-<info-box info=""> This feature is provided through the <a href="https://ckeditor.com/cke4/addon/stylescombo">Styles Combo</a> plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+<info-box info=""> This feature is provided through the <a href="https://ckeditor.com/cke4/addon/stylescombo">Styles Combo</a> plugin that is included in the Standard and Full presets available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-The [Styles Combo](https://ckeditor.com/cke4/addon/stylescombo) plugin adds the **Styles** drop-down list to the CKEditor toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor. If you want to quickly {@link features/removeformat/README remove inline and object styles} from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
+The [Styles Combo](https://ckeditor.com/cke4/addon/stylescombo) plugin adds the **Styles** drop-down list to the CKEditor 4 toolbar. This list makes it easy to apply customized styles and semantic values to content created in the editor. If you want to quickly {@link features/removeformat/README remove inline and object styles} from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
 
 {@img assets/img/styles_01.png}
 
@@ -23,7 +23,7 @@ The image above shows the **Styles** drop-down with default styles. The entries 
 
 ## Defining Styles
 
-The styles definition is a JavaScript array which is registered by calling the {@linkapi CKEDITOR.stylesSet#add CKEDITOR.stylesSet.add} function. A unique name must be assigned to your style definition, so you can later configure each editor instance to load it. This method lets you create a single style definition which is shared by several CKEditor instances present on the page.
+The styles definition is a JavaScript array which is registered by calling the {@linkapi CKEDITOR.stylesSet#add CKEDITOR.stylesSet.add} function. A unique name must be assigned to your style definition, so you can later configure each editor instance to load it. This method lets you create a single style definition which is shared by several CKEditor 4 instances present on the page.
 
 The following code shows how to register a sample style definition.
 
@@ -45,7 +45,7 @@ When the definitions are ready, you must instruct the editor to apply the newly 
 
 ### Using an External Styles Definition File
 
-The style definition registration call can be included in an external JavaScript file. By default, CKEditor loads the style definition from the `styles.js` file included in its installation folder.
+The style definition registration call can be included in an external JavaScript file. By default, CKEditor 4 loads the style definition from the `styles.js` file included in its installation folder.
 
 Your style definition file can be saved in any place of your website (or somewhere in the Internet). You must, however, know the URL required to reach it. For example, you can save the file in the root of your website, and then call it as `/styles.js`, or place it somewhere else, and refer to it using its full URL, like `http://www.example.com/styles.js`.
 
@@ -125,10 +125,10 @@ To see how this works in practice, refer to the {@linkexample styles#widget-styl
 
 ## The Stylesheet Parser Plugin
 
-<info-box info=""> This feature is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+<info-box info=""> This feature is provided through an optional plugin that is not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-Another method of customizing the styles for the document created in CKEditor and populating the drop-down list with style definitions coming from an external CSS stylesheet file is also available. The optional [Stylesheet Parser](https://ckeditor.com/cke4/addon/stylesheetparser) plugin lets you use your existing CSS styles without the need to define the styles specifically for CKEditor in the format presented above.
+Another method of customizing the styles for the document created in CKEditor 4 and populating the drop-down list with style definitions coming from an external CSS stylesheet file is also available. The optional [Stylesheet Parser](https://ckeditor.com/cke4/addon/stylesheetparser) plugin lets you use your existing CSS styles without the need to define the styles specifically for CKEditor 4 in the format presented above.
 
 <info-box hint=""> Please note that the Stylesheet Parser plugin is incompatible with {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}, so it disables the filter after installing.
 </info-box>
@@ -137,7 +137,7 @@ Having the Stylesheet Parser installed, you need to supply the location of the C
 
 	config.contentsCss = 'sample_CSS_file.css';
 
-Finally, if you want to skip loading the styles that are used in CKEditor by default, you may set the {@linkapi CKEDITOR.config.stylesSet CKEDITOR.config.stylesSet} option to an empty value:
+Finally, if you want to skip loading the styles that are used in CKEditor 4 by default, you may set the {@linkapi CKEDITOR.config.stylesSet CKEDITOR.config.stylesSet} option to an empty value:
 
 	config.stylesSet = [];
 
@@ -145,7 +145,7 @@ The image below shows the **Styles** drop-down list populated with entries comin
 
 {@img assets/img/styles_02.png}
 
-This solution lets you configure the editor to use existing CSS stylesheet rules without the need to create separate style definitions for CKEditor. On the other hand, the previously used approach offers more control over which styles are available for the users, so both solutions can be employed interchangeably, according to your needs.
+This solution lets you configure the editor to use existing CSS stylesheet rules without the need to create separate style definitions for CKEditor 4. On the other hand, the previously used approach offers more control over which styles are available for the users, so both solutions can be employed interchangeably, according to your needs.
 
 ### Choosing the CSS Selectors
 

@@ -44,11 +44,11 @@ There are a few scenarios where CKEditor 4 seems to be just the tool that you ne
 
 * CKEditor 4 is not **desktop publishing software** and is not a recommended tool to use when creating paged content with fixed layout and styling that is intended for printing.
 
-* CKEditor 4 working out of the box in its default implementation is **not a tool like Google Docs**, where multiple users can edit the same article online in real time, track changes, and add comments. However, **if you need these features, we have a good news for you &mdash; they are available in [CKEditor 5](https://ckeditor.com/docs/ckeditor5/latest/features/index.html)!**
+* CKEditor 4 working out of the box in its default implementation is **not a tool like Google Docs**, where multiple users can edit the same article online in real time, track changes, and add comments. However, **if you need these features, we have good news for you &mdash; they are available in [CKEditor 5](https://ckeditor.com/docs/ckeditor5/latest/features/index.html)!**
 
 * CKEditor 4 is not a tool that will let you **input invalid HTML code**. CKEditor 4 abides by W3C standards so it will modify HTML code if it is invalid.
 
-At the end of the day, **CKEditor 4 is an editor &mdash; nothing more, nothing less**. Go to the {@linkexample index CKEditor 4 Examples} section to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
+At the end of the day, **CKEditor 4 is a component that enables WYSIWYG editing** in any application that needs this. Go to the {@linkexample index CKEditor 4 Examples} section to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
 
 ## How CKEditor 4 Works
 

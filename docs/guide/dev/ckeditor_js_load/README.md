@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Loading CKEditor Script
 
-CKEditor is a JavaScript application. To load it, you need to include a single file reference in your page. If you {@link guide/dev/installation/README installed} CKEditor in the `ckeditor` directory in the root of your website, you need to insert the following code fragment into the `<head>` section of your page:
+CKEditor 4 is a JavaScript application. To load it, you need to include a single file reference in your page. If you {@link guide/dev/installation/README installed} CKEditor 4 in the `ckeditor` directory in the root of your website, you need to insert the following code fragment into the `<head>` section of your page:
 
 ``` html
 <head>
@@ -23,14 +23,14 @@ CKEditor is a JavaScript application. To load it, you need to include a single f
 
 When this file is loaded, the {@link api/index CKEditor JavaScript API} is ready to be used.
 
-When adding CKEditor to your web pages, use the original file name (`ckeditor.js`). If you want to use a different file name, or even merge the CKEditor script into another JavaScript file, refer to the {@link guide/dev/basepath/README Specifying the Editor Path} article first.
+When adding CKEditor 4 to your web pages, use the original file name (`ckeditor.js`). If you want to use a different file name, or even merge the CKEditor 4 script into another JavaScript file, refer to the {@link guide/dev/basepath/README Specifying the Editor Path} article first.
 
 ## Creating Editor Instances
 
 Now that the CKEditor JavaScript API is available on the page, you can use it to create editor instances. There are two different options available in order to achieve this. In order to examine both usage scenarios, choose the preferred option below to get more information.
 
 ### Classic Editing
-{@link guide/dev/framed/README Classic editing} is the most common way to use CKEditor, when the editor is usually represented by a toolbar and an editing area placed in a specific position on the page. Sometimes it is also called "framed editing", because in this scenario the editor creates a temporary `<iframe>` element for itself.
+{@link guide/dev/framed/README Classic editing} is the most common way to use CKEditor 4, when the editor is usually represented by a toolbar and an editing area placed in a specific position on the page. Sometimes it is also called "framed editing", because in this scenario the editor creates a temporary `<iframe>` element for itself.
 
 {@linkexample classic See the demo here}. Read all about this editor type in the {@link guide/dev/framed/README Classic Editing} article.
 

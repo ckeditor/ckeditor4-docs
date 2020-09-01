@@ -10,13 +10,13 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor Error Code Reference
+# CKEditor 4 Error Code Reference
 
 <info-box info="">
-	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
+	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor 4 packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </info-box>
 
-This article contains the list of CKEditor error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
+This article contains the list of CKEditor 4 error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
 
 ## autoembed-no-widget-def
 
@@ -24,22 +24,22 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: Incorrect {@linkapi CKEDITOR.config#autoEmbed_widget } value. No widget definition found.
 * Additional data: None.
 
-## cloudservices-no-upload-url
+## cloudservices-no-token
 
 * Location: `plugins/cloudservices/plugin.js`
-* Description: {@linkapi CKEDITOR.config.cloudServices_uploadUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
+* Description: The authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.cloudServices_tokenUrl token URL} returned an empty response.
 * Additional data: None.
 
 ## cloudservices-no-token-url
 
 * Location: `plugins/cloudservices/plugin.js`
-* Description: {@linkapi CKEDITOR.config.cloudServices_tokenUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
+* Description: The {@linkapi CKEDITOR.config.cloudServices_tokenUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
 * Additional data: None.
 
-## cloudservices-no-token
+## cloudservices-no-upload-url
 
 * Location: `plugins/cloudservices/plugin.js`
-* Description: Authentication token for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.cloudServices_tokenUrl token URL} returned an empty response.
+* Description: The {@linkapi CKEDITOR.config.cloudServices_uploadUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
 * Additional data: None.
 
 ## editor-destroy-iframe
@@ -68,14 +68,6 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Additional data:
 	* `element`: The element's `id` attribute.
 
-## editor-plugin-required
-
-* Location: `core/editor.js`
-* Description: A plugin cannot be removed from the plugins list because it is required by another plugin.
-* Additional data:
-	* `plugin`: The name of the plugin that cannot be removed.
-	* `requiredBy`: The name of the plugin whose requirements block the removal.
-
 ## editor-plugin-conflict
 
 * Location: `core/editor.js`
@@ -83,6 +75,14 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Additional data:
 	* `plugin`: The name of the plugin that cannot be initialized.
 	* `replacedWith`: The name of the plugin which has been initialized instead of the conflicting one.
+
+## editor-plugin-required
+
+* Location: `core/editor.js`
+* Description: A plugin cannot be removed from the plugins list because it is required by another plugin.
+* Additional data:
+	* `plugin`: The name of the plugin that cannot be removed.
+	* `requiredBy`: The name of the plugin whose requirements block the removal.
 
 ## embed-no-provider-url
 * Location: `plugins/embed/plugin.js`
@@ -93,6 +93,18 @@ This article contains the list of CKEditor error codes and their explanation. Th
 
 * Location: `plugins/embedbase/plugin.js`
 * Description: A widget no longer belongs to the current editor's widgets list and is no longer valid.
+* Additional data: None.
+
+## exportpdf-no-token
+
+* Location: `plugins/exportpdf/plugin.js`
+* Description: The authentication token for the [CKEditor Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin is empty. The cause of it might be that your {@linkapi CKEDITOR.config.exportPdf_tokenUrl token URL} returned an empty response.
+* Additional data: None.
+
+## exportpdf-no-token-url
+
+* Location: `plugins/exportpdf/plugin.js`
+* Description: The {@linkapi CKEDITOR.config.exportPdf_tokenUrl} configuration variable for the [CKEditor Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin was not specified.
 * Additional data: None.
 
 ## filetools-response-error
@@ -150,14 +162,14 @@ This article contains the list of CKEditor error codes and their explanation. Th
 * Description: The selection is no longer fake.
 * Additional data: None.
 
-## uploadimage-config
-
-* Location: `plugins/uploadimage/plugin.js`
-* Description: Upload URL for the Upload Image feature was not defined. Refer to the {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
-* Additional data: None.
-
 ## uploadfile-config
 
 * Location: `plugins/uploadfile/plugin.js`
 * Description: Upload URL for the Upload File feature was not defined. Refer to the {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
+* Additional data: None.
+
+## uploadimage-config
+
+* Location: `plugins/uploadimage/plugin.js`
+* Description: An upload URL for the Upload Image feature was not defined. Refer to the {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
 * Additional data: None.

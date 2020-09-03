@@ -100,27 +100,29 @@ You can customize color names to more friendly form by setting {@linkapi CKEDITO
 config.colorButton_colors = 'skyblue/87CEEB,crimson/DC143C';
 ```
 
-## Color history
+## Color History
 
-Since CKEditor `4.15` version a new feature - color history - is active in the editor by default. It consists of two parts sharing new user interface element - additional row separated from the default palette with a horizontal rule (visible only if there are any colors to show in the history):
+In CKEditor `4.15` version a new feature was introduced - **Color History**. It is active in the editor by default if [Color Button](https://ckeditor.com/cke4/addon/colorbutton) plugin is enabled. It adds additional color rows to color panel, separated from the default palette with a horizontal line. Color History rows are visible only if there are any colors to show in the history:
 
-{@img assets/img/colorbutton_07.png Color history filled with a few colors.}
+{@img assets/img/colorbutton_07.png Color History filled with a few colors.}
 
-First part of the feature collects the colors from the editor content at initialisation, while the second one adds them to history dynamically when they are picked. Let's talk about each one a little.
+The number of colors that appears can be controlled using {@linkapi CKEDITOR.config.colorButton_historyRowLimit colorButton_historyRowLimit configuration option}. The feature itself can also be disabled entirely using {@linkapi CKEDITOR.config.colorButton_renderContentColors colorButton_renderContentColors option}.
 
-### Color suggestions
+The Color History feature, in fact, consists of two separate mechanisms to collect and display colors. The first one collects colors from the editor content at initialization time, while the second one adds them to the history dynamically whenever they are used. Let’s talk about each one a little.
 
-During initialisation editor searches its content for all colors used as text and background styles and adds them to the suggestions row in color panel. The order of colors is determined based on the number of their occurrences (the one that appears most often will be displayed as a first one) and later on the order of appearance.
+### Color Suggestions
 
-The number of colors that can appear can be controlled using {@linkapi CKEDITOR.config.colorButton_historyRowLimit colorButton_historyRowLimit configuration option}. The feature itself can also be disabled using {@linkapi CKEDITOR.config.colorButton_renderContentColors colorButton_renderContentColors option}.
+During editor initialization, Color History scans editor content for all colors used as text and background styles and adds them to the color history rows in color panel. The order of colors is determined based on the number of their occurrences (the one that appears most often will be displayed as a first one) and later on the order of appearance. This whole procedure happens only once during editor initialization, so if the editor is loaded with colored content you can use all the colors right away!
 
-### Preserving picked colors
+### Preserving Picked Colors
 
-Every time a color is picked (either from the default color palette or from color dialog) it is added to the color history row below the default palette:
+Every time a color is used (either from the default color palette or from color dialog) it is added to the beginning of a color history row:
 
 {@img assets/img/colorbutton_06.gif Picked colors are preserved in custom palette.}
 
-The most recently used color is always added to the left side - if color was already present in the history, it is simply moved to the first position. Text and background colors are tracked separately. Note that there may be some colors in the history even if you haven't yet picked any thanks to the {@link features/colorbutton/README#color-suggestions color suggestions feature}. The number of colors preserved in the history can be controlled using {@linkapi CKEDITOR.config.colorButton_historyRowLimit colorButton_historyRowLimit configuration option}.
+The most recently used color is always added to the beginning - if color was already present in the history, it is simply moved to the first position. Text and background colors are tracked separately, in respective color panels.
+
+As mentioned earlier there already may be some colors in the history even if you haven't yet picked any, thanks to the {@link features/colorbutton/README#color-suggestions Color Suggestions feature}. The number of colors preserved in the history can be controlled using {@linkapi CKEDITOR.config.colorButton_historyRowLimit colorButton_historyRowLimit configuration option}.
 
 ## Text and Background Color Demo
 

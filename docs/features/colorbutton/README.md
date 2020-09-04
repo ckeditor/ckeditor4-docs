@@ -13,10 +13,10 @@ For licensing, see LICENSE.md.
 # Setting Text and Background Color
 
 <info-box info="">
- This feature is provided through optional plugins that are only included in the Full preset available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ This feature is provided through optional plugins that are only included in the Full preset available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add them to your custom build} with the <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-The optional [Color Button](https://ckeditor.com/cke4/addon/colorbutton) plugin provides the ability to define font and background color for text created in CKEditor 4. When enabled, it adds the **Text Color** and **Background Color** toolbar buttons that open a color selection drop-down list. If you want to quickly {@link features/removeformat/README remove colors} from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
+The optional [Color Button](https://ckeditor.com/cke4/addon/colorbutton) plugin provides the ability to define the font and background colors for text created in CKEditor 4. When enabled, it adds the **Text Color** and **Background Color** toolbar buttons that open a color selection drop-down list. If you want to quickly {@link features/removeformat/README remove colors} from your document, use the **Remove Format** button provided by the [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin.
 
 {@img assets/img/colorbutton_05.png The Text Color and Background Color features}
 
@@ -34,11 +34,15 @@ The list of colors available in the color selectors can be customized, for examp
 
 Use the {@linkapi CKEDITOR.config.colorButton_colors CKEDITOR.config.colorButton_colors} configuration option to define a custom list available in the **Text Color** and **Background Color** features. For example:
 
-	config.colorButton_colors = 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16';
+```javascript
+config.colorButton_colors = 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16';
+```
 
 Additionally, since CKEditor 4.5.8 you can also disable the "Automatic" option by setting the {@linkapi CKEDITOR.config.colorButton_enableAutomatic CKEDITOR.config.colorButton_enableAutomatic} option to `false`.
 
-	config.colorButton_enableAutomatic = false;
+```javascript
+config.colorButton_enableAutomatic = false;
+```
 
 These settings will cause the color list to only contain the seven colors listed above, with no "Automatic" option available:
 
@@ -46,7 +50,7 @@ These settings will cause the color list to only contain the seven colors listed
 
 <info-box hint="">
  <p>
- 	The <strong>Text and Background Color</strong> feature does not create semantically meaningful content. Even if you adjust the color list to match the style of your website, your users will be able to arbitrarily apply colors to text elements without any consistency.
+ 	The <strong>Text and Background Color</strong> feature does not create a semantically meaningful content. Even if you adjust the color list to match the style of your website, your users will be able to arbitrarily apply colors to text elements without any consistency.
  </p>
  <p>
  	A much better idea for creating semantic content and maintaining consistent styling across your website is to adjust the <strong>{@link features/styles/README Styles}</strong> drop-down list to include some colors that could be applied to user-created content and would still be consistent with your website design.
@@ -57,15 +61,17 @@ These settings will cause the color list to only contain the seven colors listed
 
 You can also decide how the color definition is stored by setting the {@linkapi CKEDITOR.config.colorButton_foreStyle CKEDITOR.config.colorButton_foreStyle} (for text color) and {@linkapi CKEDITOR.config.colorButton_backStyle CKEDITOR.config.colorButton_backStyle} (for background color) configuration options. By default, the color is added as a `<span>` element with the `style` attribute, but you could also e.g. use the legacy (and not recommended) HTML4 `<font>` element definition:
 
-	config.colorButton_foreStyle = {
-		element: 'font',
-		attributes: { 'color': '#(color)' }
-	};
+```javascript
+config.colorButton_foreStyle = {
+	element: 'font',
+	attributes: { 'color': '#(color)' }
+};
 
-	config.colorButton_backStyle = {
-    	element: 'font',
-    	styles: { 'background-color': '#(color)' }
-	};
+config.colorButton_backStyle = {
+	element: 'font',
+	styles: { 'background-color': '#(color)' }
+};
+```
 
 CKEditor 4 will then output the color definition as `<font>` elements with `color` and `style="background-color"` attributes for text and background color, respectively:
 

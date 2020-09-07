@@ -106,21 +106,13 @@ In CKEditor `4.15` version a new feature was introduced - **Color History**. It 
 
 {@img assets/img/colorbutton_07.png Color History filled with a few colors.}
 
-<<<<<<< HEAD
 The number of colors that appears can be controlled using {@linkapi CKEDITOR.config.colorButton_historyRowLimit colorButton_historyRowLimit configuration option} (setting this value to 0 allows to disable the feature entirely).
-=======
-The number of colors that appears can be controlled using the {@linkapi CKEDITOR.config.colorButton_historyRowLimit colorButton_historyRowLimit configuration option}. The feature itself can also be disabled entirely using the {@linkapi CKEDITOR.config.colorButton_renderContentColors colorButton_renderContentColors option}.
->>>>>>> 158ad5f7... Docs: colorbutton fixes.
 
 The Color History feature, in fact, consists of two separate mechanisms to collect and display colors. The first one collects colors from the editor content at initialization time, while the second one adds them to the history dynamically whenever they are used. Let’s talk about each one a little.
 
 ### Color Suggestions
 
-<<<<<<< HEAD
 During editor initialization, Color History scans editor content for all colors used as text and background styles and adds them to the color history rows in color panel. The order of colors is determined based on the number of their occurrences (the one that appears most often will be displayed as a first one) and later on the order of appearance. This whole procedure happens only once during editor initialization, so if the editor is loaded with colored content you can use all the colors right away! This part of the feature can also be disabled using {@linkapi CKEDITOR.config.colorButton_renderContentColors colorButton_renderContentColors option}.
-=======
-During the editor initialization, Color History scans editor content for all colors used as text and background styles and adds them to the color history rows in the color panel. The order of colors is determined based on the number of their occurrences (the one that appears most often will be displayed as a first one) and later on the order of appearance. This whole procedure happens only once during editor initialization, so if the editor is loaded with colored content you can use all the colors right away!
->>>>>>> 158ad5f7... Docs: colorbutton fixes.
 
 ### Preserving Picked Colors
 

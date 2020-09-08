@@ -12,14 +12,14 @@ For licensing, see LICENSE.md.
 
 # Pasting
 
-The following article contains tips about customizing the pasting behavior of CKEditor.
+The following article contains tips about customizing the pasting behavior of CKEditor 4.
 
 
 ## How Do I Preserve Font Styles and Backgrounds When Pasting from Word?
 
 The {@link features/pastefromword/README Paste from Word} feature lets you copy the content of Microsoft Word or Excel documents and paste them into the editor, preserving the structure and styles that were present in the original text.
 
-Note, however, that by default some font styles are not preserved to avoid conflicting with the styles of the document created in CKEditor. If however, you want to use Word font styles, including font size, font family, and text or background color, set the {@linkapi CKEDITOR.config#pasteFromWordRemoveFontStyles CKEDITOR.config#pasteFromWordRemoveFontStyles} configuration value to `false`.
+Note, however, that by default some font styles are not preserved to avoid conflicting with the styles of the document created in CKEditor 4. If however, you want to use Word font styles, including font size, font family, and text or background color, set the {@linkapi CKEDITOR.config#pasteFromWordRemoveFontStyles CKEDITOR.config#pasteFromWordRemoveFontStyles} configuration value to `false`.
 
 ```js
 config.pasteFromWordRemoveFontStyles = false;

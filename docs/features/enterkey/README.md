@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Enter Key Configuration
 
-When CKEditor is integrated in some environments you may want to configure the default behavior of the <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys to generate matching output. This is possible thanks to {@linkapi CKEDITOR.config.enterMode CKEDITOR.config.enterMode} and {@linkapi CKEDITOR.config.shiftEnterMode CKEDITOR.config.shiftEnterMode}, respectively.
+When CKEditor 4 is integrated in some environments you may want to configure the default behavior of the <kbd>Enter</kbd> and <kbd>Shift+Enter</kbd> keys to generate matching output. This is possible thanks to {@linkapi CKEDITOR.config.enterMode CKEDITOR.config.enterMode} and {@linkapi CKEDITOR.config.shiftEnterMode CKEDITOR.config.shiftEnterMode}, respectively.
 
 Both configuration settings can use one of the following options:
 

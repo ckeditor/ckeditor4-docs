@@ -10,14 +10,14 @@ meta-title-short: Toolbar Concepts
 CKEditor 4 introduced a new concept for toolbar organization which is based on "grouping" instead of the traditional "item by item positioning" way. The aim of this article is to explain the concepts behind the editor toolbar and to help you choose the most optimal, accessibility-friendly and future-proof method to configure your toolbar.
 
 <info-box hint="">
- While this article explains how you can configure the editor toolbar manually, this approach is not recommended. It is much easier and quicker to {@link features/toolbar/README use the toolbar configurator}. The configurator was introduced in <strong>CKEditor 4.5</strong> and is available in each official CKEditor installation package.
+ While this article explains how you can configure the editor toolbar manually, this approach is not recommended. It is much easier and quicker to {@link features/toolbar/README use the toolbar configurator}. The configurator was introduced in <strong>CKEditor 4.5</strong> and is available in each official CKEditor 4 installation package.
 </info-box>
 
 ## Toolbar Groups Configuration
 
 **Note:** This approach is used in the {@link features/toolbar/README#basic-toolbar-configurator basic mode of the toolbar configurator}, which is the most recommended method to customize the editor toolbar. If you do not want to use the toolbar configurator, this method requires manual crafting of the toolbar configuration code and is recommended to more advanced users only.
 
-Grouping configuration is defined by the {@linkapi CKEDITOR.config.toolbarGroups CKEDITOR.config.toolbarGroups} setting. The following is the configuration used by the Standard distribution of CKEditor:
+Grouping configuration is defined by the {@linkapi CKEDITOR.config.toolbarGroups CKEDITOR.config.toolbarGroups} setting. The following is the configuration used by the Standard distribution of CKEditor 4:
 
 	config.toolbarGroups = [
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
@@ -56,7 +56,7 @@ While not mandatory, having all groups and sub-groups configured (including the 
 
 ### The Drawbacks of Group Configuration
 
-The most evident problem with grouping configuration is that it is not possible to precisely control where each item is placed in the toolbar. A plugin author can influence it when {@linkapi CKEDITOR.ui#addButton creating the toolbar button}, but it is entirely optional and cannot be easily configured by the developer customizing their CKEditor instance.
+The most evident problem with grouping configuration is that it is not possible to precisely control where each item is placed in the toolbar. A plugin author can influence it when {@linkapi CKEDITOR.ui#addButton creating the toolbar button}, but it is entirely optional and cannot be easily configured by the developer customizing their CKEditor 4 instance.
 
 ## "Item by Item" Configuration
 

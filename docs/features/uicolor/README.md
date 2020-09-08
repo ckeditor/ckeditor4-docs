@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Setting Editor User Interface Color
 
-The editor UI color can be easily adjusted by the developer to match the look and feel of a website or an application where CKEditor is embedded in.
+The editor UI color can be easily adjusted by the developer to match the look and feel of a website or an application where CKEditor 4 is embedded in.
 
 <info-box info=""> Please note that this feature can only be used for editor skins that are compatible with the so-called {@link guide/skin_sdk/chameleon/README "chameleon" feature}. The skins created by CKSource, i.e. <a href="https://ckeditor.com/cke4/addon/moono-lisa">Moono-Lisa</a>, <a href="https://ckeditor.com/cke4/addon/moono">Moono</a> and <a href="https://ckeditor.com/cke4/addon/kama">Kama</a>, already support it. If you are using a custom skin, you will need to define the {@linkapi CKEDITOR.skin#chameleon CKEDITOR.skin.chameleon} function in your <code>skin.js</code> file.
 </info-box>

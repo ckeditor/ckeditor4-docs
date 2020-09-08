@@ -17,12 +17,12 @@ This article contains a list of some best practices that we recommend when imple
 ## Installation
 
 ### Upgrade regularly
-CKEditor should be {@link guide/dev/upgrade/README upgraded frequently} as bug fixes and new features, including support for new browser versions, are not backported.
+CKEditor 4 should be {@link guide/dev/upgrade/README upgraded frequently} as bug fixes and new features, including support for new browser versions, are not backported.
 
 If you modified any distribution files to add your custom configuration, pay special attention to not overwrite your content (including `config.js`, `contents.css`, `styles.js` and custom template files) when upgrading.
 
 ### Use minified versions
-You should always use minified CKEditor versions ([official releases](https://ckeditor.com/ckeditor-4/download/), [optimized](https://ckeditor.com/cke4/builder) {@link guide/dev/build/README builds}) in production environments. The {@link guide/dev/source/README development, source code version} is only suitable for tests and development.
+You should always use minified CKEditor 4 versions ([official releases](https://ckeditor.com/ckeditor-4/download/), [optimized](https://ckeditor.com/cke4/builder) {@link guide/dev/build/README builds}) in production environments. The {@link guide/dev/source/README development, source code version} is only suitable for tests and development.
 
 Additionally, it is good to enable `gzip` compression in your server settings.
 
@@ -58,14 +58,14 @@ p { margin: 0; }
 ```
 
 ### Configure Styles drop-down
-If you are using a CKEditor build which includes the Styles drop-down (like Standard or Full), take a few minutes to {@link features/styles/README configure it} after you install the editor.
+If you are using a CKEditor 4 build which includes the Styles drop-down (like Standard or Full), take a few minutes to {@link features/styles/README configure it} after you install the editor.
 
 The default styles included in the `styles.js` file are just examples which will not work without the matching `contents.css` file. They will also not work in the inline editor which uses page stylesheets instead of the `contents.css` file.
 
 ## Integration
 
 ### Input clean HTML code
-You should only ever input clean, standards-compliant HTML code into CKEditor. {@link guide/dev/basics/README#how-ckeditor-4-works Incorrect markup will be modified by CKEditor} which may lead to unexpected results.
+You should only ever input clean, standards-compliant HTML code into CKEditor 4. {@link guide/dev/basics/README#how-ckeditor-4-works Incorrect markup will be modified by CKEditor} which may lead to unexpected results.
 
 ### Use UTF-8
 To avoid problems with character encoding, use UTF-8 for your websites and your database. Just set the `<meta>` element for your pages to:
@@ -80,18 +80,18 @@ or, if you are using the HTML5 `DOCTYPE`, to:
 <meta charset="utf-8">
 ```
 
-### Use CKEditor for what it was made for
-Last but not least, {@link guide/dev/basics/README#what-ckeditor-4-is use CKEditor for what it was designed for}. Learn from the best: Visit the {@linkexample index CKEditor Examples} to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
+### Use CKEditor 4 for what it was made for
+Last but not least, {@link guide/dev/basics/README#what-ckeditor-4-is use CKEditor 4 for what it was designed for}. Learn from the best: Visit the {@linkexample index CKEditor Examples} to see plenty of valid editor use cases, with source code ready to copy and implement in your own solution!
 
 ## Security
 
 ### Filter content server-side
 
-**No editor features (such as {@link guide/dev/acf/README Advanced Content Filter (ACF)} or paste filter) should be treated as security filters.** If the content that is to be loaded into CKEditor comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website. The same applies to publishing content on your website. Before displaying content on your website coming from untrusted users, regardless whether CKEditor is enabled or not, you should filter the content against XSS. The reason is that malicious users can disable CKEditor in a browser or use software to alter the POST request and send anything.
+**No editor features (such as {@link guide/dev/acf/README Advanced Content Filter (ACF)} or paste filter) should be treated as security filters.** If the content that is to be loaded into CKEditor 4 comes from untrusted sources (e.g. the users of your website), you should always filter it on the server side to avoid potential XSS issues &mdash; just like you would do it for any other content intended to be published on your website. The same applies to publishing content on your website. Before displaying content on your website coming from untrusted users, regardless whether CKEditor 4 is enabled or not, you should filter the content against XSS. The reason is that malicious users can disable CKEditor in a browser or use software to alter the POST request and send anything.
 
 ### Use ACF in default, automatic mode
 
-Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor features may result in XSS vulnerabilities.
+Configuring ACF to accept additional tags and attributes that are unsupported by CKEditor 4 features may result in XSS vulnerabilities.
 
 For example, if you decide to allow all attributes in HTML elements, you will allow users to enter `onclick`, `onload`, `onerror` handlers. If you decide to allow all HMTL elements, users will be able to insert all elements which are easy to use for XSS attacks, e.g. `<iframe>`s, `<script>` tags or `<meta>` tags.
 

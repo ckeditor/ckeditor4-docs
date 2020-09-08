@@ -13,10 +13,10 @@ For licensing, see LICENSE.md.
 # Issues Tracker Site
 
 <info-box hint="">
-    CKEditor issues are handled through the <a href="https://github.com/ckeditor/ckeditor4/issues">GitHub issues page</a> since the CKEditor 4.7 release (May 25th, 2017). The <a href="https://dev.ckeditor.com">former tracking system</a> is still available in the read-only mode and all past issues are still available publicly.
+    CKEditor 4 issues are handled through the <a href="https://github.com/ckeditor/ckeditor4/issues">GitHub issues page</a> since the CKEditor 4.7 release (May 25th, 2017). The <a href="https://dev.ckeditor.com">former tracking system</a> is still available in the read-only mode and all past issues are still available publicly.
 </info-box>
 
-The issues page is used daily by the CKEditor core team to organize and distribute the development workflow. It is also the right place to report issues.
+The issues page is used daily by the CKEditor 4 core team to organize and distribute the development workflow. It is also the right place to report issues.
 
 Before you attempt to report an issue, please make sure you read this page and thus help us optimize the management of issues.
 
@@ -37,7 +37,7 @@ Please provide the following when reporting new issues. The more information you
 When filing an issue, please bear these important things in mind:
 
  * **Submit separate reports for each issue.** Do not include more than one issue in the same report.
- * Make sure **you are using the latest CKEditor version**. Maybe your issue has already been fixed.
+ * Make sure **you are using the latest CKEditor 4 version**. Maybe your issue has already been fixed.
  * Follow the instructions in the  **issue template** when reporting an issue.
 
 ## Reporting an Issue

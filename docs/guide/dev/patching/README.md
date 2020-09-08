@@ -10,20 +10,21 @@ Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Patching Old CKEditor Versions
+# Patching Old CKEditor 4 Versions
 
-It may happen that upgrading your project to use the latest CKEditor version is not an option, although the situation requires it, for example if your application is running on a production environment and you are not allowed to perform major upgrades without prior testing of the entire application by the QA team.
+It may happen that upgrading your project to use the latest CKEditor 4 version is not an option, although the situation requires it, for example if your application is running on a production environment and you are not allowed to perform major upgrades without prior testing of the entire application by the QA team.
 
-<info-box hint=""> Please note that this article describes a method that is unrecommended and requires deep understanding of the code you are porting as well as the build process. It also comes with no guarantee that it will work in all scenarios. {@link guide/dev/upgrade/README Full upgrade} is always a recommended soultion.
+<info-box hint="">
+    Please note that this article describes a method that is unrecommended and requires deep understanding of the code you are porting as well as the build process. It also comes with no guarantee that it will work in all scenarios. {@link guide/dev/upgrade/README Full upgrade} is always a recommended soultion.
 </info-box>
 
-It is possible to keep using the old version of CKEditor with selected patches applied, although keep in mind that you should be really careful when doing it.
+It is possible to keep using the old version of CKEditor 4 with selected patches applied, although keep in mind that you should be really careful when doing it.
 
-Note that depending on the complexity of changes made in CKEditor, **porting selected features might be hardly possible**. For example, when using CKEditor 4.0.3 and trying to port a relatively simple change added in CKEditor 4.3.2, it may turn out to be impossible because that change is using API introduced in CKEditor 4.2.
+Note that depending on the complexity of changes made in CKEditor 4, **porting selected features might be hardly possible**. For example, when using CKEditor 4.0.3 and trying to port a relatively simple change added in CKEditor 4.3.2, it may turn out to be impossible because that change is using API introduced in CKEditor 4.2.
 
 ## Requirements
 
-In order to patch CKEditor and build a release version, the following required components must be installed:
+In order to patch CKEditor 4 and build a release version, the following required components must be installed:
 
  - Java (CKBuilder is a Java application)
  - Bash (Unix systems) or "Git Bash" on Windows (provided by [msysGit](http://msysgit.github.io/))
@@ -32,29 +33,29 @@ In order to patch CKEditor and build a release version, the following required c
 
 ## Source Version vs Release Version
 
-It is unlikely that you can apply a patch to the package that you already run on production, because most of the time your production environment runs the release version of CKEditor.
+It is unlikely that you can apply a patch to the package that you already run on production, because most of the time your production environment runs the release version of CKEditor 4.
 
 ### Release Version
 
-The release version is a CKEditor package that was processed by {@link guide/dev/build/README#about-ckbuilder-command-line CKBuilder} in order to reduce the number of files and minify the resulting code. The release version is offered for download on [CKEditor download page](https://ckeditor.com/ckeditor-4/download/) and also by the [CKEditor online builder](https://ckeditor.com/cke4/builder).
+The release version is a CKEditor 4 package that was processed by {@link guide/dev/build/README#about-ckbuilder-command-line CKBuilder} in order to reduce the number of files and minify the resulting code. The release version is offered for download on [CKEditor download page](https://ckeditor.com/ckeditor-4/download/) and also by the [CKEditor online builder](https://ckeditor.com/cke4/builder).
 
 ### Source Version
 
-Without the build process, the CKEditor "full" package would require over 250 files (HTTP requests) to run due to having to load separate plugin files, language files and icons. The "source" version of CKEditor is a version that you can download from the Git repository; it consists of hundreds of files. This is the version on which patches can be applied and as mentioned earlier, it is very unlikely that you are using it on a production environment.
+Without the build process, the CKEditor 4 "full" package would require over 250 files (HTTP requests) to run due to having to load separate plugin files, language files and icons. The "source" version of CKEditor is a version that you can download from the Git repository; it consists of hundreds of files. This is the version on which patches can be applied and as mentioned earlier, it is very unlikely that you are using it on a production environment.
 
 ### How to Check Which Distribution I Use?
 
 Check the size of the `ckeditor.js` file located in the `ckeditor` folder that is installed on your website. If the size of that file is larger than 50KB, you are using the release version.
 
-## Getting the Source Code of CKEditor
+## Getting the Source Code of CKEditor 4
 
-In order to apply patches to CKEditor and then build the release version, you need the source version. The source version of CKEditor is stored on GitHub.
+In order to apply patches to CKEditor 4 and then build the release version, you need the source version. The source version of CKEditor 4 is stored on GitHub.
 
 ### ckeditor4 vs ckeditor4-presets
 
-There are two repositories where CKEditor source files are kept: [`ckeditor4`](https://github.com/ckeditor/ckeditor4) and [`ckeditor4-presets`](https://github.com/ckeditor/ckeditor4-presets).
+There are two repositories where CKEditor 4 source files are kept: [`ckeditor4`](https://github.com/ckeditor/ckeditor4) and [`ckeditor4-presets`](https://github.com/ckeditor/ckeditor4-presets).
 
-The `ckeditor4-presets` repository is used by the CKEditor team to build the Basic/Standard/Full distributions. It uses `ckeditor4` as a dependency and scripts included there further automate the build process:
+The `ckeditor4-presets` repository is used by the CKEditor 4 team to build the Basic/Standard/Full distributions. It uses `ckeditor4` as a dependency and scripts included there further automate the build process:
 
  - It has information about which plugins should be included in which preset.
  - It loads spell checker plugins (`scayt` and `wsc`) from separate repositories where they are developed, if they are to be included in a release.
@@ -64,7 +65,7 @@ Although `ckeditor4-presets` saves time in the long term, to reduce the complexi
 
 ### Downloading ckeditor4
 
-The following section descibes how to download the source version of CKEditor from its GitHub repository.
+The following section descibes how to download the source version of CKEditor 4 from its GitHub repository.
 
 #### Which Version to Download?
 
@@ -78,7 +79,7 @@ In this case the version of CKEditor is *4.4.4* and the revision is *1ba5105*.
 
 #### Downloading with `git clone`
 
-Use the following steps to download CKEditor with a command line tool.
+Use the following steps to download CKEditor 4 with a command line tool.
 
 1. `git clone https://github.com/ckeditor/ckeditor4.git`
 2. `cd ckeditor4`
@@ -90,7 +91,7 @@ Where `<revision>` has to be set to exactly the same revision that you are using
 
 #### Downloading without Git
 
-Use the following steps to download CKEditor directly from the browser.
+Use the following steps to download CKEditor 4 directly from the browser.
 
 1. Open `https://github.com/ckeditor/ckeditor4/tree/<revision>` in your browser. For the example above the proper URL would be: [https://github.com/ckeditor/ckeditor4/tree/1ba5105](https://github.com/ckeditor/ckeditor4/tree/1ba5105).
 
@@ -102,7 +103,7 @@ Use the following steps to download CKEditor directly from the browser.
 
 ## Patching Process
 
-CKEditor source code is stored in the Git repository. The development takes place in the Git repository hosted on GitHub. Explaining how Git works is out of the scope of this document. All further instructions will cover one selected scenario based on which it should be much easier to understand the entire procedure.
+CKEditor 4 source code is stored in the Git repository. The development takes place in the Git repository hosted on GitHub. Explaining how Git works is out of the scope of this document. All further instructions will cover one selected scenario based on which it should be much easier to understand the entire procedure.
 
 ### Select the Changes You Want to Port
 
@@ -156,7 +157,7 @@ The hash of the changeset is `b373ace`, so open your command line tool and go th
 
 The `git apply` command will fail in the example above due to the `CHANGES.md` file.
 
-Fortunately, since you know that this file is not required by CKEditor, you can apply the patch ignoring that single file:
+Fortunately, since you know that this file is not required by CKEditor 4, you can apply the patch ignoring that single file:
 
 	git apply -v 12311.patch --exclude=CHANGES.md
 
@@ -166,16 +167,16 @@ Alternatively, when the patch does not apply cleanly, you may fall back on the 3
 
 **Note:** Check the Git documentation for more information about resolving conflicts.
 
-## Building CKEditor
+## Building CKEditor 4
 
-Building CKEditor from source is described in a separate article: {@link guide/dev/build/README Building CKEditor from Source Code}.
+Building CKEditor 4 from source is described in a separate article: {@link guide/dev/build/README Building CKEditor from Source Code}.
 Please read that article just to understand the basic concept before going further.
 
 ### Prepare `build-config.js`
 
 As explained in the documentation, the build configuration file (`dev/builder/build-config.js`) defines which plugins will be included in the created build.
 
-In order to be able to create the same build that you used so far, you should take `build-config.js` from the root folder of the CKEditor distribution that you are still using on production and overwrite `dev/builder/build-config.js` with correct `build-config.js`.
+In order to be able to create the same build that you used so far, you should take `build-config.js` from the root folder of the CKEditor 4 distribution that you are still using on production and overwrite `dev/builder/build-config.js` with correct `build-config.js`.
 
 ### Add Missing Plugins to the `plugins` Folder
 
@@ -183,17 +184,17 @@ It is possible that `ckeditor4/plugins` does not contain all plugins that your b
 
 #### Your Custom Plugins
 
-If you used a custom build of CKEditor with your own custom plugins, copy them to the `ckeditor4/plugins` folder.
+If you used a custom build of CKEditor 4 with your own custom plugins, copy them to the `ckeditor4/plugins` folder.
 
 #### Spell Checker Plugins
 
-If the build that you used had spell checker plugins (`scayt` or `wsc`), then you need to copy them as well. Spell checker plugins must be downloaded with the proper revision. The revision of `scayt` and `wsc` plugin that was used with release versions of CKEditor can be checked in the `ckeditor4-presets` repository
+If the build that you used had spell checker plugins (`scayt` or `wsc`), then you need to copy them as well. Spell checker plugins must be downloaded with the proper revision. The revision of `scayt` and `wsc` plugin that was used with release versions of CKEditor 4 can be checked in the `ckeditor4-presets` repository
 
 1. Open [https://github.com/ckeditor/ckeditor4-presets]( https://github.com/ckeditor/ckeditor4-presets).
 
 2. Press the "branch:" selection list and then select the Tags tab.
 
-3. Select the tag that matches the version of CKEditor that you are using.
+3. Select the tag that matches the version of CKEditor 4 that you are using.
 
     <img src="%BASE_PATH%/assets/img/patching_03.png" width="387" height="390" alt="Finding the tag in GitHub">
 
@@ -217,14 +218,14 @@ If you used third-party plugins from the addons repository, make sure you downlo
 
 ### Run CKBuilder
 
-Once all required plugins are available, you are finally ready to run the command line builder to create the release version of CKEditor.
+Once all required plugins are available, you are finally ready to run the command line builder to create the release version of CKEditor 4.
 
 On Unix system open the terminal, on Windows open the "Git Bash" window, and type the following:
 
 1. `cd dev/builder`
 2. `./build.sh`
 
-Assuming that Java is installed on your computer, the CKEditor release version should be created in less than a minute.
+Assuming that Java is installed on your computer, the CKEditor 4 release version should be created in less than a minute.
 
 ## Using Automated Tests to Check the Patched Version
 
@@ -258,7 +259,7 @@ git clone https://github.com/ckeditor/ckeditor4.git
     **Note:** You may need administrative rights to do this (e.g. `sudo`).
     <br>
 
-4. Install the correct version of Bender.js for the CKEditor version you want to test.
+4. Install the correct version of Bender.js for the CKEditor 4 version you want to test.
 
     ```
     npm install -g benderjs@0.1.7
@@ -266,7 +267,7 @@ git clone https://github.com/ckeditor/ckeditor4.git
     **Note:** You may need administrative rights to do this (e.g. `sudo`).
     <br>
 
-5. Install the dependencies that are required to test CKEditor.
+5. Install the dependencies that are required to test CKEditor 4.
 
     ```
     npm install
@@ -298,6 +299,6 @@ For more information about the testing CKEditor, check the {@link guide/dev/test
 The following resources discuss related issues:
 
 * The {@link guide/dev/upgrade/README Upgrading CKEditor} article explains how to upgrade your CKEditor 4.x installation to the latest version.
-* The {@link guide/dev/source/README Getting the Source Code} article explains where you can get and examine CKEditor source code.
+* The {@link guide/dev/source/README Getting the Source Code} article explains where you can get and examine CKEditor 4 source code.
 * The {@link guide/dev/build/README Getting the Source Code} article explains how to build CKEditor from source.
 * The {@link guide/dev/tests/README CKEditor Testing Environment (Bender.js)} article gives an overview of Bender.js.

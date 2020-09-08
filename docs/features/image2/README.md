@@ -2,8 +2,8 @@
 category: inserting-images
 order: 30
 url: features/image2
-menu-title: Enhanced Image
-meta-title-short: Enhanced Image
+menu-title: Enhanced Image Plugin
+meta-title-short: Enhanced Image Plugin
 ---
 <!--
 Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Enhanced Image Plugin
 
 <info-box info="">
- This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ This feature was introduced in <strong>CKEditor 4.3</strong>. It is provided through an optional plugin that is not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README needs to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The optional [Enhanced Image](https://ckeditor.com/cke4/addon/image2) plugin introduces a new widget type &mdash; a captioned image. It replaces the standard [Image](https://ckeditor.com/cke4/addon/image) plugin with a new captioned image that has the following capabilities:

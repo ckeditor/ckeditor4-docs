@@ -12,7 +12,7 @@ For licensing, see LICENSE.md.
 
 # Toolbar Location
 
-CKEditor allows you to customize the editor toolbar location. By default, in {@link guide/dev/framed/README classic}, `iframe`-based editors the toolbar is placed in the top part of the editor UI, above the editing area.
+CKEditor 4 allows you to customize the editor toolbar location. By default, in {@link guide/dev/framed/README classic}, `iframe`-based editors the toolbar is placed in the top part of the editor UI, above the editing area.
 
 You can, however, use the {@linkapi CKEDITOR.config.toolbarLocation CKEDITOR.config.toolbarLocation} configuration setting to change this option. For the default editor implementation you can choose between the `top` (the default) and the `bottom` setting.
 

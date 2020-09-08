@@ -13,10 +13,10 @@ For licensing, see LICENSE.md.
 # Table Support with Column Resizing
 
 <info-box info="">
- Features described in this article are provided through several plugins that may not be included in the CKEditor preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site which you are using and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+ Features described in this article are provided through several plugins that may not be included in the CKEditor 4 preset available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site which you are using and may {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
-CKEditor support for creating and editing tables is provided by four separate table-related plugins as well as two helper plugins.
+CKEditor 4 support for creating and editing tables is provided by four separate table-related plugins as well as two helper plugins.
 
 * The [Table](https://ckeditor.com/cke4/addon/table) plugin &ndash; adds the **Table Properties** dialog window with support for creating tables and setting basic table properties, such as:
 	* Number of rows and columns.
@@ -48,7 +48,7 @@ The following two helper plugins extend the Table Properties and Cell Properties
 
 The **Table**, **Table Tools** and **Table Selection** plugins are included in the Standard and Full installation packages. **Color Dialog** and  **Advanced Tab for Dialogs** are only available in the Full distribution, while the **Table Resize** plugin is optional &mdash; they may be {@link guide/dev/plugins/README added to your CKEditor build}.
 
-The following image presents a table that you can create in CKEditor along with the table context menu options provided by the Table and Table Tools plugins.
+The following image presents a table that you can create in CKEditor 4 along with the table context menu options provided by the Table and Table Tools plugins.
 
 {@img assets/img/table_01.png}
 
@@ -60,7 +60,7 @@ You need to hover your mouse over the column border to see the cursor change to 
 
 ## Table Support Demo
 
-See the {@linkexample table working "Table Support with Column Resizing" sample} that showcases CKEditor support for creating and editing tables, including table column resizing with your mouse.
+See the {@linkexample table working "Table Support with Column Resizing" sample} that showcases CKEditor 4 support for creating and editing tables, including table column resizing with your mouse.
 
 ## Related Features
 

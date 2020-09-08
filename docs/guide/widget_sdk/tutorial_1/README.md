@@ -32,7 +32,8 @@ The widget plugin will be named `simplebox`.
 
 Firstly, we will need to create the `simplebox` directory inside the `plugins` directory of the CKEditor installation.
 
-<info-box hint=""> Remember that for CKEditor the name of the plugin directory is important and has to be the same as the name of the plugin, otherwise the editor will not be able to recognize it.
+<info-box hint="">
+	Remember that for CKEditor the name of the plugin directory is important and has to be the same as the name of the plugin, otherwise the editor will not be able to recognize it.
 </info-box>
 
 Inside the newly created `simplebox` directory we are going to place the `plugin.js` file that will contain the widget logic. Apart from that, since we will also need a toolbar icon for our widget, we are going to add an `icons` directory and subsequently place the `simplebox.png` file inside.
@@ -60,7 +61,8 @@ The `simplebox` plugin is going to define the `simplebox` widget. To do this, th
 
 Additionally, as we are going to define a toolbar button, the `icons` property needs to be set and include the name of the icon file.
 
-<info-box hint=""> Please note the special naming convention for widget toolbar buttons. The Widget API will only be able to automatically add the button to the toolbar if the name of the icon is the same as the widget. In this case this will be <code>simplebox</code>. Do remember that the <code>icons</code> property <strong>accepts a PNG icon file name without an extension</strong>.
+<info-box hint="">
+	Please note the special naming convention for widget toolbar buttons. The Widget API will only be able to automatically add the button to the toolbar if the name of the icon is the same as the widget. In this case this will be <code>simplebox</code>. Do remember that the <code>icons</code> property <strong>accepts a PNG icon file name without an extension</strong>.
 </info-box>
 
 	CKEDITOR.plugins.add( 'simplebox', {
@@ -137,7 +139,7 @@ After you reload the page and click the widget toolbar button, you will insert t
 
 {@img assets/img/simplebox1_template_defined.png Simple Box widget template inserted into the editor}
 
-Note the small gray handle (<img class="inline" src="%BASE_PATH%/assets/img/drag.png" alt="Drag handle">) in the top left-hand corner of a widget that appears when you hover over or select the widget. If you hover over it with your mouse, a "move" cursor will appear. All widgets can be dragged inside the editing area of CKEditor and dropped wherever you want to place them. And since the widget structure is immutable, there is no chance that the widget will become corrupted in the process or otherwise fall apart!
+Note the small gray handle (<img class="inline" src="%BASE_PATH%/assets/img/drag.png" alt="Drag handle">) in the top left-hand corner of a widget that appears when you hover over or select the widget. If you hover over it with your mouse, a "move" cursor will appear. All widgets can be dragged inside the editing area of CKEditor 4 and dropped wherever you want to place them. And since the widget structure is immutable, there is no chance that the widget will become corrupted in the process or otherwise fall apart!
 
 ## Adding Editable Parts
 
@@ -145,10 +147,12 @@ Note, however, that at the moment Simple Box is of no real use for the user beca
 
 To change this and allow for some user input, we will need to define the `{@linkapi CKEDITOR.plugins.widget.definition#editables editables}` property of the widget definition. This property uses the `{@linkapi CKEDITOR.plugins.widget.nestedEditable.definition#selector selector}` parameter to define a CSS selector to be used for finding the particular editable element inside the widget element. In this case the selectors will use the classes that we assigned to the widget fields in the template definition.
 
-<info-box hint=""> Please note that only elements defined in <code>{@linkapi CKEDITOR.dtd#s-editable CKEDITOR.dtd.$editable}</code> can be converted into editable widget elements.
+<info-box hint="">
+	Please note that only elements defined in <code>{@linkapi CKEDITOR.dtd#s-editable CKEDITOR.dtd.$editable}</code> can be converted into editable widget elements.
 </info-box>
 
-<info-box info=""> Please note that editables <strong>have to</strong> be defined in the same order as the corresponding elements are placed in DOM. Otherwise, errors may occur when nesting widgets.
+<info-box info="">
+	Please note that editables <strong>have to</strong> be defined in the same order as the corresponding elements are placed in DOM. Otherwise, errors may occur when nesting widgets.
 </info-box>
 
 	editor.widgets.add( 'simplebox', {
@@ -178,7 +182,7 @@ Note that due to limitations of Internet Explorer 8 nested widgets may not be fu
 
 Currently the widget does not look very impressive and does not stand out in the editor content. Let us add some styling to the structure it generates to make it more obvious that it constitutes a special unit of content.
 
-Each CKEditor plugin, included widgets, can add its own styles for editor content. Depending on your CKEditor usage scenario (classic vs inline editor) the styles will need to be added to the {@linkapi CKEDITOR.config#contentsCss contentsCss} setting or added to the page styles.
+Each CKEditor 4 plugin, included widgets, can add its own styles for editor content. Depending on your CKEditor 4 usage scenario (classic vs inline editor) the styles will need to be added to the {@linkapi CKEDITOR.config#contentsCss contentsCss} setting or added to the page styles.
 
 To simplify the tutorial, let us assume you are using the {@link guide/dev/framed/README classic editor}. The styling of classic editor content is done by using the `contents.css` file. Add the styles below to your default `contents.css` file:
 
@@ -214,7 +218,7 @@ After you reload the page and insert the widget again, you will see that thanks 
 
 ## Adjusting Advanced Content Filter
 
-You might remember that since the {@link guide/dev/deep_dive/advanced_content_filter/README introduction of content filtering} in CKEditor {@link guide/plugin_sdk/integration_with_acf/README each plugin that adds editor content must define a list of HTML elements, classes, and styles} that need to be added to the filter for the editor to allow them. Additionally, you should also define the {@linkapi CKEDITOR.feature#requiredContent minimum HTML code} that is required for the feature to work which will cause the widget to be disabled if the user configuration overwrites the filtering rules added to the filter by this feature.
+You might remember that since the {@link guide/dev/deep_dive/advanced_content_filter/README introduction of content filtering} in CKEditor 4 {@link guide/plugin_sdk/integration_with_acf/README each plugin that adds editor content must define a list of HTML elements, classes, and styles} that need to be added to the filter for the editor to allow them. Additionally, you should also define the {@linkapi CKEDITOR.feature#requiredContent minimum HTML code} that is required for the feature to work which will cause the widget to be disabled if the user configuration overwrites the filtering rules added to the filter by this feature.
 
 The need for these changes might not have been immediately visible so far in our sample since we just kept on reloading the same page and did not try to load the data back into the editor. Let us simulate this scenario now by inserting the widget again, going to Source view and back to WYSIWYG view.
 
@@ -282,7 +286,8 @@ Content filter adjustments for editable widget parts are done straight in their 
 
 In this case we allowed just bold, italic, and line breaks in both fields and additionally lists and paragraphs in the content field.
 
-<info-box hint=""> Please note that thanks to {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations content transformations} with the configuration used above the editor will allow all forms of bold and italic formatting (so for example <code>&lt;strong&gt</code>, <code>&lt;b&gt</code> and <code>&lt;span style="font-weight:700|800|900|bold"&gt</code>). It is enough to list just one of the forms and others will get transformed automatically to the allowed form.
+<info-box hint="">
+	Please note that thanks to {@link guide/dev/deep_dive/advanced_content_filter/README#content-transformations content transformations} with the configuration used above the editor will allow all forms of bold and italic formatting (so for example <code>&lt;strong&gt</code>, <code>&lt;b&gt</code> and <code>&lt;span style="font-weight:700|800|900|bold"&gt</code>). It is enough to list just one of the forms and others will get transformed automatically to the allowed form.
 </info-box>
 
 When you reload the page now, you will see that when you try to edit the widget fields, some toolbar items become greyed out (meaning they are not available in this context) and you will be unable to use them. Likewise, if you used them in Source mode, the editor would cut them out when switching to WYSIWYG view or saving the document.
@@ -291,7 +296,7 @@ When you reload the page now, you will see that when you try to edit the widget 
 
 ## How Does a Widget Become a Widget?
 
-A final, but perhaps most important issue is: **How does CKEditor know that a piece of code is actually a widget and needs to be treated accordingly?** After all you could easily insert the same structure that we used as our template straight into the document &mdash; would it become a widget, too?
+A final, but perhaps most important issue is: **How does CKEditor 4 know that a piece of code is actually a widget and needs to be treated accordingly?** After all you could easily insert the same structure that we used as our template straight into the document &mdash; would it become a widget, too?
 
 This can actually be tested in Source mode again. Try pasting our widget template into the Source and switch to WYSIWYG or insert a widget, go to Source and back to WYSIWYG. The structure that you defined in the template is there, but the entire unit is no longer a widget &mdash; the drag icon is gone and you cannot select, move, or delete the entire entity like before.
 

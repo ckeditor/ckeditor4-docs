@@ -9,7 +9,7 @@ meta-title-short: Example CKEditor Setups
 Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
-# Example CKEditor Setups
+# Example CKEditor 4 Setups
 
 This article is a detailed explanation of sample editor configurations shown on the [CKEditor 4 Homepage](https://ckeditor.com/ckeditor-4/).
 
@@ -72,7 +72,7 @@ Inline editor provides a real WYSIWYG experience "out of the box" because unlike
 
 ## Accessibility Checker
 
-This demo showcases the <strong>Accessibility Checker</strong> plugin &mdash; an innovative solution that lets you inspect the accessibility level of content created in CKEditor and immediately solve any accessibility issues that are found.
+This demo showcases the <strong>Accessibility Checker</strong> plugin &mdash; an innovative solution that lets you inspect the accessibility level of content created in CKEditor 4 and immediately solve any accessibility issues that are found.
 
 <info-box hint="">
   Visit the {@linkexample accessibilitychecker CKEditor Examples} website to try out this configuration.
@@ -86,14 +86,13 @@ This demo showcases the <strong>Accessibility Checker</strong> plugin &mdash; an
 
 All setups above used some additional plugins which are not included by default in the Basic, Standard or Full distributions.
 
-There are multiple ways of loading the CKEditor library inside an application (each of them having its pros and cons) that are especially important when multiple additional plugins are loaded.
+There are multiple ways of loading the CKEditor 4 library inside an application (each of them having its pros and cons) that are especially important when multiple additional plugins are loaded.
 
 For better understanding of key differences please refer to {@link guide/dev/best_practices/README CKEditor Best Practices} and {@link guide/dev/advanced_installation/README Advanced Installation Concepts}.
 
 ### Manual Download and Installation of Additional Plugins (Not Recommended)
 
-Although at a first glance it looks like the simplest way of adding plugins to CKEditor, it is not only inefficient but also may result
-in a headache when trying to add plugin A, that requires plugin B, that requires plugin C (...and so on).
+Although at a first glance it looks like the simplest way of adding plugins to CKEditor 4, it is not only inefficient but also may result in a headache when trying to add plugin A, that requires plugin B, that requires plugin C (...and so on).
 
 In a brief summary it involves the following steps:
 <ol>
@@ -115,7 +114,7 @@ In a brief summary it involves the following steps:
 
 ### Using CDN
 
-This is the easiest way of using CKEditor if additional third-party plugins are not used. Using CKEditor from CDN involves the following steps:
+This is the easiest way of using CKEditor 4 if additional third-party plugins are not used. Using CKEditor 4 from CDN involves the following steps:
 <ol>
     <li>Adding a <code>&lt;script&gt;</code> tag that loads <code>ckeditor.js</code> from CDN. For more information refer to the <a href="http://cdn.ckeditor.com/">CDN documentation</a>.</li>
     <li>In case of using third-party plugins:
@@ -150,5 +149,5 @@ Refer to the {@link guide/dev/plugins/README#through-online-builder Installing P
 <tr><th>Toolbar configuration complexity</th><td>Low</td><td>The toolbar configurator is included in the downloaded CKEditor package and is aware of all included plugins.</td></tr>
 <tr><th>Complexity of future upgrades</th><td>Low</td><td>As easy as uploading the <code>build-config.js</code> file to the <a href="https://ckeditor.com/cke4/builder">Online Builder</a> and regenerating the package.</td></tr>
 <tr><th>Number of files requested by the browser</th><td>Low</td><td>Plugins are bundled into a single <code>ckeditor.js</code> file. Icons are merged into a sprite. Language files are merged.</td></tr>
-<tr><th>Performance</th><td>High</td><td>The only problem might be in slow networks where CKEditor is hosted and/or in a misconfigured server without file compression enabled. Such setup would influence not only CKEditor but would also slow down the whole web application.</td></tr>
+<tr><th>Performance</th><td>High</td><td>The only problem might be in slow networks where CKEditor 4 is hosted and/or in a misconfigured server without file compression enabled. Such setup would influence not only CKEditor but would also slow down the whole web application.</td></tr>
 </table>

@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Using the Copy Formatting Feature
 
 <info-box info="">
-    This feature was introduced in <strong>CKEditor 4.6</strong>. It is provided through an optional plugin that is included in the Full preset available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+    This feature was introduced in <strong>CKEditor 4.6</strong>. It is provided through an optional plugin that is included in the Full preset available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site. You can also {@link guide/dev/plugins/README add it to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 
 The optional [Copy Formatting](https://ckeditor.com/cke4/addon/copyformatting) plugin provides the ability to easily copy text formatting from one place in the document and apply it to another.
@@ -117,7 +117,7 @@ See the {@linkexample copyformatting working "Using the Copy Formatting Feature"
 
 Refer to the following resources for more information about text styling and formatting:
 
-* The {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filer} article contains more in-depth technical details about ACF.
+* The {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} article contains more in-depth technical details about ACF.
 * The {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README Allowed Content Rules} article explains the allowed and disallowed content rules format.
 * The {@link features/basicstyles/README Basic Text Styles: Bold, Italic and More} article explains how to apply bold, italic, underline, strikethrough, subscript and superscript formatting to text selections.
 * The {@link features/removeformat/README Removing Text Formatting} article explains how to quickly remove any text formatting that is applied through inline HTML elements and CSS styles.

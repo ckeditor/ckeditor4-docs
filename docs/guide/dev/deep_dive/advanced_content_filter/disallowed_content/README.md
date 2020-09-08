@@ -12,14 +12,16 @@ For licensing, see LICENSE.md.
 
 # Disallowed Content
 
-<info-box info=""> The Disallowed Content feature was introduced in <strong>CKEditor 4.4</strong> as a part of the {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} system which was introduced in <strong>CKEditor 4.1</strong>.
+<info-box info="">
+	The Disallowed Content feature was introduced in <strong>CKEditor 4.4</strong> as a part of the {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} system which was introduced in <strong>CKEditor 4.1</strong>.
 </info-box>
 
-The Disallowed Content feature complements the existing Allowed Content feature in that it lets you explicitly blacklist elements that you do not want to have in your CKEditor content. You can use it to limit the features that would otherwise be available in the fully automatic Advanced Content Filter mode.
+The Disallowed Content feature complements the existing Allowed Content feature in that it lets you explicitly blacklist elements that you do not want to have in your CKEditor 4 content. You can use it to limit the features that would otherwise be available in the fully automatic Advanced Content Filter mode.
 
 Disallowed content can be defined in the {@linkapi CKEDITOR.config.disallowedContent CKEDITOR.config.disallowedContent} setting or may be dynamically added with the {@linkapi CKEDITOR.filter.disallow CKEDITOR.filter.disallow} method. It has a higher priority than content allowed automatically or by the {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} setting, hence it is possible to correct automatic settings or achieve more complex results like "allow all attributes except those starting with `on*`".
 
-<info-box hint=""> It is not possible to disallow content when the Advanced Content Filter is disabled by setting {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} to <code>true</code>. A similar solution can be achieved by allowing all HTML elements.
+<info-box hint="">
+	It is not possible to disallow content when the Advanced Content Filter is disabled by setting {@linkapi CKEDITOR.config.allowedContent CKEDITOR.config.allowedContent} to <code>true</code>. A similar solution can be achieved by allowing all HTML elements.
 </info-box>
 
 ## Disallowed Content Rules
@@ -99,6 +101,6 @@ The above code sample will allow everything except for the `<script>` elements a
 Refer to the following resources for more information about content filtering:
 
 * The {@link guide/dev/acf/README Content Filtering (ACF)} article explains some ACF use cases and the rationale behind this feature.
-* The {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filer} article contains more in-depth technical details about ACF.
+* The {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter} article contains more in-depth technical details about ACF.
 * The {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README Allowed Content Rules} article explains the allowed and disallowed content rules format.
 * The {@link guide/plugin_sdk/integration_with_acf/README Integrating Plugins with Advanced Content Filter} article explains how to adjust custom plugins to properly implement content filtering.

@@ -13,11 +13,11 @@ For licensing, see LICENSE.md.
 # Exporting editor content to PDF
 
 <info-box info="">
-	This feature is provided through the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin that is not included in any official CKEditor 4 preset. You can {@link guide/dev/plugins/README add it to your custom build} with [online builder](https://ckeditor.com/cke4/builder) or download as an [npm package](https://www.npmjs.com/package/ckeditor4-plugin-exportpdf).
+	This feature is provided through the [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin that is included in `standard-all`, `full` and `full-all` official CKEditor 4 presets. You can also {@link guide/dev/plugins/README add it to your custom build} with [online builder](https://ckeditor.com/cke4/builder) or download as an [npm package](https://www.npmjs.com/package/ckeditor4-plugin-exportpdf).
 
-	**This feature is in beta version. It is free to use while in the beta phase.**
+	This is a premium feature. Please [contact us](https://ckeditor.com/contact/) if you would like to purchase a license. Let us know if you have any feedback or questions! You can also sign up for the [CKEditor Premium Features 30-day Free Trial](https://orders.ckeditor.com/trial/premium-features).
 
-	This is a premium feature. Please [contact us](https://ckeditor.com/contact/) if you would like to purchase a license. Let us know if you have any feedback or questions!
+	If this feature is used without authorization, the resulting document will be watermarked.
 </info-box>
 
 The optional [Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin allows you to easily print the WYSIWYG editor content to a PDF file.
@@ -69,6 +69,20 @@ As for browser compatibility, the Export to PDF plugin works in all browsers {@l
 ## Configuration
 
 The crucial aspect of this feature is its configuration. In order to ensure that the generated PDF looks as close as possible to the same content when it is displayed in the WYSIWYG editor, the feature should be carefully configured. The configuration options available both in the plugin and the HTML to PDF converter allow you to create PDF documents that will fulfill the needs of your application and your end-users.
+
+### Setting up a license key
+
+If you have a commercial license for Export to PDF plugin, [exportPdf_tokenUrl](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-exportPdf_tokenUrl) configuration option should be set to remove watermark from generated documents:
+
+```js
+CKEDITOR.replace( 'editor', {
+	exportPdf_tokenUrl: 'https://example.com/cs-token-endpoint'
+} )
+```
+
+This value is unique for each customer and can be found in the [CKEditor Ecosystem dashboard](https://dashboard.ckeditor.com).
+
+This is all. If you are having trouble in setting up Export to PDF, please [contact us](https://ckeditor.com/contact/).
 
 ### Achieving the Best Results
 

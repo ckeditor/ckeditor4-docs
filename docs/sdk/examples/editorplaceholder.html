@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Editor Placeholder">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, editorplaceholder, placeholder, template, configure, configuration, setup, settings, options, customization, customize, customise, customisation, config, modification, modify, change">
+	<meta name="sdk-samples" content="Editor Placeholder">
+	<meta name="sdk-category" content="sdk-user-interface">
+	<meta name="sdk-order" content="30">
+	<title>Editor Placeholder</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor4/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Using the Editor Placeholder <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/editorplaceholder.html">Documentation</a></h1>
+
+			<p>
+				The <a href="https://ckeditor.com/cke4/addon/editorplaceholder">Editor Placeholder</a> plugin allows you to display a placeholder text when the editor content is empty. The placeholder helps users locate the editor in the application and prompts to input the content. It works similarly to the native DOM <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#The_placeholder_attribute"><code>placeholder</code> attribute</a> used by inputs.
+			</p>
+
+			<textarea cols="10" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short></textarea>
+
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					extraPlugins: 'editorplaceholder',
+					editorplaceholder: 'Start typing here...'
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

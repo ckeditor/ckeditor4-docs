@@ -20,7 +20,8 @@ CKEditor 4 is almost totally backward compatible with CKEditor 3 (v3) in terms o
 
 This page lists the most relevant changes and the proper way to port them to CKEditor 4.
 
-<info-box hint=""> Please note that this list was created before the <strong>CKEditor 4.0 release</strong> and is not updated anymore. For further API changes see the <a href="https://ckeditor.com/cke4/release-notes">CKEditor changelog</a>.
+<info-box hint="">
+    Please note that this list was created before the <strong>CKEditor 4.0 release</strong> and is not updated anymore. For further API changes see the <a href="https://ckeditor.com/cke4/release-notes">CKEditor 4 changelog</a>.
 </info-box>
 
 ## Changes

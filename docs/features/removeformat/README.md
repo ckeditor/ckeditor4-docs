@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # Removing Text Formatting
 
 <info-box info="">
- This feature is provided through a plugin that is included in the Standard and Full presets available from the official CKEditor <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
+ This feature is provided through a plugin that is included in the Standard and Full presets available from the official CKEditor 4 <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </info-box>
 
 The [Remove Format](https://ckeditor.com/cke4/addon/removeformat) plugin provides the ability to quickly remove any text formatting that is applied through inline HTML elements and CSS styles, like {@link features/basicstyles/README basic text styles} (bold, italic, etc.), font family and size, {@link features/colorbutton/README text and background colors} or styles applied through the {@link features/styles/README Styles drop-down}. Note that it does not change {@link features/format/README text formats} applied at block level.

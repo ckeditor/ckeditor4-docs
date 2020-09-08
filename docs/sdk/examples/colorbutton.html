@@ -54,7 +54,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<p>
 				You can also add an optional <a href="https://ckeditor.com/cke4/addon/colordialog">Color Dialog</a>
 				plugin which provides the <strong>More Colors</strong> option and a user-friendly way to select the desired
-				color through a dedicated dialog window. The editor instance below includes both features.
+				color through a dedicated dialog window. The editor instance below includes both features. Notice how the picked colors
+				are saved in the color history row below the default palette for easy reuse.
 			</p>
 
 			<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
@@ -74,6 +75,32 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				right;&quot;&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 			</textarea>
 
+			<h2>Color History and Suggestions</h2>
+
+			<p>
+				Whenever you open any document you have worked on before, you can quickly reuse text and background colors that are present in the content. Thanks to <strong>Color History</strong> feature
+				introduced in CKEditor <code>4.15</code> version, editor finds all colors during initialization and adds them as additional color history rows below the default palette. Additionally, every
+				new color used is also added to the color history rows for even easier reuse. You can read more about this feature in the
+				<a href="https://ckeditor.com/docs/ckeditor4/latest/features/colorbutton.html#color-history">Color History documentation</a>.
+			</p>
+
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
+				&lt;h1&gt;&lt;span style=&quot;color:#66AB16&quot;&gt;Apollo 11&lt;/span&gt;&lt;/h1&gt;
+				&lt;p&gt;&lt;span style=&quot;color:#FFFFFF&quot;&gt;&lt;strong&gt;&lt;span style=&quot;background-color:#454545&quot;&gt;Apollo 11&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
+				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
+				&lt;h2&gt;&lt;span style=&quot;color:#CF5D4E&quot;&gt;Broadcasting and &lt;em&gt;quotes&lt;/em&gt;&lt;/span&gt; &lt;a id=&quot;quotes&quot; name=&quot;quotes&quot;&gt;&lt;/a&gt;&lt;/h2&gt;
+				&lt;p&gt;Broadcast on live TV to a world-wide audience, Armstrong stepped onto the lunar surface and described the event as:&lt;/p&gt;
+				&lt;blockquote&gt;
+				&lt;p&gt;&lt;span style=&quot;background-color:#DDDDDD&quot;&gt;One small step for [a] man, one giant leap for mankind.&lt;/span&gt;&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;p&gt;Apollo 11 effectively ended the &lt;a href=&quot;http://en.wikipedia.org/wiki/Space_Race&quot;&gt;Space Race&lt;/a&gt; and fulfilled a national goal proposed in 1961 by the late U.S. President &lt;a href=&quot;http://en.wikipedia.org/wiki/John_F._Kennedy&quot;&gt;John F. Kennedy&lt;/a&gt; in a speech before the United States Congress:&lt;/p&gt;
+				&lt;blockquote&gt;
+				&lt;p&gt;&lt;span style=&quot;background-color:#DDDDDD&quot;&gt;[...] before this decade is out, of landing a man on the Moon and returning him safely to the Earth.&lt;/span&gt;&lt;/p&gt;
+				&lt;/blockquote&gt;
+				&lt;hr /&gt;
+				&lt;p&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+			</textarea>
+
 			<h2>Custom Color List</h2>
 
 			<p>
@@ -88,7 +115,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				option to <code>false</code>. The editor instance below includes customizations.
 			</p>
 
-			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2" data-sample-short>
+			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3" data-sample-short>
 				&lt;h1&gt;&lt;span style=&quot;color:#66AB16&quot;&gt;Apollo 11&lt;/span&gt;&lt;/h1&gt;
 				&lt;p&gt;&lt;span style=&quot;color:#FFFFFF&quot;&gt;&lt;strong&gt;&lt;span style=&quot;background-color:#454545&quot;&gt;Apollo 11&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt; was the spaceflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on July 20, 1969, at 20:18 UTC. Armstrong became the first to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
 				&lt;p&gt;Armstrong spent about &lt;s&gt;three and a half&lt;/s&gt; two and a half hours outside the spacecraft, Aldrin slightly less; and together they collected 47.5 pounds (21.5&amp;nbsp;kg) of lunar material for return to Earth. A third member of the mission, &lt;a href=&quot;http://en.wikipedia.org/wiki/Michael_Collins_(astronaut)&quot;&gt;Michael Collins&lt;/a&gt;, piloted the &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_Command/Service_Module&quot;&gt;command&lt;/a&gt; spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it for the trip back to Earth.&lt;/p&gt;
@@ -132,8 +159,15 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script data-sample="2">
 				CKEDITOR.replace( 'editor2', {
 					height: 250,
+					extraPlugins: 'colorbutton'
+				} );
+			</script>
+
+			<script data-sample="3">
+				CKEDITOR.replace( 'editor3', {
+					height: 250,
 					extraPlugins: 'colorbutton',
-					colorButton_colors: 'CF5D4E,454545,FFF,CCC,DDD,CCEAEE,66AB16',
+					colorButton_colors: 'CF5D4E,454545,FFF,DDD,CCEAEE,66AB16',
 					colorButton_enableAutomatic: false
 				} );
 			</script>

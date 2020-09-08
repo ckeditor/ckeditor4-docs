@@ -35,12 +35,14 @@ The list of colors available in the color selectors can be customized, for examp
 Use the {@linkapi CKEDITOR.config.colorButton_colors `config.colorButton_colors`} configuration option to define a custom list available in the **Text Color** and **Background Color** features. For example:
 
 ```javascript
-	config.colorButton_colors = 'CF5D4E,454545,FFF,DDD,CCEAEE,66AB16';
+config.colorButton_colors = 'CF5D4E,454545,FFF,DDD,CCEAEE,66AB16';
 ```
 
 Additionally, since CKEditor 4.5.8 you can also disable the "Automatic" option by setting the {@linkapi CKEDITOR.config.colorButton_enableAutomatic `config.colorButton_enableAutomatic`} option to `false`.
 
-	config.colorButton_enableAutomatic = false;
+```javascript
+config.colorButton_enableAutomatic = false;
+```
 
 These settings will cause the color list to only contain the six colors listed above, with no "Automatic" option available:
 

@@ -36,7 +36,6 @@ import 'core-js/es/set';
 
 import 'classlist.js';
 import 'core-js/es/reflect';
-// import 'core-js/es/array';
 
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.

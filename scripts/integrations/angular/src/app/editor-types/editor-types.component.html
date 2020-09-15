@@ -1,38 +1,20 @@
-<h2>{{ type }} Editor</h2>
+<h2>Classic WYSIWYG Editor</h2>
 
 <p>
-	To use the CKEditor 4 WYSIWYG editor component, create a new <code>&lt;ckeditor&gt;</code> tag. The initial data of the editor can be set with the <code>data</code> property.
+	To use the CKEditor 4 <a href="./classic.html">classic editor</a> in Angular, create a new <code>&lt;ckeditor /&gt;</code> tag. The initial data of the editor can be set with the <code>data</code> property.
 </p>
-
-<p>
-	Three available editor types are <strong>classic editor</strong> (default one), <strong>divarea editor</strong> (an inline editor with a <a href="./fixedui.html">fixed UI</a>) and <strong>inline editor</strong> with a <a href="./floatingui.html">floating UI</a>.
-</p>
-
-<p>Use the select below to change the editor type.</p>
 
 <ckeditor
-	*ngIf="!inline && !divarea"
 	[(data)]="editorData">
 </ckeditor>
 
-<ckeditor
-	*ngIf="divarea"
-	type="divarea"
-	[(data)]="editorData">
-</ckeditor>
+<h2>Inline WYSIWYG Editor</h2>
+
+<p>
+	To use the CKEditor 4 <a href="./inline.html">inline editor</a> in Angular, set the <code>type</code> property of <code>&lt;ckeditor /&gt;</code> element to <code>inline</code>.
+</p>
 
 <ckeditor
-	*ngIf="inline"
 	type="inline"
 	[(data)]="editorData">
 </ckeditor>
-
-<div class="select-editor-type">
-	<label for="editor-type">Choose editor type:</label>
-
-	<select id="editor-type" class="editor-type" (change)="onChange($event.target.value)">
-		<option value="classic">Classic Editor</option>
-		<option value="divarea">Divarea Editor</option>
-		<option value="inline">Inline Editor</option>
-	</select>
-</div>

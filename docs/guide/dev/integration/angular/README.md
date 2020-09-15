@@ -68,7 +68,7 @@ Alternatively, you can load CKEditor before loading the CKEditor 4 Angular compo
 
 ## Choosing the Editor Type
 
-By default, starting from stable `1.0.0` version, the CKEditor 4 Angular component creates a {@link guide/dev/framed/README classic editor}. You can easily switch to an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI} (which was the default one for integration beta versions) by setting component `type` property to `divarea`. To create an editor with a {@link features/uitypes/README#floating-user-interface floating UI}, change the `type` property to `inline`:
+By default, starting from stable `1.0.0` version, the CKEditor 4 Angular component creates a {@link guide/dev/framed/README classic editor}. To create an editor with a {@link features/uitypes/README#floating-user-interface floating UI}, change the `type` property to `inline`:
 
 ```html
 <ckeditor
@@ -77,14 +77,7 @@ By default, starting from stable `1.0.0` version, the CKEditor 4 Angular compone
 ></ckeditor>
 ```
 
-So there are 3 possible values for the `type` property:
-
-* `classic` (default)
-* `divarea`
-* `inline`
-
-Notes:
-* The [Div Editing Area plugin](https://ckeditor.com/cke4/addon/divarea) must be {@link guide/dev/plugins/README included in your editor build} to use `divarea` editor type. In this case, however, there is no need to list it in the {@linkapi CKEDITOR.config#plugins `config.plugins`} or {@linkapi CKEDITOR.config#extraPlugins `config.extraPlugins`} options as the Angular component does this automatically for you.
+Up to the integration version `1.3.0` there was also a separate `divarea` editor type - an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI}. From the `2.0.0` it is still available, but instead of setting the editor type you just need to include a [Div Editing Area plugin](https://ckeditor.com/cke4/addon/divarea) in the editor config.
 
 ## Integration with ngModel
 
@@ -104,7 +97,7 @@ export class MyComponent {
 }
 ```
 
-Then you can use the model in the template to enable the two-way binding.
+Then you can use the model in the template to enable the two-way data binding.
 
 ```html
 <ckeditor [(ngModel)]="model.editorData"></ckeditor>
@@ -129,7 +122,7 @@ Custom configuration can be passed to the editor with the `config` attribute pas
 ></ckeditor>
 ```
 
-{@linkapi CKEDITOR.config All configuration} options can be changed this way.
+All {@linkapi CKEDITOR.config configuration options} can be changed this way.
 
 ### `data`
 
@@ -159,6 +152,7 @@ export class MyComponent {
 Specifies the tag name of the HTML element on which the WYSIWYG editor will be created.
 
 The default tag is `<textarea>`.
+
 ``` html
 <ckeditor tagName="textarea"></ckeditor>
 ```
@@ -223,7 +217,7 @@ Fires when the editor's editable is focused. It corresponds with the {@linkapi C
 
 ### `blur`
 
-Fires when the editing view of the editor is blurred. It corresponds with the {@linkapi CKEDITOR.editor#blur `editor#blur`} event.
+Fires when the editing area of the editor is blurred. It corresponds with the {@linkapi CKEDITOR.editor#blur `editor#blur`} event.
 
 ### `paste`
 
@@ -269,8 +263,8 @@ Please note that this property is initialised asynchronously, when the component
 
 ## Types
 
-CKEditor types can be installed from [@types/ckeditor](https://www.npmjs.com/package/@types/ckeditor). Note that they are not maintained by the CKEditor team, so we cannot guarantee that they are up to date.
+CKEditor 4 types can be installed from [@types/ckeditor](https://www.npmjs.com/package/@types/ckeditor). Note that they are not maintained by the CKEditor team, so we cannot guarantee that they are up to date.
 
 ## CKEditor 4 Angular Integration Demo
 
-See the {@linkexample angular working "CKEditor 4 Angular Integration" sample} that showcases the most iomportant features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.
+See the {@linkexample angular working "CKEditor 4 Angular Integration" sample} that showcases the most important features of the integration, including switching the editor type, configuration and events, or setting up two-way data binding.

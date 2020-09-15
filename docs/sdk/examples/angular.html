@@ -8,7 +8,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<meta charset="utf-8">
 	<meta name="description" content="CKEditor 4 WYSIWYG editor Angular framework integration. Using CKEditor 4 as an Angular component.">
 	<meta name="keywords" content="ckeditor, editor, wysiwyg, angular, integration">
-	<meta name="sdk-samples" content="Editor types|Component events and Angular directives|Form example">
+	<meta name="sdk-samples" content="Classic Editor|Inline Editor|Component events and Angular directives|Integration with forms">
 	<meta name="sdk-category" content="sdk-framework-integration">
 	<meta name="sdk-order" content="10">
 	<title>Angular Integration</title>
@@ -172,7 +172,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		</h1>
 
 		<p>
-			The <strong>Angular 5+ integration</strong> allows you to implement CKEditor 4 as an <a href="https://angular.io/">Angular</a> component, using the <code>&lt;ckeditor&gt;</code> tag.
+			The <strong>Angular 5+ integration</strong> allows you to implement CKEditor 4 as an <a href="https://angular.io/">Angular</a> component, using the <code>&lt;ckeditor /&gt;</code> tag.
 		</p>
 
 		<p>
@@ -194,266 +194,229 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 <script type="text/jsx" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag
 		data-sample-template="empty" data-sample-highlighter="typescript">
-	import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-	@Component( {
-		selector: 'app-editor-types',
-		template: `
-			<h2>{{ type }} Editor</h2>
-
-			<p>
-				To use the CKEditor 4 WYSIWYG editor component, create a new <code>&lt;ckeditor&gt;</code> tag. The initial data of the editor can be set with the <code>data</code> property.
-			</p>
-
-			<p>
-				Three available editor types are <strong>classic editor</strong> (default one), <strong>divarea editor</strong> (an inline editor with a <a href="./fixedui.html">fixed UI</a>) and <strong>inline editor</strong> with a <a href="./floatingui.html">floating UI</a>.
-			</p>
-
-			<p>Use the select below to change the editor type.</p>
-
-			<ckeditor
-				*ngIf="!inline && !divarea"
-				[(data)]="editorData">
-			</ckeditor>
-
-			<ckeditor
-				*ngIf="divarea"
-				type="divarea"
-				[(data)]="editorData">
-			</ckeditor>
-
-			<ckeditor
-				*ngIf="inline"
-				type="inline"
-				[(data)]="editorData">
-			</ckeditor>
-
-			<div class="select-editor-type">
-				<label for="editor-type">Choose editor type:</label>
-
-				<select id="editor-type" class="editor-type" (change)="onChange($event.target.value)">
-					<option value="classic">Classic Editor</option>
-					<option value="divarea">Divarea Editor</option>
-					<option value="inline">Inline Editor</option>
-				</select>
-			</div>
-		`
-	} )
-
-	export class EditorTypesComponent {
-		public isReadOnly = false;
-		public editorData =
-			`<p>This is a CKEditor 4 instance created with Angular.</p>`;
-
-		public type = 'Classic';
-		public inline = false;
-		public divarea = false;
-
-		public componentEvents: string[] = [];
-
-		onChange( newValue ) {
-			this.inline = newValue === 'inline';
-			this.divarea = newValue === 'divarea';
-
-			this.type = newValue.charAt( 0 ).toUpperCase() + newValue.substring( 1 );
-		}
-	}
+@Component( {
+	selector: 'app-classic-editor',
+	template: `
+		<ckeditor
+			[(data)]="editorData">
+		</ckeditor>
+	`
+} )
+export class ClassicEditorComponent {
+	public editorData = `<p>This is a CKEditor 4 instance created with Angular.</p>`;
+}
 </script>
+
 <script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag
 		data-sample-template="empty" data-sample-highlighter="typescript">
-	import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
-	interface ComponentEvent {
-		name: string;
-		counter: number;
-		message: string;
-	}
-
-	@Component( {
-		selector: 'app-events',
-		template: `
-			<h2>Events and Directives</h2>
-
-			<p>
-				The CKEditor 4 WYSIWYG editor component allows you to bind event handlers with <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html#supported-output-properties"><code>@Output</code></a> attributes in the HTML code.
-			</p>
-
-			<p>
-				The following example shows how to bind several CKEditor events. Additionally, it presents how the component could be used with <a href="https://angular.io/guide/attribute-directives">Angular directives</a>.
-			</p>
-
-			<ckeditor
-				*ngIf="!isRemoved"
-				data="<p>This is a CKEditor 4 instance created with Angular.</p>"
-				[readOnly]="isReadOnly"
-				[hidden]="isHidden"
-
-				(ready)="onReady()"
-				(change)="onChange()"
-				(focus)="onFocus()"
-				(blur)="onBlur()">
-			</ckeditor>
-
-			<h3>Events log</h3>
-
-			<ul class="events-log">
-				<li *ngFor="let event of componentEvents">{{ event.message }}>
-					<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
-				</li>
-			</ul>
-
-			<button (click)="clearEventsLog()">Clear events log</button>
-
-			<h3>Angular directives</h3>
-
-			<p><label><input type="checkbox" [(ngModel)]="isHidden">Hide the editor with the <code>[hidden]</code> directive.</label></p>
-			<p><label><input type="checkbox" [(ngModel)]="isRemoved">Remove the editor from DOM with the <code>*ngIf</code> directive.</label></p>
-			<p><label><input type="checkbox" [(ngModel)]="isReadOnly">Make the editor read-only.</label></p>
-		`
-	} )
-
-	export class EventsComponent {
-		public isReadOnly = false;
-
-		public isHidden = false;
-
-		public isRemoved = false;
-
-		public componentEvents: ComponentEvent[] = [];
-
-		clearEventsLog(): void {
-			this.componentEvents.length = 0;
-		}
-
-		onReady(): void {
-			this.saveEvent( 'ready' );
-		}
-
-		onChange(): void {
-			this.saveEvent( 'changed' );
-		}
-
-		onFocus(): void {
-			this.saveEvent( 'focused' );
-		}
-
-		onBlur(): void {
-			this.saveEvent( 'blurred' );
-		}
-
-		private saveEvent( eventName: string ): void {
-			const events = this.componentEvents;
-			let message = `Editor ${ eventName === 'changed' ? 'has' : 'is' } ${ eventName }`;
-
-			if ( events.length && events[ 0 ].name === eventName ) {
-				events[ 0 ].counter++;
-			} else {
-				events.unshift( {
-					name: eventName,
-					counter: 1,
-					message: message
-				} );
-			}
-		}
-	}
+@Component( {
+	selector: 'app-inline-editor',
+	template: `
+		<ckeditor
+			type="inline"
+			[(data)]="editorData">
+		</ckeditor>
+	`
+} )
+export class InlineEditorComponent {
+	public editorData = `<p>This is a CKEditor 4 instance created with Angular.</p>`;
+}
 </script>
+
 <script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag
 		data-sample-template="empty" data-sample-highlighter="typescript">
+import { Component } from '@angular/core';
 
-	import {
-		Component,
-		ViewChild,
-		AfterViewInit,
-		ElementRef
-	} from '@angular/core';
+interface ComponentEvent {
+	name: string;
+	counter: number;
+	message: string;
+}
 
-	import { NgForm } from '@angular/forms';
+@Component( {
+	selector: 'app-events',
+	template: `
+		<h2>Events and Directives</h2>
 
-	@Component( {
-		selector: 'app-demo-form',
-		template: `
-			<h2>Integration with forms (<code>ngModel</code>)</h2>
+		<p>
+			The CKEditor 4 WYSIWYG editor component allows you to bind event handlers with <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html#supported-output-properties"><code>@Output</code></a> attributes in the HTML code.
+		</p>
 
-			<p>
-				The CKEditor 4 WYSIWYG editor component implements the <a href="https://angular.io/api/forms/ControlValueAccessor"><code>ControlValueAccessor</code> interface</a> and works with <code>ngModel</code>. For example, it can be used to integrate with a simple form like the one below.
-			</p>
+		<p>
+			The following example shows how to bind several CKEditor events. Additionally, it presents how the component could be used with <a href="https://angular.io/guide/attribute-directives">Angular directives</a>.
+		</p>
 
-			<form (ngSubmit)="onSubmit()" #demoForm="ngForm">
-				<h3>User profile form</h3>
+		<ckeditor
+			*ngIf="!isRemoved"
+			data="<p>This is a CKEditor 4 instance created with Angular.</p>"
+			[readOnly]="isReadOnly"
+			[hidden]="isHidden"
 
-				<div>
-					<label for="name">Name</label>
-					<input [(ngModel)]="model.name" type="text" name="name" id="name">
-				</div>
+			(ready)="onReady()"
+			(change)="onChange()"
+			(focus)="onFocus()"
+			(blur)="onBlur()">
+		</ckeditor>
 
-				<div>
-					<label for="surname">Surname</label>
-					<input [(ngModel)]="model.surname" type="text" name="surname" id="surname">
-				</div>
+		<h3>Events log</h3>
 
-				<label for="description">Description</label>
-				<ckeditor
-					#editor
-					[(ngModel)]="model.description"
-					id="description"
-					name="description"
-					type="divarea">
-				</ckeditor>
+		<ul class="events-log">
+			<li *ngFor="let event of componentEvents">{{ event.message }}>
+				<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
+			</li>
+		</ul>
 
-				<p><button type="reset" (click)="reset()">Reset form</button></p>
-				<p><button type="submit">Submit this form</button></p>
-			</form>
+		<button (click)="clearEventsLog()">Clear events log</button>
 
-			<h3>Editor data preview</h3>
-			<p>
-				Note that this is only a proof of concept of using <code>ngModel</code>.
-				It allows for editing the form, but the editor strips out unknown tags. It also autoparagraphs text outside of block
-				elements. The editor updates when the textarea element is blurred.
-			</p>
+		<h3>Angular directives</h3>
 
-			<textarea #preview
-				(focus)="isPreviewActive = true; previewModel = model.description"
-				(change)="isPreviewActive = false; model.description = previewModel"
-				[(ngModel)]="previewModel"></textarea>
-		`,
-		styleUrls: [ './demo-form.component.css' ]
-	} )
+		<p><label><input type="checkbox" [(ngModel)]="isHidden">Hide the editor with the <code>[hidden]</code> directive.</label></p>
+		<p><label><input type="checkbox" [(ngModel)]="isRemoved">Remove the editor from DOM with the <code>*ngIf</code> directive.</label></p>
+		<p><label><input type="checkbox" [(ngModel)]="isReadOnly">Make the editor read-only.</label></p>
+	`
+} )
+export class EventsComponent {
+	public isReadOnly = false;
+	public isHidden = false;
+	public isRemoved = false;
+	public componentEvents: ComponentEvent[] = [];
 
-	export class DemoFormComponent implements AfterViewInit {
-		@ViewChild( 'demoForm' ) demoForm?: NgForm;
-		@ViewChild( 'preview' ) preview: ElementRef;
-		@ViewChild( 'editor' ) editor;
+	clearEventsLog(): void {
+		this.componentEvents.length = 0;
+	}
 
-		public model = {
-			name: 'John',
-			surname: 'Doe',
-			description: '<p>This is a sample form using CKEditor 4 and created in Angular.</p>'
-		};
+	onReady(): void {
+		this.saveEvent( 'ready' );
+	}
 
-		public isPreviewActive: boolean;
+	onChange(): void {
+		this.saveEvent( 'changed' );
+	}
 
-		public previewModel: string;
+	onFocus(): void {
+		this.saveEvent( 'focused' );
+	}
 
-		onSubmit() {
-			alert( `Form submit, model: ${ JSON.stringify( this.model ) }` );
-		}
+	onBlur(): void {
+		this.saveEvent( 'blurred' );
+	}
 
-		reset() {
-			this.demoForm!.reset();
-		}
+	private saveEvent( eventName: string ): void {
+		const events = this.componentEvents;
+		let message = `Editor ${ eventName === 'changed' ? 'has' : 'is' } ${ eventName }`;
 
-		get description() {
-			return this.demoForm!.controls.description;
-		}
-
-		ngAfterViewInit() {
-			this.editor.dataChange.subscribe( ( value ) => {
-				if ( !this.isPreviewActive ) {
-					this.previewModel = value;
-				}
+		if ( events.length && events[ 0 ].name === eventName ) {
+			events[ 0 ].counter++;
+		} else {
+			events.unshift( {
+				name: eventName,
+				counter: 1,
+				message: message
 			} );
 		}
 	}
+}
+</script>
+
+<script type="text/jsx" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag
+		data-sample-template="empty" data-sample-highlighter="typescript">
+import {
+	Component,
+	ViewChild,
+	AfterViewInit,
+	ElementRef
+} from '@angular/core';
+
+import { NgForm } from '@angular/forms';
+
+@Component( {
+	selector: 'app-demo-form',
+	template: `
+		<h2>Integration with forms (<code>ngModel</code>)</h2>
+
+		<p>
+			The CKEditor 4 WYSIWYG editor component implements the <a href="https://angular.io/api/forms/ControlValueAccessor"><code>ControlValueAccessor</code> interface</a> and works with <code>ngModel</code>. For example, it can be used to integrate with a simple form like the one below.
+		</p>
+
+		<form (ngSubmit)="onSubmit()" #demoForm="ngForm">
+			<h3>User profile form</h3>
+
+			<div>
+				<label for="name">Name</label>
+				<input [(ngModel)]="model.name" type="text" name="name" id="name">
+			</div>
+
+			<div>
+				<label for="surname">Surname</label>
+				<input [(ngModel)]="model.surname" type="text" name="surname" id="surname">
+			</div>
+
+			<label for="description">Description</label>
+			<ckeditor
+				#editor
+				[(ngModel)]="model.description"
+				id="description"
+				name="description"
+				type="divarea">
+			</ckeditor>
+
+			<p><button type="reset" (click)="reset()">Reset form</button></p>
+			<p><button type="submit">Submit this form</button></p>
+		</form>
+
+		<h3>Editor data preview</h3>
+		<p>
+			Note that this is only a proof of concept of using <code>ngModel</code>.
+			It allows for editing the form, but the editor strips out unknown tags. It also autoparagraphs text outside of block
+			elements. The editor updates when the textarea element is blurred.
+		</p>
+
+		<textarea #preview
+			(focus)="isPreviewActive = true; previewModel = model.description"
+			(change)="isPreviewActive = false; model.description = previewModel"
+			[(ngModel)]="previewModel"></textarea>
+	`,
+	styleUrls: [ './demo-form.component.css' ]
+} )
+export class DemoFormComponent implements AfterViewInit {
+	@ViewChild( 'demoForm' ) demoForm?: NgForm;
+	@ViewChild( 'preview' ) preview: ElementRef;
+	@ViewChild( 'editor' ) editor;
+
+	public model = {
+		name: 'John',
+		surname: 'Doe',
+		description: '<p>This is a sample form using CKEditor 4 and created in Angular.</p>'
+	};
+
+	public isPreviewActive: boolean;
+
+	public previewModel: string;
+
+	onSubmit() {
+		alert( `Form submit, model: ${ JSON.stringify( this.model ) }` );
+	}
+
+	reset() {
+		this.demoForm!.reset();
+	}
+
+	get description() {
+		return this.demoForm!.controls.description;
+	}
+
+	ngAfterViewInit() {
+		this.editor.dataChange.subscribe( ( value ) => {
+			if ( !this.isPreviewActive ) {
+				this.previewModel = value;
+			}
+		} );
+	}
+}
 </script>
 
 </body>

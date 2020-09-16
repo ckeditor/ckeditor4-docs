@@ -161,13 +161,13 @@ Finally, you can also tell the {@linkapi CKEDITOR.fileTools.fileLoader file load
 
 Starting from CKEditor 4.6, you can also pass additional data to the request using the `requestData` parameter of the {@linkapi CKEDITOR.editor.fileUploadRequest CKEDITOR.editor.fileUploadRequest} event. The data will be passed to all requests made by the {@linkapi CKEDITOR.fileTools.fileLoader file loader}. If you need to add some data only to requests made by a specific upload widget, you should use {@linkapi CKEDITOR.fileTools.uploadWidgetDefinition.additionalRequestParameters CKEDITOR.fileTools.uploadWidgetDefinition.additionalRequestParameters}
 
-To pass some data to the request, listen to the {@linkapi CKEDITOR.editor#fileUploadRequest fileUploadRequest} event and add the data as a property of `evt.requestData`:
+To pass some data to the request, listen to the {@linkapi CKEDITOR.editor#fileUploadRequest fileUploadRequest} event and add the data as a property of `evt.data.requestData`:
 
 	editor.on( 'fileUploadRequest', function( evt ) {
-		evt.requestData.foo = 'bar';
+		evt.data.requestData.foo = 'bar';
 	} );
 
-You can also pass additional files to the request, adding to `evt.requestData` an object with 2 keys:
+You can also pass additional files to the request, adding to `evt.data.requestData` an object with 2 keys:
 
 * `name` &ndash; The name of the file.
 * `file` &ndash; The file itself (as a `Blob` or `File` instance).
@@ -175,10 +175,10 @@ You can also pass additional files to the request, adding to `evt.requestData` a
 Example:
 
 	editor.on( 'fileUploadRequest', function( evt ) {
-		evt.requestData.otherFile = { name: 'file', file: myBlob };
+		evt.data.requestData.otherFile = { name: 'file', file: myBlob };
 	} );
 
-Note that the default file to be uploaded is also a property of `evt.requestData` named `upload` and it can be overwritten when neccessary.
+Note that the default file to be uploaded is also a property of `evt.data.requestData` named `upload` and it can be overwritten when neccessary.
 
 If the content of an image editor is pasted, it will be received as Base64 data and the file created from this data will need a name. In such cases the name is based on the MIME type. To change this behavior use the {@linkapi CKEDITOR.config.fileTools_defaultFileName CKEDITOR.config.fileTools_defaultFileName} option.
 

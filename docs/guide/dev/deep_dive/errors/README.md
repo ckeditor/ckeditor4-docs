@@ -107,6 +107,12 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 * Description: The {@linkapi CKEDITOR.config.exportPdf_tokenUrl} configuration variable for the [CKEditor Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin was not specified.
 * Additional data: None.
 
+## exportpdf-stylesheets-loading
+
+* Location: `plugins/exportpdf/plugin.js`
+* Description: At least one of the stylesheets attached to the document was not fully loaded when `exportPdf` command was executed.
+* Additional data: None.
+
 ## filetools-response-error
 
 * Location: `plugins/filetools/plugin.js`

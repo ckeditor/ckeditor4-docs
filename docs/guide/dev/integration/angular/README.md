@@ -77,7 +77,28 @@ By default, starting from stable `1.0.0` version, the CKEditor 4 Angular compone
 ></ckeditor>
 ```
 
-Up to the integration version `1.3.0` there was also a separate `divarea` editor type - an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI}. From the `2.0.0` it is still available, but instead of setting the editor type you just need to include a [Div Editing Area plugin](https://ckeditor.com/cke4/addon/divarea) in the editor config.
+### Using Div Area Editor Type
+
+Before [`2.0.0` integration version](https://www.npmjs.com/package/ckeditor4-angular/v/2.0.0) there was also a separate `divarea` editor type (an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI}).
+
+To use `divarea` editor in `2.0.0` and later versions you just need to include a [Div Editing Area plugin](https://ckeditor.com/cke4/addon/divarea) in the editor config:
+
+```html
+<ckeditor
+	data="<p>Some initial data</p>"
+	type="inline"
+	[config]="{ extraPlugins: 'divarea' }">
+></ckeditor>
+```
+
+To use `divarea` editor in versions before `2.0.0` (up to `1.3.0`), you have to change editor type to `divarea`:
+
+```html
+<ckeditor
+	data="<p>Some initial data</p>"
+	type="divarea"
+></ckeditor>
+```
 
 ## Integration with ngModel
 

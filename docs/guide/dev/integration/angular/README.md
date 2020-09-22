@@ -68,7 +68,7 @@ Alternatively, you can load CKEditor before loading the CKEditor 4 Angular compo
 
 ## Choosing the Editor Type
 
-By default, starting from stable `1.0.0` version, the CKEditor 4 Angular component creates a {@link guide/dev/framed/README classic editor}. To create an editor with a {@link features/uitypes/README#floating-user-interface floating UI}, change the `type` property to `inline`:
+By default, starting from the stable `1.0.0` version, the CKEditor 4 Angular component creates a {@link guide/dev/framed/README classic editor}. To create an editor with a {@link features/uitypes/README#floating-user-interface floating UI}, change the `type` property to `inline`:
 
 ```html
 <ckeditor
@@ -79,9 +79,9 @@ By default, starting from stable `1.0.0` version, the CKEditor 4 Angular compone
 
 ### Using Div Area Editor Type
 
-Before [`2.0.0` integration version](https://www.npmjs.com/package/ckeditor4-angular/v/2.0.0) there was also a separate `divarea` editor type (an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI}).
+Before the [`2.0.0` integration version](https://www.npmjs.com/package/ckeditor4-angular/v/2.0.0) there was also a separate `divarea` editor type (an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI}).
 
-To use `divarea` editor in `2.0.0` and later versions you just need to include a [Div Editing Area plugin](https://ckeditor.com/cke4/addon/divarea) in the editor config:
+To use the `divarea` editor in `2.0.0` and later versions you just need to include a [Div Editing Area plugin](https://ckeditor.com/cke4/addon/divarea) in the editor config:
 
 ```html
 <ckeditor
@@ -91,7 +91,7 @@ To use `divarea` editor in `2.0.0` and later versions you just need to include a
 ></ckeditor>
 ```
 
-To use `divarea` editor in versions before `2.0.0` (up to `1.3.0`), you have to change editor type to `divarea`:
+To use the `divarea` editor in versions prior `2.0.0` (up to `1.3.0`), you have to change editor type to `divarea`:
 
 ```html
 <ckeditor
@@ -134,7 +134,7 @@ The URL address to `ckeditor.js`. Refer to [Customising CKEditor Preset or Versi
 
 ### `config`
 
-Custom configuration can be passed to the editor with the `config` attribute passed to `<ckeditor>` in the component template. The following example shows {@link features/toolbar/README how to change the toolbar configuration}:
+Custom configuration can be passed to the editor with the `config` attribute passed to the `<ckeditor>` in the component template. The following example shows {@link features/toolbar/README how to change the toolbar configuration}:
 
 ```html
 <ckeditor
@@ -180,7 +180,7 @@ The default tag is `<textarea>`.
 
 ### `readOnly`
 
-The editor can be set to {@link features/readonly/README read-only mode} with the `readOnly` property:
+The editor can be set to a {@link features/readonly/README read-only mode} with the `readOnly` property:
 
 ```html
 <ckeditor

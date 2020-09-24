@@ -91,7 +91,7 @@ To use the `divarea` editor in `2.0.0` and later versions, you just need to incl
 ></ckeditor>
 ```
 
-To use the `divarea` editor in versions prior `2.0.0` (up to `1.3.0`), you have to change editor type to `divarea`:
+To use the `divarea` editor in versions prior `2.0.0` (up to `1.3.0`), you have to change the editor type to `divarea`:
 
 ```html
 <ckeditor

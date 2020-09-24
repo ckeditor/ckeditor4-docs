@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -10,20 +10,5 @@ import { Component } from '@angular/core';
 	templateUrl: './editor-types.component.html'
 } )
 export class EditorTypesComponent {
-	public isReadOnly = false;
-	public editorData =
-		`<p>This is a CKEditor 4 instance created with Angular.</p>`;
-
-	public type = 'Classic';
-	public inline = false;
-	public divarea = false;
-
-	public componentEvents: string[] = [];
-
-	onChange( newValue ) {
-		this.inline = newValue === 'inline';
-		this.divarea = newValue === 'divarea';
-
-		this.type = newValue.charAt( 0 ).toUpperCase() + newValue.substring( 1 );
-	}
+	public editorData = `<p>This is a CKEditor 4 instance created with Angular.</p>`;
 }

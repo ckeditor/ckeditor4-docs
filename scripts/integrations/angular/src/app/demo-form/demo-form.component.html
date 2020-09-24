@@ -20,8 +20,7 @@
 		#editor
 		[(ngModel)]="model.description"
 		id="description"
-		name="description"
-		type="divarea">
+		name="description">
 	</ckeditor>
 
 	<p class="demo-form__controls">
@@ -32,8 +31,8 @@
 
 <h3>Editor data preview</h3>
 <p>
-	Note that this is only a proof of concept of using <code>ngModel</code>.
-	It allows for editing the form, but the editor strips out unknown tags. It also autoparagraphs text outside of block
+	Note that this is only a proof of concept of using the <code>ngModel</code>.
+	It allows for editing the form, but the editor strips out unknown tags. It also autoparagraphs the text outside of block
 	elements. The editor updates when the textarea element is blurred.
 </p>
 <textarea class="editor-preview" #preview

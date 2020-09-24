@@ -77,7 +77,7 @@ By default, starting from the stable `1.0.0` version, the CKEditor 4 Angular com
 ></ckeditor>
 ```
 
-### Using Div Area Editor Type
+### Using the Div-based Editor Type
 
 Before the [`2.0.0` integration version](https://www.npmjs.com/package/ckeditor4-angular/v/2.0.0) there was also a separate `divarea` editor type (an {@link guide/dev/inline/README inline editor} with a {@link features/uitypes/README#fixed-ui-for-inline-editor fixed UI}).
 

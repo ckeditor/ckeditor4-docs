@@ -42,6 +42,10 @@ You can also use the text filter input (the search bar) to type and narrow down 
 
 ## Configuration
 
+<info-box info="">
+	Please note that the Emoji plugin support depends on your operating system. Emojis are loaded from the system font - CKEditor 4 does not provide them on its own.
+</info-box>
+
 The emoji feature is ready-to-use out of the box, but you can customize it by modifying the default emoji list or changing the number of characters that trigger the autocompletion mechanism.
 
 ### Custom Emoji List

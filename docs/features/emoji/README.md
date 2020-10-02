@@ -14,6 +14,8 @@ For licensing, see LICENSE.md.
 
 <info-box info="">
     This feature was introduced in CKEditor 4.10. It is provided through optional plugins that are not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/plugins/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
+
+    Please note that the emoji feature uses system fonts to render emojis. CKEditor 4 does not provide them on its own which means emojis availability depends on your operating system.
 </info-box>
 
 The emoji feature introduces support for easy inserting of emoji characters in a unified, platform-independent way. Emojis are inserted by typing identifiers based on [Unicode Short Names](https://unicode.org/emoji/charts/emoji-list.html) preceded by a colon (`:`) in the editor and selecting the suggestion from the provided dropdown.

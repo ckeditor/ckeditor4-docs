@@ -37,6 +37,10 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 					width: 100%;
 				}
 
+				.editor-instance {
+					margin-bottom: 1.2em;
+				}
+
 				/* Menu styling. */
 				ul.react-nav__menu {
 					display: block;
@@ -125,20 +129,12 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 				/* 3rd sample styling. */
 				.editor-preview {
-					float: right;
-					width: 49%;
 					border: 1px solid #d1d1d1;
 					padding: 10px;
 				}
 
 				.editor-preview h2 {
 					padding-top: 0;
-				}
-
-				@media screen and (max-width: 768px) {
-					.editor-preview {
-						width: 100%;
-					}
 				}
 			</style>
 
@@ -241,18 +237,13 @@ class TwoWayBinding extends Component {
 		return (
 			<div>
 				<SourceEditor data={this.state.data} handler={this.handleChange} />
-
-				<div style={{overflow: 'auto'}}>
+				<div className="editor-instance">
 					<CKEditor
 						data={this.state.data}
 						onChange={this.onEditorChange}
-						style={{
-							float: 'left',
-							width: '50%'
-						}}
 					/>
-					<EditorPreview data={this.state.data} />
 				</div>
+				<EditorPreview data={this.state.data} />
 			</div>
 		);
 	}

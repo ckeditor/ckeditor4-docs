@@ -46,7 +46,7 @@ class TwoWayBinding extends Component {
 
 				<SourceEditor data={this.state.data} handler={this.onTextareaChange} />
 
-				<div style={{overflow: 'auto'}}>
+				<div className="editor-instance">
 					<CKEditor
 						data={this.state.data}
 
@@ -65,13 +65,10 @@ class TwoWayBinding extends Component {
 								'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt'
 						}}
 						onChange={this.onEditorChange}
-						style={{
-							float: 'left',
-							width: '50%'
-						}}
 					/>
-					<EditorPreview data={this.state.data} />
 				</div>
+
+				<EditorPreview data={this.state.data} />
 			</div>
 		);
 	}

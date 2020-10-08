@@ -12,13 +12,12 @@ import { AppComponent } from './app.component';
 import { CKEditorModule } from 'ckeditor4-angular';
 import { EditorTypesComponent } from './editor-types/editor-types.component';
 import { EventsComponent } from './events/events.component';
-import { DemoFormComponent } from './demo-form/demo-form.component';
+import { EditorBindingComponent } from './binding/editor-binding.component';
 
 const appRoutes: Routes = [
-	{ path: '', redirectTo: '/editor-types', pathMatch: 'full' },
-	{ path: 'editor-types', component: EditorTypesComponent },
-	{ path: 'events', component: EventsComponent },
-	{ path: 'forms', component: DemoFormComponent }
+	{ path: '', component: EditorTypesComponent, pathMatch: 'full' },
+	{ path: 'configuration', component: EventsComponent },
+	{ path: '2-way-binding', component: EditorBindingComponent }
 ];
 
 @NgModule( {
@@ -30,7 +29,7 @@ const appRoutes: Routes = [
 	],
 	declarations: [
 		AppComponent,
-		DemoFormComponent,
+		EditorBindingComponent,
 		EditorTypesComponent,
 		EventsComponent
 	],

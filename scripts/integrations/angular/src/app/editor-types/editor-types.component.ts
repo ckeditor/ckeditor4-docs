@@ -11,4 +11,7 @@ import { Component } from '@angular/core';
 } )
 export class EditorTypesComponent {
 	public editorData = `<p>This is a CKEditor 4 instance created with Angular.</p>`;
+	public editorConfig = {
+		extraPlugins: 'sourcedialog'
+	}
 }

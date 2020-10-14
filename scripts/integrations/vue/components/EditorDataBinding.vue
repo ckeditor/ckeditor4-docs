@@ -31,21 +31,7 @@ export default {
 	name: 'editor-data-binding',
 	data() {
 		return {
-			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with Vue.</p>',
-			editorConfig: {
-				toolbar: [
-					[ 'Source' ],
-					[ 'Bold', 'Italic' ],
-					[ 'Undo', 'Redo' ],
-					[ 'EasyImageUpload' ],
-					[ 'About' ]
-				],
-				extraPlugins: 'easyimage',
-				removePlugins: 'image',
-				cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',
-				cloudServices_tokenUrl:
-					'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt'
-			}
+			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with Vue.</p>'
 		}
 	}
 }

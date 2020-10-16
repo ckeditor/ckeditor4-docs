@@ -14,12 +14,12 @@ class Samples extends Component {
 				<SamplesContainer>
 					<Nav label="React integration samples">
 						<NavLink exact={true} to="/" activeClassName="active">Editor Types</NavLink>
-						<NavLink to="/events" activeClassName="active">Configuration and Events</NavLink>
+						<NavLink to="/configuration" activeClassName="active">Configuration</NavLink>
 						<NavLink to="/2-way-binding" activeClassName="active">Two-way Data Binding</NavLink>
 					</Nav>
 					<Switch>
 						<Route exact path="/" component={EditorTypes} />
-						<Route path="/events" component={ConfigEvents} />
+						<Route path="/configuration" component={ConfigEvents} />
 						<Route path="/2-way-binding" component={TwoWayBinding} />
 					</Switch>
 				</SamplesContainer>

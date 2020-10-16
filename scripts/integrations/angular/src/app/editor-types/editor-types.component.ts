@@ -10,5 +10,8 @@ import { Component } from '@angular/core';
 	templateUrl: './editor-types.component.html'
 } )
 export class EditorTypesComponent {
-	public editorData = `<p>This is a CKEditor 4 instance created with Angular.</p>`;
+	public editorData = `<p>This is a CKEditor 4 WYSIWYG editor instance created with Angular.</p>`;
+	public editorConfig = {
+		extraPlugins: 'sourcedialog'
+	}
 }

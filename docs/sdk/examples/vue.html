@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 -->
 <html>
@@ -14,7 +14,6 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<title>Vue Integration</title>
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/vue/samples.css">
 	<script src="../../ckeditor4/ckeditor.js"></script>
 	<script src="assets/picoModal-2.0.1.min.js"></script>
 	<script src="assets/contentloaded.js"></script>
@@ -85,14 +84,27 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 <textarea type="text/template" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
 <div id="app">
 	<ckeditor
-		@ready="customHandler"
-		@focus="customHandler"
-		@blur="customHandler"
-		@input="customHandler"
+		@ready="logEvent('ready', $event)"
+		@focus="logEvent('focus', $event)"
+		@blur="logEvent('blur', $event)"
+		@input="logEvent('input', $event)"
 
 		:config="editorConfig"
 		:value="editorData"
-		></ckeditor>
+	></ckeditor>
+
+	<section>
+		<h3>Events log</h3>
+		<small>To check additional details about every event, consult the console in the browser developer tools.</small>
+		<div class="event-log">
+			<ul>
+				<li v-for="event of events">
+					{{ event.timestamp }} - {{ event.name }}
+				</li>
+			</ul>
+		</div>
+		<button v-on:click="clearEventsLog()">Clear events log</button>
+	</section>
 </div>
 <script>
 	Vue.use( CKEditor );
@@ -101,7 +113,8 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 		el: '#app',
 		data: function() {
 			return {
-				editorData: 'This is a CKEditor 4 instance created with Vue.',
+				events: [],
+				editorData: 'This is a CKEditor 4 WYSIWYG editor instance created with Vue.',
 				editorConfig: {
 					toolbar: [
 						[ 'Source' ],
@@ -111,11 +124,35 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 						[ 'About' ]
 					]
 				}
-			}
+			};
 		},
 		methods: {
-			customHandler: function( event ) {
-				console.log( event );
+			logEvent: function( eventName, event ) {
+				if ( this.events.length > 19 ) {
+					this.events.pop();
+				}
+
+				const eventData = {
+					name: eventName,
+					timestamp: this.getCurrentTimestamp()
+				}
+
+				this.events.unshift( eventData );
+
+				console.log( eventData.timestamp, eventData.name, event );
+			},
+
+			getCurrentTimestamp: function() {
+				return new Intl.DateTimeFormat( 'en', {
+					hour12: false,
+					hour: '2-digit',
+					minute: '2-digit',
+					second: '2-digit'
+				} ).format( new Date() );
+			},
+
+			clearEventsLog: function() {
+				this.events = [];
 			}
 		}
 	} );
@@ -124,29 +161,29 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 <textarea type="text/template" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="html">
 <div id="app">
-	<textarea v-model.lazy="editorData" style="width: 100%"></textarea>
+	<p>
+		<textarea id="editor-editor" class="source-editor" v-model.lazy="editorData"></textarea>
+	</p>
+
 	<ckeditor
-		v-model="editorData"
+		class="editor-instance"
 		:config="editorConfig"
-		></ckeditor>
+		v-model="editorData"
+	></ckeditor>
+
+	<div class="editor-preview">
+		<h2>Rendered content</h2>
+		<div v-html="editorData"></div>
+	</div>
 </div>
 <script>
 	Vue.use( CKEditor );
 
 	new Vue( {
 		el: '#app',
-		data: function() {
+		data() {
 			return {
-				editorData: 'This is a CKEditor 4 instance created with Vue.',
-				editorConfig: {
-					toolbar: [
-						[ 'Source' ],
-						[ 'Styles', 'Format', 'Font', 'FontSize' ],
-						[ 'Bold', 'Italic' ],
-						[ 'Undo', 'Redo' ],
-						[ 'About' ]
-					]
-				}
+				editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with Vue.</p>'
 			}
 		}
 	} );

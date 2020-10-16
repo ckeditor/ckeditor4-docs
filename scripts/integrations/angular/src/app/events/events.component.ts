@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 
 interface ComponentEvent {
 	name: string;
-	counter: number;
-	message: string;
+	timestamp: string;
 }
 
 @Component( {
@@ -16,46 +15,65 @@ interface ComponentEvent {
 	templateUrl: './events.component.html'
 } )
 export class EventsComponent {
-	public isReadOnly = false;
+	public events: ComponentEvent[] = [];
 
-	public isHidden = false;
-
-	public isRemoved = false;
-
-	public componentEvents: ComponentEvent[] = [];
+	public editorConfig = {
+		toolbar: [
+			[ 'Source' ],
+			[ 'Styles', 'Format', 'Font', 'FontSize' ],
+			[ 'Bold', 'Italic' ],
+			[ 'Undo', 'Redo' ],
+			[ 'EasyImageUpload' ],
+			[ 'About' ]
+		],
+		extraPlugins: 'easyimage',
+		removePlugins: 'image',
+		cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',
+		cloudServices_tokenUrl:
+			'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt'
+	}
 
 	clearEventsLog(): void {
-		this.componentEvents.length = 0;
+		this.events.length = 0;
 	}
 
 	onReady(): void {
-		this.saveEvent( 'ready' );
+		this.logEvent( 'ready' );
 	}
 
 	onChange(): void {
-		this.saveEvent( 'changed' );
+		this.logEvent( 'change' );
 	}
 
 	onFocus(): void {
-		this.saveEvent( 'focused' );
+		this.logEvent( 'focus' );
 	}
 
 	onBlur(): void {
-		this.saveEvent( 'blurred' );
+		this.logEvent( 'blur' );
 	}
 
-	private saveEvent( eventName: string ): void {
-		const events = this.componentEvents;
-		let message = `Editor ${ eventName === 'changed' ? 'has' : 'is' } ${ eventName }`;
-
-		if ( events.length && events[ 0 ].name === eventName ) {
-			events[ 0 ].counter++;
-		} else {
-			events.unshift( {
-				name: eventName,
-				counter: 1,
-				message: message
-			} );
+	private logEvent( eventName: string ): void {
+		if ( this.events.length > 19 ) {
+			this.events.pop();
 		}
+
+		const eventData = {
+			name: eventName,
+			timestamp: this.getCurrentTimestamp()
+		}
+
+		this.events.unshift( eventData );
+
+		console.log( eventData.timestamp, eventData.name, event );
+	}
+
+	private getCurrentTimestamp() {
+		return new Intl.DateTimeFormat( 'en', {
+			hour12: false,
+			hour: '2-digit',
+			minute: '2-digit',
+			second: '2-digit'
+		} ).format( new Date() );
 	}
 }

@@ -2,6 +2,9 @@ import React from 'react';
 import CKEditor from 'ckeditor4-react/dist/ckeditor.js';
 
 const initialData = '<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>';
+const editorConfig = {
+	extraPlugins: 'sourcedialog'
+};
 
 const EditorTypes = () => (
 	<div>
@@ -14,7 +17,7 @@ const EditorTypes = () => (
 		<p>
 			To use the CKEditor 4 <a href="./inline.html">inline editor</a> in React, set the <code>type</code> property of <code>&lt;CKEditor /&gt;</code> to <code>inline</code>.
 		</p>
-		<CKEditor type="inline" data={initialData} />
+		<CKEditor type="inline" data={initialData} config={editorConfig} />
 	</div>
 );
 

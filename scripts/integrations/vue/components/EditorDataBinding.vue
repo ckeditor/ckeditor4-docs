@@ -5,19 +5,23 @@
 			Using the <code>v-model</code> directive, it is possible to create a simple two-way data binding between the CKEditor 4 WYSIWYG editor component and other components, for example the preview component that renders the content of the editor.
 		</p>
 
-		<textarea class="source-editor" v-model.lazy="editorData"></textarea>
+		<p>
+			<label for="editor-editor">The editor content:</label>
+		</p>
 
-		<div class="editor-container">
-			<ckeditor
-				class="editor-instance"
-				:config="editorConfig"
-				v-model="editorData"
-			></ckeditor>
+		<p>
+			<textarea id="editor-editor" class="source-editor" v-model.lazy="editorData"></textarea>
+		</p>
 
-			<div class="editor-preview">
-				<h2>Rendered content</h2>
-				<div v-html="editorData"></div>
-			</div>
+		<ckeditor
+			class="editor-instance"
+			:config="editorConfig"
+			v-model="editorData"
+		></ckeditor>
+
+		<div class="editor-preview">
+			<h2>Rendered content</h2>
+			<div v-html="editorData"></div>
 		</div>
 	</div>
 </template>
@@ -27,21 +31,7 @@ export default {
 	name: 'editor-data-binding',
 	data() {
 		return {
-			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with Vue.</p>',
-			editorConfig: {
-				toolbar: [
-					[ 'Source' ],
-					[ 'Bold', 'Italic' ],
-					[ 'Undo', 'Redo' ],
-					[ 'EasyImageUpload' ],
-					[ 'About' ]
-				],
-				extraPlugins: 'easyimage',
-				removePlugins: 'image',
-				cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',
-				cloudServices_tokenUrl:
-					'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt'
-			}
+			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with Vue.</p>'
 		}
 	}
 }
@@ -52,18 +42,11 @@ export default {
 	width: 100%;
 }
 
-.editor-container {
-	overflow: auto;
-}
-
 .editor-instance {
-	float: left;
-	width: 50%;
+	margin-bottom: 1.2em;
 }
 
 .editor-preview {
-	float: right;
-	width: 49%;
 	border: 1px solid #d1d1d1;
 	padding: 10px;
 }

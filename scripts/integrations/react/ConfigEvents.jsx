@@ -68,7 +68,7 @@ class ConfigEvents extends Component {
 					onChange={this.logEvent}
 					onSelectionChange={this.logEvent} />
 					<h3>Events Log</h3>
-					<p><small>To check additional details about every event, consult the console in the browser developer tools.</small></p>
+					<small>To check additional details about every event, consult the console in the browser developer tools.</small>
 					<EventLog stream={this.state.events} />
 					<button onClick={this.clearEvents}>Clear events log</button>
 			</div>

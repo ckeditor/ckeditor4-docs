@@ -39,7 +39,7 @@ export default {
 	data: function() {
 		return {
 			events: [],
-			editorData: 'This is a CKEditor 4 instance created with Vue.',
+			editorData: 'This is a CKEditor 4 WYSIWYG editor instance created with Vue.',
 			editorConfig: {
 				toolbar: [
 					[ 'Source' ],

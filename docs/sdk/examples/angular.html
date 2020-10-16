@@ -319,11 +319,11 @@ import { NgForm } from '@angular/forms';
 	template: `
 		<h2>Two-way data binding</h2>
 		<p>
-		Using the <code>[()]</code> syntax, it is possible to create a simple two-way data binding between the CKEditor 4 WYSIWYG editor component and other components, for example the preview component that renders the content of the editor.
+			Using the <code>[()]</code> syntax, it is possible to create a simple two-way data binding between the CKEditor 4 WYSIWYG editor component and other components, for example the preview component that renders the content of the editor.
 		</p>
 
 		<p>
-		<label for="source-editor">The editor content:</label>
+			<label for="source-editor">The editor content:</label>
 		</p>
 
 		<p>
@@ -332,7 +332,8 @@ import { NgForm } from '@angular/forms';
 				class="source-editor"
 				(focus)="isSourceActive = true;"
 				(change)="isSourceActive = false; editorData = sourceData"
-				[(ngModel)]="sourceData"></textarea>
+				[(ngModel)]="sourceData">
+			</textarea>
 		</p>
 
 		<div class="editor-instance">

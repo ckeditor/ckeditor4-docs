@@ -137,7 +137,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## pastetools-failed-image-extraction
 
 * Location: `plugins/pastetools/filter/image.js`
-* Description: Images couldn't be correctly extracted from RTF content provided by [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins.
+* Description: Images couldn't be correctly extracted from the RTF content provided by [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins.
 * Additional data:
 	* `rtf`: Amount of images extracted from RTF.
 	* `html`: Amount of images present in HTML.
@@ -145,7 +145,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## pastetools-unsupported-image
 
 * Location: `plugins/pastetools/filter/image.js`
-* Description: One of the images extracted from RTF content provided by [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins is in unsupported format.
+* Description: One of the images extracted from the RTF content provided by [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins is in unsupported format.
 * Additional data:
 	* `type`: Image's MIME type.
 	* `index`: Index of the image inside the pasted content.

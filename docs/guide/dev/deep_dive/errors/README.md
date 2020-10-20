@@ -140,7 +140,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 * Description: Images couldn't be correctly extracted from the RTF content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins.
 * Additional data:
 	* `rtf`: The number of images extracted from RTF.
-    * `html`: The number of images present in HTML.
+	* `html`: The number of images present in HTML.
 
 ## pastetools-unsupported-image
 

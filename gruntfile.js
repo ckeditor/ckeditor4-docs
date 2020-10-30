@@ -161,8 +161,8 @@ module.exports = function( grunt ) {
 					'<%= path %>/ckeditor.js',
 
 					'docs/sdk/examples/assets/plugins/exportpdf',
-					'repos/ckeditor-presets/plugins/scayt',
-					'repos/ckeditor-presets/plugins/wsc'
+					'repos/ckeditor-presets/node_modules/ckeditor-plugin-scayt',
+					'repos/ckeditor-presets/node_modules/ckeditor-plugin-wsc'
 				],
 
 				cmd: 'ckeditor-jsduck',

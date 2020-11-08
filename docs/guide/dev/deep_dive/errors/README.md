@@ -145,9 +145,9 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## pastetools-unsupported-image
 
 * Location: `plugins/pastetools/filter/image.js`
-* Description: One of the images extracted from the RTF content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins is in unsupported format.
+* Description: One of the images extracted from the pasted content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins is in unsupported format. In case of Safari the `type` property will always equal to `'blob'`.
 * Additional data:
-	* `type`: Image's MIME type.
+	* `type`: Image's MIME type or `'blob'`.
 	* `index`: Index of the image inside the pasted content.
 
 ## range-endcontainer

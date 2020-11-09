@@ -9,7 +9,7 @@
 		<p>
 			To use the CKEditor 4 <a href="./inline.html">inline editor</a> in Vue, set the <code>type</code> directive of <code>&lt;ckeditor /&gt;</code> to <code>inline</code>.
 		</p>
-		<ckeditor type="inline" :value="editorData" />
+		<ckeditor type="inline" :value="editorData" :config="editorConfig" />
 	</div>
 </template>
 
@@ -18,7 +18,10 @@ export default {
 	name: 'editor-types',
 	data() {
 		return {
-			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with ️Vue.</p>'
+			editorData: '<p>This is a CKEditor 4 WYSIWYG editor instance created with ️Vue.</p>',
+			editorConfig: {
+				extraPlugins: 'sourcedialog'
+			}
 		}
 	}
 }

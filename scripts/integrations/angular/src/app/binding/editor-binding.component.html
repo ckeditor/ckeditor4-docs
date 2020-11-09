@@ -1,0 +1,29 @@
+<h2>Two-way data binding</h2>
+<p>
+Using the <code>[()]</code> syntax, it is possible to create a simple two-way data binding between the CKEditor 4 WYSIWYG editor component and other components, for example the preview component that renders the content of the editor.
+</p>
+
+<p>
+<label for="source-editor">The editor content:</label>
+</p>
+
+<p>
+	<textarea
+		id="source-editor"
+		class="source-editor"
+		(focus)="isSourceActive = true;"
+		(change)="isSourceActive = false; editorData = sourceData"
+		[(ngModel)]="sourceData"></textarea>
+</p>
+
+<div class="editor-instance">
+	<ckeditor
+		#editor
+		[(ngModel)]="editorData">
+	</ckeditor>
+</div>
+
+<div class="editor-preview">
+	<h2>Rendered content</h2>
+	<div [(innerHtml)]="editorData" #preview></div>
+</div>

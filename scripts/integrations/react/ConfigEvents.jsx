@@ -43,7 +43,7 @@ class ConfigEvents extends Component {
 					Editors created with the CKEditior 4 React component are highly customizable. It is possible to overwrite every configuration setting using the <code>config</code> property and passing an object containing the configuration to it.
 				</p>
 				<p>
-					Additionally, the CKEditor 4 WYSIWYG editor component for React allows you to bind any event handler using properties with names starting with <code>on</code>, followed by the name of the event with the first letter capitalized. The following example shows how to bind several common CKEditor 4 events.
+					Additionally, the CKEditor 4 WYSIWYG editor component for React allows you to bind any event handler using properties with names starting with <code>on</code>, followed by the name of the event with the first letter capitalized. The following example shows how to bind several common CKEditor 4 events and apply custom toolbar configuration.
 				</p>
 				<CKEditor
 					data="This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React."
@@ -68,7 +68,7 @@ class ConfigEvents extends Component {
 					onChange={this.logEvent}
 					onSelectionChange={this.logEvent} />
 					<h3>Events Log</h3>
-					<p><small>To check additional details about every event, consult the console in the browser developer tools.</small></p>
+					<small>To check additional details about every event, consult the console in the browser developer tools.</small>
 					<EventLog stream={this.state.events} />
 					<button onClick={this.clearEvents}>Clear events log</button>
 			</div>

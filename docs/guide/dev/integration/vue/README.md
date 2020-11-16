@@ -297,6 +297,38 @@ Note that you can still pass `readOnly` property as a [`config`](#config) direct
 
 ## Component events
 
+### `namespaceloaded`
+
+Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is called only one time for each editor instance and only when CKEDITOR 4 URL provided in [`editor-url`](#editor-url) directive is valid. Allows to modify global editor namespace.
+
+```html
+<template>
+	<div id="app">
+		<ckeditor @namespaceloaded="onNamespaceLoaded" :config="editorConfig"></ckeditor>
+	</div>
+</template>
+
+<script>
+	export default {
+		name: 'app',
+		data() {
+			return {
+				editorConfig: {
+					extraPlugins: 'placeholder'
+				}
+			}
+		},
+		methods: {
+			onNamespaceLoaded( CKEDITOR ) {
+				// Add external `placeholder` plugin which will be available for each
+				// editor instance on the page.
+				CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+			}
+		}
+	}
+</script>
+```
+
 ### `ready`
 
 Corresponds to the {@linkapi CKEDITOR.editor#event-instanceReady `instanceReady`} editor event.

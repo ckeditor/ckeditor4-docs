@@ -334,25 +334,31 @@ Corresponds to the {@linkapi CKEDITOR.editor#event-change `change`} editor event
 Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is called only one time for every editor instance and only when using [`editor-url`](#editor-url) directive with valid CKEditor 4 URL. Allows to modify global editor namespace.
 
 ```html
-<ckeditor @namespaceloaded="onNamespaceLoaded" :config="editorConfig"></ckeditor>
-```
+<template>
+	<div id="app">
+		<ckeditor @namespaceloaded="onNamespaceLoaded" :config="editorConfig"></ckeditor>
+	</div>
+</template>
 
-```js
-new Vue( {
-	el: '#app',
-	data: function() {
-		editorConfig: {
-			extraPlugins: 'placeholder'
-		}
-	},
-	methods: {
-		onNamespaceLoaded( CKEDITOR ) {
-			// Add external `placeholder` plugin which will be available for every
-			// editor instance on the page.
-			CKEDITOR.plugins.addExternal( '/path/to/the/placeholder/plugin', 'plugin.js' );
+<script>
+	export default {
+		name: 'app',
+		data() {
+			return {
+				editorConfig: {
+					extraPlugins: 'placeholder'
+				}
+			}
+		},
+		methods: {
+			onNamespaceLoaded( CKEDITOR ) {
+				// Add external `placeholder` plugin which will be available for every
+				// editor instance on the page.
+				CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+			}
 		}
 	}
-} );
+</script>
 ```
 
 ## Editor Instance

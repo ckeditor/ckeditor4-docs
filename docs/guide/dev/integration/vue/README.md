@@ -331,7 +331,7 @@ Corresponds to the {@linkapi CKEDITOR.editor#event-change `change`} editor event
 
 ### `namespaceloaded`
 
-Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is called only one time for every editor instance loaded on the page and only when using [`editor-url`](#editor-url) directive with valid CKEditor 4 CDN URL. Allows to modify global editor namespace.
+Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is called only one time for every editor instance and only when using [`editor-url`](#editor-url) directive with valid CKEditor 4 URL. Allows to modify global editor namespace.
 
 ```html
 <ckeditor @namespaceloaded="onNamespaceLoaded" :config="editorConfig"></ckeditor>

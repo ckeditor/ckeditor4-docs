@@ -297,38 +297,6 @@ Note that you can still pass `readOnly` property as a [`config`](#config) direct
 
 ## Component events
 
-### `ready`
-
-Corresponds to the {@linkapi CKEDITOR.editor#event-instanceReady `instanceReady`} editor event.
-
-```html
-<ckeditor @ready="onEditorReady"></ckeditor>
-```
-
-### `focus`
-
-Corresponds to the {@linkapi CKEDITOR.editor#event-focus `focus`} editor event.
-
-```html
-<ckeditor @focus="onEditorFocus"></ckeditor>
-```
-
-### `blur`
-
-Corresponds to the {@linkapi CKEDITOR.editor#event-blur `blur`} editor event.
-
-```html
-<ckeditor @blur="onEditorBlur"></ckeditor>
-```
-
-### `input`
-
-Corresponds to the {@linkapi CKEDITOR.editor#event-change `change`} editor event. Called only once the editor's data changed. Note that the `change` event requires the [`Undo`](https://ckeditor.com/cke4/addon/undo) plugin to work. Otherwise it will be called only one time on the editor initialization. See also the [`v-model` directive](#v-model) to learn more.
-
-```html
-<ckeditor @input="onEditorInput"></ckeditor>
-```
-
 ### `namespaceloaded`
 
 Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is called only one time for every editor instance and only when using [`editor-url`](#editor-url) directive with valid CKEditor 4 URL. Allows to modify global editor namespace.
@@ -359,6 +327,38 @@ Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is ca
 		}
 	}
 </script>
+```
+
+### `ready`
+
+Corresponds to the {@linkapi CKEDITOR.editor#event-instanceReady `instanceReady`} editor event.
+
+```html
+<ckeditor @ready="onEditorReady"></ckeditor>
+```
+
+### `focus`
+
+Corresponds to the {@linkapi CKEDITOR.editor#event-focus `focus`} editor event.
+
+```html
+<ckeditor @focus="onEditorFocus"></ckeditor>
+```
+
+### `blur`
+
+Corresponds to the {@linkapi CKEDITOR.editor#event-blur `blur`} editor event.
+
+```html
+<ckeditor @blur="onEditorBlur"></ckeditor>
+```
+
+### `input`
+
+Corresponds to the {@linkapi CKEDITOR.editor#event-change `change`} editor event. Called only once the editor's data changed. Note that the `change` event requires the [`Undo`](https://ckeditor.com/cke4/addon/undo) plugin to work. Otherwise it will be called only one time on the editor initialization. See also the [`v-model` directive](#v-model) to learn more.
+
+```html
+<ckeditor @input="onEditorInput"></ckeditor>
 ```
 
 ## Editor Instance

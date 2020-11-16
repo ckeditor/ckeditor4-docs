@@ -299,7 +299,7 @@ Note that you can still pass `readOnly` property as a [`config`](#config) direct
 
 ### `namespaceloaded`
 
-Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is called only one time for every editor instance and only when using [`editor-url`](#editor-url) directive with valid CKEditor 4 URL. Allows to modify global editor namespace.
+Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is called only one time for each editor instance and only when CKEDITOR 4 URL provided in [`editor-url`](#editor-url) directive is valid. Allows to modify global editor namespace.
 
 ```html
 <template>
@@ -320,7 +320,7 @@ Fired once {@linkapi CKEDITOR} namespace is loaded on the page. This event is ca
 		},
 		methods: {
 			onNamespaceLoaded( CKEDITOR ) {
-				// Add external `placeholder` plugin which will be available for every
+				// Add external `placeholder` plugin which will be available for each
 				// editor instance on the page.
 				CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
 			}

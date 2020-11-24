@@ -301,8 +301,6 @@ Controls how many times an `input` event can be executed over the given time as 
 
 Use this option when you expect that the editor users will work with more complicated, bigger documents to improve typing experience.
 
-Defaults to `80`.
-
 ```html
 <ckeditor throttle="120"></ckeditor>
 ```

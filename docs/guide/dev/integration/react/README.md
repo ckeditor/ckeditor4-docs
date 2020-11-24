@@ -215,6 +215,25 @@ component.editor.getData();
 
 Please note that this property is initialised asynchronously, after mounting the component.
 
+## CKEDITOR Namespace
+
+If you need access to the {@linkapi CKEDITOR} namespace, you can pass `onBeforeLoad` property to the CKEditor 4 React component as follows:
+
+```js
+import React from 'react';
+import CKEditor from 'ckeditor4-react';
+
+const GetNamespaceExample = () => {
+  const onBeforeLoadHandler = namespace => {
+    console.log(namespace)
+  };
+
+  return <CKEditor onBeforeLoad={onBeforeLoadHandler}/>;
+}
+
+export default GetNamespaceExample;
+```
+
 ## CKEditor 4 React Integration Demo
 
 See the {@linkexample react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

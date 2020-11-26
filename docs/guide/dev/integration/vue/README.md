@@ -295,6 +295,16 @@ This directive controls the {@linkapi CKEDITOR.editor#readOnly `readOnly`} prope
 
 Note that you can still pass `readOnly` property as a [`config`](#config) directive, however, the [`read-only`](#read-only) directive will take precedence over the configuration property if set.
 
+### `throttle`
+
+Controls the minimal interval (in miliseconds) at which an `input` component event can be executed repeatedly as a response to the editor content changes. Higher throttle levels should ensure better editor responsiveness at the cost of slower 2-way binding synchronization.
+
+Use this option when you expect that the editor users will work with more complicated, bigger documents to improve typing experience.
+
+```html
+<ckeditor throttle="120"></ckeditor> // `input` event will not be fired more often than every 120 ms.
+```
+
 ## Component events
 
 ### `namespaceloaded`

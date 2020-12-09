@@ -87,7 +87,7 @@ To use the `divarea` editor in `2.0.0` and later versions, you just need to incl
 <ckeditor
 	data="<p>Some initial data</p>"
 	type="inline"
-	[config]="{ extraPlugins: 'divarea' }">
+	[config]="{ extraPlugins: 'divarea' }"
 ></ckeditor>
 ```
 

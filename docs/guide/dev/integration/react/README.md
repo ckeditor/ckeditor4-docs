@@ -231,13 +231,13 @@ CKEditor4 React integration supports properties:
 
 **Default**: `{}`
 
-Configuration object for editor. For more details, look at {@linkapi CKEDITOR.config}.
+Stores configuration settings. All available configuration options can be found in the API documentation. Refer to the {@linkapi CKEDITOR.config config} object definition. This config will be applied to editor instances separately.
 
 ### data
 
 **Default**: `''`
 
-Data to fill editor instance. Passed to {@linkapi CKEDITOR.editor#setData} but without any other arguments.
+Data will be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} but without any other arguments.
 
 ### name
 
@@ -247,7 +247,7 @@ Provided name became editor HTML element `id` and `name` properties.
 
 **Default**: `false`
 
-Whenever editor should be read-only. Overrides {@linkapi CKEDITOR.config#readOnly} before it's used to initialize editor instance.
+Whenever editor should be read-only. Overrides {@linkapi CKEDITOR.config#readOnly config readOnly} before it's used to initialize editor instance.
 
 ### style
 
@@ -258,16 +258,16 @@ Require [type](#type) to be different than `inline`.
 
 **Default**: `'classic'`
 
-Set editor mode to edit in classic (iframe-based) or inline style.
+Set editor to work in classic (iframe-based) or inline mode.
 For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script}.
 
 ### onBeforeLoad
 
-Callback function with single argument: `CKEDITOR` namespace. **Invoked each time new editor instance is loaded**, but `CKEDITOR` is reference to the same namespace. Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviors.
+Callback function with single argument: `CKEDITOR` namespace. **Invoked each time new editor instance is loaded**, but `CKEDITOR` always refer to the same namespace. Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviors.
 
 ### onNamespaceLoaded
 
-Callback function with single argument: `CKEDITOR` namespace. **Invoked single time regardless of editor instances amount**.
+Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless amount of editor instances**.
 
 ## CKEditor 4 React Integration Demo
 

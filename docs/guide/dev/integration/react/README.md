@@ -215,6 +215,61 @@ component.editor.getData();
 
 Please note that this property is initialised asynchronously, after mounting the component.
 
+## Properties
+
+CKEditor4 React integration supports properties:
+- [config](#config) : `Object`
+- [name](#name) : `String`
+- [readOnly](#readonly) : `Boolean`
+- [type](#type) : `'classic'` | `'inline'`
+- [onNamespaceLoaded](#onnamespaceloaded) : `Function`
+- [onBeforeLoad](#onbeforeload) : `Function`
+- [style](#style) : `{}`
+- [data](#data) : `''`
+
+### config
+
+**Default**: `{}`
+
+Configuration object for editor. For more details, look at {@linkapi CKEDITOR.config}.
+
+### name
+
+Provided name became editor HTML element `id` and `name` properties.
+
+### readOnly
+
+**Default**: `false`
+
+Whenever editor should be read-only. Overrides {@linkapi CKEDITOR.config#readOnly} before it's used to initialize editor instance.
+
+### type
+
+**Default**: `'classic'`
+
+Set editor mode to edit in classic (iframe-based) or inline style.
+For more details, look at {@link guide/dev Loading CKEditor Script}
+
+### onNamespaceLoaded
+
+Callback function with single argument: `CKEDITOR` namespace. **Invoked single time regardless of editor instances amount**.
+
+### onBeforeLoad
+
+Callback function with single argument: `CKEDITOR` namespace. **Invoked each time new editor instance is loaded**, but `CKEDITOR` is reference to the same namespace. Look at [onNamespaceLoaded](#onNamespaceLoaded) to compare behaviors.
+
+### style
+
+Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}
+Require [type](#type) to be different than `inline`.
+
+
+### data
+
+**Default**: `''`
+
+Data to fill editor instance. Used same as {@linkapi CKEDITOR.editor#setData}
+
 ## CKEditor 4 React Integration Demo
 
 See the {@linkexample react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

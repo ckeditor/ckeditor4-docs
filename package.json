@@ -16,7 +16,7 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "@ngtools/webpack": "^7.2.3",
-    "@wiris/mathtype-ckeditor4": "^7.16.0",
+    "@wiris/mathtype-ckeditor4": "^7.24.1",
     "babel-loader": "^8.0.4",
     "chalk": "^2.4.1",
     "cheerio": "^1.0.0-rc.2",

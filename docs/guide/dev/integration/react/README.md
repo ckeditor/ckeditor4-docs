@@ -224,7 +224,7 @@ CKEditor4 React integration supports properties:
 - [type](#type) : `'classic'` | `'inline'`
 - [onNamespaceLoaded](#onnamespaceloaded) : `Function`
 - [onBeforeLoad](#onbeforeload) : `Function`
-- [style](#style) : `{}`
+- [style](#style) : `Object`
 - [data](#data) : `''`
 
 ### config
@@ -248,7 +248,7 @@ Whenever editor should be read-only. Overrides {@linkapi CKEDITOR.config#readOnl
 **Default**: `'classic'`
 
 Set editor mode to edit in classic (iframe-based) or inline style.
-For more details, look at {@link guide/dev Loading CKEditor Script}
+For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script}.
 
 ### onNamespaceLoaded
 
@@ -256,11 +256,11 @@ Callback function with single argument: `CKEDITOR` namespace. **Invoked single t
 
 ### onBeforeLoad
 
-Callback function with single argument: `CKEDITOR` namespace. **Invoked each time new editor instance is loaded**, but `CKEDITOR` is reference to the same namespace. Look at [onNamespaceLoaded](#onNamespaceLoaded) to compare behaviors.
+Callback function with single argument: `CKEDITOR` namespace. **Invoked each time new editor instance is loaded**, but `CKEDITOR` is reference to the same namespace. Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviors.
 
 ### style
 
-Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}
+Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}.
 Require [type](#type) to be different than `inline`.
 
 
@@ -268,7 +268,7 @@ Require [type](#type) to be different than `inline`.
 
 **Default**: `''`
 
-Data to fill editor instance. Used same as {@linkapi CKEDITOR.editor#setData}
+Data to fill editor instance. Passed to {@linkapi CKEDITOR.editor#setData} but without any other arguments.
 
 ## CKEditor 4 React Integration Demo
 

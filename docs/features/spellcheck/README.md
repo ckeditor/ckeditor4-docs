@@ -42,8 +42,8 @@ It is provided by [WebSpellChecker](https://webspellchecker.com/wsc-scayt-ckedit
 
 ## Spell Checking in a Dialog Window
 
-<info-box info="">
-	**This feature has an End-of-Life date set at December 31st, 2021.** We strongly encourage to choose one of the other available solutions - {@link features/spellcheck/README#spell-check-as-you-type-scayt Spell Check As You Type (SCAYT)} or {@link features/spellcheck/README#distraction-free-proofreading WProofreader}.
+<info-box warning="">
+	**This feature has an End-of-Life date set at December 31st, 2021.** This means it won't be supported and may stop working after this date. We strongly encourage to choose one of other spellchecking available solutions - {@link features/spellcheck/README#spell-check-as-you-type-scayt Spell Check As You Type (SCAYT)} or {@link features/spellcheck/README#distraction-free-proofreading WProofreader}.
 </info-box>
 
 The [WebSpellChecker Dialog](https://ckeditor.com/cke4/addon/wsc) plugin is another spell checker solution provided by [WebSpellChecker](https://webspellchecker.com/wsc-dialog-ckeditor4/). It runs the check through a dialog window instead of marking misspelled words inline. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.

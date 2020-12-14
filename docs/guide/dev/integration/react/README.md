@@ -239,6 +239,33 @@ Defaults to `''`.
 
 If provided - became editor HTML element `id` and `name` properties.
 
+```jsx
+import React, { Component } from 'react';
+import CKEditor from 'ckeditor4-react';
+
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <h2>Using CKEditor 4 in React</h2>
+                <CKEditor
+                    data="<p>Hello from CKEditor 4!</p>"
+					name="myeditor"
+                />
+            </div>
+        );
+    }
+}
+
+export default App;
+```
+
+Then in another place, it's possible to refer editor instance as:
+
+```js
+const editor = CKEDITOR.instances.myeditor;
+```
+
 Defaults to `undefined`.
 
 ### `readOnly`

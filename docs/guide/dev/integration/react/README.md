@@ -215,7 +215,7 @@ component.editor.getData();
 
 Please note that this property is initialised asynchronously, after mounting the component.
 
-## Properties
+## Component Properties
 
 CKEditor4 React integration supports properties:
 - [config](#config) : `Object`

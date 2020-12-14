@@ -253,7 +253,7 @@ Defaults to `false`.
 
 `Object`
 
-Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}. Require [type](#type) to be different than `inline`.
+Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}. Require [type](#type) to be `classic`.
 
 Defaults to `undefined`.
 
@@ -261,7 +261,9 @@ Defaults to `undefined`.
 
 `'classic'` | `'inline'`
 
-Set editor to work in classic (iframe-based) or inline mode. For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script article}.
+Set editor to work in classic (iframe-based) or inline mode.
+
+For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script article}.
 
 Defaults to `'classic'`.
 
@@ -269,7 +271,9 @@ Defaults to `'classic'`.
 
 `Function`
 
-Callback function with single argument: `CKEDITOR` namespace. It is invoked **each time new editor instance is loaded**, but `CKEDITOR` object always refers to the same namespace. Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
+Callback function with single argument: `CKEDITOR` namespace. It is invoked **each time new editor instance is loaded**, but `CKEDITOR` object always refers to the same namespace.
+
+Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 
 ### `onNamespaceLoaded`
 

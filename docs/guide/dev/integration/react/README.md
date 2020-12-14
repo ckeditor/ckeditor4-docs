@@ -87,6 +87,8 @@ The CKEditor 4 React component allows you to bind any event handler to the edito
 />
 ```
 
+There are also two events handled as component properties: [onBeforeLoad](#onbeforeload) and [onNamespaceLoaded](#onnamespaceloaded).
+
 ## Data Binding
 
 Wrapping the CKEditor 4 React component in another component allows to create a two-way binding between the editor's data and the content of external elements. This way updating the editor will update the elements and vice versa:
@@ -205,23 +207,9 @@ Defaults to `''`.
 If provided - became editor HTML element `id` and `name` properties.
 
 ```jsx
-import React, { Component } from 'react';
-import CKEditor from 'ckeditor4-react';
-
-class App extends Component {
-    render() {
-        return (
-            <div className="App">
-                <h2>Using CKEditor 4 in React</h2>
-                <CKEditor
-					name="myeditor"
-                />
-            </div>
-        );
-    }
-}
-
-export default App;
+<CKEditor
+	name="myeditor"
+/>
 ```
 
 Then in another place, it's possible to refer editor instance as:
@@ -258,7 +246,6 @@ Style rules set that will be applied to {@linkapi CKEDITOR.editor#container edit
 ```jsx
 <CKEditor
 	data="<p>Editor's content</p>"
-	readOnly={true}
 	style={{
 		'margin-top': '100px',
 		'border': '5px solid red'
@@ -304,6 +291,13 @@ Defaults to `'classic'`.
 
 Callback function with single argument: `CKEDITOR` namespace. It is invoked **each time new editor instance is loaded**, but `CKEDITOR` object always refers to the same namespace.
 
+```jsx
+<CKEditor
+	data="<p>Editor's content</p>"
+	onBeforeLoad={ namespace => console.log( namespace ) }
+/>
+```
+
 Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 
 ### `onNamespaceLoaded`
@@ -311,6 +305,18 @@ Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 `Function`
 
 Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless amount of editor instances**.
+
+```jsx
+<CKEditor
+	data="<p>Editor's content</p>"
+	onNamespaceLoaded={ CKEDITOR => {
+			// Add external `placeholder` plugin which will be available for each
+			// editor instance on the page.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+```
 
 ## CKEditor 4 React Integration Demo
 

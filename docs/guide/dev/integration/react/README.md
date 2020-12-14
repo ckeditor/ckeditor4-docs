@@ -231,7 +231,7 @@ CKEditor4 React integration supports properties:
 
 **Default**: `{}`
 
-Stores configuration settings. All available configuration options can be found in the API documentation. Refer to the {@linkapi CKEDITOR.config config} object definition. This config will be applied to editor instances separately.
+Stores configuration settings specific for the given component instance. All available configuration options can be found in the API documentation of the {@linkapi CKEDITOR.config `config` object}.
 
 ### data
 

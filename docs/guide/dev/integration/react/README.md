@@ -263,7 +263,7 @@ For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEdi
 
 ### onBeforeLoad
 
-Callback function with single argument: `CKEDITOR` namespace. **Invoked each time new editor instance is loaded**, but `CKEDITOR` always refer to the same namespace. Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviors.
+Callback function with single argument: `CKEDITOR` namespace. It is invoked **each time new editor instance is loaded**, but `CKEDITOR` object always refers to the same namespace. Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 
 ### onNamespaceLoaded
 

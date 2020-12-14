@@ -237,7 +237,7 @@ Stores configuration settings specific for the given component instance. All ava
 
 **Default**: `''`
 
-Data will be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} but without any other arguments.
+Data to be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} method with no additional arguments.
 
 ### name
 

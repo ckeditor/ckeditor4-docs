@@ -76,54 +76,6 @@ Alternatively, you can load CKEditor before loading the CKEditor 4 React compone
 <script src="app.js"></script>
 ```
 
-## Choosing the Editor Type
-
-By default, the CKEditor 4 React component creates a {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with the value of `inline` to the `<CKEditor />` tag:
-
-```jsx
-<CKEditor
-	data="<p>Some initial data</p>"
-	type="inline"
-/>
-```
-
-You can also explicitly set the `type` property to `classic` to create the classic editor:
-
-```jsx
-<CKEditor
-	data="<p>Some initial data</p>"
-	type="classic"
-/>
-```
-
-Every other value of the `type` property will be treated as `classic`.
-
-### Changing the Editor Configuration
-
-Custom configuration can be passed to the editor with the `config` property of the CKEditor 4 React component. The following example shows {@link features/toolbar/README how to change the contents of the toolbar}:
-
-```jsx
-<CKEditor
-	data="<p>Editor's content</p>"
-	config={ {
-		toolbar: [ [ 'Bold' ] ]
-	} }
-/>
-```
-
-{@linkapi CKEDITOR.config All configuration} options can be changed this way.
-
-There is also an additional way to set the {@link features/readonly/README read-only mode} with the `readOnly` property:
-
-```jsx
-<CKEditor
-	data="<p>Editor's content</p>"
-	readOnly={true}
-/>
-```
-
-This property takes precedence over the {@linkapi CKEDITOR.config#readOnly `config.readOnly`} setting.
-
 ## Event Handlers
 
 The CKEditor 4 React component allows you to bind any event handler to the editor with properties that start with `on`. The `on` is followed by the name of the event with the first letter capitalized, for example, an event handler for the {@linkapi CKEDITOR.editor.change `change` event} would be written as `onChange`:
@@ -221,7 +173,18 @@ Please note that this property is initialised asynchronously, after mounting the
 
 `Object`
 
-Stores configuration settings. All available configuration options can be found in the API documentation. Refer to the {@linkapi CKEDITOR.config config} object definition. This config will be applied to editor instances separately.
+Custom configuration can be passed to the editor with the `config` property of the CKEditor 4 React component. The following example shows {@link features/toolbar/README how to change the contents of the toolbar}:
+
+```jsx
+<CKEditor
+	data="<p>Editor's content</p>"
+	config={ {
+		toolbar: [ [ 'Bold' ] ]
+	} }
+/>
+```
+
+{@linkapi CKEDITOR.config All configuration} options can be changed this way.
 
 Defaults to `{}`.
 
@@ -230,6 +193,8 @@ Defaults to `{}`.
 `String`
 
 Data to be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} method with no additional arguments.
+
+For example usage, look at [basic usage](#basic-usage) paragraph.
 
 Defaults to `''`.
 
@@ -249,7 +214,6 @@ class App extends Component {
             <div className="App">
                 <h2>Using CKEditor 4 in React</h2>
                 <CKEditor
-                    data="<p>Hello from CKEditor 4!</p>"
 					name="myeditor"
                 />
             </div>
@@ -272,7 +236,16 @@ Defaults to `undefined`.
 
 `Boolean`
 
-Whenever editor should be read-only. Overrides {@linkapi CKEDITOR.config#readOnly config readOnly} before it's used to initialize editor instance.
+Set the {@link features/readonly/README read-only mode}:
+
+```jsx
+<CKEditor
+	data="<p>Editor's content</p>"
+	readOnly={true}
+/>
+```
+
+This property takes precedence over the {@linkapi CKEDITOR.config#readOnly `config.readOnly`} setting.
 
 Defaults to `false`.
 
@@ -282,6 +255,17 @@ Defaults to `false`.
 
 Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}.
 
+```jsx
+<CKEditor
+	data="<p>Editor's content</p>"
+	readOnly={true}
+	style={{
+		'margin-top': '100px',
+		'border': '5px solid red'
+	}}
+/>
+```
+
 Require [type](#type) to be `classic`.
 
 Defaults to `undefined`.
@@ -290,7 +274,25 @@ Defaults to `undefined`.
 
 `'classic'` | `'inline'`
 
-Set editor to work in classic (iframe-based) or inline mode.
+By default, the CKEditor 4 React component creates a {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with the value of `inline` to the `<CKEditor />` tag:
+
+```jsx
+<CKEditor
+	data="<p>Some initial data</p>"
+	type="inline"
+/>
+```
+
+You can also explicitly set the `type` property to `classic` to create the classic editor:
+
+```jsx
+<CKEditor
+	data="<p>Some initial data</p>"
+	type="classic"
+/>
+```
+
+Every other value of the `type` property will be treated as `classic`.
 
 For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script article}.
 

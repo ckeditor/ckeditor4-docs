@@ -227,45 +227,45 @@ CKEditor4 React integration supports properties:
 - [onBeforeLoad](#onbeforeload) : `Function`
 - [onNamespaceLoaded](#onnamespaceloaded) : `Function`
 
-### config
+### `config`
 
 **Default**: `{}`
 
 Stores configuration settings specific for the given component instance. All available configuration options can be found in the API documentation of the {@linkapi CKEDITOR.config `config` object}.
 
-### data
+### `data`
 
 **Default**: `''`
 
 Data to be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} method with no additional arguments.
 
-### name
+### `name`
 
 Provided name became editor HTML element `id` and `name` properties.
 
-### readOnly
+### `readOnly`
 
 **Default**: `false`
 
 Whenever editor should be read-only. Overrides {@linkapi CKEDITOR.config#readOnly config readOnly} before it's used to initialize editor instance.
 
-### style
+### `style`
 
 Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}.
 Require [type](#type) to be different than `inline`.
 
-### type
+### `type`
 
 **Default**: `'classic'`
 
 Set editor to work in classic (iframe-based) or inline mode.
 For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script}.
 
-### onBeforeLoad
+### `onBeforeLoad`
 
 Callback function with single argument: `CKEDITOR` namespace. It is invoked **each time new editor instance is loaded**, but `CKEDITOR` object always refers to the same namespace. Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 
-### onNamespaceLoaded
+### `onNamespaceLoaded`
 
 Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless amount of editor instances**.
 

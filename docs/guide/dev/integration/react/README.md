@@ -217,29 +217,17 @@ Please note that this property is initialised asynchronously, after mounting the
 
 ## Component Properties
 
-CKEditor4 React integration supports properties:
-- [config](#config) : `Object`
-- [data](#data) : `''`
-- [name](#name) : `String`
-- [readOnly](#readonly) : `Boolean`
-- [style](#style) : `Object`
-- [type](#type) : `'classic'` | `'inline'`
-- [onBeforeLoad](#onbeforeload) : `Function`
-- [onNamespaceLoaded](#onnamespaceloaded) : `Function`
-
 ### `config`
 
-<<<<<<< HEAD
-**Default**: `{}`
+`Object`
 
-Stores configuration settings specific for the given component instance. All available configuration options can be found in the API documentation of the {@linkapi CKEDITOR.config `config` object}.
-=======
 Stores configuration settings. All available configuration options can be found in the API documentation. Refer to the {@linkapi CKEDITOR.config config} object definition. This config will be applied to editor instances separately.
->>>>>>> Moved defaults section the bottom
 
 Defaults to `{}`.
 
 ### `data`
+
+`String`
 
 Data to be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} method with no additional arguments.
 
@@ -247,9 +235,15 @@ Defaults to `''`.
 
 ### `name`
 
-Provided name became editor HTML element `id` and `name` properties.
+`String`
+
+If provided - became editor HTML element `id` and `name` properties.
+
+Defaults to `undefined`.
 
 ### `readOnly`
+
+`Boolean`
 
 Whenever editor should be read-only. Overrides {@linkapi CKEDITOR.config#readOnly config readOnly} before it's used to initialize editor instance.
 
@@ -257,21 +251,29 @@ Defaults to `false`.
 
 ### `style`
 
-Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}.
-Require [type](#type) to be different than `inline`.
+`Object`
+
+Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}. Require [type](#type) to be different than `inline`.
+
+Defaults to `undefined`.
 
 ### `type`
 
-Set editor to work in classic (iframe-based) or inline mode.
-For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script}.
+`'classic'` | `'inline'`
+
+Set editor to work in classic (iframe-based) or inline mode. For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script article}.
 
 Defaults to `'classic'`.
 
 ### `onBeforeLoad`
 
+`Function`
+
 Callback function with single argument: `CKEDITOR` namespace. It is invoked **each time new editor instance is loaded**, but `CKEDITOR` object always refers to the same namespace. Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 
 ### `onNamespaceLoaded`
+
+`Function`
 
 Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless amount of editor instances**.
 

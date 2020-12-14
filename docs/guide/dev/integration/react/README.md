@@ -293,10 +293,29 @@ Callback function with single argument: `CKEDITOR` namespace. It is invoked **ea
 
 ```jsx
 <CKEditor
+	name="editorOne"
 	data="<p>Editor's content</p>"
-	onBeforeLoad={ namespace => console.log( namespace ) }
+	onBeforeLoad={ CKEDITOR => {
+			// Add external `placeholder` plugin which will be available for each
+			// editor instance on the page.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+
+<CKEditor
+	name="editorTwo"
+	data="<p>Editor's content</p>"
+	onBeforeLoad={ CKEDITOR => {
+			// Namespace was already loaded, but this callback will be called after all.
+			// Unnecessary adding same plugin to namespace.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
 />
 ```
+The above example tries to load the same plugin two times to the same namespace.
+
 
 Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 
@@ -308,10 +327,22 @@ Callback function with single argument: `CKEDITOR` namespace. **Invoked single t
 
 ```jsx
 <CKEditor
+	name="editorOne"
 	data="<p>Editor's content</p>"
 	onNamespaceLoaded={ CKEDITOR => {
 			// Add external `placeholder` plugin which will be available for each
 			// editor instance on the page.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+
+<CKEditor
+	name="editorTwo"
+	data="<p>Editor's content</p>"
+	onNamespaceLoaded={ CKEDITOR => {
+			// If namespace was already loaded, this callback will be never called!
+			// There will be only one attempt to add external plugin.
 			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
 		}
 	}

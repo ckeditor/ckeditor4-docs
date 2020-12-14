@@ -229,15 +229,21 @@ CKEditor4 React integration supports properties:
 
 ### `config`
 
+<<<<<<< HEAD
 **Default**: `{}`
 
 Stores configuration settings specific for the given component instance. All available configuration options can be found in the API documentation of the {@linkapi CKEDITOR.config `config` object}.
+=======
+Stores configuration settings. All available configuration options can be found in the API documentation. Refer to the {@linkapi CKEDITOR.config config} object definition. This config will be applied to editor instances separately.
+>>>>>>> Moved defaults section the bottom
+
+Defaults to `{}`.
 
 ### `data`
 
-**Default**: `''`
-
 Data to be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} method with no additional arguments.
+
+Defaults to `''`.
 
 ### `name`
 
@@ -245,9 +251,9 @@ Provided name became editor HTML element `id` and `name` properties.
 
 ### `readOnly`
 
-**Default**: `false`
-
 Whenever editor should be read-only. Overrides {@linkapi CKEDITOR.config#readOnly config readOnly} before it's used to initialize editor instance.
+
+Defaults to `false`.
 
 ### `style`
 
@@ -256,10 +262,10 @@ Require [type](#type) to be different than `inline`.
 
 ### `type`
 
-**Default**: `'classic'`
-
 Set editor to work in classic (iframe-based) or inline mode.
 For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script}.
+
+Defaults to `'classic'`.
 
 ### `onBeforeLoad`
 

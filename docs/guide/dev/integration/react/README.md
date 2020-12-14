@@ -253,7 +253,9 @@ Defaults to `false`.
 
 `Object`
 
-Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}. Require [type](#type) to be `classic`.
+Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}.
+
+Require [type](#type) to be `classic`.
 
 Defaults to `undefined`.
 

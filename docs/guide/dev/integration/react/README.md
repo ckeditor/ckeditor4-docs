@@ -293,6 +293,26 @@ Callback function with single argument: `CKEDITOR` namespace. It is invoked **ea
 
 **Note**: To modify `CKEDITOR` namespace it is recommended to use [onNamespaceLoaded](#onnamespaceloaded) event.
 
+Simple usage:
+
+```jsx
+<CKEditor
+	data="<p>First editor.</p>"
+	onBeforeLoad={ CKEDITOR => {
+		console.log( 'First editor loaded!' );
+	}
+/>
+
+<CKEditor
+	data="<p>Second editor.</p>"
+	onBeforeLoad={ CKEDITOR => {
+		console.log( 'Second editor loaded!' );
+	}
+/>
+```
+
+Complex example. Loads the same plugin two times to the same namespace:
+
 ```jsx
 <CKEditor
 	name="editorOne"
@@ -309,15 +329,13 @@ Callback function with single argument: `CKEDITOR` namespace. It is invoked **ea
 	name="editorTwo"
 	data="<p>Editor's content</p>"
 	onBeforeLoad={ CKEDITOR => {
-			// Namespace was already loaded, but this callback will be called after all.
-			// Unnecessary adding same plugin to namespace.
+			// Namespace was already loaded, but this callback will be called anyway.
+			// Unnecessary adding the same plugin to the namespace.
 			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
 		}
 	}
 />
 ```
-The above example tries to load the same plugin two times to the same namespace.
-
 
 Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 

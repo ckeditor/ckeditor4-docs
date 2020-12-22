@@ -87,7 +87,7 @@ The CKEditor 4 React component allows you to bind any event handler to the edito
 />
 ```
 
-There are also two events defined in react component: [onBeforeLoad](#onbeforeload) and [onNamespaceLoaded](#onnamespaceloaded).
+There are also two events defined in CKEditor 4 React component by default: [onBeforeLoad](#onbeforeload) and [onNamespaceLoaded](#onnamespaceloaded).
 
 ## Data Binding
 

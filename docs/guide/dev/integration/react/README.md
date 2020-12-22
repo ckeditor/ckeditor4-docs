@@ -196,7 +196,7 @@ Defaults to `{}`.
 
 Data to be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} method with no additional arguments.
 
-For example usage, look at [basic usage](#basic-usage) paragraph.
+For example usage, look at [Basic Usage](#basic-usage) section.
 
 Defaults to `''`.
 

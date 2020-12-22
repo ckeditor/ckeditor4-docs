@@ -172,7 +172,7 @@ module.exports = function( grunt ) {
 					warnings: [ '-nodoc', '-image_unused' ],
 					output: 'docs/api/data',
 					export: 'full',
-					external: 'Blob,File,FileReader,DocumentFragment',
+					external: 'Blob,File,FileReader,DocumentFragment,ArrayBuffer,Uint8Array',
 					exclude: '<%= path %>/plugins/codesnippet/lib',
 					'ignore-html': 'source'
 				}

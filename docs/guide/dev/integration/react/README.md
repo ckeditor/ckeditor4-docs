@@ -218,8 +218,6 @@ Then it is possible to refer to editor instance like this:
 const editor = CKEDITOR.instances.myeditor;
 ```
 
-Defaults to `undefined`.
-
 ### `readOnly`
 
 `Boolean`
@@ -254,8 +252,6 @@ Style rules set that will be applied to {@linkapi CKEDITOR.editor#container edit
 ```
 
 Requires component [type](#type) property to be `classic`.
-
-Defaults to `undefined`.
 
 ### `type`
 

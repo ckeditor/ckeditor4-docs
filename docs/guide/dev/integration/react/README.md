@@ -253,7 +253,7 @@ Style rules set that will be applied to {@linkapi CKEDITOR.editor#container edit
 />
 ```
 
-Require [type](#type) to be `classic`.
+Requires component [type](#type) property to be `classic`.
 
 Defaults to `undefined`.
 

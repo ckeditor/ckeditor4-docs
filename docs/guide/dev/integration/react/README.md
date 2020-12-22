@@ -218,6 +218,8 @@ Then it is possible to refer to editor instance like this:
 const editor = CKEDITOR.instances.myeditor;
 ```
 
+The editor element is also accessible via the [component](#editor-instance) itself.
+
 ### `readOnly`
 
 `Boolean`

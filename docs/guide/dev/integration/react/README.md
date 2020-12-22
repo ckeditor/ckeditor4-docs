@@ -279,7 +279,7 @@ You can also explicitly set the `type` property to `classic` to create the class
 
 Every other value of the `type` property will be treated as `classic`.
 
-For more details, look at {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script article}.
+For more details, look at the {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script article}.
 
 Defaults to `'classic'`.
 
@@ -309,7 +309,7 @@ Simple usage:
 />
 ```
 
-Complex example. Loads the same plugin two times to the same namespace:
+An example below shows incorrect usage - it attempts to load the same plugin two times to the same namespace:
 
 ```jsx
 <CKEditor
@@ -335,13 +335,13 @@ Complex example. Loads the same plugin two times to the same namespace:
 />
 ```
 
-Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
+Look at [onNamespaceLoaded](#onnamespaceloaded) property to compare behaviours.
 
 ### `onNamespaceLoaded`
 
 `Function`
 
-Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless of editor instances number**.
+Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless of editor instances number**. This property should be used if you need to modify the `CKEDITOR` object, e.g. add an external plugin:
 
 ```jsx
 <CKEditor
@@ -367,7 +367,7 @@ Callback function with single argument: `CKEDITOR` namespace. **Invoked single t
 />
 ```
 
-Look at [onBeforeLoad](#onbeforeload) to compare behaviours.
+Look at [onBeforeLoad](#onbeforeload) property to compare behaviours.
 
 ## CKEditor 4 React Integration Demo
 

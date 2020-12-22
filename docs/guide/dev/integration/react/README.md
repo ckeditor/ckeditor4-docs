@@ -204,7 +204,7 @@ Defaults to `''`.
 
 `String`
 
-If provided - became editor HTML element `id` and `name` properties.
+Provides value for `id` and `name` properties of editor's HTML element.
 
 ```jsx
 <CKEditor

@@ -291,6 +291,8 @@ Defaults to `'classic'`.
 
 Callback function with single argument: `CKEDITOR` namespace. It is invoked **each time new editor instance is loaded**, but `CKEDITOR` object always refers to the same namespace.
 
+**Note**: To modify `CKEDITOR` namespace it is recommended to use [onNamespaceLoaded](#onnamespaceloaded) event.
+
 ```jsx
 <CKEditor
 	name="editorOne"

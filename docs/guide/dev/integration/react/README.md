@@ -367,6 +367,8 @@ Callback function with single argument: `CKEDITOR` namespace. **Invoked single t
 />
 ```
 
+Look at [onBeforeLoad](#onbeforeload) to compare behaviours.
+
 ## CKEditor 4 React Integration Demo
 
 See the {@linkexample react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

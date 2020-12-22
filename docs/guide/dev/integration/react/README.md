@@ -212,7 +212,7 @@ Provides value for `id` and `name` properties of editor's HTML element.
 />
 ```
 
-Then in another place, it's possible to refer editor instance as:
+Then it is possible to refer to editor instance like this:
 
 ```js
 const editor = CKEDITOR.instances.myeditor;

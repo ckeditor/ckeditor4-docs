@@ -323,7 +323,7 @@ Look at [onNamespaceLoaded](#onnamespaceloaded) to compare behaviours.
 
 `Function`
 
-Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless amount of editor instances**.
+Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless of editor instances number**.
 
 ```jsx
 <CKEditor

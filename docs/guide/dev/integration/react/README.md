@@ -186,7 +186,7 @@ Custom configuration can be passed to the editor with the `config` property of t
 />
 ```
 
-{@linkapi CKEDITOR.config All configuration} options can be changed this way.
+All {@linkapi CKEDITOR.config configuration options} can be changed this way.
 
 Defaults to `{}`.
 

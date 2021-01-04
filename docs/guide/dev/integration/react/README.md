@@ -58,7 +58,7 @@ The `data` property used in the example above is responsible for setting the WYS
 
 ## Customizing CKEditor Preset or Version
 
-By default, the CKEditor 4 React component loads the [standard preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `CKEditor.editorUrl` variable to point to the desired CKEditor script location:
+By default, the CKEditor 4 React component loads the [standard-all preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `CKEditor.editorUrl` variable to point to the desired CKEditor script location:
 
 ```js
 CKEditor.editorUrl = 'https://your-website.example/ckeditor/ckeditor.js';
@@ -87,7 +87,7 @@ The CKEditor 4 React component allows you to bind any event handler to the edito
 />
 ```
 
-There are also two events defined in CKEditor 4 React component by default: [onBeforeLoad](#onbeforeload) and [onNamespaceLoaded](#onnamespaceloaded).
+There are also two events not present in CKEditor 4 but available in CKEditor 4 React component by default: [onBeforeLoad](#onbeforeload) and [onNamespaceLoaded](#onnamespaceloaded).
 
 ## Data Binding
 
@@ -196,7 +196,7 @@ Defaults to `{}`.
 
 Data to be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} method with no additional arguments.
 
-For example usage, look at [Basic Usage](#basic-usage) section.
+For example usage, refer to [Basic Usage](#basic-usage) section above.
 
 Defaults to `''`.
 
@@ -224,7 +224,7 @@ The editor element is also accessible via the [component](#editor-instance) itse
 
 `Boolean`
 
-Set the {@link features/readonly/README read-only mode}:
+Sets the {@link features/readonly/README read-only mode}:
 
 ```jsx
 <CKEditor
@@ -259,7 +259,7 @@ Requires component [type](#type) property to be `classic`.
 
 `'classic'` | `'inline'`
 
-By default, the CKEditor 4 React component creates a {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with the value of `inline` to the `<CKEditor />` tag:
+By default, the CKEditor 4 React component creates {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with the value of `inline` to the `<CKEditor />` tag:
 
 ```jsx
 <CKEditor

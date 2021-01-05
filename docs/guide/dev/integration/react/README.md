@@ -311,29 +311,34 @@ Simple usage:
 
 An example below shows incorrect usage - it attempts to load the same plugin two times to the same namespace:
 
-```jsx
-<CKEditor
-	name="editorOne"
-	data="<p>Editor's content</p>"
-	onBeforeLoad={ CKEDITOR => {
-			// Add external `placeholder` plugin which will be available for each
-			// editor instance on the page.
-			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+<info-box warning>
+	```jsx
+	<CKEditor
+		name="editorOne"
+		data="<p>Editor's content</p>"
+		onBeforeLoad={ CKEDITOR => {
+				// Add external `placeholder` plugin which will be available for each
+				// editor instance on the page.
+				CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+			}
 		}
-	}
-/>
-
-<CKEditor
-	name="editorTwo"
-	data="<p>Editor's content</p>"
-	onBeforeLoad={ CKEDITOR => {
-			// Namespace was already loaded, but this callback will be called anyway.
-			// Unnecessary adding the same plugin to the namespace.
-			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+	/>
+	```
+</info-box>
+<info-box warning>
+	```jsx
+	<CKEditor
+		name="editorTwo"
+		data="<p>Editor's content</p>"
+		onBeforeLoad={ CKEDITOR => {
+				// Namespace was already loaded, but this callback will be called anyway.
+				// Unnecessary adding the same plugin to the namespace.
+				CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+			}
 		}
-	}
-/>
-```
+	/>
+	```
+</info-box>
 
 Look at [onNamespaceLoaded](#onnamespaceloaded) property to compare behaviours.
 

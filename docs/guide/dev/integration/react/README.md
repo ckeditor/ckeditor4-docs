@@ -346,7 +346,11 @@ Look at [onNamespaceLoaded](#onnamespaceloaded) property to compare behaviours.
 
 `Function`
 
-Callback function with single argument: `CKEDITOR` namespace. **Invoked single time after namespace loaded, regardless of editor instances number**. This property should be used if you need to modify the `CKEDITOR` object, e.g. add an external plugin:
+Callback function with single argument: `CKEDITOR` namespace.
+
+**Invoked exactly one time regardless of editor instances number. It is called after namespace loaded and before any editor instances initialized**.
+
+This property should be used if you need to modify the `CKEDITOR` object, e.g. add an external plugin:
 
 ```jsx
 <CKEditor

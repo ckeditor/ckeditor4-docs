@@ -121,6 +121,13 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Additional data:
 	* `responseText`: Upload response text.
 
+## invalid-callback
+
+* Location: `core/creators/themedui.js`
+* Description: Passed callback is not a function.
+* Additional data:
+	* `callback`
+
 ## invalid-license-key
 
 * Location: Various plugins
@@ -180,10 +187,3 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Location: `plugins/uploadimage/plugin.js`
 * Description: An upload URL for the Upload Image feature was not defined. Refer to the {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files} article for more information.
 * Additional data: None.
-
-## invalid-callback
-
-* Location: `core/creators/themedui.js`
-* Description: Passed callback is not a function.
-* Additional data:
-	* `callback`

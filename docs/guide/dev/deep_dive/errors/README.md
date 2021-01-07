@@ -185,4 +185,5 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 
 * Location: `core/creators/themedui.js`
 * Description: Passed callback is not a function.
-* Additional data: None.
+* Additional data:
+	* `callback`

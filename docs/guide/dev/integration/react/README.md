@@ -34,7 +34,7 @@ import CKEditor from 'ckeditor4-react';
 
 An example `App` component featuring `CKEditor` would look like the following:
 
-```jsx
+```js
 import React, { Component } from 'react';
 import CKEditor from 'ckeditor4-react';
 
@@ -80,7 +80,7 @@ Alternatively, you can load CKEditor before loading the CKEditor 4 React compone
 
 The CKEditor 4 React component allows you to bind any event handler to the editor with properties that start with `on`. The `on` is followed by the name of the event with the first letter capitalized, for example, an event handler for the {@linkapi CKEDITOR.editor.change `change` event} would be written as `onChange`:
 
-```jsx
+```html
 <CKEditor
 	data="<p>Editor's content</p>"
 	onChange={evt => console.log( evt )}
@@ -93,7 +93,7 @@ There are also two events not present in CKEditor 4 but available in CKEditor 4 
 
 Wrapping the CKEditor 4 React component in another component allows to create a two-way binding between the editor's data and the content of external elements. This way updating the editor will update the elements and vice versa:
 
-```jsx
+```js
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CKEditor from 'ckeditor4-react';
@@ -177,7 +177,7 @@ Please note that this property is initialised asynchronously, after mounting the
 
 Custom configuration can be passed to the editor with the `config` property of the CKEditor 4 React component. The following example shows {@link features/toolbar/README how to change the contents of the toolbar}:
 
-```jsx
+```html
 <CKEditor
 	data="<p>Editor's content</p>"
 	config={ {
@@ -206,7 +206,7 @@ Defaults to `''`.
 
 Provides value for `id` and `name` properties of editor's HTML element.
 
-```jsx
+```html
 <CKEditor
 	name="myeditor"
 />
@@ -226,7 +226,7 @@ The editor element is also accessible via the [component](#editor-instance) itse
 
 Sets the {@link features/readonly/README read-only mode}:
 
-```jsx
+```html
 <CKEditor
 	data="<p>Editor's content</p>"
 	readOnly={true}
@@ -243,7 +243,7 @@ Defaults to `false`.
 
 Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}.
 
-```jsx
+```html
 <CKEditor
 	data="<p>Editor's content</p>"
 	style={{
@@ -261,7 +261,7 @@ Requires component [type](#type) property to be `classic`.
 
 By default, the CKEditor 4 React component creates {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with the value of `inline` to the `<CKEditor />` tag:
 
-```jsx
+```html
 <CKEditor
 	data="<p>Some initial data</p>"
 	type="inline"
@@ -270,7 +270,7 @@ By default, the CKEditor 4 React component creates {@link guide/dev/framed/READM
 
 You can also explicitly set the `type` property to `classic` to create the classic editor:
 
-```jsx
+```html
 <CKEditor
 	data="<p>Some initial data</p>"
 	type="classic"
@@ -291,68 +291,66 @@ Callback function with single argument: `CKEDITOR` namespace. It is invoked **ea
 
 **Note**: To modify `CKEDITOR` namespace it is recommended to use [onNamespaceLoaded](#onnamespaceloaded) event.
 
-Simple usage:
+Simple usage example:
 
-```jsx
+```html
 <CKEditor
 	data="<p>First editor.</p>"
 	onBeforeLoad={ CKEDITOR => {
-		console.log( 'First editor loaded!' );
+			console.log( 'First editor loaded!' );
+		}
 	}
 />
 
 <CKEditor
 	data="<p>Second editor.</p>"
 	onBeforeLoad={ CKEDITOR => {
-		console.log( 'Second editor loaded!' );
+			console.log( 'Second editor loaded!' );
+		}
 	}
 />
 ```
 
-An example below shows incorrect usage - it attempts to load the same plugin two times to the same namespace:
-
 <info-box warning>
-	```jsx
-	<CKEditor
-		name="editorOne"
-		data="<p>Editor's content</p>"
-		onBeforeLoad={ CKEDITOR => {
-				// Add external `placeholder` plugin which will be available for each
-				// editor instance on the page.
-				CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
-			}
-		}
-	/>
-	```
-</info-box>
-<info-box warning>
-	```jsx
-	<CKEditor
-		name="editorTwo"
-		data="<p>Editor's content</p>"
-		onBeforeLoad={ CKEDITOR => {
-				// Namespace was already loaded, but this callback will be called anyway.
-				// Unnecessary adding the same plugin to the namespace.
-				CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
-			}
-		}
-	/>
-	```
+	Example which shows incorrect usage - it attempts to load the same plugin two times adding it to the same namespace:
 </info-box>
 
-Look at [onNamespaceLoaded](#onnamespaceloaded) property to compare behaviours.
+```html
+<CKEditor
+	name="editorOne"
+	data="<p>Editor's content</p>"
+	onBeforeLoad={ CKEDITOR => {
+			// Add external `placeholder` plugin which will be available for each
+			// editor instance on the page.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+
+<CKEditor
+	name="editorTwo"
+	data="<p>Editor's content</p>"
+	onBeforeLoad={ CKEDITOR => {
+			// Namespace was already loaded, but this callback will be called anyway.
+			// Unnecessary adding the same plugin to the namespace.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+```
+
+
+Look at [onNamespaceLoaded](#onnamespaceloaded) property to compare behaviors.
 
 ### `onNamespaceLoaded`
 
 `Function`
 
-Callback function with single argument: `CKEDITOR` namespace.
-
-**Invoked exactly one time regardless of editor instances number. It is called after namespace loaded and before any editor instances initialized**.
+Callback function with a single argument: `CKEDITOR` namespace. **It is invoked exactly once regardless the number of editor instances. It is called after `CKEDITOR` namespace is loaded and before any editor instances are initialized**.
 
 This property should be used if you need to modify the `CKEDITOR` object, e.g. add an external plugin:
 
-```jsx
+```html
 <CKEditor
 	name="editorOne"
 	data="<p>Editor's content</p>"
@@ -376,7 +374,7 @@ This property should be used if you need to modify the `CKEDITOR` object, e.g. a
 />
 ```
 
-Look at [onBeforeLoad](#onbeforeload) property to compare behaviours.
+Look at [onBeforeLoad](#onbeforeload) property to compare behaviors.
 
 ## CKEditor 4 React Integration Demo
 

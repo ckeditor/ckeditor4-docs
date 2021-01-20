@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2019, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md.
  */
 
@@ -85,7 +85,7 @@ module.exports = {
 						[ '@babel/preset-env',
 							{
 								useBuiltIns: 'usage',
-								corejs: 2,
+								corejs: 3,
 								targets: {
 									browsers: [
 										'last 2 versions',

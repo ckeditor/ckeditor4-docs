@@ -1,18 +1,17 @@
-<h2>Events and Directives</h2>
+<h2>WYSIWYG editor with custom event handlers and configuration</h2>
 
 <p>
-	The CKEditor 4 WYSIWYG editor component allows you to bind event handlers with <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html#supported-output-properties"><code>@Output</code></a> attributes in the HTML code.
+	Editors created with the CKEditior 4 Angular component are highly customizable. It is possible to overwrite every configuration setting using the <code>config</code> directive and passing an object containing the configuration to it.
 </p>
 
 <p>
-	The following example shows how to bind several CKEditor events. Additionally, it presents how the component could be used with <a href="https://angular.io/guide/attribute-directives">Angular directives</a>.
+	Additionally, the CKEditor 4 WYSIWYG editor component for Angular allows you to bind predefined component events using <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_angular.html#supported-output-properties"><code>@Output</code></a> attributes. The following example shows how to bind several common CKEditor 4 events and apply custom toolbar configuration.
 </p>
 
 <ckeditor
-	*ngIf="!isRemoved"
-	data="<p>This is a CKEditor 4 instance created with Angular.</p>"
-	[readOnly]="isReadOnly"
-	[hidden]="isHidden"
+	data="<p>This is a CKEditor 4 WYSIWYG editor instance created with Angular.</p>"
+
+	[(config)]="editorConfig"
 
 	(ready)="onReady()"
 	(change)="onChange()"
@@ -20,25 +19,15 @@
 	(blur)="onBlur()">
 </ckeditor>
 
-<section class="column events">
+<section>
 	<h3>Events log</h3>
-	<ul class="events__log">
-		<li *ngFor="let event of componentEvents">{{ event.message }}
-			<span *ngIf="event.counter > 1"> ({{ event.counter }})</span>
-		</li>
-	</ul>
+	<small>To check additional details about every event, consult the console in the browser developer tools.</small>
+	<div class="events__log">
+		<ul>
+			<li *ngFor="let event of events">
+				{{ event.timestamp }} - {{ event.name }}
+			</li>
+		</ul>
+	</div>
 	<button (click)="clearEventsLog()">Clear events log</button>
-</section>
-
-<section class="column directives">
-	<h3>Angular directives</h3>
-	<p>
-		<label><input type="checkbox" [(ngModel)]="isHidden">Hide the editor with the <code>[hidden]</code> directive.</label>
-	</p>
-	<p>
-		<label><input type="checkbox" [(ngModel)]="isRemoved">Remove the editor from DOM with the <code>*ngIf</code> directive.</label>
-	</p>
-	<p>
-		<label><input type="checkbox" [(ngModel)]="isReadOnly">Make the editor read-only.</label>
-	</p>
 </section>

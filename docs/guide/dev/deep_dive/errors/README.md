@@ -16,12 +16,12 @@ For licensing, see LICENSE.md.
 	This feature was introduced in <strong>CKEditor 4.5.4</strong>. It is an editor core functionality which is included in all CKEditor 4 packages available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site.
 </info-box>
 
-This article contains the list of CKEditor 4 error codes and their explanation. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
+This article contains the list of CKEditor 4 error codes and their explanations. The error codes are used by the editor to log information about errors and warnings to the JavaScript console.
 
 ## autoembed-no-widget-def
 
 * Location: `plugins/autoembed/plugin.js`
-* Description: Incorrect {@linkapi CKEDITOR.config#autoEmbed_widget } value. No widget definition found.
+* Description: Incorrect {@linkapi CKEDITOR.config#autoEmbed_widget} value. No widget definition found.
 * Additional data: None.
 
 ## cloudservices-no-token
@@ -51,7 +51,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## editor-element-conflict
 
 * Location: `core/editor.js`
-* Description: There is already editor's instance attached to the provided element and attaching another one to it is not allowed.
+* Description: There is already an editor's instance attached to the provided element and attaching another one to it is not allowed.
 * Additional data:
 	* `editorName`: The name of the already attached editor.
 
@@ -64,7 +64,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## editor-incorrect-element
 
 * Location: `core/editor.js`
-* Description: The requested element couldn't be found in page's DOM. Check if passed argument points to the correct element.
+* Description: The requested element could not be found in the page's DOM. Check if the passed argument points to the correct element.
 * Additional data:
 	* `element`: The element's `id` attribute.
 
@@ -107,10 +107,17 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 * Description: The {@linkapi CKEDITOR.config.exportPdf_tokenUrl} configuration variable for the [CKEditor Export to PDF](https://ckeditor.com/cke4/addon/exportpdf) plugin was not specified.
 * Additional data: None.
 
+## exportpdf-stylesheets-incaccessible
+
+* Location: `plugins/exportpdf/plugin.js`
+* Description: At least one of the stylesheets attached to the document was not fully loaded when `exportPdf` command was executed.
+* Additional data:
+	* `error`: Detailed error message (determines if stylesheet is still loading or cannot be accessed).
+
 ## filetools-response-error
 
 * Location: `plugins/filetools/plugin.js`
-* Description: An error occurred when parsing the upload response. Text could not be parsed to JSON.
+* Description: An error occurred when parsing the upload response. The text could not be parsed to JSON.
 * Additional data:
 	* `responseText`: Upload response text.
 
@@ -130,7 +137,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## no-vendor-lib
 
 * Location: `core/tools.js`
-* Description: Unable to find vendor library. Make sure that vendor library is available at the given path.
+* Description: Unable to find the vendor library. Make sure that the vendor library is available at the given path.
 * Additional data:
 	* `path`: A path to the vendor library.
 
@@ -153,7 +160,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## range-endcontainer
 
 * Location: `core/dom/range.js`
-* Description: End container element is not a descendant of the root element.
+* Description: The end container element is not a descendant of the root element.
 * Additional data:
 	* `endContainer`
 	* `root`
@@ -161,7 +168,7 @@ This article contains the list of CKEditor 4 error codes and their explanation. 
 ## range-startcontainer
 
 * Location: `core/dom/range.js`
-* Description: Start container element is not a descendant of the root element.
+* Description: The start container element is not a descendant of the root element.
 * Additional data:
 	* `startContainer`
 	* `root`

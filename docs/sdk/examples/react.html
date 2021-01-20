@@ -14,7 +14,6 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	<title>React Integration</title>
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/react/samples.css">
 	<script src="../../ckeditor4/ckeditor.js"></script>
 	<script src="assets/picoModal-2.0.1.min.js"></script>
 	<script src="assets/contentloaded.js"></script>
@@ -35,6 +34,10 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 			<style>
 				textarea.binding-editor {
 					width: 100%;
+				}
+
+				.editor-instance {
+					margin-bottom: 1.2em;
 				}
 
 				/* Menu styling. */
@@ -125,20 +128,12 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 
 				/* 3rd sample styling. */
 				.editor-preview {
-					float: right;
-					width: 49%;
 					border: 1px solid #d1d1d1;
 					padding: 10px;
 				}
 
 				.editor-preview h2 {
 					padding-top: 0;
-				}
-
-				@media screen and (max-width: 768px) {
-					.editor-preview {
-						width: 100%;
-					}
 				}
 			</style>
 
@@ -183,30 +178,103 @@ ReactDOM.render(
 );
 </script>
 <script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import CKEditor from 'ckeditor4-react';
 
-ReactDOM.render(
-	<CKEditor
-		data="I'm a CKEditor 4 instance."
-		config={{
-			toolbar: [
-				[ 'Bold', 'Italic' ],
-				[ 'Cut', 'Copy' ],
-				[ 'About' ]
-			]
-		}}
-		onFocus={customHandler}
-		onBlur={customHandler}
-		onChange={customHandler}
-		onSelectionChange={customHandler}
-	/>,
-	document.getElementById( 'app' )
-);
+class ConfigEvents extends Component {
+	constructor( props ) {
+		super( props );
 
-function customHandler( evt ) {
-	console.log( evt );
+		this.state = {
+			events: []
+		};
+
+		this.logEvent = this.logEvent.bind( this );
+		this.clearEvents = this.clearEvents.bind( this );
+	}
+
+	logEvent( event ) {
+		event.timestamp = new Intl.DateTimeFormat( 'en', {
+			hour12: false,
+			hour: '2-digit',
+			minute: '2-digit',
+			second: '2-digit'
+		} ).format( new Date() );
+
+		console.log( event.timestamp, event.name, event.data || 'No additional data was provided' );
+
+		this.setState( {
+			events: [ event, ...this.state.events ]
+		} );
+	}
+
+	clearEvents() {
+		this.setState( {
+			events: []
+		} );
+	}
+
+	render() {
+		return (
+			<div>
+				<h2>WYSIWYG editor with custom event handlers and configuration</h2>
+				<p>
+					Editors created with the CKEditior 4 React component are highly customizable. It is possible to overwrite every configuration setting using the <code>config</code> property and passing an object containing the configuration to it.
+				</p>
+				<p>
+					Additionally, the CKEditor 4 WYSIWYG editor component for React allows you to bind any event handler using properties with names starting with <code>on</code>, followed by the name of the event with the first letter capitalized. The following example shows how to bind several common CKEditor 4 events.
+				</p>
+				<CKEditor
+					data="This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React."
+					config={{
+						toolbar: [
+							[ 'Source' ],
+							[ 'Styles', 'Format', 'Font', 'FontSize' ],
+							[ 'Bold', 'Italic' ],
+							[ 'Undo', 'Redo' ],
+							[ 'About' ]
+						]
+					}}
+
+					onFocus={this.logEvent}
+					onBlur={this.logEvent}
+					onChange={this.logEvent}
+					onSelectionChange={this.logEvent} />
+					<h3>Events Log</h3>
+					<small>To check additional details about every event, consult the console in the browser developer tools.</small>
+					<EventLog stream={this.state.events} />
+					<button onClick={this.clearEvents}>Clear events log</button>
+			</div>
+		);
+	}
 }
+const EventLog = ( { stream } ) => {
+	return (
+		<div className="event-log">
+			<ul className="event-log__events">
+				{
+					stream.map( event => {
+						return (
+							<li className="event-log__event">
+								<Event data={event} />
+							</li>
+						)
+					} )
+				}
+			</ul>
+		</div>
+	);
+}
+const Event = ( { data: { name, timestamp } } ) => {
+	return (
+		<>
+			{timestamp} – {name}
+		</>
+	);
+}
+
+ReactDOM.render( <ConfigEvents />, document.getElementById( 'app' ) );
 </script>
 <script type="text/jsx" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
 import React, { Component } from 'react';
@@ -241,23 +309,17 @@ class TwoWayBinding extends Component {
 		return (
 			<div>
 				<SourceEditor data={this.state.data} handler={this.handleChange} />
-
-				<div style={{overflow: 'auto'}}>
+				<div className="editor-instance">
 					<CKEditor
 						data={this.state.data}
 						onChange={this.onEditorChange}
-						style={{
-							float: 'left',
-							width: '50%'
-						}}
 					/>
-					<EditorPreview data={this.state.data} />
 				</div>
+				<EditorPreview data={this.state.data} />
 			</div>
 		);
 	}
 }
-
 class EditorPreview extends Component {
 	render() {
 		return (
@@ -268,7 +330,6 @@ class EditorPreview extends Component {
 		);
 	}
 }
-
 class SourceEditor extends Component {
 	constructor( props ) {
 		super( props );

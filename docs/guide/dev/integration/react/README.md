@@ -34,7 +34,7 @@ import CKEditor from 'ckeditor4-react';
 
 An example `App` component featuring `CKEditor` would look like the following:
 
-```jsx
+```js
 import React, { Component } from 'react';
 import CKEditor from 'ckeditor4-react';
 
@@ -58,7 +58,7 @@ The `data` property used in the example above is responsible for setting the WYS
 
 ## Customizing CKEditor Preset or Version
 
-By default, the CKEditor 4 React component loads the [standard preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `CKEditor.editorUrl` variable to point to the desired CKEditor script location:
+By default, the CKEditor 4 React component loads the [standard-all preset](https://ckeditor.com/cke4/presets-all) of the latest CKEditor 4 release from the [CDN](https://cdn.ckeditor.com/) when creating the first editor. This behavior can be altered by changing the value of the `CKEditor.editorUrl` variable to point to the desired CKEditor script location:
 
 ```js
 CKEditor.editorUrl = 'https://your-website.example/ckeditor/ckeditor.js';
@@ -76,70 +76,24 @@ Alternatively, you can load CKEditor before loading the CKEditor 4 React compone
 <script src="app.js"></script>
 ```
 
-## Choosing the Editor Type
-
-By default, the CKEditor 4 React component creates a {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with the value of `inline` to the `<CKEditor />` tag:
-
-```jsx
-<CKEditor
-	data="<p>Some initial data</p>"
-	type="inline"
-/>
-```
-
-You can also explicitly set the `type` property to `classic` to create the classic editor:
-
-```jsx
-<CKEditor
-	data="<p>Some initial data</p>"
-	type="classic"
-/>
-```
-
-Every other value of the `type` property will be treated as `classic`.
-
-### Changing the Editor Configuration
-
-Custom configuration can be passed to the editor with the `config` property of the CKEditor 4 React component. The following example shows {@link features/toolbar/README how to change the contents of the toolbar}:
-
-```jsx
-<CKEditor
-	data="<p>Editor's content</p>"
-	config={ {
-		toolbar: [ [ 'Bold' ] ]
-	} }
-/>
-```
-
-{@linkapi CKEDITOR.config All configuration} options can be changed this way.
-
-There is also an additional way to set the {@link features/readonly/README read-only mode} with the `readOnly` property:
-
-```jsx
-<CKEditor
-	data="<p>Editor's content</p>"
-	readOnly={true}
-/>
-```
-
-This property takes precedence over the {@linkapi CKEDITOR.config#readOnly `config.readOnly`} setting.
-
 ## Event Handlers
 
 The CKEditor 4 React component allows you to bind any event handler to the editor with properties that start with `on`. The `on` is followed by the name of the event with the first letter capitalized, for example, an event handler for the {@linkapi CKEDITOR.editor.change `change` event} would be written as `onChange`:
 
-```jsx
+```html
 <CKEditor
 	data="<p>Editor's content</p>"
 	onChange={evt => console.log( evt )}
 />
 ```
 
+There are also two events not present in CKEditor 4 but available in CKEditor 4 React component by default: [onBeforeLoad](#onbeforeload) and [onNamespaceLoaded](#onnamespaceloaded).
+
 ## Data Binding
 
 Wrapping the CKEditor 4 React component in another component allows to create a two-way binding between the editor's data and the content of external elements. This way updating the editor will update the elements and vice versa:
 
-```jsx
+```js
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CKEditor from 'ckeditor4-react';
@@ -214,6 +168,213 @@ component.editor.getData();
 ```
 
 Please note that this property is initialised asynchronously, after mounting the component.
+
+## Component Properties
+
+### `config`
+
+`Object`
+
+Custom configuration can be passed to the editor with the `config` property of the CKEditor 4 React component. The following example shows {@link features/toolbar/README how to change the contents of the toolbar}:
+
+```html
+<CKEditor
+	data="<p>Editor's content</p>"
+	config={ {
+		toolbar: [ [ 'Bold' ] ]
+	} }
+/>
+```
+
+All {@linkapi CKEDITOR.config configuration options} can be changed this way.
+
+Defaults to `{}`.
+
+### `data`
+
+`String`
+
+Data to be used to initially fill editor content. It's passed to {@linkapi CKEDITOR.editor#setData} method with no additional arguments.
+
+For example usage, refer to [Basic Usage](#basic-usage) section above.
+
+Defaults to `''`.
+
+### `name`
+
+`String`
+
+Provides value for `id` and `name` properties of editor's HTML element.
+
+```html
+<CKEditor
+	name="myeditor"
+/>
+```
+
+Then it is possible to refer to editor instance like this:
+
+```js
+const editor = CKEDITOR.instances.myeditor;
+```
+
+The editor element is also accessible via the [component](#editor-instance) itself.
+
+### `readOnly`
+
+`Boolean`
+
+Sets the {@link features/readonly/README read-only mode}:
+
+```html
+<CKEditor
+	data="<p>Editor's content</p>"
+	readOnly={true}
+/>
+```
+
+This property takes precedence over the {@linkapi CKEDITOR.config#readOnly `config.readOnly`} setting.
+
+Defaults to `false`.
+
+### `style`
+
+`Object`
+
+Style rules set that will be applied to {@linkapi CKEDITOR.editor#container editor container} with {@linkapi CKEDITOR.dom.element#setStyles}.
+
+```html
+<CKEditor
+	data="<p>Editor's content</p>"
+	style={{
+		'margin-top': '100px',
+		'border': '5px solid red'
+	}}
+/>
+```
+
+Requires component [type](#type) property to be `classic`.
+
+### `type`
+
+`'classic'` | `'inline'`
+
+By default, the CKEditor 4 React component creates {@link guide/dev/framed/README classic editor}. To create an {@link guide/dev/inline/README inline editor}, add the `type` property with the value of `inline` to the `<CKEditor />` tag:
+
+```html
+<CKEditor
+	data="<p>Some initial data</p>"
+	type="inline"
+/>
+```
+
+You can also explicitly set the `type` property to `classic` to create the classic editor:
+
+```html
+<CKEditor
+	data="<p>Some initial data</p>"
+	type="classic"
+/>
+```
+
+Every other value of the `type` property will be treated as `classic`.
+
+For more details, look at the {@link guide/dev/ckeditor_js_load/README Loading CKEditor Script article}.
+
+Defaults to `'classic'`.
+
+### `onBeforeLoad`
+
+`Function`
+
+Callback function with single argument: `CKEDITOR` namespace. It is invoked **each time new editor instance is loaded**, but `CKEDITOR` object always refers to the same namespace.
+
+**Note**: To modify `CKEDITOR` namespace it is recommended to use [onNamespaceLoaded](#onnamespaceloaded) event.
+
+Simple usage example:
+
+```html
+<CKEditor
+	data="<p>First editor.</p>"
+	onBeforeLoad={ CKEDITOR => {
+			console.log( 'First editor loaded!' );
+		}
+	}
+/>
+
+<CKEditor
+	data="<p>Second editor.</p>"
+	onBeforeLoad={ CKEDITOR => {
+			console.log( 'Second editor loaded!' );
+		}
+	}
+/>
+```
+
+<info-box warning>
+	Example which shows incorrect usage - it attempts to load the same plugin two times adding it to the same namespace:
+</info-box>
+
+```html
+<CKEditor
+	name="editorOne"
+	data="<p>Editor's content</p>"
+	onBeforeLoad={ CKEDITOR => {
+			// Add external `placeholder` plugin which will be available for each
+			// editor instance on the page.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+
+<CKEditor
+	name="editorTwo"
+	data="<p>Editor's content</p>"
+	onBeforeLoad={ CKEDITOR => {
+			// Namespace was already loaded, but this callback will be called anyway.
+			// Unnecessary adding the same plugin to the namespace.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+```
+
+
+Look at [onNamespaceLoaded](#onnamespaceloaded) property to compare behaviors.
+
+### `onNamespaceLoaded`
+
+`Function`
+
+Callback function with a single argument: `CKEDITOR` namespace. **It is invoked exactly once regardless the number of editor instances. It is called after `CKEDITOR` namespace is loaded and before any editor instances are initialized**.
+
+This property should be used if you need to modify the `CKEDITOR` object, e.g. add an external plugin:
+
+```html
+<CKEditor
+	name="editorOne"
+	data="<p>Editor's content</p>"
+	onNamespaceLoaded={ CKEDITOR => {
+			// Add external `placeholder` plugin which will be available for each
+			// editor instance on the page.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+
+<CKEditor
+	name="editorTwo"
+	data="<p>Editor's content</p>"
+	onNamespaceLoaded={ CKEDITOR => {
+			// If namespace was already loaded, this callback will be never called!
+			// There will be only one attempt to add external plugin.
+			CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+		}
+	}
+/>
+```
+
+Look at [onBeforeLoad](#onbeforeload) property to compare behaviors.
 
 ## CKEditor 4 React Integration Demo
 

@@ -87,7 +87,7 @@ To use the `divarea` editor in `2.0.0` and later versions, you just need to incl
 <ckeditor
 	data="<p>Some initial data</p>"
 	type="inline"
-	[config]="{ extraPlugins: 'divarea' }">
+	[config]="{ extraPlugins: 'divarea' }"
 ></ckeditor>
 ```
 
@@ -193,6 +193,8 @@ This property takes precedence over the {@linkapi CKEDITOR.config#readOnly `conf
 
 ## Supported `@Output` properties
 
+**General note:** Callbacks bound to each of the events are called with {@linkapi CKEDITOR.eventInfo `eventInfo`}. For importing and usage of the `EventInfo` interface see the [`change` example](#change).
+
 The following `@Output` properties are supported by the CKEditor 4 Angular component:
 
 ### `ready`
@@ -267,10 +269,6 @@ Fires when the file loader should send an XHR request. If the event is not stopp
 ### `fileUploadResponse`
 
 Fires when the {@linkapi CKEDITOR.fileTools.fileLoader file upload} response is received and needs to be parsed. If the event is not stopped or canceled, the default response handler will be used. It corresponds with the {@linkapi CKEDITOR.editor#fileUploadResponse `editor#fileUploadResponse`} event.
-
-### Note
-
-Callbacks bound to each of the events are called with {@linkapi CKEDITOR.eventInfo `eventInfo`}. For importing and usage of the `EventInfo` interface see the [`change` example](#change).
 
 ## Editor Instance
 

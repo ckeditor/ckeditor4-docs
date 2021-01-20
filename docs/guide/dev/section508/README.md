@@ -7,9 +7,9 @@ meta-title-short: Section 508 Compliance
 ---
 # CKEditor Section 508 Compliance
 
-This article decribes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](http://www.state.gov/m/irm/impact/c32157.htm).
+This article decribes CKEditor 4 compatibility with [Section 508 Amendment to the Rehabilitation Act of 1973](https://2009-2017.state.gov/m/irm/impact/c32157.htm).
 
-The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retrived from the [Department of State IRM Program for Accessible Computer/Communication Technology (IMPACT)](http://www.state.gov/m/irm/impact/126343.htm).
+The Voluntary Product Accessibility Template (VPAT) for Section 508 can be retrived from the [Department of State IRM Program for Accessible Computer/Communication Technology (IMPACT)](https://2009-2017.state.gov/m/irm/impact/126343.htm).
 
 <br style="clear:both">
 

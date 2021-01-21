@@ -124,7 +124,7 @@ The image below shows a standard CKEditor 4 instance loaded in Windows 8 High Co
 
 {@img assets/img/a11y_02.png CKEditor in High Contrast Mode loaded in Firefox}
 
-Note that not all browsers support High Contrast Mode (see {@link guide/dev/browsers/README#accessibility-support browsers accessibility support}). Some of them may simply show web pages in full color despite the operating system settings.
+Note that not all browsers support High Contrast Mode. Some of them may simply show web pages in full color despite the operating system settings. See {@link guide/dev/browsers/README#accessibility-support browsers accessibility support} guide for more.
 
 #### Textual Labels for Color Information
 

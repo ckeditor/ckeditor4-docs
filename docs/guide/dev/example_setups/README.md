@@ -6,7 +6,7 @@ menu-title: Example CKEditor Setups
 meta-title-short: Example CKEditor Setups
 ---
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 # Example CKEditor 4 Setups

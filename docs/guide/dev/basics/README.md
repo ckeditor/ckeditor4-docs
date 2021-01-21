@@ -6,7 +6,7 @@ menu-title: Basic CKEditor 4 Concepts
 meta-title-short: Basic CKEditor 4 Concepts
 ---
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

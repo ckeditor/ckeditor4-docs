@@ -144,7 +144,7 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 ## pastetools-failed-image-extraction
 
 * Location: `plugins/pastetools/filter/image.js`
-* Description: Images couldn't be correctly extracted from the RTF content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins.
+* Description: Images could not be correctly extracted from the RTF content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins.
 * Additional data:
 	* `rtf`: The number of images extracted from RTF.
 	* `html`: The number of images present in HTML.
@@ -152,10 +152,10 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 ## pastetools-unsupported-image
 
 * Location: `plugins/pastetools/filter/image.js`
-* Description: One of the images extracted from the pasted content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins is in unsupported format. In case of Safari the `type` property will always equal to `'blob'`.
+* Description: One of the images extracted from the pasted content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins uses an unsupported format. In the case of Safari browser, the `type` property will always equal to `'blob'`.
 * Additional data:
-	* `type`: Image's MIME type or `'blob'`.
-	* `index`: Index of the image inside the pasted content.
+	* `type`: The image's MIME type or `'blob'`.
+	* `index`: The index of the image inside the pasted content.
 
 ## range-endcontainer
 

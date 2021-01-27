@@ -6,7 +6,7 @@ menu-title: Accessibility Support
 meta-title-short: Accessibility Support
 ---
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -116,7 +116,7 @@ The following features make working with CKEditor 4 easier for people with visua
 
 #### High Contrast Mode
 
-One less commonly considered accessibility feature is the compatibility with the operating system High Contrast Mode. As the name suggests, this is an operating system feature. In Windows it can be enabled through the accessibility options available in the Control Panel. It can also be turned on by using the <kbd>Alt+Left Shift+PrntScr</kbd> keyboard shortcut.
+One less commonly considered accessibility feature is the compatibility with High Contrast Mode. This is an operating system feature. In Windows it can be enabled through the accessibility options available in the Control Panel. It can also be turned on by using the <kbd>Alt</kbd>+<kbd>Left Shift</kbd>+<kbd>PrntScr</kbd> keyboard shortcut.
 
 In High Contrast Mode all images and colors are discarded. A predominant color pair is then used to display the entire operating system interface (usually white or yellow on black, or vice versa).
 
@@ -124,7 +124,7 @@ The image below shows a standard CKEditor 4 instance loaded in Windows 8 High Co
 
 {@img assets/img/a11y_02.png CKEditor in High Contrast Mode loaded in Firefox}
 
-Note that not all browsers support High Contrast Mode (see {@link guide/dev/browsers/README#accessibility-support browsers accessibility support}). Some of them may simply show web pages in full color despite the operating system settings.
+Note that not all browsers support High Contrast Mode. Some of them may simply show web pages in full color despite the operating system settings. Refer to the {@link guide/dev/browsers/README#accessibility-support browsers accessibility support} guide for more information.
 
 #### Textual Labels for Color Information
 

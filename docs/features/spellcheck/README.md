@@ -6,7 +6,7 @@ menu-title: Spelling and Grammar Checking
 meta-title-short: Spell Checking
 ---
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -41,6 +41,10 @@ It is provided by [WebSpellChecker](https://webspellchecker.com/wsc-scayt-ckedit
 {@img assets/img/scayt_02.png 876 Spell Check As You Type in CKEditor 4 WYSIWYG editor}
 
 ## Spell Checking in a Dialog Window
+
+<info-box warning="">
+	**This feature has an End-of-Life date set to December 31st, 2021.** This means it will not be supported any longer and may stop working after this date. We strongly encourage everyone to choose one of the other available spellchecking solutions - {@link features/spellcheck/README#spell-check-as-you-type-scayt Spell Check As You Type (SCAYT)} or {@link features/spellcheck/README#distraction-free-proofreading WProofreader}.
+</info-box>
 
 The [WebSpellChecker Dialog](https://ckeditor.com/cke4/addon/wsc) plugin is another spell checker solution provided by [WebSpellChecker](https://webspellchecker.com/wsc-dialog-ckeditor4/). It runs the check through a dialog window instead of marking misspelled words inline. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
 

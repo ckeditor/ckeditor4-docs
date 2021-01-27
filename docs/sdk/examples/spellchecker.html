@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -70,6 +70,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 			<h2>Spell Checking in a Dialog Window</h2>
 
+			<div class="tip tip__warning">
+				<b>This feature has an End-of-Life date set to December 31st, 2021.</b> This means it will not be supported any longer and may stop working after this date. We strongly encourage everyone to choose one of the other available spellchecking solutions - <a href="https://ckeditor.com/docs/ckeditor4/latest/features/spellcheck.html#spell-check-as-you-type-scayt">Spell Check As You Type (SCAYT)</a> or <a href="https://ckeditor.com/docs/ckeditor4/latest/features/spellcheck.html#distraction-free-proofreading">WProofreader</a>.
+			</div>
+
 			<p>
 				The <a href="https://ckeditor.com/cke4/addon/wsc">WebSpellChecker</a> plugin provides the <strong>Spell Checker</strong> dialog window that lets you check the spelling of the document word by word. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
 			</p>
@@ -126,8 +130,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: 250,
-					// Remove the WebSpellChecker plugin.
-					removePlugins: 'wsc',
 					// Configure SCAYT to load on editor startup.
 					scayt_autoStartup: true,
 					// Limit the number of suggestions available in the context menu.
@@ -139,7 +141,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				CKEDITOR.replace( 'editor2', {
 					height: 250,
 					// Remove the SpellCheckAsYouType (SCAYT) plugin.
-					removePlugins: 'scayt'
+					removePlugins: 'scayt',
+					// Add the WebSpellChecker plugin.
+					extraPlugins: 'wsc'
 				} );
 			</script>
 
@@ -153,8 +157,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 				CKEDITOR.replace( 'editor3', {
 					height: 250,
-					// Remove the WebSpellChecker and SpellCheckAsYouType (SCAYT) plugins.
-					removePlugins: 'scayt,wsc',
+					// Remove the SpellCheckAsYouType (SCAYT) plugin.
+					removePlugins: 'scayt',
 					on: {
 						// Add a special class to the editor iframe so WProofreader will only be initialized on this
 						// particular instance (see 'enableAutoSearchIn' in 'WEBSPELLCHECKER_CONFIG' above).
@@ -168,8 +172,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script data-sample="4">
 				CKEDITOR.replace( 'editor4', {
 					height: 250,
-					// Remove the WebSpellChecker and SpellCheckAsYouType (SCAYT) plugins.
-					removePlugins: 'scayt,wsc',
+					// Remove the SpellCheckAsYouType (SCAYT) plugin.
+					removePlugins: 'scayt',
 					disableNativeSpellChecker: false
 				} );
 			</script>

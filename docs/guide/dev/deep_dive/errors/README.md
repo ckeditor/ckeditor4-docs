@@ -6,7 +6,7 @@ menu-title: Error Code Reference
 meta-title-short: Error Code Reference
 ---
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -140,6 +140,22 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Description: Unable to find the vendor library. Make sure that the vendor library is available at the given path.
 * Additional data:
 	* `path`: A path to the vendor library.
+
+## pastetools-failed-image-extraction
+
+* Location: `plugins/pastetools/filter/image.js`
+* Description: Images could not be correctly extracted from the RTF content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins.
+* Additional data:
+	* `rtf`: The number of images extracted from RTF.
+	* `html`: The number of images present in HTML.
+
+## pastetools-unsupported-image
+
+* Location: `plugins/pastetools/filter/image.js`
+* Description: One of the images extracted from the pasted content provided by the [Paste from Word](https://ckeditor.com/cke4/addon/pastefromword) or [Paste from LibreOffice](https://ckeditor.com/cke4/addon/pastefromlibreoffice) plugins uses an unsupported format. In the case of Safari browser, the `type` property will always equal to `'blob'`.
+* Additional data:
+	* `type`: The image's MIME type or `'blob'`.
+	* `index`: The index of the image inside the pasted content.
 
 ## range-endcontainer
 

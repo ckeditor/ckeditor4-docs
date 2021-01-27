@@ -6,7 +6,7 @@ menu-title: Browser Compatibility
 meta-title-short: Browser Compatibility
 ---
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -78,8 +78,8 @@ Besides the browser support described above we are also introducing the followin
    * **Firefox** Latest Stable on Windows 7, 8 or 10
  * High Contrast:
    * **Firefox** Latest Stable on Windows 7, 8 or 10
-   * **Internet Explorer** 9+ on Windows 7, 8 or 10
    * **Microsoft Edge** Latest Stable on Windows 10
+   * **Internet Explorer** 9+ on Windows 7, 8 or 10
 
 Refer to the {@link guide/dev/a11y/README Accessibility Support in CKEditor} article to learn about CKEditor 4 compliance with some well-known accessibility standards and why we treat Firefox + JAWS as our reference environment for testing. You will also get an overview of available accessibility-related features there.
 

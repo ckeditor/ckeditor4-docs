@@ -6,7 +6,7 @@ menu-title: Editing Complete HTML Pages
 meta-title-short: Editing Complete HTML Pages
 ---
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -130,8 +130,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: 250,
-					// Remove the WebSpellChecker plugin.
-					removePlugins: 'wsc',
 					// Configure SCAYT to load on editor startup.
 					scayt_autoStartup: true,
 					// Limit the number of suggestions available in the context menu.
@@ -143,7 +141,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				CKEDITOR.replace( 'editor2', {
 					height: 250,
 					// Remove the SpellCheckAsYouType (SCAYT) plugin.
-					removePlugins: 'scayt'
+					removePlugins: 'scayt',
+					// Add the WebSpellChecker plugin.
+					extraPlugins: 'wsc'
 				} );
 			</script>
 
@@ -157,8 +157,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 				CKEDITOR.replace( 'editor3', {
 					height: 250,
-					// Remove the WebSpellChecker and SpellCheckAsYouType (SCAYT) plugins.
-					removePlugins: 'scayt,wsc',
+					// Remove the SpellCheckAsYouType (SCAYT) plugin.
+					removePlugins: 'scayt',
 					on: {
 						// Add a special class to the editor iframe so WProofreader will only be initialized on this
 						// particular instance (see 'enableAutoSearchIn' in 'WEBSPELLCHECKER_CONFIG' above).
@@ -172,8 +172,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script data-sample="4">
 				CKEDITOR.replace( 'editor4', {
 					height: 250,
-					// Remove the WebSpellChecker and SpellCheckAsYouType (SCAYT) plugins.
-					removePlugins: 'scayt,wsc',
+					// Remove the SpellCheckAsYouType (SCAYT) plugin.
+					removePlugins: 'scayt',
 					disableNativeSpellChecker: false
 				} );
 			</script>

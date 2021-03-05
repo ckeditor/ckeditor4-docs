@@ -44,7 +44,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 <section class="sdk-container">
 	<nav class="sdk-sidebar">
 	</nav>
-	<section class="sdk-contents">
+	<section class="sdk-contents" data-cke-preset="full-all">
 		<h1>Pasting content from Google Docs <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/pastefromgoogledocs.html">Documentation</a></h1>
 
 		<p>
@@ -68,9 +68,96 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			Pasted content may be filtered by additional <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_acf.html">Advanced Content Filter rules</a>. The content appearance in CKEditor 4 also depends on styling used in <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-contentsCss">contents.css</a></code> files.
 		</p>
 
-		<div class="container" data-sample="1" data-sample-short>
+		<p>
+			Below there are two editor instances. The first one is accepting any pasted content in the unchanged form and shows the full capabilities of Paste from Word plugin.
+		</p>
+
+		<div class="container">
 			<div class="inner-container">
 				<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short>
+					&lt;h1 style="text-align:center"&gt;&lt;span style="font-size:22pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#000000"&gt;Recognition of Achievement&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h1&gt;
+
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;This letter acknowledges the invaluable input &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;&lt;strong&gt;you&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;, as a member of our Innovation Team,&nbsp;have provided in the &ldquo;Implement Rich Text Editor&rdquo; project.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;The Management would like to hereby thank you for this great accomplishment that was delivered in a timely fashion, up to the highest company standards, and with great results:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;table cellspacing="0" style="border-collapse:collapse; width:597px"&gt;
+						&lt;tbody&gt;
+							&lt;tr&gt;
+								&lt;td style="background-color:#cccccc; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:352px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;&lt;strong&gt;Project Phase&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="background-color:#cccccc; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:143px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;&lt;strong&gt;Deadline&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="background-color:#cccccc; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:102px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;&lt;strong&gt;Status&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td style="border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:352px"&gt;
+								&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;Phase 1: Market research&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:143px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;2019-08-15&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:102px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:'Quattrocento Sans',sans-serif"&gt;&lt;span style="color:#6aa84f"&gt;✓&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td style="background-color:#eeeeee; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:352px"&gt;
+								&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;Phase 2: Editor implementation&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="background-color:#eeeeee; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:143px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;2019-08-20&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="background-color:#eeeeee; border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:102px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:'Quattrocento Sans',sans-serif"&gt;&lt;span style="color:#6aa84f"&gt;✓&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td style="border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:352px"&gt;
+								&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;Phase 3: Rollout to Production&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:143px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;2019-08-22&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="border-bottom:1px solid #000000; border-left:1px solid #000000; border-right:1px solid #000000; border-top:1px solid #000000; vertical-align:middle; width:102px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:'Quattrocento Sans',sans-serif"&gt;&lt;span style="color:#6aa84f"&gt;✓&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+						&lt;/tbody&gt;
+					&lt;/table&gt;
+
+					&lt;p&gt;&nbsp;&lt;/p&gt;
+
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;The project that you participated in is of utmost importance to the future success of our platform. We are very proud to share that the CKEditor implementation was a huge success and brought congratulations from both the key Stakeholders and the Customers:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;&lt;em&gt;This new editor has totally changed our content creation experience!&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;&lt;em&gt;&mdash; John F. Smith, CEO, The New Web&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;This letter recognizes that much of our success is directly attributable to your efforts. You deserve to be proud of your achievement. May your future efforts be equally successful and rewarding.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;I am sure we will be seeing and hearing a great deal more about your accomplishments in the future. Keep up the good work!&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p&gt;&nbsp;&lt;/p&gt;
+
+					&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;Best regards,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;&lt;em&gt;The Management&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+				</textarea>
+			</div>
+		</div>
+
+		<p>
+			The second editor shows the possibilities of content filtering in CKEditor 4 - it enforces to use only a subset of features, which can be helpful when creating some official documents.
+		</p>
+
+		<div class="container">
+			<div class="inner-container">
+				<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="1" data-sample-short>
 					&lt;h1 style="text-align:center"&gt;&lt;span style="font-size:22pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#000000"&gt;Recognition of Achievement&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h1&gt;
 
 					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;This letter acknowledges the invaluable input &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;&lt;strong&gt;you&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Georgia"&gt;&lt;span style="color:#333333"&gt;, as a member of our Innovation Team,&nbsp;have provided in the &ldquo;Implement Rich Text Editor&rdquo; project.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
@@ -166,6 +253,24 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<script data-sample="1">
 			CKEDITOR.replace( 'editor1', {
+				// Make the editing area bigger than default.
+				height: 1000,
+				width: 940,
+
+				// An array of stylesheets to style the WYSIWYG area.
+				// Note: it is recommended to keep your own styles in a separate file in order to make future updates painless.
+				contentsCss: [
+					CKEDITOR.basePath + 'contents.css',
+					'assets/css/pastefromword.css'
+				],
+
+				// This is optional, but will let us define multiple different styles for multiple editors using the same CSS file.
+				bodyClass: 'document-editor',
+
+				// Disable content filtering to allow paste any content into the editor.
+				allowedContent: true
+			} );
+			CKEDITOR.replace( 'editor2', {
 				// Define the toolbar: https://ckeditor.com/docs/ckeditor4/latest/features/toolbar
 				// The full preset from CDN which we used as a base provides more features than we need.
 				// Also by default it comes with a 3-line toolbar. Here we put all buttons in a single row.

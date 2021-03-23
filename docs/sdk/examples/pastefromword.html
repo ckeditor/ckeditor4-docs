@@ -47,6 +47,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	<section class="sdk-contents" data-cke-preset="full-all">
 		<h1>Pasting content from Microsoft Word <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/pastefromword.html">Documentation</a></h1>
 
+		<h2>Overview</h2>
+
 		<p>
 			The Paste from Word feature is provided through the <a href="https://ckeditor.com/cke4/addon/pastefromword">Paste from Word</a> plugin. It was heavily reworked in CKEditor 4.6 and by default is available in the Standard and Full distributions.
 		</p>
@@ -67,6 +69,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<p class="tip">
 			Pasted content may be filtered by additional <a href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_acf.html">Advanced Content Filter rules</a>. The content appearance in CKEditor 4 also depends on styling used in <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-contentsCss">contents.css</a></code> files.
 		</p>
+
+		<h2>Unrestricted pasting</h2>
 
 		<p>
 			Below there are two editor instances. The first one is accepting any pasted content in the unchanged form and shows the full capabilities of Paste from Word plugin.
@@ -148,6 +152,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				</textarea>
 			</div>
 		</div>
+
+		<h2>Pasting with content filtering</h2>
 
 		<p>
 			The second editor shows the possibilities of content filtering in CKEditor 4 - it enforces to use only a subset of features, which can be helpful when creating some official documents.
@@ -251,7 +257,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			CKEDITOR.replace( 'editor1', {
 				// Make the editing area bigger than default.
 				height: 1000,
-				width: 940,
+				width: 760,
 
 				// An array of stylesheets to style the WYSIWYG area.
 				// Note: it is recommended to keep your own styles in a separate file in order to make future updates painless.
@@ -322,7 +328,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 				// Make the editing area bigger than default.
 				height: 1000,
-				width: 940,
+				width: 760,
 
 				// An array of stylesheets to style the WYSIWYG area.
 				// Note: it is recommended to keep your own styles in a separate file in order to make future updates painless.

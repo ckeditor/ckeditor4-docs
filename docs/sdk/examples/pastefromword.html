@@ -254,6 +254,26 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				height: 1000,
 				width: 760,
 
+				toolbarGroups: [
+					{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+					{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+					{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+					{ name: 'forms', groups: [ 'forms' ] },
+					'/',
+					{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+					{ name: 'links', groups: [ 'links' ] },
+					{ name: 'insert', groups: [ 'insert' ] },
+					'/',
+					{ name: 'styles', groups: [ 'styles' ] },
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'colors', groups: [ 'colors' ] },
+					{ name: 'tools', groups: [ 'tools' ] },
+					{ name: 'others', groups: [ 'others' ] },
+					{ name: 'about', groups: [ 'about' ] }
+				],
+
+				removeButtons: 'ExportPdf,Form,Checkbox,Radio,TextField,Select,Textarea,Button,ImageButton,HiddenField,NewPage,CreateDiv,Flash,Iframe,About,ShowBlocks,Maximize',
+
 				// An array of stylesheets to style the WYSIWYG area.
 				// Note: it is recommended to keep your own styles in a separate file in order to make future updates painless.
 				contentsCss: [

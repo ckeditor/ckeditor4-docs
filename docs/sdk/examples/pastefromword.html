@@ -151,84 +151,82 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<h2 id="pasting-with-filtering">Filtering pasted content with ACF</h2>
 
 		<p>
-			The second editor shows the possibilities of content filtering in CKEditor 4 - it enforces to use only a subset of features, which is helpful when creating official documents. For the exemplary content to paste you can download the <a href="assets/pfw/CKEditor4.PFW.Sample.Recognition_of_Achievement.docx">sample Word document</a>.
+			The second editor shows the possibilities of content filtering in CKEditor 4 - it enforces to use only a subset of features, which is helpful when creating official documents. For the exemplary content to paste you can download the <a href="assets/pfw/CKEditor4.PFW.Sample.Recognition_of_Achievement.docx">sample Word document</a>. Notice how table and images were stripped off during pasting.
 		</p>
 
 		<div class="container">
 			<div class="inner-container">
 				<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="1" data-sample-short>
-					&lt;h1 style=&quot;text-align:center&quot;&gt;&lt;img align=&quot;right&quot; alt=&quot;Bilancino Hotel logo&quot; height=&quot;75&quot; src=&quot;https://ckeditor.com/docs/ckeditor4/latest/examples/assets/image/bilancino-logo.png&quot; width=&quot;75&quot; /&gt;The Flavorful Tuscany Meetup&lt;/h1&gt;
+					&lt;h1 style="text-align:center"&gt;&lt;span style="font-size:22pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="font-family:Georgia,serif"&gt;&lt;span style="color:#006699"&gt;Recognition of Achievement&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/h1&gt;
 
-					&lt;h2 style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;color:#007ac9&quot;&gt;&lt;strong&gt;Welcome letter&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;This letter acknowledges the invaluable input &lt;strong&gt;you&lt;/strong&gt;, as a member of our Innovation Team,&nbsp;have provided in the &ldquo;Implement Rich Text Editor&rdquo; project. &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-					&lt;p&gt;Dear Guest,&lt;/p&gt;
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;The Management would like to hereby thank you for this great accomplishment that was delivered in a timely fashion, up to the highest company standards, and with great results:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 
-					&lt;p&gt;We are delighted to welcome you to the annual &lt;em&gt;Flavorful Tuscany Meetup&lt;/em&gt; and hope you will enjoy the programme as well as your stay at the &lt;a href=&quot;https://ckeditor.com&quot;&gt;Bilancino Hotel&lt;/a&gt;.&lt;/p&gt;
-
-					&lt;p&gt;Please find attached the full schedule of the event.&lt;/p&gt;
-
-					&lt;blockquote&gt;
-					&lt;p&gt;The annual Flavorful Tuscany meetups are always a culinary discovery. You get the best of Tuscan flavors during an intense one-day stay at one of the top hotels of the region. All the sessions are lead by top chefs passionate about their profession. I would certainly recommend to save the date in your calendar for this one!&lt;/p&gt;
-
-					&lt;p&gt;Angelina Calvino, food journalist&lt;/p&gt;
-					&lt;/blockquote&gt;
-
-					&lt;p&gt;Please arrive at the &lt;a href=&quot;https://ckeditor.com&quot;&gt;Bilancino Hotel&lt;/a&gt; reception desk at least &lt;strong&gt;half an hour earlier&lt;/strong&gt; to make sure that the registration process goes as smoothly as possible.&lt;/p&gt;
-
-					&lt;p&gt;We look forward to welcoming you to the event.&lt;/p&gt;
-
-					&lt;p&gt;&lt;img alt=&quot;Victoria Valc signature&quot; height=&quot;101&quot; src=&quot;https://ckeditor.com/docs/ckeditor4/latest/examples/assets/image/signature.png&quot; width=&quot;180&quot; /&gt;&lt;/p&gt;
-
-					&lt;p&gt;&lt;span style=&quot;font-size:16px&quot;&gt;&lt;strong&gt;Victoria Valc&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-
-					&lt;p&gt;&lt;strong&gt;Event Manager&lt;/strong&gt;&lt;br /&gt;
-					Bilancino Hotel&lt;/p&gt;
-
-					&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-					&lt;div style=&quot;page-break-after:always&quot;&gt;&lt;span style=&quot;display:none&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;
-
-					&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-					&lt;h2 style=&quot;text-align:center&quot;&gt;&lt;span style=&quot;color:#007ac9&quot;&gt;&lt;strong&gt;The Flavorful Tuscany Meetup Schedule&lt;/strong&gt;&lt;/span&gt;&lt;/h2&gt;
-
-					&lt;table align=&quot;center&quot; cellpadding=&quot;15&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse; width:600px&quot;&gt;
-						&lt;thead&gt;
-							&lt;tr&gt;
-								&lt;th colspan=&quot;2&quot; style=&quot;background-color:#999999&quot;&gt;&lt;span style=&quot;color:#ffffff&quot;&gt;Saturday, July 14&lt;/span&gt;&lt;/th&gt;
-							&lt;/tr&gt;
-						&lt;/thead&gt;
+					&lt;table cellspacing="0" class="MsoTableGrid" style="border-collapse:collapse; border:none; width:597px"&gt;
 						&lt;tbody&gt;
 							&lt;tr&gt;
-								&lt;td style=&quot;background-color:#e6e6e6; text-align:center&quot;&gt;9:30 AM - 11:30 AM&lt;/td&gt;
-								&lt;td&gt;
-								&lt;p&gt;&lt;strong&gt;Americano vs. Brewed - &amp;ldquo;know your coffee&amp;rdquo;&lt;/strong&gt; with:&amp;nbsp;&lt;/p&gt;
-
-								&lt;ul&gt;
-									&lt;li&gt;Giulia Bianchi&lt;/li&gt;
-									&lt;li&gt;Stefano Garau&lt;/li&gt;
-									&lt;li&gt;Giuseppe Russo&lt;/li&gt;
-								&lt;/ul&gt;
+								&lt;td style="background-color:#cccccc; border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:1px solid black; width:59%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;strong&gt;&lt;span style="font-family:Georgia,serif"&gt;Project Phase&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="background-color:#cccccc; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; width:24%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;strong&gt;&lt;span style="font-family:Georgia,serif"&gt;Deadline&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="background-color:#cccccc; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:1px solid black; width:17%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;strong&gt;&lt;span style="font-family:Georgia,serif"&gt;Status&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 								&lt;/td&gt;
 							&lt;/tr&gt;
 							&lt;tr&gt;
-								&lt;td style=&quot;background-color:#e6e6e6; text-align:center&quot;&gt;1:00 PM - 3:00 PM&lt;/td&gt;
-								&lt;td&gt;
-								&lt;p&gt;&lt;strong&gt;Pappardelle al pomodoro&lt;/strong&gt; - live cooking&lt;/p&gt;
-
-								&lt;p&gt;Incorporate the freshest ingredients&amp;nbsp;&lt;br /&gt;
-								with Rita Fresco&lt;/p&gt;
+								&lt;td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; width:59%px"&gt;
+								&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;Phase 1: Market research&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:24%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;2019-05-15&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:17%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:'Segoe UI Symbol',sans-serif"&gt;&lt;span style="color:#19b159"&gt;✓&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 								&lt;/td&gt;
 							&lt;/tr&gt;
 							&lt;tr&gt;
-								&lt;td style=&quot;background-color:#e6e6e6; text-align:center&quot;&gt;5:00 PM - 8:00 PM&lt;/td&gt;
-								&lt;td&gt;
-								&lt;p&gt;&lt;strong&gt;Tuscan vineyards at a glance&lt;/strong&gt; - wine-tasting&amp;nbsp;&lt;br /&gt;
-								with Frederico Riscoli&lt;/p&gt;
+								&lt;td style="background-color:#eeeeee; border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; width:59%px"&gt;
+								&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;Phase 2: Editor implementation&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="background-color:#eeeeee; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:24%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;2019-05-20&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="background-color:#eeeeee; border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:17%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:'Segoe UI Symbol',sans-serif"&gt;&lt;span style="color:#19b159"&gt;✓&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+							&lt;/tr&gt;
+							&lt;tr&gt;
+								&lt;td style="border-bottom:1px solid black; border-left:1px solid black; border-right:1px solid black; border-top:none; width:59%px"&gt;
+								&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;Phase 3: Rollout to Production&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:24%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;2019-05-22&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+								&lt;/td&gt;
+								&lt;td style="border-bottom:1px solid black; border-left:none; border-right:1px solid black; border-top:none; width:17%px"&gt;
+								&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:'Segoe UI Symbol',sans-serif"&gt;&lt;span style="color:#19b159"&gt;✓&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 								&lt;/td&gt;
 							&lt;/tr&gt;
 						&lt;/tbody&gt;
 					&lt;/table&gt;
+
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;The project that you participated in is of utmost importance to the future success of our platform. We are very proud to share that the CKEditor implementation was a huge success and brought congratulations from both the key Stakeholders and the Customers:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;em&gt;&lt;span style="font-family:Georgia,serif"&gt;This new editor has totally changed our content creation experience!&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:center"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;em&gt;&lt;span style="font-family:Georgia,serif"&gt;&mdash; John F. Smith, CEO, The New Web&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;This letter recognizes that much of our success is directly attributable to your efforts. You deserve to be proud of your achievement. May your future efforts be equally successful and rewarding.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p style="text-align:justify"&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;I am sure we will be seeing and hearing a great deal more about your accomplishments in the future. Keep up the good work!&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p&gt;&nbsp;&lt;/p&gt;
+
+					&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;span style="font-family:Georgia,serif"&gt;Best regards,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+
+					&lt;p&gt;&lt;span style="font-size:11pt"&gt;&lt;span style="font-family:Arial,sans-serif"&gt;&lt;span style="color:#333333"&gt;&lt;em&gt;&lt;span style="font-family:Georgia,serif"&gt;The Management&lt;/span&gt;&lt;/em&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 				</textarea>
 			</div>
 		</div>
@@ -304,8 +302,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				//  - About Advanced Content Filter: https://ckeditor.com/docs/ckeditor4/latest/guide/dev_advanced_content_filter
 				//  - About Disallowed Content: https://ckeditor.com/docs/ckeditor4/latest/guide/dev_disallowed_content
 				//  - About Allowed Content: https://ckeditor.com/docs/ckeditor4/latest/guide/dev_allowed_content_rules
-				disallowedContent: 'img{width,height,float}',
-				extraAllowedContent: 'img[width,height,align]',
+				disallowedContent: 'img table',
 
 				// Enabling extra plugins, available in the full-all preset: https://ckeditor.com/cke4/presets
 				extraPlugins: 'colorbutton,font,justify,print,tableresize,uploadimage,uploadfile,pastefromword,liststyle,pagebreak',

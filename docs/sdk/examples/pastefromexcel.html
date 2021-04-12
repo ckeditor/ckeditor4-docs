@@ -291,7 +291,29 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			CKEDITOR.replace( 'editor1', {
 				// Make the editing area bigger than default.
 				height: 350,
-				width: 760
+				width: 760,
+
+				// Fit toolbar buttons inside 3 rows.
+				toolbarGroups: [
+					{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+					{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+					{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+					{ name: 'forms', groups: [ 'forms' ] },
+					'/',
+					{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+					{ name: 'links', groups: [ 'links' ] },
+					{ name: 'insert', groups: [ 'insert' ] },
+					'/',
+					{ name: 'styles', groups: [ 'styles' ] },
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'colors', groups: [ 'colors' ] },
+					{ name: 'tools', groups: [ 'tools' ] },
+					{ name: 'others', groups: [ 'others' ] },
+					{ name: 'about', groups: [ 'about' ] }
+				],
+
+				// Remove buttons irrelevant for pasting from external sources.
+				removeButtons: 'ExportPdf,Form,Checkbox,Radio,TextField,Select,Textarea,Button,ImageButton,HiddenField,NewPage,CreateDiv,Flash,Iframe,About,ShowBlocks,Maximize',
 			} );
 			CKEDITOR.replace( 'editor2', {
 				// Define the toolbar: https://ckeditor.com/docs/ckeditor4/latest/features/toolbar
@@ -312,9 +334,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'document', items: [ 'Print', 'Source' ] }
 				],
 
-				// Enabling extra plugins, available in the full-all preset: https://ckeditor.com/cke4/presets
-				extraPlugins: 'colorbutton,font,justify,print,tableresize,pastefromword,liststyle',
-				removeButtons: '',
+				disallowedContent: '*{*color}; *{*align}',
 
 				// Make the editing area bigger than default.
 				height: 350,

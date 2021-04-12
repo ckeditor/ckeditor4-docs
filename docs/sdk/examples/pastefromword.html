@@ -254,6 +254,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				height: 1000,
 				width: 760,
 
+				// Fit toolbar buttons inside 3 rows.
 				toolbarGroups: [
 					{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
 					{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
@@ -272,6 +273,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'about', groups: [ 'about' ] }
 				],
 
+				// Remove buttons irrelevant for pasting from external sources.
 				removeButtons: 'ExportPdf,Form,Checkbox,Radio,TextField,Select,Textarea,Button,ImageButton,HiddenField,NewPage,CreateDiv,Flash,Iframe,About,ShowBlocks,Maximize',
 
 				// An array of stylesheets to style the WYSIWYG area.

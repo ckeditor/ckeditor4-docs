@@ -316,6 +316,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				removeButtons: 'ExportPdf,Form,Checkbox,Radio,TextField,Select,Textarea,Button,ImageButton,HiddenField,NewPage,CreateDiv,Flash,Iframe,About,ShowBlocks,Maximize',
 			} );
 			CKEDITOR.replace( 'editor2', {
+				// Make the editing area bigger than default.
+				height: 350,
+				width: 760,
+
 				// Define the toolbar: https://ckeditor.com/docs/ckeditor4/latest/features/toolbar
 				// The full preset from CDN which we used as a base provides more features than we need.
 				// Also by default it comes with a 3-line toolbar. Here we put all buttons in a single row.
@@ -334,11 +338,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'document', items: [ 'Print', 'Source' ] }
 				],
 
-				disallowedContent: '*{*color}; *{*align}',
-
-				// Make the editing area bigger than default.
-				height: 350,
-				width: 760
+				disallowedContent: '*{*color}; *{*align}'
 			} );
 		</script>
 

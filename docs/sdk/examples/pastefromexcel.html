@@ -324,18 +324,17 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				// The full preset from CDN which we used as a base provides more features than we need.
 				// Also by default it comes with a 3-line toolbar. Here we put all buttons in a single row.
 				toolbar: [
+					{ name: 'document', items: [ 'Source', 'Print', 'PageBreak' ] },
 					{ name: 'clipboard', items: [ 'PasteFromWord', '-', 'Undo', 'Redo' ] },
-					{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'RemoveFormat', 'Subscript', 'Superscript' ] },
-					{ name: 'links', items: [ 'Link', 'Unlink' ] },
 					{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote' ] },
 					{ name: 'insert', items: [ 'Image', 'Table' ] },
+					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+					{ name: 'links', items: [ 'Link', 'Unlink' ] },
 					{ name: 'editing', items: [ 'Scayt' ] },
 					'/',
-
 					{ name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
-					{ name: 'colors', items: [ 'TextColor', 'BGColor', 'CopyFormatting' ] },
-					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-					{ name: 'document', items: [ 'Print', 'Source' ] }
+					{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript' ] },
+					{ name: 'colors', items: [ 'CopyFormatting', 'RemoveFormat', '-', 'TextColor', 'BGColor' ] }
 				],
 
 				disallowedContent: '*{*color}; *{*align}'

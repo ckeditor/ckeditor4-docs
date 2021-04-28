@@ -80,6 +80,13 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 * <kbd>Shift+PgUp</kbd> &ndash; Selects a text fragment of approximately the length of the editing area starting from the cursor
 	and going up.
 
+### On widget selection
+
+* <kbd>Enter</kbd> &ndash; Opens widget dialog.
+* <kbd>Shift+Enter</kbd> &ndash; Adds an empty paragraph after selected widget.
+* <kbd>Shift+Alt+Enter</kbd> &ndash; Adds an empty paragraph before selected widget.
+* <kbd>Left Arrow</kbd> or <kbd>Right Arrow</kbd> &ndash; Moves selection before or after widget.
+
 ## Text Styling
 
 * <kbd>Ctrl+B</kbd> &ndash; Applies **bold** formatting to a text fragment.

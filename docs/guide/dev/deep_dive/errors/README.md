@@ -56,7 +56,7 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Location: `core/editor.js`
 * Description: The editor with a {@linkapi CKEDITOR.config.delayIfDetached delayed creation process} was correctly instantiated.
 * Additional data:
-	* `method`: Indicates how the editor creation proceeded after it was reattached to DOM. Can have one of two values:
+	* `method`: Indicates how the editor creation proceeded after it was reattached to DOM. It can have one of these two values:
 		* `callback` - Editor was created with callback function provided through {@linkapi CKEDITOR.config.delayIfDetached_callback} configuration variable.
 		* `interval - X ms` - The editor tried to instantiate {@linkapi CKEDITOR.config.delayIfDetached_interval every `X ms`} on its own and eventually succeeded.
 

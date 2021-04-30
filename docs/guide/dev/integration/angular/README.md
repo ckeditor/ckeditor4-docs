@@ -199,7 +199,7 @@ The following `@Output` properties are supported by the CKEditor 4 Angular compo
 
 ### `namespaceLoaded`
 
-Fires when the {@linkapi CKEDITOR `CKEDITOR` namespace} is loaded. It only triggers once, no matter how many CKEditor 4 components are initialised. Can be used for convenient changes in the namespace, e.g. for adding external plugins:
+Fires when the {@linkapi CKEDITOR `CKEDITOR` namespace} is loaded. It only triggers once, no matter how many CKEditor 4 components are initialized. Can be used for convenient changes in the namespace, e.g. for adding external plugins:
 
 ```html
 <ckeditor (namespaceLoaded)="onNamespaceLoaded($event)"></ckeditor>

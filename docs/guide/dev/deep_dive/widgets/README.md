@@ -57,7 +57,10 @@ The screenshot above shows a customized CKEditor 4 instance that uses a few samp
 
 Technically, **each widget is defined in a CKEditor plugin that uses the features provided by the generic [Widget plugin](https://ckeditor.com/cke4/addon/widget)**. Owing to this, widget plugins have a structure very similar to that of standard editor plugins, can be made available in [CKEditor 4 Add-ons Repository](https://ckeditor.com/cke4/addons/plugins/all), and can be added to your editor installation as described in the {@link guide/dev/widget_installation/README Widget Installation} article.
 
+## Accessibility
+
+When a widget is selected, keyboard shortcuts are adjusted to make the navigation and edition around the widget more comfortable. For example, a widget dialog window can be opened by just pressing the <kbd>Enter</kbd> key. All shortcuts are described in the {@link features/shortcuts/README#widget-selection Keyboard Shortcuts} guide.
+
 ## Further Reading
 
 If you want to create your own widgets, take a look at the {@link guide/widget_sdk/intro/README Widget SDK} that includes a {@link guide/widget_sdk/tutorial_1/README step-by-step tutorial} on how to create widgets.
-

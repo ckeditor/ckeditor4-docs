@@ -59,9 +59,8 @@ Technically, **each widget is defined in a CKEditor plugin that uses the feature
 
 ## Accessibility
 
-When a widget is selected, keyboard shortcuts are adjusted to make navigation and edition around widget comfortable. For example, widget dialog window can be opened by just pressing <kbd>Enter</kbd> key. All shortcuts are described in {@link features/shortcuts/README#widget-selection Keyboard Shortcuts article}.
+When a widget is selected, keyboard shortcuts are adjusted to make the navigation and edition around the widget more comfortable. For example, a widget dialog window can be opened by just pressing the <kbd>Enter</kbd> key. All shortcuts are described in the {@link features/shortcuts/README#widget-selection Keyboard Shortcuts} guide.
 
 ## Further Reading
 
 If you want to create your own widgets, take a look at the {@link guide/widget_sdk/intro/README Widget SDK} that includes a {@link guide/widget_sdk/tutorial_1/README step-by-step tutorial} on how to create widgets.
-

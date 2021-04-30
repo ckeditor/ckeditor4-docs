@@ -45,7 +45,7 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 ## editor-delayed-creation
 
 * Location: `core/editor.js`
-* Description: Editor creation {@linkapi CKEDITOR.config.delayIfDetached has been delayed} because its target native element was detached from DOM.
+* Description: The editor creation {@linkapi CKEDITOR.config.delayIfDetached has been delayed} because its target native element was detached from DOM.
 * Additional data:
 	* `method`: Indicates how to resume editor creation. Can have one of two values:
 		* `callback` - Editor can be created with callback function provided through {@linkapi CKEDITOR.config.delayIfDetached_callback} configuration variable.

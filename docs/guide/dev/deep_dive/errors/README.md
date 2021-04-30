@@ -42,6 +42,24 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Description: The {@linkapi CKEDITOR.config.cloudServices_uploadUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
 * Additional data: None.
 
+## editor-delayed-creation
+
+* Location: `core/editor.js`
+* Description: The editor creation {@linkapi CKEDITOR.config.delayIfDetached has been delayed} because its target native element was detached from DOM.
+* Additional data:
+	* `method`: Indicates how to resume editor creation. It can have one of these two values:
+		* `callback` - The editor can be created with a callback function provided through {@linkapi CKEDITOR.config.delayIfDetached_callback} configuration variable.
+		* `interval - X ms` - The editor will try to instantiate {@linkapi CKEDITOR.config.delayIfDetached_interval every `X ms`} on its own until its native element is reattached to DOM.
+
+## editor-delayed-creation-success
+
+* Location: `core/editor.js`
+* Description: The editor with a {@linkapi CKEDITOR.config.delayIfDetached delayed creation process} was correctly instantiated.
+* Additional data:
+	* `method`: Indicates how the editor creation proceeded after it was reattached to DOM. It can have one of these two values:
+		* `callback` - The editor was created with a callback function provided through {@linkapi CKEDITOR.config.delayIfDetached_callback} configuration variable.
+		* `interval - X ms` - The editor tried to instantiate {@linkapi CKEDITOR.config.delayIfDetached_interval every `X ms`} on its own and eventually succeeded.
+
 ## editor-destroy-iframe
 
 * Location: `plugins/wysiwygarea/plugin.js`

@@ -58,7 +58,7 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Additional data:
 	* `method`: Indicates how the editor creation proceeded after it was reattached to DOM. Can have one of two values:
 		* `callback` - Editor was created with callback function provided through {@linkapi CKEDITOR.config.delayIfDetached_callback} configuration variable.
-		* `interval - X ms` - Editor tried to instantiate {@linkapi CKEDITOR.config.delayIfDetached_interval every `X ms`} on its own and eventually succeeded.
+		* `interval - X ms` - The editor tried to instantiate {@linkapi CKEDITOR.config.delayIfDetached_interval every `X ms`} on its own and eventually succeeded.
 
 ## editor-destroy-iframe
 

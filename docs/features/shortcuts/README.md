@@ -80,7 +80,7 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 * <kbd>Shift+PgUp</kbd> &ndash; Selects a text fragment of approximately the length of the editing area starting from the cursor
 	and going up.
 
-### On widget selection
+### Widget selection
 
 * <kbd>Enter</kbd> &ndash; Opens widget dialog.
 * <kbd>Shift+Enter</kbd> &ndash; Adds an empty paragraph after selected widget.

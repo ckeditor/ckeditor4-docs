@@ -92,9 +92,9 @@ For more detailed documentation, refer to the [official WProofreader "Getting St
 
 ## Supported Languages
 
-By default the WebSpellChecker solutions support 17 languages for spell checking: American English, British English, Brazilian Portuguese, Canadian English, Canadian French, Danish, Dutch, Finnish, French, German, Greek, Italian, Norwegian Bokmal, Portuguese, Spanish, Swedish and Ukrainian. Grammar checking is available for 15 of them &mdash; there is no grammar checking for Finnish and Norwegian.
+The most popular languages used with WProofreader include: American English, British English, Canadian English, Canadian French, French, German, Italian, Greek, Spanish, Finnish, Danish, Dutch, Portuguese, Swedish, Ukrainian, Norwegian Bokmål, Brazilian Portuguese. There are, however, over 160 languages altogether, available for download from the Webspellchecker site. Grammar checking is available for over 20 languages.
 
-There are also over 150 additional languages and specialized dictionaries such as medical and legal available for an additional fee. You can check the full list [here](https://webspellchecker.com/additional-dictionaries/).
+A recent addition to the software are AI-driven tools. Smart algorithms employed in the AI-based language dictionaries offer better a far better checking quality, generating proofreading suggestions based on the context of the sentence. They provide more suitable suggestions that address mistakes with thrice the accuracy of traditional dictionaries. The AI-based support is currently available for English and German. You can check the full list [here](https://webspellchecker.com/additional-dictionaries/).
 
 ## Customization Options
 

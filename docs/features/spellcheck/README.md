@@ -56,17 +56,18 @@ The [WebSpellChecker Dialog](https://ckeditor.com/cke4/addon/wsc) plugin is anot
     This is a commercial solution provided by our partner, [WebSpellChecker](https://webspellchecker.com/). You can report any issues in its [GitHub repository](https://github.com/WebSpellChecker/wproofreader).
 </info-box>
 
-[WProofreader](https://webspellchecker.com/wsc-proofreader) is an innovative proofreading tool that combines the functionality of "spell check as you type" and "spell check in a dialog" in a modern UI. Spelling and grammar suggestions are available on hover with no clicking needed.
+[WProofreader](https://webspellchecker.com/wsc-proofreader) is an innovative proofreading tool that combines the functionality of "spell check as you type" and "spell check in a dialog" in a modern UI. Spelling, punctuation and grammar suggestions are available on hover with no clicking needed.
 
 {@img assets/img/wproofreader_01.png 730 Spelling and grammar checking with WProofreader in CKEditor 4 WYSIWYG editor}
 
-The distraction-free badge gives you access to proofreader suggestions, settings and proofreading overview in a dialog.
+The proofreader badge in the bottom-right corner shows you the total number of mistakes detected. Hover an underlined word to display the proofreader suggestions for any of the spelling and grammar mistakes found. This hover card allows the user to employ the feature on the go.
+
 
 {@img assets/img/wproofreader_02.png 730 Distraction-free proofreader badge in CKEditor 4 WYSIWYG editor}
 
-If you want to see an overview of all spelling and grammar mistakes, click the "Proofread in dialog" icon in the badge.
+If you want to see an overview of all spelling and grammar mistakes, click the "Proofread in dialog" icon in the badge. It will invoke a detached floating panel, easy to navigate and perfect for dedicated proofreading sessions. Turning it on brings a dialog similar to the on-hover one, but substantially larger. It is a detached, floating window that can be conveniently moved around as needed, which is especially important on small screens. However, it also supports accessibility, as moving it left may be more convenient for left-handed persons or more comfortable in the case of right-to-left languages.
 
-{@img assets/img/wproofreader_03.png 730 Proofreading overview in CKEditor 4 WYSIWYG editor}
+{@img assets/img/wproofreader_03.png 776 Proofreading dialog in CKEditor 4 WYSIWYG editor}
 
 In order to use the proofreader, you need to add a few lines of configuration to your editor:
 
@@ -94,7 +95,15 @@ For more detailed documentation, refer to the [official WProofreader "Getting St
 
 The most popular languages used with WProofreader include: American English, British English, Canadian English, Canadian French, French, German, Italian, Greek, Spanish, Finnish, Danish, Dutch, Portuguese, Swedish, Ukrainian, Norwegian Bokmål, Brazilian Portuguese. There are, however, over 160 languages altogether, available for download from the Webspellchecker site. Grammar checking is available for over 20 languages.
 
-A recent addition to the software are AI-driven tools. Smart algorithms employed in the AI-based language dictionaries offer better a far better checking quality, generating proofreading suggestions based on the context of the sentence. They provide more suitable suggestions that address mistakes with thrice the accuracy of traditional dictionaries. The AI-based support is currently available for English and German. You can check the full list [here](https://webspellchecker.com/additional-dictionaries/).
+A recent addition to the software are AI-driven tools. Smart algorithms employed in the AI-based language dictionaries offer better a far better checking quality, generating proofreading suggestions based on the context of the sentence. They provide more suitable suggestions that address mistakes with thrice the accuracy of traditional dictionaries. The AI-based support is currently available for English and German.
+
+You can check the [full list of available dictionaries](https://webspellchecker.com/additional-dictionaries/) for a detailed information.
+
+### Multi-language Support
+
+For content in multiple languages, it is also possible to use WProofreader. The spell check feature can automatically detect the text language properly. It is enough to choose “Auto Detect” in the Language dropdown in the WProofreader settings. Suggestions for spelling and grammar (where available) will be displayed properly for each text fragment.
+
+{@img assets/img/wproofreader_04.png 771 Choose the auto-detect language option.}
 
 ## Customization Options
 

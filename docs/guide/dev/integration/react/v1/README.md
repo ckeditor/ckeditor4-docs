@@ -2,8 +2,8 @@
 category: react-integration
 order: 30
 url: guide/dev_react_v1
-menu-title: React Integration v1
-meta-title-short: React Integration v1
+menu-title: v1
+meta-title-short: v1
 ---
 <!--
 Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
@@ -13,7 +13,7 @@ For licensing, see LICENSE.md.
 # CKEditor 4 React Integration - v1
 
 <info-box warning="">
-	**There is a newer version of React Integration available** This version will be receiving important fixes only. We strongly encourage everyone to migrate to {@link guide/dev/integration/react/v2/README#migration-from-v1-to-v2 v2}.
+	**There is a newer version of React Integration available!** This version will be receiving important fixes only. We strongly encourage everyone to migrate to {@link guide/dev/integration/react/v2/README#migration-from-v1-to-v2 v2}.
 </info-box>
 
 <info-box info="">

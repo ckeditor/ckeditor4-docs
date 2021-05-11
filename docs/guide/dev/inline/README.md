@@ -65,7 +65,7 @@ Since CKEditor 4.2 you can also turn `<textarea>` elements into inline editors. 
 
 ## Inline Editing with Classic Editing UI
 
-There is also an optional [Div Editing Area](https://ckeditor.com/cke4/addon/divarea) plugin that allows to mimic the classic, `<iframe>`-based editor's UI with inline editing. See the {@link features/uitypes/README#fixed-ui-for-inline-editor "Fixed UI for Inline Editor" section in the "Editor User Interface Types" feature description} for more information.
+There is also an optional [Div Editing Area](https://ckeditor.com/cke4/addon/divarea) plugin that allows to mimic the classic, {@link guide/dev/framed/README `<iframe>`-based editor's UI} with inline editing. See the {@link features/uitypes/README#fixed-ui-for-inline-editor "Fixed UI for Inline Editor" section} in the {@link features/uitypes/README "Editor User Interface Types" feature description} for more information.
 
 ## Inline Editing Demo
 

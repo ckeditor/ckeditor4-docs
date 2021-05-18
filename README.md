@@ -9,11 +9,23 @@ This is the official developer documentation project for CKEditor. It uses the c
 Follow the steps listed below to build CKEditor documentation locally.
 
 ### Requirements
+
 * [Ruby](https://www.ruby-lang.org)
-* Custom CKEditor [JSDuck](https://github.com/ckeditor/jsduck) clone (installation instructions are provided below).
-* [NPM](https://www.npmjs.com/).
+* [Node.js](https://nodejs.org/en/)
+* [NPM](https://www.npmjs.com/)
+* [grunt-cli](https://github.com/gruntjs/grunt-cli)
+* Custom CKEditor [JSDuck](https://github.com/ckeditor/jsduck) clone (installation instructions are provided below)
+
+In order to avoid `root` privileges issues, it is advised to use [rvm](https://rvm.io/rvm/install) to manage Ruby versions and gems. In a similar manner, [nvm](https://github.com/nvm-sh/nvm) should be used to manage Node.js and npm installations. Finally, install `grunt-cli` globally with `npm i -g grunt-cli`.
 
 ### Building Instructions
+
+Instructions provided below were tested on following versions of software:
+
+* ruby      v3.0.0
+* Node.js   v14.17.0
+* npm       v6.14.13
+* grunt-cli v1.4.2
 
 Clone this repository locally:
 
@@ -35,13 +47,20 @@ Checkout the `stable` branch of the `jsduck` repository and install the latest `
 	> git checkout stable
 	> gem install ckeditor-jsduck-<version>.gem
 
+Gems versions are listed [here](https://github.com/ckeditor/jsduck#customizations). Gem installation might take a few minutes.
+
 Go back to the `ckeditor4-docs` repository and install [npm dependencies](package.json):
 
+	> cd ../ckeditor4-docs
     > npm install
 
 Then finally execute `grunt build-serve`:
 
 	> grunt build-serve [--options]
+
+:warning: **Too many open files**
+
+You might encounter such error on `umberto` task. Run `ulimit -n 65535` (or any higher value that is permitted by hard limit `ulimit -Hn`) in order to increase the limit of max open files.
 
 Available options:
 

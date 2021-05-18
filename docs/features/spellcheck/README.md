@@ -93,11 +93,23 @@ For more detailed documentation, refer to the [official WProofreader "Getting St
 
 ## Supported Languages
 
-The most popular languages used with WProofreader include: American English, British English, Canadian English, Canadian French, French, German, Italian, Greek, Spanish, Finnish, Danish, Dutch, Portuguese, Swedish, Ukrainian, Norwegian Bokmål, Brazilian Portuguese. There are, however, over 160 languages altogether, available for download from the Webspellchecker site. Grammar checking is available for over 20 languages.
+### Language support
 
-A recent addition to the software are AI-driven tools. Smart algorithms employed in the AI-based language dictionaries offer better a far better checking quality, generating proofreading suggestions based on the context of the sentence. They provide more suitable suggestions that address mistakes with thrice the accuracy of traditional dictionaries. The AI-based support is currently available for English and German.
+The most popular languages used with WProofreader include: American English, British English, Canadian English, Canadian French, French, German, Italian, Greek, Spanish, Finnish, Danish, Dutch, Portuguese, Swedish, Ukrainian, Norwegian Bokmål, Brazilian Portuguese. There are, however, over 160 languages altogether, available for download from the WebSpellChecker site. Grammar checking is available for over 20 languages.
 
-You can check the [full list of available dictionaries](https://webspellchecker.com/additional-dictionaries/) for a detailed information.
+A recent addition to the software are AI-driven tools. Smart algorithms employed in the AI-based language dictionaries offer a far better checking quality, generating proofreading suggestions based on the context of the sentence. They provide more suitable suggestions that address mistakes with thrice the accuracy of traditional dictionaries. The AI-based support is currently available for English and German.
+
+Here you can check the [full list of available languages](https://webspellchecker.com/additional-dictionaries/).
+
+### Custom dictionaries
+
+Apart from the language dictionaries, WebSpellChecker offers two specialized dictionaries: a **medical** and a **legal** one, available for an additional fee.
+
+There are also two types of custom dictionaries available.
+
+One is the **user dictionary** that can be expanded and will grow during the regular use of the feature simply by adding new words to the dictionary. This is a perfect solution for editors and writers working on specific content that may contain slang or professional jargon.
+
+The other is the so-called **company-wide dictionary**. These premade dictionaries can be uploaded by the system administrators or CKEditor 5 integrators and can be made available company-wide, accessible for all users. This way all benefits of a user-generated dictionary can be shared among the team, making the proofreading process more structured and controlled.
 
 ### Multi-language Support
 

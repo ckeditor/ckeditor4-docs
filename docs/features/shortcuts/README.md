@@ -82,10 +82,10 @@ The list below contains available keyboard shortcuts grouped by problem areas. Y
 
 ### Widget Selection
 
-* <kbd>Enter</kbd> &ndash; Opens a widget dialog.
+* <kbd>Enter</kbd> &ndash; Opens the widget dialog.
 * <kbd>Shift+Enter</kbd> &ndash; Adds an empty paragraph after the selected widget.
 * <kbd>Shift+Alt+Enter</kbd> &ndash; Adds an empty paragraph before the selected widget.
-* <kbd>Left Arrow</kbd> or <kbd>Right Arrow</kbd> &ndash; Moves selection before or after the widget.
+* <kbd>Left Arrow</kbd> or <kbd>Right Arrow</kbd> &ndash; Moves the selection before or after the widget.
 
 ## Text Styling
 

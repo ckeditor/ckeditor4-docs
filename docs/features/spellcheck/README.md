@@ -60,7 +60,7 @@ The [WebSpellChecker Dialog](https://ckeditor.com/cke4/addon/wsc) plugin is anot
 
 {@img assets/img/wproofreader_01.png 730 Spelling and grammar checking with WProofreader in CKEditor 4 WYSIWYG editor}
 
-The proofreader badge in the bottom-right corner shows you the total number of mistakes detected. Hover an underlined word to display the proofreader suggestions for any of the spelling and grammar mistakes found. This hover card allows the user to employ the feature on the go.
+The proofreader badge in the bottom-right corner shows you the total number of mistakes detected. Hover an underlined word to display the proofreader suggestions for any of the spelling and grammar mistakes found. This hovercard allows the user to employ the feature on the go.
 
 
 {@img assets/img/wproofreader_02.png 730 Distraction-free proofreader badge in CKEditor 4 WYSIWYG editor}

@@ -113,7 +113,7 @@ The other is the so-called **company-wide dictionary**. These premade dictionari
 
 ### Multi-language Support
 
-For content in multiple languages, it is also possible to use WProofreader. The spell check feature can automatically detect the text language properly. It is enough to choose “Auto Detect” in the Language dropdown in the WProofreader settings. Suggestions for spelling and grammar (where available) will be displayed properly for each text fragment.
+If you have content in multiple languages, the spell check feature can automatically detect the text language properly. It is enough to choose “Auto Detect” in the Language dropdown of the spell checker settings. Suggestions for spelling and grammar (where available) will be displayed properly for each text fragment.
 
 {@img assets/img/wproofreader_04.png 771 Choose the auto-detect language option.}
 

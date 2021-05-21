@@ -11,9 +11,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	<meta name="sdk-samples" content="Easy Image Plugin">
 	<meta name="sdk-category" content="sdk-inserting-images">
 	<meta name="sdk-order" content="30">
-	<meta name="x-cke-crawler-ignore-patterns" content='{
-		"request-failure": "33333.cdn.cke-cs.com"
-	}'>
 	<title>Easy Image Plugin</title>
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
 	<link href="../template/theme/css/sdk.css" rel="stylesheet">
@@ -287,6 +284,17 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			</script>
 
 			<script>
+				// Umberto SDK does not copy the `<head>` content, so the crawler option will not be visible in the output file.
+				// That's why it is added manually in the `<script>` tag.
+				const metaElement = document.createElement( 'meta' );
+
+				metaElement.name = 'x-cke-crawler-ignore-patterns';
+				metaElement.content = JSON.stringify( {
+					'request-failure': '33333.cdn.cke-cs.com'
+				} );
+
+				document.head.appendChild( metaElement );
+
 				CKEDITOR.once( 'instanceReady', function( evt ) {
 					setupOptimizationsCalculator( evt.editor, '#optimizations' );
 				} );

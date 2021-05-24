@@ -52,7 +52,7 @@ Gems versions are listed [here](https://github.com/ckeditor/jsduck#customization
 Go back to the `ckeditor4-docs` repository and install [npm dependencies](package.json):
 
 	> cd ../ckeditor4-docs
-    > npm install
+	> npm install
 
 Then finally execute `grunt build-serve`:
 

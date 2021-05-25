@@ -27,6 +27,8 @@ In order to create an editor instance in React, install the `ckeditor4-react` np
 npm install ckeditor4-react
 ```
 
+Note that `react` is a peer dependency and `ckeditor4` is an **optional** peer dependency.
+
 This package exposes a high-level `CKEditor` component and a low-level `useCKEditor` hook. For simpler use cases `CKEditor` component should be a go-to solution. For advanced cases consider using `useCKEditor` hook.
 
 An example React app featuring `CKEditor` component would look like the following:
@@ -40,7 +42,7 @@ function App() {
 		<div className="App">
 			<h2>Using CKEditor 4 in React</h2>
 			<CKEditor
-				initData="<p>Hello from CKEditor 4!</p>"
+				initData={<p>Hello from CKEditor 4!</p>}
 				onInstanceReady={() => {
 					alert("Editor is ready!");
 				}}
@@ -82,21 +84,17 @@ The `CKEditor` component is a solution that should satisfy most use-cases. It's 
 
 The component's API exposes initial configuration options such as `config`, `editorUrl`, or `initData` as well as editor's event handlers. If you find `CKEditor` component's capabilities insufficient, consider using more flexible `useCKEditor` hook.
 
-<info-box info="">
-	Certain props will trigger re-initialization of editor instance if their values change. See [editor initialization](#editor-initialization) to get more details.
-</info-box>
-
-| Prop             | Type                  | Default                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------- | --------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| config           | object                | `{}`                                     | Config object passed to editor's constructor.<br> See config details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| debug            | bool                  | `undefined`                              | Toggles debugging mode which logs info related to editor events.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| editorUrl        | string                | link to [CDN](https://cdn.ckeditor.com/) | Url to CKEditor script.<br> See [Customizing CKEditor Preset or Version](#customizing-ckeditor-preset-or-version).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| initData         | string                | `undefined`                              | Initial data. It will be passed to editor once it's in `ready` status.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| name             | string                | `undefined`                              | A unique identifier of editor instance.<br> See details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-name).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `on${EventName}` | func                  | `undefined`                              | Handlers for all events specified under [Events](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#events) section are accepted as props in the form `eventName` -> `on${ EventName }`, e.g. `instanceReady` -> `onInstanceReady`. Each event handler has [event info](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_eventInfo.html) passed as argument. <br> In addition to native events, two more events are provided by the React integration: `namespaceLoaded` and `beforeLoad`. The first one is fired only once, when the `CKEDITOR` global namespace is loaded and the latter one is fired right before any instance of editor is created. Both handlers get `CKEDITOR` object as argument. |
-| readOnly         | bool                  | `undefined`                              | Starts editor in read-only mode. Equivalent of adding `{ readOnly: true }` to config but takes precedence over it.<br> Also allows to toggle editor's `read-only` mode on runtime.<br> See details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-readOnly).                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| style            | object                | `undefined`                              | Sets editor container's styles. Styles can be modified on runtime.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| type             | `classic` \| `inline` | `classic`                                | Initializes editor in either `classic` or `inline` mode.<br> See details for classic type [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-replace) and for inline type [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-inline).                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Prop             | Type                  | Default                                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ---------------- | --------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config           | object                | `{}`                                     | Config object passed to editor's constructor.<br> See config details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| debug            | bool                  | `undefined`                              | Toggles debugging mode. Use it to log info related to editor events.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| editorUrl        | string                | link to [CDN](https://cdn.ckeditor.com/) | Url to CKEditor script.<br> See [Customizing CKEditor Preset or Version](#customizing-ckeditor-preset-or-version).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| initData         | node                  | `undefined`                              | Editor's content will be populated with `initData` once it's initialized.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| name             | string                | `undefined`                              | A unique identifier of editor instance.<br> See details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-name).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `on${EventName}` | func                  | `undefined`                              | Handlers for events specified under [Events](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#events) section are accepted as props in the form `eventName` -> `on${EventName}`, e.g. `instanceReady` -> `onInstanceReady`. Each event handler has [event info](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_eventInfo.html) passed as an argument. In addition to native editor events, component supports custom events as well, e.g. `customEvent` -> `onCustomEvent`.<br> Two more events are provided by the React integration: `namespaceLoaded` and `beforeLoad`. The first one is fired only once, when the `CKEDITOR` global namespace is loaded while the latter is fired right before any instance of editor is created. Both handlers receive `CKEDITOR` object as argument. |
+| readOnly         | bool                  | `undefined`                              | Starts editor in read-only mode. Equivalent of adding `{ readOnly: true }` to config but takes precedence over it.<br> Also allows to toggle editor's `read-only` mode on runtime.<br> See details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-readOnly).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| style            | object                | `undefined`                              | Sets editor container's styles. Styles can be also modified on runtime.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| type             | `classic` \| `inline` | `classic`                                | Initializes editor in either `classic` or `inline` mode.<br> See details for classic type [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-replace) and for inline type [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-inline).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 ```js
 const component = (
@@ -104,24 +102,23 @@ const component = (
 		config={configObject}
 		debug={true}
 		editorUrl="https://your-website.example/ckeditor/ckeditor.js"
-		initData="<p>Hello from CKEditor 4!</p>"
+		initData={<p>Hello from CKEditor 4!</p>}
 		name="my-ckeditor"
-		onBeforeLoad={CKEDITOR => {
-			// Handle CKEDITOR namespace-related event.
-			// Fired before an editor instance is created.
-		}}
 		onNamespaceLoaded={CKEDITOR => {
-			// Handle CKEDITOR namespace-related event.
-			// Fired once the CKEDITOR namespace is loaded.
+			// Handles `namespaceLoaded` event which is fired once the CKEDITOR namespace is loaded.
+			// This event is emitted only once.
 		}}
-		onLoaded={({ editor }) => {
-			// Editor `loaded` event.
+		onBeforeLoad={CKEDITOR => {
+			// Handles `beforeLoad` event which is fired before an editor instance is created.
 		}}
 		onInstanceReady={({ editor }) => {
-			// Editor `instanceReady` event.
+			// Handles native `instanceReady` event.
 		}}
 		onFocus={({ editor }) => {
-			// Editor `focus` event.
+			// Handles native `focus` event.
+		}}
+		onCustomEvent={({ editor }) => {
+			// Handles custom `customEvent` event.
 		}}
 		{...otherEventHandlers}
 		readOnly={false}
@@ -139,31 +136,30 @@ The `useCKEditor` hook constitutes the core of CKEditor 4 React integration. It 
 
 Props:
 
-| Prop          | Type                  | Default                                  | Description                                                                                                                                                                                                                                                                                                                                                  |
-| ------------- | --------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| config        | object                | `{}`                                     | Config object passed to editor's constructor.<br> See config details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).                                                                                                                                                                                                            |
-| debug         | bool                  | `undefined`                              | Toggles debugging mode which logs info related to editor events.                                                                                                                                                                                                                                                                                             |
-| dispatchEvent | func                  | `undefined`                              | Dispatches editor events.<br> Pass a custom function or `dispatch` from `useReducer`. Event type and payload will be passed: `({ type, payload }) => { ... }`. Event name is provided as `type` and is prefixed with `__CKE__` in order to facilitate integration with `useReducer`. Use `CKEditorEventAction` object helper to access prefixed event names. |
-| editorUrl     | string                | link to [CDN](https://cdn.ckeditor.com/) | See [Customizing CKEditor Preset or Version](#customizing-ckeditor-preset-or-version).                                                                                                                                                                                                                                                                       |
-| element       | object                | `undefined`                              | Ref to underlying to DOM element. This prop must be passed to trigger creation of editor instance.                                                                                                                                                                                                                                                           |
-| type          | `classic` \| `inline` | `classic`                                | Initializes editor in either `classic` or `inline` mode.<br> See details for classic type [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-replace) and for inline type [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-inline).                                                                        |
-| subscribeTo   | array                 | `undefined`                              | List of editor [events](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#events) to subscribe to, e.g. `[ 'focus', 'blur' ]`. Only these events will be dispatched through `dispatchEvent` function. If omitted, all events will be dispatched.                                                                                           |
+| Prop          | Type                  | Default                                  | Description                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------- | --------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| config        | object                | `{}`                                     | Config object passed to editor's constructor.<br> See config details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html).                                                                                                                                                                                                                                             |
+| debug         | bool                  | `undefined`                              | Toggles debugging mode. Use it to log info related to editor events.                                                                                                                                                                                                                                                                                                                          |
+| dispatchEvent | func                  | `undefined`                              | Dispatches editor events.<br> Pass a custom function or `dispatch` from `useReducer`. Event type and payload will be passed as part of the first argument: `({ type, payload }) => { ... }`. Event name is provided as `type` and its value is prefixed with `__CKE__` in order to facilitate integration with `useReducer`. Use `CKEditorEventAction` helper to access prefixed event names. |
+| editorUrl     | string                | link to [CDN](https://cdn.ckeditor.com/) | See [Customizing CKEditor Preset or Version](#customizing-ckeditor-preset-or-version).                                                                                                                                                                                                                                                                                                        |
+| element       | object                | `undefined`                              | Required prop. Ref to underlying to DOM element.                                                                                                                                                                                                                                                                                                                                              |
+| type          | `classic` \| `inline` | `classic`                                | Initializes editor in either `classic` or `inline` mode.<br> See details for classic type [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-replace) and for inline type [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR.html#method-inline).                                                                                                         |
+| subscribeTo   | array                 | `undefined`                              | List of editor [events](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#events) to subscribe to, e.g. `[ 'focus', 'blur' ]`. Accepts custom editor events. In addition, `namespaceLoaded` and `beforeLoad` can be passed as well.<br> Only specified events will be dispatched through `dispatchEvent` function.<br> If omitted, all events will be dispatched.                       |
 
 Result:
 
-| Prop    | Type                                             | Default     | Description                                                                                                                                                                                                                          |
-| ------- | ------------------------------------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| editor  | object                                           | `undefined` | Editor instance. Defaults to `undefined` (before editor is initialized). <br> See config details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html).                                                        |
-| status  | `unloaded` \| `loaded` \| `ready` \| `destroyed` | `undefined` | Current status of editor. Equivalent of `editor.status`.<br> See status details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-status).                                                         |
-| error   | bool                                             | `false`     | Indicates that an error occurred during editor creation.<br> This is a non-recoverable state. It indicates that something very wrong happened during instantiation of editor, e.g. incorrect `editorUrl` or `element` were provided. |
-| loading | bool                                             | `false`     | Indicates that CKEditor script is being loaded from a remote url.                                                                                                                                                                    |
+| Prop    | Type                                             | Default     | Description                                                                                                                                                                                                                     |
+| ------- | ------------------------------------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| editor  | object                                           | `undefined` | Editor instance. Defaults to `undefined` (before editor is initialized).<br> See editor instance details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html).                                           |
+| status  | `unloaded` \| `loaded` \| `ready` \| `destroyed` | `undefined` | Current status of editor. Equivalent of `editor.status`.<br> See status details [here](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#property-status).                                                    |
+| error   | bool                                             | `false`     | Indicates that an error occurred during editor creation.<br> This is a non-recoverable state. It indicates that something wrong happened during instantiation of editor, e.g. incorrect `editorUrl` or `element` were provided. |
+| loading | bool                                             | `false`     | Indicates that CKEditor script is being loaded from a remote url.                                                                                                                                                               |
 
 ```js
 const { editor, status, error, loading } = useCKEditor({
 	config: configObject,
 	debug: true,
 	dispatchEvent: ({ type, payload }) => {
-		// Event name is prefixed in order to facilitate integration with dispatch from `useReducer`.
 		if (type === CKEditorEventAction.instanceReady) {
 			alert("Editor is ready!");
 		}
@@ -179,34 +175,32 @@ const { editor, status, error, loading } = useCKEditor({
 
 By providing `dispatchEvent` function, the `useCKEditor` hook's API unlocks more powerful patterns than `CKEditor` component has to offer.
 
-For instance, pass `dispatch` from `useReducer` in order to listen to editor's events and derive state of your components as needed. Please note that reducer function of `useReducer` hook is not a suitable place to perform side-effects.
+For instance, pass `dispatch` from `useReducer` in order to listen to editor events and derive state of your components as needed. Please note that reducer function of `useReducer` hook is not a suitable place to perform side-effects.
 
-In the example below, combination of `useCKEditor` and `useReducer` is used to calculate state and `useEffect` is used to perform side-effects.
+In the example below, `reducer` is used to calculate next state of the component.
 
 ```js
 import React from "react";
 import { CKEditorEventAction, useCKEditor } from "ckeditor4-react";
 
-const initialData = "<p>Let us hear your feedback!</p>";
-
-function CKEditorCmp({ dispatchEvent, initData }) {
+function Editor({ dispatchEvent, initData }) {
 	// Use `useState` rather than `useRef` in order to trigger re-render.
 	const [element, setElement] = React.useState();
 
-	const { editor, status } = useCKEditor({
+	const { status } = useCKEditor({
 		element,
 		dispatchEvent,
 		subscribeTo: ["blur", "change", "focus"]
 	});
 
-	// Use `useEffect` to perform side-effects, e.g. imperatively invoke editor's methods.
-	React.useEffect(() => {
-		if (status === "ready") {
-			editor.setData(initData);
-		}
-	}, [editor, status, initData]);
-
-	return <div ref={setElement} />;
+	return (
+		<div
+			ref={setElement}
+			style={status !== "ready" ? { visibility: "hidden" } : undefined}
+		>
+			{initData}
+		</div>
+	);
 }
 
 function Feedback() {
@@ -226,7 +220,10 @@ function Feedback() {
 
 	return (
 		<div>
-			<CKEditorCmp dispatchEvent={dispatch} initData={initialData} />
+			<Editor
+				dispatchEvent={dispatch}
+				initData={<p>Let us hear your feedback!</p>}
+			/>
 			<button disabled={!canSendFeedback} onClick={handleClick}>
 				Send
 			</button>
@@ -241,7 +238,7 @@ function reducer(state, action) {
 			const data = action.payload.editor.getData().trim();
 			return {
 				...state,
-				canSendFeedback: data && data !== initialData,
+				canSendFeedback: !!data,
 				data
 			};
 		case CKEditorEventAction.focus:
@@ -266,137 +263,71 @@ For more examples see [repo](https://github.com/ckeditor/ckeditor4-react/tree/ma
 
 ## Editor initialization
 
-In order to provide an easy way to re-initialize editor instances and due to the nature of React functional components (including [hooks rules](https://reactjs.org/docs/hooks-rules.html)) some props must ensure referential equality across renders.
+Due to the nature of React functional components (including [hooks rules](https://reactjs.org/docs/hooks-rules.html)) some props are memoized under the hood. React integration ensures referential stability of the following props: `config`, `debug`, `type`, `editorUrl`, `dispatchEvent`, `subscribeTo`, and all event handlers (`on${EventName}`). As a result, passing new values of these props across renders will have no impact on `CKEditor` component or `useCKEditor` hook. Only initial values will be memoized. In some scenarios this behavior can be limiting. Below are few a techniques that can be employed to solve these kind of limitations.
 
-Props that need care in this regard are listed below:
+### Use keyed components
 
-| Prop      | Description                                                                                                                                                                                                                                                  |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| config    | Config prop is responsible for customizing editor instance. Any time a new instance of config object is passed as a prop, a new editor instance will be created and the old one discarded.<br> Accepted by both `CKEditor` component and `useCKEditor` hook. |
-| editorUrl | This prop is passed as a string so it does not require any memoization techniques. Make sure that its value stays stable across multiple components / hooks. <br> Accepted by both `CKEditor` component and `useCKEditor` hook.                              |
-| type      | Starts editor either in `inline` or `classic` mode. <br> Accepted by both `CKEditor` component and `useCKEditor` hook.                                                                                                                                       |
-| element   | Reference to DOM element.<br> Accepted by `useCKEditor` hook.                                                                                                                                                                                                |
-
-<info-box info="">
-	Event handlers passed to `CKEditor` component don't require any memoization techniques. We ensure referential equality across renders under the hood. As a side effect, only first passed instance of a handler will be used throughout the lifecycle of the component. The same applies to `dispatchEvent` function.
-</info-box>
-
-Below are few techniques that can be employed to ensure that referential equality is in place and unnecessary renders are prevented.
-
-### Move variables out of React scope
-
-Objects that remain constant throughout React app's lifecycle can be moved outside of React render function:
+Whenever value of `key` prop changes, React will re-mount the component. This might be a costly operation so it should be used sparingly.
 
 ```js
 import React from "react";
 import { CKEditor } from "ckeditor4-react";
 
-const config = {
-	width: 800
-};
-
-function MyCKEditor() {
-	return (
-		<CKEditor config={config} initData="<p>Hello from CKEditor 4!</p>" />
-	);
-}
-
-export default MyCKEditor;
-```
-
-### Combine `useState` and `useEffect`
-
-Hooks `useState` and `useEffect` can be combined to ensure referential equality and at the same time provide ability to dynamically change value on demand.
-
-In the example below, prop `width` is passed from parent component. Any time its value changes, a new editor instance is created and the old one discarded.
-
-```js
-import React from "react";
-import { CKEditor } from "ckeditor4-react";
-
-function MyCKEditor({ width }) {
-	const [config, setConfig] = React.useState({ width });
+function Editor({ type }) {
+	const [name, setName] = React.useState();
 
 	React.useEffect(() => {
-		setConfig(config => (config.width !== width ? { width } : config));
-	}, [width]);
+		// Whenever new value of `type` is passed, new name will be generated.
+		setName(getUniqueName());
+	}, [type]);
 
-	return (
-		<CKEditor config={config} initData="<p>Hello from CKEditor 4!</p>" />
-	);
+	// `CKEditor` is re-mounted whenever value of `key` changes.
+	return name ? (
+		<CKEditor
+			key={name}
+			name={name}
+			type={type}
+			initData={`Hello from ${type}!`}
+		/>
+	) : null;
 }
 
-export default MyCKEditor;
-```
-
-### Beware of `useMemo`
-
-Be careful of using `useMemo` as a measure of ensuring referential equality. As per React [docs](https://reactjs.org/docs/hooks-reference.html#usememo):
-
-> You may rely on `useMemo` as a performance optimization, not as a semantic guarantee.
-
-React may choose to "forget" previously memoized value which may lead to unwanted side-effects. For instance, if `useMemo` is used to memoize editor's config object, an editor instance might be randomly re-created at some point during your app's runtime. On a side note, these considerations apply to `useCallback` hook as well.
-
-Below is an **incorrect** example:
-
-```js
-import React from "react";
-import { CKEditor } from "ckeditor4-react";
-
-/**
- * !!! Avoid using `useMemo` when creating `config` objects !!!
- *
- * Instead use combination of `useState` and `useEffect` hooks (see above).
- *
- */
-function IncorrectExample({ width }) {
-	/**
-	 * If React chooses to "forget" value at some point, a new instance of config object will be provided and as a result editor instance will be re-created.
-	 */
-	const config = React.useMemo(
-		() => ({
-			width
-		}),
-		[width]
-	);
-
-	return (
-		<CKEditor config={config} initData="<p>Hello from CKEditor 4!</p>" />
-	);
+function getUniqueName() {
+	return Math.random()
+		.toString(36)
+		.replace(/[^a-z]+/g, "")
+		.substr(0, 5);
 }
 
-export default IncorrectExample;
+export default Editor;
 ```
 
 ### Specialize your components
 
-React encourages developers to use [component composition](https://reactjs.org/docs/composition-vs-inheritance.html). One of such patterns is known as specialization. If you use `CKEditor` component or `useCKEditor` hook in multiple places of your codebase, it might be worthwhile to move common logic to a separate component:
+React encourages developers to use [component composition](https://reactjs.org/docs/composition-vs-inheritance.html). One of such patterns is known as specialization. If you use `CKEditor` component or `useCKEditor` hook in multiple places it might be worthwhile to move common logic to a separate component.
 
 ```js
 import React from "react";
 import { CKEditor } from "ckeditor4-react";
 import { useLogging } from "../some-logging-module";
 
-const config = {
-	width: 800
-};
-
-// Use `MyCKEditor` across your app rather than `CKEditor`.
-function MyCKEditor({ onInstanceReady }) {
+// Use `InlineEditor` across your app rather than `CKEditor`.
+// Per analogy `ClassicEditor` component could be defined.
+function InlineEditor({ onInstanceReady }) {
 	const { trackUserActivity } = useLogging();
 
 	const handleInstanceReady = payload => {
 		if (onInstanceReady) {
+			// Provided by parent component.
 			onInstanceReady(payload);
 		}
 
 		// Perform some common side-effects, e.g. track user activity.
-		trackUserActivity({ type: "editor_initialized" });
+		trackUserActivity({ type: "inline_editor_initialized" });
 	};
 
 	return (
 		<CKEditor
-			config={config}
 			onInstanceReady={handleInstanceReady}
 			editorUrl="https://your-website.example/ckeditor/ckeditor.js"
 			type="inline"
@@ -404,16 +335,16 @@ function MyCKEditor({ onInstanceReady }) {
 	);
 }
 
-export default MyCKEditor;
+export default InlineEditor;
 ```
 
 ## Utilities
 
-Except for `CKEditor` component and `useCKEditor` hook, this library exposes `CKEditorEventAction` object and `registerEditorEventHandler` function.
+The library exposes few utilities such as `CKEditorEventAction` dictionary and `registerEditorEventHandler` function.
 
 ### CKEditorEventAction
 
-Object that maps editor event names to their prefixed equivalents, e.g. `instanceReady` -> `__CKE__instanceReady`. It's useful in combination with `useCKEditor` and `useReducer`.
+Object that maps editor event names to their prefixed equivalents, e.g. `instanceReady` -> `__CKE__instanceReady`. It's useful when using `useCKEditor` in combination with `useReducer`.
 
 ```js
 function reducer(state, action) {
@@ -430,16 +361,18 @@ See `useCKEditor` hook [docs](#useckeditor-hook) for a full example.
 
 ### registerEditorEventHandler
 
-By default all event handlers registered with the help of `CKEditor` component and `useCKEditor` hooks get default priority. With the help of `registerEditorEventHandler` function higher priorities can be assigned or `listenerData` can be passed.
+By default all event handlers registered with the help of `CKEditor` component and `useCKEditor` hook get default priority. With the help of `registerEditorEventHandler` function higher priorities can be assigned or `listenerData` can be attached.
 
-It should be used as an escape hatch rather than a go-to solution.
+`registerEditorEventHandler` function can also be used to register new handlers dynamically, e.g. when a prop changes.
+
+Returns a cleanup callback to facilitate usage within `useEffect`.
 
 | Prop         | Type   | Default     | Description                                                                                                                                                   |
 | ------------ | ------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| debug        | bool   | `undefined` | Toggles debugging mode which logs to console info related to editor events.                                                                                   |
-| editor       | object | `undefined` | Instance of editor.                                                                                                                                           |
-| evtName      | string | `undefined` | Name of the event for which the handler will be register, e.g. `instanceReady`.                                                                               |
-| handler      | func   | `undefined` | Handler function to register.<br> See more [details](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#events).                             |
+| debug        | bool   | `undefined` | Toggles debugging mode. Use it to log info related to editor events.                                                                                          |
+| editor       | object | --          | Required. Instance of editor.                                                                                                                                 |
+| evtName      | string | --          | Required. Name of the event for which the handler will be registered, e.g. `instanceReady`.                                                                     |
+| handler      | func   | --          | Required. Handler function to register.<br> See more [details](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#events).                   |
 | listenerData | any    | `undefined` | Data that will be passed to handler as `listenerData`.<br> See more [details](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-on). |
 | priority     | number | `undefined` | Listener priority. Lower values have higher priority.<br> See more [details](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-on).  |
 
@@ -453,11 +386,12 @@ import {
 	registerEditorEventHandler
 } from "ckeditor4-react";
 
-function CKEditorCmp({ someProp }) {
+function Editor({ someProp }) {
 	const [element, setElement] = React.useState();
 
 	const { editor } = useCKEditor({
 		element,
+		// `dispatchEvent` is memoized, so initial value of `someProp` will be used
 		dispatchEvent: ({ type }) => {
 			if (type === CKEditorEventAction.focus) {
 				console.log(
@@ -469,33 +403,156 @@ function CKEditorCmp({ someProp }) {
 	});
 
 	React.useEffect(() => {
-		return registerEditorEventHandler({
-			editor,
-			evtName: "focus",
-			handler: () => {
-				console.log(
-					`Will be called with ${someProp} before regular event handlers.`
-				);
-			},
-			priority: 0
-		});
+		if (editor) {
+			// Registers new handler with high priority whenver value of `someProp` changes.
+			const cleanup = registerEditorEventHandler({
+				editor,
+				evtName: "focus",
+				handler: () => {
+					console.log(
+						`Will be called with current value of ${someProp} before regular event handlers.`
+					);
+				},
+				priority: 0
+			});
+			return cleanup;
+		}
 	}, [editor, someProp]);
 
 	return <div ref={setElement} />;
 }
 
-export default CKEditorCmp;
+export default Editor;
 ```
+
+### prefixEventName
+
+Prefixes event name with `__CKE__`. Useful for prefixing custom events in `reducer`.
+
+```js
+import { prefixEventName } from "ckeditor4-react";
+
+function reducer(state, action) {
+	switch (action.type) {
+		case prefixEventName("myCustomEvent"):
+		// return new state
+	}
+}
+```
+
+### stripPrefix
+
+Removes prefix from event name.
+
+```js
+import { stripPrefix } from "ckeditor4-react";
+
+const evtName = stripPrefix(CKEditorEventAction.focus);
+
+console.log(evtName === "focus"); // true
+```
+
+### eventNameToHandlerName
+
+Transforms event name into a handler name, e.g. `instanceReady` -> `onInstanceReady`.
+
+```js
+import { eventNameToHandlerName } from "ckeditor4-react";
+
+const handlerName = eventNameToHandlerName("instanceReady");
+
+console.log(handlerName); // onInstanceReady
+```
+
+### handlerNameToEventName
+
+Transforms handler name into event name, e.g. `onInstanceReady` -> `instanceReady`.
+
+```js
+import { handlerNameToEventName } from "ckeditor4-react";
+
+const evtName = handlerNameToEventName("onInstanceReady");
+
+console.log(evtName); // instanceReady
+```
+
+### events
+
+List of available `editor` events. See: https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html
+
+### namespaceEvents
+
+List of available events provided by integration (`[ 'beforeLoad', 'namespaceLoaded' ]`).
+
+### defaultEvents
+
+Concatenated list of `events` and `namespaceEvents`.
+
+### EVENT_PREFIX
+
+Prefix used by `CKEditorEventAction` to prefix dispatched events.
 
 ## TypeScript support
 
 React integration provides TypeScript definitions for all its interfaces. Please note that this library **does not** provide types for `CKEDITOR` namespace. Therefore, `CKEDITOR` object (as well as instances of `editor`, etc.) has `any` type.
 
+Only TypeScript 3.5+ is supported.
+
+Type argument must be provided in order to use custom events.
+
+Usage with `CKEditor` component:
+
+```js
+import * as React from "react";
+import { CKEditor, CKEditorEventHandler } from "ckeditor4-react";
+
+function Editor() {
+	return (
+		<CKEditor<{
+			onCustomEvent: CKEditorEventHandler<"customEvent">;
+		}>
+			onCustomEvent={({ name }) => {
+				console.log(name); // 'customEvent'
+			}}
+		/>
+	);
+}
+
+export default Editor;
+```
+
+Usage with `useCKEditor` hook:
+
+```js
+import * as React from "react";
+import { useCKEditor, prefixEventName } from "ckeditor4-react";
+
+function Editor() {
+	const [element, setElement] = React.useState<HTMLDivElement | null>(null);
+
+	useCKEditor<"customEvent" | "anotherCustomEvent">({
+		element,
+		dispatchEvent: ({ type }) => {
+			if (type === prefixEventName("customEvent")) {
+				console.log(type); // 'customEvent'
+			} else {
+				console.log(type); // 'anotherCustomEvent'
+			}
+		},
+		subscribeTo: ["customEvent", "anotherCustomEvent"]
+	});
+
+	return <div ref={setElement} />;
+}
+
+export default Editor;
+```
+
 ## Migration from v1 to v2
 
 The previous version of this {@link guide/dev/integration/react/v1/README library} provided `CKEditor` component with an interface almost identical to the current one.
 
-Most notable difference is that `data` prop was replaced by `initData` prop. Previously, any new value of `data` prop triggered a call to `editor.setData` under the hood. Currently, setting data is possible once, when the editor becomes `ready` (hence `initData`). The rationale behind this change is that `data` prop created false illusion of being the only source of truth for editor's data while in fact the editor's state is most of the time controlled by the editor instance itself.
+Most notable difference is that `data` prop was replaced by `initData` prop. Previously, passing a new value of `data` prop would trigger a call to `editor.setData` under the hood. In v2 data can be set only once, during editor instantiation (hence `initData`). The rationale behind this change is that `data` prop created false illusion of being the only source of truth for editor's data while in fact the editor's state is most of the time controlled by the editor itself.
 
 In order to change editor's data with v2 `CKEditor` component, use `editor.setData` imperatively within an event handler. On a side note, remember that any advanced use-case can be achieved with `useCKEditor` hook as it gives you access to current `editor` instance within main body of `render` function.
 
@@ -521,7 +578,7 @@ const getArticle = id => {
 function Article({ id }) {
 	// You might be mislead by thinking that `data` is the only source of truth for editor's data.
 	// In fact editor's data as returned by `editor.getData()` will be usually different than `data`.
-	const [data, setData] = React.useState("<p>Hello from CKEditor 4!</p>");
+	const [data, setData] = React.useState("Hello from CKEditor 4!");
 
 	// Will be triggered whenever `id` of article changes.
 	React.useEffect(() => {
@@ -555,7 +612,7 @@ const getArticle = id => {
 
 function Article({ id }) {
 	const handleInstanceReady = ({ editor }) => {
-		// Will be triggered once, when editor is ready for interaction.
+		// Will be triggered only once, when editor is ready for interaction.
 		getArticle(id).then(article => {
 			editor.setData(article);
 		});
@@ -563,7 +620,7 @@ function Article({ id }) {
 
 	return (
 		<CKEditor
-			initData="Hello from CKEditor 4!</p>"
+			initData="Hello from CKEditor 4!"
 			onInstanceReady={handleInstanceReady}
 		/>
 	);
@@ -574,6 +631,5 @@ export default Article;
 
 Other notable differences are:
 
-1. `editorUrl` is now passed as a prop. See [here](#specialize-your-components) for a guide on component specialization.
-2. Passing new instances of `config` will trigger re-initialization of editor instance. See [editor initialization](#editor-initialization) to get more details.
-3. Passing new value of `type` will trigger re-initialization of editor instance. See [editor initialization](#editor-initialization) to get more details.
+-   `editorUrl` is now passed as a prop. See [here](#specialize-your-components) for a guide on component specialization
+-   library exposes `useCKEditor` [hook](#useckeditor-hook) that can be used instead of `CKEditor` component to cover more advanced use-cases

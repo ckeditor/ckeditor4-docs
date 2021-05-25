@@ -17,7 +17,7 @@ For licensing, see LICENSE.md.
 	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-react"><code>ckeditor4-react</code> npm package</a>.
 </info-box>
 
-CKEditor 4 offers a React integration through library described below. By providing a deep integration of CKEditor 4 and React we let you use the native features of the WYSIWYG editor inside your React app. This package is compatible with React versions 16.8.6 and higher.
+CKEditor 4 offers a React integration through library described below. By providing a deep integration of CKEditor 4 and React we let you use the native features of the WYSIWYG editor inside your React app. This package is compatible with React version 16.8.6 or higher.
 
 ## Basic Usage
 

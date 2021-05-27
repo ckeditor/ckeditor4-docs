@@ -5,7 +5,6 @@ url: features/drop_paste
 menu-title: Dropping and Pasting
 meta-title-short: Dropping and Pasting
 ---
-
 <!--
 Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
@@ -33,7 +32,7 @@ Therefore, all pasted and dropped content is filtered by {@link guide/dev/deep_d
 
 Additionally, since CKEditor 4.5 it is possible to configure a {@link guide/dev/deep_dive/advanced_content_filter/README#filtering-pasted-and-dropped-content separate filter (called "paste filter")} which will handle only pasted and dropped content. By default it is enabled in Chrome, Opera and Safari to clean up the messy HTML they create. The paste filter is configurable using the {@link guide/dev/deep_dive/advanced_content_filter/allowed_content_rules/README allowed content rules} and it also has two presets &mdash; `'plain-text'` and `'semantic-content'`. The first of them replaces the {@linkapi CKEDITOR.config.forcePasteAsPlainText CKEDITOR.config.forcePasteAsPlainText} option, but thanks to the flexibility of the paste filter it is now also possible to achieve results like "only text with links":
 
-    config.pasteFilter = 'p; a[!href]';
+	config.pasteFilter = 'p; a[!href]';
 
 You can also read more about {@link guide/dev/acf/README content filtering} in general and see the {@linkexample acf working "Content Filtering" sample}.
 
@@ -51,17 +50,17 @@ Note that this feature is limited because of browsers and operating systems limi
 
 See the following samples for examples of pasting and dropping into editor content:
 
--   The {@linkexample fileupload#uploading-dropped-and-pasted-images "Uploading Dropped and Pasted Images"} sample.
--   The {@linkexample draganddrop "Drag and Drop Integration"} sample.
--   The {@linkexample pastefromword "Paste from Word"} sample.
+* The {@linkexample fileupload#uploading-dropped-and-pasted-images "Uploading Dropped and Pasted Images"} sample.
+* The {@linkexample draganddrop "Drag and Drop Integration"} sample.
+* The {@linkexample pastefromword "Paste from Word"} sample.
 
 ## Further Reading
 
 For more information on pasting, dropping and uploading files with CKEditor 4 refer to the following articles:
 
--   {@link guide/dev/deep_dive/clipboard/README Clipboard Integration}
--   {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files}
--   {@link features/pastefromword/README Pasting Content from Microsoft Word}
--   {@link features/pastefromgoogledocs/README Pasting Content from Google Docs}
--   {@link guide/dev/acf/README Content Filtering (ACF)}
--   {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}
+* {@link guide/dev/deep_dive/clipboard/README Clipboard Integration}
+* {@link guide/dev/integration/file_browse_upload/file_upload/README Uploading Dropped or Pasted Files}
+* {@link features/pastefromword/README Pasting Content from Microsoft Word}
+* {@link features/pastefromgoogledocs/README Pasting Content from Google Docs}
+* {@link guide/dev/acf/README Content Filtering (ACF)}
+* {@link guide/dev/deep_dive/advanced_content_filter/README Advanced Content Filter}

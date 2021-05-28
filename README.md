@@ -11,8 +11,9 @@ Follow the steps listed below to build CKEditor documentation locally.
 ### Requirements
 
 * [Ruby](https://www.ruby-lang.org)
-* [Node.js](https://nodejs.org/en/)
-* [NPM](https://www.npmjs.com/)
+* Java ([JRE](https://java.com) or [OpenJDK](https://openjdk.java.net))
+* [Node.js](https://nodejs.org/en)
+* [NPM](https://www.npmjs.com)
 * [grunt-cli](https://github.com/gruntjs/grunt-cli)
 * Custom CKEditor [JSDuck](https://github.com/ckeditor/jsduck) clone (installation instructions are provided below)
 
@@ -23,6 +24,7 @@ In order to avoid `root` privileges issues, it is advised to use [rvm](https://r
 Instructions provided below were tested on following versions of software:
 
 * ruby      v3.0.0
+* openjdk   v11.0.11
 * Node.js   v14.17.0
 * npm       v6.14.13
 * grunt-cli v1.4.2

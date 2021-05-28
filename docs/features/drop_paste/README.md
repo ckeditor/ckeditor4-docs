@@ -43,7 +43,7 @@ Another feature related to the clipboard is uploading dropped or pasted files or
 Note that this feature is limited because of browsers and operating systems limitations. File API is not supported in Internet Explorer 9 and below so dropped files cannot be handled. Support for pasting whole files and fragments of files (e.g. images) varies between browsers and operating systems.
 
 <video width="550" height="391" controls>
-	<source src="%BASE_PATH%/assets//upload.mp4" type="video/mp4"/>
+	<source src="%BASE_PATH%/assets/upload.mp4" type="video/mp4"/>
 </video>
 
 ## Dropping and Pasting Demos

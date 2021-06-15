@@ -43,9 +43,9 @@ function App() {
 			<h2>Using CKEditor 4 in React</h2>
 			<CKEditor
 				initData={<p>Hello from CKEditor 4!</p>}
-				onInstanceReady={() => {
+				onInstanceReady={ () => {
 					alert("Editor is ready!");
-				}}
+				} }
 			/>
 		</div>
 	);
@@ -78,7 +78,7 @@ Value of `editorUrl` must remain constant across all instances of editor.
 
 ## CKEditor component
 
-The `CKEditor` component is a solution that should satisfy most use-cases. It's a wrapper around low-level `useCKEditor` hook.
+The `CKEditor` component is a wrapper around low-level `useCKEditor` hook.
 
 ### API
 
@@ -104,25 +104,25 @@ const component = (
 		editorUrl="https://your-website.example/ckeditor/ckeditor.js"
 		initData={<p>Hello from CKEditor 4!</p>}
 		name="my-ckeditor"
-		onNamespaceLoaded={CKEDITOR => {
+		onNamespaceLoaded={ CKEDITOR => {
 			// Handles `namespaceLoaded` event which is fired once the CKEDITOR namespace is loaded.
 			// This event is emitted only once.
-		}}
-		onBeforeLoad={CKEDITOR => {
+		} }
+		onBeforeLoad={ CKEDITOR => {
 			// Handles `beforeLoad` event which is fired before an editor instance is created.
-		}}
-		onInstanceReady={({ editor }) => {
+		} }
+		onInstanceReady={ ( { editor } ) => {
 			// Handles native `instanceReady` event.
-		}}
-		onFocus={({ editor }) => {
+		} }
+		onFocus={ ( { editor } ) => {
 			// Handles native `focus` event.
-		}}
-		onCustomEvent={({ editor }) => {
+		} }
+		onCustomEvent={ ( { editor } ) => {
 			// Handles custom `customEvent` event.
-		}}
+		} }
 		{...otherEventHandlers}
 		readOnly={false}
-		style={{ borderColor: "blue" }}
+		style={ { borderColor: "blue" } }
 		type="classic"
 	/>
 );
@@ -156,19 +156,19 @@ Result:
 | loading | bool                                             | `false`     | Indicates that CKEditor script is being loaded from a remote url.                                                                                                                                                               |
 
 ```js
-const { editor, status, error, loading } = useCKEditor({
+const { editor, status, error, loading } = useCKEditor( {
 	config: configObject,
 	debug: true,
-	dispatchEvent: ({ type, payload }) => {
-		if (type === CKEditorEventAction.instanceReady) {
-			alert("Editor is ready!");
+	dispatchEvent: ( { type, payload } ) => {
+		if ( type === CKEditorEventAction.instanceReady ) {
+			alert( 'Editor is ready!' );
 		}
 	},
-	editorUrl: "https://your-website.example/ckeditor/ckeditor.js",
+	editorUrl: 'https://your-website.example/ckeditor/ckeditor.js',
 	element: elementObject,
-	type: "classic",
-	subscribeTo: ["instanceReady"]
-});
+	type: 'classic',
+	subscribeTo: [ 'instanceReady' ]
+} );
 ```
 
 ### dispatchEvent explained
@@ -180,23 +180,23 @@ For instance, pass `dispatch` from `useReducer` in order to listen to editor eve
 In the example below, `reducer` is used to calculate next state of the component.
 
 ```js
-import React from "react";
-import { CKEditorEventAction, useCKEditor } from "ckeditor4-react";
+import React from 'react';
+import { CKEditorEventAction, useCKEditor } from 'ckeditor4-react';
 
-function Editor({ dispatchEvent, initData }) {
+function Editor( { dispatchEvent, initData } ) {
 	// Use `useState` rather than `useRef` in order to trigger re-render.
-	const [element, setElement] = React.useState();
+	const [ element, setElement ] = React.useState();
 
-	const { status } = useCKEditor({
+	const { status } = useCKEditor( {
 		element,
 		dispatchEvent,
-		subscribeTo: ["blur", "change", "focus"]
-	});
+		subscribeTo: [ 'blur', 'change', 'focus' ]
+	} );
 
 	return (
 		<div
 			ref={setElement}
-			style={status !== "ready" ? { visibility: "hidden" } : undefined}
+			style={status !== 'ready' ? { visibility: 'hidden' } : undefined}
 		>
 			{initData}
 		</div>
@@ -208,14 +208,14 @@ function Feedback() {
 	const [
 		{ canSendFeedback, data, isUserEditing },
 		dispatch
-	] = React.useReducer(reducer, {
+	] = React.useReducer( reducer, {
 		canSendFeedback: false,
 		data: undefined,
 		isUserEditing: false
-	});
+	} );
 
 	const handleClick = () => {
-		alert(`Feedback has been submitted successfully:\n${data}`);
+		alert( `Feedback has been submitted successfully:\n${ data }` );
 	};
 
 	return (
@@ -232,8 +232,8 @@ function Feedback() {
 	);
 }
 
-function reducer(state, action) {
-	switch (action.type) {
+function reducer( state, action ) {
+	switch ( action.type ) {
 		case CKEditorEventAction.change:
 			const data = action.payload.editor.getData().trim();
 			return {
@@ -270,16 +270,16 @@ Due to the nature of React functional components (including [hooks rules](https:
 Whenever value of `key` prop changes, React will re-mount the component. This might be a costly operation so it should be used sparingly.
 
 ```js
-import React from "react";
-import { CKEditor } from "ckeditor4-react";
+import React from 'react';
+import { CKEditor } from 'ckeditor4-react';
 
-function Editor({ type }) {
-	const [name, setName] = React.useState();
+function Editor( { type } ) {
+	const [ name, setName ] = React.useState();
 
-	React.useEffect(() => {
+	React.useEffect( () => {
 		// Whenever new value of `type` is passed, new name will be generated.
-		setName(getUniqueName());
-	}, [type]);
+		setName( getUniqueName() );
+	}, [ type ] );
 
 	// `CKEditor` is re-mounted whenever value of `key` changes.
 	return name ? (
@@ -287,16 +287,16 @@ function Editor({ type }) {
 			key={name}
 			name={name}
 			type={type}
-			initData={`Hello from ${type}!`}
+			initData={`Hello from ${ type }!`}
 		/>
 	) : null;
 }
 
 function getUniqueName() {
 	return Math.random()
-		.toString(36)
-		.replace(/[^a-z]+/g, "")
-		.substr(0, 5);
+		.toString( 36 )
+		.replace( /[^a-z]+/g, '' )
+		.substr( 0, 5 );
 }
 
 export default Editor;
@@ -307,23 +307,23 @@ export default Editor;
 React encourages developers to use [component composition](https://reactjs.org/docs/composition-vs-inheritance.html). One of such patterns is known as specialization. If you use `CKEditor` component or `useCKEditor` hook in multiple places it might be worthwhile to move common logic to a separate component.
 
 ```js
-import React from "react";
-import { CKEditor } from "ckeditor4-react";
-import { useLogging } from "../some-logging-module";
+import React from 'react';
+import { CKEditor } from 'ckeditor4-react';
+import { useLogging } from '../some-logging-module';
 
 // Use `InlineEditor` across your app rather than `CKEditor`.
 // Per analogy `ClassicEditor` component could be defined.
-function InlineEditor({ onInstanceReady }) {
+function InlineEditor( { onInstanceReady } ) {
 	const { trackUserActivity } = useLogging();
 
 	const handleInstanceReady = payload => {
-		if (onInstanceReady) {
+		if ( onInstanceReady ) {
 			// Provided by parent component.
-			onInstanceReady(payload);
+			onInstanceReady( payload );
 		}
 
 		// Perform some common side-effects, e.g. track user activity.
-		trackUserActivity({ type: "inline_editor_initialized" });
+		trackUserActivity( { type: 'inline_editor_initialized' } );
 	};
 
 	return (
@@ -347,8 +347,8 @@ The library exposes few utilities such as `CKEditorEventAction` dictionary and `
 Object that maps editor event names to their prefixed equivalents, e.g. `instanceReady` -> `__CKE__instanceReady`. It's useful when using `useCKEditor` in combination with `useReducer`.
 
 ```js
-function reducer(state, action) {
-	switch (action.type) {
+function reducer( state, action ) {
+	switch ( action.type ) {
 		case CKEditorEventAction.change:
 		// return new state
 		case CKEditorEventAction.blur:
@@ -379,45 +379,45 @@ Returns a cleanup callback to facilitate usage within `useEffect`.
 Example usage:
 
 ```js
-import React from "react";
+import React from 'react';
 import {
 	useCKEditor,
 	CKEditorEventAction,
 	registerEditorEventHandler
-} from "ckeditor4-react";
+} from 'ckeditor4-react';
 
-function Editor({ someProp }) {
-	const [element, setElement] = React.useState();
+function Editor( { someProp } ) {
+	const [ element, setElement ] = React.useState();
 
-	const { editor } = useCKEditor({
+	const { editor } = useCKEditor( {
 		element,
 		// `dispatchEvent` is memoized, so initial value of `someProp` will be used
-		dispatchEvent: ({ type }) => {
-			if (type === CKEditorEventAction.focus) {
+		dispatchEvent: ( { type } ) => {
+			if ( type === CKEditorEventAction.focus ) {
 				console.log(
-					`Will be called with initial value of ${someProp}.`
+					`Will be called with initial value of ${ someProp }.`
 				);
 			}
 		},
-		subscribeTo: ["focus"]
-	});
+		subscribeTo: [ 'focus' ]
+	} );
 
-	React.useEffect(() => {
-		if (editor) {
+	React.useEffect( () => {
+		if ( editor ) {
 			// Registers new handler with high priority whenver value of `someProp` changes.
-			const cleanup = registerEditorEventHandler({
+			const cleanup = registerEditorEventHandler( {
 				editor,
-				evtName: "focus",
+				evtName: 'focus',
 				handler: () => {
 					console.log(
-						`Will be called with current value of ${someProp} before regular event handlers.`
+						`Will be called with current value of ${ someProp } before regular event handlers.`
 					);
 				},
 				priority: 0
-			});
+			} );
 			return cleanup;
 		}
-	}, [editor, someProp]);
+	}, [ editor, someProp ] );
 
 	return <div ref={setElement} />;
 }
@@ -430,11 +430,11 @@ export default Editor;
 Prefixes event name with `__CKE__`. Useful for prefixing custom events in `reducer`.
 
 ```js
-import { prefixEventName } from "ckeditor4-react";
+import { prefixEventName } from 'ckeditor4-react';
 
-function reducer(state, action) {
-	switch (action.type) {
-		case prefixEventName("myCustomEvent"):
+function reducer( state, action ) {
+	switch ( action.type ) {
+		case prefixEventName( 'myCustomEvent' ):
 		// return new state
 	}
 }
@@ -445,52 +445,12 @@ function reducer(state, action) {
 Removes prefix from event name.
 
 ```js
-import { stripPrefix } from "ckeditor4-react";
+import { stripPrefix } from 'ckeditor4-react';
 
-const evtName = stripPrefix(CKEditorEventAction.focus);
+const evtName = stripPrefix( CKEditorEventAction.focus );
 
-console.log(evtName === "focus"); // true
+console.log( evtName === 'focus' ); // true
 ```
-
-### eventNameToHandlerName
-
-Transforms event name into a handler name, e.g. `instanceReady` -> `onInstanceReady`.
-
-```js
-import { eventNameToHandlerName } from "ckeditor4-react";
-
-const handlerName = eventNameToHandlerName("instanceReady");
-
-console.log(handlerName); // onInstanceReady
-```
-
-### handlerNameToEventName
-
-Transforms handler name into event name, e.g. `onInstanceReady` -> `instanceReady`.
-
-```js
-import { handlerNameToEventName } from "ckeditor4-react";
-
-const evtName = handlerNameToEventName("onInstanceReady");
-
-console.log(evtName); // instanceReady
-```
-
-### events
-
-List of available `editor` events. See: https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html
-
-### namespaceEvents
-
-List of available events provided by integration (`[ 'beforeLoad', 'namespaceLoaded' ]`).
-
-### defaultEvents
-
-Concatenated list of `events` and `namespaceEvents`.
-
-### EVENT_PREFIX
-
-Prefix used by `CKEditorEventAction` to prefix dispatched events.
 
 ## TypeScript support
 
@@ -503,16 +463,16 @@ Type argument must be provided in order to use custom events.
 Usage with `CKEditor` component:
 
 ```js
-import * as React from "react";
-import { CKEditor, CKEditorEventHandler } from "ckeditor4-react";
+import * as React from 'react';
+import { CKEditor, CKEditorEventHandler } from 'ckeditor4-react';
 
 function Editor() {
 	return (
 		<CKEditor<{
-			onCustomEvent: CKEditorEventHandler<"customEvent">;
+			onCustomEvent: CKEditorEventHandler<'customEvent'>;
 		}>
-			onCustomEvent={({ name }) => {
-				console.log(name); // 'customEvent'
+			onCustomEvent={( { name } ) => {
+				console.log( name ); // 'customEvent'
 			}}
 		/>
 	);
@@ -524,23 +484,23 @@ export default Editor;
 Usage with `useCKEditor` hook:
 
 ```js
-import * as React from "react";
-import { useCKEditor, prefixEventName } from "ckeditor4-react";
+import * as React from 'react';
+import { useCKEditor, prefixEventName } from 'ckeditor4-react';
 
 function Editor() {
-	const [element, setElement] = React.useState<HTMLDivElement | null>(null);
+	const [ element, setElement ] = React.useState<HTMLDivElement | null>( null );
 
-	useCKEditor<"customEvent" | "anotherCustomEvent">({
+	useCKEditor<'customEvent' | 'anotherCustomEvent'>( {
 		element,
-		dispatchEvent: ({ type }) => {
-			if (type === prefixEventName("customEvent")) {
-				console.log(type); // 'customEvent'
+		dispatchEvent: ( { type } ) => {
+			if ( type === prefixEventName( 'customEvent' ) ) {
+				console.log( type ); // 'customEvent'
 			} else {
-				console.log(type); // 'anotherCustomEvent'
+				console.log( type ); // 'anotherCustomEvent'
 			}
 		},
-		subscribeTo: ["customEvent", "anotherCustomEvent"]
-	});
+		subscribeTo: [ 'customEvent', 'anotherCustomEvent' ]
+	} );
 
 	return <div ref={setElement} />;
 }
@@ -564,28 +524,28 @@ Old v1 usage:
 /* !!! Deprected !!! */
 /* !!!    v1     !!! */
 
-import React from "react";
-import CKEditor from "ckeditor4-react";
+import React from 'react';
+import CKEditor from 'ckeditor4-react';
 
 const getArticle = id => {
-	return new Promise(resolve => {
-		setTimeout(() => {
-			resolve(`<p>Here is my article with id ${id}...</p>`);
-		}, 5000);
-	});
+	return new Promise( resolve => {
+		setTimeout( () => {
+			resolve( `<p>Here is my article with id ${ id }...</p>` );
+		}, 5000 );
+	} );
 };
 
-function Article({ id }) {
+function Article( { id } ) {
 	// You might be mislead by thinking that `data` is the only source of truth for editor's data.
 	// In fact editor's data as returned by `editor.getData()` will be usually different than `data`.
-	const [data, setData] = React.useState("Hello from CKEditor 4!");
+	const [ data, setData ] = React.useState( 'Hello from CKEditor 4!' );
 
 	// Will be triggered whenever `id` of article changes.
-	React.useEffect(() => {
-		getArticle(id).then(article => {
-			setData(article);
-		});
-	}, [id]);
+	React.useEffect( () => {
+		getArticle( id ).then( article => {
+			setData( article );
+		} );
+	}, [ id ] );
 
 	return <CKEditor data={data} />;
 }
@@ -599,23 +559,23 @@ Current v2 usage:
 /* !!! Current !!! */
 /* !!!   v2    !!! */
 
-import React from "react";
-import { CKEditor } from "ckeditor4-react";
+import React from 'react';
+import { CKEditor } from 'ckeditor4-react';
 
 const getArticle = id => {
-	return new Promise(resolve => {
-		setTimeout(() => {
-			resolve(`<p>Here is my article with id ${id}...</p>`);
-		}, 5000);
-	});
+	return new Promise( resolve => {
+		setTimeout( () => {
+			resolve( `<p>Here is my article with id ${ id }...</p>` );
+		}, 5000 );
+	} );
 };
 
-function Article({ id }) {
-	const handleInstanceReady = ({ editor }) => {
+function Article( { id } ) {
+	const handleInstanceReady = ( { editor } ) => {
 		// Will be triggered only once, when editor is ready for interaction.
-		getArticle(id).then(article => {
-			editor.setData(article);
-		});
+		getArticle( id ).then( article => {
+			editor.setData( article );
+		} );
 	};
 
 	return (

@@ -379,7 +379,3 @@ This property should be used if you need to modify the `CKEDITOR` object, e.g. a
 ```
 
 Look at [onBeforeLoad](#onbeforeload) property to compare behaviors.
-
-## CKEditor 4 React Integration Demo
-
-See the {@linkexample react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

@@ -16,8 +16,13 @@ module.exports = {
 	mode: 'production',
 
 	resolve: {
-		// Allows testing of local, development version of React component.
-		symlinks: false
+		extensions: [ '.js', '.jsx' ],
+		// `symlink` and `alias` options allow for local testing
+		symlinks: false,
+		alias: {
+			react$: path.resolve( __dirname, '../../..', './node_modules/react' ),
+			'react-dom$': path.resolve( __dirname, '../../..', './node_modules/react-dom' )
+		}
 	},
 
 	devtool: 'source-map',

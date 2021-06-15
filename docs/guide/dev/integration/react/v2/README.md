@@ -263,80 +263,7 @@ For more examples see [repo](https://github.com/ckeditor/ckeditor4-react/tree/ma
 
 ## Editor initialization
 
-Due to the nature of React functional components (including [hooks rules](https://reactjs.org/docs/hooks-rules.html)) some props are memoized under the hood. React integration ensures referential stability of the following props: `config`, `debug`, `type`, `editorUrl`, `dispatchEvent`, `subscribeTo`, and all event handlers (`on${EventName}`). As a result, passing new values of these props across renders will have no impact on `CKEditor` component or `useCKEditor` hook. Only initial values will be memoized. In some scenarios this behavior can be limiting. Below are few a techniques that can be employed to solve these kind of limitations.
-
-### Use keyed components
-
-Whenever value of `key` prop changes, React will re-mount the component. This might be a costly operation so it should be used sparingly.
-
-```js
-import React from 'react';
-import { CKEditor } from 'ckeditor4-react';
-
-function Editor( { type } ) {
-	const [ name, setName ] = React.useState();
-
-	React.useEffect( () => {
-		// Whenever new value of `type` is passed, new name will be generated.
-		setName( getUniqueName() );
-	}, [ type ] );
-
-	// `CKEditor` is re-mounted whenever value of `key` changes.
-	return name ? (
-		<CKEditor
-			key={name}
-			name={name}
-			type={type}
-			initData={`Hello from ${ type }!`}
-		/>
-	) : null;
-}
-
-function getUniqueName() {
-	return Math.random()
-		.toString( 36 )
-		.replace( /[^a-z]+/g, '' )
-		.substr( 0, 5 );
-}
-
-export default Editor;
-```
-
-### Specialize your components
-
-React encourages developers to use [component composition](https://reactjs.org/docs/composition-vs-inheritance.html). One of such patterns is known as specialization. If you use `CKEditor` component or `useCKEditor` hook in multiple places it might be worthwhile to move common logic to a separate component.
-
-```js
-import React from 'react';
-import { CKEditor } from 'ckeditor4-react';
-import { useLogging } from '../some-logging-module';
-
-// Use `InlineEditor` across your app rather than `CKEditor`.
-// Per analogy `ClassicEditor` component could be defined.
-function InlineEditor( { onInstanceReady } ) {
-	const { trackUserActivity } = useLogging();
-
-	const handleInstanceReady = payload => {
-		if ( onInstanceReady ) {
-			// Provided by parent component.
-			onInstanceReady( payload );
-		}
-
-		// Perform some common side-effects, e.g. track user activity.
-		trackUserActivity( { type: 'inline_editor_initialized' } );
-	};
-
-	return (
-		<CKEditor
-			onInstanceReady={handleInstanceReady}
-			editorUrl="https://your-website.example/ckeditor/ckeditor.js"
-			type="inline"
-		/>
-	);
-}
-
-export default InlineEditor;
-```
+Due to the nature of React functional components (including [hooks rules](https://reactjs.org/docs/hooks-rules.html)) some props are memoized under the hood. React integration ensures referential stability of the following props: `config`, `debug`, `type`, `editorUrl`, `dispatchEvent`, `subscribeTo`, and all event handlers (`on${EventName}`). Passing new values of these props across renders will have no impact on already created instances of `CKEditor` component or `useCKEditor` hook. A new component instance must be created in order to override memoized values. This can be achieved by leveraging `key` prop.
 
 ## Utilities
 
@@ -593,3 +520,7 @@ Other notable differences are:
 
 -   `editorUrl` is now passed as a prop. See [here](#specialize-your-components) for a guide on component specialization
 -   library exposes `useCKEditor` [hook](#useckeditor-hook) that can be used instead of `CKEditor` component to cover more advanced use-cases
+
+## CKEditor 4 React Integration Demo
+
+See the {@linkexample react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or lifting state up.

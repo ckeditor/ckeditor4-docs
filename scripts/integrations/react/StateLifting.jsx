@@ -3,37 +3,34 @@ import { useCKEditor, CKEditorEventAction } from 'ckeditor4-react';
 
 const { useEffect, useState, useReducer, useMemo } = React;
 
-const CKEditorComponent = ( { dispatch, state } ) => {
+const Editor = ( { dispatch, state } ) => {
 	const [ element, setElement ] = useState();
 
 	const { editor } = useCKEditor( {
 		element,
 		dispatchEvent: dispatch,
-		subscribeTo: [ 'blur', 'focus', 'change' ]
+		subscribeTo: [ 'focus', 'change' ]
 	} );
 
 	/**
 	 * Invoking `editor.setData` too often might freeze the browser.
 	 */
-	const setEditorData = useMemo(
-		() => {
-			return new CKEDITOR.tools.buffers.throttle(
-				500,
-				data => {
-					if ( editor ) {
-						editor.setData( data );
-					}
+	const setEditorData = useMemo( () => {
+		if ( editor ) {
+			/* eslint-disable-next-line */
+			return new CKEDITOR.tools.buffers.throttle( 500, data => {
+				if ( editor ) {
+					editor.setData( data );
 				}
-			).input;
-		},
-		[ editor ]
-	);
+			} ).input;
+		}
+	}, [ editor ] );
 
 	/**
 	 * Sets editor data if it comes from a different source.
 	 */
 	useEffect( () => {
-		if ( state.currentEditor === 'textarea' ) {
+		if ( state.currentEditor !== 'CKEditor' && setEditorData ) {
 			setEditorData( state.data );
 		}
 	}, [ setEditorData, state ] );
@@ -42,30 +39,14 @@ const CKEditorComponent = ( { dispatch, state } ) => {
 }
 
 const TextAreaEditor = ( { dispatch, state } ) => {
-	const [ value, setValue ] = useState( state.data );
-
 	const handleTextAreaChange = evt => {
 		const value = evt.currentTarget.value;
-		setValue( value );
 		dispatch( { type: 'textareaData', payload: value } );
-	};
-
-	const handleBlur = () => {
-		dispatch( { type: 'textareaBlur' } );
 	};
 
 	const handleFocus = () => {
 		dispatch( { type: 'textareaFocus' } );
 	};
-
-	/**
-	 * Sets text area value if it comes from a different source.
-	 */
-	useEffect( () => {
-		if ( state.currentEditor === 'CKEditor' ) {
-			setValue( state.data );
-		}
-	}, [ state ] );
 
 	return (
 		<>
@@ -76,10 +57,9 @@ const TextAreaEditor = ( { dispatch, state } ) => {
 				<textarea
 					id="editor-editor"
 					className="binding-editor"
-					value={value}
+					value={state.data}
 					onChange={handleTextAreaChange}
 					onFocus={handleFocus}
-					onBlur={handleBlur}
 				/>
 			</p>
 		</>
@@ -88,16 +68,9 @@ const TextAreaEditor = ( { dispatch, state } ) => {
 
 const reducer = ( state, action ) => {
 	switch ( action.type ) {
-		case 'textareaBlur': {
-			return {
-				...state,
-				currentEditor: undefined
-			};
-		}
 		case 'textareaData': {
 			return {
 				...state,
-				currentEditor: 'textarea',
 				data: action.payload
 			};
 		}
@@ -107,19 +80,13 @@ const reducer = ( state, action ) => {
 				currentEditor: 'textarea'
 			};
 		}
-		case CKEditorEventAction.blur: {
-			return {
-				...state,
-				currentEditor:
-					state.currentEditor !== 'textarea' ?
-						undefined :
-						state.currentEditor
-			};
-		}
 		case CKEditorEventAction.change: {
 			return {
 				...state,
-				data: action.payload.editor.getData()
+				data:
+					state.currentEditor === 'CKEditor' ?
+						action.payload.editor.getData() :
+						state.data
 			};
 		}
 		case CKEditorEventAction.focus: {
@@ -127,9 +94,6 @@ const reducer = ( state, action ) => {
 				...state,
 				currentEditor: 'CKEditor'
 			};
-		}
-		default: {
-			return state;
 		}
 	}
 }
@@ -151,7 +115,7 @@ const StateLifting = () => {
 			</p>
 			<TextAreaEditor dispatch={dispatch} state={state} />
 			<div className="editor-instance">
-				<CKEditorComponent dispatch={dispatch} state={state} />
+				<Editor dispatch={dispatch} state={state} />
 			</div>
 			<div className="editor-preview">
 				<h2>Rendered content</h2>

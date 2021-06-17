@@ -49,15 +49,15 @@ const ConfigEvents = () => {
 					cloudServices_tokenUrl:
 						'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt'
 				}}
-
 				onFocus={logEvent}
 				onBlur={logEvent}
 				onChange={logEvent}
-				onSelectionChange={logEvent} />
-				<h3>Events Log</h3>
-				<small>To check additional details about every event, consult the console in the browser developer tools.</small>
-				<EventLog stream={events} />
-				<button onClick={clearEvents}>Clear events log</button>
+				onSelectionChange={logEvent}
+			/>
+			<h3>Events Log</h3>
+			<small>To check additional details about every event, consult the console in the browser developer tools.</small>
+			<EventLog stream={events} />
+			<button onClick={clearEvents}>Clear events log</button>
 		</div>
 	);
 }

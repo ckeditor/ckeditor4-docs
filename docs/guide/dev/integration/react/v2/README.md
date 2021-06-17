@@ -34,8 +34,8 @@ This package exposes a high-level `CKEditor` component and a low-level `useCKEdi
 An example React app featuring `CKEditor` component would look like the following:
 
 ```js
-import React from "react";
-import { CKEditor } from "ckeditor4-react";
+import React from 'react';
+import { CKEditor } from 'ckeditor4-react';
 
 function App() {
 	return (
@@ -44,7 +44,7 @@ function App() {
 			<CKEditor
 				initData={<p>Hello from CKEditor 4!</p>}
 				onInstanceReady={ () => {
-					alert("Editor is ready!");
+					alert( 'Editor is ready!' );
 				} }
 			/>
 		</div>
@@ -60,10 +60,10 @@ By default, the CKEditor 4 React integration loads the [standard-all preset](htt
 
 ```js
 // Hook
-const { editor } = useCKEditor({
+const { editor } = useCKEditor( {
 	...props,
-	editorUrl: "https://your-website.example/ckeditor/ckeditor.js"
-});
+	editorUrl: 'https://your-website.example/ckeditor/ckeditor.js'
+} );
 
 // Component
 const component = (
@@ -122,7 +122,7 @@ const component = (
 		} }
 		{...otherEventHandlers}
 		readOnly={false}
-		style={ { borderColor: "blue" } }
+		style={ { borderColor: 'blue' } }
 		type="classic"
 	/>
 );
@@ -518,7 +518,7 @@ export default Article;
 
 Other notable differences are:
 
--   `editorUrl` is now passed as a prop. See [here](#specialize-your-components) for a guide on component specialization
+-   `editorUrl` is now passed as a prop
 -   library exposes `useCKEditor` [hook](#useckeditor-hook) that can be used instead of `CKEditor` component to cover more advanced use-cases
 
 ## CKEditor 4 React Integration Demo

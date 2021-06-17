@@ -22,7 +22,7 @@
     "cheerio": "^1.0.0-rc.2",
     "ckeditor4-angular": "^2.1.0",
     "ckeditor4-plugin-spreadsheet": "^1.2.0",
-    "ckeditor4-react": "^1.4.0",
+    "ckeditor4-react": "2.0.0-rc.1",
     "ckeditor4-vue": "^1.3.0",
     "classlist.js": "^1.1.20150312",
     "core-js": "^3.6.5",

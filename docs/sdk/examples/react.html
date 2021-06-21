@@ -137,7 +137,7 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				}
 			</style>
 
-			<h1>CKEditor 4 WYSIWYG Editor React Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react_v2.html">Documentation</a></h1>
+			<h1>CKEditor 4 WYSIWYG Editor React Integration <a class="documentation" href="../guide/dev_react_v2.html">Documentation</a></h1>
 
 			<p>
 				The <strong>React integration</strong> allows you to implement CKEditor 4 as a <a href="https://reactjs.org/">React</a> component, using the <code>&lt;CKEditor /&gt;</code> JSX tag or <code>useCKEditor</code> hook.
@@ -201,8 +201,6 @@ const ConfigEvents = () => {
 			minute: '2-digit',
 			second: '2-digit'
 		} ).format( new Date() );
-
-		console.log( evt.timestamp, evt.name, evt.data || 'No additional data was provided' );
 
 		setEvents( events =>  [ evt, ...events ] );
 	}
@@ -299,7 +297,6 @@ const Editor = ( { dispatch, state } ) => {
 	 */
 	const setEditorData = useMemo( () => {
 		if ( editor ) {
-			/* eslint-disable-next-line */
 			return new CKEDITOR.tools.buffers.throttle( 500, data => {
 				if ( editor ) {
 					editor.setData( data );

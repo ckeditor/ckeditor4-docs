@@ -17,7 +17,6 @@ const Editor = ( { dispatch, state } ) => {
 	 */
 	const setEditorData = useMemo( () => {
 		if ( editor ) {
-			/* eslint-disable-next-line */
 			return new CKEDITOR.tools.buffers.throttle( 500, data => {
 				if ( editor ) {
 					editor.setData( data );

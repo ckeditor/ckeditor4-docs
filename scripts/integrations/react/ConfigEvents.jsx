@@ -14,8 +14,6 @@ const ConfigEvents = () => {
 			second: '2-digit'
 		} ).format( new Date() );
 
-		console.log( evt.timestamp, evt.name, evt.data || 'No additional data was provided' );
-
 		setEvents( events =>  [ evt, ...events ] );
 	}
 

@@ -271,7 +271,7 @@ The library exposes few utilities such as `CKEditorEventAction` dictionary and `
 
 ### CKEditorEventAction
 
-Object that maps editor event names to their prefixed equivalents, e.g. `instanceReady` -> `__CKE__instanceReady`. It's useful when using `useCKEditor` in combination with `useReducer`.
+Object that maps editor event names to their prefixed equivalents, e.g. `instanceReady` becomes `__CKE__instanceReady`. It's useful when using `useCKEditor` in combination with `useReducer`.
 
 ```js
 function reducer( state, action ) {

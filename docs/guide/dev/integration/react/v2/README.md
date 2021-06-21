@@ -421,9 +421,9 @@ function Editor() {
 		element,
 		dispatchEvent: ( { type } ) => {
 			if ( type === prefixEventName( 'customEvent' ) ) {
-				console.log( type ); // 'customEvent'
+				console.log( type ); // '__CKE__customEvent'
 			} else {
-				console.log( type ); // 'anotherCustomEvent'
+				console.log( type ); // '__CKE__anotherCustomEvent'
 			}
 		},
 		subscribeTo: [ 'customEvent', 'anotherCustomEvent' ]

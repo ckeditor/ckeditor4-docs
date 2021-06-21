@@ -259,7 +259,7 @@ function reducer( state, action ) {
 export default Feedback;
 ```
 
-For more examples see [repo](https://github.com/ckeditor/ckeditor4-react/tree/master/samples).
+For more examples see [repo](https://github.com/ckeditor/ckeditor4-react/tree/stable/samples).
 
 ## Editor initialization
 

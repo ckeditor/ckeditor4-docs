@@ -318,7 +318,7 @@ function Editor( { someProp } ) {
 
 	const { editor } = useCKEditor( {
 		element,
-		// `dispatchEvent` is memoized, so initial value of `someProp` will be used
+		// `dispatchEvent` is memoized, so initial value of `someProp` will be used.
 		dispatchEvent: ( { type } ) => {
 			if ( type === CKEditorEventAction.focus ) {
 				console.log(

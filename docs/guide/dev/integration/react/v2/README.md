@@ -518,7 +518,7 @@ export default Article;
 
 Other notable differences are:
 
--   `editorUrl` is now passed as a prop
+-   `editorUrl` is now passed as a prop,
 -   library exposes `useCKEditor` [hook](#useckeditor-hook) that can be used instead of `CKEditor` component to cover more advanced use-cases
 
 ## CKEditor 4 React Integration Demo

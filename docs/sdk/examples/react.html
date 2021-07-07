@@ -6,9 +6,9 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="CKEditor 4 React integration. Using CKEditor 4 as a React component.">
-	<meta name="keywords" content="ckeditor, editor, wysiwyg, react, integration">
-	<meta name="sdk-samples" content="Classic editor|Inline editor|Editor with custom event handlers and configuration|Two-way data binding">
+	<meta name="description" content="CKEditor 4 React integration. Using CKEditor 4 as a React component or React hook.">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, react, react hooks, integration">
+	<meta name="sdk-samples" content="Classic editor|Inline editor|Editor with custom event handlers and configuration|Lifting state up">
 	<meta name="sdk-category" content="sdk-framework-integration">
 	<meta name="sdk-order" content="10">
 	<title>React Integration</title>
@@ -137,10 +137,10 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 				}
 			</style>
 
-			<h1>CKEditor 4 WYSIWYG Editor React Integration <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/guide/dev_react.html">Documentation</a></h1>
+			<h1>CKEditor 4 WYSIWYG Editor React Integration <a class="documentation" href="../guide/dev_react_v2.html">Documentation</a></h1>
 
 			<p>
-				The <strong>React integration</strong> allows you to implement CKEditor 4 as a <a href="https://reactjs.org/">React</a> component, using the <code>&lt;CKEditor /&gt;</code> JSX tag.
+				The <strong>React integration</strong> allows you to implement CKEditor 4 as a <a href="https://reactjs.org/">React</a> component, using the <code>&lt;CKEditor /&gt;</code> JSX tag or <code>useCKEditor</code> hook.
 			</p>
 
 			<p>
@@ -160,95 +160,94 @@ For licensing, see license.html or https://sdk.ckeditor.com/license.html.
 	</footer>
 
 <script type="text/jsx" data-sample="1" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import React from 'react';
 import ReactDOM from 'react-dom';
-import CKEditor from 'ckeditor4-react';
+import { CKEditor } from 'ckeditor4-react';
 
 ReactDOM.render(
-	<CKEditor data="<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>" />,
+	<CKEditor
+		initData={<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>}
+	/>,
 	document.getElementById( 'app' )
 );
 </script>
 <script type="text/jsx" data-sample="2" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
+import React from 'react';
 import ReactDOM from 'react-dom';
-import CKEditor from 'ckeditor4-react';
+import { CKEditor } from 'ckeditor4-react';
 
 ReactDOM.render(
-	<CKEditor type="inline" data="<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>" />,
+	<CKEditor
+		type="inline"
+		initData={<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>}
+	/>,
 	document.getElementById( 'app' )
 );
 </script>
 <script type="text/jsx" data-sample="3" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import CKEditor from 'ckeditor4-react';
+import { CKEditor } from 'ckeditor4-react';
 
-class ConfigEvents extends Component {
-	constructor( props ) {
-		super( props );
+const { useState } = React;
 
-		this.state = {
-			events: []
-		};
+const ConfigEvents = () => {
+	const [ events, setEvents ] = useState( [] );
 
-		this.logEvent = this.logEvent.bind( this );
-		this.clearEvents = this.clearEvents.bind( this );
-	}
-
-	logEvent( event ) {
-		event.timestamp = new Intl.DateTimeFormat( 'en', {
+	const logEvent = ( evt ) => {
+		evt.timestamp = new Intl.DateTimeFormat( 'en', {
 			hour12: false,
 			hour: '2-digit',
 			minute: '2-digit',
 			second: '2-digit'
 		} ).format( new Date() );
 
-		console.log( event.timestamp, event.name, event.data || 'No additional data was provided' );
-
-		this.setState( {
-			events: [ event, ...this.state.events ]
-		} );
+		setEvents( events =>  [ evt, ...events ] );
 	}
 
-	clearEvents() {
-		this.setState( {
-			events: []
-		} );
+	const clearEvents = () => {
+		setEvents( [] );
 	}
 
-	render() {
-		return (
-			<div>
-				<h2>WYSIWYG editor with custom event handlers and configuration</h2>
-				<p>
-					Editors created with the CKEditior 4 React component are highly customizable. It is possible to overwrite every configuration setting using the <code>config</code> property and passing an object containing the configuration to it.
-				</p>
-				<p>
-					Additionally, the CKEditor 4 WYSIWYG editor component for React allows you to bind any event handler using properties with names starting with <code>on</code>, followed by the name of the event with the first letter capitalized. The following example shows how to bind several common CKEditor 4 events.
-				</p>
-				<CKEditor
-					data="This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React."
-					config={{
-						toolbar: [
-							[ 'Source' ],
-							[ 'Styles', 'Format', 'Font', 'FontSize' ],
-							[ 'Bold', 'Italic' ],
-							[ 'Undo', 'Redo' ],
-							[ 'About' ]
-						]
-					}}
-
-					onFocus={this.logEvent}
-					onBlur={this.logEvent}
-					onChange={this.logEvent}
-					onSelectionChange={this.logEvent} />
-					<h3>Events Log</h3>
-					<small>To check additional details about every event, consult the console in the browser developer tools.</small>
-					<EventLog stream={this.state.events} />
-					<button onClick={this.clearEvents}>Clear events log</button>
-			</div>
-		);
-	}
+	return (
+		<div>
+			<h2>WYSIWYG editor with custom event handlers and configuration</h2>
+			<p>
+				Editors created with the CKEditior 4 React component are highly customizable. It is possible to overwrite every configuration setting using the <code>config</code> property and passing an object containing the configuration to it.
+			</p>
+			<p>
+				Additionally, the CKEditor 4 WYSIWYG editor component for React allows you to bind any event handler using properties with names starting with <code>on</code>, followed by the name of the event with the first letter capitalized. The following example shows how to bind several common CKEditor 4 events and apply custom toolbar configuration.
+			</p>
+			<CKEditor
+				initData="This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React."
+				config={{
+					toolbar: [
+						[ 'Source' ],
+						[ 'Styles', 'Format', 'Font', 'FontSize' ],
+						[ 'Bold', 'Italic' ],
+						[ 'Undo', 'Redo' ],
+						[ 'EasyImageUpload' ],
+						[ 'About' ]
+					],
+					extraPlugins: 'easyimage',
+					removePlugins: 'image',
+					cloudServices_uploadUrl: 'https://33333.cke-cs.com/easyimage/upload/',
+					cloudServices_tokenUrl:
+						'https://33333.cke-cs.com/token/dev/ijrDsqFix838Gh3wGO3F77FSW94BwcLXprJ4APSp3XQ26xsUHTi0jcb1hoBt'
+				}}
+				onFocus={logEvent}
+				onBlur={logEvent}
+				onChange={logEvent}
+				onSelectionChange={logEvent}
+			/>
+			<h3>Events Log</h3>
+			<small>To check additional details about every event, consult the console in the browser developer tools.</small>
+			<EventLog stream={events} />
+			<button onClick={clearEvents}>Clear events log</button>
+		</div>
+	);
 }
+
 const EventLog = ( { stream } ) => {
 	return (
 		<div className="event-log">
@@ -266,6 +265,7 @@ const EventLog = ( { stream } ) => {
 		</div>
 	);
 }
+
 const Event = ( { data: { name, timestamp } } ) => {
 	return (
 		<>
@@ -277,104 +277,134 @@ const Event = ( { data: { name, timestamp } } ) => {
 ReactDOM.render( <ConfigEvents />, document.getElementById( 'app' ) );
 </script>
 <script type="text/jsx" data-sample="4" data-sample-preserve-whitespace data-sample-strip-outer-tag data-sample-template="empty" data-sample-highlighter="jsx">
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import CKEditor from 'ckeditor4-react';
+import { useCKEditor, CKEditorEventAction } from 'ckeditor4-react';
 
-class TwoWayBinding extends Component {
-	constructor( props ) {
-		super( props );
+const { useEffect, useState, useReducer, useMemo } = React;
 
-		this.state = {
-			data: '<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>'
-		};
+const Editor = ( { dispatch, state } ) => {
+	const [ element, setElement ] = useState();
 
-		this.handleChange = this.handleChange.bind( this );
-		this.onEditorChange = this.onEditorChange.bind( this );
-	}
+	const { editor } = useCKEditor( {
+		element,
+		dispatchEvent: dispatch,
+		subscribeTo: [ 'focus', 'change' ]
+	} );
 
-	onEditorChange( evt ) {
-		this.setState( {
-			data: evt.editor.getData()
-		} );
-	}
+	/**
+	 * Invoking `editor.setData` too often might freeze the browser.
+	 */
+	const setEditorData = useMemo( () => {
+		if ( editor ) {
+			return new CKEDITOR.tools.buffers.throttle( 500, data => {
+				if ( editor ) {
+					editor.setData( data );
+				}
+			} ).input;
+		}
+	}, [ editor ] );
 
-	handleChange( changeEvent ) {
-		this.setState( {
-			data: changeEvent.target.value
-		} );
-	}
+	/**
+	 * Sets editor data if it comes from a different source.
+	 */
+	useEffect( () => {
+		if ( state.currentEditor !== 'CKEditor' && setEditorData ) {
+			setEditorData( state.data );
+		}
+	}, [ setEditorData, state ] );
 
-	render() {
-		return (
-			<div>
-				<SourceEditor data={this.state.data} handler={this.handleChange} />
-				<div className="editor-instance">
-					<CKEditor
-						data={this.state.data}
-						onChange={this.onEditorChange}
-					/>
-				</div>
-				<EditorPreview data={this.state.data} />
-			</div>
-		);
-	}
+	return <div ref={setElement} dangerouslySetInnerHTML={{ __html: state.data }} />;
 }
-class EditorPreview extends Component {
-	render() {
-		return (
-			<div className="editor-preview">
-				<h2>Rendered content</h2>
-				<div dangerouslySetInnerHTML={{ __html: this.props.data }}></div>
-			</div>
-		);
-	}
+
+const TextAreaEditor = ( { dispatch, state } ) => {
+	const handleTextAreaChange = evt => {
+		const value = evt.currentTarget.value;
+		dispatch( { type: 'textareaData', payload: value } );
+	};
+
+	const handleFocus = () => {
+		dispatch( { type: 'textareaFocus' } );
+	};
+
+	return (
+		<>
+			<p>
+				<label htmlFor="editor-editor">The editor content:</label>
+			</p>
+			<p>
+				<textarea
+					id="editor-editor"
+					className="binding-editor"
+					value={state.data}
+					onChange={handleTextAreaChange}
+					onFocus={handleFocus}
+				/>
+			</p>
+		</>
+	);
 }
-class SourceEditor extends Component {
-	constructor( props ) {
-		super( props );
 
-		this.state = {
-			focused: false
-		};
-	}
-
-	render() {
-		var textareaValue = {};
-
-		if ( !this.state.focused ) {
-			textareaValue = {
-				value: this.props.data
+const reducer = ( state, action ) => {
+	switch ( action.type ) {
+		case 'textareaData': {
+			return {
+				...state,
+				data: action.payload
 			};
 		}
-
-		return (
-			<>
-				<p>
-					<label htmlFor="editor-editor">The editor content:</label>
-				</p>
-				<p>
-					<textarea
-						id="editor-editor"
-						className="binding-editor"
-						{...textareaValue}
-						onChange={this.props.handler}
-						onFocus={ () => { this.setState( {
-								focused: true
-							} );
-						}}
-						onBlur={ () => { this.setState( {
-								focused: false
-							} );
-						}}
-					/>
-				</p>
-			</>
-		);
+		case 'textareaFocus': {
+			return {
+				...state,
+				currentEditor: 'textarea'
+			};
+		}
+		case CKEditorEventAction.change: {
+			return {
+				...state,
+				data:
+					state.currentEditor === 'CKEditor' ?
+						action.payload.editor.getData() :
+						state.data
+			};
+		}
+		case CKEditorEventAction.focus: {
+			return {
+				...state,
+				currentEditor: 'CKEditor'
+			};
+		}
 	}
 }
 
-ReactDOM.render( <TwoWayBinding />, document.getElementById( 'app' ) );
+const StateLifting = () => {
+	const [ state, dispatch ] = useReducer( reducer, {
+		data: '<p>This is a CKEditor 4 WYSIWYG editor instance created by ️⚛️ React.</p>',
+		currentEditor: undefined
+	} );
+
+	return (
+		<div>
+			<h2>Lifting state up</h2>
+			<p>
+				Shared state of React components can be moved <a href="https://reactjs.org/docs/lifting-state-up.html">higher up the React tree</a>. In the example below, CKEditor 4 WYSIWYG editor component shares content with other components.
+			</p>
+			<p>
+				Additionally, <code>useCKEditor</code> hook is used to access <code>editor</code> instance directly and use its methods imperatively, e.g. <code>editor.setData( data )</code>.
+			</p>
+			<TextAreaEditor dispatch={dispatch} state={state} />
+			<div className="editor-instance">
+				<Editor dispatch={dispatch} state={state} />
+			</div>
+			<div className="editor-preview">
+				<h2>Rendered content</h2>
+				<div dangerouslySetInnerHTML={{ __html: state.data }}></div>
+			</div>
+		</div>
+	);
+}
+
+ReactDOM.render( <StateLifting />, document.getElementById( 'app' ) );
 </script>
 </body>
 </html>

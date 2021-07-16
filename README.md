@@ -51,6 +51,10 @@ Checkout the `stable` branch of the `jsduck` repository and install the latest `
 
 Gems versions are listed [here](https://github.com/ckeditor/jsduck#customizations). Gem installation might take a few minutes.
 
+It may be helpfull to add `-- --with-cflags="-Wno-error=implicit-function-declaration"` to gem installation command if further doc generation fails:
+
+	> gem install ckeditor-jsduck-<version>.gem -- --with-cflags="-Wno-error=implicit-function-declaration"
+
 Go back to the `ckeditor4-docs` repository and install [npm dependencies](package.json):
 
 	> cd ../ckeditor4-docs

@@ -3,24 +3,24 @@ category: api-usage
 order: 60
 url: features/delayed_creation
 menu-title: Delayed creation
-meta-title-shor: Delayed creation
+meta-title-short: Delayed creation
 ---
 <!--
 Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Delayed creation
+# Delayed editor creation
 
-<info-box info="">This feature was introduced in 4.17.0 and by default it is off. It requires [enabling config option](../api/CKEDITOR_config.html#cfg-delayIfDetached) to worksfor the editor.</info-box>
+<info-box info="">This feature was introduced in 4.17.0 and by default is off. It requires [enabling config option](../api/CKEDITOR_config.html#cfg-delayIfDetached) to work.</info-box>
 
 It was introduced because there were some issues during editor creation on the element that is detached from the DOM. During the entire process, there is some information extracted from the editor elements document. If the target element is detached, it is simply impossible to access them. This situation may be caused unintentionally by using CKEditor 4 with popular frameworks (e.g. [Angular integration](../guide/dev_angular.html)) which may detach elements that are hidden.
 
 ## Two ways to delay creation
 
-- Enabling [delayIfDetached option](../api/CKEDITOR_config.html#cfg-delayIfDetached) enabled the default interval checks. A check is performed every [amount of time](../api/CKEDITOR_config.html#cfg-delayIfDetached_interval). Whenever a target element is found to be attached to the DOM - the new instance of the editor is created. This is the easiest and fastest way to use this feature. It may be not so efficient to have a running interval operation in the background. There is also a second, more efficient method of usage.
-
-- Additional setting [callback](../api/CKEDITOR_config.html#cfg-delayIfDetached_callback) will turn off the default interval checks. Instead, the callback is invoked with a single argument. This argument is a function that should be invoked to finish editor creation. The advantage here is that it gives full control over the time that the actual creation is performed. A received callback may be stored and used right after attached the target element to the DOM.
+- The [delayIfDetached](../api/CKEDITOR_config.html#cfg-delayIfDetached) config option which is enabled by default results in editor element being checked in given intervals. Checks are performed every given amount of time (which can be changed via [delayIfDetached_interval](../api/CKEDITOR_config.html#cfg:w
+-delayIfDetached_interval)). Whenever a target element is found to be attached to the DOM - the editor instance is then created. For more advanced usage refer to the `callback` config option described below.
+- To have more control over when editor instance will be initialized the [delayIfDetached_callback](../api/CKEDITOR_config.html#cfg-delayIfDetached_callback) config option is provided. When set as `function`, it will be used instead of interval checks and invoked with a single argument. This argument is a function that should be invoked to finish editor creation. The advantage here is that it gives full control over the time that the actual creation is performed. A received callback may be stored and used right after the target element is attached to DOM.
 
 ## Practical example
 

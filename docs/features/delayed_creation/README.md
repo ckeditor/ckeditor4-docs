@@ -2,8 +2,8 @@
 category: api-usage
 order: 60
 url: features/delayed_creation
-menu-title: Delayed creation
-meta-title-short: Delayed creation
+menu-title: Delayed editor creation
+meta-title-short: Delayed editor creation
 ---
 <!--
 Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
@@ -12,31 +12,31 @@ For licensing, see LICENSE.md.
 
 # Delayed editor creation
 
-<info-box info="">This feature was introduced in 4.17.0 and by default is off. It requires [enabling config option](../api/CKEDITOR_config.html#cfg-delayIfDetached) to work.</info-box>
+<info-box info="">This feature have been introduced in CKEditor 4 version 4.17.0 and by default is off. It can be enabled via dedicated [config option](../api/CKEDITOR_config.html#cfg-delayIfDetached).</info-box>
 
-<info-box info="">In the examples we used `replace` method to create editor, but this feature works with `inline` method as well.</info-box>
+Delaying editor creation prevents editor instance from being created and initialized when target element is detached from the DOM. Such mechanism was introduced to solve a group of specific issues related to initializing CKEditor 4 in modals, dialogs, pop-ups and other hidable UI elements. Please take a look at the [troubleshooting section](#troubleshooting) for more details.
 
-It prevents editor creation when target element is detached from the DOM. We introduce it, because of experiencing a group of issues. Please take a look at the [troubleshooting section](#troubleshooting) for more details. Those situations may happened when CKEditor4 is used with popular frameworks and placed for example in modal window.
+## Ways to delay editor creation
 
-## Two ways to delay creation
+### Using interval
 
-### Interval approach
+The [delayIfDetached](../api/CKEDITOR_config.html#cfg-delayIfDetached) config option, which is disabled by default, results in editor element being checked in given time intervals. Checks are performed every given amount of time (which can be changed via [delayIfDetached_interval](../api/CKEDITOR_config.html#cfg-delayIfDetached_interval)). Whenever a target element is found to be attached to the DOM - the editor instance is then created. For more advanced usage refer to the [`callback` approach](#using-callback) below.
 
-The [delayIfDetached](../api/CKEDITOR_config.html#cfg-delayIfDetached) config option which is disabled by default results in editor element being checked in given intervals. Checks are performed every given amount of time (which can be changed via [delayIfDetached_interval](../api/CKEDITOR_config.html#cfg-delayIfDetached_interval)). Whenever a target element is found to be attached to the DOM - the editor instance is then created. For more advanced usage refer to the `callback` config option described below.
+### Using callback
 
-### Callback approach
+To have more control over when editor instance will be initialized the [delayIfDetached_callback](../api/CKEDITOR_config.html#cfg-delayIfDetached_callback) config option is provided. The `function` provided here, will be invoked with a single argument. When `callback` function is provided, interval checks are no longer executed. The argument of a `callback` function is another function that should be invoked to finish editor creation. Also, received callback may be stored and used right after the target element is attached to DOM. The advantage here is that it gives full control over the time that the actual creation is performed.
 
-To have more control over when editor instance will be initialized the [delayIfDetached_callback](../api/CKEDITOR_config.html#cfg-delayIfDetached_callback) config option is provided. The `function` provided here, will be invoked with a single argument instead of interval checks. This argument is a function that should be invoked to finish editor creation. Also, received callback may be stored and used right after the target element is attached to DOM. The advantage here is that it gives full control over the time that the actual creation is performed.
+## When to use delayed creation
 
-## Troubleshooting
+<info-box info="">In the examples below, the [`replace()` method](../api/CKEDITOR.html#method-replace) is used to create editor, but this feature works with [`inline()` method](../api/CKEDITOR.html#method-inline) as well.</info-box>
 
-When you create an editor on detached element with the default settings, you may find that the editor was created but the console displays an error:
+When you create editor instance on detached element you may find that the editor was created but the console displays an error, for example:
 
-```
+```plain
 TypeError: Cannot read property 'unselectable' of null
 ```
 
-Let's look at the sample setup:
+Let's take a look at the sample setup:
 
 ```html
 <div id="editorContainer">
@@ -47,33 +47,31 @@ Let's look at the sample setup:
 ```
 
 ```js
-// Grab references to DOM elements
+// Grab references to DOM elements.
 var editorContainer = document.getElementById( 'editorContainer' ),
 	editorContainerParent = editorContainer.parentNode,
 	editorTargetElement = CKEDITOR.document.getById('editor');
 
-// Detach parent of target element from the DOM
-	editorContainerParent.removeChild( editorContainer );
+// Detach parent of target element from the DOM.
+editorContainerParent.removeChild( editorContainer );
 
-// Create editor
-	var editor = CKEDITOR.replace( editorTargetElement );
+// Create editor.
+var editor = CKEDITOR.replace( editorTargetElement );
 ```
 
-Please notice, that we try to create editor on provided reference to the element. It is valid, but the element is no longer in the DOM.
+Please notice, that we try to create editor on provided reference to the element. It is valid, but the element is no longer present in the DOM. And since editor initialization traverses the DOM and extracts information from the parent document of provided element it is not possible when target element is detached (it does not have parent in such cases). Such initialization attempt will result with an error.
 
-You may also try the same sample, but with:
+In the previous sample, editor could be initialized also by providing id to a editor element:
 
 ```js
-	var editor = CKEDITOR.replace( 'editor' );
+var editor = CKEDITOR.replace( 'editor' );
 ```
 
-This time the editor won't be created, and the console displays an [editor-incorrect-element error](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_errors.html#editor-incorrect-element). In this case, we are looking for an element with given `id` in the document - which simply is not there, becuase it was detached.
+However, this time the editor won't be created and the [editor-incorrect-element error](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_errors.html#editor-incorrect-element) error will be thrown. In this case, the code is looking for an element with given `id` in the document - which simply is not there, because it was detached earlier.
 
-In the first case (with element reference) we already have it. However, our other logics try to find a few information from the parent document of provided element reference. Since the element is outside - we simply cannot find them.
+## Practical examples
 
-## Practical usecase example
-
-Let's have:
+Lets assume we have:
 - a target element and it is not visible for the user (is detached),
 - button, which makes the element visible (attach it to the DOM),
 - the editor creation was called with `detachIfDelay` option enabled.
@@ -107,7 +105,7 @@ var editor = CKEDITOR.replace( targetElement, {
 console.log( editor ); // -> null
 ```
 
-You can get an instance in different ways, depending on used options: 
+You can get an instance in different ways, depending on used options:
 
 ### Interval approach
 ```js

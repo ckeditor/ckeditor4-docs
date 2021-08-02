@@ -14,7 +14,7 @@ For licensing, see LICENSE.md.
 
 <info-box info="">This feature have been introduced in CKEditor 4 version 4.17.0 and by default is off. It can be enabled via dedicated [config option](../api/CKEDITOR_config.html#cfg-delayIfDetached).</info-box>
 
-Delaying editor creation prevents editor instance from being created and initialized when target element is detached from the DOM. Such mechanism was introduced to solve a group of specific issues related to initializing CKEditor 4 in modals, dialogs, pop-ups and other hidable UI elements. Please take a look at the [troubleshooting section](#troubleshooting) for more details.
+Delaying editor creation prevents editor instance from being created and initialized when target element is detached from the DOM. Such mechanism was introduced to solve a group of specific issues related to initializing CKEditor 4 in modals, dialogs, pop-ups and other hidable UI elements. Please take a look at the [Practical example section](#practical-example) for more details.
 
 ## Ways to delay editor creation
 
@@ -69,39 +69,42 @@ var editor = CKEDITOR.replace( 'editor' );
 
 However, this time the editor won't be created and the [editor-incorrect-element error](https://ckeditor.com/docs/ckeditor4/latest/guide/dev_errors.html#editor-incorrect-element) error will be thrown. In this case, the code is looking for an element with given `id` in the document - which simply is not there, because it was detached earlier.
 
-## Practical examples
+## Practical example
 
 Lets assume we have:
 - a target element and it is not visible for the user (is detached),
-- button, which makes the element visible (attach it to the DOM),
+- button, which makes the element visible (attaches it to the DOM),
 - the editor creation was called with `detachIfDelay` option enabled.
 
-User clicks the button, so the element is visible again.
+And then the user clicks the button, so the element becomes visible again (is attached to DOM). The pros and cons of using each approach are listed below.
 
 ### Interval approach
 
-- The script may run for so long until the button is used for the first time. In the worst case, the button may not be clicked at all, but the entire page is affected by the background script.
-
-- The last interval check may happen milliseconds before user clicks. The default timeout is small enough, that there will be no flickering effect. But still, we need to wait that interval time and then the creation time.
+- Easy to use, doesn't require additional configuration.
+- The script will run until the button is clicked for the first time. In the worst case, the button may not be clicked at all, but the entire page is affected by the background script.
+- The last interval check may happen milliseconds before user clicks the button. The default timeout is small enough, that there will be no flickering effect, but still there will be slight delay before editor creation starts.
 
 ### Callback approach
 
-- We may store the received creation function.
-- Bind to the button onclick and invoke the stored function there.
+- Requires additional configuration and good understanding when editor should be initialized.
+- Creation function can be used at any time which gives grater flexibility..
 - Because of invocation on demand, we need to wait only for creation time. No additional delays or unnecessary checks. However, additional logic needs to be implemented and binded to every place that could show the editor.
 
-## Editor reference
+## Getting editor reference
 
-There might be a case when you create editor and asign it to a variable. It is a common example in the entire documentation:
+There might be cases when you create editor and assign it to a variable. It is a common example in the entire documentation:
+
 ```js
 var editor = CKEDITOR.replace( targetElement );
 ```
-With this feature enabled and detached target element the variable value will not contain editor instance. Regardless interval or callback method is usage.
+
+With this feature enabled and detached target element the variable value will not contain editor instance  (regardless of interval or callback method).
 
 ```js
 var editor = CKEDITOR.replace( targetElement, {
 	delayIfDetached: true
 } );
+
 console.log( editor ); // -> null
 ```
 
@@ -119,6 +122,7 @@ function delayedCallback( createEditor ) {
 	// createEditor() returns editor instance
 	var editor = createEditor();
 }
+
 var editor = CKEDITOR.replace( targetElement, {
 	delayIfDetached: true,
 	delayIfDetached_callback: delayedCallback

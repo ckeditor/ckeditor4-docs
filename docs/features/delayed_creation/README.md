@@ -75,7 +75,7 @@ And then the user clicks the button, so the element becomes visible again (is at
 - Easy to use, doesn't require additional configuration.
 - The script will run until the button is clicked for the first time. In the worst case, the button may not be clicked at all, but the entire page is affected by the background script.
 - The last interval check may happen milliseconds before the user clicks the button. The default timeout is small enough, that there will be no flickering effect. But still, you don't have control over user actions.
-- The interval checks might be adjusted with the [delayIfDetached_interval option](../api/CKEDITOR_config.html#cfg-delayIfDetached_interval). However, if you make it shorter - performance might be affected. If you enlarge the interval - the delay might start to be visible.
+- The interval checks might be adjusted with the [delayIfDetached_interval option](../api/CKEDITOR_config.html#cfg-delayIfDetached_interval). However, if you make it shorter - performance might be affected. If you lengthen the interval - the delay might start to be visible.
 
 ### Callback approach
 

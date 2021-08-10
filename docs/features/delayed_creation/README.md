@@ -14,9 +14,9 @@ For licensing, see LICENSE.md.
 
 <info-box info="">This feature have been introduced in CKEditor 4 version 4.17.0 and by default is off. It can be enabled via dedicated [config option](../api/CKEDITOR_config.html#cfg-delayIfDetached).</info-box>
 
-Delayed editor creation starts when you invoke casual [`replace()`](../api/CKEDITOR.html#method-replace) or [`inline()`](../api/CKEDITOR.html#method-inline) methods, but the editor is not created immediately. The instance creation is postponed and it is possible only when the target element is detached from the DOM. The process will be resumed automatically or on-demand. Please take a look at the details in the [following section](#ways-to-delay-editor-creation).
+Delayed editor creation starts when you invoke casual [`replace()`](../api/CKEDITOR.html#method-replace) or [`inline()`](../api/CKEDITOR.html#method-inline) methods, but the editor is not created immediately. The instance creation is postponed and could be resumed automatically or on-demand. Please take a look at the details in the [following section](#ways-to-delay-editor-creation). Also, deferred instantiation is only possible when the target element is detached from the DOM during creation verification and [config option](../api/CKEDITOR_config.html#cfg-delayIfDetached).
 
-This feature was introduced to solve a group of specific issues related to initializing CKEditor 4 in modals, dialogs, pop-ups, and other hidable UI elements. Please take a look at the [Practical example section](#practical-example) for more details.
+This feature was introduced to solve a group of issues related to initializing CKEditor 4 in modals, dialogs, pop-ups, and other hidable UI elements. Please take a look at the [Practical example section](#practical-example) for more details.
 
 ## When to use delayed creation
 
@@ -53,7 +53,7 @@ var editor = CKEDITOR.replace( editorTargetElement );
 
 Please notice, that we try to create an editor on provided reference to the element. It is valid, but the element is no longer present in the DOM. And since editor initialization traverses the DOM and extracts information from the parent document of provided element - it is not possible when the target element is detached (it does not have a parent in such cases). Such an initialization attempt will result in an error.
 
-In the previous sample, editor could be initialized also by providing id to a editor element:
+In the previous sample, editor could be initialized also by providing id to editor element:
 
 ```js
 var editor = CKEDITOR.replace( 'editor' );
@@ -74,7 +74,8 @@ And then the user clicks the button, so the element becomes visible again (is at
 
 - Easy to use, doesn't require additional configuration.
 - The script will run until the button is clicked for the first time. In the worst case, the button may not be clicked at all, but the entire page is affected by the background script.
-- The last interval check may happen milliseconds before the user clicks the button. The default timeout is small enough, that there will be no flickering effect, but still, there will be a slight delay before editor creation resumes.
+- The last interval check may happen milliseconds before the user clicks the button. The default timeout is small enough, that there will be no flickering effect. But still, you don't have control over user actions.
+- The interval checks might be adjusted with the [delayIfDetached_interval option](../api/CKEDITOR_config.html#cfg-delayIfDetached_interval). However, if you make it shorter - performance might be affected. If you enlarge the interval - the delay might start to be visible.
 
 ### Callback approach
 

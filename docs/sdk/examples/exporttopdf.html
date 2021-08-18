@@ -192,13 +192,16 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
 					{ name: 'document', items: [ 'PageBreak', 'Source' ] }
 				],
-				bodyClass: 'document-editor'
+				bodyClass: 'document-editor',
+				removeButtons: 'PasteFromWord'
 			} );
 		</script>
 
 		<script>
 			editor.config.exportPdf_appId = 'cke4-demo-docs';
 		</script>
+		<script src="assets/pastefromoffice/pastefromoffice.js"></script>
+
 	</section>
 </section>
 

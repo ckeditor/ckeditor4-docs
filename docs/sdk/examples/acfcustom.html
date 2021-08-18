@@ -64,7 +64,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			</script>
 
 			<script data-sample="1">
-				CKEDITOR.replace( 'editor1' );
+				CKEDITOR.replace( 'editor1', {
+					removeButtons: 'PasteFromWord'
+				} );
 			</script>
 
 			<h2>Custom ACF Mode</h2>
@@ -133,6 +135,7 @@ span{!font-family};span{!color};span(!marker);
 			</p>
 			<script data-sample="2">
 				CKEDITOR.replace( 'editor2', {
+					removeButtons: 'PasteFromWord',
 					allowedContent:
 							'h1 h2 h3 p blockquote strong em;' +
 							'a[!href];' +
@@ -144,6 +147,7 @@ span{!font-family};span{!color};span(!marker);
 							'del ins'
 				} );
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 			<h2>Related Features</h2>
 

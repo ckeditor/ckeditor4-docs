@@ -151,7 +151,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				// Replace the <textarea id="editor1"> with a CKEditor 4 instance.
 				// A reference to the editor object is returned by CKEDITOR.replace() allowing you to work with editor instances.
 				var editor = CKEDITOR.replace( 'editor1', {
-					height: 150
+					height: 150,
+					removeButtons: 'PasteFromWord'
 				} );
 
 				// Attaching event listeners to CKEditor 4 instances.
@@ -168,6 +169,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					ShowMessage( 'The number of changes in <em>' + this.name + '</em>: <b>' + ++changesNum + '</b>.' );
 				});
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 			<p id="eMessage" data-sample="1"></p>
 

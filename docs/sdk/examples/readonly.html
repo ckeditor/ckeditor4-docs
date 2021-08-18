@@ -34,28 +34,29 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<section class="sdk-contents">
 			<script data-sample="1">
 				var editor;
-		
+
 				// The instanceReady event is fired when an instance of CKEditor 4 has finished
 				// its initialization.
 				CKEDITOR.on( 'instanceReady', function ( ev ) {
 					editor = ev.editor;
-		
+
 					// Show this "on" button.
 					document.getElementById( 'readOnlyOn' ).style.display = '';
-		
+
 					// Event fired when the readOnly property changes.
 					editor.on( 'readOnly', function () {
 						document.getElementById( 'readOnlyOn' ).style.display = this.readOnly ? 'none' : '';
 						document.getElementById( 'readOnlyOff' ).style.display = this.readOnly ? '' : 'none';
 					} );
 				} );
-		
+
 				function toggleReadOnly( isReadOnly ) {
 					// Change the read-only state of the editor.
 					// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-setReadOnly
 					editor.setReadOnly( isReadOnly );
 				}
 			</script>
+
 			<h1>Read-Only Mode <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/readonly.html">Documentation</a></h1>
 
 			<p>
@@ -98,6 +99,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Pacific_Ocean&quot; title=&quot;Pacific Ocean&quot;&gt;Pacific Ocean&lt;/a&gt; on July 24.&lt;/p&gt; &lt;hr/&gt; &lt;p style=&quot;text-align:
 				right;&quot;&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 			</textarea>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 		</section>
 	</section>

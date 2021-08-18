@@ -93,7 +93,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				var config = {
 					extraPlugins: 'codesnippet',
 					codeSnippet_theme: 'monokai_sublime',
-					height: 356
+					height: 356,
+					removeButtons: 'PasteFromWord'
 				};
 
 				CKEDITOR.replace( 'editor1', config );
@@ -138,6 +139,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						CKEDITOR.document.getById( 'ie8-warning' ).addClass( 'tip alert' );
 				}() );
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 		</section>
 	</section>

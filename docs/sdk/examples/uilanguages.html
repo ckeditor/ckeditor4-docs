@@ -133,7 +133,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 								languages.value = this.langCode;
 								languages.disabled = false;
 							}
-						}
+						},
+						removeButtons: 'PasteFromWord'
 					} );
 				}
 
@@ -145,10 +146,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script type="template" data-sample="1">
 			&lt;script&gt;
 				CKEDITOR.replace( 'editor1', {
-					language: 'es'
+					language: 'es',
+					removeButtons: 'PasteFromWord'
 				} );
 			&lt;/script&gt;
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 		</section>
 	</section>

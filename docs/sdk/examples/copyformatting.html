@@ -245,7 +245,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					height: 255,
 					// Add Copy Formatting and Color Button (Text and Background Color features) plugins.
 					// Color Button is only added just to show that text and background colors can be copied, too.
-					extraPlugins: 'copyformatting,colorbutton'
+					extraPlugins: 'copyformatting,colorbutton',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
@@ -254,7 +255,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					height: 450,
 					// Add Copy Formatting and Color Button (Text and Background Color features) plugins.
 					// Color Button is only added just to show that text and background colors can be copied, too.
-					extraPlugins: 'copyformatting,colorbutton'
+					extraPlugins: 'copyformatting,colorbutton',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
@@ -265,9 +267,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Only allow Copy Formatting in plain text context.
 					copyFormatting_allowedContexts: [ 'text' ],
 					// Only allow Copy Formatting for bold.
-					copyFormatting_allowRules: 'strong;'
+					copyFormatting_allowRules: 'strong;',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 		</section>
 	</section>

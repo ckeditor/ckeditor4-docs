@@ -112,11 +112,17 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			</ul>
 
 			<script data-sample="1">
-				CKEDITOR.replace( 'editor1' );
+				CKEDITOR.replace( 'editor1', {
+					removeButtons: 'PasteFromWord'
+				} );
 			</script>
 			<script data-sample="2">
-				CKEDITOR.inline( 'editor2' );
+				CKEDITOR.inline( 'editor2', {
+					removeButtons: 'PasteFromWord'
+				} );
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
+
 		</section>
 	</section>
 

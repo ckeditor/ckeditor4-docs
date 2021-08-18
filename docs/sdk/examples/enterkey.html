@@ -46,7 +46,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					editor = CKEDITOR.replace( 'editor1', {
 						height: 120,
 						enterMode: Number( document.getElementById( 'xEnter' ).value ),
-						shiftEnterMode: Number( document.getElementById( 'xShiftEnter' ).value )
+						shiftEnterMode: Number( document.getElementById( 'xShiftEnter' ).value ),
+						removeButtons: 'PasteFromWord'
 					});
 				}
 
@@ -119,10 +120,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Pressing Enter will create a new &lt;div&gt; element.
 					enterMode: CKEDITOR.ENTER_DIV,
 					// Pressing Shift+Enter will create a new &lt;p&gt; element.
-					shiftEnterMode: CKEDITOR.ENTER_P
+					shiftEnterMode: CKEDITOR.ENTER_P,
+					removeButtons: 'PasteFromWord'
 				} );
 			&lt;/script&gt;
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 		</section>
 	</section>

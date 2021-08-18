@@ -81,7 +81,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script data-sample="1">
 				var editor1 = CKEDITOR.replace( 'editor1', {
 					extraAllowedContent : 'div',
-					height: 460
+					height: 460,
+					removeButtons: 'PasteFromWord'
 				} );
 				editor1.on('instanceReady', function() {
 					// Output self-closing tags the HTML4 way, like <br>.
@@ -102,6 +103,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					this.setMode('source');
 				});
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 			<h2>Related Features</h2>
 

@@ -124,10 +124,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						removePlugins: 'uploadimage,uploadwidget,uploadfile,filetools,filebrowser',
 						height: 320,
 						// Update the ACF configuration with MathML syntax.
-						extraAllowedContent: mathElements.join( ' ' ) + '(*)[*]{*};img[data-mathml,data-custom-editor,role](Wirisformula)'
+						extraAllowedContent: mathElements.join( ' ' ) + '(*)[*]{*};img[data-mathml,data-custom-editor,role](Wirisformula)',
+						removeButtons: 'PasteFromWord'
 					} );
 				}() );
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 		</section>
 	</section>

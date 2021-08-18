@@ -78,9 +78,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				CKEDITOR.plugins.addExternal( 'abbr', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/abbr/', 'plugin.js' );
 
 				CKEDITOR.replace( 'editor1', {
-					extraPlugins: 'abbr'
+					extraPlugins: 'abbr',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
+		<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 		</section>
 	</section>

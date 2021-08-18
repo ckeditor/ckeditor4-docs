@@ -57,13 +57,15 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				CKEDITOR.replace( 'editor1', {
 					extraPlugins: 'mathjax',
 					mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML',
-					height: 320
+					height: 320,
+					removeButtons: 'PasteFromWord'
 				} );
 
 				if ( CKEDITOR.env.ie && CKEDITOR.env.version == 8 ) {
 					document.getElementById( 'ie8-warning' ).className = 'tip alert';
 				}
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 
 			<p id="ie8-warning">
 				Please note that this plugin is not compatible with Internet Explorer 8.

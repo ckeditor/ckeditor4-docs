@@ -135,7 +135,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Limit the number of suggestions available in the context menu.
 					scayt_maxSuggestions: 3,
 					scayt_customerId: '1:Eebp63-lWHbt2-ASpHy4-AYUpy2-fo3mk4-sKrza1-NsuXy4-I1XZC2-0u2F54-aqYWd1-l3Qf14-umd',
-					scayt_sLang: 'en_US'
+					scayt_sLang: 'en_US',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
@@ -145,7 +146,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Remove the SpellCheckAsYouType (SCAYT) plugin.
 					removePlugins: 'scayt',
 					// Add the WebSpellChecker plugin.
-					extraPlugins: 'wsc'
+					extraPlugins: 'wsc',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
@@ -168,7 +170,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						instanceReady: function( evt ) {
 							evt.editor.container.findOne( 'iframe' ).addClass( 'cke_wproofreader' );
 						}
-					}
+					},
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
@@ -177,9 +180,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					height: 250,
 					// Remove the SpellCheckAsYouType (SCAYT) plugin.
 					removePlugins: 'scayt',
-					disableNativeSpellChecker: false
+					disableNativeSpellChecker: false,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
+
 		</section>
 	</section>
 

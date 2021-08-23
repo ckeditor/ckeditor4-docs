@@ -1,4 +1,9 @@
-var sources = [
+/**
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
+ */
+
+ var sources = [
     {
         name: 'Google Docs',
         link: 'pastefromgoogledocs.html',
@@ -28,46 +33,53 @@ var sources = [
         isAlreadyShow: false
     }
 ];
-var instances = getInstances();
-// A state variable that indicates if the clipboard notification has been seen.
-// We use the variable for displaying the notification only once per demo.
-let hasNotificationBeenSeen = false;
 
-instances.forEach( function ( instanceName ) {
-    var editor = CKEDITOR.instances[ instanceName ];
+CKEDITOR.on( 'instanceReady', function( evt ) {
+	var editor = evt.editor;
 
-    if ( !editor ){
-        return;
-    }
+	editor.on( 'paste', function( evt ) {
+		var pasteData = getClipboardData( evt.data, 'text/html' );
 
-    editor.on( 'instanceReady', function() {
-        editor.on( 'paste', function( evt ) {
-            var pasteData = CKEDITOR.plugins.pastetools.getClipboardData( evt.data, 'text/html' );
+		if( !pasteData ){
+			return;
+		}
 
-            if( !pasteData ){
-                return;
-            }
+		for ( var i = 0; i < sources.length; i++ ) {
+			var source = sources[ i ];
 
-            var sourceIndex = getPastedSourceIndex( pasteData );
-            // Show notification only once per pasted source format ( Word, Excel ).
-            if( sourceIndex !== -1 && !hasNotificationBeenSeen && !sources[ sourceIndex ].isAlreadyShow ) {
-                var notice = document.querySelector('.main__notification.notice');
+			if( source.regex.test( pasteData ) && !sources[ i ].isAlreadyShow ) {
+				var notice = document.querySelector( '.main__notification.notice' );
 
-                // Remove notification when user trying to paste content from other source than previous. e.g. Word and Excel.
-                if( notice ){
-                    notice.remove();
-                }
+				// Remove notification when user trying to paste content from other source than previous. e.g. Word and Excel.
+				if( notice ){
+					notice.remove();
+				}
 
-                createClipboardInputNotification( sourceIndex );
-                sources[ sourceIndex ].isAlreadyShow = true;
-            }
-        } );
-    } );
+				createClipboardInputNotification( i );
+				sources[ i ].isAlreadyShow = true;
+				break;
+			}
+		}
+	}, null, null, 9 );
 } );
 
-function getInstances() {
-    return CKEDITOR.tools.object.keys( CKEDITOR.instances );
-};
+function getClipboardData( data, type ) {
+	var dataTransfer;
+
+	if ( !CKEDITOR.plugins.clipboard.isCustomDataTypesSupported && type !== 'text/html' ) {
+		return null;
+	}
+
+	dataTransfer = data.dataTransfer.getData( type, true );
+
+	// Some commands fire paste event without setting dataTransfer property. In such case
+	// dataValue should be used for retrieving HTML.
+	if ( !dataTransfer && type === 'text/html' ) {
+		return data.dataValue;
+	}
+
+	return dataTransfer;
+}
 
 function getProperWordRegex() {
     if( CKEDITOR.env.ie ){
@@ -75,18 +87,6 @@ function getProperWordRegex() {
     }
 
     return CKEDITOR.env.safari ? /xmlns:o="urn:schemas-microsoft-com/i : /<meta\s*name="?generator"?\s*content="?microsoft\s*word\s*\d+"?\/?>/i;
-};
-
-function getPastedSourceIndex( htmlString ){
-    var sourceIndex = -1;
-
-    sources.forEach( function ( source, index ) {
-        if( source.regex.test( htmlString ) ){
-            sourceIndex = index;
-        }
-    } );
-
-    return sourceIndex;
 };
 
 // During building the docs all extra links from the head tag are removed, so we need to add it dynamically.

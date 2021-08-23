@@ -39,7 +39,6 @@ CKEDITOR.on( 'instanceReady', function( evt ) {
 
 	editor.on( 'paste', function( evt ) {
 		var pasteData = getClipboardData( evt.data, 'text/html' );
-
 		if( !pasteData ){
 			return;
 		}
@@ -126,12 +125,11 @@ window.createNotification = function( title, message ) {
     var notification = document.createElement( 'div' );
     var close = document.createElement( 'button' );
 
-    close.classList.add( 'main__notification-close' );
+    close.className += 'main__notification-close';
     close.innerText = '✕';
     close.setAttribute( 'aria-label', 'Close the notification' );
 
-    notification.classList.add( 'main__notification' );
-    notification.classList.add( 'notice' );
+    notification.className += 'main__notification notice';
     notification.innerHTML = notificationTemplate;
     // ATM we support only top-right position.
     notification.style.top = '110px';

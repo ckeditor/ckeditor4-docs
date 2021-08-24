@@ -159,7 +159,7 @@
 		return notification;
 	};
 
-	window.onload = function () {
+	window.onload = function() {
 		injectStyle();
 	};
-} )( );
+} )();

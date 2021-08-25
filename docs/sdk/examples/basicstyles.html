@@ -154,12 +154,14 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./colorbutton.html">Styling and Formatting &ndash; Setting Text and Background Color</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: 200,
 					// By default, some basic text styles buttons are removed in the Standard preset.
 					// The code below resets the default config.removeButtons setting.
-					removeButtons: ''
+					removeButtons: '',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
@@ -169,6 +171,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// By default, some basic text styles buttons are removed in the Standard preset.
 					// The code below resets the default config.removeButtons setting.
 					removeButtons: '',
+					removeButtons: 'PasteFromWord',
 					// Custom style definition for the Bold feature.
 					coreStyles_bold: { element: 'b', overrides: 'strong' },
 					// Custom style definition for the Italic feature.

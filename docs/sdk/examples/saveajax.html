@@ -33,31 +33,33 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
+
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				var editor1, html = '';
-		
+
 				function createEditor() {
 					if ( editor1 )
 						return;
-		
+
 					// Create a new editor instance inside the <div id="editor"> element,
 					// setting its value to html.
 					var config = {};
 					editor1 = CKEDITOR.appendTo( 'editor1', config, html );
-		
+
 					// Update button states.
 					document.getElementById( 'remove' ).style.display = '';
 					document.getElementById( 'create' ).style.display = 'none';
 				}
-		
+
 				function removeEditor() {
 					if ( !editor1 )
 						return;
-		
+
 					// Retrieve the editor content. In an Ajax application this data would be
 					// sent to the server or used in any other way.
 					html = editor1.getData();
-		
+
 					// Update <div> with "Edited Content".
 					document.getElementById( 'editorcontent1' ).innerHTML = html;
 					// Show <div> with "Edited Content".
@@ -65,7 +67,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Update button states.
 					document.getElementById( 'remove' ).style.display = 'none';
 					document.getElementById( 'create' ).style.display = '';
-		
+
 					// Destroy the editor.
 					editor1.destroy();
 					editor1 = null;
@@ -135,7 +137,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				(function () {
 					var changesCount = 0;
 					var editor2 = CKEDITOR.replace( 'editor2', {
-						removePlugins: 'sourcearea'
+						removePlugins: 'sourcearea',
+						removeButtons: 'PasteFromWord'
 
 					} );
 					editor2.on( 'change', function ( ev ) {
@@ -146,6 +149,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					} );
 				})();
 			</script>
+
 		</section>
 	</section>
 

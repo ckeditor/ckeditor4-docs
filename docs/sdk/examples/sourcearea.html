@@ -110,6 +110,7 @@ config.extraPlugins = &amp;#39;sourcedialog&amp;#39;;
 config.removePlugins = &amp;#39;sourcearea&amp;#39;;&lt;/pre&gt;
 			</textarea>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				// We need to turn off the automatic editor creation first.
 				CKEDITOR.disableAutoInline = true;
@@ -123,7 +124,8 @@ config.removePlugins = &amp;#39;sourcearea&amp;#39;;&lt;/pre&gt;
 
 				CKEDITOR.inline( 'editor2', {
 					extraPlugins: 'sourcedialog',
-					removePlugins: 'sourcearea'
+					removePlugins: 'sourcearea',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
@@ -133,7 +135,8 @@ config.removePlugins = &amp;#39;sourcearea&amp;#39;;&lt;/pre&gt;
 
 				CKEDITOR.replace( 'editor3', {
 					extraPlugins: 'sourcedialog',
-					removePlugins: 'sourcearea'
+					removePlugins: 'sourcearea',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

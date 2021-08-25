@@ -147,11 +147,13 @@ for each item in sequence S
 				<li><a href="./acf.html">Content Filtering &ndash; Advanced Content Filter &ndash; Automatic Mode</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: 280,
 					// List of text formats available for this editor instance.
-					format_tags: 'p;h1;h2;h3;h4;h5;h6;pre;address;div'
+					format_tags: 'p;h1;h2;h3;h4;h5;h6;pre;address;div',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
@@ -169,7 +171,8 @@ for each item in sequence S
 					// Custom Heading 1 and Formatted format definitions.
 					format_h1: { element: 'h1', attributes: { 'class': 'contentHeader1' } },
 					format_h2: { element: 'h2', attributes: { 'class': 'contentHeader2' } },
-					format_pre: { element: 'pre', attributes: { 'class': 'formattedCode' } }
+					format_pre: { element: 'pre', attributes: { 'class': 'formattedCode' } },
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

@@ -56,6 +56,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<textarea cols="110" rows="3" class="disabled" id="samplehmtl">&lt;p&gt;A sample &lt;u&gt;heavily formatted text&lt;/u&gt; using &lt;strong&gt;&lt;span style="font-family: 'Comic Sans MS';font-size:16px"&gt;different fonts&lt;/span&gt;&lt;/strong&gt; and &lt;span style="font-size:18px;color:#00FF00;background-color: #FFFF00"&gt;text colors&lt;/span&gt;. &lt;/p&gt;</textarea>
 		</div>
 
+		<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 		<script data-sample="1,2,3">
 			// ACF is enabled by default regardless whether toolbar configuration is provided or not.
 			// By having a smaller number of features enabled in the toolbar it should be easier to understand how ACF works.
@@ -90,7 +91,9 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 		<textarea cols="80" id="editor1" name="editor1" rows="10" data-sample="1">&lt;p&gt;A sample &lt;u&gt;heavily formatted text&lt;/u&gt; using &lt;strong&gt;&lt;span style="font-family: 'Comic Sans MS';font-size:16px"&gt;different fonts&lt;/span&gt;&lt;/strong&gt; and &lt;span style="font-size:18px;color:#00FF00;background-color: #FFFF00"&gt;text colors&lt;/span&gt;. &lt;/p&gt;</textarea>
 		<script data-sample="1">
-			CKEDITOR.replace( 'editor1' );
+			CKEDITOR.replace( 'editor1', {
+				removeButtons: 'PasteFromWord'
+			} );
 		</script>
 
 		<h2>Adjusting Automatic ACF Mode</h2>
@@ -110,7 +113,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<script data-sample="2">
 
 			CKEDITOR.replace( 'editor2', {
-				extraAllowedContent: 'u;span{color}'
+				extraAllowedContent: 'u;span{color}',
+				removeButtons: 'PasteFromWord'
 			} );
 
 		</script>
@@ -124,12 +128,13 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		</p>
 
 		<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3">&lt;p&gt;A sample &lt;u&gt;heavily formatted text&lt;/u&gt;, using &lt;strong&gt;&lt;span style="font-family: 'Comic Sans MS';font-size:16px"&gt;different fonts&lt;/span&gt;&lt;/strong&gt; and &lt;span style="font-size:18px;color:#00FF00;background-color: #FFFF00"&gt;text colors&lt;/span&gt;. &lt;/p&gt;</textarea>
+
 		<script data-sample="3">
 			CKEDITOR.replace( 'editor3', {
-				allowedContent: true
+				allowedContent: true,
+				removeButtons: 'PasteFromWord'
 			} );
 		</script>
-
 		<h2>Related Features</h2>
 
 		<ul>

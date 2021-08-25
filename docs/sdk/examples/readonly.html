@@ -32,33 +32,30 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		<nav class="sdk-sidebar">
 		</nav>
 		<section class="sdk-contents">
-
-			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				var editor;
-
+		
 				// The instanceReady event is fired when an instance of CKEditor 4 has finished
 				// its initialization.
 				CKEDITOR.on( 'instanceReady', function ( ev ) {
 					editor = ev.editor;
-
+		
 					// Show this "on" button.
 					document.getElementById( 'readOnlyOn' ).style.display = '';
-
+		
 					// Event fired when the readOnly property changes.
 					editor.on( 'readOnly', function () {
 						document.getElementById( 'readOnlyOn' ).style.display = this.readOnly ? 'none' : '';
 						document.getElementById( 'readOnlyOff' ).style.display = this.readOnly ? '' : 'none';
 					} );
 				} );
-
+		
 				function toggleReadOnly( isReadOnly ) {
 					// Change the read-only state of the editor.
 					// https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_editor.html#method-setReadOnly
 					editor.setReadOnly( isReadOnly );
 				}
 			</script>
-
 			<h1>Read-Only Mode <a class="documentation" href="https://ckeditor.com/docs/ckeditor4/latest/features/readonly.html">Documentation</a></h1>
 
 			<p>

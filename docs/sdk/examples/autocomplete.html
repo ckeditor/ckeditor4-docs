@@ -101,7 +101,6 @@
 					<li><a href="./mentions.html">Working with Document &ndash; Mentions, Tags and Emoji</a></li>
 				</ul>
 
-				<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 				<script data-sample="1" >
 					var PLACEHOLDERS = [
 						{
@@ -165,9 +164,9 @@
 							description: 'Technician which will handle this ticket.'
 						}
 					];
-
+			
 					CKEDITOR.addCss( 'span > .cke_placeholder { background-color: #ffeec2; }' );
-
+			
 					CKEDITOR.replace( 'editor1', {
 						plugins: 'autocomplete,textmatch,toolbar,wysiwygarea,basicstyles,link,undo,placeholder',
 						toolbar: [
@@ -182,66 +181,65 @@
 										'<div><i>{description}</i></div>' +
 									'</li>',
 									outputTemplate = '[[{title}]]<span>&nbsp;</span>';
-
+		
 								var autocomplete = new CKEDITOR.plugins.autocomplete( evt.editor, {
 									textTestCallback: textTestCallback,
 									dataCallback: dataCallback,
 									itemTemplate: itemTemplate,
 									outputTemplate: outputTemplate
 								} );
-
+		
 								// Override default getHtmlToInsert to enable rich content output.
 								autocomplete.getHtmlToInsert = function( item ) {
 									return this.outputTemplate.output( item );
 								}
 							}
-						},
-						removeButtons: 'PasteFromWord'
+						}
 					} );
-
+		
 					function textTestCallback( range ) {
 						if ( !range.collapsed ) {
 							return null;
 						}
-
+		
 						return CKEDITOR.plugins.textMatch.match( range, matchCallback );
 					}
-
+		
 					function matchCallback( text, offset ) {
 						var pattern = /\[{2}([A-z]|\])*$/,
 							match = text.slice( 0, offset )
 							.match( pattern );
-
+		
 						if ( !match ) {
 							return null;
 						}
-
+		
 						return {
 							start: match.index,
 							end: offset
 						};
 					}
-
+		
 					function dataCallback( matchInfo, callback ) {
 						var data = PLACEHOLDERS.filter( function( item ) {
 							var itemName = '[[' + item.name + ']]';
 							return itemName.indexOf( matchInfo.query.toLowerCase() ) == 0;
 						} );
-
+		
 						callback( data );
 					}
 				</script>
-
+			
 				<script>
 					var templates = CKEDITOR.document.findOne( '.templates' ),
 						list = new CKEDITOR.dom.element( 'ul' );
-
+		
 					CKEDITOR.tools.array.forEach( PLACEHOLDERS, function( placeholder ) {
 						var item = new CKEDITOR.dom.element( 'li' );
 						item.setHtml( '<code>' + placeholder.name + '</code>' );
 						list.append( item );
 					} );
-
+		
 					templates.append( list );
 				</script>
 			</section>

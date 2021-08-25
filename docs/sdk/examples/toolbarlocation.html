@@ -78,14 +78,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./sharedspace.html">Editor UI &ndash; Shared Toolbar and Bottom Bar</a></li>
 			</ul>
 
-			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					toolbarLocation: 'bottom',
 					// Remove some plugins that would conflict with the bottom
 					// toolbar position.
-					removePlugins: 'elementspath,resize',
-					removeButtons: 'PasteFromWord'
+					removePlugins: 'elementspath,resize'
 				} );
 			</script>
 

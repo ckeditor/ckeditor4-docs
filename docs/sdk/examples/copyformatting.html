@@ -240,14 +240,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./colorbutton.html">Styling and Formatting &ndash; Setting Text and Background Color</a></li>
 			</ul>
 
-			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: 255,
 					// Add Copy Formatting and Color Button (Text and Background Color features) plugins.
 					// Color Button is only added just to show that text and background colors can be copied, too.
-					extraPlugins: 'copyformatting,colorbutton',
-					removeButtons: 'PasteFromWord'
+					extraPlugins: 'copyformatting,colorbutton'
 				} );
 			</script>
 
@@ -256,8 +254,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					height: 450,
 					// Add Copy Formatting and Color Button (Text and Background Color features) plugins.
 					// Color Button is only added just to show that text and background colors can be copied, too.
-					extraPlugins: 'copyformatting,colorbutton',
-					removeButtons: 'PasteFromWord'
+					extraPlugins: 'copyformatting,colorbutton'
 				} );
 			</script>
 
@@ -268,8 +265,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Only allow Copy Formatting in plain text context.
 					copyFormatting_allowedContexts: [ 'text' ],
 					// Only allow Copy Formatting for bold.
-					copyFormatting_allowRules: 'strong;',
-					removeButtons: 'PasteFromWord'
+					copyFormatting_allowRules: 'strong;'
 				} );
 			</script>
 

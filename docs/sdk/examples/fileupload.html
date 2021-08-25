@@ -131,7 +131,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./draganddrop.html">API Usage &ndash; Drag and Drop Integration</a></li>
 			</ul>
 
-			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: 300,
@@ -140,8 +139,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					filebrowserBrowseUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/ckfinder.html',
 					filebrowserImageBrowseUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/ckfinder.html?type=Images',
 					filebrowserUploadUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Files',
-					filebrowserImageUploadUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Images',
-					removeButtons: 'PasteFromWord'
+					filebrowserImageUploadUrl: '/apps/ckfinder/{%CKFINDER_VERSION%}/core/connector/php/connector.php?command=QuickUpload&type=Images'
 				} );
 			</script>
 
@@ -177,8 +175,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// resizer (because image size is controlled by widget styles or the image takes maximum
 					// 100% of the editor width).
 					image2_alignClasses: [ 'image-align-left', 'image-align-center', 'image-align-right' ],
-					image2_disableResizer: true,
-					removeButtons: 'PasteFromWord'
+					image2_disableResizer: true
 				} );
 			</script>
 

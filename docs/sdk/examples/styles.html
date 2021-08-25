@@ -171,17 +171,19 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./colorbutton.html">Styling and Formatting &ndash; Setting Text and Background Color</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					extraPlugins: 'widget',
-					height: 300
+					height: 300,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 
 			<script data-sample="2">
 				CKEDITOR.replace( 'editor2', {
 					extraPlugins: 'autoembed,embedsemantic,image2,mathjax,codesnippet,font',
-					removeButtons: 'Font',
+					removeButtons: 'Font, PasteFromWord',
 					height: 300,
 					mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML'
 				} );
@@ -198,7 +200,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					],
 
 					// Do not load the default Styles configuration.
-					stylesSet: []
+					stylesSet: [],
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

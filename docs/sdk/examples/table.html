@@ -175,10 +175,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./spreadsheets.html">Inserting Content &ndash; Creating Data Grids with Spreadsheet Plugin</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					extraPlugins: 'colordialog,tableresize',
-					height: 470
+					height: 470,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

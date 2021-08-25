@@ -78,13 +78,10 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<div class="tip">
 				<p>Numerous configuration options are available to control the HTML markup (tags, attributes, styles) produced by specific CKEditor 4 features (e.g. <code><a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html#cfg-coreStyles_bold">config.coreStyles_bold</a></code> for the <strong>Bold</strong> button) or the sort of HTML code that is allowed in the editor (see <a href="./acf.html">Advanced Content Filter</a>). Features mentioned in this sample are strictly associated with generic HTML source code formatting. Going carefully through the list of <a href="https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html">all CKEditor 4 configuration options</a> might help you get familiar with what is possible with CKEditor 4 WYSIWYG editor.</p>
 			</div>
-
-			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				var editor1 = CKEDITOR.replace( 'editor1', {
 					extraAllowedContent : 'div',
-					height: 460,
-					removeButtons: 'PasteFromWord'
+					height: 460
 				} );
 				editor1.on('instanceReady', function() {
 					// Output self-closing tags the HTML4 way, like <br>.

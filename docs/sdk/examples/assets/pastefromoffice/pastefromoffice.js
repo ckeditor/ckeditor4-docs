@@ -90,17 +90,6 @@
 		return CKEDITOR.env.safari ? /xmlns:o="urn:schemas-microsoft-com/i : /<meta\s*name="?generator"?\s*content="?microsoft\s*word\s*\d+"?\/?>/i;
 	};
 
-	// During building the docs all extra links from the head tag are removed, so we need to add it dynamically.
-	function injectStyle() {
-		var style = document.createElement( 'link' );
-
-		style.type = 'text/css';
-		style.rel = 'stylesheet';
-		style.href = 'assets/pastefromoffice/contents.css';
-
-		document.getElementsByTagName( 'head' )[ 0 ].appendChild( style );
-	};
-
 	// The notification should contain the links to the demos where user can test rich formatting from.
 	function createClipboardInputNotification( source ) {
 		var title = 'Hello!';
@@ -157,9 +146,5 @@
 		} );
 
 		return notification;
-	};
-
-	window.onload = function() {
-		injectStyle();
 	};
 } )();

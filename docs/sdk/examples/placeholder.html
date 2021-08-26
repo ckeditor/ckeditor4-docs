@@ -57,10 +57,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./styles.html#widget-styles">Styling and Formatting &ndash; Applying Styles to Editor Content</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					extraPlugins: 'placeholder',
-					height: 220
+					height: 220,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

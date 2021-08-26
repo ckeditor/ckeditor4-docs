@@ -40,10 +40,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 			<textarea cols="10" id="editor1" name="editor1" rows="10" data-sample="1" data-sample-short></textarea>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					extraPlugins: 'editorplaceholder',
-					editorplaceholder: 'Start typing here...'
+					editorplaceholder: 'Start typing here...',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

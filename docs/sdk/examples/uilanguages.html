@@ -64,6 +64,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<h2>Available Localizations</h2>
 			<p>
 				The following <strong><span id="count"> </span> language versions</strong> are available in CKEditor 4:<br>
+
+				<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 				<script>
 
 					document.write( '<select disabled="disabled" id="languages" onchange="createEditor( this.value );">' );
@@ -133,7 +135,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 								languages.value = this.langCode;
 								languages.disabled = false;
 							}
-						}
+						},
+						removeButtons: 'PasteFromWord'
 					} );
 				}
 
@@ -145,7 +148,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script type="template" data-sample="1">
 			&lt;script&gt;
 				CKEDITOR.replace( 'editor1', {
-					language: 'es'
+					language: 'es',
+					removeButtons: 'PasteFromWord'
 				} );
 			&lt;/script&gt;
 			</script>

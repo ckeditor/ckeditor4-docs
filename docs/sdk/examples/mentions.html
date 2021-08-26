@@ -191,6 +191,7 @@
 					<li><a href="./autocomplete.html">Working with Document &ndash; Autocomplete</a></li>
 				</ul>
 
+				<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 				<script data-sample="1" >
 					var users = [
 						{ id: 1, avatar: 'm_1', fullname: 'Charles Flores', username: 'cflores' },
@@ -281,7 +282,7 @@
 					];
 
 				CKEDITOR.replace( 'editor1', {
-					plugins: 'mentions,emoji,basicstyles,undo,link,wysiwygarea,toolbar',
+					plugins: 'mentions,emoji,basicstyles,undo,link,wysiwygarea,toolbar, pastefromgdocs, pastefromlibreoffice, pastefromword',
 					contentsCss: [
 						CKEDITOR.basePath + 'contents.css',
 						'assets/mentions/contents.css'
@@ -310,7 +311,8 @@
 							outputTemplate: '<a href="https://example.com/social?tag={name}">{name}</a><span>&nbsp;</span>',
 							minChars: 1
 						}
-					]
+					],
+					removeButtons: 'PasteFromWord'
 				} );
 
 				function dataFeed( opts, callback ) {
@@ -336,6 +338,7 @@
 						} );
 					} );
 				</script>
+
 			</section>
 		</section>
 

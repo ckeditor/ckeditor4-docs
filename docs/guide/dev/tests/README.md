@@ -19,7 +19,7 @@ An advanced project like CKEditor 4 could not exist without a set of automated t
 To run CKEditor 4 tests you will need [Bender.js](https://github.com/benderjs/benderjs). Before you start installing Bender.js make sure that:
 
 * you installed [Git](http://git-scm.com/),
-* you installed the latest version of [Node.js](http://nodejs.org/),
+* you installed [Node.js](http://nodejs.org/) version 10 (Bender could work incorrectly with newer versions),
 * you have administrative rights &mdash; needed to install Bender.js globally.
 
 First, you need to install globally the [Bender.js command line interface](https://github.com/benderjs/benderjs-cli). To do so, open the console and use `npm install`:

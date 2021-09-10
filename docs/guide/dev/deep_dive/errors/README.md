@@ -102,6 +102,12 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 	* `plugin`: The name of the plugin that cannot be removed.
 	* `requiredBy`: The name of the plugin whose requirements block the removal.
 
+## editor-plugin-deprecated
+
+* Location: `plugins/flash/plugin.js`
+* Description: Flash plugin has been removed from CKEditor since 4.17.0 and is no longer available.
+* Additional data: None.
+
 ## embed-no-provider-url
 * Location: `plugins/embed/plugin.js`
 * Description: No {@linkapi CKEDITOR.config#embed_provider embed provider URL} configured. Since CKEditor 4.7.0 this value is empty by default.

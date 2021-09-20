@@ -47,7 +47,7 @@ Please note that the version installed via npm uses backend services provided by
 
 To be able to use the plugin, the editor must allow to include MathML syntax via the {@link guide/dev/acf/README Advanced Content Filter} mechanism.
 
-If the editor has been configured to use custom configuration of the {@linkapi CKEDITOR.config#toolbarGroups config.toolbarGroups} option, make sure to add `others` toolbar definition object, as it's required by the MathType plugin. See {@link features/toolbarconcepts/README#toolbar-groups-configuration Toolbar Groups Configuration} guide to learn more.
+If the editor has been configured to use custom configuration of the {@linkapi CKEDITOR.config#toolbarGroups config.toolbarGroups} option, make sure to add the `others` toolbar definition object, as it is required by the MathType plugin. See the {@link features/toolbarconcepts/README#toolbar-groups-configuration Toolbar Groups Configuration} guide to learn more.
 
 <info-box info="">
 	At the moment the MathType plugin is not compatible with the {@link guide/dev/integration/file_browse_upload/file_upload/README official file upload integration for CKEditor 4}. File upload capabilities must be disabled with the {@linkapi CKEDITOR.config.removePlugins `config.removePlugins`} configuration option to allow the use of MathType.

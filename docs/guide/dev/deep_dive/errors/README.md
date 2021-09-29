@@ -102,6 +102,13 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 	* `plugin`: The name of the plugin that cannot be removed.
 	* `requiredBy`: The name of the plugin whose requirements block the removal.
 
+## editor-plugin-deprecated
+
+* Location: `core/editor.js`
+* Description: The plugin has been deprecated and should no longer be used.
+* Additional data:
+	* `plugin`: The name of the plugin that has been deprecated.
+
 ## embed-no-provider-url
 * Location: `plugins/embed/plugin.js`
 * Description: No {@linkapi CKEDITOR.config#embed_provider embed provider URL} configured. Since CKEditor 4.7.0 this value is empty by default.

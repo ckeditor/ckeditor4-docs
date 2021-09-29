@@ -104,9 +104,10 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 
 ## editor-plugin-deprecated
 
-* Location: `plugins/flash/plugin.js`
-* Description: Flash plugin has been removed from CKEditor since 4.17.0 and is no longer available.
-* Additional data: None.
+* Location: `core/editor.js`
+* Description: The plugin has been deprecated and should no longer be used.
+* Additional data:
+	* `plugin`: The name of the plugin that has been deprecated.
 
 ## embed-no-provider-url
 * Location: `plugins/embed/plugin.js`

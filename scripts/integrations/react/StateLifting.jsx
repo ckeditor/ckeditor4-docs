@@ -9,7 +9,8 @@ const Editor = ( { dispatch, state } ) => {
 	const { editor } = useCKEditor( {
 		element,
 		dispatchEvent: dispatch,
-		subscribeTo: [ 'focus', 'change' ]
+		subscribeTo: [ 'focus', 'change' ],
+		initContent: state.data
 	} );
 
 	/**
@@ -34,7 +35,7 @@ const Editor = ( { dispatch, state } ) => {
 		}
 	}, [ setEditorData, state ] );
 
-	return <div ref={setElement} dangerouslySetInnerHTML={{ __html: state.data }} />;
+	return <div ref={setElement} />;
 }
 
 const TextAreaEditor = ( { dispatch, state } ) => {

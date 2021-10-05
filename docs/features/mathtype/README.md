@@ -137,7 +137,7 @@ If you visit a page using MathType with your mobile device, the handwriting inte
 
 ## Input and Output
 
-MathType is based upon standards like MathML for internal representation and the PNG image format for displaying formulas. It can also handle other formats like LaTeX, SVG and EPS.
+MathType is based upon standards like MathML for internal representation and the PNG image format for displaying formulas. It can also handle other formats like LaTeX, Flash, SVG and EPS.
 
 Equations and chemical formulas are displayed in the editor as {@link features/image/README images}, having all their advantages, i.e. you can **treat the entire equation as one entity** and select, delete, or move it with drag and drop in the editor content area as one unit.
 

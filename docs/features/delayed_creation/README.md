@@ -119,7 +119,7 @@ var editor = CKEDITOR.instances[ 'editorName' ];
 ```
 ### Callback approach
 
-You can get instance the same way as in [interval approach](#interval-approach-2) or inside the provided callback:
+You can get instance the same way as in [interval approach](#interval-approach) or inside the provided callback:
 ```js
 function delayedCallback( createEditor ) {
 	// createEditor() returns editor instance

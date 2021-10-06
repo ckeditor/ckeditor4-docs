@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.md or http://ckeditor.com/license.
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="The Find/Replace feature">
+	<meta name="keywords" content="ckeditor, editor, wysiwyg, text, find, replace, search">
+	<meta name="sdk-samples" content="Default basic text styles|Custom basic text styles definition">
+	<meta name="sdk-category" content="sdk-working-with-document">
+	<meta name="sdk-order" content="35">
+	<title>Basic Text Styles</title>
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:700,500,400" rel="stylesheet">
+	<link href="../template/theme/css/sdk.css" rel="stylesheet">
+	<script src="../../ckeditor4/ckeditor.js"></script>
+	<script src="assets/picoModal-2.0.1.min.js"></script>
+	<script src="assets/sample.js"></script>
+	<script src="assets/contentloaded.js"></script>
+	<script src="assets/simplesample.js"></script>
+	<script src="assets/beautify-html.js"></script>
+	<!--[if lt IE 9]>
+	<script src="assets/html5shiv.min.js"></script>
+	<![endif]-->
+	<link rel="icon" href="../template/theme/img/favicon.ico">
+</head>
+<body>
+	<header class="sdk-header">
+	</header>
+	<section class="sdk-container">
+		<nav class="sdk-sidebar">
+		</nav>
+		<section class="sdk-contents">
+			<h1>Find/Replace</h1>
+
+			<p>
+				Searching and replacing capabilities in CKEditor 4 are provided by the
+				<a href="https://ckeditor.com/cke4/addon/find">Find/Replace</a> plugin which is available for download or can be added via the Online Builder..
+			</p>
+
+			<h2>Find/Replace Demo</h2>
+
+			<p>
+				Use the sample editor below to test the feature in action.
+			</p>
+
+			<textarea cols="80" id="editor1" name="editor1" rows="40" data-sample="1" data-sample-long>
+				&lt;h2&gt;Steam locos are really useful!&lt;/h2&gt;
+				&lt;p&gt;&lt;img alt=&quot;Steam locomotives waiting at a small freight station.&quot; src=&quot;https://ckeditor.com/docs/ckeditor5/latest/assets/img/diesel_locos.jpg&quot; style=&quot;float:right; height:223px; width:300px&quot; /&gt;&lt;/p&gt;
+				&lt;p&gt;Steam locomotives waiting at a small freight station.&lt;/p&gt;
+				&lt;p&gt;A steam locomotive is one that uses a steam engine as the prime source of power to move and pull the cars.&lt;/p&gt;
+				&lt;p&gt;Steam locomotives are very popular today and can be seen working on all continents (with the exception of Antarctica maybe, where the railway network is rather scarce). Being powerful and not requiring additional technical infrastructure like their younger siblings &amp;mdash; the electric locomotives &amp;mdash; steam engines are perfect for most types of tasks.&lt;/p&gt;
+				&lt;p&gt;Steam engines can pull passenger trains, boxcars with goods, tank cars, platform wagons with wood logs... Should the conditions be tough and the load be too heavy for a single steam locomotive, that can be put together in a pair of engines. And sometimes you can even see three of four of them if the job is exceptionally demanding.&lt;/p&gt;
+				&lt;p&gt;Most national and private railway companies nowadays own or lease a multitude of steam engines, ranging from small, nimble ones used for maneuvering on the station to the bulky, large ones for the cross-continental trail.&lt;/p&gt;
+				&lt;p&gt;Steam engines also come in all shapes and all colors, making up a happy useful bunch.&lt;/p&gt;
+			</textarea>
+
+			<h2>Related Features</h2>
+			<ul>
+				<li><TBD</li>
+			</ul>
+
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
+			<script data-sample="1">
+				CKEDITOR.replace( 'editor1', {
+					height: 450,
+					// By default, some basic text styles buttons are removed in the Standard preset.
+					// The code below resets the default config.removeButtons setting.
+					removeButtons: '',
+					removeButtons: 'PasteFromWord'
+				} );
+			</script>
+
+		</section>
+	</section>
+
+	<footer class="sdk-footer">
+	</footer>
+</body>
+</html>

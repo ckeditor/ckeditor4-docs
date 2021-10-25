@@ -86,7 +86,6 @@ To use the `divarea` editor in `2.0.0` and later versions, you just need to incl
 ```html
 <ckeditor
 	data="<p>Some initial data</p>"
-	type="inline"
 	[config]="{ extraPlugins: 'divarea' }"
 ></ckeditor>
 ```
@@ -197,6 +196,30 @@ This property takes precedence over the {@linkapi CKEDITOR.config#readOnly `conf
 
 The following `@Output` properties are supported by the CKEditor 4 Angular component:
 
+### `namespaceLoaded`
+
+Fires when the {@linkapi CKEDITOR `CKEDITOR` namespace} is loaded. It only triggers once, no matter how many CKEditor 4 components are initialized. Can be used for convenient changes in the namespace, e.g. for adding external plugins:
+
+```html
+<ckeditor (namespaceLoaded)="onNamespaceLoaded($event)"></ckeditor>
+```
+
+```typescript
+import { CKEditor4 } from 'ckeditor4-angular/ckeditor';
+
+@Component( {
+	...
+} )
+export class MyComponent {
+	public onNamespaceLoaded( event: CKEditor4.EventInfo ) {
+		// Add external `placeholder` plugin which will be available for each
+		// editor instance on the page.
+		CKEDITOR.plugins.addExternal( 'placeholder', '/path/to/the/placeholder/plugin', 'plugin.js' );
+	}
+	...
+}
+```
+
 ### `ready`
 
 Fires when the editor is ready. It corresponds with the {@linkapi CKEDITOR.editor#instanceReady `editor#instanceReady`} event.
@@ -215,8 +238,7 @@ Please note that this event will only be fired when the [Undo](https://ckeditor.
 <ckeditor (change)="onChange($event)"></ckeditor>
 ```
 
-``` typescript
-
+```typescript
 import { CKEditor4 } from 'ckeditor4-angular/ckeditor';
 
 @Component( {

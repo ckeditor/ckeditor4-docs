@@ -1,29 +1,33 @@
 ---
-category: integration
-order: 40
-url: guide/dev_react
-menu-title: React Integration
-meta-title-short: React Integration
+category: react-integration
+order: 30
+url: guide/dev_react_v1
+menu-title: v1
+meta-title-short: v1
 ---
 <!--
 Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# CKEditor 4 WYSIWYG Editor React Integration
+# CKEditor 4 React Integration - v1
+
+<info-box warning="">
+	**There is a newer version of React Integration available!** This version will be receiving important fixes only. We strongly encourage everyone to migrate to {@link guide/dev/integration/react/v2/README#migration-from-v1-to-v2 v2}.
+</info-box>
 
 <info-box info="">
 	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-react"><code>ckeditor4-react</code> npm package</a>.
 </info-box>
 
-CKEditor 4 offers a native React integration through the CKEditor 4 React component. It provides deep integration of CKEditor 4 and React that lets you use the native features of the WYSIWYG editor inside a React component. The CKEditor 4 React component is compatible with React versions 16.0+.
+CKEditor 4 offers a native React integration through the CKEditor 4 React component. It provides deep integration of CKEditor 4 and React that lets you use the native features of the WYSIWYG editor inside a React component. The CKEditor 4 React component is compatible with React versions higher than v16.0.x but lower than v17.x. Although it seems to be working with React v17.x, we do not provide any support in that regard.
 
 ## Basic Usage
 
 In order to create an editor instance in React, install the `ckeditor4-react` npm package as a dependency of your project:
 
 ```plaintext
-npm install ckeditor4-react
+npm install ckeditor4-react@1
 ```
 
 After installing, the CKEditor 4 React component can be imported in your JavaScript code:
@@ -375,7 +379,3 @@ This property should be used if you need to modify the `CKEDITOR` object, e.g. a
 ```
 
 Look at [onBeforeLoad](#onbeforeload) property to compare behaviors.
-
-## CKEditor 4 React Integration Demo
-
-See the {@linkexample react working "CKEditor 4 React Integration" sample} that showcases the most important features of the integration, including choosing the editor type, configuration and events, or setting up two-way data binding.

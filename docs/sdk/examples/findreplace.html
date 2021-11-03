@@ -64,11 +64,16 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
+					plugins: 'wysiwygarea,toolbar,basicstyles,format,stylescombo,find,link,image',
 					height: 450,
-					// By default, some basic text styles buttons are removed in the Standard preset.
-					// The code below resets the default config.removeButtons setting.
-					removeButtons: '',
-					removeButtons: 'PasteFromWord'
+					toolbar: [
+						{ name: 'find', items: [ 'Find', 'Replace' ] },
+						{ name: 'document', items: [ 'Undo', 'Redo' ] },
+						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Strike' ] },
+						{ name: 'links', items: [ 'Link', 'Unlink' ] },
+						{ name: 'insert', items: [ 'Image' ] },
+						{ name: 'styles', items: [ 'Format', 'Styles' ] }
+					]
 				} );
 			</script>
 

@@ -10,15 +10,16 @@ Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
-# Using the Find/Replace Feature
+# Using the Find and Replace Feature
 
-The CKEditor 4 [Find/Replace feature](https://ckeditor.com/cke4/addon/find) allows for finding and replacing any text in the editor easily. It helps the user find words, word parts or phrases matching the case of the searched text, which is especially helpful in lengthy documents and one that may utilize certain words in different contexts. It also lets the editor replace a chosen one or all instances of the searched phrase with a single click, making tedious, repeated changes fast and easy. This may e.g. help ensuring the cohesion of an edited piece of code, while renaming a variable or a function.
+The CKEditor 4 [Find and Replace feature](https://ckeditor.com/cke4/addon/find) allows for finding and replacing any text in the editor easily. It helps the user find words, word parts or phrases matching the case of the searched text, which is especially helpful in lengthy documents and one that may utilize certain words in different contexts. It also lets the editor replace a chosen one or all instances of the searched phrase with a single click, making tedious, repeated changes fast and easy. This may e.g. help ensuring the cohesion of an edited piece of code, while renaming a variable or a function.
 
 ## Usage
-The Find/replace plugin shows a dropdown with available options available from the main toolbar. It allows to match search text based on selected criteria and replace it accordingly.
 
-{@img assets/img/find_and_replace_0.png 616 The find/replace panel.}
+The Find and Replace plugin shows a dropdown with available options available from the main toolbar. It allows to match search text based on selected criteria and replace it accordingly.
 
-## Find/Replace Demo
+{@img assets/img/find_and_replace_0.png 616 The find and replace panel.}
 
-See the {@linkexample findreplace working "Find/Replace" sample} that showcases the plugin.
+## Find and Replace Demo
+
+See the {@linkexample findreplace working "Find and Replace" sample} that showcases the plugin.

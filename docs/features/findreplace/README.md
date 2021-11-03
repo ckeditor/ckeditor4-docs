@@ -18,7 +18,7 @@ The CKEditor 4 [Find and Replace feature](https://ckeditor.com/cke4/addon/find) 
 
 The Find and Replace plugin shows a dropdown with available options available from the main toolbar. It allows to match search text based on selected criteria and replace it accordingly.
 
-You can either use the Find button to just search for specific words and phrases in the content, using search criteria, or use the Replace button to open the find and replace panel that enables the user to substitute searched text with a new one.
+You can either use the Find button to begin with the search dialog and look for specific words and phrases in the content, using search criteria, or use the Replace button to directly open the find and replace panel that enables the user to substitute searched text with a new one. You can switch between these two dialogs with a single mouse click while using the feature.
 
 {@img assets/img/find_and_replace_0.png 616 The find and replace panel.}
 

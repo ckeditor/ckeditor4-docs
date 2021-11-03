@@ -18,7 +18,21 @@ The CKEditor 4 [Find and Replace feature](https://ckeditor.com/cke4/addon/find) 
 
 The Find and Replace plugin shows a dropdown with available options available from the main toolbar. It allows to match search text based on selected criteria and replace it accordingly.
 
+You can either use the Find button to just search for specific words and phrases in the content, using search criteria, or use the Replace button to open the find and replace panel that enables the user to substitute searched text with a new one.
+
 {@img assets/img/find_and_replace_0.png 616 The find and replace panel.}
+
+## Formatting the search highlight
+
+To adjust the way the search highlights the results in the content, the {@linkapi CKEDITOR.config.find_highlight CKEDITOR.config.find_highlight} property is used. You can determine the font and background color of the highlight with it.
+
+```js
+// Highlight search results with blue on yellow.
+config.find_highlight = {
+    element: 'span',
+    styles: { 'background-color': '#ff0', color: '#00f' }
+};
+```
 
 ## Find and Replace Demo
 

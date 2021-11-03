@@ -2,8 +2,8 @@
 category: working-with-document
 order: 35
 url: features/findreplace
-menu-title: Find and replace
-meta-title-short: Find and replace
+menu-title: Find and Replace
+meta-title-short: Find and Replace
 ---
 <!--
 Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.

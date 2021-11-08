@@ -299,6 +299,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<li><a href="./saveajax.html">Saving Data &ndash; CKEditor 4 in Ajax Applications</a></li>
 		</ul>
 
+		<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 		<script>
 			// Sample: Inline Editing Enabled by Code
 			( function() {
@@ -314,6 +315,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 							extraAllowedContent: 'a(documentation);abbr[title];code',
 							removePlugins: 'stylescombo',
 							extraPlugins: 'sourcedialog',
+							removeButtons: 'PasteFromWord',
 							startupFocus: true
 						} );
 					}
@@ -377,6 +379,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			extraAllowedContent: 'a(documentation);abbr[title];code',
 			removePlugins: 'stylescombo',
 			extraPlugins: 'sourcedialog',
+			removeButtons: 'PasteFromWord',
 			// Show toolbar on startup (optional).
 			startupFocus: true
 		} );
@@ -409,6 +412,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						'forms,iframe,image,newpage,removeformat,' +
 						'smiley,specialchar,stylescombo,templates';
 
+				editor.config.removeButtons = 'PasteFromWord';
+
 				// Rearrange the toolbar layout.
 				editor.config.toolbarGroups = [
 					{ name: 'editing', groups: [ 'basicstyles', 'links' ] },
@@ -420,6 +425,5 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 		}
 	} );
 </script>
-
 </body>
 </html>

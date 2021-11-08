@@ -104,9 +104,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./toolbarlocation.html">Editor UI &ndash; Toolbar Location</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1" >
 				CKEDITOR.replace( 'editor1', {
-					height: 250
+					height: 250,
+					removeButtons: 'PasteFromWord'
 				} );
 
 			</script>
@@ -114,9 +116,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<script data-sample="2" >
 				CKEDITOR.replace( 'editor2', {
 					height: 250,
-					extraPlugins: 'divarea'
+					extraPlugins: 'divarea',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
+
 		</section>
 	</section>
 

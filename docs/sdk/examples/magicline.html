@@ -103,6 +103,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				&lt;/div&gt;
 			</textarea>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: '500',
@@ -111,7 +112,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Magic Line does not require any additional ACF settings.
 					// We set config.extraAllowedContent because HTML code in this sample contains
 					// a <div> element with custom styles that we would like to allow.
-					extraAllowedContent: 'div{border,background,text-align}'
+					extraAllowedContent: 'div{border,background,text-align}',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

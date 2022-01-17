@@ -6,7 +6,7 @@ menu-title: File Manager Integration
 meta-title-short: File Manager Integration
 ---
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

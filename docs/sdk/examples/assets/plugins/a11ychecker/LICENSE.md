@@ -41,7 +41,7 @@ Third-party software included:
 
 Parts of code taken from the following libraries are included in CKEditor Accessibility Checker:
 
-- CKEditor, Copyright (c) 2003 CKSource Holding sp. z o.o (quickfix/TableHeaders.js)<br>
+- CKEditor, Copyright (c) 2014-2022 CKSource Holding sp. z o.o (quickfix/TableHeaders.js)<br>
   https://ckeditor.com/<br>
   License under the terms of the GNU General Public License Version 2 license.
 

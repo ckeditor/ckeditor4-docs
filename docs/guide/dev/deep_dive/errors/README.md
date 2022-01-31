@@ -6,7 +6,7 @@ menu-title: Error Code Reference
 meta-title-short: Error Code Reference
 ---
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -41,6 +41,24 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Location: `plugins/cloudservices/plugin.js`
 * Description: The {@linkapi CKEDITOR.config.cloudServices_uploadUrl} configuration variable for the [CKEditor Cloud Services](https://ckeditor.com/cke4/addon/cloudservices) plugin was not specified.
 * Additional data: None.
+
+## editor-delayed-creation
+
+* Location: `core/editor.js`
+* Description: The editor creation {@linkapi CKEDITOR.config.delayIfDetached has been delayed} because its target native element was detached from DOM.
+* Additional data:
+	* `method`: Indicates how to resume editor creation. It can have one of these two values:
+		* `callback` - The editor can be created with a callback function provided through {@linkapi CKEDITOR.config.delayIfDetached_callback} configuration variable.
+		* `interval - X ms` - The editor will try to instantiate {@linkapi CKEDITOR.config.delayIfDetached_interval every `X ms`} on its own until its native element is reattached to DOM.
+
+## editor-delayed-creation-success
+
+* Location: `core/editor.js`
+* Description: The editor with a {@linkapi CKEDITOR.config.delayIfDetached delayed creation process} was correctly instantiated.
+* Additional data:
+	* `method`: Indicates how the editor creation proceeded after it was reattached to DOM. It can have one of these two values:
+		* `callback` - The editor was created with a callback function provided through {@linkapi CKEDITOR.config.delayIfDetached_callback} configuration variable.
+		* `interval - X ms` - The editor tried to instantiate {@linkapi CKEDITOR.config.delayIfDetached_interval every `X ms`} on its own and eventually succeeded.
 
 ## editor-destroy-iframe
 
@@ -83,6 +101,13 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Additional data:
 	* `plugin`: The name of the plugin that cannot be removed.
 	* `requiredBy`: The name of the plugin whose requirements block the removal.
+
+## editor-plugin-deprecated
+
+* Location: `core/editor.js`
+* Description: The plugin has been deprecated and should no longer be used.
+* Additional data:
+	* `plugin`: The name of the plugin that has been deprecated.
 
 ## embed-no-provider-url
 * Location: `plugins/embed/plugin.js`

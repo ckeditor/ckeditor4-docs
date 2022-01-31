@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -53,11 +53,13 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./styles.html#widget-styles">Styling and Formatting &ndash; Applying Styles to Editor Content</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					extraPlugins: 'mathjax',
 					mathJaxLib: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_HTML',
-					height: 320
+					height: 320,
+					removeButtons: 'PasteFromWord'
 				} );
 
 				if ( CKEDITOR.env.ie && CKEDITOR.env.version == 8 ) {

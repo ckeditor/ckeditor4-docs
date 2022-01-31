@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -156,6 +156,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<li><a href="./acf.html">Content Filtering &ndash; Advanced Content Filter &ndash; Automatic Mode</a></li>
 		</ul>
 
+		<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 		<script>
 			CKEDITOR.plugins.addExternal( 'exportpdf', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/exportpdf/', 'plugin.js' );
 
@@ -192,13 +193,15 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					{ name: 'align', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
 					{ name: 'document', items: [ 'PageBreak', 'Source' ] }
 				],
-				bodyClass: 'document-editor'
+				bodyClass: 'document-editor',
+				removeButtons: 'PasteFromWord'
 			} );
 		</script>
 
 		<script>
 			editor.config.exportPdf_appId = 'cke4-demo-docs';
 		</script>
+
 	</section>
 </section>
 

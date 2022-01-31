@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -98,10 +98,13 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				By fine-tuning a stylesheet for CKEditor 4 you can make your content look exactly the same both on
 				the page and inside the editor.
 			</p>
+
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: 260,
 					width: 700,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 			<script data-sample="2">
@@ -111,7 +114,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					contentsCss: [
 						CKEDITOR.basePath + 'contents.css',
 						'assets/css/classic.css'
-					]
+					],
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

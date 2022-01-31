@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -92,6 +92,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./fileupload.html">Inserting Content &ndash; File Upload through Dialogs and Drag&amp;Drop</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1" >
 				CKEDITOR.replace( 'editor1', {
 					extraPlugins: 'image2,uploadimage',
@@ -121,7 +122,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// Simplify the Image and Link dialog windows. The "Advanced" tab is not needed in most cases.
 					removeDialogTabs: 'image:advanced;link:advanced',
 
-					height: 450
+					height: 450,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

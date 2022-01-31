@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -96,6 +96,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./styles.html#widget-styles">Styling and Formatting &ndash; Applying Styles to Editor Content</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.plugins.addExternal( 'simplebox', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/simplebox/', 'plugin.js' );
 
@@ -112,7 +113,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					],
 
 					// Set height to make more content visible.
-					height: 500
+					height: 500,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

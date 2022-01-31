@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -70,16 +70,17 @@ config.autoGrow_bottomSpace = 50;
 				<li><a href="./resize.html">Editor Resizing &ndash; Editor Resizing Customization</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1" >
 				CKEDITOR.replace( 'editor1', {
 					extraPlugins: 'autogrow',
 					autoGrow_minHeight: 200,
 					autoGrow_maxHeight: 600,
 					autoGrow_bottomSpace: 50,
-					removePlugins: 'resize'
+					removePlugins: 'resize',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
-
 		</section>
 	</section>
 

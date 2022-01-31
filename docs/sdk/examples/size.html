@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -88,10 +88,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./autogrow.html">Editor Resizing &ndash; Automatic Editor Height Adjustment to Content</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					width: '70%',
-					height: 500
+					height: 500,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

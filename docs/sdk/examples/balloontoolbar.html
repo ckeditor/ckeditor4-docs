@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -67,6 +67,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				Please note that this plugin is not compatible with Internet Explorer 8.
 			</p>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script>
 				// Reference plugins loaded from external sources.
 				CKEDITOR.plugins.addExternal( 'openlink', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/openlink/', 'plugin.js' );
@@ -111,7 +112,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					// resizer (because image size is controlled by widget styles or the image takes maximum
 					// 100% of the editor width).
 					image2_alignClasses: [ 'image-align-left', 'image-align-center', 'image-align-right' ],
-					image2_disableResizer: true
+					image2_disableResizer: true,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

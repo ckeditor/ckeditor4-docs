@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -59,9 +59,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<input type="checkbox" checked>Sample checkbox
 			</p>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script>
 				CKEDITOR.replace( 'editor1', {
-					height: 150
+					height: 150,
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

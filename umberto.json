@@ -458,6 +458,7 @@
 		"trimLongname": false
 	}
 	],
+	"extraStyles": "assets/css/notification.css",
 	"redirects": {
 		"guide/dev_features.html": "features/index.html",
 		"guide/dev_accessibility_checker.html": "features/accessibility_checker.html",

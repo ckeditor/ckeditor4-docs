@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -516,6 +516,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 			<li><a href="./table.html">Inserting Content &ndash; Table Support with Column Resizing</a></li>
 		</ul>
 
+		<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 		<script>
 			// Umberto SDK does not copy the `<head>` content, so the crawler option will not be visible in the output file.
 			// That's why it is added manually in the `<script>` tag.
@@ -594,7 +595,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						{ name: 'styles', items: [ 'Font', 'FontSize' ] },
 						{ name: 'document', items: [ 'Print' ] },
 						{ name: 'tools', items: [ 'Maximize' ] }
-					]
+					],
+					removeButtons: 'PasteFromWord'
 			} );
 		</script>
 
@@ -649,9 +651,11 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						{ name: 'styles', items: [ 'Font', 'FontSize' ] },
 						{ name: 'document', items: [ 'Print' ] },
 						{ name: 'tools', items: [ 'Maximize' ] }
-					]
+					],
+					removeButtons: 'PasteFromWord'
 			} );
 		</script>
+
 	</section>
 </section>
 

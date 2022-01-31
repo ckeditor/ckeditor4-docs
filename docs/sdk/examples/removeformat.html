@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -99,6 +99,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./colorbutton.html">Styling and Formatting &ndash; Setting Text and Background Color</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					height: 250,
@@ -124,7 +125,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
 						{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
 						{ name: 'styles' }
-					]
+					],
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

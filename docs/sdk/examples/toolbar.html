@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -142,6 +142,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./fullpreset.html">Editor Presets &ndash; Full Preset</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.replace( 'editor1', {
 					// Define the toolbar groups as it is a more accessible solution.
@@ -155,7 +156,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 						{"name":"about","groups":["about"]}
 					],
 					// Remove the redundant buttons from toolbar groups defined above.
-					removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar'
+					removeButtons: 'Underline,Strike,Subscript,Superscript,Anchor,Styles,Specialchar,PasteFromWord'
 				} );
 			</script>
 

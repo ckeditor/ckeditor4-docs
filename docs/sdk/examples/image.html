@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -121,6 +121,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./fileupload.html">Inserting Content &ndash; File Upload through Dialogs and Drag&amp;Drop</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1" >
 				CKEDITOR.addCss( '.cke_editable { font-size: 15px; padding: 2em; }' );
 
@@ -154,7 +155,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 
 					height: 560,
 
-					removeDialogTabs: 'image:advanced;link:advanced'
+					removeDialogTabs: 'image:advanced;link:advanced',
+					removeButtons: 'PasteFromWord'
 				} );
 			</script>
 

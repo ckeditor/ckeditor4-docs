@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
+Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md or http://ckeditor.com/license.
 -->
 <html>
@@ -99,11 +99,12 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<li><a href="./mentions.html">Working with Document &ndash; Mentions, Tags and Emoji</a></li>
 			</ul>
 
+			<script src="assets/pastefromoffice/pastefromoffice.js"></script>
 			<script data-sample="1">
 				CKEDITOR.plugins.addExternal( 'autotag', '../../../ckeditor4/{%CKEDITOR_VERSION%}/{%CKEDITOR_EXAMPLES_SLUG%}/assets/plugins/autotag/', 'plugin.js' );
 
 				CKEDITOR.replace( 'editor1', {
-					plugins: 'textmatch,toolbar,wysiwygarea,basicstyles,link,undo,autotag',
+					plugins: 'textmatch,toolbar,wysiwygarea,basicstyles,link,undo,autotag,pastefromgdocs,pastefromlibreoffice,pastefromword',
 					toolbar: [
 						{ name: 'document', items: [ 'Undo', 'Redo' ] },
 						{ name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline' ] },
@@ -111,7 +112,6 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					]
 				} );
 			</script>
-
 		</section>
 	</section>
 

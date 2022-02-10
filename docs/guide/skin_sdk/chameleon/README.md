@@ -16,7 +16,7 @@ One nice feature of CKEditor 4 is its flexibility to easily match a website colo
 
 The core editor API controls the input of the preferred color, but it is the skin job to tell it how to change the color. This is because the skin itself defines where and how to use colors.
 
-For that purpose, the {@linkapi CKEDITOR.skin.chameleon CKEDITOR.skin.chameleon} function must be defined in the `skin.js` file. Please check the {@link guide/skin_sdk/intro/README#the-moono-skin Moono skin} files for full details.
+For that purpose, the {@linkapi CKEDITOR.skin.chameleon CKEDITOR.skin.chameleon} function must be defined in the `skin.js` file. Please check the {@link guide/skin_sdk/intro/README#the-moono-lisa-skin Moono-Lisa skin} files for full details.
 
 Note that adopting this feature is totally optional. A skin developer may decide to have a fixed color and not give the skin users any possibility to change it. This approach is not recommended, but if it is used, it is enough to set the {@linkapi CKEDITOR.skin.chameleon CKEDITOR.skin.chameleon} property to `null` in the `skin.js` file:
 

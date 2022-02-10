@@ -16,9 +16,9 @@ For licensing, see LICENSE.md.
 
 A skin is an add-on for CKEditor 4 that makes it possible to change the look and feel of its user interface (UI). Several aspects of the UI can be customized by a skin, including colors, fonts, sizes, styles and icons.
 
-## The "Moono" Skin
+## The "Moono-Lisa" Skin
 
-[Moono](https://ckeditor.com/cke4/addon/moono) is the default skin of CKEditor 4. It is the one included in the standard CKEditor 4 distributions. It is actively maintained by the CKEditor core developers and should be used as the starting point for the creation and maintenance of custom skins.
+[Moono-Lisa](https://ckeditor.com/cke4/addon/moono-lisa) is the default skin of CKEditor 4. It is the one included in the standard CKEditor 4 distributions. It is actively maintained by the CKEditor core developers and should be used as the starting point for the creation and maintenance of custom skins.
 
 ## The Anatomy of a Skin
 
@@ -32,4 +32,4 @@ When CKEditor 4 is used into a website, the following skin files are loaded in t
 
 Actually, the above are the minimum set of files to be downloaded, but generally several other files are used, to make the skin easier to maintain and more logically organized.
 
-In this document, we'll not go on depth details about the files contents. For that, you should check the files available on the “Moono” skin. All files are well documented and are very self-descriptive.
+In this document, we'll not go on depth details about the files contents. For that, you should check the files available on the “Moono-Lisa” skin. All files are well documented and are very self-descriptive.

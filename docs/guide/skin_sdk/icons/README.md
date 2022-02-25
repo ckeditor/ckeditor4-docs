@@ -20,4 +20,4 @@ There is a huge number of plugins available for CKEditor 4, provided by people a
 
 All skin icons must be included inside the `icons` folder in the skin folder. The icons file name must match the name of the icon files available in the `icons` folder of the plugins.
 
-If you want the source version of your skin to overload icons properly, you must inform CKEditor 4 about the presence of your custom icons. This is optional, but if not done your icons will be visible in the release version of your skin only. Check the `skin.js` file in the {@link guide/skin_sdk/intro/README#the-moono-skin Moono skin} for an example.
+If you want the source version of your skin to overload icons properly, you must inform CKEditor 4 about the presence of your custom icons. This is optional, but if not done your icons will be visible in the release version of your skin only. Check the `skin.js` file in the {@link guide/skin_sdk/intro/README#the-moono-lisa-skin Moono-Lisa skin} for an example.

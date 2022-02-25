@@ -16,4 +16,4 @@ As we know, CKEditor is used inside webpages. In fact, the CKEditor 4 UI and the
 
 Let's suppose a site likes red links. By simply adding `a { color: red; }` in a CSS file would be enough to make the toolbar labels or dialog tabs of the editor red.
 
-To workaround this problem, a skin developer must include "reset styles" that will define defaults for most of the styles that could impact on the editor interface. Check the `reset.css` file in the {@link guide/skin_sdk/intro/README#the-moono-skin Moono skin}. It is a useful base for it.
+To workaround this problem, a skin developer must include "reset styles" that will define defaults for most of the styles that could impact on the editor interface. Check the `reset.css` file in the {@link guide/skin_sdk/intro/README#the-moono-lisa-skin Moono-Lisa skin}. It is a useful base for it.

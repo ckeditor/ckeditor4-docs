@@ -13,3 +13,8 @@ docs/sdk/examples/assets/react/main.js*
 docs/sdk/examples/assets/vue/main.js*
 docs/sdk/examples/assets/angular/main.js*
 docs/sdk/examples/assets/angular/polyfills.js*
+
+# Ignore package-lock.json
+# - we don't intent to force specific 3rd party dependency version via `package-lock.json` file
+# Such information should be specified in the package.json file.
+package-lock.json

@@ -8,7 +8,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 	<meta charset="utf-8">
 	<meta name="description" content="Spell Checker and SCAYT. Using Native Browser Spell Checker.">
 	<meta name="keywords" content="ckeditor, editor, wysiwyg, spell, checker, spellchecker, spellchecking, grammar, grammar checker, proofreading, proofreader, check, scayt, wproofreader">
-	<meta name="sdk-samples" content="Spell Check As You Type (SCAYT)|Spell checker in a dialog window|Distraction-free proofreader|Native browser spell checker">
+	<meta name="sdk-samples" content="Spell Check As You Type (SCAYT)|Distraction-free proofreader|Native browser spell checker">
 	<meta name="sdk-category" content="sdk-working-with-document">
 	<meta name="sdk-order" content="10">
 	<title>Spelling and Grammar Checking</title>
@@ -74,7 +74,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<a href="https://webspellchecker.com/wsc-proofreader">WProofreader</a> is an innovative proofreading tool that combines the functionality of "spell check as you type" and "spell check in a dialog" in a modern UI. Spelling and grammar suggestions are available on hover with no clicking needed. The distraction-free badge gives you access to proofreader suggestions, settings and proofreading overview in a dialog.
 			</p>
 
-			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3">
+			<textarea cols="80" id="editor2" name="editor2" rows="10" data-sample="2">
 				&lt;h1&gt;Apollo 11&lt;/h1&gt;
 
 				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spacflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on july 20, 1969, at 20:18 UTC. Armstrong became the firrst to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
@@ -95,7 +95,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				<kbd>Ctrl</kbd> key when right-clicking misspelled words to see the suggested corrections.
 			</p>
 
-			<textarea cols="80" id="editor4" name="editor4" rows="10" data-sample="4">
+			<textarea cols="80" id="editor3" name="editor3" rows="10" data-sample="3">
 				&lt;h1&gt;Apollo 11&lt;/h1&gt;
 
 				&lt;p&gt;&lt;strong&gt;Apollo 11&lt;/strong&gt; was the spacflight that landed the first humans, Americans &lt;a href=&quot;http://en.wikipedia.org/wiki/Neil_Armstrong&quot;&gt;Neil Armstrong&lt;/a&gt; and &lt;a href=&quot;http://en.wikipedia.org/wiki/Buzz_Aldrin&quot;&gt;Buzz Aldrin&lt;/a&gt;, on the Moon on july 20, 1969, at 20:18 UTC. Armstrong became the firrst to step onto the lunar surface 6 hours later on July 21 at 02:56 UTC.&lt;/p&gt;
@@ -120,7 +120,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				} );
 			</script>
 
-			<script data-sample="3">
+			<script data-sample="2">
 				window.WEBSPELLCHECKER_CONFIG = {
 					autoSearch: true,
 					enableAutoSearchIn: [ '.cke_wproofreader' ],
@@ -129,7 +129,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 					lang: 'auto'
 				};
 
-				CKEDITOR.replace( 'editor3', {
+				CKEDITOR.replace( 'editor2', {
 					height: 250,
 					// Remove the SpellCheckAsYouType (SCAYT) plugin.
 					removePlugins: 'scayt',
@@ -144,8 +144,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license.
 				} );
 			</script>
 
-			<script data-sample="4">
-				CKEDITOR.replace( 'editor4', {
+			<script data-sample="3">
+				CKEDITOR.replace( 'editor3', {
 					height: 250,
 					// Remove the SpellCheckAsYouType (SCAYT) plugin.
 					removePlugins: 'scayt',

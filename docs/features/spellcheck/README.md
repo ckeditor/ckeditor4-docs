@@ -109,7 +109,7 @@ If you have content in multiple languages, the spell check feature can automatic
 
 ## Customization Options
 
-The SCAYT and WebSpellChecker plugins include numerous configuration options that let you customize the default spell checking language, the number of SCAYT suggestions available or the content of the spell checker context menu and dialog window.
+The SCAYT plugin includes numerous configuration options that let you customize the default spell checking language, the number of SCAYT suggestions available or the content of the spell checker context menu.
 
 You can find them on the {@linkapi CKEDITOR.config `CKEDITOR.config`} API page, starting from `scayt_`.
 

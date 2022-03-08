@@ -58,7 +58,7 @@ There are two repositories where CKEditor 4 source files are kept: [`ckeditor4`]
 The `ckeditor4-presets` repository is used by the CKEditor 4 team to build the Basic/Standard/Full distributions. It uses `ckeditor4` as a dependency and scripts included there further automate the build process:
 
  - It has information about which plugins should be included in which preset.
- - It loads spell checker `scayt` plugin from separate repository where it's developed, if it has to be included in a release.
+ - It loads spell checker `scayt` plugin from separate repository where it is developed, if it is to be included in a release.
  - It sets the proper configuration file in the release package depending on the created preset.
 
 Although `ckeditor4-presets` saves time in the long term, to reduce the complexity of this documentation article we recommend cloning the `ckeditor4` repository.
@@ -188,7 +188,7 @@ If you used a custom build of CKEditor 4 with your own custom plugins, copy them
 
 #### Spell Checker Plugin
 
-If the build that you used had spell checker plugin (`scayt`), then you need to copy them as well. Spell checker plugin must be downloaded with the proper revision. The revision of `scayt` plugin that was used with release versions of CKEditor 4 can be checked in the `ckeditor4-presets` repository
+If the build that you used had the spell checker plugin (`scayt`), then you need to copy it as well. Spell checker plugin must be downloaded with the proper revision. The revision of `scayt` plugin that was used with release versions of CKEditor 4 can be checked in the `ckeditor4-presets` repository.
 
 1. Open [https://github.com/ckeditor/ckeditor4-presets]( https://github.com/ckeditor/ckeditor4-presets).
 
@@ -206,7 +206,7 @@ If the build that you used had spell checker plugin (`scayt`), then you need to 
 
     <img src="%BASE_PATH%/assets/img/patching_05.png" width="391" height="181" alt="Plugin revision in GitHub">
 
-6. Click the link to exact revision of the `scayt` plugin. You will be redirected to its project page, where the "Download ZIP" option on the right side will return the correct version of each plugin.
+6. Click the link to exact revision of the `scayt` plugin. You will be redirected to its project page, where the "Download ZIP" option on the right side will return the correct version of the plugin.
 
     <img src="%BASE_PATH%/assets/img/patching_06.png" width="799" height="347" alt="Downloading SCAYT plugin">
 

@@ -119,4 +119,4 @@ You can find them on the {@linkapi CKEDITOR.config `CKEDITOR.config`} API page, 
 
 ## Spell Checking Demo
 
-See the {@linkexample spellchecker working "Proofreading, Spelling and Grammar Checking" sample} that showcases all three official spell and grammar checking solutions.
+See the {@linkexample spellchecker working "Proofreading, Spelling and Grammar Checking" sample} that showcases all official spell and grammar checking solutions.

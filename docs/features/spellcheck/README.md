@@ -40,16 +40,6 @@ It is provided by [WebSpellChecker](https://webspellchecker.com/wsc-scayt-ckedit
 
 {@img assets/img/scayt_02.png 876 Spell Check As You Type in CKEditor 4 WYSIWYG editor}
 
-## Spell Checking in a Dialog Window
-
-<info-box warning="">
-	**This feature has an End-of-Life date set to December 31st, 2021.** This means it will not be supported any longer and may stop working after this date. We strongly encourage everyone to choose one of the other available spellchecking solutions - {@link features/spellcheck/README#spell-check-as-you-type-scayt Spell Check As You Type (SCAYT)} or {@link features/spellcheck/README#distraction-free-proofreading WProofreader}.
-</info-box>
-
-The [WebSpellChecker Dialog](https://ckeditor.com/cke4/addon/wsc) plugin is another spell checker solution provided by [WebSpellChecker](https://webspellchecker.com/wsc-dialog-ckeditor4/). It runs the check through a dialog window instead of marking misspelled words inline. Additionally, for some languages a Grammar Checker and Thesaurus feature is also available.
-
-{@img assets/img/wsc_01.png 881 Spell Checker in the dialog window in CKEditor 4 WYSIWYG editor}
-
 ## Distraction-free Proofreading
 
 <info-box info="">
@@ -87,7 +77,7 @@ And load the following script on your site:
 
 WProofreader is a commercial solution, so you need to [purchase a license](https://ckeditor.com/contact/) and then add your `serviceId` to the configuration. You can also [request a free trial ID](https://ckeditor.com/contact/).
 
-Additionally, this feature is bundled with the [SCAYT](https://ckeditor.com/cke4/addon/scayt) and [WebSpellChecker Dialog](https://ckeditor.com/cke4/addon/wsc) plugins, so you can use it as long as you have WSC or SCAYT installed.
+Additionally, this feature is bundled with the [SCAYT](https://ckeditor.com/cke4/addon/scayt) plugin, so you can use it as long as you have SCAYT installed.
 
 For more detailed documentation, refer to the [official WProofreader "Getting Started" guide](https://docs.webspellchecker.net/pages/viewpage.action?pageId=442663877).
 
@@ -119,14 +109,14 @@ If you have content in multiple languages, the spell check feature can automatic
 
 ## Customization Options
 
-The SCAYT and WebSpellChecker plugins include numerous configuration options that let you customize the default spell checking language, the number of SCAYT suggestions available or the content of the spell checker context menu and dialog window.
+The SCAYT plugin includes numerous configuration options that let you customize the default spell checking language, the number of SCAYT suggestions available or the content of the spell checker context menu.
 
-You can find them on the {@linkapi CKEDITOR.config `CKEDITOR.config`} API page, starting from `scayt_` and `wsc_`.
+You can find them on the {@linkapi CKEDITOR.config `CKEDITOR.config`} API page, starting from `scayt_`.
 
 <info-box hint="">
-    The out-of-the-box spell checking functionality of SCAYT and WebSpellChecker Dialog is ad-supported. If you want to remove the ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
+    The out-of-the-box spell checking functionality of SCAYT is ad-supported. If you want to remove the ads, you can <a href="https://ckeditor.com/contact/">purchase a license here</a>.
 </info-box>
 
 ## Spell Checking Demo
 
-See the {@linkexample spellchecker working "Proofreading, Spelling and Grammar Checking" sample} that showcases all three official spell and grammar checking solutions.
+See the {@linkexample spellchecker working "Proofreading, Spelling and Grammar Checking" sample} that showcases all official spell and grammar checking solutions.

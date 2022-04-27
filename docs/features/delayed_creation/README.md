@@ -98,7 +98,7 @@ To have more control over when editor instance will be initialized the {@linkapi
 
 <info-box info=''>This feature is only available when the `delayIfDetach` is enabled and the [`interval` approach](#using-interval) is applied</info-box>
 
-With the above mention - the delayed creation starts the native `setInterval` function in background. Since the `4.19.0` version, methods: {@linkapi CKEDITOR.html#method-replace `replace`}, {@linkapi CKEDITOR.html#method-inline `inline`} and {@linkapi CKEDITOR.html#method-appendTo `appendTo`} - returns the cancellation callback which allows to stop background running interval:
+With the above mention - the delayed creation starts the native `setInterval` function in background. Since the `4.19.0` version, methods: {@linkapi CKEDITOR#method-replace `replace`}, {@linkapi CKEDITOR#method-inline `inline`} and {@linkapi CKEDITOR#method-appendTo `appendTo`} - returns the cancellation callback which allows to stop background running interval:
 
 ```js
 var cancelCreation = CKEDITOR.replace( targetElement, {

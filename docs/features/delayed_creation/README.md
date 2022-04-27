@@ -5,6 +5,7 @@ url: features/delayed_creation
 menu-title: Delayed editor creation
 meta-title-short: Delayed editor creation
 ---
+
 <!--
 Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
@@ -42,7 +43,7 @@ Let's take a look at the sample setup:
 // Grab references to DOM elements.
 var editorContainer = document.getElementById( 'editorContainer' ),
 	editorContainerParent = editorContainer.parentNode,
-	editorTargetElement = CKEDITOR.document.getById('editor');
+	editorTargetElement = CKEDITOR.document.getById( 'editor' );
 
 // Detach parent of target element from the DOM.
 editorContainerParent.removeChild( editorContainer );
@@ -93,33 +94,56 @@ Enabling the {@linkapi CKEDITOR.config#cfg-delayIfDetached delayIfDetached} conf
 
 To have more control over when editor instance will be initialized the {@linkapi CKEDITOR.config#cfg-delayIfDetached_callback delayIfDetached_callback} config option is provided. The `function` provided here, will be invoked with a single argument. When the `callback` function is provided, interval checks are no longer executed. The argument of a `callback` function is another function that should be invoked to finish editor creation. Also, the received callback may be stored and used right after the target element is attached to DOM. The advantage here is that it gives full control over the time that the actual creation is performed.
 
+## Cancel editor delayed creation
+
+<info-box info=''>This feature is only available when the `delayIfDetach` is enabled and the [`interval` approach](#using-interval) is applied</info-box>
+
+With the above mention - the delayed creation starts the native `setInterval` function in background. Since the `4.19.0` version, methods: {@linkapi CKEDITOR.html#method-replace `replace`}, {@linkapi CKEDITOR.html#method-inline `inline`} and {@linkapi CKEDITOR.html#method-appendTo `appendTo`} - returns the cancellation callback which allows to stop background running interval:
+
+```js
+var cancelCreation = CKEDITOR.replace( targetElement, {
+	delayIfDetached: true,
+} );
+
+// setInterval is running
+
+cancelCreation();
+
+// Interval checks are stooped.
+// The editor wont be created even when it's parent will be reattached to the DOM.
+```
+
+Use it whenever it is certain that the particular instance is not needed anymore. If you decide to create it later, you need to call one of the creation methods again.
+
 ## Getting editor reference
 
-There might be cases when you create an editor and assign it to a variable. It is a common example in the entire documentation. Please note, that the best practice is to grab and use editor instance after the {@linkapi CKEDITOR#instanceReady instance ready event}.
+There might be cases when you create an editor and assign it to a variable. It is a common example in the entire documentation. Please note, that the best practice is to grab and use editor instance after the {@linkapi CKEDITOR#instanceReady instance ready event}. The return value is different based on what approach was applied:
+
+### The default behavior
+
+Might return the editor instance, but also `null` under certain circumstances (e.g. given element is unavailable).
 
 ```js
 var editor = CKEDITOR.replace( targetElement );
 ```
 
-With this feature enabled and detached target element, the variable value will not contain editor instance (regardless of interval or callback method).
+### Interval approach
+
+Editor creation might return `null` or the cancellation callback - but not the editor instance.
 
 ```js
-var editor = CKEDITOR.replace( targetElement, {
-	delayIfDetached: true
+var cancellationCallback = CKEDITOR.replace( targetElement, {
+	delayIfDetached: true,
 } );
 
-console.log( editor ); // -> null
-```
-
- You can get an instance in different ways, depending on used options:
-
-### Interval approach
-```js
+// Whenever editor finish the initialization - it is available in instances list:
 var editor = CKEDITOR.instances[ 'editorName' ];
 ```
+
 ### Callback approach
 
-You can get instance the same way as in [interval approach](#interval-approach) or inside the provided callback:
+Editor creation might return only `null`. You can get instance the same way as in [interval approach](#interval-approach) or inside the provided callback:
+
 ```js
 function delayedCallback( createEditor ) {
 	// createEditor() returns editor instance
@@ -128,6 +152,6 @@ function delayedCallback( createEditor ) {
 
 var editor = CKEDITOR.replace( targetElement, {
 	delayIfDetached: true,
-	delayIfDetached_callback: delayedCallback
+	delayIfDetached_callback: delayedCallback,
 } );
 ```

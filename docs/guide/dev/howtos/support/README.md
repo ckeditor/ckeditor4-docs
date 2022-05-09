@@ -44,7 +44,7 @@ If you also want to support the development of CKEditor, it will be most welcome
 
 * {@link guide/dev/contributing_code/README Submit code patches} through pull requests in the [official CKEditor repository](https://github.com/ckeditor/ckeditor4).
 
-* Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.net/projects/p/ckeditor/).
+* Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.com/ckeditor/ckeditor/).
 
 * Create CKEditor plugins with new functionality and publish them in the [CKEditor Add-Ons Repository](https://ckeditor.com/cke4/addons/plugins/all).
 

@@ -94,26 +94,25 @@ Enabling the {@linkapi CKEDITOR.config#cfg-delayIfDetached delayIfDetached} conf
 
 To have more control over when editor instance will be initialized the {@linkapi CKEDITOR.config#cfg-delayIfDetached_callback delayIfDetached_callback} config option is provided. The `function` provided here, will be invoked with a single argument. When the `callback` function is provided, interval checks are no longer executed. The argument of a `callback` function is another function that should be invoked to finish editor creation. Also, the received callback may be stored and used right after the target element is attached to DOM. The advantage here is that it gives full control over the time that the actual creation is performed.
 
-## Cancel editor delayed creation
+## Cancel delayed editor creation
 
-<info-box info=''>This feature is only available when the `delayIfDetach` is enabled and the [`interval` approach](#using-interval) is applied</info-box>
+<info-box info=''>This feature is only available when the {@linkapi CKEDITOR.config#cfg-delayIfDetached delayIfDetached} is enabled the editor is [initialized via interval](#using-interval).</info-box>
 
-With the above mention - the delayed creation starts the native `setInterval` function in background. Since the `4.19.0` version, methods: {@linkapi CKEDITOR#method-replace `replace`}, {@linkapi CKEDITOR#method-inline `inline`} and {@linkapi CKEDITOR#method-appendTo `appendTo`} - returns the cancellation callback which allows to stop background running interval:
+The delayed editor creation via interval method starts the native `setInterval` function in the background. Since the `4.19.0` version, methods: {@linkapi CKEDITOR#method-replace `replace`}, {@linkapi CKEDITOR#method-inline `inline`} and {@linkapi CKEDITOR#method-appendTo `appendTo`} - returns the cancellation callback allowing to stop that interval:
 
 ```js
 var cancelCreation = CKEDITOR.replace( targetElement, {
 	delayIfDetached: true,
 } );
 
-// setInterval is running
+// setInterval is running.
 
 cancelCreation();
 
-// Interval checks are stooped.
-// The editor wont be created even when it's parent will be reattached to the DOM.
+// Interval is cleared. The editor won't be initialized anymore.
 ```
 
-Use it whenever it is certain that the particular instance is not needed anymore. If you decide to create it later, you need to call one of the creation methods again.
+It is recommended to use this function to prevent potential memory leaks. Use it if you know that the editor host element will never be attached to the DOM. As an example, execute cancel handle in your component cleanup logic (e.g. `onDestroy` lifecycle methods in popular frontend frameworks).
 
 ## Getting editor reference
 

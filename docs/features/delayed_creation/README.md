@@ -96,7 +96,7 @@ To have more control over when editor instance will be initialized the {@linkapi
 
 ## Cancel delayed editor creation
 
-<info-box info=''>This feature is only available when the {@linkapi CKEDITOR.config#cfg-delayIfDetached delayIfDetached} is enabled the editor is [initialized via interval](#using-interval).</info-box>
+<info-box info=''>This feature is only available when the {@linkapi CKEDITOR.config#cfg-delayIfDetached delayIfDetached} is enabled and the editor is [initialized via interval method](#using-interval).</info-box>
 
 The delayed editor creation via interval method starts the native `setInterval` function in the background. Since the `4.19.0` version, methods: {@linkapi CKEDITOR#method-replace `replace`}, {@linkapi CKEDITOR#method-inline `inline`} and {@linkapi CKEDITOR#method-appendTo `appendTo`} - returns the cancellation callback allowing to stop that interval:
 

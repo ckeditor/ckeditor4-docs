@@ -91,14 +91,14 @@ Rich text editor, editor1.
 Editor, editor1, press Alt+0 for help.
 ```
 
-The `editor1` part of the text is simply the {@linkapi CKEDITOR.editor#name editor's name that has been automatically assigned to the editor instance}. Both parts of the label ("Rich text editor, &lt;editor name&gt;" and "Editor, &lt;editor name&gt;") are fully customized by the developer by using their respective configuration variables. This is most useful when you have more than one editor instance on the same page. The website creator should make sure that editor instance names are meaningful, though, to make it really useful for the users.
+The `editor1` part of the text is simply the {@linkapi CKEDITOR.editor#name editor's name that has been automatically assigned to the editor instance}. Both parts of the label ("Rich text editor, &lt;editor name&gt;" and "Editor, &lt;editor name&gt;") are fully customizable by the developer by using their respective configuration variables. This is the most useful when you have more than one editor instance on the same page. The website creator should make sure that editor instance names are meaningful, though, to make it really useful for the users.
 
-Two parts of the label correspond to two main areas of the editor:
+The two parts of the label correspond to the two main areas of the editor:
 
 * the application area – the whole editor, including its toolbars,
 * the editable area – the area where the user types.
 
-{@img assets/img/a11y_labels.png Two main areas of the editor: the application one (whole editor with toolbars included) and the editable one (the text editing area).}
+{@img assets/img/a11y_labels.png Two main areas of the editor: the application one (the whole editor with toolbars included) and the editable one (the text editing area).}
 
 The table below groups editor's areas with their respective labels and configuration variables that allow modifying the default labels:
 

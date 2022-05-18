@@ -119,7 +119,7 @@ The table below groups editor's areas with their respective labels and configura
 			<td>Rich Text Editor, &lt;editor name&gt;</td>
 		</tr>
 		<tr>
-			<th scope="row">Editable area</th>
+			<th scope="row">Editable</th>
 			<td>{@linkapi CKEDITOR.config#title}</td>
 			<td>{@linkapi CKEDITOR.editor#title}</td>
 			<td>Editor, &lt;editor name&gt;</td>

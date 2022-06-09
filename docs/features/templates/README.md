@@ -18,9 +18,15 @@ For licensing, see LICENSE.md.
 
 This Content Templates plugin provides a dialog to offer predefined content templates - with page layout, text formatting and styles.
 
+When enabled, the plugin adds the **Templates** (<img class="inline" src="%BASE_PATH%/assets/img/templates-button.png" alt="Copy Formatting toolbar button">) toolbar button. Use it to invoke a dialog with defined templates, then use the dialog to apply a selected template.
+
+{@img assets/img/templates_01.png Content templates selector in CKEditor}
+
 A couple of sample templates can be found inside of the plugin directory at install time. The user may design and load their own favorite templates, too.
+
+
 
 ## Defining templates
 
-
+A template needs several basic things to work. The most important part is the HTML content defining the layout of the template.
 

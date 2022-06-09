@@ -1,6 +1,6 @@
 ---
 category: styling-formatting
-order: 80
+order: 75
 url: features/templates
 menu-title: Content templates
 meta-title-short: Content templates

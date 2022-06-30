@@ -5,7 +5,7 @@
 
 const { AngularCompilerPlugin } = require( '@ngtools/webpack' );
 const { resolve } = require( 'path' );
-const { SuppressExtractedTextChunksWebpackPlugin } = require( '@angular-devkit/build-angular/src/angular-cli-files/plugins/suppress-entry-chunks-webpack-plugin' );
+const { SuppressExtractedTextChunksWebpackPlugin } = require( '@angular-devkit/build-angular/src/webpack/plugins/suppress-entry-chunks-webpack-plugin' );
 const { ContextReplacementPlugin } = require( 'webpack' );
 const path = require( 'path' );
 const ProgressPlugin = require( 'webpack/lib/ProgressPlugin' );

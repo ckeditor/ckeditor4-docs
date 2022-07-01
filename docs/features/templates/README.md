@@ -22,36 +22,49 @@ When enabled, the plugin adds the **Templates** (<img class="inline" src="%BASE_
 
 {@img assets/img/templates_01.png Content Templates selector in CKEditor}
 
-A couple of sample templates can be found inside of the plugin directory at install time. The user may design and load their own favorite templates, too.
-
-
+A couple of sample templates can be found inside of the plugin directory at install time. An integrator may design and load their own favorite templates, too.
 
 ## Defining Templates
 
-The template definition set in the `default.js` file in the `templates` folder and defined by the {@linkapi CKEDITOR.plugins.templates.templateDefinition} class. A template needs several basic things to work. The most important part is the HTML content defining the layout of the template.
+You can define new template files by configuring {@linkapi CKEDITOR.config.templates_files template files option}. That option allows customizing the list of template definition files that will be loaded upon opening the Content Templates dialog.
+
+```js
+// Set custom template file paths.
+config.templates_files = [
+    '/editor_templates/site_default.js',
+    'http://www.example.com/user_templates.js'
+];
+```
+
+An example template file is located in [templates/default.js](https://github.com/ckeditor/ckeditor4/blob/master/plugins/templates/templates/default.js). Templates are defined by the {@linkapi CKEDITOR.plugins.templates.templateDefinition} type and can be added using {@linkapi CKEDITOR.addTemplates} method. A template needs several basic things to work. The most important part is the HTML content defining the layout of the template.
 
 The following code registers the default template with title, text body and an image.
 
-	// Register a templates definition set named "default".
-	CKEDITOR.addTemplates( 'default', {
-		// The name of sub folder which hold the shortcut preview images of the
-		// templates.
-		imagesPath: CKEDITOR.getUrl( CKEDITOR.plugins.getPath( 'templates' ) + 'templates/images/' ),
+```js
+// Register a templates definition set named "default".
+CKEDITOR.addTemplates( 'default', {
+	// The name of sub folder which hold the shortcut preview images of the
+	// templates.
+	imagesPath: CKEDITOR.getUrl( CKEDITOR.plugins.getPath( 'templates' ) + 'templates/images/' ),
 
-		// The templates definitions.
-		templates: [ {
-			title: 'Image and Title',
-			image: 'template1.gif',
-			description: 'One main image with a title and text that surround the image.',
-			html: '<h3>' +
-				// Use src=" " so image is not filtered out by the editor as incorrect (src is required).
-				'<img src=" " alt="" style="margin-right: 10px" height="100" width="100" align="left" />' +
-				'Type the title here' +
-				'</h3>' +
-				'<p>' +
-				'Type the text here' +
-				'</p>'
-		}
+	// The templates definitions.
+	templates: [ {
+		title: 'Image and Title',
+		image: 'template1.gif',
+		description: 'One main image with a title and text that surround the image.',
+		html: '<h3>' +
+			// Use src=" " so image is not filtered out by the editor as incorrect (src is required).
+			'<img src=" " alt="" style="margin-right: 10px" height="100" width="100" align="left" />' +
+			'Type the title here' +
+			'</h3>' +
+			'<p>' +
+			'Type the text here' +
+			'</p>'
+	} ]
+} );
+```
+
+See {@linkapi CKEDITOR.plugins.templates.templateDefinition template definition} to learn more about template options.
 
 ## Content Templates Demo
 

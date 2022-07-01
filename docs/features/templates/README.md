@@ -36,7 +36,7 @@ config.templates_files = [
 ];
 ```
 
-An example template file is located in [templates/default.js](https://github.com/ckeditor/ckeditor4/blob/master/plugins/templates/templates/default.js). Templates are defined by the {@linkapi CKEDITOR.plugins.templates.templateDefinition} type and can be added using {@linkapi CKEDITOR.addTemplates} method. A template needs several basic things to work. The most important part is the HTML content defining the layout of the template.
+An example template file is located in [templates/default.js](https://github.com/ckeditor/ckeditor4/blob/master/plugins/templates/templates/default.js). Templates are defined by the {@linkapi CKEDITOR.plugins.templates.templateDefinition} type and can be added using the {@linkapi CKEDITOR.addTemplates} method. A template needs several basic things to work. The most important part is the HTML content defining the layout of the template.
 
 The following code registers the default template with title, text body and an image.
 

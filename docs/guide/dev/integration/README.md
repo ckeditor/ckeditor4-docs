@@ -37,7 +37,7 @@ When checking how to integrate CKEditor 4 with your framework you can follow the
 
 1. **Check whether an [official integration](#official-wysiwyg-editor-integrations) exists.**
 
-	There are four official integrations so far: for {@link guide/dev/integration/react/v2/README React}, {@link guide/dev/integration/angular/README Angular}, {@link guide/dev/integration/vue/README Vue.js} and {@link guide/dev/integration/jquery/README jQuery}.
+	There are four official integrations so far: for {@link guide/dev/integration/react/latest/README React}, {@link guide/dev/integration/angular/README Angular}, {@link guide/dev/integration/vue/README Vue.js} and {@link guide/dev/integration/jquery/README jQuery}.
 
 2. **If not, search for community-driven integrations.** Most of them are available on [npm](https://www.npmjs.com/).
 3. **If none exists, integrate CKEditor 4 with your framework by yourself and share it with the world!**
@@ -47,7 +47,7 @@ When checking how to integrate CKEditor 4 with your framework you can follow the
 There are four official integrations so far:
 
 * **{@link guide/dev/integration/angular/README CKEditor 4 WYSIWYG editor for Angular}**
-* **{@link guide/dev/integration/react/v2/README CKEditor 4 WYSIWYG editor for React}**
+* **{@link guide/dev/integration/react/latest/README CKEditor 4 WYSIWYG editor for React}**
 * **{@link guide/dev/integration/vue/README CKEditor 4 WYSIWYG editor for Vue.js}**
 * **{@link guide/dev/integration/jquery/README CKEditor 4 WYSIWYG editor for jQuery}**
 

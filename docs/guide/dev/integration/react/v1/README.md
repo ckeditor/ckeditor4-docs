@@ -2,9 +2,10 @@
 category: react-integration
 order: 30
 url: guide/dev_react_v1
-menu-title: v1
-meta-title-short: v1
+menu-title: v1 (deprecated)
+meta-title-short: v1 (deprecated)
 ---
+
 <!--
 Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
@@ -13,14 +14,14 @@ For licensing, see LICENSE.md.
 # CKEditor 4 React Integration - v1
 
 <info-box warning="">
-	**There is a newer version of React Integration available!** This version will be receiving important fixes only. We strongly encourage everyone to migrate to {@link guide/dev/integration/react/v2/README#migration-from-v1-to-v2 v2}.
+	**There is a newer version of React Integration available!** This version is not maintained anymore. We strongly encourage everyone to migrate to {@link guide/dev/integration/react/latest/README#migration-from-v1 latest version}.
 </info-box>
 
 <info-box info="">
 	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-react"><code>ckeditor4-react</code> npm package</a>.
 </info-box>
 
-CKEditor 4 offers a native React integration through the CKEditor 4 React component. It provides a deep integration of CKEditor 4 and React that lets you use the native features of the WYSIWYG editor inside a React component. The CKEditor 4 React component is compatible with React v16.0.x and higher. However, for React 16.8 or higher we strongly advise to use {@link guide/dev/integration/react/v2/README CKEditor 4 React Integration - v2}
+CKEditor 4 offers a native React integration through the CKEditor 4 React component. It provides a deep integration of CKEditor 4 and React that lets you use the native features of the WYSIWYG editor inside a React component. The CKEditor 4 React component is compatible with React v16. However, we strongly advise to use {@link guide/dev/integration/react/latest/README latest version}
 
 ## Basic Usage
 

@@ -20,7 +20,7 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 <dl>
 <dt>{@link guide/dev/integration/angular/README CKEditor 4 Angular Integration}</dt>
 <dd>The official CKEditor 4 Angular integration using an Angular component. Available as the <code>ckeditor4-angular</code> npm package.</dd>
-<dt>{@link guide/dev/integration/react/v2/README CKEditor 4 React Integration}</dt>
+<dt>{@link guide/dev/integration/react/latest/README CKEditor 4 React Integration}</dt>
 <dd>The official CKEditor 4 React integration using a React component. Available as the <code>ckeditor4-react</code> npm package.</dd>
 <dt>{@link guide/dev/integration/vue/README CKEditor 4 Vue Integration}</dt>
 <dd>The official CKEditor 4 Vue integration using a Vue component. Available as the <code>ckeditor4-vue</code> npm package.</dd>

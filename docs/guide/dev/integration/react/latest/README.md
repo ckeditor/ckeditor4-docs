@@ -487,16 +487,16 @@ export default Editor;
 
 The previous version of this {@link guide/dev/integration/react/v1/README library} provided `CKEditor` component with an interface almost identical to the current one.
 
-Most notable difference is that `data` prop was replaced by `initData` prop. Previously, passing a new value of `data` prop would trigger a call to `editor.setData` under the hood. In v2 data can be set only once, during editor instantiation (hence `initData`). The rationale behind this change is that `data` prop created false illusion of being the only source of truth for editor's data while in fact the editor's state is most of the time controlled by the editor itself.
+Most notable difference is that `data` prop was replaced by `initData` prop. Previously, passing a new value of `data` prop would trigger a call to `editor.setData` under the hood. In newer versions data can be set only once, during editor instantiation (hence `initData`). The rationale behind this change is that `data` prop created false illusion of being the only source of truth for editor's data while in fact the editor's state is most of the time controlled by the editor itself.
 
-In order to change editor's data with v2 `CKEditor` component, use `editor.setData` imperatively within an event handler. On a side note, remember that any advanced use-case can be achieved with `useCKEditor` hook as it gives you access to current `editor` instance within main body of `render` function.
+In order to change editor's data with the new version of the `CKEditor` component, use `editor.setData` imperatively within an event handler. On a side note, remember that any advanced use-case can be achieved with `useCKEditor` hook as it gives you access to current `editor` instance within main body of `render` function.
 
-Below is an example of previous usage of `data` prop and then a counter-example of v2 approach that combines `initData` and an event handler.
+Below is an example of previous usage of `data` prop and then a counter-example of the new approach that combines `initData` and an event handler.
 
 Old v1 usage:
 
 ```js
-/* !!! Deprected !!! */
+/* !!! Deprecated !!! */
 /* !!!    v1     !!! */
 
 import React from 'react';

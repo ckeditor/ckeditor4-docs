@@ -497,7 +497,7 @@ Old v1 usage:
 
 ```js
 /* !!! Deprecated !!! */
-/* !!!    v1     !!! */
+/* !!!     v1     !!! */
 
 import React from 'react';
 import CKEditor from 'ckeditor4-react';

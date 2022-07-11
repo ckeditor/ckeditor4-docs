@@ -60,7 +60,7 @@ To install the official CKEditor 4 React component, run:
 npm install ckeditor4-react
 ```
 
-By default it will automatically fetch the latest CKEditor 4 [standard-all preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/react/latest/README React Integration guide} on how it can be changed and how to configure the component to fit you needs.
+By default it will automatically fetch the latest CKEditor 4 [standard-all preset](https://ckeditor.com/cke4/presets-all) via CDN. Check the {@link guide/dev/integration/react/current/README React Integration guide} on how it can be changed and how to configure the component to fit you needs.
 
 ### CKEditor 4 Vue Integration
 

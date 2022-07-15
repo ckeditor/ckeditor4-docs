@@ -15,10 +15,10 @@ For licensing, see LICENSE.md.
 
 <info-box info="">
 	This feature is provided through the <a href="https://www.npmjs.com/package/ckeditor4-react"><code>ckeditor4-react</code> npm package</a>.
-	Document below serves as a reference for public API of `ckeditor4-react` starting from v2.
+	The document below serves as a reference for the public API of `ckeditor4-react` starting from v2.
 </info-box>
 
-CKEditor 4 offers a React integration through library described below. By providing a deep integration of CKEditor 4 and React we let you use the native features of the WYSIWYG editor inside your React app. The latest version of this package is compatible with [React 18](https://reactjs.org/blog/2022/03/29/react-v18.html).
+CKEditor 4 offers a React integration through the library described below. By providing deep integration of CKEditor 4 and React we let you use the native features of the WYSIWYG editor inside your React app. The latest version of this package is compatible with [React 18](https://reactjs.org/blog/2022/03/29/react-v18.html).
 
 ## CKEditor 4 / React compatibility
 
@@ -152,7 +152,7 @@ const component = (
 
 ### Data initialization
 
-Prop `initData` accepts either string with HTML or JSX. Samples below produce equivalent results.
+Prop `initData` accepts either a string with HTML or JSX. The samples below produce equivalent results.
 
 ```js
 import React from 'react';
@@ -487,7 +487,7 @@ export default Editor;
 
 The previous version of this {@link guide/dev/integration/react/deprecated/README library} provided `CKEditor` component with an interface almost identical to the current one.
 
-Most notable difference is that `data` prop was replaced by `initData` prop. Previously, passing a new value of `data` prop would trigger a call to `editor.setData` under the hood. In newer versions data can be set only once, during editor instantiation (hence `initData`). The rationale behind this change is that `data` prop created false illusion of being the only source of truth for editor's data while in fact the editor's state is most of the time controlled by the editor itself.
+The most notable difference is that `data` prop was replaced by `initData` prop. Previously, passing a new value of `data` prop would trigger a call to `editor.setData` under the hood. In newer versions, data can be set only once, during editor instantiation (hence `initData`). The rationale behind this change is that `data` prop created false illusion of being the only source of truth for the editor's data while in fact, the editor's state is most of the time controlled by the editor itself.
 
 In order to change editor's data with the new version of the `CKEditor` component, use `editor.setData` imperatively within an event handler. On a side note, remember that any advanced use-case can be achieved with `useCKEditor` hook as it gives you access to current `editor` instance within main body of `render` function.
 

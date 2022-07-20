@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { HashRouter, NavLink, Route, Switch } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import { HashRouter, NavLink, Routes, Route } from 'react-router-dom';
 
 import Nav from './Nav.jsx';
 import EditorTypes from './EditorTypes.jsx';
@@ -11,20 +11,44 @@ const Samples = () => {
 	return (
 		<HashRouter>
 			<Nav label="React integration samples">
-				<NavLink exact={true} to="/" activeClassName="active">Editor Types</NavLink>
-				<NavLink to="/configuration" activeClassName="active">Configuration</NavLink>
-				<NavLink to="/state-lifting" activeClassName="active">Lifting State Up</NavLink>
+				<NavLink
+					to="/"
+					className={( { isActive } ) =>
+						isActive ? 'active' : undefined
+					}
+				>
+					Editor Types
+				</NavLink>
+				<NavLink
+					to="/configuration"
+					className={( { isActive } ) =>
+						isActive ? 'active' : undefined
+					}
+				>
+					Configuration
+				</NavLink>
+				<NavLink
+					to="/state-lifting"
+					className={( { isActive } ) =>
+						isActive ? 'active' : undefined
+					}
+				>
+					Lifting State Up
+				</NavLink>
 			</Nav>
-			<Switch>
-				<Route exact path="/" component={EditorTypes} />
-				<Route path="/configuration" component={ConfigEvents} />
-				<Route path="/state-lifting" component={StateLifting} />
-			</Switch>
+			<Routes>
+				<Route path="/" element={<EditorTypes />} />
+				<Route path="/configuration" element={<ConfigEvents />} />
+				<Route path="/state-lifting" element={<StateLifting />} />
+			</Routes>
 		</HashRouter>
 	);
-}
+};
 
-ReactDOM.render(
-	<Samples />,
-	window.document.getElementById( 'app' )
+const element = document.getElementById( 'app' );
+
+createRoot( element ).render(
+	<React.StrictMode>
+		<Samples />
+	</React.StrictMode>
 );

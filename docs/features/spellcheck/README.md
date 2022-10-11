@@ -52,7 +52,6 @@ It is provided by [WebSpellChecker](https://webspellchecker.com/wsc-scayt-ckedit
 
 The WProofreader badge in the bottom-right corner shows you the total number of mistakes detected. Hover an underlined word to display the WProofreader suggestions for any of the spelling and grammar mistakes found. The suggestion card allows the user to employ the feature on the go.
 
-
 {@img assets/img/wproofreader_02.png 722 Distraction-free proofreader badge in CKEditor 4 WYSIWYG editor}
 
 If you want to see an overview of all mistakes, click the “Proofread in dialog” icon in the badge. It will invoke a detached floating dialog, which is easy to navigate and perfect for dedicated proofreading sessions. Turning it on brings a dialog similar to the on-hover one, but substantially larger. It is a detached, floating window that can be conveniently moved around as needed, which is especially important on small screens. It also supports accessibility, as moving it left may be more convenient for left-handed persons or more comfortable in the case of right-to-left languages.

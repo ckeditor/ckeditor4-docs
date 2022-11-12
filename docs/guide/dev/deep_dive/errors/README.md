@@ -24,6 +24,14 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 * Description: Incorrect {@linkapi CKEDITOR.config#autoEmbed_widget} value. No widget definition found.
 * Additional data: None.
 
+## clipboard-image-handling-disabled
+
+* Location: `plugins/uploadimage/plugin.js`
+* Description: The default image handling logic from the Clipboard plugin is interferring with another plugin handling uploading images. Therefore, the image handling logic from the Clipboard plugin was disabled. To prevent the automatic disabling of the Clipboard's image handling logic, manually set the {@linkapi CKEDITOR.config#clipboard_handleImages} config variable to `false`.
+* Additional data:
+	* `editor`: The name of the editor in which the image handling was disabled.
+	* `plugin`: The name of the plugin that disabled the image handling.
+
 ## cloudservices-no-token
 
 * Location: `plugins/cloudservices/plugin.js`

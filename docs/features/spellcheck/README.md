@@ -80,8 +80,6 @@ And load the following script on your site:
 
 WProofreader is a commercial solution, so you need to [purchase a license](https://ckeditor.com/contact/) and then add your `serviceId` to the configuration. You can also [request a free trial ID](https://ckeditor.com/contact/).
 
-Additionally, this feature is bundled with the [SCAYT](https://ckeditor.com/cke4/addon/scayt) plugin, so you can use it as long as you have SCAYT installed.
-
 For more detailed documentation, refer to the [official WProofreader "Getting Started" guide](https://docs.webspellchecker.net/pages/viewpage.action?pageId=442663877).
 
 ## Supported Languages
@@ -110,7 +108,7 @@ The other is the so-called **company-level dictionary**. These premade dictionar
 
 If you have content in multiple languages, the spell and grammar check feature can automatically detect the text language properly. It is enough to choose “Auto Detect” in the Language dropdown of the WProofreader settings. Suggestions for spelling,grammar, and punctuation (if available) will be displayed properly for each text fragment.
 
-{@img assets/img/wproofreader_04.png 720 Choose the auto-detect language option.}
+{@img assets/img/wproofreader_04.png 654 Choose the auto-detect language option.}
 
 ## Customization Options
 

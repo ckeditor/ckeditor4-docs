@@ -34,7 +34,7 @@ The list of officially supported browsers contains those which the CKEditor 4 co
 
 ### Internet Explorer support
 
-Internet Explorer browsers in versions 8.0, 9.0 (including Quirks Mode and Compatibility Mode) and 10.0 are supported up to CKEditor 4.20. As the official Microsoft technical support for these browsers is discontinued, they are backed by the editor up to version 4.20. It's highly recommended to use more secure Microsoft Edge (or other modern browsers) these days, but if you need to use IE 8-10, make sure to use the editor in version 4.20. Otherwise, some features may not work properly.
+Internet Explorer browsers in versions 8.0, 9.0 (including Quirks Mode and Compatibility Mode) and 10.0 are supported up to CKEditor 4.20. As the official Microsoft technical support for these browsers is discontinued, they are backed by the editor up to version 4.20. It is highly recommended to use the more secure Microsoft Edge (or other modern browsers) these days, but if you need to use IE 8-10, make sure to use the editor in version 4.20. Otherwise, some features may not work properly.
 
 #### Internet Explorer 8.0 and 9.0
 

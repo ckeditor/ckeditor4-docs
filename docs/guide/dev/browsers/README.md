@@ -20,10 +20,10 @@ The list of officially supported browsers contains those which the CKEditor 4 co
 
 * **Desktop environments**:
   * **Internet Explorer**:
-    * 8.0 and 9.0 &ndash; close to full support,
-    * 10 and 11 &ndash; full support,
-    * IE mode in Microsoft Edge &ndash; full support,
-    * 9.0 Quirks Mode and 9.0 Compatibility Mode &ndash; limited support.
+    * 8.0, 9.0, 10.0 &ndash; close to full support guaranteed up to CKEditor 4.20,
+    * 9.0 Quirks Mode and 9.0 Compatibility Mode &ndash; limited support guaranteed up to CKEditor 4.20.
+    * 11 &ndash; full support,
+    * IE11 mode in Microsoft Edge &ndash; full support,
   * **Firefox, Chrome, Safari, Microsoft Edge, Opera**:
     * Latest stable release &ndash; full support.
 * **Mobile environments**:
@@ -32,16 +32,20 @@ The list of officially supported browsers contains those which the CKEditor 4 co
 
 **Note:** All browsers are to be supported for web pages that work in Standards Mode (i.e. with a valid Document Type Declaration, for example of HTML5 (`<!DOCTYPE html>`)) except for IE 9 Quirks that will support unknown doctypes.
 
-### Internet Explorer 8.0 and 9.0
+### Internet Explorer support
 
-These browsers are generally fully compatible with CKEditor 4 with just a few exceptions. Namely:
+Internet Explorer browsers in versions 8.0, 9.0 (including Quirks Mode and Compatibility Mode) and 10.0 are supported up to CKEditor 4.20. As the official Microsoft technical support for these browsers is discontinued, they are backed by the editor up to version 4.20. It's highly recommended to use more secure Microsoft Edge (or other modern browsers) these days, but if you need to use IE 8-10, make sure to use the editor in version 4.20. Otherwise, some features may not work properly.
+
+#### Internet Explorer 8.0 and 9.0
+
+These browsers are generally fully compatible with CKEditor 4.20 with just a few exceptions. Namely:
 
 * There is no support for uploading pasted and dropped files (required APIs are not available).
 * In Internet Explorer 8.0 the [Mathematical Formulas](https://ckeditor.com/cke4/addon/mathjax), [Code Snippet](https://ckeditor.com/cke4/addon/codesnippet), [Embed](https://ckeditor.com/cke4/addon/embed) and [Semantic Embed](https://ckeditor.com/cke4/addon/embedsemantic) widgets are not supported.
 * In Internet Explorer 8.0 there is no support for nested {@link guide/dev/deep_dive/widgets/README widgets}.
 * In Internet Explorer 8.0 there is no support for {@link features/accessibility_checker/README Accessibility Checker}.
 
-### Internet Explorer 9.0 Quirks and Compatibility Modes
+#### Internet Explorer 9.0 Quirks and Compatibility Modes
 
 Using both modes is highly unrecommended, because they put the browser in legacy modes which are very limited. Hence, the level of support is limited, too:
 

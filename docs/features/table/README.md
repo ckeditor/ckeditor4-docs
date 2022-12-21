@@ -67,4 +67,3 @@ See the {@linkexample table working "Table Support with Column Resizing" sample}
 Refer to the following resources for more information about tabular data support in CKEditor 4:
 
 * The {@link features/pastefromexcel/README Paste from Excel plugin} allows you to also paste content from Microsoft Excel and maintain original content structure and formatting.
-* The {@link features/spreadsheets/README Spreadsheet plugin} provides support for creating complex data sheets that provide data types, formatting and styling, formulas, conditional formatting and more.

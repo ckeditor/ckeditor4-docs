@@ -19,7 +19,6 @@ This section presents how you can integrate CKEditor 4 with various frameworks a
 Read how to integrate CKEditor 4 with the following applications:
 
 * **{@link guide/dev/integration/easyimage/README Easy Image}** &ndash; An optional plugin that lets you {@link features/easyimage/README insert images which are automatically rescaled, optimized, responsive} and delivered through a blazing-fast CDN.
-* **{@link guide/dev/integration/spreadsheets/README Spreadsheets}** &ndash; An optional plugin that offers {@link features/spreadsheets/README Excel-like functionality} right inside CKEditor 4.
 * **{@link guide/dev/integration/file_browse_upload/README File Manager}** &ndash; Connect a file browser or uploader like [CKFinder](https://ckeditor.com/ckfinder/) or learn how to create a custom solution to unlock image upload capabilities in CKEditor.
 * **{@link guide/dev/integration/a11ychecker/custom_issue_types/README Accessibility Checker}** &ndash; An innovative solution that lets you {@link features/accessibility_checker/README inspect the accessibility level of content} created in CKEditor and immediately solve any accessibility issues that are found.
 

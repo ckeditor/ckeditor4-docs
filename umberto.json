@@ -460,6 +460,7 @@
 	],
 	"extraStyles": "assets/css/notification.css",
 	"redirects": {
+		"examples/spreadsheets.html": "examples/table.html",
 		"guide/dev_features.html": "features/index.html",
 		"guide/dev_accessibility_checker.html": "features/accessibility_checker.html",
 		"guide/dev_autocomplete.html": "features/autocomplete.html",
@@ -510,6 +511,8 @@
 		"guide/dev_react.html": "guide/dev_react_deprecated.html",
 		"guide/dev_react_v1.html": "guide/dev_react_deprecated.html",
 		"guide/dev_react_v2.html": "guide/dev_react_current.html",
+		"guide/dev_spreadsheets.html": "features/table.html",
+		"features/spreadsheets.html": "features/table.html",
 		"features.html": "features/index.html",
 		"api.html": "api/index.html",
 		"guide.html": "guide/index.html"

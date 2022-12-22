@@ -105,7 +105,6 @@ module.exports = function( grunt ) {
 				'docs/sdk/examples/assets/plugins/simplebox',
 				'docs/sdk/examples/assets/plugins/timestamp',
 				'docs/sdk/examples/assets/plugins/ckeditor_wiris',
-				'docs/sdk/examples/assets/plugins/spreadsheet',
 				'docs/sdk/examples/assets/plugins/exportpdf'
 			]
 		},
@@ -116,12 +115,7 @@ module.exports = function( grunt ) {
 					cwd: 'node_modules/@wiris/mathtype-ckeditor4',
 					src: '**',
 					dest: 'docs/sdk/examples/assets/plugins/ckeditor_wiris'
-				}, {
-					expand: true,
-					cwd: 'node_modules/ckeditor4-plugin-spreadsheet/spreadsheet',
-					src: '**',
-					dest: 'docs/sdk/examples/assets/plugins/spreadsheet'
-				}, {
+				},{
 					expand: true,
 					cwd: 'repos/ckeditor-presets/node_modules/ckeditor4-plugin-exportpdf',
 					src: '**',

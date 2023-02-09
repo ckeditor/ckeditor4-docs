@@ -2,7 +2,7 @@
 
 The source of CKEditor documentation is licensed under the terms of the [GNU General Public License](http://www.gnu.org/copyleft/gpl.html).
 
-Copyright (c) 2003-2022, [CKSource](http://cksource.com/) Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2023, [CKSource](http://cksource.com/) Holding sp. z o.o. All rights reserved.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

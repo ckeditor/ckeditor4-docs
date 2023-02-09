@@ -48,7 +48,7 @@ The `@license` and `@fileOverview` tags are legacy comments that will not be par
 
 	/**
 	 * @license Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
-	 * For licensing, see LICENSE.md or http://ckeditor.com/license
+	 * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
 	 */
 
 	/**

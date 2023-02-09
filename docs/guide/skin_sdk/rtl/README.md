@@ -6,7 +6,7 @@ menu-title: Right-to-Left
 meta-title-short: Right-to-Left
 ---
 <!--
-Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

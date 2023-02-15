@@ -16,7 +16,7 @@ The following article contains tips about the resources that you can refer to wh
 
 ## Long Term Support (LTS)
 
-CKEditor 4 is a stable and mature application, backed by 15 years of our experience working on WYSIWYG editors. The CKEditor 4.x line is under a "Long Term Support" (LTS) programme which means that its development and support is guaranteed until 2023. If you are looking for a proven solution that will be fully supported for years, CKEditor 4 is a perfect choice.
+CKEditor 4 is a stable and mature application, backed by 15 years of our experience working on WYSIWYG editors. The CKEditor 4.x line is under a "Long Term Support" (LTS) programme which means that its development and support is guaranteed until 2023. If you are looking for a proven solution that will be fully supported for years, consider CKEditor 5.
 
 ## How Do I Get Support?
 

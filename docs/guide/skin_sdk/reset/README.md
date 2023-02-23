@@ -6,7 +6,7 @@ menu-title: CSS Reset
 meta-title-short: CSS Reset
 ---
 <!--
-Copyright (c) 2003-2022, CKSource Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

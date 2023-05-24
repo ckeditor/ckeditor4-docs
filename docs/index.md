@@ -13,7 +13,7 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 	
 	Please refer to the [Migration from CKEditor 4](https://ckeditor.com/docs/ckeditor5/latest/updating/ckeditor4/migration-from-ckeditor-4.html) guide to learn what steps you should take to switch to CKEditor 5.
 
-	If you have an active CKEditor 4 subscription and need help, you can contact [our support team](https://ckeditor.com/contact/). If you are not ready to migrate yet, for a limited time we are offering a paid <strong>Extended Support Model</strong> that will protect you against security vulnerabilities and/or breaking third-party API changes.
+	If you have an active CKEditor 4 subscription and need help, you can contact [our support team](https://ckeditor.com/contact/). If you are not ready to migrate yet, for a limited time we are offering a paid [Extended Support Model](https://ckeditor.com/ckeditor-4-support/) that will protect you against security vulnerabilities and/or breaking third-party API changes.
 </info-box>
 
 <dl>

@@ -447,6 +447,20 @@
 		]
 	},
 	{
+		"name": "Support",
+		"id": "support",
+		"navigationIncludeIndex": true,
+		"slug": "support",
+		"categories": [
+			{
+				"name": "Licensing and activation",
+				"id": "licensing",
+				"slug": "licensing",
+				"order": 20
+			}
+		]
+	},
+	{
 		"name": "API",
 		"id": "api-reference",
 		"sourceDir": "api/data",

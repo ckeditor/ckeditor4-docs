@@ -2,6 +2,7 @@
 category: licensing
 order: 10
 menu-title: Extended Support Model
+meta-title: CKEditor 4 Extended Support model
 ---
 
 # Extended Support Model
@@ -20,12 +21,12 @@ Ensures security fixes are provided for any CKEditor 4 bugs which threaten the s
 
 * Third-party API Changes Assurance (optional extra)
 
-CKSource resolves any critical / high severity issues in CKEditor 4 caused by changes in a third-party apps (e.g. browser, MS Word) that CKEditor 4 depends on for its functionality (time limitations apply).
+CKSource resolves any critical/high-severity issues in CKEditor 4 caused by changes in third-party apps (e.g. browser, MS Word) that CKEditor 4 depends on for its functionality (time limitations apply).
 
 * Standard Support (optional extra)
 
-Access CKSource Customer Support team for ongoing support requests as per your standard contract terms.
+Access the CKSource Customer Support team for ongoing support requests as per your standard contract terms.
 
 ## Purchasing a license
 
-If you wish to purchase an commercial CKEditor 4 LTS license, [contact us](https://ckeditor.com/contact/?sales=true#contact-form) to receive an offer tailored to your needs.
+If you wish to purchase a commercial CKEditor 4 LTS license, [contact us](https://ckeditor.com/contact/?sales=true#contact-form) to receive an offer tailored to your needs.

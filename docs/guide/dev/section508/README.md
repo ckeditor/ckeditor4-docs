@@ -1,5 +1,5 @@
 ---
-category: compatibility-compliance-license
+category: accessibility
 order: 60
 url: guide/dev_section508
 menu-title: Section 508 Compliance

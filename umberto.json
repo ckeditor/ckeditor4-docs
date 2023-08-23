@@ -142,9 +142,9 @@
 			"order": 60
 		},
 		{
-			"name": "Compatibility, Compliance, License",
-			"id": "compatibility-compliance-license",
-			"slug": "compatibility-compliance-license",
+			"name": "Accessibility",
+			"id": "accessibility",
+			"slug": "accessibility",
 			"order": 70
 		},
 		{
@@ -525,6 +525,9 @@
 		"guide/dev_react_v1.html": "guide/dev_react_deprecated.html",
 		"guide/dev_react_v2.html": "guide/dev_react_current.html",
 		"guide/dev_spreadsheets.html": "features/table.html",
+		"guide/dev_howtos_support.html": "support/index.html",
+		"guide/dev_license.html": "support/licensing/license-and-legal.html",
+		"guide/dev_howtos_bugs_and_features.html": "support/licensing/extended-support-model.html",
 		"features/spreadsheets.html": "features/table.html",
 		"examples/spreadsheets.html": "examples/table.html",
 		"features.html": "features/index.html",

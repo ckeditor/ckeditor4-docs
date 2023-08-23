@@ -1,5 +1,5 @@
 ---
-category: compatibility-compliance-license
+category: accessibility
 order: 40
 url: guide/dev_a11y
 menu-title: Accessibility Support

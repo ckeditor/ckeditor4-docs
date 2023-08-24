@@ -1,5 +1,5 @@
 ---
-category: compatibility-compliance-license
+category: accessibility
 order: 80
 url: guide/dev_wcag
 menu-title: WCAG 2.0 Compliance

@@ -9,7 +9,7 @@ meta-description: Learn how to install, integrate, configure and develop CKEdito
 # CKEditor 4 Documentation
 
 <info-box warning>
-	<strong>CKEditor 4 reached its End of Life (EOL) in June 2023</strong>. From then on, it will receive no more updates, new features, bug fixes, and most importantly, security patches.
+	<strong>CKEditor 4 reached its End of Life (EOL) in June 2023</strong>. From then on, it will receive no more updates, new features, bug fixes, and most importantly &ndash; no security patches.
 
 	Please refer to the [Migration from CKEditor 4](https://ckeditor.com/docs/ckeditor5/latest/updating/ckeditor4/migration-from-ckeditor-4.html) guide to learn what steps you should take to switch to CKEditor 5.
 

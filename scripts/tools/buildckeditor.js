@@ -27,7 +27,7 @@ function buildAndCopyCkeditor( destinationPath ) {
 
 function buildCkeditor() {
 	return new Promise( ( resolve, reject ) => {
-		const build = spawn( path.join( process.cwd(), 'repos', 'ckeditor-presets', 'build.sh' ), [ 'standard', 'all' ] );
+		const build = spawn( path.join( process.cwd(), 'repos', 'ckeditor-presets', 'build.sh' ), [ 'standard', 'all', '--lts' ] );
 		build.stdout.on( 'data', data => { process.stdout.write( data.toString() ) } );
 		build.on( 'close', resolve );
 		build.on( 'error', reject );
@@ -45,5 +45,5 @@ function copyCkeditor( destinationPath ) {
 
 function getCkeditorVersion( basePath ) {
 	return fs.readJson( path.join( basePath, 'repos', 'ckeditor-presets', 'ckeditor', 'package.json' ) )
-		.then( data => data.version );
+		.then( data => data.version + '-lts' );
 }

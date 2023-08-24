@@ -1,5 +1,5 @@
 ---
-category: compatibility-compliance-license
+category: support
 order: 20
 url: guide/dev_browsers
 menu-title: Browser Compatibility

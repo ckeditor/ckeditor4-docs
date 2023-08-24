@@ -14,10 +14,6 @@ For licensing, see LICENSE.md.
 
 This article describes the steps you need to take when you want to upgrade your CKEditor 4.x installation to the latest version.
 
-<info-box hint="">
-    <strong>The latest CKEditor is always the greatest CKEditor.</strong> New releases add cool new features, support for the latest browser versions, and bug fixes. The changelog is published <a href="https://ckeditor.com/cke4/release-notes">here</a> and you can also learn about new releases by following our <a href="https://ckeditor.com/blog/">blog</a>, <a href="http://www.facebook.com/ckeditor">Facebook</a>, <a href="https://plus.google.com/+ckeditor/posts">Google+</a>, or <a href="http://twitter.com/ckeditor">Twitter</a> pages.
-</info-box>
-
 To upgrade CKEditor, proceed as follows:
 
 1. **Rename** your existing editor folder to a backup folder, for example `ckeditor_old`.

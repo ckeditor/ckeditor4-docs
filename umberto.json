@@ -7,6 +7,7 @@
 		"contributeUrl": "https://github.com/ckeditor/ckeditor4-docs",
 		"issueUrl": "https://github.com/ckeditor/ckeditor4"
 	},
+	"extraScripts": "assets/js/eolbanner.js",
 	"docsearch": {
 	"customRanking": [
 		{

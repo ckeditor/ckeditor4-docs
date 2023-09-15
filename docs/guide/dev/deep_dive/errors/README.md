@@ -164,7 +164,7 @@ This article contains the list of CKEditor 4 error codes and their explanations.
 ## invalid-lts-license-key
 
 * Location: `core/editor.js`
-* Description: The editor license key for the LTS ("Long Term Support") version is missing or invalid. That version of the editor is only available under commercial terms (["Extended Support Model"](https://ckeditor.com/ckeditor-4-support/)) for anyone looking to extend the coverage of security updates and critical bug fixes.
+* Description: The editor license key for the LTS ("Long Term Support") version is missing or invalid. That version of the editor is only available under commercial terms (["Extended Support Model"](https://ckeditor.com/ckeditor-4-support/)) for anyone looking to extend the coverage of security updates and critical bug fixes. If you have already acquired the Extended Support Model, please visit the {@link support/license-key-and-activation license key and activation} guide.
 * Additional data: None.
 
 ## mathjax-no-config

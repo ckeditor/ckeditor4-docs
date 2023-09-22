@@ -64,9 +64,9 @@
     "webpack-cli": "^3.2.1"
   },
   "scripts": {
-    "build-angular": "webpack --config scripts/integrations/angular/webpack.config.js",
-    "build-react": "webpack --config scripts/integrations/react/webpack.config.js",
-    "build-vue": "webpack --config scripts/integrations/vue/webpack.config.js",
+    "build-angular": "NODE_OPTIONS=--openssl-legacy-provider webpack --config scripts/integrations/angular/webpack.config.js",
+    "build-react": "NODE_OPTIONS=--openssl-legacy-provider webpack --config scripts/integrations/react/webpack.config.js",
+    "build-vue": "NODE_OPTIONS=--openssl-legacy-provider webpack --config scripts/integrations/vue/webpack.config.js",
     "presets-npm-install": "cd repos/ckeditor-presets && npm i"
   }
 }

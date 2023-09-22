@@ -63,7 +63,8 @@ module.exports = {
 		path: path.join( __dirname, '..', '..', '..', 'docs', 'sdk', 'examples', 'assets', 'angular' ),
 		filename: '[name].js',
 		libraryTarget: 'umd',
-		libraryExport: 'default'
+		libraryExport: 'default',
+		hashFunction: 'sha256'
 	},
 
 	performance: {

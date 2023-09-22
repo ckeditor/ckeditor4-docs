@@ -35,7 +35,8 @@ module.exports = {
 		path: path.join( __dirname, '..', '..', '..', 'docs', 'sdk', 'examples', 'assets', 'vue' ),
 		filename: '[name].js',
 		libraryTarget: 'umd',
-		libraryExport: 'default'
+		libraryExport: 'default',
+		hashFunction: 'sha256'
 	},
 
 	optimization: {

@@ -96,6 +96,10 @@ Therefore the only solution is to write an allowed content rule allowing all ele
 
 The above code sample will allow everything except for the `<script>` elements and attributes starting from `'on'`.
 
+<info-box hint="">
+Please note that enabling all possible HTML will pose **a security threat to your application**. It is recommended to only enable essential HTML that content creators need. Read more about {@link guide/dev/best_practices/README#security best security practices}.
+</info-box>
+
 ## Further Reading
 
 Refer to the following resources for more information about content filtering:

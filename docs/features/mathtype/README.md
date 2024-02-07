@@ -23,9 +23,9 @@ Additionally, MathType offers a special tool designed to help you work with chem
 
 ## Installation
 
-To install the MathType plugin, visit the official site of [MathType for CKEditor](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/html/ckeditor) and download the version appropriate for your server software. After downloading the archive, unpack the `ckeditor_wiris` directory into the `plugins` directory of your CKEditor 4 installation. The plugin can be added to the WYSIWYG editor using the {@linkapi CKEDITOR.config.extraPlugins `config.extraPlugins`} configuration option.
+To install the MathType plugin, visit the official site of [MathType for CKEditor](https://store.wiris.com/en/products/downloads/mathtype/integrations) and download the version appropriate for your server software. After downloading the archive, unpack the `ckeditor_wiris` directory into the `plugins` directory of your CKEditor 4 installation. The plugin can be added to the WYSIWYG editor using the {@linkapi CKEDITOR.config.extraPlugins `config.extraPlugins`} configuration option.
 
-Alternatively you can install the npm package:
+Alternatively, you can install the npm package:
 
 ```bash
 npm install @wiris/mathtype-ckeditor4
@@ -47,7 +47,7 @@ Please note that the version installed via npm uses backend services provided by
 
 To be able to use the plugin, the editor must allow to include MathML syntax via the {@link guide/dev/acf/README Advanced Content Filter} mechanism.
 
-If the editor has been configured to use custom configuration of the {@linkapi CKEDITOR.config#toolbarGroups config.toolbarGroups} option, make sure to add the `others` toolbar definition object, as it is required by the MathType plugin. See the {@link features/toolbarconcepts/README#toolbar-groups-configuration Toolbar Groups Configuration} guide to learn more.
+If the editor has been configured to use a custom configuration of the {@linkapi CKEDITOR.config#toolbarGroups config.toolbarGroups} option, make sure to add the `others` toolbar definition object, as it is required by the MathType plugin. See the {@link features/toolbarconcepts/README#toolbar-groups-configuration Toolbar Groups Configuration} guide to learn more.
 
 <info-box info="">
 	At the moment the MathType plugin is not compatible with the {@link guide/dev/integration/file_browse_upload/file_upload/README official file upload integration for CKEditor 4}. File upload capabilities must be disabled with the {@linkapi CKEDITOR.config.removePlugins `config.removePlugins`} configuration option to allow the use of MathType.
@@ -121,7 +121,7 @@ In order to start creating math or chemical formulas in the WYSIWYG editor below
 
 {@img assets/img/mathtype_01.png 689 MathType dialog opened from CKEditor 4 WYSIWYG editor.}
 
-The MathType window is split into two main areas: a [tabbed toolbar](https://docs.wiris.com/en/mathtype/mathtype_web/toolbar) that contains a large number of icons that are useful for creating math equations and chemical formulas, and an editing area where you can see your current formula, the location of the cursor, and the text currently selected (if any).
+The MathType window is split into two main areas: a [tabbed toolbar](https://docs.wiris.com/mathtype/en/user-interfaces/mathtype-web-interface/toolbar-and-icons.html) that contains a large number of icons that are useful for creating math equations and chemical formulas, and an editing area where you can see your current formula, the location of the cursor, and the text currently selected (if any).
 
 Use the toolbar to write your equation or formula. At any time you can also click the "Go to handwritten mode" button on the right side of the MathType editor to switch to handwriting.
 
@@ -135,7 +135,7 @@ When you are done creating your scientific content, click the "OK" button to ins
 
 MathType lets you choose between two editing modes:
 * **Classic input mode** provides options to choose symbols and templates from the MathType or ChemType toolbars and combine them to build the equation.
-* **Handwritten input mode** lets you write the equation in your own handwriting. After checking the equation preview to ensure its accuracy, you can insert the equation or switch to classic input for further editing. [Read more here](https://docs.wiris.com/en/mathtype/mathtype_web/handwritten-input).
+* **Handwritten input mode** lets you write the equation in your own handwriting. After checking the equation preview to ensure its accuracy, you can insert the equation or switch to classic input for further editing. [Read more here](https://docs.wiris.com/mathtype/en/mathtype-integrations/mathtype-web-interface-features/handwritten-input.html).
 
 If you visit a page using MathType with your mobile device, the handwriting interface will appear by default. However, if you visit the same page with a laptop or desktop computer, the classic input will be displayed. The user is always free to change between the two interfaces.
 
@@ -147,7 +147,7 @@ Equations and chemical formulas are displayed in the editor as {@link features/i
 
 ## Displaying on Target Page
 
-In order to display mathematical formulas on the target page, i.e. the page where content produced by CKEditor 4 will be visible, the target page needs to [include the MathType script](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/mathml-mode#add_a_script_to_head). For example for the default setting this would be:
+In order to display mathematical formulas on the target page, i.e. the page where content produced by CKEditor 4 will be visible, the target page needs to [include the MathType script](https://docs.wiris.com/mathtype/en/mathtype-integrations/mathtype-web-interface-features/full-mathml-mode---wirisplugins-js.html#add_a_script_to_head). For example for the default setting this would be:
 
 ```html
 <script src="<path-to-your-ckeditor4>/plugins/ckeditor_wiris/integration/WIRISplugins.js?viewer=image"></script>
@@ -166,8 +166,8 @@ Refer to the following resources for more information about related features:
 ## Additional Resources
 
 The following resources can come in handy if you want to become proficient at working with MathType:
-* [MathType for CKEditor](https://docs.wiris.com/en/mathtype/mathtype_web/integrations/html/ckeditor) discusses different installation and customization options for CKEditor 4.
-* [Using MathType Web](https://docs.wiris.com/en/mathtype/mathtype_web/using_mathtype) covers the basics of creating formulas, using your keyboard, moving the cursor in templates, formatting your content or writing on mobile devices.
-* [Introductory tutorials](https://docs.wiris.com/en/mathtype/mathtype_web/intro_tutorials) are intended to get you started using MathType.
-* [ChemType](https://docs.wiris.com/en/mathtype/mathtype_web/chemistry) explains the features of the dedicated chemistry toolbar.
-* [MathType documentation](https://docs.wiris.com/en/mathtype/mathtype_web/start) is a complete reference to all MathType features and settings.
+* [MathType for CKEditor](https://docs.wiris.com/mathtype/en/mathtype-integrations/mathtype-for-html-editors/mathtype-for-ckeditor.html) discusses different installation and customization options for CKEditor 4.
+* [Using MathType Web](https://docs.wiris.com/mathtype/en/user-interfaces/mathtype-web-interface/using-mathtype.html) covers the basics of creating formulas, using your keyboard, moving the cursor in templates, formatting your content, or writing on mobile devices.
+* [Introductory tutorials](https://docs.wiris.com/mathtype/en/user-interfaces/mathtype-web-interface/introductory-tutorials.html) are intended to get you started using MathType.
+* [ChemType](https://docs.wiris.com/mathtype/en/mathtype-integrations/mathtype-web-interface-features/chemistry.html) explains the features of the dedicated chemistry toolbar.
+* [MathType documentation](https://docs.wiris.com/mathtype/en/mathtype-integrations.html) is a complete reference to all MathType features and settings.

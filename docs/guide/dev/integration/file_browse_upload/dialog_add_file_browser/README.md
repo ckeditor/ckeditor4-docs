@@ -6,7 +6,7 @@ menu-title: Integrating with Dialogs
 meta-title-short: Integrating with Dialogs
 ---
 <!--
-Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

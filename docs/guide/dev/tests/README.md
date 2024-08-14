@@ -6,7 +6,7 @@ menu-title: Testing Environment
 meta-title-short: Testing Environment
 ---
 <!--
-Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

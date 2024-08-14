@@ -6,7 +6,7 @@ menu-title: Paste from Word
 meta-title-short: Paste from Word
 ---
 <!--
-Copyright (c) 2003-2023, CKSource Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

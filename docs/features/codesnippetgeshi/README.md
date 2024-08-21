@@ -12,6 +12,9 @@ For licensing, see LICENSE.md.
 
 # Inserting Code Snippets Using GeSHi
 
+<info-box info="">The [GeSHi library](https://github.com/GeSHi/geshi-1.0) is no longer maintained and poses security risks due to a lack of ongoing updates. To enhance CKEditor 4's security, we’ve removed GeSHi as a dependency. Integrators wanting to use GeSHi should add it manually, understanding the potential security vulnerabilities associated with its use.
+</info-box>
+
 <info-box info=""> This feature was introduced in <strong>CKEditor 4.4</strong>. It is provided through optional plugins that are not included in the CKEditor 4 presets available from the <a href="https://ckeditor.com/ckeditor-4/download/">Download</a> site and {@link guide/dev/widget_installation/README need to be added to your custom build} with <a href="https://ckeditor.com/cke4/builder">online builder</a>.
 </info-box>
 

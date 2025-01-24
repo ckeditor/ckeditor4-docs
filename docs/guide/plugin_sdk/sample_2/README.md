@@ -6,7 +6,7 @@ menu-title: Simple Plugin (Part 2)
 meta-title-short: Simple Plugin (Part 2)
 ---
 <!--
-Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2025, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 
@@ -23,7 +23,7 @@ Instead of creating a new plugin, this time we are going to expand on the functi
 If you have any doubts about the content of the plugin and its configuration, refer to the {@link guide/plugin_sdk/sample_1/README Creating a Simple CKEditor 4 Plugin (Part 1)} tutorial.
 
 <info-box info="">
-	Please note that <strong>since CKEditor 4.1 all editor plugins that create content should be integrated with {@link guide/dev/acf/README Advanced Content Filter} (ACF)</strong>. 
+	Please note that <strong>since CKEditor 4.1 all editor plugins that create content should be integrated with {@link guide/dev/acf/README Advanced Content Filter} (ACF)</strong>.
 	To follow this guide and at the same time comply with the new CKEditor 4.1 requirements you need to either set <code>config.allowedContent = true;</code> in order to disable {@link guide/dev/deep_dive/advanced_content_filter/README content filtering} or {@link guide/plugin_sdk/integration_with_acf/README integrate your plugin with ACF}. For more information, please refer to the official {@link guide/plugin_sdk/integration_with_acf/README Advanced Content Filter integration guide}.
 </info-box>
 

@@ -6,7 +6,7 @@ menu-title: Tab Key Navigation
 meta-title-short: Tab Key Navigation
 ---
 <!--
-Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2025, CKSource Holding sp. z o.o. All rights reserved.
 For licensing, see LICENSE.md.
 -->
 

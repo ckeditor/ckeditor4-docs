@@ -8,7 +8,7 @@ menu-title: License and legal
 
 The following legal notices apply to CKEditor 4 and all software from CKEditor 5 Ecosystem included with it.
 
-Copyright (c) 2003-2024, CKSource Holding sp. z o.o. All rights reserved.
+Copyright (c) 2003-2025, CKSource Holding sp. z o.o. All rights reserved.
 
 ## Software License Agreement for CKEditor 4 LTS (4.23.0 and above)
 

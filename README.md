@@ -1,12 +1,12 @@
 # CKEditor 4 Official Documentation
 
-## ⚠️ CKEditor 4: End of Life and Extended Support Model until Dec 2026
+## ⚠️ CKEditor 4: End of Life and Extended Support Model until Dec 2028
 
 CKEditor 4 was launched in 2012 and reached its End of Life (EOL) on June 30, 2023.
 
 A special edition, **[CKEditor 4 LTS](https://ckeditor.com/ckeditor-4-support/)** ("Long Term Support"), is available under commercial terms (["Extended Support Model"](https://ckeditor.com/ckeditor-4-support/)) for anyone looking to **extend the coverage of security updates and critical bug fixes**.
 
-With CKEditor 4 LTS, security updates and critical bug fixes are guaranteed until December 2026.
+With CKEditor 4 LTS, security updates and critical bug fixes are guaranteed until December 2028.
 
 ## About this repository
 

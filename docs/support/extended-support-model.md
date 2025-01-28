@@ -13,7 +13,7 @@ CKEditor 4 was launched in 2012 and reached its End of Life (EOL) on June 30, 20
 
 A special edition, **[CKEditor 4 LTS](https://ckeditor.com/ckeditor-4-support/)** ("Long Term Support"), is available under commercial terms (["Extended Support Model"](https://ckeditor.com/ckeditor-4-support/)) for anyone looking to **extend the coverage of security updates and critical bug fixes**.
 
-This limited-time-only package guarantees that your editor remains secure, with uninterrupted access to all functionality until December 2026.
+This limited-time-only package guarantees that your editor remains secure, with uninterrupted access to all functionality until December 2028.
 
 * Security Vulnerability Assurance (standard inclusion)
 

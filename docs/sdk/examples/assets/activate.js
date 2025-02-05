@@ -1,5 +1,5 @@
 ( function() {
 	if ( 'CKEDITOR' in window ) {
-		CKEDITOR.config.licenseKey = 'YVdnMldXUTFZbkE1TUZSSlNrTlhjamcwTXpreWVucDZPQT09LU56WTBOak16T0RVek5UazFOVE16';
+		CKEDITOR.config.licenseKey = 'T1dWbE9URkJiREkzZFV4bVYzaE9jVEoyTkRjMGRYTXctTnpZek5UYzRNelU0TkRnME9UY3o=';
 	}
 } )();

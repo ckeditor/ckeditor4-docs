@@ -84,7 +84,7 @@ CKEDITOR.replace( 'editor', {
 
 This value is unique for each customer and can be found in the [CKEditor Ecosystem dashboard](https://dashboard.ckeditor.com).
 
-For support with existing installations, please refer to our [extended support model](https://ckeditor.com/docs/ckeditor4/latest/guide/support/extended-support-model.html).
+For support with existing installations, please refer to our [extended support model](https://ckeditor.com/docs/ckeditor4/latest/support/licensing/extended-support-model.html).
 
 ### Achieving the Best Results
 

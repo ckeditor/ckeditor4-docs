@@ -20,7 +20,7 @@ This section explains how you can contribute to CKEditor 4 development. CKEditor
 
 3. Create your own plugins or skins and submit them to [CKEditor Add-Ons Repository](https://ckeditor.com/cke4/addons/plugins/all).
 
-4. Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://www.transifex.com/ckeditor/ckeditor/).
+4. Help [localize CKEditor](http://docs.cksource.com/CKEditor_3.x/Developers_Guide/Localization) into your native language and update existing localizations by joining us at the [CKEditor UI Translation Center](https://explore.transifex.com/ckeditor/ckeditor/).
 
 5. Join StackOverflow and share your knowledge with [fellow CKEditor users and developers](http://stackoverflow.com/questions/tagged/ckeditor).
 

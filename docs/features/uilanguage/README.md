@@ -15,7 +15,7 @@ For licensing, see LICENSE.md.
 CKEditor 4 is translated into 70 languages and by default, it is displayed in the user's language (as set in the browser or operating system settings). If the matching language version is not available, the editor user interface will be displayed in the default language version (most commonly: English).
 
 <info-box hint="">
-    Please note that CKEditor 4 localizations are mostly provided by our awesome community through the <a href="https://www.transifex.com/projects/p/ckeditor/">CKEditor UI Translation Center</a>, so if you would like to help with translating CKEditor 4 into your native language or correct an existing localization, do not hesitate to join us!
+    Please note that CKEditor 4 localizations are mostly provided by our awesome community through the <a href="https://explore.transifex.com/ckeditor/ckeditor/">CKEditor UI Translation Center</a>, so if you would like to help with translating CKEditor 4 into your native language or correct an existing localization, do not hesitate to join us!
 </info-box>
 
 ## Setting the Default Language

@@ -533,6 +533,15 @@
 		"examples/spreadsheets.html": "examples/table.html",
 		"features.html": "features/index.html",
 		"api.html": "api/index.html",
-		"guide.html": "guide/index.html"
+		"guide.html": "guide/index.html",
+		"api/ckeditor_config.html": "api/CKEDITOR_config.html",
+		"guide/dev": "guide/dev_installation.html",
+		"guide/dev_howtos": "guide/dev_howtos_styles.html",
+		"guide/plugin": "guide/plugin_sdk_intro.html",
+		"guide/plugin_sdk": "guide/plugin_sdk_intro.html",
+		"guide/skin": "guide/skin_sdk_intro.html",
+		"guide/skin_sdk": "guide/skin_sdk_intro.html",
+		"guide/widget": "guide/widget_sdk_intro.html",
+		"guide/widget_sdk": "guide/widget_sdk_intro.html"
 	}
 }
